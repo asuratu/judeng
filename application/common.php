@@ -79,7 +79,14 @@ function curlGet($url)
  */
 function ajaxReturn($data,$type = 'json')
 {
-
+    $map['only_token'] = $_POST['only_token'] ?: '';
+    $map['is_status'] = 0;
+    if ($map['only_token']) {
+        $num = db('doctor')->where($map)->count();
+    } else {
+        $num = 1;
+    }
+    $data['token_flag'] = $num;
     exit(json_encode($data));
 }
 
