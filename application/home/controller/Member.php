@@ -15,11 +15,11 @@ class Member extends Common
             $data=input('post.');
             if($data['mobile']==''||$data['password']==''|| $data['device_tokens']=='' || $data['is_system']=='')
             {
-               ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[], 'flag'=>1, 'flag'=>1));
+               ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[], 'flag'=>1));
             }
             if(!preg_match("/^1[3|4|5|7|8|][0-9]{1}[0-9]{8}$/",$data['mobile']))
             {
-                ajaxReturn(array('code' =>0, 'info' => '手机号码格式不正确！','data'=>[], 'flag'=>1, 'flag'=>1));
+                ajaxReturn(array('code' =>0, 'info' => '手机号码格式不正确！','data'=>[], 'flag'=>1));
             }
             $res=checkSign($data);
             if($res['code']==0)
@@ -32,7 +32,7 @@ class Member extends Common
             {
                 //是否被冻结
                 if ($info['is_status'] == 1) {
-                    ajaxReturn(array('code'=>0,'info'=>'该账号被冻结！','data'=>[], 'flag'=>1, 'flag'=>1));
+                    ajaxReturn(array('code'=>0,'info'=>'该账号被冻结！','data'=>[], 'flag'=>1));
                 }
 
                 $pwd=md5(md5($data['password']).$info['guid']);
@@ -78,12 +78,12 @@ class Member extends Common
                     ajaxReturn(array('code' =>1, 'info' => '登录成功','data'=>[$info], 'flag'=>$_flag));
                 }else
                 {
-                    ajaxReturn(array('code'=>0,'info'=>'密码不正确！','data'=>[], 'flag'=>1, 'flag'=>1));
+                    ajaxReturn(array('code'=>0,'info'=>'密码不正确！','data'=>[], 'flag'=>1));
                 }
 
             }else
             {
-                ajaxReturn(array('code'=>0,'info'=>'手机号码不存在！','data'=>[], 'flag'=>1, 'flag'=>1));
+                ajaxReturn(array('code'=>0,'info'=>'手机号码不存在！','data'=>[], 'flag'=>1));
             }
 
         }
@@ -187,7 +187,7 @@ class Member extends Common
 
             if($data['mobile']==''||$data['password']=='')
             {
-                ajaxReturn(array('code'=>0,'info'=>'手机号或密码为空','data'=>[], 'flag'=>1, 'flag'=>1));
+                ajaxReturn(array('code'=>0,'info'=>'手机号或密码为空','data'=>[], 'flag'=>1));
             }
             if($data['area_id']=='' || $data['hospital_id']=='' || $data['true_name']=='' || $data['smscode']=='')
             {
