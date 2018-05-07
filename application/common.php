@@ -93,26 +93,31 @@ function ajaxReturn($data,$type = 'json')
 
 function checkSign($data)
 {
+    //为方便测试, 直接return true
+    return array('code'=>1,'info'=>'签名成功！','data'=>[]);
+
     if($data['_time']=='')
     {
-        return array('code'=>0,'info'=>'参数不完整');
+        return array('code'=>0,'info'=>'参数不完整','data'=>[]);
     }
     $outtime=config('outtime');
+
     if(time()-$data['_time']>$outtime)
     {
-        return array('code'=>0,'info'=>'请求超时，请重新请求！');
+        return array('code'=>0,'info'=>'请求超时，请重新请求！','data'=>[]);
     }
     $key=config('key');
     $data['key']=$key;
     $sign=$data['sign'];
     unset($data['sign']);
-    $sign_md5=join('',$data);
+    $sign_md5=md5(join('',$data));
+
     if($sign==$sign_md5)
     {
-        return array('code'=>1,'info'=>'签名成功！');
+        return array('code'=>1,'info'=>'签名成功！','data'=>[]);
     }else
     {
-        return array('code'=>1,'info'=>'签名失败！');
+        return array('code'=>0,'info'=>'签名失败！','data'=>[]);
     }
 }
 
@@ -177,4 +182,39 @@ function sendSMS($mobile,$body)
     {
         return false;
     }
+
+
+}
+
+
+/**
+ * @Title: get_client_ip
+ * @param int $type
+ * @Description: TODO 获取客户端ip
+ * @return mixed
+ * @author TUGE
+ * @date
+ */
+function get_client_ip($type = 0) {
+    $type       =  $type ? 1 : 0;
+    static $ip  =   NULL;
+    if ($ip !== NULL) return $ip[$type];
+    if($_SERVER['HTTP_X_REAL_IP']){//nginx 代理模式下，获取客户端真实IP
+        $ip=$_SERVER['HTTP_X_REAL_IP'];
+    }elseif (isset($_SERVER['HTTP_CLIENT_IP'])) {//客户端的ip
+        $ip     =   $_SERVER['HTTP_CLIENT_IP'];
+    }elseif (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {//浏览当前页面的用户计算机的网关
+        $arr    =   explode(',', $_SERVER['HTTP_X_FORWARDED_FOR']);
+        $pos    =   array_search('unknown',$arr);
+        if(false !== $pos) unset($arr[$pos]);
+        $ip     =   trim($arr[0]);
+    }elseif (isset($_SERVER['REMOTE_ADDR'])) {
+        $ip     =   $_SERVER['REMOTE_ADDR'];//浏览当前页面的用户计算机的ip地址
+    }else{
+        $ip=$_SERVER['REMOTE_ADDR'];
+    }
+    // IP地址合法验证
+    $long = sprintf("%u",ip2long($ip));
+    $ip   = $long ? array($ip, $long) : array('0.0.0.0', 0);
+    return $ip[$type];
 }
