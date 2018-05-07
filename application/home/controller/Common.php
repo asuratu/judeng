@@ -9,7 +9,8 @@ class Common extends Controller
 {
     public function _initialize()
     {
-
+        $settingConfig = include APP_PATH . 'settingConfig.php';
+        $this->assign("setting", $settingConfig);
     }
 
     public function countToken($token)
