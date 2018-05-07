@@ -1,6 +1,8 @@
 <?php
 namespace app\home\controller;
+use app\tools\Html;
 use think\Request;
+use app\tools\Spell;
 use think\Db;
 class Number extends Common
 {
@@ -47,7 +49,7 @@ class Number extends Common
                 $order[$key]['order_date'] = date('Y-m-d H:i', $val['order_date']);
             }
 
-            ajaxReturn(array('code' =>1, 'info' => '登录成功','data'=>[$order]));
+            ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>[$order]));
 
         }
     }
@@ -103,7 +105,7 @@ class Number extends Common
                 ->where("s.is_show = 1 and s.doctor_id = {$data['doctor_id']} and s.`member_id` = m.`member_id`")
                 ->count();
 
-            ajaxReturn(array('code' =>1, 'info' => '登录成功','data'=>[$order],'total'=>$total));
+            ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>[$order],'total'=>$total));
         }
     }
 
@@ -132,6 +134,85 @@ class Number extends Common
             if($data['mobile']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+            }
+
+        }
+    }
+
+    /**
+     * 添加患者分组
+     */
+    public function addPatientGroup()
+    {
+        if($this->request->isPost()) {
+            $data=input('post.');
+            if($data['group_name']==''||$data['doctor_id']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+            }
+            $data['group_name'] = Html::getTextToHtml($data['group_name'], 200);
+            $data['group_name_eng'] = str_replace(' ', '', Spell::getChineseChar($data['group_name']));
+            $patient = array();
+            $patient['doctor_id'] = intval($data['doctor_id']);
+            $patient['group_name'] = $data['group_name'];
+            $patient['group_name_eng'] = $data['group_name_eng'];
+            $patient['add_date'] = time();
+
+            $_identity = db('patient_group')->insertGetId($patient);
+            if ($_identity) {
+                ajaxReturn(array('code'=>1,'info'=>'分组添加成功'));
+            } else {
+                ajaxReturn(array('code'=>0,'info'=>'分组添加失败'));
+            }
+        }
+    }
+
+    /**
+     * 修改患者分组名称
+     */
+    public function updatePatientGroup()
+    {
+        if($this->request->isPost()) {
+            $data=input('post.');
+            if($data['group_name']==''||$data['group_id']==''||$data['doctor_id']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+            }
+            $data['group_name'] = Html::getTextToHtml($data['group_name'], 200);
+            $data['group_name_eng'] = str_replace(' ', '', Spell::getChineseChar($data['group_name']));
+            $patient = array();
+            $patient['doctor_id'] = intval($data['doctor_id']);
+            $patient['group_id'] = intval($data['group_id']);
+            $patient['group_name'] = $data['group_name'];
+            $patient['group_name_eng'] = $data['group_name_eng'];
+            $return = db('patient_group')->update($patient);
+            if ($return) {
+                ajaxReturn(array('code'=>1,'info'=>'分组修改成功'));
+            } else {
+                ajaxReturn(array('code'=>0,'info'=>'分组修改失败'));
+            }
+        }
+    }
+
+    /**
+     * 删除患者分组
+     */
+    public function deletePatientGroup()
+    {
+        if($this->request->isPost()) {
+            $data=input('post.');
+            if($data['group_id']==''||$data['doctor_id']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+            }
+            $patient = array();
+            $patient['group_id'] = intval($data['group_id']);
+            $patient['doctor_id'] = intval($data['doctor_id']);
+            $_identity = db('patient_group')->where($patient)->delete();
+            if ($_identity) {
+                ajaxReturn(array('code'=>1,'info'=>'分组删除成功'));
+            } else {
+                ajaxReturn(array('code'=>0,'info'=>'分组删除失败'));
             }
 
         }
@@ -167,124 +248,5 @@ class Number extends Common
         }
     }
 
-    /**
-     * 添加患者分组
-     */
-    public function addGroupPatient()
-    {
-        if($this->request->isPost()) {
-            $data=input('post.');
-            if($data['mobile']=='')
-            {
-                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
-            }
-
-        }
-    }
-
-    /**
-     * 修改患者分组名称
-     */
-    public function updateGroupPatient()
-    {
-        if($this->request->isPost()) {
-            $data=input('post.');
-            if($data['mobile']=='')
-            {
-                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
-            }
-
-        }
-    }
-
-    /**
-     * 获取医生全部患者列表
-     */
-    public function allPatient()
-    {
-        if($this->request->isPost()) {
-            $data=input('post.');
-            if($data['mobile']=='')
-            {
-                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
-            }
-
-        }
-    }
-
-    /**
-     * 获取医生全部患者列表
-     */
-    public function allPatient()
-    {
-        if($this->request->isPost()) {
-            $data=input('post.');
-            if($data['mobile']=='')
-            {
-                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
-            }
-
-        }
-    }
-
-    /**
-     * 获取医生全部患者列表
-     */
-    public function allPatient()
-    {
-        if($this->request->isPost()) {
-            $data=input('post.');
-            if($data['mobile']=='')
-            {
-                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
-            }
-
-        }
-    }
-
-    /**
-     * 获取医生全部患者列表
-     */
-    public function allPatient()
-    {
-        if($this->request->isPost()) {
-            $data=input('post.');
-            if($data['mobile']=='')
-            {
-                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
-            }
-
-        }
-    }
-
-    /**
-     * 获取医生全部患者列表
-     */
-    public function allPatient()
-    {
-        if($this->request->isPost()) {
-            $data=input('post.');
-            if($data['mobile']=='')
-            {
-                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
-            }
-
-        }
-    }
-
-    /**
-     * 获取医生全部患者列表
-     */
-    public function allPatient()
-    {
-        if($this->request->isPost()) {
-            $data=input('post.');
-            if($data['mobile']=='')
-            {
-                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
-            }
-
-        }
-    }
 
 }
