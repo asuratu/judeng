@@ -15,11 +15,11 @@ class Member extends Common
             $data=input('post.');
             if($data['mobile']==''||$data['password']==''|| $data['device_tokens']=='' || $data['is_system']=='')
             {
-               ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+               ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[], 'flag'=>1, 'flag'=>1));
             }
             if(!preg_match("/^1[3|4|5|7|8|][0-9]{1}[0-9]{8}$/",$data['mobile']))
             {
-                ajaxReturn(array('code' =>0, 'info' => '手机号码格式不正确！','data'=>[]));
+                ajaxReturn(array('code' =>0, 'info' => '手机号码格式不正确！','data'=>[], 'flag'=>1, 'flag'=>1));
             }
             $res=checkSign($data);
             if($res['code']==0)
@@ -32,7 +32,7 @@ class Member extends Common
             {
                 //是否被冻结
                 if ($info['is_status'] == 1) {
-                    ajaxReturn(array('code'=>0,'info'=>'该账号被冻结！','data'=>[]));
+                    ajaxReturn(array('code'=>0,'info'=>'该账号被冻结！','data'=>[], 'flag'=>1, 'flag'=>1));
                 }
 
                 $pwd=md5(md5($data['password']).$info['guid']);
@@ -43,7 +43,7 @@ class Member extends Common
                         if ($info['device_tokens'] != $data['device_tokens']) {
                             // TODO 如何让该设备下线??  友盟推送
 
-                            var_dump(333);die;
+                            var_dump('让前一台设备下线');die;
 
 
                         }
@@ -54,26 +54,41 @@ class Member extends Common
                     $temp['login_ip']=Request::instance()->ip();
                     $temp['login_time']=time();
 
-                    //更新设备号和在线状态, 以及设备系统
+                    //更新设备号和在线状态, 以及设备系统, only_token
                     $temp['is_system'] = $data['is_system'];
                     $temp['device_tokens'] = $data['device_tokens'];
                     $temp['login_state'] = 1;
+                    $temp['only_token'] = time().randCode(6,-1);
+
                     db('doctor')->where($map)->update($temp);
+
+                    //获取环信token
+                    import('Easemob', EXTEND_PATH);
+
+                    $options['client_id'] = config('client_id');
+                    $options['client_secret'] = config('client_secret');
+                    $options['org_name'] = config('org_name');
+                    $options['app_name'] = config('app_name');
+
+                    $h=new \Easemob($options);
+                    $info['token'] = $h->getToken();
                     $_SESSION['uinfo']=$info;
-                    ajaxReturn(array('code' =>1, 'info' => '登录成功','data'=>[$info]));
+
+                    $_flag = 1;
+                    ajaxReturn(array('code' =>1, 'info' => '登录成功','data'=>[$info], 'flag'=>$_flag));
                 }else
                 {
-                    ajaxReturn(array('code'=>0,'info'=>'密码不正确！','data'=>[]));
+                    ajaxReturn(array('code'=>0,'info'=>'密码不正确！','data'=>[], 'flag'=>1, 'flag'=>1));
                 }
 
             }else
             {
-                ajaxReturn(array('code'=>0,'info'=>'手机号码不存在！','data'=>[]));
+                ajaxReturn(array('code'=>0,'info'=>'手机号码不存在！','data'=>[], 'flag'=>1, 'flag'=>1));
             }
 
         }
     }
-    
+
     public function doSmsLogin()
     {
         if($this->request->isPost()) {
@@ -82,11 +97,11 @@ class Member extends Common
             $data=input('post.');
             if($data['mobile']==''||$data['smscode']==''|| $data['device_tokens']=='' || $data['is_system']=='')
             {
-               ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+               ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[], 'flag'=>1));
             }
             if(!preg_match("/^1[3|4|5|7|8|][0-9]{1}[0-9]{8}$/",$data['mobile']))
             {
-                ajaxReturn(array('code' =>0, 'info' => '手机号码格式不正确！','data'=>[]));
+                ajaxReturn(array('code' =>0, 'info' => '手机号码格式不正确！','data'=>[], 'flag'=>1));
             }
             $res=checkSign($data);
             if($res['code']==0)
@@ -102,15 +117,15 @@ class Member extends Common
 
             if(empty($token))
             {
-                ajaxReturn(array('code'=>0,'info'=>'请先获取短信验证码！','data'=>[]));
+                ajaxReturn(array('code'=>0,'info'=>'请先获取短信验证码！','data'=>[], 'flag'=>1));
             }
             if($token['code']!=$data['smscode'])
             {
-                ajaxReturn(array('code'=>0, 'info'=>'短信验证码不正确！','data'=>[]));
+                ajaxReturn(array('code'=>0, 'info'=>'短信验证码不正确！','data'=>[], 'flag'=>1));
             }
             if (!empty($token)&&$token['expired_at']<time() )
             {
-                ajaxReturn(array('code'=>0, 'info'=>'短信验证码超时！','data'=>[]));
+                ajaxReturn(array('code'=>0, 'info'=>'短信验证码超时！','data'=>[], 'flag'=>1));
             }
 
 
@@ -120,7 +135,7 @@ class Member extends Common
             {
                 //是否被冻结
                 if ($info['is_status'] == 1) {
-                    ajaxReturn(array('code'=>0,'info'=>'该账号被冻结！','data'=>[]));
+                    ajaxReturn(array('code'=>0,'info'=>'该账号被冻结！','data'=>[], 'flag'=>1));
                 }
 
 
@@ -150,7 +165,7 @@ class Member extends Common
 
             }else
             {
-                ajaxReturn(array('code'=>0,'info'=>'手机号码不存在！','data'=>[]));
+                ajaxReturn(array('code'=>0,'info'=>'手机号码不存在！','data'=>[], 'flag'=>1));
             }
 
         }
@@ -167,13 +182,16 @@ class Member extends Common
             {
                 ajaxReturn($res);
             }
+            //                    $_flag =  $this->countToken($data['only_token']);
+            $_flag = 1;
+
             if($data['mobile']==''||$data['password']=='')
             {
-                ajaxReturn(array('code'=>0,'info'=>'手机号或密码为空','data'=>[]));
+                ajaxReturn(array('code'=>0,'info'=>'手机号或密码为空','data'=>[], 'flag'=>1, 'flag'=>1));
             }
             if($data['area_id']=='' || $data['hospital_id']=='' || $data['true_name']=='' || $data['smscode']=='')
             {
-                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[], 'flag'=>1));
             }
             $mobile=$data['mobile'];
             session_id(md5($mobile));
@@ -182,15 +200,15 @@ class Member extends Common
 
             if(empty($token))
             {
-                ajaxReturn(array('code'=>0,'info'=>'请先获取短信验证码！','data'=>[]));
+                ajaxReturn(array('code'=>0,'info'=>'请先获取短信验证码！','data'=>[], 'flag'=>1));
             }
             if($token['code']!=$data['smscode'])
             {
-                ajaxReturn(array('code'=>0, 'info'=>'短信验证码不正确！','data'=>[]));
+                ajaxReturn(array('code'=>0, 'info'=>'短信验证码不正确！','data'=>[], 'flag'=>1));
             }
             if (!empty($token)&&$token['expired_at']<time() )
             {
-                ajaxReturn(array('code'=>0, 'info'=>'短信验证码超时！','data'=>[]));
+                ajaxReturn(array('code'=>0, 'info'=>'短信验证码超时！','data'=>[], 'flag'=>1));
             }
 
             $map['mobile']=$mobile;
@@ -198,7 +216,7 @@ class Member extends Common
 
             if($countMobile>0)
             {
-                ajaxReturn(array('code' =>0, 'info' => '手机号码已绑定！','data'=>[]));
+                ajaxReturn(array('code' =>0, 'info' => '手机号码已绑定！','data'=>[], 'flag'=>1));
             }
 
             //查询当前最大邀请码
@@ -221,6 +239,10 @@ class Member extends Common
             if(db('doctor')->insert($data))
             {
                 unset($_SESSION['tokencode']);
+                //
+
+
+
                 //填写了邀请码
 
 
@@ -232,10 +254,10 @@ class Member extends Common
 
 
 
-                ajaxReturn(array('code' => 1, 'info' => '注册成功','data'=>[]));
+                ajaxReturn(array('code' => 1, 'info' => '注册成功','data'=>[], 'flag'=>1));
             }else
             {
-                ajaxReturn(array('code' => 1, 'info' => '注册失败','data'=>[]));
+                ajaxReturn(array('code' => 1, 'info' => '注册失败','data'=>[], 'flag'=>1));
             }
 
         }
@@ -280,18 +302,18 @@ class Member extends Common
 
             if($data['type']=='')
             {
-                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[], 'flag'=>1));
             }
             if(!preg_match("/^1[3|4|5|7|8|][0-9]{1}[0-9]{8}$/", $mobile))
             {
-                ajaxReturn(array('code' =>0, 'info' => '手机号码格式不正确！','data'=>[]));
+                ajaxReturn(array('code' =>0, 'info' => '手机号码格式不正确！','data'=>[], 'flag'=>1));
             }
             session_id(md5($mobile));
             session_start();
             $token = $_SESSION['tokencode'];
             if (!empty($token)&&$token['expired_at']>time() )
             {
-                ajaxReturn(array('code'=>0, 'info'=>$timer.'秒内仅能获取一次验证码,请稍后重试','data'=>[]));
+                ajaxReturn(array('code'=>0, 'info'=>$timer.'秒内仅能获取一次验证码,请稍后重试','data'=>[], 'flag'=>1));
             }
             $randcode = randCode(6, 1);
 
@@ -303,7 +325,7 @@ class Member extends Common
                     $count=db('doctor')->where($map)->count();
                     if($count>0)
                     {
-                        ajaxReturn(array('code' =>0, 'info' => '手机号码已绑定！','data'=>[]));
+                        ajaxReturn(array('code' =>0, 'info' => '手机号码已绑定！','data'=>[], 'flag'=>1));
                     }
                     break;
                 //快速登录发送验证码
@@ -311,7 +333,7 @@ class Member extends Common
                     $count=db('doctor')->where($map)->count();
                     if($count == 0)
                     {
-                        ajaxReturn(array('code' =>0, 'info' => '该手机号暂未注册！','data'=>[]));
+                        ajaxReturn(array('code' =>0, 'info' => '该手机号暂未注册！','data'=>[], 'flag'=>1));
                     }
                     break;
             }
@@ -321,11 +343,11 @@ class Member extends Common
                 $_SESSION['tokencode']= ['code' => $randcode, 'expired_at' => time() + $timer,'mobile'=>$mobile];
                 ajaxReturn(array('code' => 1, 'info' => '短信发送成功','data'=>array($randcode)));
             } else {
-                ajaxReturn(array('code' => 0, 'info' => '短信发送失败','data'=>[]));
+                ajaxReturn(array('code' => 0, 'info' => '短信发送失败','data'=>[], 'flag'=>1));
             }
         }else
         {
-            ajaxReturn(array('code' => 0, 'info' => '非法请求','data'=>[]));
+            ajaxReturn(array('code' => 0, 'info' => '非法请求','data'=>[], 'flag'=>1));
         }
     }
 }

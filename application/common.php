@@ -79,6 +79,7 @@ function curlGet($url)
  */
 function ajaxReturn($data,$type = 'json')
 {
+
     exit(json_encode($data));
 }
 
@@ -95,7 +96,6 @@ function checkSign($data)
 {
     //为方便测试, 直接return true
     return array('code'=>1,'info'=>'签名成功！','data'=>[]);
-
     if($data['_time']=='')
     {
         return array('code'=>0,'info'=>'参数不完整','data'=>[]);
@@ -126,7 +126,7 @@ function checkSign($data)
  * 生成随机字符串
 +----------------------------------------------------------
  * @param int       $length  要生成的随机字符串长度
- * @param string    $type    随机码类型：0，数字+大写字母；1，数字；2，小写字母；3，大写字母；4，特殊字符；-1，数字+大小写字母+特殊字符
+ * @param string    $type    随机码类型：0，数字+大写字母；1，数字；2，小写字母；3，大写字母；4，特殊字符；-1，数字+大小写字母+特殊字符;
 +----------------------------------------------------------
  * @return string
 +----------------------------------------------------------
