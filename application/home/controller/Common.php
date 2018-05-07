@@ -13,11 +13,5 @@ class Common extends Controller
         $this->assign("setting", $settingConfig);
     }
 
-    public function countToken($token)
-    {
-        $map['only_token'] = $token;
-        $map['is_status'] = 0;
-        $num = db('doctor')->where($map)->count();
-        var_dump($num);die;
-    }
+
 }
