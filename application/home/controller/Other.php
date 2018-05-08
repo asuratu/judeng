@@ -46,4 +46,32 @@ class Other extends Common
             ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>$list));
         }
     }
+
+    /**
+     * 广告管理
+     */
+    public function getAd() {
+        if($this->request->isPost())
+        {
+            $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
+            if($data['type_id']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+            }
+
+            $list=db('ad')->where("type_id = {$data['type_id']} and is_display = 1")->field("`ad_title`,`ad_img`,`ad_url`,`is_display`,`add_date`")->order("`ad_sort` ASC")->select();
+            $order = array();
+            foreach ($list as $key => $val) {
+                array_push($order, $val);
+                $order[$key]['ad_img'] = $this->view->setting['base_host'] . $val['ad_img'];
+            }
+            ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>$order));
+        }
+    }
+
 }
