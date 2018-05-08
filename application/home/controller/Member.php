@@ -243,27 +243,21 @@ class Member extends Common
             $data['password']=md5(md5($data['password']).$data['guid']);
 
             //生成医生邀请医生的二维码图片路径
-            $data['to_doctor_url'] = 'https://www.baidu.com';
-
-
-            if(db('doctor')->insert($data))
+            $data['to_doctor_url'] = createPic('https://www.baidu.com');
+            $invite_code = $data['invite_code'];
+            unset($data['invite_code']);
+            $_identify = db('doctor')->insertGetId($data);
+            if($_identify)
             {
                 unset($_SESSION['tokencode']);
-                //
-
-
 
                 //填写了邀请码
-
-
-
-                //没填写邀请码
-
-
-
-
-
-
+                if ($invite_code) {
+                    $temp['member_id'] = $_identify;
+                    $temp['invite'] = $invite_code;
+                    $temp['add_date'] = time();
+                    db('invite_record')->insert($temp);
+                }
                 ajaxReturn(array('code' => 1, 'info' => '注册成功','data'=>[]));
             }else
             {
@@ -379,7 +373,10 @@ class Member extends Common
     }
 
 
-    //获取短信验证码
+    /**
+     * @Title: getsms
+     * @Description: TODO 获取短信验证码
+     */
     public function getsms()
     {
         if($this->request->isPost())
@@ -444,4 +441,8 @@ class Member extends Common
             ajaxReturn(array('code' => 0, 'info' => '非法请求','data'=>[]));
         }
     }
+
+
+
+
 }

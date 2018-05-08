@@ -225,3 +225,20 @@ function get_client_ip($type = 0) {
     $ip   = $long ? array($ip, $long) : array('0.0.0.0', 0);
     return $ip[$type];
 }
+
+
+/**
+ * @Title: createPic
+ * @param $url
+ * @Description: TODO 生成本地二维码
+ * @return string
+ * @author TUGE
+ * @date
+ */
+function createPic($url) {
+    require_once(ROOT_PATH . 'extend/qrcode/qrlib.php');
+    $PNG_TEMP_DIR = getcwd().DIRECTORY_SEPARATOR.'uploads\code'.DIRECTORY_SEPARATOR;
+    $filename = $PNG_TEMP_DIR.time().'code.png';
+    \QRcode::png($url, $filename, 'L', 10, 2);
+    return '/uploads/code/'.basename($filename);
+}
