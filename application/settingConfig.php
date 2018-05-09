@@ -21,4 +21,5 @@ return array(
     'arySex' => array('男', '女'),
     'aryServiceEvaluation' => array('很满意', '满意', '还可以'),
     'aryQuestionType' => array('常见问题', '邀请医生', '关于小橘灯'),
+    'aryMemberType' => array('公众号患者', '手机号患者'),
 );

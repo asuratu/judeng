@@ -1,6 +1,7 @@
 <?php
 namespace app\home\controller;
 use app\tools\Html;
+use think\Paginator;
 use think\Request;
 use app\tools\Spell;
 use think\Db;
@@ -49,7 +50,7 @@ class Number extends Common
                 $order[$key]['order_date'] = date('Y-m-d H:i', $val['order_date']);
             }
 
-            ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>[$order]));
+            ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>$order));
 
         }
     }
@@ -61,10 +62,7 @@ class Number extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
-            if($data['mobile']=='')
-            {
-               ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
-            }
+            ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>[]));
 
         }
     }
@@ -105,21 +103,59 @@ class Number extends Common
                 ->where("s.is_show = 1 and s.doctor_id = {$data['doctor_id']} and s.`member_id` = m.`member_id`")
                 ->count();
 
-            ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>[$order],'total'=>$total));
+            ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>$order,'total'=>$total));
         }
     }
 
     /**
-     * 获取医生全部患者列表
+     * 获取医生全部患者列表(支持添加页面的患者搜索)
      */
     public function allPatient()
     {
         if($this->request->isPost()) {
             $data=input('post.');
-            if($data['mobile']=='')
+            if($data['doctor_id']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
+            if (!isset($data['page'])) {
+                $data['page'] = 1;
+            }
+            if (!isset($data['pageSize'])) {
+                $data['pageSize'] = 10;
+            }
+            $data['pageCount'] = ($data['page'] - 1) * $data['pageSize'];
+
+            // 判断是否查询分组添加患者页面的搜索
+            $group = array();
+            if ($data['group_id'] > 0) {
+                $group = db('patient_group')->where("group_id = {$data['group_id']}")->find();
+            } else {
+                $group['group_member_id'] = '';
+                $group['group_member_name'] = '';
+            }
+            $group_member = explode(',', $group['group_member_id']);
+
+            $comment = Db::field('s.`member_id`, s.`inquisition_name`, s.`inquisition`, m.`member_name`, m.`mobile`, m.`portrait`, m.`sex`, m.`birthday`, m.`is_type`')
+                ->table('jd_doctor_member s, jd_member m')
+                ->where("s.doctor_id = {$data['doctor_id']} and s.`member_id` = m.`member_id` and (m.`member_name` like '%{$data['title']}%' or m.`mobile` like '%{$data['title']}%' or s.`grouping` like '%{$data['title']}%')")
+                ->order('s.inquisition', 'DESC')
+                ->limit($data['pageCount'],$data['pageCount'])
+                ->select();
+            $order = array();
+            foreach ($comment as $key => $val) {
+                array_push($order, $val);
+                $order[$key]['is_type'] = $this->view->setting['aryMemberType'][$val['is_type']];
+                $order[$key]['portrait'] = $this->view->setting['base_host'] . $val['portrait'];
+                $order[$key]['mobile'] = isset($val['mobile']) ? $val['mobile'] : '未填写手机号码';
+                $order[$key]['inquisition'] = date('Y-m-d H:i', $val['inquisition']);
+
+                $age = date('Y', time()) - date('Y', strtotime($val['birthday']));
+                $order[$key]['birthday'] = $age;
+                $order[$key]['group_type'] = (string)(intval(in_array($val['member_id'], $group_member)));
+            }
+
+            ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>$order,'group_member_name'=>$group['group_member_name']));
 
         }
     }
@@ -131,10 +167,20 @@ class Number extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
-            if($data['mobile']=='')
+            if($data['doctor_id']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
+            $comment = Db::field('p.`group_id`, p.`group_name`, p.`group_name_eng`, p.`group_member_name`')
+                ->table('jd_patient_group p')
+                ->where("p.doctor_id = {$data['doctor_id']}")
+                ->order('p.add_date', 'DESC')
+                ->select();
+            $order = array();
+            foreach ($comment as $key => $val) {
+                array_push($order, $val);
+            }
+            ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>$comment));
 
         }
     }
@@ -156,6 +202,7 @@ class Number extends Common
             $patient['doctor_id'] = intval($data['doctor_id']);
             $patient['group_name'] = $data['group_name'];
             $patient['group_name_eng'] = $data['group_name_eng'];
+            $patient['group_member_name'] = '';
             $patient['add_date'] = time();
 
             $_identity = db('patient_group')->insertGetId($patient);
@@ -225,6 +272,47 @@ class Number extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
+
+            if($data['doctor_id']==''||$data['group_id']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+            }
+            if (!isset($data['page'])) {
+                $data['page'] = 1;
+            }
+            if (!isset($data['pageSize'])) {
+                $data['pageSize'] = 10;
+            }
+            $data['pageCount'] = ($data['page'] - 1) * $data['pageSize'];
+            $comment = Db::field('s.`group_id`, s.`member_id`, m.`member_name`, m.`mobile`, m.`portrait`, m.`sex`, m.`birthday`, m.`is_type`')
+                ->table('jd_group_patient s, jd_member m')
+                ->where("s.doctor_id = {$data['doctor_id']} and s.group_id = {$data['group_id']} and s.`member_id` = m.`member_id`")
+                ->order('s.add_date', 'ASC')
+                ->limit($data['pageCount'],$data['pageCount'])
+                ->select();
+            $order = array();
+            foreach ($comment as $key => $val) {
+                array_push($order, $val);
+                $order[$key]['is_type'] = $this->view->setting['aryMemberType'][$val['is_type']];
+                $order[$key]['portrait'] = $this->view->setting['base_host'] . $val['portrait'];
+                $order[$key]['mobile'] = isset($val['mobile']) ? $val['mobile'] : '未填写手机号码';
+
+                $age = date('Y', time()) - date('Y', strtotime($val['birthday']));
+                $order[$key]['birthday'] = $age;
+            }
+
+            ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>$order));
+
+        }
+    }
+
+    /**
+     * 添加某分组下的患者
+     */
+    public function addGroupPatient()
+    {
+        if($this->request->isPost()) {
+            $data=input('post.');
             if($data['mobile']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -240,12 +328,24 @@ class Number extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
-            if($data['mobile']=='')
+            if($data['doctor_id']==''||$data['group_id']==''||$data['member_id']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
 
         }
+    }
+
+    // 医生患者选择分组处理（支持添加/修改）
+    public function uploadMember($doctor_id, $group_id, $member_id, $type)
+    {
+
+    }
+
+    // 患者分组里面有多少患者处理（支持添加/修改）
+    public function uploadGroup($doctor_id, $group_id, $member_id, $type)
+    {
+
     }
 
 
