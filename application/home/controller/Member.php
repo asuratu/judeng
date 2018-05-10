@@ -258,6 +258,18 @@ class Member extends Common
                     $temp['add_date'] = time();
                     db('invite_record')->insert($temp);
                 }
+
+                //注册环信用户
+                import('Easemob', EXTEND_PATH);
+
+                $options['client_id'] = config('client_id');
+                $options['client_secret'] = config('client_secret');
+                $options['org_name'] = config('org_name');
+                $options['app_name'] = config('app_name');
+
+                $h=new \Easemob($options);
+                $h->createUser($data['member_sn'],"123456");
+
                 ajaxReturn(array('code' => 1, 'info' => '注册成功','data'=>[]));
             }else
             {
@@ -440,6 +452,25 @@ class Member extends Common
         {
             ajaxReturn(array('code' => 0, 'info' => '非法请求','data'=>[]));
         }
+    }
+
+
+    /**
+     * @Title: test
+     * @Description: TODO 测试环信
+     */
+    public function test()
+    {
+        import('Easemob', EXTEND_PATH);
+
+        $options['client_id'] = config('client_id');
+        $options['client_secret'] = config('client_secret');
+        $options['org_name'] = config('org_name');
+        $options['app_name'] = config('app_name');
+
+        $h=new \Easemob($options);
+        $result = $h->isOnline("tkt5af1b51289f9b");
+        var_dump($result);die;
     }
 
 

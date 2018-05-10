@@ -12,5 +12,6 @@ return [
     'app_name'=>'xiaojudeng',
 
     //接口域名
-    'url'=>'http://39.105.19.169:88',
+//    'url'=>'http://39.105.19.169:88',
+    'url'=>'http://localhost:7037',
 ];

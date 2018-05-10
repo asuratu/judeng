@@ -114,10 +114,10 @@ function checkSign($data)
         return array('code'=>0,'info'=>'请求超时，请重新请求！','data'=>[]);
     }
     $key=config('key');
-    $data['key']=$key;
+    $target['_time']=$data['_time'];
+    $target['key']=$key;
     $sign=$data['sign'];
-    unset($data['sign']);
-    $sign_md5=md5(join('',$data));
+    $sign_md5=md5(join('',$target));
 
     if($sign==$sign_md5)
     {

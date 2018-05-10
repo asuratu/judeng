@@ -1,0 +1,162 @@
+<?php
+namespace app\home\controller;
+use think\Request;
+use think\Db;
+class Certified extends Common
+{
+
+    /**
+     * @Title: certifiedIndex
+     * @Description: TODO 进入认证的界面(获取认证详情)
+     */
+    public function certifiedIndex() {
+        if($this->request->isPost())
+        {
+            $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
+
+            if($data['member_id']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+            }
+
+
+            $temp['member_id'] = $data['member_id'];
+            $detail = db('doctor')->where($temp)->field("*")->find();
+            $bankDetail = db('deposit')->where($temp)->field("*")->find();
+
+            $hospitalRepartStr = explode(',', $detail['hospital_repart_str']);
+            $info['is_certified'] = $detail['is_certified'];
+            $info['face_photo'] = config('url').$detail['face_photo'];
+            $info['true_name'] = $detail['true_name'];
+            $info['sex'] = $detail['sex'];
+            $info['birthday'] = $detail['birthday'];
+            $info['idcode'] = $detail['idcode'];
+            $info['hospital_id'] = $detail['hospital_id'];
+            $info['title_id'] = $detail['title_id'];
+
+            $info['bank_id'] = $bankDetail['bank_id'];
+            $info['deposit_name'] = $bankDetail['deposit_name'];
+            $info['deposit_number'] = $bankDetail['deposit_number'];
+            $info['mobile'] = $bankDetail['mobile'];
+
+            //认证时所选的科室是主要科室
+            $info['hospital_repart_str'] = $hospitalRepartStr[0];
+            $info['goodat_id'] = $detail['goodat_id'];
+            $info['introduction'] = $detail['introduction'];
+
+            ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>[$info]));
+        }
+    }
+
+    /**
+     * @Title: addCertifie
+     * @Description: TODO 提交(修改)认证
+     */
+    public function addCertifie() {
+        if($this->request->isPost())
+        {
+            try{
+                Db::startTrans();
+                $data=input('post.');
+                $res=checkSign($data);
+                if($res['code']==0)
+                {
+                    ajaxReturn($res);
+                }
+
+                if($data['member_id']=='')
+                {
+                    ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+                }
+
+                $temp['member_id'] = $data['member_id'];
+                $detail = db('doctor')->where($temp)->field("*")->find();
+
+                //若认证已通过或审核中, 则不可提交
+                if (in_array($detail['is_certified'], array(1, 2))) {
+                    ajaxReturn(array('code'=>0, 'info'=>'您已提交过认证, 不可重复提交!','data'=>[]));
+                }
+
+                //保存图片数据流
+                foreach ($_FILES as $key => $val) {
+                    $file = request()->file($key);
+                    $path = ROOT_PATH . 'uploads/paper/';
+                    $result = $file->move($path);
+                    $upPaperInfo[$key] = '/uploads/paper/' . $result->getSaveName();
+                    $upPaperInfo['release_date'] = time();
+                }
+
+                $upInfo['face_photo'] = $upPaperInfo['face_photo'];
+                unset($upPaperInfo['face_photo']);
+                $upInfo['true_name'] = $data['true_name'];
+                $upInfo['sex'] = $data['sex'];
+                $upInfo['birthday'] = $data['birthday'];
+                $upInfo['idcode'] = $data['idcode'];
+                $upInfo['hospital_id'] = $data['hospital_id'];//单选一个医院
+                $upInfo['title_id'] = $data['title_id'];//id字符串
+                $upInfo['hospital_repart_str'] = $data['hospital_repart_str'];
+                $upInfo['goodat_id'] = $data['goodat_id'];
+                $upInfo['introduction'] = $data['introduction'];
+                $upInfo['release_date'] = time();
+                $upInfo['is_certified'] = 1;//状态改为审核中
+
+                $bankId = $data['bank_id'];
+                unset($data['bank_id']);
+
+                $_identity1 = db('doctor')->where($temp)->update($upInfo);
+
+
+                //更新或插入银行信息
+                $temp['bank_id'] = $bankId;
+                $bankDetail['bank_id'] = $bankId;
+                $bankDetail['deposit_name'] = $data['deposit_name'];
+                $bankDetail['deposit_number'] = $data['deposit_number'];
+                $bankDetail['mobile'] = $data['mobile'];
+                $bankDetail['add_date'] = time();
+
+
+                if (db('deposit')->where($temp)->find()) {
+                    $_identity2 = db('deposit')->where($temp)->update($bankDetail);
+                } else {
+                    $bankDetail['member_id'] = $data['member_id'];
+                    $_identity2 = db('deposit')->insert($bankDetail);
+                }
+
+                //更新或插入证书信息
+                unset($temp['bank_id']);
+                if (db('doctor_info')->where($temp)->find()) {
+                    $_identity3 = db('doctor_info')->where($temp)->update($upPaperInfo);
+                } else {
+                    $upPaperInfo['add_date'] = time();
+                    $upPaperInfo['member_id'] = $data['member_id'];
+                    $_identity3 = db('doctor_info')->insert($upPaperInfo);
+                }
+
+                if ($_identity1 && $_identity2 && $_identity3) {
+                    Db::commit();
+                    ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>[]));
+                } else {
+                    Db::rollback();
+                    ajaxReturn(array('code'=>0, 'info'=>'系统繁忙, 稍后再试!','data'=>[]));
+                }
+            } catch (Exception $e) {
+                Db::rollback();
+                return false;
+            }
+
+
+
+
+
+
+
+
+        }
+    }
+
+}

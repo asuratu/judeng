@@ -20,8 +20,10 @@ class His extends Common
             $listArr[intval($key/13)][] = $val;
         }
 
+//        $data=db('drug')->group('his_drug_id')->Distinct(true)->field('his_drug_id')->select();
+
         foreach ($listArr as $key2 => $val2) {
-                //若该药房的药品名已存在就更新, 否则插入
+                //若该药房的药品id已存在就更新, 否则插入
                 $temp['drug_name'] = $val2[0];
                 $temp['his_drug_id'] = $val2[1];
                 $temp1['his_drug_id'] = $val2[1];
@@ -41,9 +43,8 @@ class His extends Common
 
                 if (db('drug')->where($temp1)->count() > 0) {
                     //更新
-                    $map['prescription_id'] = 1;
-                    $map['drug_name'] = $temp['drug_name'];
-                    db('drug')->where($map)->update($temp);
+                    $temp1['prescription_id'] = 1;
+                    db('drug')->where($temp1)->update($temp);
                 } else {
                     //插入
                     $temp['prescription_id'] = 1;

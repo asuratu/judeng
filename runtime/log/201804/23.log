@@ -1,0 +1,1124 @@
+---------------------------------------------------------------
+[ 2018-04-23T16:48:07+08:00 ] 0.0.0.0 GET /jdapi/
+[ info ] localhost/jdapi/ [运行时间：0.045003s][吞吐率：22.22req/s] [内存消耗：2,411.46kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; pgv_si=s2719942656; PHPSESSID=57idf093ku8qsgrtsejh4m55b5; Hm_lpvt_efb61088be8421bc8859b0c05cebfa2d=1524462737; Hm_lpvt_91850f3a05ff396b0df09e4303149836=1524468599',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-23T16:48:11+08:00 ] 0.0.0.0 GET /jdapi/
+[ info ] localhost/jdapi/ [运行时间：0.037002s][吞吐率：27.03req/s] [内存消耗：2,411.66kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; pgv_si=s2719942656; PHPSESSID=57idf093ku8qsgrtsejh4m55b5; Hm_lpvt_efb61088be8421bc8859b0c05cebfa2d=1524462737; Hm_lpvt_91850f3a05ff396b0df09e4303149836=1524468599',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-23T16:48:49+08:00 ] 0.0.0.0 GET /jdapi/
+[ info ] localhost/jdapi/ [运行时间：0.038003s][吞吐率：26.31req/s] [内存消耗：2,411.45kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; pgv_si=s2719942656; PHPSESSID=57idf093ku8qsgrtsejh4m55b5; Hm_lpvt_efb61088be8421bc8859b0c05cebfa2d=1524462737; Hm_lpvt_91850f3a05ff396b0df09e4303149836=1524468599',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-23T16:49:43+08:00 ] 0.0.0.0 GET /jdapi/
+[ info ] localhost/jdapi/ [运行时间：0.047002s][吞吐率：21.28req/s] [内存消耗：2,396.72kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; pgv_si=s2719942656; PHPSESSID=57idf093ku8qsgrtsejh4m55b5; Hm_lpvt_efb61088be8421bc8859b0c05cebfa2d=1524462737; Hm_lpvt_91850f3a05ff396b0df09e4303149836=1524468599',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\wamp64\www\jdapi\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-23T16:50:20+08:00 ] 0.0.0.0 GET /jdapi/
+[ info ] localhost/jdapi/ [运行时间：0.037002s][吞吐率：27.03req/s] [内存消耗：2,331.44kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; pgv_si=s2719942656; PHPSESSID=57idf093ku8qsgrtsejh4m55b5; Hm_lpvt_efb61088be8421bc8859b0c05cebfa2d=1524462737; Hm_lpvt_91850f3a05ff396b0df09e4303149836=1524468599',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Index->index[ D:\wamp64\www\jdapi\application\home\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-23T16:53:19+08:00 ] 0.0.0.0 GET /jdapi/Member/login
+[ info ] localhost/jdapi/Member/login [运行时间：0.045002s][吞吐率：22.22req/s] [内存消耗：2,544.71kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'Member',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; pgv_si=s2719942656; PHPSESSID=57idf093ku8qsgrtsejh4m55b5; Hm_lpvt_efb61088be8421bc8859b0c05cebfa2d=1524462737; Hm_lpvt_91850f3a05ff396b0df09e4303149836=1524468599',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-23T16:53:53+08:00 ] 0.0.0.0 GET /jdapi/Member/login
+[ info ] localhost/jdapi/Member/login [运行时间：0.046003s][吞吐率：21.74req/s] [内存消耗：2,866.14kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'Member',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; pgv_si=s2719942656; PHPSESSID=57idf093ku8qsgrtsejh4m55b5; Hm_lpvt_efb61088be8421bc8859b0c05cebfa2d=1524462737; Hm_lpvt_91850f3a05ff396b0df09e4303149836=1524468599',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->login[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-23T17:20:45+08:00 ] 0.0.0.0 GET /jdapi/Member/doRegist
+[ info ] localhost/jdapi/Member/doRegist [运行时间：0.035002s][吞吐率：28.57req/s] [内存消耗：2,442.98kb] [文件加载：40]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'Member',
+    2 => 'doRegist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; pgv_si=s2719942656; PHPSESSID=57idf093ku8qsgrtsejh4m55b5; Hm_lpvt_efb61088be8421bc8859b0c05cebfa2d=1524462737; Hm_lpvt_91850f3a05ff396b0df09e4303149836=1524468599',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义变量: key[D:\wamp64\www\jdapi\application\home\config.php:4]
+---------------------------------------------------------------
+[ 2018-04-23T17:21:00+08:00 ] 0.0.0.0 GET /jdapi/Member/doRegist
+[ info ] localhost/jdapi/Member/doRegist [运行时间：0.054003s][吞吐率：18.52req/s] [内存消耗：2,988.65kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'Member',
+    2 => 'doRegist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; pgv_si=s2719942656; PHPSESSID=57idf093ku8qsgrtsejh4m55b5; Hm_lpvt_efb61088be8421bc8859b0c05cebfa2d=1524462737; Hm_lpvt_91850f3a05ff396b0df09e4303149836=1524468599',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->doRegist[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [1]Call to undefined function app\home\controller\get_client_ip()[D:\wamp64\www\jdapi\application\home\controller\Member.php:20]
+---------------------------------------------------------------
+[ 2018-04-23T17:38:21+08:00 ] 0.0.0.0 GET /jdapi/Member/doRegist
+[ info ] localhost/jdapi/Member/doRegist [运行时间：0.051002s][吞吐率：19.61req/s] [内存消耗：2,989.17kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'Member',
+    2 => 'doRegist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; pgv_si=s2719942656; PHPSESSID=57idf093ku8qsgrtsejh4m55b5; Hm_lpvt_efb61088be8421bc8859b0c05cebfa2d=1524462737; Hm_lpvt_91850f3a05ff396b0df09e4303149836=1524468599',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->doRegist[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [1]Call to undefined function app\home\controller\get_client_ip()[D:\wamp64\www\jdapi\application\home\controller\Member.php:20]
+---------------------------------------------------------------
+[ 2018-04-23T17:38:22+08:00 ] 0.0.0.0 GET /jdapi/Member/doRegist
+[ info ] localhost/jdapi/Member/doRegist [运行时间：0.044002s][吞吐率：22.73req/s] [内存消耗：2,989.17kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'Member',
+    2 => 'doRegist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; pgv_si=s2719942656; PHPSESSID=57idf093ku8qsgrtsejh4m55b5; Hm_lpvt_efb61088be8421bc8859b0c05cebfa2d=1524462737; Hm_lpvt_91850f3a05ff396b0df09e4303149836=1524468599',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->doRegist[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [1]Call to undefined function app\home\controller\get_client_ip()[D:\wamp64\www\jdapi\application\home\controller\Member.php:20]
+---------------------------------------------------------------
+[ 2018-04-23T17:38:22+08:00 ] 0.0.0.0 GET /jdapi/Member/doRegist
+[ info ] localhost/jdapi/Member/doRegist [运行时间：0.043002s][吞吐率：23.25req/s] [内存消耗：2,989.17kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'Member',
+    2 => 'doRegist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; pgv_si=s2719942656; PHPSESSID=57idf093ku8qsgrtsejh4m55b5; Hm_lpvt_efb61088be8421bc8859b0c05cebfa2d=1524462737; Hm_lpvt_91850f3a05ff396b0df09e4303149836=1524468599',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->doRegist[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [1]Call to undefined function app\home\controller\get_client_ip()[D:\wamp64\www\jdapi\application\home\controller\Member.php:20]
+---------------------------------------------------------------
+[ 2018-04-23T17:38:23+08:00 ] 0.0.0.0 GET /jdapi/Member/doRegist
+[ info ] localhost/jdapi/Member/doRegist [运行时间：0.033002s][吞吐率：30.30req/s] [内存消耗：2,989.17kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'Member',
+    2 => 'doRegist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; pgv_si=s2719942656; PHPSESSID=57idf093ku8qsgrtsejh4m55b5; Hm_lpvt_efb61088be8421bc8859b0c05cebfa2d=1524462737; Hm_lpvt_91850f3a05ff396b0df09e4303149836=1524468599',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->doRegist[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [1]Call to undefined function app\home\controller\get_client_ip()[D:\wamp64\www\jdapi\application\home\controller\Member.php:20]
+---------------------------------------------------------------
+[ 2018-04-23T17:38:23+08:00 ] 0.0.0.0 GET /jdapi/Member/doRegist
+[ info ] localhost/jdapi/Member/doRegist [运行时间：0.036002s][吞吐率：27.78req/s] [内存消耗：2,989.17kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'Member',
+    2 => 'doRegist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; pgv_si=s2719942656; PHPSESSID=57idf093ku8qsgrtsejh4m55b5; Hm_lpvt_efb61088be8421bc8859b0c05cebfa2d=1524462737; Hm_lpvt_91850f3a05ff396b0df09e4303149836=1524468599',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->doRegist[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [1]Call to undefined function app\home\controller\get_client_ip()[D:\wamp64\www\jdapi\application\home\controller\Member.php:20]
+---------------------------------------------------------------
+[ 2018-04-23T17:38:23+08:00 ] 0.0.0.0 GET /jdapi/Member/doRegist
+[ info ] localhost/jdapi/Member/doRegist [运行时间：0.033002s][吞吐率：30.30req/s] [内存消耗：2,989.17kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'Member',
+    2 => 'doRegist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; pgv_si=s2719942656; PHPSESSID=57idf093ku8qsgrtsejh4m55b5; Hm_lpvt_efb61088be8421bc8859b0c05cebfa2d=1524462737; Hm_lpvt_91850f3a05ff396b0df09e4303149836=1524468599',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->doRegist[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [1]Call to undefined function app\home\controller\get_client_ip()[D:\wamp64\www\jdapi\application\home\controller\Member.php:20]
+---------------------------------------------------------------
+[ 2018-04-23T17:38:23+08:00 ] 0.0.0.0 GET /jdapi/Member/doRegist
+[ info ] localhost/jdapi/Member/doRegist [运行时间：0.033002s][吞吐率：30.30req/s] [内存消耗：2,989.17kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'Member',
+    2 => 'doRegist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; pgv_si=s2719942656; PHPSESSID=57idf093ku8qsgrtsejh4m55b5; Hm_lpvt_efb61088be8421bc8859b0c05cebfa2d=1524462737; Hm_lpvt_91850f3a05ff396b0df09e4303149836=1524468599',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->doRegist[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [1]Call to undefined function app\home\controller\get_client_ip()[D:\wamp64\www\jdapi\application\home\controller\Member.php:20]
+---------------------------------------------------------------
+[ 2018-04-23T17:38:37+08:00 ] 0.0.0.0 GET /jdapi/Member/doRegist
+[ info ] localhost/jdapi/Member/doRegist [运行时间：0.053003s][吞吐率：18.87req/s] [内存消耗：2,989.91kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'Member',
+    2 => 'doRegist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; pgv_si=s2719942656; PHPSESSID=57idf093ku8qsgrtsejh4m55b5; Hm_lpvt_efb61088be8421bc8859b0c05cebfa2d=1524462737; Hm_lpvt_91850f3a05ff396b0df09e4303149836=1524468599',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->doRegist[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'app\home\controller\Request' not found[D:\wamp64\www\jdapi\application\home\controller\Member.php:20]
+---------------------------------------------------------------
+[ 2018-04-23T17:38:54+08:00 ] 0.0.0.0 GET /jdapi/Member/doRegist
+[ info ] localhost/jdapi/Member/doRegist [运行时间：0.038002s][吞吐率：26.31req/s] [内存消耗：2,878.15kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'Member',
+    2 => 'doRegist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; pgv_si=s2719942656; PHPSESSID=57idf093ku8qsgrtsejh4m55b5; Hm_lpvt_efb61088be8421bc8859b0c05cebfa2d=1524462737; Hm_lpvt_91850f3a05ff396b0df09e4303149836=1524468599',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->doRegist[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-23T17:39:30+08:00 ] 0.0.0.0 POST /jdapi/Member/doRegist
+[ info ] localhost/jdapi/Member/doRegist [运行时间：0.037002s][吞吐率：27.03req/s] [内存消耗：2,969.11kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'Member',
+    2 => 'doRegist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Fiddler',
+  'host' => 'localhost',
+  'content-length' => '0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->doRegist[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: mobile[D:\wamp64\www\jdapi\application\home\controller\Member.php:23]
+---------------------------------------------------------------
+[ 2018-04-23T17:41:20+08:00 ] 0.0.0.0 GET /jdapi/Member/doRegist
+[ info ] localhost/jdapi/Member/doRegist [运行时间：0.040002s][吞吐率：25.00req/s] [内存消耗：2,877.15kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'Member',
+    2 => 'doRegist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; pgv_si=s2719942656; PHPSESSID=57idf093ku8qsgrtsejh4m55b5; Hm_lpvt_efb61088be8421bc8859b0c05cebfa2d=1524462737; Hm_lpvt_91850f3a05ff396b0df09e4303149836=1524468599',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->doRegist[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-23T17:41:37+08:00 ] 0.0.0.0 GET /jdapi/Member/doRegist
+[ info ] localhost/jdapi/Member/doRegist [运行时间：0.044003s][吞吐率：22.73req/s] [内存消耗：2,974.02kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'Member',
+    2 => 'doRegist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; pgv_si=s2719942656; PHPSESSID=57idf093ku8qsgrtsejh4m55b5; Hm_lpvt_efb61088be8421bc8859b0c05cebfa2d=1524462737; Hm_lpvt_91850f3a05ff396b0df09e4303149836=1524468599',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->doRegist[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: mobile[D:\wamp64\www\jdapi\application\home\controller\Member.php:23]
+---------------------------------------------------------------
+[ 2018-04-23T17:41:46+08:00 ] 0.0.0.0 GET /jdapi/Member/doRegist
+[ info ] localhost/jdapi/Member/doRegist [运行时间：0.045003s][吞吐率：22.22req/s] [内存消耗：2,974.02kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'Member',
+    2 => 'doRegist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; pgv_si=s2719942656; PHPSESSID=57idf093ku8qsgrtsejh4m55b5; Hm_lpvt_efb61088be8421bc8859b0c05cebfa2d=1524462737; Hm_lpvt_91850f3a05ff396b0df09e4303149836=1524468599',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->doRegist[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: mobile[D:\wamp64\www\jdapi\application\home\controller\Member.php:23]
+---------------------------------------------------------------
+[ 2018-04-23T17:43:20+08:00 ] 0.0.0.0 GET /jdapi/Member/doRegist
+[ info ] localhost/jdapi/Member/doRegist [运行时间：0.052003s][吞吐率：19.23req/s] [内存消耗：3,006.38kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'Member',
+    2 => 'doRegist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; pgv_si=s2719942656; PHPSESSID=57idf093ku8qsgrtsejh4m55b5; Hm_lpvt_efb61088be8421bc8859b0c05cebfa2d=1524462737; Hm_lpvt_91850f3a05ff396b0df09e4303149836=1524468599',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->doRegist[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: mobile[D:\wamp64\www\jdapi\application\home\controller\Member.php:23]
+[ error ] [1]Call to undefined method app\home\controller\Member::ajaxReturn()[D:\wamp64\www\jdapi\application\home\controller\Member.php:25]
+---------------------------------------------------------------
+[ 2018-04-23T17:46:37+08:00 ] 0.0.0.0 GET /jdapi/Member/doRegist
+[ info ] localhost/jdapi/Member/doRegist [运行时间：0.051003s][吞吐率：19.61req/s] [内存消耗：2,842.77kb] [文件加载：46]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'Member',
+    2 => 'doRegist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; pgv_si=s2719942656; PHPSESSID=57idf093ku8qsgrtsejh4m55b5; Hm_lpvt_efb61088be8421bc8859b0c05cebfa2d=1524462737; Hm_lpvt_91850f3a05ff396b0df09e4303149836=1524468599',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->doRegist[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: mobile[D:\wamp64\www\jdapi\application\home\controller\Member.php:23]
+---------------------------------------------------------------
+[ 2018-04-23T17:46:40+08:00 ] 0.0.0.0 GET /jdapi/Member/doRegist
+[ info ] localhost/jdapi/Member/doRegist [运行时间：0.047003s][吞吐率：21.28req/s] [内存消耗：2,842.77kb] [文件加载：46]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'Member',
+    2 => 'doRegist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; pgv_si=s2719942656; PHPSESSID=57idf093ku8qsgrtsejh4m55b5; Hm_lpvt_efb61088be8421bc8859b0c05cebfa2d=1524462737; Hm_lpvt_91850f3a05ff396b0df09e4303149836=1524468599',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->doRegist[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: mobile[D:\wamp64\www\jdapi\application\home\controller\Member.php:23]
+---------------------------------------------------------------
+[ 2018-04-23T17:54:46+08:00 ] 0.0.0.0 GET /jdapi/Member/doRegist
+[ info ] localhost/jdapi/Member/doRegist [运行时间：0.037002s][吞吐率：27.03req/s] [内存消耗：2,876.96kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'Member',
+    2 => 'doRegist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; pgv_si=s2719942656; PHPSESSID=57idf093ku8qsgrtsejh4m55b5; Hm_lpvt_efb61088be8421bc8859b0c05cebfa2d=1524462737; Hm_lpvt_91850f3a05ff396b0df09e4303149836=1524468599',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->doRegist[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-23T17:55:29+08:00 ] 0.0.0.0 POST /jdapi/Member/doRegist
+[ info ] localhost/jdapi/Member/doRegist [运行时间：0.040002s][吞吐率：25.00req/s] [内存消耗：2,837.91kb] [文件加载：46]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'Member',
+    2 => 'doRegist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Fiddler',
+  'host' => 'localhost',
+  'content-length' => '18',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->doRegist[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: mobile[D:\wamp64\www\jdapi\application\home\controller\Member.php:24]
+---------------------------------------------------------------
+[ 2018-04-23T17:57:28+08:00 ] 0.0.0.0 POST /jdapi/Member/doRegist
+[ info ] localhost/jdapi/Member/doRegist [运行时间：0.082005s][吞吐率：12.19req/s] [内存消耗：2,837.91kb] [文件加载：46]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'Member',
+    2 => 'doRegist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Fiddler',
+  'host' => 'localhost',
+  'content-length' => '20',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->doRegist[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: mobile[D:\wamp64\www\jdapi\application\home\controller\Member.php:24]
+---------------------------------------------------------------
+[ 2018-04-23T17:58:32+08:00 ] 0.0.0.0 POST /jdapi/Member/doRegist
+[ info ] shaiya.9vf.com/jdapi/Member/doRegist [运行时间：0.047002s][吞吐率：21.28req/s] [内存消耗：2,842.50kb] [文件加载：46]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'Member',
+    2 => 'doRegist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'shaiya.9vf.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'content-length' => '20',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'cookie' => 'Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1518233190,1519271056,1519351420,1519638742; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520905117,1521078699,1521175336,1521455130; __root_domain_v=.9vf.com; _qddaz=QD.vf1azp.esr2q4.jcvh5ibi; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1524477394; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1523328254,1523328289,1523413545; Hm_lpvt_efb61088be8421bc8859b0c05cebfa2d=1524477394; PHPSESSID=o4sc6egvtnfvgob9m16p2bikj0; jiathis_rdc=%7B%22http%3A//shaiya.9vf.com/News/read/id/167.html%22%3A%220%7C1524477375624%22%7D',
+  'referer' => 'http://shaiya.9vf.com/Point/labour.html',
+  'x-requested-with' => 'XMLHttpRequest',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15021130232',
+)
+[ info ] [ RUN ] app\home\controller\Member->doRegist[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: mobile[D:\wamp64\www\jdapi\application\home\controller\Member.php:24]
+---------------------------------------------------------------
+[ 2018-04-23T17:59:50+08:00 ] 0.0.0.0 POST /jdapi/Member/doRegist
+[ info ] localhost/jdapi/Member/doRegist [运行时间：0.050003s][吞吐率：20.00req/s] [内存消耗：2,837.91kb] [文件加载：46]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'Member',
+    2 => 'doRegist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Fiddler',
+  'host' => 'localhost',
+  'content-length' => '20',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->doRegist[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: mobile[D:\wamp64\www\jdapi\application\home\controller\Member.php:24]
+---------------------------------------------------------------
+[ 2018-04-23T18:00:57+08:00 ] 0.0.0.0 POST /jdapi/Member/doRegist
+[ info ] localhost/jdapi/Member/doRegist [运行时间：0.057003s][吞吐率：17.54req/s] [内存消耗：2,837.73kb] [文件加载：46]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'Member',
+    2 => 'doRegist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Fiddler',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'host' => 'localhost',
+  'content-length' => '20',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15021130232',
+)
+[ info ] [ RUN ] app\home\controller\Member->doRegist[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: mobile[D:\wamp64\www\jdapi\application\home\controller\Member.php:24]
+---------------------------------------------------------------
+[ 2018-04-23T18:05:14+08:00 ] 0.0.0.0 POST /jdapi/Member/doRegist
+[ info ] localhost/jdapi/Member/doRegist [运行时间：0.056004s][吞吐率：17.86req/s] [内存消耗：2,838.12kb] [文件加载：46]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'Member',
+    2 => 'doRegist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Fiddler',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'host' => 'localhost',
+  'content-length' => '20',
+)
+[ info ] [ PARAM ] array (
+  'username' => '15021130232',
+)
+[ info ] [ RUN ] app\home\controller\Member->doRegist[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: mobile[D:\wamp64\www\jdapi\application\home\controller\Member.php:24]
+---------------------------------------------------------------
+[ 2018-04-23T18:34:06+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.062003s][吞吐率：16.13req/s] [内存消耗：3,003.45kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; pgv_si=s2719942656; PHPSESSID=57idf093ku8qsgrtsejh4m55b5; Hm_lpvt_efb61088be8421bc8859b0c05cebfa2d=1524477367; Hm_lpvt_91850f3a05ff396b0df09e4303149836=1524468599',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [1]Call to undefined function app\home\controller\I()[D:\wamp64\www\jdapi\application\home\controller\Member.php:45]
+---------------------------------------------------------------
+[ 2018-04-23T18:34:12+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.042002s][吞吐率：23.81req/s] [内存消耗：3,020.54kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; pgv_si=s2719942656; PHPSESSID=57idf093ku8qsgrtsejh4m55b5; Hm_lpvt_efb61088be8421bc8859b0c05cebfa2d=1524477367; Hm_lpvt_91850f3a05ff396b0df09e4303149836=1524468599',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义变量: data[D:\wamp64\www\jdapi\application\home\controller\Member.php:46]
+[ error ] [1]Call to undefined function app\home\controller\randCode()[D:\wamp64\www\jdapi\application\home\controller\Member.php:48]
+---------------------------------------------------------------
+[ 2018-04-23T18:35:04+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.041002s][吞吐率：24.39req/s] [内存消耗：2,989.27kb] [文件加载：48]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; pgv_si=s2719942656; PHPSESSID=57idf093ku8qsgrtsejh4m55b5; Hm_lpvt_efb61088be8421bc8859b0c05cebfa2d=1524477367; Hm_lpvt_91850f3a05ff396b0df09e4303149836=1524468599',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义变量: data[D:\wamp64\www\jdapi\application\home\controller\Member.php:46]
+[ error ] [8]未定义变量: status[D:\wamp64\www\jdapi\application\home\controller\Member.php:54]
+---------------------------------------------------------------
+[ 2018-04-23T18:35:32+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.061003s][吞吐率：16.39req/s] [内存消耗：2,989.27kb] [文件加载：48]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; pgv_si=s2719942656; PHPSESSID=57idf093ku8qsgrtsejh4m55b5; Hm_lpvt_efb61088be8421bc8859b0c05cebfa2d=1524477367; Hm_lpvt_91850f3a05ff396b0df09e4303149836=1524468599',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义变量: data[D:\wamp64\www\jdapi\application\home\controller\Member.php:46]
+[ error ] [8]未定义变量: status[D:\wamp64\www\jdapi\application\home\controller\Member.php:54]
+---------------------------------------------------------------
+[ 2018-04-23T18:35:47+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.038002s][吞吐率：26.31req/s] [内存消耗：2,988.80kb] [文件加载：48]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; pgv_si=s2719942656; PHPSESSID=57idf093ku8qsgrtsejh4m55b5; Hm_lpvt_efb61088be8421bc8859b0c05cebfa2d=1524477367; Hm_lpvt_91850f3a05ff396b0df09e4303149836=1524468599',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义变量: data[D:\wamp64\www\jdapi\application\home\controller\Member.php:46]
+[ error ] [8]未定义变量: status[D:\wamp64\www\jdapi\application\home\controller\Member.php:54]
+---------------------------------------------------------------
+[ 2018-04-23T18:36:40+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：1.469084s][吞吐率：0.68req/s] [内存消耗：2,899.52kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; pgv_si=s2719942656; PHPSESSID=57idf093ku8qsgrtsejh4m55b5; Hm_lpvt_efb61088be8421bc8859b0c05cebfa2d=1524477367; Hm_lpvt_91850f3a05ff396b0df09e4303149836=1524468599',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File

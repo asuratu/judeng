@@ -1,0 +1,1818 @@
+---------------------------------------------------------------
+[ 2018-04-24T09:42:48+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：1.800003s][吞吐率：0.56req/s] [内存消耗：2,897.93kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T09:43:25+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.310001s][吞吐率：3.23req/s] [内存消耗：2,898.16kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T09:43:26+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.810001s][吞吐率：1.23req/s] [内存消耗：2,898.16kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T09:43:48+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.250000s][吞吐率：4.00req/s] [内存消耗：2,898.77kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T09:44:00+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.860001s][吞吐率：1.16req/s] [内存消耗：2,898.77kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T09:44:01+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.680001s][吞吐率：1.47req/s] [内存消耗：2,898.77kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T09:44:02+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：1.030001s][吞吐率：0.97req/s] [内存消耗：2,898.77kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T09:44:26+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.730001s][吞吐率：1.37req/s] [内存消耗：2,898.77kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T09:44:41+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：1.060002s][吞吐率：0.94req/s] [内存消耗：2,898.77kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T09:45:38+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.210001s][吞吐率：4.76req/s] [内存消耗：2,898.95kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T09:49:09+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.660001s][吞吐率：1.52req/s] [内存消耗：2,905.91kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T09:49:21+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.570001s][吞吐率：1.75req/s] [内存消耗：2,905.29kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T09:52:24+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：1.000001s][吞吐率：1.00req/s] [内存消耗：2,905.91kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T09:52:26+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.350000s][吞吐率：2.86req/s] [内存消耗：2,905.91kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T09:52:33+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.830001s][吞吐率：1.20req/s] [内存消耗：2,905.52kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T09:52:37+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.350001s][吞吐率：2.86req/s] [内存消耗：2,905.52kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T10:04:38+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.390001s][吞吐率：2.56req/s] [内存消耗：2,906.49kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T10:17:01+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.250000s][吞吐率：4.00req/s] [内存消耗：2,901.06kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T10:17:22+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.180000s][吞吐率：5.56req/s] [内存消耗：2,901.21kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T10:22:11+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.168010s][吞吐率：5.95req/s] [内存消耗：2,901.73kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T10:22:14+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.325019s][吞吐率：3.08req/s] [内存消耗：2,901.88kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T10:22:15+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.221013s][吞吐率：4.52req/s] [内存消耗：2,901.88kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T10:23:01+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.212013s][吞吐率：4.72req/s] [内存消耗：2,902.35kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T10:23:05+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.118006s][吞吐率：8.47req/s] [内存消耗：2,902.35kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T10:23:26+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.164010s][吞吐率：6.10req/s] [内存消耗：2,902.41kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T10:23:55+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.165010s][吞吐率：6.06req/s] [内存消耗：2,902.71kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T10:23:56+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.230013s][吞吐率：4.35req/s] [内存消耗：2,902.71kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T10:23:57+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.156009s][吞吐率：6.41req/s] [内存消耗：2,902.71kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T10:23:57+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.230013s][吞吐率：4.35req/s] [内存消耗：2,902.71kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T10:23:59+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.150008s][吞吐率：6.67req/s] [内存消耗：2,902.71kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T10:24:10+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.154009s][吞吐率：6.49req/s] [内存消耗：2,902.55kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T10:26:18+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.188011s][吞吐率：5.32req/s] [内存消耗：2,902.73kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T10:26:21+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.168010s][吞吐率：5.95req/s] [内存消耗：2,902.73kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T10:26:22+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.127008s][吞吐率：7.87req/s] [内存消耗：2,902.73kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T10:26:22+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.235014s][吞吐率：4.26req/s] [内存消耗：2,902.73kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T10:26:23+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.136008s][吞吐率：7.35req/s] [内存消耗：2,902.73kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T10:27:27+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.488028s][吞吐率：2.05req/s] [内存消耗：2,898.16kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T10:27:54+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.264015s][吞吐率：3.79req/s] [内存消耗：2,996.05kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]curl_close() expects parameter 1 to be resource, array given[D:\wamp64\www\jdapi\application\common.php:36]
+---------------------------------------------------------------
+[ 2018-04-24T10:28:01+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.203011s][吞吐率：4.93req/s] [内存消耗：2,898.63kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T10:28:06+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.315018s][吞吐率：3.17req/s] [内存消耗：2,898.63kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T10:36:10+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.317018s][吞吐率：3.15req/s] [内存消耗：3,029.31kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Call to undefined function app\home\controller\checkErr()[D:\wamp64\www\jdapi\application\home\controller\Member.php:84]
+---------------------------------------------------------------
+[ 2018-04-24T10:39:18+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.207011s][吞吐率：4.83req/s] [内存消耗：2,909.30kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T10:41:49+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.476028s][吞吐率：2.10req/s] [内存消耗：2,998.69kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]Illegal string offset 'code'[D:\wamp64\www\jdapi\application\common.php:172]
+---------------------------------------------------------------
+[ 2018-04-24T10:43:38+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.224013s][吞吐率：4.46req/s] [内存消耗：2,902.20kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T10:43:43+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.238013s][吞吐率：4.20req/s] [内存消耗：2,902.21kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T10:43:48+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.206011s][吞吐率：4.85req/s] [内存消耗：2,901.43kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T10:44:26+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.204012s][吞吐率：4.90req/s] [内存消耗：2,902.47kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T10:45:10+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.333019s][吞吐率：3.00req/s] [内存消耗：2,854.82kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T10:45:10+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.283016s][吞吐率：3.53req/s] [内存消耗：2,902.93kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-24T10:46:35+08:00 ] 0.0.0.0 GET /jdapi/member/getsms
+[ info ] localhost/jdapi/member/getsms [运行时间：0.350020s][吞吐率：2.86req/s] [内存消耗：2,855.63kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\jdapi\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_91850f3a05ff396b0df09e4303149836=1522377040,1522823172,1524466085; Hm_lvt_73d8cf7c0b71b47a70f04fe07b9a9be0=1520836930,1521002950,1522377044,1522823176; Hm_lvt_efb61088be8421bc8859b0c05cebfa2d=1523179457,1523262261,1523324953,1524451384; __root_domain_v=.localhost; _qddaz=QD.fgench.f7p9o8.jextx4x5; Hm_lvt_d6468fef7e53a309c261382a0324c66e=1522821957,1523845315; Hm_lvt_c2ecdf2edb9cec411a7b815e40587bf3=1523848568; Qs_lvt_168021=1523874863%2C1523936790%2C1524033535; Qs_pv_168021=338159634950732600%2C2080017757432485400%2C3356302473216658000%2C1213043570795401000%2C2986280760834339300; pgv_pvi=9188440064; PHPSESSID=gham5c5anljq0c4t1aqsu4gml4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\wamp64\www\jdapi\application\home\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
