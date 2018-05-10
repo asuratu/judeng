@@ -154,8 +154,10 @@ class Number extends Common
                 $order[$key]['birthday'] = $age;
                 $order[$key]['group_type'] = (string)(intval(in_array($val['member_id'], $group_member)));
             }
-
-            ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>$order,'group_member_name'=>$group['group_member_name']));
+            $total = Db::table('jd_doctor_member s, jd_member m')
+                ->where("s.doctor_id = {$data['doctor_id']} and s.`member_id` = m.`member_id` and (m.`member_name` like '%{$data['title']}%' or m.`mobile` like '%{$data['title']}%' or s.`grouping` like '%{$data['title']}%')")
+                ->count();
+            ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>$order,'total'=>$total,'group_member_name'=>$group['group_member_name']));
 
         }
     }
@@ -301,8 +303,10 @@ class Number extends Common
                 $age = date('Y', time()) - date('Y', strtotime($val['birthday']));
                 $order[$key]['birthday'] = $age;
             }
-
-            ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>$order));
+            $total = Db::table('jd_group_patient s, jd_member m')
+                ->where("s.doctor_id = {$data['doctor_id']} and s.group_id = {$data['group_id']} and s.`member_id` = m.`member_id`")
+                ->count();
+            ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>$order,'total'=>$total));
 
         }
     }
@@ -324,6 +328,7 @@ class Number extends Common
             $patient['member_id'] = intval($data['member_id']);
             $count = db('group_patient')->where($patient)->count();
             if (!$count) {
+                $patient['add_date'] = time();
                 db('group_patient')->insert($patient);
                 $this->uploadMember($data['doctor_id'], $data['group_id'], $data['member_id'], $data['member_name'], $data['group_name'], 0);
                 $this->uploadGroup($data['doctor_id'], $data['group_id'], $data['member_id'], $data['member_name'], $data['group_name'], 0);
@@ -400,13 +405,13 @@ class Number extends Common
     public function uploadGroup($doctor_id, $group_id, $member_id, $member_name, $group_name, $type)
     {
         $doctor = db('patient_group')->where("group_id = {$group_id}")->find();
-        $group_id = explode(',', $doctor['group_member_id']);
+        $group_member_id = explode(',', $doctor['group_member_id']);
         $group_member = explode(',', $doctor['group_member_name']);
         $group = array();
         $group1 = array();
         if ($type == 1) {
             // 删除时候执行
-            foreach ($group_id as $key => $val) {
+            foreach ($group_member_id as $key => $val) {
                 if ($val != '') {
                     if ($member_id != $val) {
                         $group[] = $val;
@@ -424,7 +429,7 @@ class Number extends Common
             // 添加时候执行
             $i = 0;
             $j = 0;
-            foreach ($group_id as $key => $val) {
+            foreach ($group_member_id as $key => $val) {
                 if ($val != '') {
                     $group[] = $val;
                 }
@@ -452,7 +457,7 @@ class Number extends Common
         $doctormember = array();
         $doctormember['group_id'] = $group_id;
         $doctormember['group_member_id'] = $group;
-        $doctormember['group_member_name'] = $group;
+        $doctormember['group_member_name'] = $group1;
         db('patient_group')->update($doctormember);
     }
 
