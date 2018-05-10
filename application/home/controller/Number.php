@@ -202,6 +202,7 @@ class Number extends Common
             $patient['doctor_id'] = intval($data['doctor_id']);
             $patient['group_name'] = $data['group_name'];
             $patient['group_name_eng'] = $data['group_name_eng'];
+            $patient['group_member_id'] = '';
             $patient['group_member_name'] = '';
             $patient['add_date'] = time();
 
@@ -313,11 +314,21 @@ class Number extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
-            if($data['mobile']=='')
+            if($data['doctor_id']==''||$data['group_id']==''||$data['member_id']==''||$data['member_name']==''||$data['group_name']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
-
+            $patient = array();
+            $patient['doctor_id'] = intval($data['doctor_id']);
+            $patient['group_id'] = intval($data['group_id']);
+            $patient['member_id'] = intval($data['member_id']);
+            $count = db('group_patient')->where($patient)->count();
+            if (!$count) {
+                db('group_patient')->insert($patient);
+                $this->uploadMember($data['doctor_id'], $data['group_id'], $data['member_id'], $data['member_name'], $data['group_name'], 0);
+                $this->uploadGroup($data['doctor_id'], $data['group_id'], $data['member_id'], $data['member_name'], $data['group_name'], 0);
+            }
+            ajaxReturn(array('code' =>1, 'info' => 'ok'));
         }
     }
 
@@ -328,24 +339,121 @@ class Number extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
-            if($data['doctor_id']==''||$data['group_id']==''||$data['member_id']=='')
+            if($data['doctor_id']==''||$data['group_id']==''||$data['member_id']==''||$data['member_name']==''||$data['group_name']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
-
+            $patient = array();
+            $patient['doctor_id'] = intval($data['doctor_id']);
+            $patient['group_id'] = intval($data['group_id']);
+            $patient['member_id'] = intval($data['member_id']);
+            $count = db('group_patient')->where($patient)->count();
+            if ($count) {
+                $this->uploadMember($data['doctor_id'], $data['group_id'], $data['member_id'], $data['member_name'], $data['group_name'], 1);
+                $this->uploadGroup($data['doctor_id'], $data['group_id'], $data['member_id'], $data['member_name'], $data['group_name'], 1);
+                db('group_patient')->where($patient)->delete();
+            }
+            ajaxReturn(array('code' =>1, 'info' => 'ok'));
         }
     }
 
     // 医生患者选择分组处理（支持添加/修改）
-    public function uploadMember($doctor_id, $group_id, $member_id, $type)
+    public function uploadMember($doctor_id, $group_id, $member_id, $member_name, $group_name, $type)
     {
-
+        $doctor = db('doctor_member')->where("doctor_id = {$doctor_id} and member_id = {$member_id}")->find();
+        $grouping = explode(',', $doctor['grouping']);
+        $group = array();
+        if ($type == 1) {
+            // 删除时候执行
+            foreach ($grouping as $key => $val) {
+                if ($val != '') {
+                    if ($group_name != $val) {
+                        $group[] = $val;
+                    }
+                }
+            }
+        } else {
+            // 添加时候执行
+            $i = 0;
+            foreach ($grouping as $key => $val) {
+                if ($val != '') {
+                    $group[] = $val;
+                }
+                if ($group_name == $val) {
+                    $i = 1;
+                }
+            }
+            if ($i == 0) {
+                $group[] = $group_name;
+            }
+        }
+        $group = implode(',', $group);
+        $doctormember = array();
+        $doctormember['doctor_id'] = $doctor_id;
+        $doctormember['member_id'] = $member_id;
+        $doctormember['dcmember_id'] = $doctor['dcmember_id'];
+        $doctormember['grouping'] = $group;
+        db('doctor_member')->update($doctormember);
     }
 
     // 患者分组里面有多少患者处理（支持添加/修改）
-    public function uploadGroup($doctor_id, $group_id, $member_id, $type)
+    public function uploadGroup($doctor_id, $group_id, $member_id, $member_name, $group_name, $type)
     {
-
+        $doctor = db('patient_group')->where("group_id = {$group_id}")->find();
+        $group_id = explode(',', $doctor['group_member_id']);
+        $group_member = explode(',', $doctor['group_member_name']);
+        $group = array();
+        $group1 = array();
+        if ($type == 1) {
+            // 删除时候执行
+            foreach ($group_id as $key => $val) {
+                if ($val != '') {
+                    if ($member_id != $val) {
+                        $group[] = $val;
+                    }
+                }
+            }
+            foreach ($group_member as $key => $val) {
+                if ($val != '') {
+                    if ($member_name != $val) {
+                        $group1[] = $val;
+                    }
+                }
+            }
+        } else {
+            // 添加时候执行
+            $i = 0;
+            $j = 0;
+            foreach ($group_id as $key => $val) {
+                if ($val != '') {
+                    $group[] = $val;
+                }
+                if ($member_id == $val) {
+                    $i = 1;
+                }
+            }
+            if ($i == 0) {
+                $group[] = $member_id;
+            }
+            foreach ($group_member as $key => $val) {
+                if ($val != '') {
+                    $group1[] = $val;
+                }
+                if ($member_name == $val) {
+                    $j = 1;
+                }
+            }
+            if ($j == 0) {
+                $group1[] = $member_name;
+            }
+        }
+        $group = implode(',', $group);
+        $group1 = implode(',', $group1);
+        $doctormember = array();
+        $doctormember['group_id'] = $group_id;
+        $doctormember['group_member_id'] = $group;
+        $doctormember['group_member_name'] = $group;
+        db('patient_group')->update($doctormember);
     }
 
 
