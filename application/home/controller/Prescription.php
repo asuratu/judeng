@@ -195,6 +195,7 @@ class Prescription extends Common
                     $tempInfo['price'] = 0;
                     $tempInfo['drug_str'] = '';
                     $tempInfo['is_taboo'] = 0;
+                    $tempInfo['dose'] = 0;
                     $tempInfo['taboo_content'] = '';
 
                     ajaxReturn(array('code'=>1,'info'=>'ok~!','data'=>[$tempInfo]));
@@ -205,7 +206,7 @@ class Prescription extends Common
                 //修改模板
                 //查询模板信息
                 $tempMap['temp_id'] = $data['temp_id'];
-                $drugtempInfo = db('temp')->where($tempMap)->field("make,weight,taking,instructions,temp_name,relation_id,price,drug_str,is_taboo,taboo_content")->find();
+                $drugtempInfo = db('temp')->where($tempMap)->field("make,weight,taking,instructions,temp_name,relation_id,price,drug_str,is_taboo,taboo_content,dose")->find();
                 //敏感数据处理
                 $drugtempInfo['drug_str'] = base64_encode($drugtempInfo['drug_str']);
                 $drugtempInfo['taboo_content'] = $drugtempInfo['taboo_content'] ? base64_encode($drugtempInfo['taboo_content']) : '';
@@ -273,6 +274,8 @@ class Prescription extends Common
             }
 
             $tempMap['relation_id'] = $data['relation_id'];
+            $tempMap['state_id'] = $data['state_id'];
+            $tempMap['dose'] = intval($data['dose']);
             $tempMap['type'] = 0;//0个人模板 1经典模板(管理员创建)
             $tempMap['drug_str'] = base64_decode($data['drug_str']);
             $tempMap['make'] = str_replace(__ROOT__,'',$data['make']);
@@ -282,7 +285,7 @@ class Prescription extends Common
             $tempMap['add_date'] = time();
             $tempMap['release_date'] = time();
 
-//            $arr = array(array(17, '制川乌', 4), array(315, '熟附片', 30), array(485, '法半夏', 94));
+//            $arr = array(array(17, '制川乌', 4, 'g'), array(315, '熟附片', 30, 'g'), array(485, '法半夏', 94, 'g'));
 //            var_dump(base64_encode(json_encode($arr)));die;
 
             //计算价格
@@ -428,6 +431,8 @@ class Prescription extends Common
             }
 
             $tempMap['relation_id'] = $data['relation_id'];
+            $tempMap['state_id'] = $data['state_id'];
+            $tempMap['dose'] = intval($data['dose']);
             $tempMap['type'] = 0;//0个人模板 1经典模板(管理员创建)
             $tempMap['drug_str'] = base64_decode($data['drug_str']);
             $tempMap['make'] = str_replace(__ROOT__,'',$data['make']);
@@ -436,7 +441,7 @@ class Prescription extends Common
             $tempMap['instructions'] = $data['instructions'];
             $tempMap['release_date'] = time();
 
-//            $arr = array(array(17, '制川乌', 4), array(315, '熟附片', 30), array(485, '法半夏', 94));
+//            $arr = array(array(17, '制川乌', 4, 'g'), array(315, '熟附片', 30, 'g'), array(485, '法半夏', 94, 'g'));
 //            var_dump(base64_encode(json_encode($arr)));die;
 
             //计算价格
@@ -514,16 +519,59 @@ class Prescription extends Common
                 ajaxReturn($res);
             }
 
-            if($data['member_id']=='')
+            if($data['member_id']=='' || $data['state_id']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
 
             //获取模板数组
-            $map['`is_display`'] = 1;
-            $stateArr = db('temp_name')->where($map)->field("`state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`, `pic`")->order("`sort` DESC")->select();
+            $map['member_id'] = $data['member_id'];
+            $map['state_id'] = $data['state_id'];
+            $stateArr = db('temp')->where($map)->field("`temp_id`,`temp_name`,`type`,`relation_id`,`drug_str`, `state_id`, `release_date`")->order("`release_date` DESC")->select();
+            foreach ($stateArr as $key=>$val) {
+                $stateArr[$key]['drug_str'] = base64_encode($val['drug_str']);
+            }
 
-            ajaxReturn(array('code'=>0, 'info'=>'ok!','data'=>$stateArr));
+            ajaxReturn(array('code'=>1, 'info'=>'ok!','data'=>$stateArr));
+        }
+    }
+
+    /**
+     * @Title: getAllTempList
+     * @Description: TODO 医生查看自建药方模板,传承方剂,经典方列表/不分页
+     */
+    public function getAllTempList() {
+        if($this->request->isPost())
+        {
+            $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
+
+            if($data['member_id']=='' || $data['state_id']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+            }
+
+            //获取自建的非经典模板数组
+            $map['member_id'] = $data['member_id'];
+            $map['state_id'] = $data['state_id'];
+            $map['type'] = 0;
+            $stateArr = db('temp')->where($map)->field("`temp_id`,`temp_name`,`type`,`relation_id`,`drug_str`, `state_id`, `release_date`")->order("`release_date` DESC")->select();
+            foreach ($stateArr as $key=>$val) {
+                $stateArr[$key]['drug_str'] = base64_encode($val['drug_str']);
+            }
+
+            //获取经典模板数组
+            $map1['state_id'] = $data['state_id'];
+            $map1['type'] = 1;
+            $classicArr = db('temp')->where($map1)->field("`temp_id`,`temp_name`,`type`,`relation_id`,`drug_str`, `state_id`, `release_date`")->order("`release_date` DESC")->select();
+            foreach ($classicArr as $key=>$val) {
+                $classicArr[$key]['drug_str'] = base64_encode($val['drug_str']);
+            }
+            ajaxReturn(array('code'=>1, 'info'=>'ok!','data'=>array_merge($stateArr, $classicArr)));
         }
     }
 
