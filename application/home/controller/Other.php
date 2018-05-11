@@ -76,10 +76,10 @@ class Other extends Common
     }
 
     /**
-     * @Title: getbankList
+     * @Title: getBankList
      * @Description: TODO 获取银行列表
      */
-    public function getbankList() {
+    public function getBankList() {
         if($this->request->isPost())
         {
             $data=input('post.');
@@ -87,11 +87,6 @@ class Other extends Common
             if($res['code']==0)
             {
                 ajaxReturn($res);
-            }
-
-            if($data['bank_id']=='')
-            {
-                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
 
             //获取银行数组
@@ -105,7 +100,6 @@ class Other extends Common
                     $list[$key]['selected'] = 0;
                 }
             }
-
             ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>$list));
         }
     }

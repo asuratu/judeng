@@ -1,0 +1,818 @@
+---------------------------------------------------------------
+[ 2018-05-11T00:05:26+08:00 ] 0.0.0.0 POST /prescription/editTemp
+[ info ] localhost:7037/prescription/editTemp [运行时间：1.975765s][吞吐率：0.51req/s] [内存消耗：3,196.39kb] [文件加载：57]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'editTemp',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryrwBafB1BDQB5TC5Z',
+  'content-length' => '1226',
+  'x-original-url' => '/prescription/editTemp',
+  'postman-token' => 'cb4083bf-f6ba-70fe-1ad5-a7c878df62a3',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '2',
+  'temp_name' => '测试药方模板12',
+  'drug_str' => 'W1sxNywiXHU1MjM2XHU1ZGRkXHU0ZTRjIiw0XSxbMzE1LCJcdTcxOWZcdTk2NDRcdTcyNDciLDMwXSxbNDg1LCJcdTZjZDVcdTUzNGFcdTU5MGYiLDk0XV0=',
+  'instructions' => '煎服, 饭后服用',
+  'relation_id' => '32',
+  'make' => '*水丸需整体制作，请按照总量选#克数#，#1000g#起做',
+  'weight' => '#0-10ｇ#，(制丸会减少药材总重10%-30%)',
+  'taking' => '共#28#剂，每日#1#剂，1剂分#1#次使用	',
+  'temp_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->editTemp[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ error ] [8]Use of undefined constant __ROOT__ - assumed '__ROOT__'[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php:383]
+[ error ] [8]Use of undefined constant __ROOT__ - assumed '__ROOT__'[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php:399]
+[ error ] [8]Use of undefined constant __ROOT__ - assumed '__ROOT__'[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php:400]
+[ error ] [8]Use of undefined constant __ROOT__ - assumed '__ROOT__'[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php:401]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.316277s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_temp` [ RunTime:0.122715s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_temp` WHERE  `member_id` = 2  AND `temp_name` = '测试药方模板12' LIMIT 1 [ RunTime:0.110103s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_temp` WHERE  `temp_id` = 2  AND `member_id` = 2 LIMIT 1 [ RunTime:0.112812s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug` [ RunTime:0.106464s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`drug_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `drug_id` = 17 LIMIT 1 [ RunTime:0.110502s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`drug_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `drug_id` = 315 LIMIT 1 [ RunTime:0.110649s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`drug_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `drug_id` = 485 LIMIT 1 [ RunTime:0.116984s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_record` [ RunTime:0.115724s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = '川乌'  AND `type` = 1 LIMIT 1 [ RunTime:0.106594s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `key` = 2  AND `type` = 0 [ RunTime:0.109961s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = '附子'  AND `type` = 1 LIMIT 1 [ RunTime:0.108293s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `key` = 2  AND `type` = 0 [ RunTime:0.103438s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = '半夏'  AND `type` = 1 LIMIT 1 [ RunTime:0.112303s ]
+[ sql ] [ SQL ] UPDATE `jd_temp`  SET `member_id`=2,`temp_name`='测试药方模板12',`relation_id`=32,`type`=0,`drug_str`='[[17,\"\\u5236\\u5ddd\\u4e4c\",4],[315,\"\\u719f\\u9644\\u7247\",30],[485,\"\\u6cd5\\u534a\\u590f\",94]]',`make`='*水丸需整体制作，请按照总量选#克数#，#1000g#起做',`weight`='#0-10ｇ#，(制丸会减少药材总重10%-30%)',`taking`='共#28#剂，每日#1#剂，1剂分#1#次使用	',`instructions`='煎服, 饭后服用',`release_date`=1525968324,`price`=496.539,`is_taboo`=1,`taboo_content`='[[\"\\u5ddd\\u4e4c\",\"\\u534a\\u590f\"],[\"\\u9644\\u5b50\",\"\\u534a\\u590f\"]]'  WHERE  `temp_id` = 2  AND `member_id` = 2 [ RunTime:0.114068s ]
+---------------------------------------------------------------
+[ 2018-05-11T00:06:13+08:00 ] 0.0.0.0 POST /prescription/editTemp
+[ info ] localhost:7037/prescription/editTemp [运行时间：0.551637s][吞吐率：1.81req/s] [内存消耗：3,031.12kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'editTemp',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryqn59oN4vbXVGlvAE',
+  'content-length' => '1226',
+  'x-original-url' => '/prescription/editTemp',
+  'postman-token' => '127d376a-d68f-66eb-3771-fb08d544c6f2',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '21',
+  'temp_name' => '测试药方模板1',
+  'drug_str' => 'W1sxNywiXHU1MjM2XHU1ZGRkXHU0ZTRjIiw0XSxbMzE1LCJcdTcxOWZcdTk2NDRcdTcyNDciLDMwXSxbNDg1LCJcdTZjZDVcdTUzNGFcdTU5MGYiLDk0XV0=',
+  'instructions' => '煎服, 饭后服用',
+  'relation_id' => '32',
+  'make' => '*水丸需整体制作，请按照总量选#克数#，#1000g#起做',
+  'weight' => '#0-10ｇ#，(制丸会减少药材总重10%-30%)',
+  'taking' => '共#28#剂，每日#1#剂，1剂分#1#次使用	',
+  'temp_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->editTemp[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]Use of undefined constant __ROOT__ - assumed '__ROOT__'[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php:383]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.157695s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_temp` [ RunTime:0.116137s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_temp` WHERE  `member_id` = 21  AND `temp_name` = '测试药方模板1' LIMIT 1 [ RunTime:0.108894s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_temp` WHERE  `temp_id` = 2  AND `member_id` = 21 LIMIT 1 [ RunTime:0.121116s ]
+---------------------------------------------------------------
+[ 2018-05-11T00:06:29+08:00 ] 0.0.0.0 POST /prescription/editTemp
+[ info ] localhost:7037/prescription/editTemp [运行时间：1.814729s][吞吐率：0.55req/s] [内存消耗：3,196.45kb] [文件加载：57]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'editTemp',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryA9cbpbcj5bPQEbJS',
+  'content-length' => '1225',
+  'x-original-url' => '/prescription/editTemp',
+  'postman-token' => 'f3408ed1-b228-ce56-56f5-8fde12f148b9',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '2',
+  'temp_name' => '测试药方模板1',
+  'drug_str' => 'W1sxNywiXHU1MjM2XHU1ZGRkXHU0ZTRjIiw0XSxbMzE1LCJcdTcxOWZcdTk2NDRcdTcyNDciLDMwXSxbNDg1LCJcdTZjZDVcdTUzNGFcdTU5MGYiLDk0XV0=',
+  'instructions' => '煎服, 饭后服用',
+  'relation_id' => '32',
+  'make' => '*水丸需整体制作，请按照总量选#克数#，#1000g#起做',
+  'weight' => '#0-10ｇ#，(制丸会减少药材总重10%-30%)',
+  'taking' => '共#28#剂，每日#1#剂，1剂分#1#次使用	',
+  'temp_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->editTemp[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ error ] [8]Use of undefined constant __ROOT__ - assumed '__ROOT__'[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php:383]
+[ error ] [8]Use of undefined constant __ROOT__ - assumed '__ROOT__'[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php:399]
+[ error ] [8]Use of undefined constant __ROOT__ - assumed '__ROOT__'[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php:400]
+[ error ] [8]Use of undefined constant __ROOT__ - assumed '__ROOT__'[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php:401]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.242633s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_temp` [ RunTime:0.108541s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_temp` WHERE  `member_id` = 2  AND `temp_name` = '测试药方模板1' LIMIT 1 [ RunTime:0.108594s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_temp` WHERE  `temp_id` = 2  AND `member_id` = 2 LIMIT 1 [ RunTime:0.108897s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug` [ RunTime:0.108181s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`drug_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `drug_id` = 17 LIMIT 1 [ RunTime:0.112568s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`drug_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `drug_id` = 315 LIMIT 1 [ RunTime:0.099382s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`drug_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `drug_id` = 485 LIMIT 1 [ RunTime:0.097708s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_record` [ RunTime:0.088567s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = '川乌'  AND `type` = 1 LIMIT 1 [ RunTime:0.106037s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `key` = 2  AND `type` = 0 [ RunTime:0.100662s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = '附子'  AND `type` = 1 LIMIT 1 [ RunTime:0.111111s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `key` = 2  AND `type` = 0 [ RunTime:0.108172s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = '半夏'  AND `type` = 1 LIMIT 1 [ RunTime:0.109874s ]
+[ sql ] [ SQL ] UPDATE `jd_temp`  SET `member_id`=2,`temp_name`='测试药方模板1',`relation_id`=32,`type`=0,`drug_str`='[[17,\"\\u5236\\u5ddd\\u4e4c\",4],[315,\"\\u719f\\u9644\\u7247\",30],[485,\"\\u6cd5\\u534a\\u590f\",94]]',`make`='*水丸需整体制作，请按照总量选#克数#，#1000g#起做',`weight`='#0-10ｇ#，(制丸会减少药材总重10%-30%)',`taking`='共#28#剂，每日#1#剂，1剂分#1#次使用	',`instructions`='煎服, 饭后服用',`release_date`=1525968388,`price`=496.539,`is_taboo`=1,`taboo_content`='[[\"\\u5ddd\\u4e4c\",\"\\u534a\\u590f\"],[\"\\u9644\\u5b50\",\"\\u534a\\u590f\"]]'  WHERE  `temp_id` = 2  AND `member_id` = 2 [ RunTime:0.115270s ]
+---------------------------------------------------------------
+[ 2018-05-11T01:11:37+08:00 ] 0.0.0.0 POST /prescription/getTempDetail
+[ info ] localhost:7037/prescription/getTempDetail [运行时间：0.779384s][吞吐率：1.28req/s] [内存消耗：3,109.26kb] [文件加载：58]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryBlnfg9u7atQbr9ee',
+  'content-length' => '330',
+  'x-original-url' => '/prescription/getTempDetail',
+  'postman-token' => 'e4550b8c-b7c1-e4d4-8d77-6e3b831fdfda',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'temp_id' => '2',
+  'state_id' => '7',
+  'area_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.245689s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.154757s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `state_id` = '7'  AND `is_display` = 1 LIMIT 1 [ RunTime:0.131940s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_temp` [ RunTime:0.109229s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'state_id' in 'field list'[D:\workLP\20180502\judeng\wwwroot\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-05-11T01:19:20+08:00 ] 0.0.0.0 POST /prescription/getTempDetail
+[ info ] localhost:7037/prescription/getTempDetail [运行时间：1.017330s][吞吐率：0.98req/s] [内存消耗：2,978.50kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary7DmuuoIBnnYYqA9i',
+  'content-length' => '330',
+  'x-original-url' => '/prescription/getTempDetail',
+  'postman-token' => 'dfb780a6-3e2a-12cf-a8eb-22f2ff550e2e',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'temp_id' => '2',
+  'state_id' => '7',
+  'area_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.252897s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.132244s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `state_id` = '7'  AND `is_display` = 1 LIMIT 1 [ RunTime:0.107986s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_temp` [ RunTime:0.115618s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_temp` WHERE  `temp_id` = 2 LIMIT 1 [ RunTime:0.121341s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.100730s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`area_name` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = '2'  AND p.`is_display` = 1  AND d.`state_id` = '7'  AND d.`relation_id` = 32 ORDER BY d.`sort` DESC [ RunTime:0.117911s ]
+---------------------------------------------------------------
+[ 2018-05-11T01:19:36+08:00 ] 0.0.0.0 POST /prescription/getTempDetail
+[ info ] localhost:7037/prescription/getTempDetail [运行时间：0.978372s][吞吐率：1.02req/s] [内存消耗：2,977.76kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary9AjgIRGF3MSCL5b3',
+  'content-length' => '330',
+  'x-original-url' => '/prescription/getTempDetail',
+  'postman-token' => '21458cd2-452a-55b5-8bdc-9b37feb3279f',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'temp_id' => '2',
+  'state_id' => '7',
+  'area_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.173541s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.122049s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `state_id` = '7'  AND `is_display` = 1 LIMIT 1 [ RunTime:0.149871s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_temp` [ RunTime:0.120256s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_temp` WHERE  `temp_id` = 2 LIMIT 1 [ RunTime:0.125406s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.110300s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`area_name` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = '2'  AND p.`is_display` = 1  AND d.`state_id` = '7'  AND d.`relation_id` = 32 ORDER BY d.`sort` DESC LIMIT 1 [ RunTime:0.113439s ]
+---------------------------------------------------------------
+[ 2018-05-11T01:20:02+08:00 ] 0.0.0.0 POST /prescription/getTempDetail
+[ info ] localhost:7037/prescription/getTempDetail [运行时间：0.918893s][吞吐率：1.09req/s] [内存消耗：2,977.76kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryJvBNkjE8P0USfFUF',
+  'content-length' => '330',
+  'x-original-url' => '/prescription/getTempDetail',
+  'postman-token' => 'c8988d33-8c9a-7f28-1a05-fb2fae0f500a',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'temp_id' => '2',
+  'state_id' => '7',
+  'area_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.205476s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.112293s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `state_id` = '7'  AND `is_display` = 1 LIMIT 1 [ RunTime:0.118922s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_temp` [ RunTime:0.110569s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_temp` WHERE  `temp_id` = 2 LIMIT 1 [ RunTime:0.108358s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.097285s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`area_name` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = '2'  AND p.`is_display` = 1  AND d.`state_id` = '7'  AND d.`relation_id` = 32 ORDER BY d.`sort` DESC LIMIT 1 [ RunTime:0.104517s ]
+---------------------------------------------------------------
+[ 2018-05-11T01:21:14+08:00 ] 0.0.0.0 POST /prescription/getTempDetail
+[ info ] localhost:7037/prescription/getTempDetail [运行时间：0.970451s][吞吐率：1.03req/s] [内存消耗：2,977.76kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryn0tADGy6YY8qY0uP',
+  'content-length' => '330',
+  'x-original-url' => '/prescription/getTempDetail',
+  'postman-token' => 'a035811f-34e7-dbb1-be3b-73f9ff69c2ec',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'temp_id' => '2',
+  'state_id' => '7',
+  'area_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.171552s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.137849s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `state_id` = '7'  AND `is_display` = 1 LIMIT 1 [ RunTime:0.159104s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_temp` [ RunTime:0.115691s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_temp` WHERE  `temp_id` = 2 LIMIT 1 [ RunTime:0.106810s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.106571s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`area_name` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = '2'  AND p.`is_display` = 1  AND d.`state_id` = '7'  AND d.`relation_id` = 32 ORDER BY d.`sort` DESC LIMIT 1 [ RunTime:0.110034s ]
+---------------------------------------------------------------
+[ 2018-05-11T01:22:22+08:00 ] 0.0.0.0 POST /prescription/getTempDetail
+[ info ] localhost:7037/prescription/getTempDetail [运行时间：0.985284s][吞吐率：1.01req/s] [内存消耗：2,978.88kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryKALTRaAjHKQS7APY',
+  'content-length' => '330',
+  'x-original-url' => '/prescription/getTempDetail',
+  'postman-token' => 'bbe742e7-94fd-3bb4-b6f0-40342b391a70',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'temp_id' => '2',
+  'state_id' => '7',
+  'area_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.248974s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.112138s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `state_id` = '7'  AND `is_display` = 1 LIMIT 1 [ RunTime:0.118203s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_temp` [ RunTime:0.116413s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_temp` WHERE  `temp_id` = 2 LIMIT 1 [ RunTime:0.118326s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.105238s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`area_name` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = '2'  AND p.`is_display` = 1  AND d.`state_id` = '7'  AND d.`relation_id` = 32 ORDER BY d.`sort` DESC LIMIT 1 [ RunTime:0.105711s ]
+---------------------------------------------------------------
+[ 2018-05-11T01:23:06+08:00 ] 0.0.0.0 POST /prescription/getTempDetail
+[ info ] localhost:7037/prescription/getTempDetail [运行时间：0.742748s][吞吐率：1.35req/s] [内存消耗：3,045.67kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryQAhilIOALGvDHhQX',
+  'content-length' => '330',
+  'x-original-url' => '/prescription/getTempDetail',
+  'postman-token' => '122d3eb5-cb36-34a3-818a-2a04b8cf93ee',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'temp_id' => '0',
+  'state_id' => '7',
+  'area_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.219460s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.109421s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `state_id` = '7'  AND `is_display` = 1 LIMIT 1 [ RunTime:0.114325s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.119870s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`area_name` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = '2'  AND p.`is_display` = 1  AND d.`state_id` = '7' ORDER BY d.`sort` DESC [ RunTime:0.110630s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-11T01:23:47+08:00 ] 0.0.0.0 POST /prescription/getTempDetail
+[ info ] localhost:7037/prescription/getTempDetail [运行时间：0.818943s][吞吐率：1.22req/s] [内存消耗：2,978.88kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryKuEWKD9gj0DKREAy',
+  'content-length' => '330',
+  'x-original-url' => '/prescription/getTempDetail',
+  'postman-token' => '2395c344-f5a0-679c-359c-116d27a9ecad',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'temp_id' => '2',
+  'state_id' => '7',
+  'area_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.151537s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.098858s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `state_id` = '7'  AND `is_display` = 1 LIMIT 1 [ RunTime:0.100700s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_temp` [ RunTime:0.101118s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_temp` WHERE  `temp_id` = 2 LIMIT 1 [ RunTime:0.117180s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.098340s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`area_name` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = '2'  AND p.`is_display` = 1  AND d.`state_id` = '7'  AND d.`relation_id` = 32 ORDER BY d.`sort` DESC LIMIT 1 [ RunTime:0.096385s ]
+---------------------------------------------------------------
+[ 2018-05-11T01:32:40+08:00 ] 0.0.0.0 POST /prescription/getTempDetail
+[ info ] localhost:7037/prescription/getTempDetail [运行时间：0.829508s][吞吐率：1.21req/s] [内存消耗：3,049.40kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryuODYnkHjf0yg33B8',
+  'content-length' => '330',
+  'x-original-url' => '/prescription/getTempDetail',
+  'postman-token' => 'b6457ff0-edfb-f6e9-6e6e-a9d6ab83ed40',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'temp_id' => '0',
+  'state_id' => '7',
+  'area_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.329878s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.110883s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `state_id` = '7'  AND `is_display` = 1 LIMIT 1 [ RunTime:0.110984s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.096754s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`area_name` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = '2'  AND p.`is_display` = 1  AND d.`state_id` = '7' ORDER BY d.`sort` DESC [ RunTime:0.107452s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-11T01:32:55+08:00 ] 0.0.0.0 POST /prescription/getTempDetail
+[ info ] localhost:7037/prescription/getTempDetail [运行时间：0.742469s][吞吐率：1.35req/s] [内存消耗：3,114.34kb] [文件加载：58]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryEeRnvm3VdT3ym7WD',
+  'content-length' => '330',
+  'x-original-url' => '/prescription/getTempDetail',
+  'postman-token' => 'c8458798-e62c-1c8c-5f73-73a7072984ec',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'temp_id' => '2',
+  'state_id' => '7',
+  'area_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.260199s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.113665s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `state_id` = '7'  AND `is_display` = 1 LIMIT 1 [ RunTime:0.121005s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_temp` [ RunTime:0.107737s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'drug_json' in 'field list'[D:\workLP\20180502\judeng\wwwroot\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-05-11T01:34:02+08:00 ] 0.0.0.0 POST /prescription/getTempDetail
+[ info ] localhost:7037/prescription/getTempDetail [运行时间：0.838588s][吞吐率：1.19req/s] [内存消耗：2,983.73kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary5K0vTp85XwycuvMq',
+  'content-length' => '330',
+  'x-original-url' => '/prescription/getTempDetail',
+  'postman-token' => '48cb6150-7b60-f40d-a853-b79ee98b3758',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'temp_id' => '2',
+  'state_id' => '7',
+  'area_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.149188s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.099592s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `state_id` = '7'  AND `is_display` = 1 LIMIT 1 [ RunTime:0.111754s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_temp` [ RunTime:0.093347s ]
+[ sql ] [ SQL ] SELECT `make`,`weight`,`taking`,`instructions`,`temp_name`,`relation_id`,`price`,`drug_str`,`is_taboo`,`taboo_content` FROM `jd_temp` WHERE  `temp_id` = 2 LIMIT 1 [ RunTime:0.121975s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.109464s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`area_name` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = '2'  AND p.`is_display` = 1  AND d.`state_id` = '7' ORDER BY d.`sort` DESC [ RunTime:0.101507s ]
+---------------------------------------------------------------
+[ 2018-05-11T01:37:42+08:00 ] 0.0.0.0 POST /prescription/getTempDetail
+[ info ] localhost:7037/prescription/getTempDetail [运行时间：0.684427s][吞吐率：1.46req/s] [内存消耗：3,049.35kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryLlnAzAAI5fRBqnfy',
+  'content-length' => '330',
+  'x-original-url' => '/prescription/getTempDetail',
+  'postman-token' => '91675a23-4146-c7e1-4e26-13a6e79dc421',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'temp_id' => '0',
+  'state_id' => '7',
+  'area_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.162921s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.121460s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `state_id` = '7'  AND `is_display` = 1 LIMIT 1 [ RunTime:0.099838s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.109815s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`area_name` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = '2'  AND p.`is_display` = 1  AND d.`state_id` = '7' ORDER BY d.`sort` DESC [ RunTime:0.118335s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-11T01:37:58+08:00 ] 0.0.0.0 POST /prescription/getTempDetail
+[ info ] localhost:7037/prescription/getTempDetail [运行时间：0.946192s][吞吐率：1.06req/s] [内存消耗：3,064.20kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryIBO6uhlnaW9hmA3A',
+  'content-length' => '330',
+  'x-original-url' => '/prescription/getTempDetail',
+  'postman-token' => '86690d51-0d78-da17-dd99-8fdef4f6bc57',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'temp_id' => '2',
+  'state_id' => '7',
+  'area_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.159336s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.099219s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `state_id` = '7'  AND `is_display` = 1 LIMIT 1 [ RunTime:0.105497s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_temp` [ RunTime:0.108056s ]
+[ sql ] [ SQL ] SELECT `make`,`weight`,`taking`,`instructions`,`temp_name`,`relation_id`,`price`,`drug_str`,`is_taboo`,`taboo_content` FROM `jd_temp` WHERE  `temp_id` = 2 LIMIT 1 [ RunTime:0.092490s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.097020s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = '2'  AND p.`is_display` = 1  AND d.`state_id` = '7' LIMIT 1 [ RunTime:0.121415s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`area_name` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = '2'  AND p.`is_display` = 1  AND d.`state_id` = '7'  AND d.`relation_id` = 32 ORDER BY d.`sort` DESC LIMIT 1 [ RunTime:0.101740s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-11T01:40:38+08:00 ] 0.0.0.0 POST /prescription/getTempDetail
+[ info ] localhost:7037/prescription/getTempDetail [运行时间：0.947185s][吞吐率：1.06req/s] [内存消耗：3,065.17kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarykstFMReLPVwwf3BU',
+  'content-length' => '330',
+  'x-original-url' => '/prescription/getTempDetail',
+  'postman-token' => 'b76a51b0-f8b9-bf99-2699-87798635225b',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'temp_id' => '2',
+  'state_id' => '7',
+  'area_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.168086s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.106862s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `state_id` = '7'  AND `is_display` = 1 LIMIT 1 [ RunTime:0.091425s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_temp` [ RunTime:0.102745s ]
+[ sql ] [ SQL ] SELECT `make`,`weight`,`taking`,`instructions`,`temp_name`,`relation_id`,`price`,`drug_str`,`is_taboo`,`taboo_content` FROM `jd_temp` WHERE  `temp_id` = 2 LIMIT 1 [ RunTime:0.124572s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.087712s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = '2'  AND p.`is_display` = 1  AND d.`state_id` = '7' LIMIT 1 [ RunTime:0.095171s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`area_name` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = '2'  AND p.`is_display` = 1  AND d.`state_id` = '7'  AND d.`relation_id` = 32 ORDER BY d.`sort` DESC LIMIT 1 [ RunTime:0.094249s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-11T01:41:11+08:00 ] 0.0.0.0 POST /prescription/getTempDetail
+[ info ] localhost:7037/prescription/getTempDetail [运行时间：0.896570s][吞吐率：1.12req/s] [内存消耗：3,065.17kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarybMeY0BUeg4SDK4s3',
+  'content-length' => '330',
+  'x-original-url' => '/prescription/getTempDetail',
+  'postman-token' => '40661b3c-85a9-0f39-6961-bb2fc2fac466',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'temp_id' => '2',
+  'state_id' => '7',
+  'area_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.160212s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.090078s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `state_id` = '7'  AND `is_display` = 1 LIMIT 1 [ RunTime:0.093795s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_temp` [ RunTime:0.101735s ]
+[ sql ] [ SQL ] SELECT `make`,`weight`,`taking`,`instructions`,`temp_name`,`relation_id`,`price`,`drug_str`,`is_taboo`,`taboo_content` FROM `jd_temp` WHERE  `temp_id` = 2 LIMIT 1 [ RunTime:0.093721s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.090218s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = '2'  AND p.`is_display` = 1  AND d.`state_id` = '7' LIMIT 1 [ RunTime:0.098728s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`area_name` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = '2'  AND p.`is_display` = 1  AND d.`state_id` = '7'  AND d.`relation_id` = 32 ORDER BY d.`sort` DESC LIMIT 1 [ RunTime:0.104474s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
