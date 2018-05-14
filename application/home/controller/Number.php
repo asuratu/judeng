@@ -62,6 +62,15 @@ class Number extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
+
+            
+            $data['openid'] = 'oUdv91Pij4jFzftpeMArbEKybnkk';
+            $data['url'] = 'www.baidu.com';
+            $data['first'] = '您有一张待处理处方单，请及时查看。';
+            $data['member_name'] = '王硕';
+            $data['prescription'] = '门诊处方';
+            $data['remark'] = '点击详情，跳转到该处方单页~';
+            Model('Weixin')->messageTemplate(6, $data);
             ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>[]));
 
         }
