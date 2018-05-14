@@ -113,7 +113,7 @@ class Weixin extends Model
         //-----------------------------------------------------
         $data = json_decode($data,true); //将json数据转成数组
 //        logger::debug('data' . $data);
-        ajaxReturn(array('code' =>1, 'info' => 'ok'));
+        return $data;
 
     }
 
