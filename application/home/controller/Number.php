@@ -88,6 +88,12 @@ class Number extends Common
         }
     }
 
+    // 测试内部生成医生患者名单接口
+    public function doctorMember() {
+        // 第一个参数用户ID， 第二个参数医生ID， 第三个是具体服务类型名称
+        Model('Number')->doctorMember(2, 2, '初诊');
+    }
+
     /**
      * 评论数量
      */
