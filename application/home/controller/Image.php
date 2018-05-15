@@ -48,7 +48,7 @@ class Image extends Common
             $data['member_id'] = trim($data['member_id'], ',');
             $public_number = array();
             $mobile_number = array();
-
+            // 增加一条发送记录
             $member = db('member')->field('member_name, mobile, openid, is_type')->where("member_id", "in", "{$data['member_id']}")->select();
             foreach ($member as $val) {
                 if ($val['is_type'] == 0) {
@@ -95,10 +95,8 @@ class Image extends Common
         $moon_date = strtotime(date('Y-m', time()));
         $haircount = db('doctor_haircount')->where("doctor_id = {$doctor_id} and moon_date = {$moon_date}")->count();
         if ($haircount) {
-            db('doctor_haircount')->where("doctor_id = {$doctor_id} and moon_date = {$moon_date}")->update(array(
-                'hair_count' => 'hair_count + 1',
-                'message_count' => "message_count + {$messagecount}",
-            ));
+            db('doctor_haircount')->where("doctor_id = {$doctor_id} and moon_date = {$moon_date}")->setInc('hair_count',1);
+            db('doctor_haircount')->where("doctor_id = {$doctor_id} and moon_date = {$moon_date}")->setInc('message_count',$messagecount);
         } else {
             $hair_info = array(
                 'doctor_id' => $doctor_id,
