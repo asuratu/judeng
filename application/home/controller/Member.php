@@ -243,7 +243,8 @@ class Member extends Common
             $data['password']=md5(md5($data['password']).$data['guid']);
 
             //生成医生邀请医生的二维码图片路径
-            $data['to_doctor_url'] = createPic('https://www.baidu.com');
+            $registUrl = config('url').'/member/webRegist?id='.$data['invite'];
+            $data['to_doctor_url'] = createPic($registUrl);
             $invite_code = $data['invite_code'];
             unset($data['invite_code']);
             $_identify = db('doctor')->insertGetId($data);
@@ -278,6 +279,115 @@ class Member extends Common
 
         }
     }
+
+
+    public function webRegist()
+    {
+        if($this->request->isPost())
+        {
+
+            $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
+            if($data['mobile']==''||$data['password']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'手机号或密码为空','data'=>[]));
+            }
+            if($data['area_id']=='' || $data['hospital_id']=='' || $data['true_name']=='' || $data['smscode']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+            }
+            $mobile=$data['mobile'];
+            session_id(md5($mobile));
+            session_start();
+            $token = $_SESSION['tokencode'];
+
+            if(empty($token))
+            {
+                ajaxReturn(array('code'=>0,'info'=>'请先获取短信验证码！','data'=>[]));
+            }
+            if($token['code']!=$data['smscode'])
+            {
+                ajaxReturn(array('code'=>0, 'info'=>'短信验证码不正确！','data'=>[]));
+            }
+            if (!empty($token)&&$token['expired_at']<time() )
+            {
+                ajaxReturn(array('code'=>0, 'info'=>'短信验证码超时！','data'=>[]));
+            }
+
+            $map['mobile']=$mobile;
+            $countMobile = db('doctor')->where($map)->count();
+
+            if($countMobile>0)
+            {
+                ajaxReturn(array('code' =>0, 'info' => '手机号码已绑定！','data'=>[]));
+            }
+
+            //查询当前最大邀请码
+            $maxInvite = db('doctor')->max('invite');
+
+            unset($data['smscode'],$data['_time'],$data['sign']);
+            $data['invite'] = $maxInvite + 1;
+            $data['member_sn']=uniqid("tkt");
+            $data['reg_date']=time();
+
+            //localhost访问ip为0.0.0.0
+            $data['reg_ip'] = Request::instance()->ip();
+            $data['guid']=randCode(8,2);
+            $data['password']=md5(md5($data['password']).$data['guid']);
+
+            //生成医生邀请医生的二维码图片路径
+            $registUrl = config('url').'/member/webRegist?id='.$data['invite'];
+            $data['to_doctor_url'] = createPic($registUrl);
+            $invite_code = $data['invite_code'];
+            unset($data['invite_code']);
+            $_identify = db('doctor')->insertGetId($data);
+            if($_identify)
+            {
+                unset($_SESSION['tokencode']);
+
+                //填写了邀请码
+                if ($invite_code) {
+                    $temp['member_id'] = $_identify;
+                    $temp['invite'] = $invite_code;
+                    $temp['add_date'] = time();
+                    db('invite_record')->insert($temp);
+                }
+
+                //注册环信用户
+                import('Easemob', EXTEND_PATH);
+
+                $options['client_id'] = config('client_id');
+                $options['client_secret'] = config('client_secret');
+                $options['org_name'] = config('org_name');
+                $options['app_name'] = config('app_name');
+
+                $h=new \Easemob($options);
+                $h->createUser($data['member_sn'],"123456");
+
+                ajaxReturn(array('code' => 1, 'info' => '注册成功','data'=>[]));
+            }else
+            {
+                ajaxReturn(array('code' => 1, 'info' => '注册失败','data'=>[]));
+            }
+
+        } else {
+            return  $this->fetch('/doctor/regist');
+
+            //查询可显示的科室列表
+            $map1['is_show'] = 1;
+            $departmentList = Model('Userconfig')->findDepartment($map1);
+            $departmentArr = array();
+
+            $this->assign("department", $departmentList['list']);
+            $this->assign("departmentArr", $departmentArr);
+        }
+    }
+
+
 
     /**
      +-------------------------------------------------------------

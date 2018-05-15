@@ -231,7 +231,8 @@ class Diagnosing extends Common
             }
             if ($data['member_id'] == '') {
                 ajaxReturn(array('code' => 0, 'info' => '参数不完整', 'data' => []));
-            } 
+            }
+
             //查询医生信息
             $doctorMap['member_id'] = $data['member_id'];
             $memberInfo = db('doctor')->where($doctorMap)->field("*")->find();
