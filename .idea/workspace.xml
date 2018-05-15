@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34203c8e-499c-4b15-a88d-2fca07808af4" name="默认的" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/information/~$泰坤堂接口0510.docx" afterPath="$PROJECT_DIR$/information/~$泰坤堂接口0510.docx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/home/model/Number.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/information/王硕泰坤堂接口0510.docx" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/home/controller/Image.php" afterPath="$PROJECT_DIR$/application/home/controller/Image.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/home/controller/Number.php" afterPath="$PROJECT_DIR$/application/home/controller/Number.php" />
     </list>
     <ignored path="jdapi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,18 +29,18 @@
       <file leaf-file-name="Other.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/home/controller/Other.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
+            <state relative-caret-position="-621">
               <caret line="10" column="35" lean-forward="false" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Number.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Number.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/home/controller/Number.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2160">
-              <caret line="84" column="12" lean-forward="false" selection-start-line="84" selection-start-column="12" selection-end-line="84" selection-end-column="55" />
+            <state relative-caret-position="324">
+              <caret line="92" column="45" lean-forward="false" selection-start-line="92" selection-start-column="45" selection-end-line="92" selection-end-column="45" />
               <folding>
                 <element signature="e#37#56#0#PHP" expanded="true" />
               </folding>
@@ -47,8 +48,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Order.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/home/controller/Order.php">
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/home/model/User.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -57,11 +58,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Image.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Number.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/home/model/Number.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="8" column="71" lean-forward="false" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="71" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Image.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/home/controller/Image.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1411">
-              <caret line="40" column="61" lean-forward="true" selection-start-line="40" selection-start-column="61" selection-end-line="40" selection-end-column="71" />
+            <state relative-caret-position="317">
+              <caret line="100" column="12" lean-forward="false" selection-start-line="100" selection-start-column="12" selection-end-line="107" selection-end-column="55" />
               <folding>
                 <element signature="e#37#56#0#PHP" expanded="true" />
               </folding>
@@ -84,17 +95,12 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Wechat.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/thinkphp/library/think/Wechat.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+              <folding>
+                <marker date="1526349480489" expanded="true" signature="21356:22716" ph=" @Title: getSelfTempList ..." />
+                <marker date="1526349480489" expanded="true" signature="22906:22968" ph="{...}" />
+                <marker date="1526349480489" expanded="true" signature="23033:23134" ph="{...}" />
+                <marker date="1526349480489" expanded="true" signature="23487:23579" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -112,21 +118,9 @@
       <file leaf-file-name="Member.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/home/controller/Member.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4293">
+            <state relative-caret-position="2234">
               <caret line="159" column="20" lean-forward="false" selection-start-line="159" selection-start-column="20" selection-end-line="159" selection-end-column="61" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/home/config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="25" column="41" lean-forward="false" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
-              <folding>
-                <marker date="1526277595050" expanded="true" signature="21:27" ph="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -171,9 +165,10 @@
         <option value="$PROJECT_DIR$/application/Service/WeiXin2.php" />
         <option value="$PROJECT_DIR$/application/Service/Impl/WeiXin2Impl.php" />
         <option value="$PROJECT_DIR$/application/home/controller/Weixin.php" />
-        <option value="$PROJECT_DIR$/application/home/controller/Number.php" />
         <option value="$PROJECT_DIR$/application/home/model/Weixin.php" />
         <option value="$PROJECT_DIR$/application/home/controller/Image.php" />
+        <option value="$PROJECT_DIR$/application/home/model/Number.php" />
+        <option value="$PROJECT_DIR$/application/home/controller/Number.php" />
       </list>
     </option>
   </component>
@@ -358,8 +353,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\wook\201804\judeng\application\home\controller" />
       <recent name="E:\wook\201804\judeng\application\home\model" />
+      <recent name="E:\wook\201804\judeng\application\home\controller" />
       <recent name="E:\wook\201804\judeng\thinkphp\library\think" />
       <recent name="E:\wook\201804\judeng\application" />
       <recent name="E:\wook\201804\judeng\vendor" />
@@ -466,12 +461,12 @@
       <workItem from="1525915802873" duration="5775000" />
       <workItem from="1526034384842" duration="1390000" />
       <workItem from="1526261487548" duration="24169000" />
-      <workItem from="1526348394760" duration="1000000" />
+      <workItem from="1526348394760" duration="2923000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98664000" />
+    <option name="totallyTimeSpent" value="100587000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -516,14 +511,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/home/common.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/command.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -592,7 +579,7 @@
         <state relative-caret-position="0">
           <caret line="4" column="39" lean-forward="false" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
           <folding>
-            <marker date="1526277595050" expanded="true" signature="21:27" ph="..." />
+            <marker date="1526349480476" expanded="true" signature="21:27" ph="..." />
           </folding>
         </state>
       </provider>
@@ -756,10 +743,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/home/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="25" column="41" lean-forward="false" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
+        <state relative-caret-position="756">
+          <caret line="28" column="22" lean-forward="false" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
           <folding>
-            <marker date="1526277595050" expanded="true" signature="21:27" ph="..." />
+            <marker date="1526349480476" expanded="true" signature="21:27" ph="..." />
           </folding>
         </state>
       </provider>
@@ -807,15 +794,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/home/controller/Prescription.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1526349480489" expanded="true" signature="21356:22716" ph=" @Title: getSelfTempList ..." />
+            <marker date="1526349480489" expanded="true" signature="22906:22968" ph="{...}" />
+            <marker date="1526349480489" expanded="true" signature="23033:23134" ph="{...}" />
+            <marker date="1526349480489" expanded="true" signature="23487:23579" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/home/controller/Weixin.php" />
     <entry file="file://$PROJECT_DIR$/application/home/controller/Member.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4293">
+        <state relative-caret-position="2234">
           <caret line="159" column="20" lean-forward="false" selection-start-line="159" selection-start-column="20" selection-end-line="159" selection-end-column="61" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/home/controller/Prescription.php">
+    <entry file="file://$PROJECT_DIR$/application/home/controller/Other.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-621">
+          <caret line="10" column="35" lean-forward="false" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/home/model/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -823,11 +832,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/home/controller/Weixin.php" />
-    <entry file="file://$PROJECT_DIR$/application/home/model/User.php">
+    <entry file="file://$PROJECT_DIR$/application/home/model/Weixin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="3105">
+          <caret line="115" column="20" lean-forward="false" selection-start-line="115" selection-start-column="20" selection-end-line="115" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -840,36 +848,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/home/controller/Other.php">
+    <entry file="file://$PROJECT_DIR$/application/home/controller/Image.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="35" lean-forward="false" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/home/controller/Number.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2160">
-          <caret line="84" column="12" lean-forward="false" selection-start-line="84" selection-start-column="12" selection-end-line="84" selection-end-column="55" />
+        <state relative-caret-position="317">
+          <caret line="100" column="12" lean-forward="false" selection-start-line="100" selection-start-column="12" selection-end-line="107" selection-end-column="55" />
           <folding>
             <element signature="e#37#56#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/home/model/Weixin.php">
+    <entry file="file://$PROJECT_DIR$/application/home/model/Number.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3105">
-          <caret line="115" column="20" lean-forward="false" selection-start-line="115" selection-start-column="20" selection-end-line="115" selection-end-column="20" />
+        <state relative-caret-position="216">
+          <caret line="8" column="71" lean-forward="false" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="71" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/home/controller/Image.php">
+    <entry file="file://$PROJECT_DIR$/application/home/controller/Number.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1411">
-          <caret line="40" column="61" lean-forward="true" selection-start-line="40" selection-start-column="61" selection-end-line="40" selection-end-column="71" />
+        <state relative-caret-position="324">
+          <caret line="92" column="45" lean-forward="false" selection-start-line="92" selection-start-column="45" selection-end-line="92" selection-end-column="45" />
           <folding>
             <element signature="e#37#56#0#PHP" expanded="true" />
           </folding>
