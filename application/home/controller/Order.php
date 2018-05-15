@@ -115,7 +115,7 @@ class Order extends Common
 
     /**
      * @Title: addPrescriptionOrder
-     * @Description: TODO 提交在线开方/手机号开方
+     * @Description: TODO 提交在线开方/手机号开方 (注: 插入医患记录未完成)
      * @return bool
      * @author TUGE
      * @date
@@ -325,6 +325,9 @@ class Order extends Common
                 }
 
                 $_identityPrescription = db('order_prescription')->insertGetId($orderPrescriptionInsert);
+
+                //新增一条医生与患者的关联记录 TODO 这个记录未完成
+
 
                 if ($_identityPrescription && $orderPrescriptionInsert['order_id'] && $updateOrderPrice && $_identify) {
                     Db::commit();

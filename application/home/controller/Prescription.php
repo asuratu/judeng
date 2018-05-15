@@ -506,6 +506,47 @@ class Prescription extends Common
     }
 
     /**
+     * @Title: delTemp
+     * @Description: TODO 医生删除自建模板
+     */
+    public function delTemp() {
+        if($this->request->isPost())
+        {
+            $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
+
+            if($data['temp_id']=='' || $data['member_id']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+            }
+
+            //查询该模板
+            $map['temp_id'] = $data['temp_id'];
+            $map['member_id'] = $data['member_id'];
+            $tempInfo = db('temp')->where($map)
+                ->field("*")
+                ->find();
+            if (empty($tempInfo)) {
+                ajaxReturn(array('code'=>0,'info'=>'该模板不存在!','data'=>[]));
+            }
+            if ($tempInfo['type'] == 1) {
+                ajaxReturn(array('code'=>0,'info'=>'该模板已被设为经典模板, 不可删除!','data'=>[]));
+            }
+            //删除模板
+            $_result = db('temp')->where($map)->delete();
+            if ($_result) {
+                ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>[]));
+            } else {
+                ajaxReturn(array('code'=>0, 'info'=>'系统繁忙, 请稍后再试','data'=>[]));
+            }
+        }
+    }
+
+    /**
      * @Title: getSelfTempList
      * @Description: TODO 医生查看自建药方模板列表/不分页
      */

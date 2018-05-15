@@ -63,7 +63,10 @@ class Other extends Common
 
             //获取医院数组
             $map['is_display'] = 1;
-            $list=db('hospital')->where($map)->field("`hospital_id`,`hospital_name`")->order("`sort` DESC")->select();
+            if ($data['area_id']) {
+                $map['area_id'] = $data['area_id'];
+            }
+            $list=db('hospital')->where($map)->field("`hospital_id`,`hospital_name`, area_id")->order("`sort` DESC")->select();
             foreach ($list as $key => $val) {
                 if ($val['hospital_id'] == $hospital) {
                     $list[$key]['selected'] = 1;
@@ -142,6 +145,7 @@ class Other extends Common
             ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>$list));
         }
     }
+
 
     /**
      * @Title: getGoodAtList
