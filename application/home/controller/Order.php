@@ -227,6 +227,7 @@ class Order extends Common
                          */
                         $patientInsert['birthday'] = date('Y')-$data['age'];
                         $patientInsert['birthday'] .= '-00-00';
+                        $patientInsert['age'] = intval($data['age']);
                         $data['patient_id'] = db('member')->insertGetId($patientInsert);
                     } else {
                         $data['patient_id'] = $patientInfo['member_id'];
@@ -287,6 +288,10 @@ class Order extends Common
                 //生成该订单对应的药方信息
                 if ($data['type'] == 0) {
                     //在线开方
+                    //新增一条医生与患者的关联记录
+                    // 第一个参数用户ID， 第二个参数医生ID， 第三个是具体服务类型名称
+                    Model('Number')->doctorMember($data['patient_id'], $data['doctor_id'], '在线开方');
+
                     $orderPrescriptionInsert['prescription_type'] = 0;
                     //是否同时作为模板
                     if ($data['to_temp'] == 1) {
@@ -319,6 +324,9 @@ class Order extends Common
                     }
                 } elseif ($data['type'] == 1) {
                     //拍照开方
+                    //新增一条医生与患者的关联记录
+                    // 第一个参数用户ID， 第二个参数医生ID， 第三个是具体服务类型名称
+                    Model('Number')->doctorMember($data['patient_id'], $data['doctor_id'], '拍照开方');
                     $orderPrescriptionInsert['prescription_type'] = 1;
                 } else {
                     ajaxReturn(array('code'=>0,'info'=>'开方类型不正确!','data'=>[]));
@@ -326,7 +334,6 @@ class Order extends Common
 
                 $_identityPrescription = db('order_prescription')->insertGetId($orderPrescriptionInsert);
 
-                //新增一条医生与患者的关联记录 TODO 这个记录未完成
 
 
                 if ($_identityPrescription && $orderPrescriptionInsert['order_id'] && $updateOrderPrice && $_identify) {

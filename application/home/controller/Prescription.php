@@ -143,7 +143,7 @@ class Prescription extends Common
                 $stateArr[$key]['pic'] = config('url').$val['pic'];
             }
 
-            ajaxReturn(array('code'=>0, 'info'=>'ok!','data'=>$stateArr));
+            ajaxReturn(array('code'=>1, 'info'=>'ok!','data'=>$stateArr));
         }
     }
 

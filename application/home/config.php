@@ -27,4 +27,21 @@ return [
 
     //医生的绑定的科室数量上限
     'maxDepartNum'=>6,
+
+    //oss配置
+    "OSS_ACCESS_ID" => '',
+    "OSS_ACCESS_KEY"=> '',
+    "OSS_ENDPOINT"  => 'oss-cn-shanghai.aliyuncs.com',
+    "OSS_TEST_BUCKET" => '',
+    "OSS_WEB_SITE" =>'http://xiaojd1.oss-cn-shanghai.aliyuncs.com',    //上面4个就不用介绍了，这个OSS_WEB_SITE是oss的bucket创建后的外网访问地址，如需二级域名，可以指向二级域名，具体可以参考阿里云控制台里面的oss
+
+    //oss文件上传配置
+    'oss_maxSize'=>1048576,    //1M
+    'oss_exts'   =>array(// 设置附件上传类型
+        'image/jpg',
+        'image/gif',
+        'image/png',
+        'image/jpeg',
+        'application/octet-stream',//阿里云好像都是通过二进制上传，似乎上面4个后缀设置起到什么用？
+    ),
 ];

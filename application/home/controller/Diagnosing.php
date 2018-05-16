@@ -236,35 +236,67 @@ class Diagnosing extends Common
             //查询医生信息
             $doctorMap['member_id'] = $data['member_id'];
             $memberInfo = db('doctor')->where($doctorMap)->field("*")->find();
-
             if (empty($memberInfo)) {
                 ajaxReturn(array('code' => 0, 'info' => '该用户不存在!', 'data' => []));
             }
-            //查询该地区医院数组
-            $map['is_display'] = 1;
-            if ($data['area_id']) {
-                $map['area_id'] = $data['area_id'];
-            }
-            $list = db('hospital')->where($map)->field("`hospital_id`,`hospital_name`, area_id, address")->order("`sort` DESC")->select();
-            foreach ($list as $key => $val) {
-                //查询当前医院的所有科室
-                $keshiMap['hospital_id'] = $val['hospital_id'];
-                $keshiList = db('hospital_repart')->where($keshiMap)->alias('hr')
-                    ->join(['jd_department' => 'd'], 'hr.department_id = d.department_id', 'left')
-                    ->field("hr.hospital_repart_id, d.department_name")
-                    ->select();
-                $hospitalRepartArr = explode(',', $memberInfo['hospital_repart_str']);
-
-                foreach ($keshiList as $key1 => $val1) {
-                    if (in_array($val1['hospital_repart_id'], $hospitalRepartArr)) {
-                        $keshiList[$key1]['selected'] = 1;
-                    } else {
-                        $keshiList[$key1]['selected'] = 0;
-                    }
+            //查询排班列表
+            $paibanMap['dl.`member_id`'] = $data['member_id'];
+            $paibanList = db('hospital_repart')->alias('hr')
+                ->join(['jd_department' => 'd'], 'hr.department_id = d.department_id', 'inner')
+                ->join(['jd_hospital' => 'h'], 'hr.hospital_id = h.hospital_id', 'inner')
+                ->join(['jd_diagnosis_list' => 'dl'], 'hr.hospital_repart_id = dl.hospital_repart_id', 'inner')
+                ->where($doctorMap)
+                ->field("dl.diagnosis_id, dl.start_time, dl.end_time, h.hospital_name, d.department_name")
+                ->order('dl.start_time DESC')
+                ->select();
+            foreach ($paibanList as $key => $val) {
+                $paibanList[$key]['content'] = date('Y年m月d日 H:i', $val['start_time']) . '-' . date('Y年m月d日 H:i', $val['end_time']);
+                if (time() >= $val['start_time']) {
+                    $paibanList[$key]['expired'] = 0;
+                } else {
+                    $paibanList[$key]['expired'] = 1;
                 }
-                $list[$key]['content'] = $keshiList;
             }
-            ajaxReturn(array('code' => 1, 'info' => 'ok', 'data' => $list));
+            ajaxReturn(array('code' => 1, 'info' => 'ok', 'data' => $paibanList));
+        }
+    }
+
+    /**
+     * @Title: delDiagnosing
+     * @Description: TODO 医生删除坐诊信息
+     */
+    public function delDiagnosing() {
+        if($this->request->isPost())
+        {
+            $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
+
+            if($data['diagnosis_id']=='' || $data['member_id']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+            }
+
+            //查询该排班信息
+            $map['diagnosis_id'] = $data['diagnosis_id'];
+            $map['member_id'] = $data['member_id'];
+            $tempInfo = db('diagnosis_list')->where($map)
+                ->field("*")
+                ->find();
+            if (empty($tempInfo)) {
+                ajaxReturn(array('code'=>0,'info'=>'该排班信息不存在!','data'=>[]));
+            }
+
+            //删除模板
+            $_result = db('diagnosis_list')->where($map)->delete();
+            if ($_result) {
+                ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>[]));
+            } else {
+                ajaxReturn(array('code'=>0, 'info'=>'系统繁忙, 请稍后再试','data'=>[]));
+            }
         }
     }
 }
