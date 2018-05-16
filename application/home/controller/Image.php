@@ -1,9 +1,6 @@
 <?php
 namespace app\home\controller;
-use app\tools\Html;
-use think\Paginator;
-use think\Request;
-use app\tools\Spell;
+
 use think\Db;
 
 class Image extends Common
