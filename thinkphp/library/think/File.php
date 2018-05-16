@@ -111,7 +111,7 @@ class File extends SplFileObject
      */
     public function getSaveName()
     {
-        return $this->saveName;
+        return str_replace('\\','/',$this->saveName);
     }
 
     /**

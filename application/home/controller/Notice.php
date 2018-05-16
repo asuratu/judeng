@@ -138,4 +138,31 @@ class Notice extends Common
         }
     }
 
+    // 公告详情查询
+    public function findNotice()
+    {
+        if ($this->request->isPost()) {
+            $data = input('post.');
+            if ($data['notice_id'] == '') {
+                ajaxReturn(array('code' => 0, 'info' => '参数不完整', 'data' => []));
+            }
+
+            $notice = db('notice')->where("notice_id = {$data['notice_id']}")->field('notice_id, doctor_id, notice_name, content, release_date')->find();
+            $notice['release_date'] = date('Y-m-d', $notice['release_date']);
+            $notice_attach = db('notice_attach')->where("notice_id = {$data['notice_id']}")->select();
+
+            $attach = array();
+            foreach ($notice_attach as $key => $val) {
+                array_push($attach, $val);
+                $attach[$key]['src'] = $this->view->setting['base_host'] . $val['src'];
+            }
+
+            if ($notice) {
+                ajaxReturn(array('code' => 1, 'info' => 'ok', 'data' => $notice, 'attach' => $attach));
+            } else {
+                ajaxReturn(array('code' => 0, 'info' => '公告内容不存在，请刷新后再试!'));
+            }
+        }
+    }
+
 }
