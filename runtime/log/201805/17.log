@@ -1,0 +1,931 @@
+---------------------------------------------------------------
+[ 2018-05-17T09:10:26+08:00 ] 0.0.0.0 GET /
+[ info ] localhost:7037/ [运行时间：0.045745s][吞吐率：21.86req/s] [内存消耗：1,995.56kb] [文件加载：38]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; isRememberedpwd=1; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; account=96ddc5701568751f74ee783cd6a3c93d; userLog=96ddc5701568751f74ee783cd6a3c93d%2C21633303514a1d59cd6ce7ff120411b1; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Index->index[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-17T09:10:27+08:00 ] 0.0.0.0 GET /favicon.ico
+[ info ] localhost:7037/favicon.ico [运行时间：0.075665s][吞吐率：13.22req/s] [内存消耗：2,058.60kb] [文件加载：41]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'favicon.ico',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/favicon.ico',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://localhost:7037/',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; isRememberedpwd=1; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; account=96ddc5701568751f74ee783cd6a3c93d; userLog=96ddc5701568751f74ee783cd6a3c93d%2C21633303514a1d59cd6ce7ff120411b1; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-17T09:12:22+08:00 ] 0.0.0.0 GET /
+[ info ] localhost:7037/ [运行时间：0.043889s][吞吐率：22.78req/s] [内存消耗：1,880.46kb] [文件加载：36]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; isRememberedpwd=1; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; account=96ddc5701568751f74ee783cd6a3c93d; userLog=96ddc5701568751f74ee783cd6a3c93d%2C21633303514a1d59cd6ce7ff120411b1; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Index->index[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-17T09:14:04+08:00 ] 0.0.0.0 GET /
+[ info ] localhost:7037/ [运行时间：0.046847s][吞吐率：21.35req/s] [内存消耗：1,880.46kb] [文件加载：36]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; isRememberedpwd=1; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; account=96ddc5701568751f74ee783cd6a3c93d; userLog=96ddc5701568751f74ee783cd6a3c93d%2C21633303514a1d59cd6ce7ff120411b1; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Index->index[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-17T09:21:00+08:00 ] 0.0.0.0 GET /
+[ info ] localhost:7037/ [运行时间：0.067920s][吞吐率：14.72req/s] [内存消耗：1,880.46kb] [文件加载：36]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; isRememberedpwd=1; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; account=96ddc5701568751f74ee783cd6a3c93d; userLog=96ddc5701568751f74ee783cd6a3c93d%2C21633303514a1d59cd6ce7ff120411b1; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Index->index[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-17T09:21:01+08:00 ] 0.0.0.0 GET /
+[ info ] localhost:7037/ [运行时间：0.036646s][吞吐率：27.29req/s] [内存消耗：1,880.46kb] [文件加载：36]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; isRememberedpwd=1; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; account=96ddc5701568751f74ee783cd6a3c93d; userLog=96ddc5701568751f74ee783cd6a3c93d%2C21633303514a1d59cd6ce7ff120411b1; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Index->index[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-17T09:36:07+08:00 ] 0.0.0.0 GET /
+[ info ] localhost:7037/ [运行时间：0.055787s][吞吐率：17.93req/s] [内存消耗：1,880.46kb] [文件加载：36]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; isRememberedpwd=1; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; account=96ddc5701568751f74ee783cd6a3c93d; userLog=96ddc5701568751f74ee783cd6a3c93d%2C21633303514a1d59cd6ce7ff120411b1; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Index->index[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-17T09:36:07+08:00 ] 0.0.0.0 GET /
+[ info ] localhost:7037/ [运行时间：0.035855s][吞吐率：27.89req/s] [内存消耗：1,880.46kb] [文件加载：36]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; isRememberedpwd=1; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; account=96ddc5701568751f74ee783cd6a3c93d; userLog=96ddc5701568751f74ee783cd6a3c93d%2C21633303514a1d59cd6ce7ff120411b1; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Index->index[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-17T13:56:31+08:00 ] 0.0.0.0 POST /member/doSmsLogin
+[ info ] localhost:7037/member/doSmsLogin [运行时间：0.053531s][吞吐率：18.68req/s] [内存消耗：2,549.19kb] [文件加载：47]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'doSmsLogin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryxlNsnTL4AIF6Q2AV',
+  'content-length' => '539',
+  'x-original-url' => '/member/doSmsLogin',
+  'postman-token' => 'e43aa1b8-4f65-5740-2665-b15f23deb14d',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039438',
+  'smscode' => '243482',
+  'device_tokens' => '1231231',
+  'is_system' => '1',
+)
+[ info ] [ RUN ] app\home\controller\Member->doSmsLogin[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]A session had already been started - ignoring session_start()[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:117]
+[ error ] [8]未定义数组索引: tokencode[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:118]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-17T13:57:08+08:00 ] 0.0.0.0 POST /member/doSmsLogin
+[ info ] localhost:7037/member/doSmsLogin [运行时间：0.052736s][吞吐率：18.96req/s] [内存消耗：2,547.50kb] [文件加载：47]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'doSmsLogin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryrquxw3mp4UGADFIZ',
+  'content-length' => '540',
+  'x-original-url' => '/member/doSmsLogin',
+  'postman-token' => 'e36fc168-1b07-5d46-2fee-19cfe713df91',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=9gf5rd3b7hh9tq2p44gp70s711',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039435',
+  'smscode' => '243482',
+  'password' => '123123',
+  'newPassword' => '123123',
+)
+[ info ] [ RUN ] app\home\controller\Member->doSmsLogin[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: device_tokens[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:100]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-17T13:58:49+08:00 ] 0.0.0.0 POST /member/forgetPsd
+[ info ] localhost:7037/member/forgetPsd [运行时间：0.058928s][吞吐率：16.97req/s] [内存消耗：2,549.02kb] [文件加载：47]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'forgetPsd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryqATTrBB0guWS1u1p',
+  'content-length' => '453',
+  'x-original-url' => '/member/forgetPsd',
+  'postman-token' => '542090e7-ca6e-fffd-f6ad-0d672740ddc0',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=9gf5rd3b7hh9tq2p44gp70s711',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039435',
+  'smscode' => '243482',
+  'password' => '123123',
+  'newPassword' => '123123',
+)
+[ info ] [ RUN ] app\home\controller\Member->forgetPsd[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]A session had already been started - ignoring session_start()[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:218]
+[ error ] [8]未定义数组索引: tokencode[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:219]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-17T14:08:44+08:00 ] 0.0.0.0 POST /member/forgetPsd
+[ info ] localhost:7037/member/forgetPsd [运行时间：0.074459s][吞吐率：13.43req/s] [内存消耗：2,543.19kb] [文件加载：47]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'forgetPsd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryPuUVZZopA8Cl1i4t',
+  'content-length' => '453',
+  'x-original-url' => '/member/forgetPsd',
+  'postman-token' => '0db1797b-4b02-6071-31e3-22cf20c392b4',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=9gf5rd3b7hh9tq2p44gp70s711',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039435',
+  'smscode' => '243482',
+  'password' => '123123',
+  'newPassword' => '123123',
+)
+[ info ] [ RUN ] app\home\controller\Member->forgetPsd[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]A session had already been started - ignoring session_start()[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:218]
+[ error ] [8]未定义数组索引: tokencode[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:219]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-17T14:09:05+08:00 ] 0.0.0.0 POST /member/getsms
+[ info ] localhost:7037/member/getsms [运行时间：1.205913s][吞吐率：0.83req/s] [内存消耗：3,614.41kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryIFhsHfseGVyicNGU',
+  'content-length' => '337',
+  'x-original-url' => '/member/getsms',
+  'postman-token' => '44060eea-f648-4add-2c53-2f72a0666de1',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=9gf5rd3b7hh9tq2p44gp70s711',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039435',
+  'type' => '2',
+  'only_token' => '',
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.145059s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.088010s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `mobile` = '15021039435' LIMIT 1 [ RunTime:0.117046s ]
+---------------------------------------------------------------
+[ 2018-05-17T14:09:14+08:00 ] 0.0.0.0 POST /member/forgetPsd
+[ info ] localhost:7037/member/forgetPsd [运行时间：0.352790s][吞吐率：2.83req/s] [内存消耗：3,711.10kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'forgetPsd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryCOwGmKyeZGrBeAPT',
+  'content-length' => '453',
+  'x-original-url' => '/member/forgetPsd',
+  'postman-token' => 'defd4420-cf68-3328-c0a2-22ba4a961485',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039435',
+  'smscode' => '866816',
+  'password' => '123123',
+  'newPassword' => '123123',
+)
+[ info ] [ RUN ] app\home\controller\Member->forgetPsd[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]A session had already been started - ignoring session_start()[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:218]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.092213s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.063648s ]
+[ sql ] [ SQL ] SELECT `member_id`,`member_sn`,`member_name`,`mobile`,`password`,`guid`,`true_name`,`is_clinic`,`is_certified`,`login_state`,`device_tokens`,`is_status` FROM `jd_doctor` WHERE  `mobile` = '15021039435' LIMIT 1 [ RunTime:0.062485s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `password`='45fd5fe7ef4db6a33b15a3de8a479427',`release_date`=1526537354  WHERE  `mobile` = '15021039435' [ RunTime:0.063062s ]
+---------------------------------------------------------------
+[ 2018-05-17T14:09:36+08:00 ] 0.0.0.0 POST /member/dologin
+[ info ] localhost:7037/member/dologin [运行时间：0.270996s][吞吐率：3.69req/s] [内存消耗：3,624.41kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'dologin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryBBBJ7edE7ONn1ZA7',
+  'content-length' => '550',
+  'x-original-url' => '/member/dologin',
+  'postman-token' => 'cf4a8230-ebb3-255e-5d5a-9f1f0cbecd90',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039435',
+  'password' => '123456',
+  'device_tokens' => '1231231',
+  'is_system' => '1',
+  'only_token' => '',
+)
+[ info ] [ RUN ] app\home\controller\Member->dologin[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.087835s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.060984s ]
+[ sql ] [ SQL ] SELECT `member_id`,`member_sn`,`member_name`,`mobile`,`password`,`guid`,`true_name`,`is_clinic`,`is_certified`,`login_state`,`device_tokens`,`is_status` FROM `jd_doctor` WHERE  `mobile` = '15021039435' LIMIT 1 [ RunTime:0.059029s ]
+---------------------------------------------------------------
+[ 2018-05-17T14:09:46+08:00 ] 0.0.0.0 POST /member/dologin
+[ info ] localhost:7037/member/dologin [运行时间：0.639872s][吞吐率：1.56req/s] [内存消耗：3,836.60kb] [文件加载：52]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'dologin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryShyPJYoH8vAHFV8A',
+  'content-length' => '550',
+  'x-original-url' => '/member/dologin',
+  'postman-token' => '7e7c007c-00a3-b4eb-d335-bf7e6c4afd84',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039435',
+  'password' => '123123',
+  'device_tokens' => '1231231',
+  'is_system' => '1',
+  'only_token' => '',
+)
+[ info ] [ RUN ] app\home\controller\Member->dologin[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.107323s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.065008s ]
+[ sql ] [ SQL ] SELECT `member_id`,`member_sn`,`member_name`,`mobile`,`password`,`guid`,`true_name`,`is_clinic`,`is_certified`,`login_state`,`device_tokens`,`is_status` FROM `jd_doctor` WHERE  `mobile` = '15021039435' LIMIT 1 [ RunTime:0.063949s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `login_ip`='0.0.0.0',`login_time`=1526537385,`is_system`=1,`device_tokens`='1231231',`login_state`=1,`only_token`='1526537385^bGzSW'  WHERE  `mobile` = '15021039435' [ RunTime:0.066632s ]
+---------------------------------------------------------------
+[ 2018-05-17T14:14:31+08:00 ] 0.0.0.0 POST /member/forgetPsd
+[ info ] localhost:7037/member/forgetPsd [运行时间：0.054196s][吞吐率：18.45req/s] [内存消耗：2,563.47kb] [文件加载：47]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'forgetPsd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary9BwSIgJeqRhyHX4M',
+  'content-length' => '352',
+  'x-original-url' => '/member/forgetPsd',
+  'postman-token' => '427b37d9-1441-7d15-a9fe-4f50b6d21493',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039435',
+  'smscode' => '866816',
+  'newPassword' => '123456',
+)
+[ info ] [ RUN ] app\home\controller\Member->forgetPsd[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: password[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:197]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-17T14:14:42+08:00 ] 0.0.0.0 POST /member/updatePsd
+[ info ] localhost:7037/member/updatePsd [运行时间：0.053371s][吞吐率：18.74req/s] [内存消耗：2,564.50kb] [文件加载：47]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'updatePsd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryJynrmcpcAM1h2gkG',
+  'content-length' => '352',
+  'x-original-url' => '/member/updatePsd',
+  'postman-token' => 'f834b14a-fd89-36be-a22e-dfd99998860d',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039435',
+  'smscode' => '866816',
+  'newPassword' => '123456',
+)
+[ info ] [ RUN ] app\home\controller\Member->updatePsd[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]A session had already been started - ignoring session_start()[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:287]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-17T14:14:54+08:00 ] 0.0.0.0 POST /member/getsms
+[ info ] localhost:7037/member/getsms [运行时间：0.655102s][吞吐率：1.53req/s] [内存消耗：3,635.72kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary5Ys80GobBcejIhdx',
+  'content-length' => '337',
+  'x-original-url' => '/member/getsms',
+  'postman-token' => '7d1b5a20-8c87-bf46-4b5b-228302a03712',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039435',
+  'type' => '2',
+  'only_token' => '',
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.129606s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.088807s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `mobile` = '15021039435' LIMIT 1 [ RunTime:0.117687s ]
+---------------------------------------------------------------
+[ 2018-05-17T14:15:01+08:00 ] 0.0.0.0 POST /member/updatePsd
+[ info ] localhost:7037/member/updatePsd [运行时间：0.491137s][吞吐率：2.04req/s] [内存消耗：3,732.24kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'updatePsd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryCAn8CTeUl1PNg8mm',
+  'content-length' => '352',
+  'x-original-url' => '/member/updatePsd',
+  'postman-token' => 'a4303415-59b6-ca8f-c9eb-47252c94de28',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039435',
+  'smscode' => '674597',
+  'newPassword' => '123456',
+)
+[ info ] [ RUN ] app\home\controller\Member->updatePsd[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]A session had already been started - ignoring session_start()[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:287]
+[ error ] [8]未定义数组索引: password[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:315]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.130964s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.095003s ]
+[ sql ] [ SQL ] SELECT `member_id`,`member_sn`,`member_name`,`mobile`,`password`,`guid`,`true_name`,`is_clinic`,`is_certified`,`login_state`,`device_tokens`,`is_status` FROM `jd_doctor` WHERE  `mobile` = '15021039435' LIMIT 1 [ RunTime:0.077843s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `password`='917330dd96fcdf42112b605f7b91cb5c',`release_date`=1526537701  WHERE  `mobile` = '15021039435' [ RunTime:0.117392s ]
+---------------------------------------------------------------
+[ 2018-05-17T14:15:11+08:00 ] 0.0.0.0 POST /member/dologin
+[ info ] localhost:7037/member/dologin [运行时间：0.506914s][吞吐率：1.97req/s] [内存消耗：3,645.36kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'dologin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary5qJMcD1YVBm6swbV',
+  'content-length' => '550',
+  'x-original-url' => '/member/dologin',
+  'postman-token' => 'd5982570-d327-1fb1-28da-054c60638d97',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039435',
+  'password' => '123123',
+  'device_tokens' => '1231231',
+  'is_system' => '1',
+  'only_token' => '',
+)
+[ info ] [ RUN ] app\home\controller\Member->dologin[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.236109s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.124562s ]
+[ sql ] [ SQL ] SELECT `member_id`,`member_sn`,`member_name`,`mobile`,`password`,`guid`,`true_name`,`is_clinic`,`is_certified`,`login_state`,`device_tokens`,`is_status` FROM `jd_doctor` WHERE  `mobile` = '15021039435' LIMIT 1 [ RunTime:0.078781s ]
+---------------------------------------------------------------
+[ 2018-05-17T14:15:19+08:00 ] 0.0.0.0 POST /member/dologin
+[ info ] localhost:7037/member/dologin [运行时间：0.526200s][吞吐率：1.90req/s] [内存消耗：3,645.36kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'dologin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryxcB58xguxIdIVLOW',
+  'content-length' => '550',
+  'x-original-url' => '/member/dologin',
+  'postman-token' => 'e2e9348a-6b29-7ca7-f2d2-acde2d75f434',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039435',
+  'password' => '123456',
+  'device_tokens' => '1231231',
+  'is_system' => '1',
+  'only_token' => '',
+)
+[ info ] [ RUN ] app\home\controller\Member->dologin[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.230114s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.119695s ]
+[ sql ] [ SQL ] SELECT `member_id`,`member_sn`,`member_name`,`mobile`,`password`,`guid`,`true_name`,`is_clinic`,`is_certified`,`login_state`,`device_tokens`,`is_status` FROM `jd_doctor` WHERE  `mobile` = '15021039435' LIMIT 1 [ RunTime:0.104762s ]
+---------------------------------------------------------------
+[ 2018-05-17T14:15:35+08:00 ] 0.0.0.0 POST /member/dologin
+[ info ] localhost:7037/member/dologin [运行时间：0.517176s][吞吐率：1.93req/s] [内存消耗：3,645.36kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'dologin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryUFDgl9H2rsFgPwAw',
+  'content-length' => '550',
+  'x-original-url' => '/member/dologin',
+  'postman-token' => '93a1af7e-a770-f13a-3b86-61a88f3e010b',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039435',
+  'password' => '123456',
+  'device_tokens' => '1231231',
+  'is_system' => '1',
+  'only_token' => '',
+)
+[ info ] [ RUN ] app\home\controller\Member->dologin[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.191273s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.132542s ]
+[ sql ] [ SQL ] SELECT `member_id`,`member_sn`,`member_name`,`mobile`,`password`,`guid`,`true_name`,`is_clinic`,`is_certified`,`login_state`,`device_tokens`,`is_status` FROM `jd_doctor` WHERE  `mobile` = '15021039435' LIMIT 1 [ RunTime:0.131841s ]
+---------------------------------------------------------------
+[ 2018-05-17T14:16:37+08:00 ] 0.0.0.0 POST /member/getsms
+[ info ] localhost:7037/member/getsms [运行时间：0.053296s][吞吐率：18.76req/s] [内存消耗：2,473.75kb] [文件加载：44]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryJ478sz7n4AwKe7eY',
+  'content-length' => '337',
+  'x-original-url' => '/member/getsms',
+  'postman-token' => 'c848a76e-5cea-8946-30d4-f581cb316d13',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039435',
+  'type' => '2',
+  'only_token' => '',
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-17T14:16:41+08:00 ] 0.0.0.0 POST /member/getsms
+[ info ] localhost:7037/member/getsms [运行时间：0.046240s][吞吐率：21.63req/s] [内存消耗：2,473.75kb] [文件加载：44]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryIW9aSMWVHNR0wFUI',
+  'content-length' => '337',
+  'x-original-url' => '/member/getsms',
+  'postman-token' => '4630eeb4-7519-6a74-aeb6-4431c5b3d6a1',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039435',
+  'type' => '2',
+  'only_token' => '',
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File

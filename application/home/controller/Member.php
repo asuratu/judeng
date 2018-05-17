@@ -87,6 +87,10 @@ class Member extends Common
         }
     }
 
+    /**
+     * @Title: doSmsLogin
+     * @Description: TODO 短信登录
+     */
     public function doSmsLogin()
     {
         if($this->request->isPost()) {
@@ -171,6 +175,147 @@ class Member extends Common
                     $info['token'] = $h->getToken();
                     $_SESSION['uinfo']=$info;
                     ajaxReturn(array('code' =>1, 'info' => '登录成功','data'=>[$info]));
+
+            }else
+            {
+                ajaxReturn(array('code'=>0,'info'=>'手机号码不存在！','data'=>[]));
+            }
+
+        }
+    }
+
+    /**
+     * @Title: forgetPsd
+     * @Description: TODO 忘记密码
+     */
+    public function forgetPsd()
+    {
+        if($this->request->isPost()) {
+            session_start();
+            $ticket=session_id();
+            $data=input('post.');
+            if($data['mobile']==''||$data['smscode']==''|| $data['password']=='' || $data['newPassword']=='')
+            {
+               ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+            }
+            if(!preg_match("/^1[3|4|5|7|8|][0-9]{1}[0-9]{8}$/",$data['mobile']))
+            {
+                ajaxReturn(array('code' =>0, 'info' => '手机号码格式不正确！','data'=>[]));
+            }
+            if($data['password'] != $data['newPassword'])
+            {
+                ajaxReturn(array('code' =>0, 'info' => '两次输入的密码不一致！','data'=>[]));
+            }
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
+
+            //验证短信
+            $mobile=$data['mobile'];
+            session_id(md5($mobile));
+            session_start();
+            $token = $_SESSION['tokencode'];
+
+            if(empty($token))
+            {
+                ajaxReturn(array('code'=>0,'info'=>'请先获取短信验证码！','data'=>[]));
+            }
+            if($token['code']!=$data['smscode'])
+            {
+                ajaxReturn(array('code'=>0, 'info'=>'短信验证码不正确！','data'=>[]));
+            }
+            if (!empty($token)&&$token['expired_at']<time() )
+            {
+                ajaxReturn(array('code'=>0, 'info'=>'短信验证码超时！','data'=>[]));
+            }
+
+
+            $map['mobile']=$data['mobile'];
+            $info=db('doctor')->where($map)->field("member_id,member_sn,member_name,mobile,password,guid, true_name, is_clinic, is_certified, login_state, device_tokens, is_status")->find();
+            if(!empty($info))
+            {
+                //是否被冻结
+                if ($info['is_status'] == 1) {
+                    ajaxReturn(array('code'=>0,'info'=>'该账号被冻结！','data'=>[]));
+                }
+                    $info['ticket']=$ticket;
+                    unset($info['password']);
+
+                    //更新密码
+                    $temp['password'] = md5(md5($data['password']).$info['guid']);
+                    $temp['release_date'] = time();
+                    db('doctor')->where($map)->update($temp);
+                    ajaxReturn(array('code' =>1, 'info' => '修改成功','data'=>[]));
+
+            }else
+            {
+                ajaxReturn(array('code'=>0,'info'=>'手机号码不存在！','data'=>[]));
+            }
+
+        }
+    }
+
+    /**
+     * @Title: updatePsd
+     * @Description: TODO 修改密码
+     */
+    public function updatePsd()
+    {
+        if($this->request->isPost()) {
+            session_start();
+            $ticket=session_id();
+            $data=input('post.');
+            if($data['mobile']==''||$data['smscode']==''|| $data['newPassword']=='')
+            {
+               ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+            }
+            if(!preg_match("/^1[3|4|5|7|8|][0-9]{1}[0-9]{8}$/",$data['mobile']))
+            {
+                ajaxReturn(array('code' =>0, 'info' => '手机号码格式不正确！','data'=>[]));
+            }
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
+
+            //验证短信
+            $mobile=$data['mobile'];
+            session_id(md5($mobile));
+            session_start();
+            $token = $_SESSION['tokencode'];
+
+            if(empty($token))
+            {
+                ajaxReturn(array('code'=>0,'info'=>'请先获取短信验证码！','data'=>[]));
+            }
+            if($token['code']!=$data['smscode'])
+            {
+                ajaxReturn(array('code'=>0, 'info'=>'短信验证码不正确！','data'=>[]));
+            }
+            if (!empty($token)&&$token['expired_at']<time() )
+            {
+                ajaxReturn(array('code'=>0, 'info'=>'短信验证码超时！','data'=>[]));
+            }
+
+            $map['mobile']=$data['mobile'];
+            $info=db('doctor')->where($map)->field("member_id,member_sn,member_name,mobile,password,guid, true_name, is_clinic, is_certified, login_state, device_tokens, is_status")->find();
+            if(!empty($info))
+            {
+                //是否被冻结
+                if ($info['is_status'] == 1) {
+                    ajaxReturn(array('code'=>0,'info'=>'该账号被冻结！','data'=>[]));
+                }
+                    $info['ticket']=$ticket;
+                    unset($info['password']);
+
+                    //更新密码
+                    $temp['password'] = md5(md5($data['newPassword']).$info['guid']);
+                    $temp['release_date'] = time();
+                    db('doctor')->where($map)->update($temp);
+                    ajaxReturn(array('code' =>1, 'info' => '修改成功','data'=>[]));
 
             }else
             {

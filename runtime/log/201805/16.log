@@ -6670,3 +6670,93 @@
 )
 [ info ] [ RUN ] app\home\controller\Inherit->testPic[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
 [ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T23:17:21+08:00 ] 0.0.0.0 POST /inherit/getInheritDrugList
+[ info ] localhost:7037/inherit/getInheritDrugList [运行时间：1.179886s][吞吐率：0.85req/s] [内存消耗：3,066.56kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'getInheritDrugList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarybVQEe7R1yZA9JiRb',
+  'content-length' => '427',
+  'x-original-url' => '/inherit/getInheritDrugList',
+  'postman-token' => 'e30f200e-ca89-d673-b0cd-efdb6a352d04',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'inherit_id' => '2',
+  'page' => '1',
+  'pageSize' => '1',
+  'member_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->getInheritDrugList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.229392s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.103321s ]
+[ sql ] [ SQL ] SELECT `i`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`intro`,`d`.`title_id`,`d`.`member_name` FROM `jd_inherit` `i` INNER JOIN `jd_doctor` `d` ON `i`.`member_id`=`d`.`member_id` WHERE  i.`is_display` = 1  AND i.`inherit_id` = '2' LIMIT 1 [ RunTime:0.110809s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_title` [ RunTime:0.092139s ]
+[ sql ] [ SQL ] SELECT `title_name` FROM `jd_title` WHERE  `title_id` IN (16,17) [ RunTime:0.093429s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.091949s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit_doctor` WHERE  (  (`member_id` = 2 OR `parent_id` = 2) AND `is_checked` = 1 AND `inherit_id` = 2 ) LIMIT 1 [ RunTime:0.101459s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_special` [ RunTime:0.098742s ]
+[ sql ] [ SQL ] SELECT `special_id`,`special_name`,`content`,`service_str` FROM `jd_special` WHERE  `is_display` = 1  AND `inherit_id` = '2' ORDER BY `sort` DESC LIMIT 0,1 [ RunTime:0.105467s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_special` WHERE  `is_display` = 1  AND `inherit_id` = '2' ORDER BY `sort` DESC LIMIT 1 [ RunTime:0.101949s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-16T23:17:59+08:00 ] 0.0.0.0 POST /member/dologin
+[ info ] localhost:7037/member/dologin [运行时间：1.162733s][吞吐率：0.86req/s] [内存消耗：3,147.79kb] [文件加载：52]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'dologin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarySapDo62llUQTer1v',
+  'content-length' => '550',
+  'x-original-url' => '/member/dologin',
+  'postman-token' => 'b42e27f9-a470-0e85-cc1f-e8ecac13527f',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039438',
+  'password' => '123456',
+  'device_tokens' => '1231231',
+  'is_system' => '1',
+  'only_token' => '',
+)
+[ info ] [ RUN ] app\home\controller\Member->dologin[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.140088s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.093920s ]
+[ sql ] [ SQL ] SELECT `member_id`,`member_sn`,`member_name`,`mobile`,`password`,`guid`,`true_name`,`is_clinic`,`is_certified`,`login_state`,`device_tokens`,`is_status` FROM `jd_doctor` WHERE  `mobile` = '15021039438' LIMIT 1 [ RunTime:0.094134s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `login_ip`='0.0.0.0',`login_time`=1526483878,`is_system`=1,`device_tokens`='1231231',`login_state`=1,`only_token`='1526483878nqNl&V'  WHERE  `mobile` = '15021039438' [ RunTime:0.092975s ]
