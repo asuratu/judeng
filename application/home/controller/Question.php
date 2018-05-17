@@ -41,7 +41,7 @@ class Question extends Common
             $question_id = $val['type_id'];
             $question_type[$question_key]['question'][$question_title]['question_id'] = $val['question_id'];
             $question_type[$question_key]['question'][$question_title]['question_title'] = $val['question_title'];
-            $question_type[$question_key]['question'][$question_title]['question_url'] = $this->view->setting['base_host'] . $val['question_id'];;
+            $question_type[$question_key]['question'][$question_title]['question_url'] = $this->view->setting['base_host'] . '/' . $val['question_id'];;
         }
         return $question_type;
     }
