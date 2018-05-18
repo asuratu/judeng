@@ -27,19 +27,17 @@ class Notice extends Common
                 $noticeId = db('notice')->insertGetId($notice);
 
                 //保存图片数据流
-                $upPaperInfo = [];
                 foreach ($_FILES as $key => $val) {
-                    $file = request()->file($key);
-                    $path = ROOT_PATH . 'uploads/notice/';
-                    $result = $file->move($path);
-                    $upPaperInfo[]= array('src' => '/uploads/notice/' . $result->getSaveName(), 'src_size' => $_FILES[$key]['size']);
+                    $upPaperSize[$key]= array('src_size' => $_FILES[$key]['size']);
                 }
 
-                foreach ($upPaperInfo as $val) {
+                $upPaperInfo = json_decode(Model('Oss')->upPic('uploads/notice'), true);
+
+                foreach ($upPaperInfo as $key1=>$val1) {
                     $notice_attach = array(
-                        'notice_id' => $noticeId,
-                        'src' => $val['src'],
-                        'src_size' => $val['src_size'],
+                        'notice_id' => $data['notice_id'],
+                        'src' => $val1,
+                        'src_size' => $upPaperSize[$key1]['src_size'],
                     );
                     db('notice_attach')->insert($notice_attach);
                 }
@@ -77,20 +75,19 @@ class Notice extends Common
 
                 // 删除已有的图片路径
                 db('notice_attach')->where("notice_id = {$data['notice_id']}")->delete();
+
                 //保存图片数据流
-                $upPaperInfo = [];
                 foreach ($_FILES as $key => $val) {
-                    $file = request()->file($key);
-                    $path = ROOT_PATH . 'uploads/notice/';
-                    $result = $file->move($path);
-                    $upPaperInfo[]= array('src' => '/uploads/notice/' . $result->getSaveName(), 'src_size' => $_FILES[$key]['size']);
+                    $upPaperSize[$key]= array('src_size' => $_FILES[$key]['size']);
                 }
 
-                foreach ($upPaperInfo as $val) {
+                $upPaperInfo = json_decode(Model('Oss')->upPic('uploads/notice'), true);
+
+                foreach ($upPaperInfo as $key1=>$val1) {
                     $notice_attach = array(
                         'notice_id' => $data['notice_id'],
-                        'src' => $val['src'],
-                        'src_size' => $val['src_size'],
+                        'src' => $val1,
+                        'src_size' => $upPaperSize[$key1]['src_size'],
                     );
                     db('notice_attach')->insert($notice_attach);
                 }
