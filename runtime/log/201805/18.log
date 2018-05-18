@@ -30,3 +30,268 @@
 )
 [ info ] [ RUN ] app\home\controller\Inherit->upPic[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
 [ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-18T10:27:26+08:00 ] 0.0.0.0 POST /certified/addCertifie
+[ info ] localhost:7037/certified/addCertifie [运行时间：0.338812s][吞吐率：2.95req/s] [内存消耗：4,745.13kb] [文件加载：61]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'certified',
+    2 => 'addCertifie',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarykhPsVWFqKgoTxDRg',
+  'content-length' => '1970',
+  'x-original-url' => '/certified/addCertifie',
+  'postman-token' => 'b79efad9-df10-361e-8886-f26df05cb037',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '2',
+  'face_photo' => '',
+  'job_pic1' => '',
+  'job_pic2' => '',
+  'tech_pic1' => '',
+  'tech_pic2' => '',
+  'true_name' => '涂革',
+  'sex' => '1',
+  'birthday' => '1112225553',
+  'idcode' => '421124199209286019',
+  'hospital_id' => '6',
+  'title_id' => '15',
+  'hospital_repart_str' => '12',
+  'goodat_id' => '25,26,27',
+  'introduction' => '你好, 我叫涂革',
+  'bank_id' => '4',
+  'deposit_name' => '涂革',
+  'deposit_number' => '777888999',
+  'mobile' => '15021039435',
+)
+[ info ] [ RUN ] app\home\controller\Certified->addCertifie[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Certified.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.096980s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.063666s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.059686s ]
+[ error ] [2]Illegal string offset 'release_date'[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Certified.php:96]
+---------------------------------------------------------------
+[ 2018-05-18T11:50:36+08:00 ] 0.0.0.0 POST /certified/certifiedIndex
+[ info ] localhost:7037/certified/certifiedIndex [运行时间：0.382934s][吞吐率：2.61req/s] [内存消耗：3,600.19kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'certified',
+    2 => 'certifiedIndex',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryypt9JHmDPwDRsQ0D',
+  'content-length' => '141',
+  'x-original-url' => '/certified/certifiedIndex',
+  'postman-token' => 'e29665e5-76b8-c089-e3fe-9416eafa42eb',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Certified->certifiedIndex[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Certified.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.089665s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.060169s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.067661s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_deposit` [ RunTime:0.058182s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_deposit` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.056427s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-18T11:52:11+08:00 ] 0.0.0.0 POST /certified/certifiedIndex
+[ info ] localhost:7037/certified/certifiedIndex [运行时间：0.415340s][吞吐率：2.41req/s] [内存消耗：3,606.08kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'certified',
+    2 => 'certifiedIndex',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryEiTulg0FQuDDUOFv',
+  'content-length' => '141',
+  'x-original-url' => '/certified/certifiedIndex',
+  'postman-token' => 'ed3c6baf-a8f6-1ccb-4da1-3f8b13eddcc6',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Certified->certifiedIndex[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Certified.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.094673s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.067152s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.065041s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_deposit` [ RunTime:0.059602s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_deposit` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.057414s ]
+[ error ] [8]未定义数组索引: job_pic1[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Certified.php:36]
+[ error ] [8]未定义数组索引: job_pic2[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Certified.php:37]
+[ error ] [8]未定义数组索引: tech_pic1[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Certified.php:38]
+[ error ] [8]未定义数组索引: tech_pic2[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Certified.php:39]
+[ error ] [8]未定义数组索引: quali_pic1[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Certified.php:40]
+[ error ] [8]未定义数组索引: quali_pic2[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Certified.php:41]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-18T11:56:57+08:00 ] 0.0.0.0 POST /certified/certifiedIndex
+[ info ] localhost:7037/certified/certifiedIndex [运行时间：0.873812s][吞吐率：1.14req/s] [内存消耗：3,615.28kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'certified',
+    2 => 'certifiedIndex',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryAEiALaNIXDFh2w0T',
+  'content-length' => '141',
+  'x-original-url' => '/certified/certifiedIndex',
+  'postman-token' => '77472f77-a9d4-c6b4-b154-14e8b3052d7e',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Certified->certifiedIndex[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Certified.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.095481s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.068742s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.086075s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_info` [ RunTime:0.085784s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor_info` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.079544s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_deposit` [ RunTime:0.098825s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_deposit` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.298065s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-18T11:57:27+08:00 ] 0.0.0.0 POST /certified/certifiedIndex
+[ info ] localhost:7037/certified/certifiedIndex [运行时间：1.031887s][吞吐率：0.97req/s] [内存消耗：3,615.23kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'certified',
+    2 => 'certifiedIndex',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary8HBN09QdUEB4rnP4',
+  'content-length' => '141',
+  'x-original-url' => '/certified/certifiedIndex',
+  'postman-token' => '6923e0d3-b226-2652-4f7e-5fd5cc1557f9',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Certified->certifiedIndex[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Certified.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.235456s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.217069s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.087118s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_info` [ RunTime:0.114825s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor_info` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.092972s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_deposit` [ RunTime:0.094143s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_deposit` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.123275s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-18T11:58:54+08:00 ] 0.0.0.0 POST /member/getDoctorInfo
+[ info ] localhost:7037/member/getDoctorInfo [运行时间：0.354955s][吞吐率：2.82req/s] [内存消耗：3,625.90kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getDoctorInfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarykBOth0o89nFv0sED',
+  'content-length' => '254',
+  'x-original-url' => '/member/getDoctorInfo',
+  'postman-token' => '9f7e108b-6fe5-c0bf-6642-213e76a6660f',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '4',
+  'only_token' => '1525679145Omj*yI',
+)
+[ info ] [ RUN ] app\home\controller\Member->getDoctorInfo[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.097955s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.068295s ]
+[ sql ] [ SQL ] SELECT `d`.*,`t`.`title_name`,`a`.`name`,`h`.`hospital_name` FROM `jd_doctor` `d` LEFT JOIN `jd_title` `t` ON `d`.`title_id`=`t`.`title_id` LEFT JOIN `jd_area` `a` ON `d`.`area_id`=`a`.`area_id` LEFT JOIN `jd_hospital` `h` ON `d`.`hospital_id`=`h`.`hospital_id` WHERE  `member_id` = 4 LIMIT 1 [ RunTime:0.062380s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `only_token` = '1525679145Omj*yI'  AND `is_status` = 0 LIMIT 1 [ RunTime:0.060843s ]

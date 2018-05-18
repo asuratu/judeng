@@ -197,14 +197,17 @@ class Order extends Common
                     $orderPrescriptionInsert['price'] = 0;
                     $orderPrescriptionInsert['taboo_content'] = '';
                     //保存图片数据流
-                    foreach ($_FILES as $key => $val) {
-                        $file = request()->file($key);
-                        $path = ROOT_PATH . 'uploads/prescription/';
-                        $result = $file->move($path);
-                        $orderPrescriptionInsert[$key] = '/uploads/prescription/' . $result->getSaveName();
-                    }
-                }
+//                    foreach ($_FILES as $key => $val) {
+//                        $file = request()->file($key);
+//                        $path = ROOT_PATH . 'uploads/prescription/';
+//                        $result = $file->move($path);
+//                        $orderPrescriptionInsert[$key] = '/uploads/prescription/' . $result->getSaveName();
+//                    }
 
+                    //保存图片数据流 - OSS
+                    $upOss = json_decode(Model('Oss')->upPic('uploads/prescription'), true);
+                    $orderPrescriptionInsert['prescription_src'] = $upOss['prescription_src'];
+                }
 
 
                 if ($data['patient_id'] == 0) {

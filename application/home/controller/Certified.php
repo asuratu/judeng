@@ -27,11 +27,20 @@ class Certified extends Common
 
             $temp['member_id'] = $data['member_id'];
             $detail = db('doctor')->where($temp)->field("*")->find();
+            $picDetail = db('doctor_info')->where($temp)->field("*")->find();
             $bankDetail = db('deposit')->where($temp)->field("*")->find();
 
             $hospitalRepartStr = explode(',', $detail['hospital_repart_str']);
             $info['is_certified'] = $detail['is_certified'];
-            $info['face_photo'] = config('url').$detail['face_photo'];
+            $info['face_photo'] = $detail['face_photo'];
+
+            $info['job_pic1'] = $picDetail ? $picDetail['job_pic1'] : '';
+            $info['job_pic2'] = $picDetail ? $picDetail['job_pic2'] : '';
+            $info['tech_pic1'] = $picDetail ? $picDetail['tech_pic1'] : '';
+            $info['tech_pic2'] = $picDetail ? $picDetail['tech_pic2'] : '';
+            $info['quali_pic1'] = $picDetail ? $picDetail['quali_pic1'] : '';
+            $info['quali_pic2'] = $picDetail ? $picDetail['quali_pic2'] : '';
+
             $info['true_name'] = $detail['true_name'];
             $info['sex'] = $detail['sex'];
             $info['birthday'] = date('Y-m-d', $detail['birthday']);
@@ -82,14 +91,18 @@ class Certified extends Common
                     ajaxReturn(array('code'=>0, 'info'=>'您已提交过认证, 不可重复提交!','data'=>[]));
                 }
 
-                //保存图片数据流
-                foreach ($_FILES as $key => $val) {
-                    $file = request()->file($key);
-                    $path = ROOT_PATH . 'uploads/paper/';
-                    $result = $file->move($path);
-                    $upPaperInfo[$key] = '/uploads/paper/' . $result->getSaveName();
-                    $upPaperInfo['release_date'] = time();
-                }
+                //保存图片数据流 - 本地
+//                foreach ($_FILES as $key => $val) {
+//                    $file = request()->file($key);
+//                    $path = ROOT_PATH . 'uploads/paper/';
+//                    $result = $file->move($path);
+//                    $upPaperInfo[$key] = '/uploads/paper/' . $result->getSaveName();
+//                    $upPaperInfo['release_date'] = time();
+//                }
+
+                //保存图片数据流 - OSS
+                $upPaperInfo = json_decode(Model('Oss')->upPic('uploads/paper'), true);
+                $upPaperInfo['release_date'] = time();
 
                 $upInfo['face_photo'] = $upPaperInfo['face_photo'];
                 unset($upPaperInfo['face_photo']);
