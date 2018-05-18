@@ -109,7 +109,7 @@ class Notice extends Common
         }
     }
 
-    // 删除功能
+    // 删除公告功能
     public function deleteNotice()
     {
         if ($this->request->isPost()) {

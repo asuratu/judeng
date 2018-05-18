@@ -30,3 +30,1768 @@
 )
 [ info ] [ RUN ] app\home\controller\Inherit->upPic[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
 [ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-18T12:03:35+08:00 ] 0.0.0.0 POST /notice/addNotice
+[ info ] localhost:8020/notice/addNotice [运行时间：0.751043s][吞吐率：1.33req/s] [内存消耗：2,686.62kb] [文件加载：45]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'notice',
+    2 => 'addNotice',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------087025724714157238084801',
+  'content-length' => '402',
+  'x-original-url' => '/notice/addNotice',
+  'postman-token' => '499e5091-6597-4d8c-8b61-0260c1f098fe',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'notice_name' => '王测试',
+  'content' => '也是简介',
+)
+[ info ] [ RUN ] app\home\controller\Notice->addNotice[ E:\wook\201804\judeng\application\home\controller\Notice.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.083004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_notice` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] INSERT INTO `jd_notice` (`notice_name` , `content` , `doctor_id` , `add_date` , `release_date`) VALUES ('王测试' , '也是简介' , 2 , 1526616215 , 1526616215) [ RunTime:0.052003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-18T14:57:57+08:00 ] 0.0.0.0 POST /setup/findInquiry
+[ info ] localhost:8020/setup/findInquiry [运行时间：0.226013s][吞吐率：4.42req/s] [内存消耗：2,669.30kb] [文件加载：48]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'setup',
+    2 => 'findInquiry',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------680101538126047825781342',
+  'content-length' => '402',
+  'x-original-url' => '/setup/findInquiry',
+  'postman-token' => '01566891-0e78-4773-82f3-3ccd9b193a57',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'notice_name' => '王测试',
+  'content' => '也是简介',
+)
+[ info ] [ RUN ] app\home\controller\Setup->findInquiry[ E:\wook\201804\judeng\application\home\controller\Setup.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.081004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.057004s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'doctor_id' in 'where clause'[E:\wook\201804\judeng\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-05-18T14:58:08+08:00 ] 0.0.0.0 POST /setup/findInquiry
+[ info ] localhost:8020/setup/findInquiry [运行时间：0.231014s][吞吐率：4.33req/s] [内存消耗：2,512.53kb] [文件加载：41]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'setup',
+    2 => 'findInquiry',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------108272785087775211299647',
+  'content-length' => '402',
+  'x-original-url' => '/setup/findInquiry',
+  'postman-token' => 'c9c3a95e-1c96-4d12-b8ef-f4113645533e',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'notice_name' => '王测试',
+  'content' => '也是简介',
+)
+[ info ] [ RUN ] app\home\controller\Setup->findInquiry[ E:\wook\201804\judeng\application\home\controller\Setup.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.059003s ]
+---------------------------------------------------------------
+[ 2018-05-18T14:59:40+08:00 ] 0.0.0.0 POST /setup/findInquiry
+[ info ] localhost:8020/setup/findInquiry [运行时间：0.212012s][吞吐率：4.72req/s] [内存消耗：2,514.97kb] [文件加载：41]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'setup',
+    2 => 'findInquiry',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------295855498531215598244297',
+  'content-length' => '402',
+  'x-original-url' => '/setup/findInquiry',
+  'postman-token' => '20cbad0d-00d3-4403-9feb-c4d8ed02f917',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'notice_name' => '王测试',
+  'content' => '也是简介',
+)
+[ info ] [ RUN ] app\home\controller\Setup->findInquiry[ E:\wook\201804\judeng\application\home\controller\Setup.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.079005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.054003s ]
+---------------------------------------------------------------
+[ 2018-05-18T15:04:32+08:00 ] 0.0.0.0 POST /setup/findInquiry
+[ info ] localhost:8020/setup/findInquiry [运行时间：0.199012s][吞吐率：5.02req/s] [内存消耗：2,669.91kb] [文件加载：48]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'setup',
+    2 => 'findInquiry',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------200346915653027259797652',
+  'content-length' => '402',
+  'x-original-url' => '/setup/findInquiry',
+  'postman-token' => '5dc83c49-9e56-4b8d-838c-48b6024c5765',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'notice_name' => '王测试',
+  'content' => '也是简介',
+)
+[ info ] [ RUN ] app\home\controller\Setup->findInquiry[ E:\wook\201804\judeng\application\home\controller\Setup.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.079004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.055004s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'doctor_id' in 'where clause'[E:\wook\201804\judeng\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-05-18T15:04:56+08:00 ] 0.0.0.0 POST /setup/findInquiry
+[ info ] localhost:8020/setup/findInquiry [运行时间：0.226013s][吞吐率：4.42req/s] [内存消耗：2,520.55kb] [文件加载：41]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'setup',
+    2 => 'findInquiry',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------185531381443656757334065',
+  'content-length' => '402',
+  'x-original-url' => '/setup/findInquiry',
+  'postman-token' => '3870baf3-ff46-4c48-93d1-740683144676',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'notice_name' => '王测试',
+  'content' => '也是简介',
+)
+[ info ] [ RUN ] app\home\controller\Setup->findInquiry[ E:\wook\201804\judeng\application\home\controller\Setup.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.083005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.059003s ]
+[ sql ] [ SQL ] SELECT `online_inquiry`,`love_inquiry`,`graphic_speech`,`first_price`,`consultation_price`,`receipt` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.056003s ]
+---------------------------------------------------------------
+[ 2018-05-18T15:05:38+08:00 ] 0.0.0.0 POST /setup/findInquiry
+[ info ] localhost:8020/setup/findInquiry [运行时间：0.307018s][吞吐率：3.26req/s] [内存消耗：2,623.80kb] [文件加载：43]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'setup',
+    2 => 'findInquiry',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------270543720879290261043999',
+  'content-length' => '402',
+  'x-original-url' => '/setup/findInquiry',
+  'postman-token' => 'ebe702ac-db0e-4fdb-8d18-d089a644064e',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'notice_name' => '王测试',
+  'content' => '也是简介',
+)
+[ info ] [ RUN ] app\home\controller\Setup->findInquiry[ E:\wook\201804\judeng\application\home\controller\Setup.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.076004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT `online_inquiry`,`love_inquiry`,`graphic_speech`,`first_price`,`consultation_price`,`receipt` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.050003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.051003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.050003s ]
+---------------------------------------------------------------
+[ 2018-05-18T15:08:10+08:00 ] 0.0.0.0 POST /setup/findInquiry
+[ info ] localhost:8020/setup/findInquiry [运行时间：0.356020s][吞吐率：2.81req/s] [内存消耗：2,687.07kb] [文件加载：46]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'setup',
+    2 => 'findInquiry',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------029314176597472553546270',
+  'content-length' => '402',
+  'x-original-url' => '/setup/findInquiry',
+  'postman-token' => 'fd866192-1292-4b23-b20b-7f545ade2785',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'notice_name' => '王测试',
+  'content' => '也是简介',
+)
+[ info ] [ RUN ] app\home\controller\Setup->findInquiry[ E:\wook\201804\judeng\application\home\controller\Setup.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.059004s ]
+[ sql ] [ SQL ] SELECT `online_inquiry`,`love_inquiry`,`graphic_speech`,`first_price`,`consultation_price`,`receipt` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.059003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.058004s ]
+[ error ] [8]未定义数组索引: first_price[E:\wook\201804\judeng\application\home\controller\Setup.php:25]
+---------------------------------------------------------------
+[ 2018-05-18T15:16:31+08:00 ] 0.0.0.0 POST /setup/findInquiry
+[ info ] localhost:8020/setup/findInquiry [运行时间：0.326019s][吞吐率：3.07req/s] [内存消耗：2,619.09kb] [文件加载：44]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'setup',
+    2 => 'findInquiry',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------052885712550595780189832',
+  'content-length' => '402',
+  'x-original-url' => '/setup/findInquiry',
+  'postman-token' => '1e5fffba-4615-4196-a912-5387b375d485',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'notice_name' => '王测试',
+  'content' => '也是简介',
+)
+[ info ] [ RUN ] app\home\controller\Setup->findInquiry[ E:\wook\201804\judeng\application\home\controller\Setup.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.080004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT `online_inquiry`,`love_inquiry`,`graphic_speech`,`first_price`,`consultation_price`,`receipt` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.052003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-18T15:17:25+08:00 ] 0.0.0.0 POST /setup/findInquiry
+[ info ] localhost:8020/setup/findInquiry [运行时间：0.351020s][吞吐率：2.85req/s] [内存消耗：2,619.08kb] [文件加载：44]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'setup',
+    2 => 'findInquiry',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------272785503080318324764185',
+  'content-length' => '402',
+  'x-original-url' => '/setup/findInquiry',
+  'postman-token' => 'c97e3561-9ca9-4efb-a4ab-fe63cd7a9830',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'notice_name' => '王测试',
+  'content' => '也是简介',
+)
+[ info ] [ RUN ] app\home\controller\Setup->findInquiry[ E:\wook\201804\judeng\application\home\controller\Setup.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SELECT `online_inquiry`,`love_inquiry`,`graphic_speech`,`first_price`,`consultation_price`,`receipt` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.059004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.058003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-18T15:22:02+08:00 ] 0.0.0.0 POST /setup/findPrescription
+[ info ] localhost:8020/setup/findPrescription [运行时间：0.211013s][吞吐率：4.74req/s] [内存消耗：2,608.45kb] [文件加载：44]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'setup',
+    2 => 'findPrescription',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------039360580760258444842445',
+  'content-length' => '402',
+  'x-original-url' => '/setup/findPrescription',
+  'postman-token' => 'dd82d98d-5044-42bd-bb05-77be9956fe79',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'notice_name' => '王测试',
+  'content' => '也是简介',
+)
+[ info ] [ RUN ] app\home\controller\Setup->findPrescription[ E:\wook\201804\judeng\application\home\controller\Setup.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.077004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT `open_pharmacy`,`platform_default`,`inherit`,`concealment_number`,`questions_number` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.051003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-18T15:24:38+08:00 ] 0.0.0.0 POST /setup/findInquiry
+[ info ] localhost:8020/setup/findInquiry [运行时间：0.386022s][吞吐率：2.59req/s] [内存消耗：3,023.52kb] [文件加载：46]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'setup',
+    2 => 'findInquiry',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------724145132445549647640074',
+  'content-length' => '402',
+  'x-original-url' => '/setup/findInquiry',
+  'postman-token' => '5abdc390-41f0-450f-bc3f-7c2fd3e295e7',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'notice_name' => '王测试',
+  'content' => '也是简介',
+)
+[ info ] [ RUN ] app\home\controller\Setup->findInquiry[ E:\wook\201804\judeng\application\home\controller\Setup.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.079005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT `online_inquiry`,`love_inquiry`,`graphic_speech`,`first_price`,`consultation_price`,`receipt` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.053003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-18T15:44:37+08:00 ] 0.0.0.0 POST /setup/updateInquiry
+[ info ] localhost:8020/setup/updateInquiry [运行时间：0.235013s][吞吐率：4.26req/s] [内存消耗：2,625.20kb] [文件加载：44]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'setup',
+    2 => 'updateInquiry',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------404796924026561896909594',
+  'content-length' => '841',
+  'x-original-url' => '/setup/updateInquiry',
+  'postman-token' => 'cfce64a9-f098-4d3f-aaf0-3847df643981',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'online_inquiry' => '1',
+  'love_inquiry' => '1',
+  'graphic_speech' => '1',
+  'first_price' => '1',
+  'consultation_price' => '1',
+  'receipt' => '1',
+)
+[ info ] [ RUN ] app\home\controller\Setup->updateInquiry[ E:\wook\201804\judeng\application\home\controller\Setup.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.083005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.057003s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `online_inquiry`=1,`love_inquiry`=1,`graphic_speech`=1,`first_price`=1,`consultation_price`=1,`receipt`=1,`release_date`=1526629477  WHERE  (  member_id = 2 ) [ RunTime:0.058004s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-18T15:44:40+08:00 ] 0.0.0.0 POST /setup/updateInquiry
+[ info ] localhost:8020/setup/updateInquiry [运行时间：0.226013s][吞吐率：4.42req/s] [内存消耗：2,625.46kb] [文件加载：44]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'setup',
+    2 => 'updateInquiry',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------101258907592186768704727',
+  'content-length' => '841',
+  'x-original-url' => '/setup/updateInquiry',
+  'postman-token' => '849ed1a0-b09c-4f8d-835d-2baea3e62cc2',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'online_inquiry' => '1',
+  'love_inquiry' => '1',
+  'graphic_speech' => '1',
+  'first_price' => '1',
+  'consultation_price' => '1',
+  'receipt' => '1',
+)
+[ info ] [ RUN ] app\home\controller\Setup->updateInquiry[ E:\wook\201804\judeng\application\home\controller\Setup.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.081004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.057004s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `online_inquiry`=1,`love_inquiry`=1,`graphic_speech`=1,`first_price`=1,`consultation_price`=1,`receipt`=1,`release_date`=1526629480  WHERE  (  member_id = 2 ) [ RunTime:0.056003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-18T15:46:55+08:00 ] 0.0.0.0 POST /setup/updatePrescription
+[ info ] localhost:8020/setup/updatePrescription [运行时间：0.220013s][吞吐率：4.55req/s] [内存消耗：2,624.07kb] [文件加载：44]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'setup',
+    2 => 'updatePrescription',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------358442651410754183946930',
+  'content-length' => '735',
+  'x-original-url' => '/setup/updatePrescription',
+  'postman-token' => '74cefd2f-033e-491c-9613-774d7dda02b7',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'open_pharmacy' => '1',
+  'platform_default' => '1',
+  'inherit' => '2',
+  'concealment_number' => '1',
+  'questions_number' => '1',
+)
+[ info ] [ RUN ] app\home\controller\Setup->updatePrescription[ E:\wook\201804\judeng\application\home\controller\Setup.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.079005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `open_pharmacy`=1,`platform_default`=1,`inherit`=2,`concealment_number`=1,`questions_number`=1,`release_date`=1526629615  WHERE  (  member_id = 2 ) [ RunTime:0.055003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-18T16:00:19+08:00 ] 0.0.0.0 POST /setup/doctorCount
+[ info ] localhost:8020/setup/doctorCount [运行时间：0.296016s][吞吐率：3.38req/s] [内存消耗：3,013.82kb] [文件加载：45]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'setup',
+    2 => 'doctorCount',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------534602603961123793722436',
+  'content-length' => '165',
+  'x-original-url' => '/setup/doctorCount',
+  'postman-token' => '7d3296c0-9c1a-40cc-a50b-546ddd926fd7',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Setup->doctorCount[ E:\wook\201804\judeng\application\home\controller\Setup.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_count` [ RunTime:0.057004s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_count` WHERE  (  day_date = 1526572800 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.056003s ]
+[ sql ] [ SQL ] INSERT INTO `jd_doctor_count` (`doctor_id` , `day_date` , `count` , `add_date`) VALUES (2 , 1526572800 , 1 , 1526630419) [ RunTime:0.058003s ]
+---------------------------------------------------------------
+[ 2018-05-18T16:01:13+08:00 ] 0.0.0.0 POST /setup/doctorCount
+[ info ] localhost:8020/setup/doctorCount [运行时间：0.265015s][吞吐率：3.77req/s] [内存消耗：2,997.93kb] [文件加载：46]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'setup',
+    2 => 'doctorCount',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------341555123200565649890697',
+  'content-length' => '165',
+  'x-original-url' => '/setup/doctorCount',
+  'postman-token' => '5e6a778a-c3f2-4685-888c-601dcf37e8b6',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Setup->doctorCount[ E:\wook\201804\judeng\application\home\controller\Setup.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.077004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_count` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_count` WHERE  (  day_date = 1526572800 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.051002s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_count`  SET `count`=`count`+1  WHERE  (  day_date = 1526572800 and doctor_id = 2 ) [ RunTime:0.053003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-18T16:06:12+08:00 ] 0.0.0.0 POST /setup/doctorCount
+[ info ] localhost:8020/setup/doctorCount [运行时间：0.272016s][吞吐率：3.68req/s] [内存消耗：3,002.09kb] [文件加载：46]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'setup',
+    2 => 'doctorCount',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------623136893989744284031864',
+  'content-length' => '165',
+  'x-original-url' => '/setup/doctorCount',
+  'postman-token' => 'b0430837-9bcd-432f-bb69-fe4a3f16d9ec',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Setup->doctorCount[ E:\wook\201804\judeng\application\home\controller\Setup.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.077004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_count` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_count` WHERE  (  day_date = 1526572800 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.053003s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_count`  SET `count`=`count`+1  WHERE  (  day_date = 1526572800 and doctor_id = 2 ) [ RunTime:0.056004s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-18T16:06:28+08:00 ] 0.0.0.0 POST /setup/findInquiry
+[ info ] localhost:8020/setup/findInquiry [运行时间：0.488028s][吞吐率：2.05req/s] [内存消耗：2,965.48kb] [文件加载：43]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'setup',
+    2 => 'findInquiry',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------128993756127469946630562',
+  'content-length' => '402',
+  'x-original-url' => '/setup/findInquiry',
+  'postman-token' => 'f5a3ba04-a2b4-4021-b1f1-35005db25b1d',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'notice_name' => '王测试',
+  'content' => '也是简介',
+)
+[ info ] [ RUN ] app\home\controller\Setup->findInquiry[ E:\wook\201804\judeng\application\home\controller\Setup.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.079004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT `online_inquiry`,`love_inquiry`,`graphic_speech`,`first_price`,`consultation_price`,`receipt` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_count` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_count` WHERE  (  day_date = 1526572800 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.052003s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_count`  SET `count`=`count`+1  WHERE  (  day_date = 1526572800 and doctor_id = 2 ) [ RunTime:0.055003s ]
+---------------------------------------------------------------
+[ 2018-05-18T16:08:04+08:00 ] 0.0.0.0 POST /setup/findInquiry
+[ info ] localhost:8020/setup/findInquiry [运行时间：0.479027s][吞吐率：2.09req/s] [内存消耗：2,965.42kb] [文件加载：43]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'setup',
+    2 => 'findInquiry',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------667476450362830098558614',
+  'content-length' => '165',
+  'x-original-url' => '/setup/findInquiry',
+  'postman-token' => 'b25468b3-05fc-4253-8a22-455bed7e359e',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Setup->findInquiry[ E:\wook\201804\judeng\application\home\controller\Setup.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.077005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT `online_inquiry`,`love_inquiry`,`graphic_speech`,`first_price`,`consultation_price`,`receipt` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.051003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_count` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_count` WHERE  (  day_date = 1526572800 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.053003s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_count`  SET `count`=`count`+1  WHERE  (  day_date = 1526572800 and doctor_id = 2 ) [ RunTime:0.054003s ]
+---------------------------------------------------------------
+[ 2018-05-18T16:08:33+08:00 ] 0.0.0.0 POST /setup/findInquiry
+[ info ] localhost:8020/setup/findInquiry [运行时间：0.501028s][吞吐率：2.00req/s] [内存消耗：2,965.69kb] [文件加载：43]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'setup',
+    2 => 'findInquiry',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------272602467118712034469640',
+  'content-length' => '165',
+  'x-original-url' => '/setup/findInquiry',
+  'postman-token' => '6609e664-4415-4792-a52b-7e0ecfd7b066',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Setup->findInquiry[ E:\wook\201804\judeng\application\home\controller\Setup.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.081005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SELECT `online_inquiry`,`love_inquiry`,`graphic_speech`,`first_price`,`consultation_price`,`receipt` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_count` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_count` WHERE  (  day_date = 1526572800 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.054003s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_count`  SET `count`=`count`+1  WHERE  (  day_date = 1526572800 and doctor_id = 2 ) [ RunTime:0.057003s ]
+---------------------------------------------------------------
+[ 2018-05-18T16:09:16+08:00 ] 0.0.0.0 POST /setup/findInquiry
+[ info ] localhost:8020/setup/findInquiry [运行时间：0.486028s][吞吐率：2.06req/s] [内存消耗：2,966.10kb] [文件加载：43]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'setup',
+    2 => 'findInquiry',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------051722587208074890940443',
+  'content-length' => '165',
+  'x-original-url' => '/setup/findInquiry',
+  'postman-token' => '7d807341-71c0-4d50-ac7c-da47b3241621',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Setup->findInquiry[ E:\wook\201804\judeng\application\home\controller\Setup.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.078005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT `online_inquiry`,`love_inquiry`,`graphic_speech`,`first_price`,`consultation_price`,`receipt` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.051003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.054004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_count` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_count` WHERE  (  day_date = 1526572800 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.053003s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_count`  SET `count`=`count`+1  WHERE  (  day_date = 1526572800 and doctor_id = 2 ) [ RunTime:0.055003s ]
+---------------------------------------------------------------
+[ 2018-05-18T16:09:26+08:00 ] 0.0.0.0 POST /setup/findInquiry
+[ info ] localhost:8020/setup/findInquiry [运行时间：0.491028s][吞吐率：2.04req/s] [内存消耗：2,966.35kb] [文件加载：43]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'setup',
+    2 => 'findInquiry',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------663343155030200125598896',
+  'content-length' => '165',
+  'x-original-url' => '/setup/findInquiry',
+  'postman-token' => '4b97a046-f865-4089-8d7a-551721766d81',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Setup->findInquiry[ E:\wook\201804\judeng\application\home\controller\Setup.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.079004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.052002s ]
+[ sql ] [ SQL ] SELECT `online_inquiry`,`love_inquiry`,`graphic_speech`,`first_price`,`consultation_price`,`receipt` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_count` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_count` WHERE  (  day_date = 1526572800 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.052003s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_count`  SET `count`=`count`+1  WHERE  (  day_date = 1526572800 and doctor_id = 2 ) [ RunTime:0.058004s ]
+---------------------------------------------------------------
+[ 2018-05-18T16:09:49+08:00 ] 0.0.0.0 POST /setup/findInquiry
+[ info ] localhost:8020/setup/findInquiry [运行时间：0.463026s][吞吐率：2.16req/s] [内存消耗：2,965.55kb] [文件加载：43]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'setup',
+    2 => 'findInquiry',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------532979218373330974955909',
+  'content-length' => '165',
+  'x-original-url' => '/setup/findInquiry',
+  'postman-token' => '6bdab54b-52b1-4848-a007-b249d02dc393',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Setup->findInquiry[ E:\wook\201804\judeng\application\home\controller\Setup.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.087005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.058004s ]
+[ sql ] [ SQL ] SELECT `online_inquiry`,`love_inquiry`,`graphic_speech`,`first_price`,`consultation_price`,`receipt` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.057004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_count` [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SELECT `count` FROM `jd_doctor_count` WHERE  (  day_date = 1526572800 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.056003s ]
+---------------------------------------------------------------
+[ 2018-05-18T16:10:08+08:00 ] 0.0.0.0 POST /setup/findInquiry
+[ info ] localhost:8020/setup/findInquiry [运行时间：0.456026s][吞吐率：2.19req/s] [内存消耗：2,964.28kb] [文件加载：43]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'setup',
+    2 => 'findInquiry',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------182053736001923799886187',
+  'content-length' => '165',
+  'x-original-url' => '/setup/findInquiry',
+  'postman-token' => '88a66c04-70f0-4621-9c3b-4b85da69b0fa',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Setup->findInquiry[ E:\wook\201804\judeng\application\home\controller\Setup.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.085004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.058004s ]
+[ sql ] [ SQL ] SELECT `online_inquiry`,`love_inquiry`,`graphic_speech`,`first_price`,`consultation_price`,`receipt` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.058004s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_count` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT `count` FROM `jd_doctor_count` WHERE  (  day_date = 1526572800 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.057003s ]
+---------------------------------------------------------------
+[ 2018-05-18T16:10:38+08:00 ] 0.0.0.0 POST /setup/findInquiry
+[ info ] localhost:8020/setup/findInquiry [运行时间：0.448025s][吞吐率：2.23req/s] [内存消耗：2,964.28kb] [文件加载：43]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'setup',
+    2 => 'findInquiry',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------418398921237444523315151',
+  'content-length' => '165',
+  'x-original-url' => '/setup/findInquiry',
+  'postman-token' => 'adf37bdf-6ce4-4050-9357-ac9903b3ffdf',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Setup->findInquiry[ E:\wook\201804\judeng\application\home\controller\Setup.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.081005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT `online_inquiry`,`love_inquiry`,`graphic_speech`,`first_price`,`consultation_price`,`receipt` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_count` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT `count` FROM `jd_doctor_count` WHERE  (  day_date = 1526572800 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.054003s ]
+---------------------------------------------------------------
+[ 2018-05-18T16:10:48+08:00 ] 0.0.0.0 POST /setup/findInquiry
+[ info ] localhost:8020/setup/findInquiry [运行时间：0.444025s][吞吐率：2.25req/s] [内存消耗：2,964.28kb] [文件加载：43]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'setup',
+    2 => 'findInquiry',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------852957281633413703076062',
+  'content-length' => '165',
+  'x-original-url' => '/setup/findInquiry',
+  'postman-token' => '9a394202-2bc4-47ec-bda7-cb1403b912cb',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Setup->findInquiry[ E:\wook\201804\judeng\application\home\controller\Setup.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.083005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT `online_inquiry`,`love_inquiry`,`graphic_speech`,`first_price`,`consultation_price`,`receipt` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.054004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_count` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT `count` FROM `jd_doctor_count` WHERE  (  day_date = 1526572800 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.054003s ]
+---------------------------------------------------------------
+[ 2018-05-18T16:11:03+08:00 ] 0.0.0.0 POST /setup/findInquiry
+[ info ] localhost:8020/setup/findInquiry [运行时间：0.446026s][吞吐率：2.24req/s] [内存消耗：2,964.20kb] [文件加载：43]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'setup',
+    2 => 'findInquiry',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------185643628788886341638380',
+  'content-length' => '165',
+  'x-original-url' => '/setup/findInquiry',
+  'postman-token' => '7c712863-a346-4361-8105-26afc68abf49',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Setup->findInquiry[ E:\wook\201804\judeng\application\home\controller\Setup.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.082004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.056004s ]
+[ sql ] [ SQL ] SELECT `online_inquiry`,`love_inquiry`,`graphic_speech`,`first_price`,`consultation_price`,`receipt` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_count` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT `count` FROM `jd_doctor_count` WHERE  (  day_date = 1526572800 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.055004s ]
+---------------------------------------------------------------
+[ 2018-05-18T16:12:23+08:00 ] 0.0.0.0 POST /setup/findInquiry
+[ info ] localhost:8020/setup/findInquiry [运行时间：0.440025s][吞吐率：2.27req/s] [内存消耗：2,964.53kb] [文件加载：43]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'setup',
+    2 => 'findInquiry',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------294009034788864648827650',
+  'content-length' => '165',
+  'x-original-url' => '/setup/findInquiry',
+  'postman-token' => '1741b742-02af-467a-8cd9-ca349d689e3e',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Setup->findInquiry[ E:\wook\201804\judeng\application\home\controller\Setup.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.081004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT `online_inquiry`,`love_inquiry`,`graphic_speech`,`first_price`,`consultation_price`,`receipt` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_count` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT `count` FROM `jd_doctor_count` WHERE  (  day_date = 1526572800 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.054003s ]
+---------------------------------------------------------------
+[ 2018-05-18T16:12:56+08:00 ] 0.0.0.0 POST /setup/findInquiry
+[ info ] localhost:8020/setup/findInquiry [运行时间：0.437025s][吞吐率：2.29req/s] [内存消耗：2,964.88kb] [文件加载：43]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'setup',
+    2 => 'findInquiry',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------362167025463031125182070',
+  'content-length' => '165',
+  'x-original-url' => '/setup/findInquiry',
+  'postman-token' => '585e009d-d3ec-4ec6-88be-b70d8ee8cbd9',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Setup->findInquiry[ E:\wook\201804\judeng\application\home\controller\Setup.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.079004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.054004s ]
+[ sql ] [ SQL ] SELECT `online_inquiry`,`love_inquiry`,`graphic_speech`,`first_price`,`consultation_price`,`receipt` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_count` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT `count` FROM `jd_doctor_count` WHERE  (  day_date = 1526572800 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.053003s ]
+---------------------------------------------------------------
+[ 2018-05-18T16:13:15+08:00 ] 0.0.0.0 POST /setup/findInquiry
+[ info ] localhost:8020/setup/findInquiry [运行时间：0.462027s][吞吐率：2.16req/s] [内存消耗：3,045.56kb] [文件加载：46]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'setup',
+    2 => 'findInquiry',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------329128539806280754510628',
+  'content-length' => '165',
+  'x-original-url' => '/setup/findInquiry',
+  'postman-token' => 'ca75a0de-9a51-4b1d-a5f3-3929e465a7e4',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Setup->findInquiry[ E:\wook\201804\judeng\application\home\controller\Setup.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.058004s ]
+[ sql ] [ SQL ] SELECT `online_inquiry`,`love_inquiry`,`graphic_speech`,`first_price`,`consultation_price`,`receipt` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.057004s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_count` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT `count` FROM `jd_doctor_count` WHERE  (  day_date = 1526572800 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.055003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-18T16:13:33+08:00 ] 0.0.0.0 POST /setup/findInquiry
+[ info ] localhost:8020/setup/findInquiry [运行时间：0.419024s][吞吐率：2.39req/s] [内存消耗：3,045.56kb] [文件加载：46]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'setup',
+    2 => 'findInquiry',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------438010159129515838786528',
+  'content-length' => '165',
+  'x-original-url' => '/setup/findInquiry',
+  'postman-token' => '711ab977-62f9-40d6-9895-77c528e8145e',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Setup->findInquiry[ E:\wook\201804\judeng\application\home\controller\Setup.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.075004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT `online_inquiry`,`love_inquiry`,`graphic_speech`,`first_price`,`consultation_price`,`receipt` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.051003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.051003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.050003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_count` [ RunTime:0.051003s ]
+[ sql ] [ SQL ] SELECT `count` FROM `jd_doctor_count` WHERE  (  day_date = 1526572800 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.050003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-18T16:14:19+08:00 ] 0.0.0.0 POST /setup/findInquiry
+[ info ] localhost:8020/setup/findInquiry [运行时间：0.457027s][吞吐率：2.19req/s] [内存消耗：2,965.02kb] [文件加载：43]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'setup',
+    2 => 'findInquiry',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------709823502243760405467189',
+  'content-length' => '165',
+  'x-original-url' => '/setup/findInquiry',
+  'postman-token' => '48835778-44f8-4ebc-be28-4d362a73c271',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Setup->findInquiry[ E:\wook\201804\judeng\application\home\controller\Setup.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.085005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT `online_inquiry`,`love_inquiry`,`graphic_speech`,`first_price`,`consultation_price`,`receipt` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_count` [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SELECT `count` FROM `jd_doctor_count` WHERE  (  day_date = 1526572800 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.056003s ]
+---------------------------------------------------------------
+[ 2018-05-18T16:14:33+08:00 ] 0.0.0.0 POST /setup/findInquiry
+[ info ] localhost:8020/setup/findInquiry [运行时间：0.424024s][吞吐率：2.36req/s] [内存消耗：3,045.56kb] [文件加载：46]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'setup',
+    2 => 'findInquiry',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------299793609537564878374890',
+  'content-length' => '165',
+  'x-original-url' => '/setup/findInquiry',
+  'postman-token' => '68d37f10-950f-4185-9d4e-5ee6a11ed240',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Setup->findInquiry[ E:\wook\201804\judeng\application\home\controller\Setup.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.077004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT `online_inquiry`,`love_inquiry`,`graphic_speech`,`first_price`,`consultation_price`,`receipt` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.051003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.051003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_count` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SELECT `count` FROM `jd_doctor_count` WHERE  (  day_date = 1526572800 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.052003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-18T16:28:25+08:00 ] 0.0.0.0 POST /notice/findNotice
+[ info ] localhost:8020/notice/findNotice [运行时间：0.328018s][吞吐率：3.05req/s] [内存消耗：2,615.11kb] [文件加载：44]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'notice',
+    2 => 'findNotice',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------181797489132869053469509',
+  'content-length' => '165',
+  'x-original-url' => '/notice/findNotice',
+  'postman-token' => '12b334f2-571d-4bf6-8fe1-5b9b8a90ac25',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'notice_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Notice->findNotice[ E:\wook\201804\judeng\application\home\controller\Notice.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.080005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_notice` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT `notice_id`,`doctor_id`,`notice_name`,`content`,`release_date` FROM `jd_notice` WHERE  (  notice_id = 2 ) LIMIT 1 [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_notice_attach` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_notice_attach` WHERE  (  notice_id = 2 ) [ RunTime:0.053003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-18T16:39:33+08:00 ] 0.0.0.0 POST /doctor/findData
+[ info ] localhost:8020/doctor/findData [运行时间：0.527030s][吞吐率：1.90req/s] [内存消耗：2,645.38kb] [文件加载：44]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'doctor',
+    2 => 'findData',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------656191498100722960050470',
+  'content-length' => '165',
+  'x-original-url' => '/doctor/findData',
+  'postman-token' => '55142fcf-5bb0-4c89-b9bf-b125e30f3974',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Doctor->findData[ E:\wook\201804\judeng\application\home\controller\Doctor.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.082004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.056004s ]
+[ sql ] [ SQL ] SELECT `member_id`,`member_name`,`face_photo`,`goodat_id`,`introduction` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_goodat` [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_goodat` WHERE  `goodat_id` IN (25,26,27)  AND (  is_show = 1 and level = 2 ) ORDER BY `sort`  DESC [ RunTime:0.056004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_notice` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT `notice_name`,`add_date` FROM `jd_notice` WHERE  (  doctor_id = 2 ) [ RunTime:0.054003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-18T16:43:55+08:00 ] 0.0.0.0 POST /doctor/findData
+[ info ] localhost:8020/doctor/findData [运行时间：0.462027s][吞吐率：2.16req/s] [内存消耗：2,647.28kb] [文件加载：44]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'doctor',
+    2 => 'findData',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------560435618731582191555714',
+  'content-length' => '165',
+  'x-original-url' => '/doctor/findData',
+  'postman-token' => 'd3490a6f-7799-4f80-931e-5d7eba65b2ec',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Doctor->findData[ E:\wook\201804\judeng\application\home\controller\Doctor.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.083005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SELECT `member_id`,`member_name`,`face_photo`,`goodat_id`,`introduction` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_goodat` [ RunTime:0.057004s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_goodat` WHERE  `goodat_id` IN (25,26,27)  AND (  is_show = 1 and level = 2 ) ORDER BY `sort`  DESC [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_notice` [ RunTime:0.059003s ]
+[ sql ] [ SQL ] SELECT `notice_id`,`notice_name`,`add_date` FROM `jd_notice` WHERE  (  doctor_id = 2 ) [ RunTime:0.058004s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-18T16:44:57+08:00 ] 0.0.0.0 POST /doctor/dataPreview
+[ info ] localhost:8020/doctor/dataPreview [运行时间：0.502029s][吞吐率：1.99req/s] [内存消耗：2,653.36kb] [文件加载：44]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'doctor',
+    2 => 'dataPreview',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------393442067136600520116195',
+  'content-length' => '165',
+  'x-original-url' => '/doctor/dataPreview',
+  'postman-token' => '366afb90-8ed0-4117-a2f5-e1a17d6381fb',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Doctor->dataPreview[ E:\wook\201804\judeng\application\home\controller\Doctor.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.082005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT `member_id`,`member_name`,`face_photo`,`goodat_id`,`introduction` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.055004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_goodat` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_goodat` WHERE  `goodat_id` IN (25,26,27)  AND (  is_show = 1 and level = 2 ) ORDER BY `sort`  DESC [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT `s`.`symptom`,`s`.`evaluate`,`s`.`evaluate_name`,`s`.`synopsis`,`s`.`add_date`,`m`.`member_name`,`m`.`portrait` FROM jd_service_evaluation s, jd_member m WHERE  (  s.doctor_id = 2 and s.`is_show` = 1 and s.`member_id` = m.`member_id` ) [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_notice` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT `notice_id`,`notice_name`,`add_date` FROM `jd_notice` WHERE  (  doctor_id = 2 ) [ RunTime:0.055003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-18T16:53:04+08:00 ] 0.0.0.0 POST /doctor/updateData
+[ info ] localhost:8020/doctor/updateData [运行时间：0.317018s][吞吐率：3.15req/s] [内存消耗：2,730.26kb] [文件加载：47]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'doctor',
+    2 => 'updateData',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------636308145175516885351966',
+  'content-length' => '380',
+  'x-original-url' => '/doctor/updateData',
+  'postman-token' => '303907ea-554e-4876-a9f0-c6302ecbe676',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'content' => '14',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Doctor->updateData[ E:\wook\201804\judeng\application\home\controller\Doctor.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.085005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.057003s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `release_date`=1526633584,`goodat_id`='14'  WHERE  `member_id` = 2 [ RunTime:0.060004s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-18T16:58:15+08:00 ] 0.0.0.0 POST /question/findQuestionList
+[ info ] localhost:8020/question/findQuestionList [运行时间：0.307018s][吞吐率：3.26req/s] [内存消耗：2,587.37kb] [文件加载：44]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'question',
+    2 => 'findQuestionList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/question/findQuestionList',
+  'postman-token' => '956f5177-4573-4487-a41f-caee4428f476',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Question->findQuestionList[ E:\wook\201804\judeng\application\home\controller\Question.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.085005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_question_type` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT t.`type_id`,t.`type_name`,q.`question_id`,q.`question_title` FROM `jd_question_type` `t`,`jd_question` `q` WHERE  (  t.`type_id` = q.`type_id` and q.`is_display` = 1 ) ORDER BY t.sort ASC, t.type_id ASC, q.sort  DESC [ RunTime:0.057004s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-18T17:01:05+08:00 ] 0.0.0.0 POST /setup/findInquiry
+[ info ] localhost:8020/setup/findInquiry [运行时间：0.451026s][吞吐率：2.22req/s] [内存消耗：3,045.56kb] [文件加载：46]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'setup',
+    2 => 'findInquiry',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------799317296479629517024432',
+  'content-length' => '165',
+  'x-original-url' => '/setup/findInquiry',
+  'postman-token' => 'fb5c43f5-00da-4afa-9ef7-ecce87596466',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Setup->findInquiry[ E:\wook\201804\judeng\application\home\controller\Setup.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.081005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.059003s ]
+[ sql ] [ SQL ] SELECT `online_inquiry`,`love_inquiry`,`graphic_speech`,`first_price`,`consultation_price`,`receipt` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_count` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT `count` FROM `jd_doctor_count` WHERE  (  day_date = 1526572800 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.055003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-18T17:03:47+08:00 ] 0.0.0.0 POST /setup/findInquiry
+[ info ] localhost:8020/setup/findInquiry [运行时间：0.429025s][吞吐率：2.33req/s] [内存消耗：3,045.59kb] [文件加载：46]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'setup',
+    2 => 'findInquiry',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------040096717680613802337567',
+  'content-length' => '165',
+  'x-original-url' => '/setup/findInquiry',
+  'postman-token' => 'e2534145-7f75-412f-b751-822cf4c5bafd',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Setup->findInquiry[ E:\wook\201804\judeng\application\home\controller\Setup.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.078004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT `online_inquiry`,`love_inquiry`,`graphic_speech`,`first_price`,`consultation_price`,`receipt` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_count` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SELECT `count` FROM `jd_doctor_count` WHERE  (  day_date = 1526572800 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.054003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-18T17:06:33+08:00 ] 0.0.0.0 POST /setup/findPrescription
+[ info ] localhost:8020/setup/findPrescription [运行时间：0.233013s][吞吐率：4.29req/s] [内存消耗：2,625.94kb] [文件加载：44]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'setup',
+    2 => 'findPrescription',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------268961904508851511732005',
+  'content-length' => '402',
+  'x-original-url' => '/setup/findPrescription',
+  'postman-token' => '7ced19a6-3478-4b7a-bfd8-1cfc1e9bf9d9',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'notice_name' => '王测试',
+  'content' => '也是简介',
+)
+[ info ] [ RUN ] app\home\controller\Setup->findPrescription[ E:\wook\201804\judeng\application\home\controller\Setup.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.085005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.057004s ]
+[ sql ] [ SQL ] SELECT `open_pharmacy`,`platform_default`,`inherit`,`concealment_number`,`questions_number` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.056003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-18T17:12:55+08:00 ] 0.0.0.0 POST /setup/updatePrescription
+[ info ] localhost:8020/setup/updatePrescription [运行时间：0.235013s][吞吐率：4.26req/s] [内存消耗：2,628.45kb] [文件加载：44]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'setup',
+    2 => 'updatePrescription',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------022933323316263240256905',
+  'content-length' => '735',
+  'x-original-url' => '/setup/updatePrescription',
+  'postman-token' => '3605a5f5-3048-44dc-a326-b942ea1059fe',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'open_pharmacy' => '1',
+  'platform_default' => '1',
+  'inherit' => '2',
+  'concealment_number' => '1',
+  'questions_number' => '1',
+)
+[ info ] [ RUN ] app\home\controller\Setup->updatePrescription[ E:\wook\201804\judeng\application\home\controller\Setup.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.085005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.058003s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `open_pharmacy`=1,`platform_default`=1,`inherit`=2,`concealment_number`=1,`questions_number`=1,`release_date`=1526634775  WHERE  (  member_id = 2 ) [ RunTime:0.058003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]

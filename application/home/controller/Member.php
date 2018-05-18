@@ -74,6 +74,10 @@ class Member extends Common
                     $info['token'] = $h->getToken();
                     $_SESSION['uinfo']=$info;
 
+                    $con = Model('Setting')->findAdmin();
+                    $info['version_number'] = $con['version_number'];
+                    $info['service_hot'] = $con['service_hot'];
+
                     ajaxReturn(array('code' =>1, 'info' => '登录成功','data'=>[$info]));
                 }else
                 {
@@ -174,6 +178,11 @@ class Member extends Common
                     $h=new \Easemob($options);
                     $info['token'] = $h->getToken();
                     $_SESSION['uinfo']=$info;
+
+                $con = Model('Setting')->findAdmin();
+                $info['version_number'] = $con['version_number'];
+                $info['service_hot'] = $con['service_hot'];
+
                     ajaxReturn(array('code' =>1, 'info' => '登录成功','data'=>[$info]));
 
             }else
