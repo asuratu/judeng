@@ -34,7 +34,7 @@ class Number extends Common
                 $where = ' and o.`pay_status` = 0';
             }
             $data['pageCount'] = ($data['page'] - 1) * $data['pageSize'];
-            $prescription = Db::field('o.`pay_status`, o.`order_id`, o.`order_sn`, o.`order_status`, o.`order_date`, op.`patient_mobile`, op.`patient_name`, op.`patient_sex`, op.`patient_age`, op.`dialectical`')
+            $prescription = Db::field('o.`pay_status`, o.`order_id`, o.`order_sn`, o.`order_status`, o.`patient_id`, o.`order_date`, op.`patient_mobile`, op.`patient_name`, op.`patient_sex`, op.`patient_age`, op.`dialectical`')
                 ->table('jd_order o, jd_order_prescription op')
                 ->where("o.`order_id` = op.`order_id` and o.order_type = 3 and o.doctor_id = {$data['doctor_id']} {$where}")
                 ->order('o.order_date', 'DESC')
@@ -49,39 +49,6 @@ class Number extends Common
             }
 
             ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>$order));
-
-        }
-    }
-
-    /**
-     * 提醒购药
-     */
-    public function medicine()
-    {
-        if($this->request->isPost()) {
-            $data=input('post.');
-
-            if($data['order_id']=='')
-            {
-                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
-            }
-
-            $member = db('order')
-                ->alias('o')
-                ->join('member m', 'o.`patient_id` = m.`member_id`', 'LEFT')
-                ->where("o.order_id = {$data['order_id']}")
-                ->field("m.`member_name`, m.`openid`, m.`mobile`")
-                ->find();
-            $member['member_name'] = $member['member_name'] ? $member['member_name'] : $member['mobile'];
-
-            $data['openid'] = $member['openid'];
-            $data['url'] = 'www.baidu.com';
-            $data['first'] = '您有一张待处理处方单，请及时查看。';
-            $data['member_name'] = $member['member_name'];
-            $data['prescription'] = '门诊处方';
-            $data['remark'] = '点击详情，跳转到该处方单页~';
-            Model('Weixin')->messageTemplate(6, $data);
-            ajaxReturn(array('code' =>1, 'info' => 'ok'));
 
         }
     }

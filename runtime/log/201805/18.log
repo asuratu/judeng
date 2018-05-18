@@ -2032,3 +2032,687 @@
 [ sql ] [ SQL ] SELECT `d`.*,`t`.`title_name`,`a`.`name`,`h`.`hospital_name` FROM `jd_doctor` `d` LEFT JOIN `jd_title` `t` ON `d`.`title_id`=`t`.`title_id` LEFT JOIN `jd_area` `a` ON `d`.`area_id`=`a`.`area_id` LEFT JOIN `jd_hospital` `h` ON `d`.`hospital_id`=`h`.`hospital_id` WHERE  `member_id` = 4 LIMIT 1 [ RunTime:0.062380s ]
 [ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `only_token` = '1525679145Omj*yI'  AND `is_status` = 0 LIMIT 1 [ RunTime:0.060843s ]
 >>>>>>> c157c5c20dd733f604fb3da6145ffa95e61682ab
+---------------------------------------------------------------
+[ 2018-05-18T17:55:01+08:00 ] 0.0.0.0 POST /number/addGroupPatient
+[ info ] localhost:8020/number/addGroupPatient [运行时间：0.229013s][吞吐率：4.37req/s] [内存消耗：2,670.80kb] [文件加载：44]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'addGroupPatient',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------144124095623263933640107',
+  'content-length' => '610',
+  'x-original-url' => '/number/addGroupPatient',
+  'postman-token' => 'a23633cc-c6a3-4131-8ba2-c58181173ac0',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'group_id' => '2',
+  'member_id' => '1',
+  'member_name' => 'www',
+  'group_name' => '分组',
+)
+[ info ] [ RUN ] app\home\controller\Number->addGroupPatient[ E:\wook\201804\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.079004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_group_patient` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_group_patient` WHERE  `doctor_id` = 2  AND `group_id` = 2  AND `member_id` = 1 LIMIT 1 [ RunTime:0.052003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-18T17:55:08+08:00 ] 0.0.0.0 POST /number/allGroupPatientList
+[ info ] localhost:8020/number/allGroupPatientList [运行时间：0.265015s][吞吐率：3.77req/s] [内存消耗：2,672.31kb] [文件加载：44]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allGroupPatientList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------937519301811175302059793',
+  'content-length' => '273',
+  'x-original-url' => '/number/allGroupPatientList',
+  'postman-token' => 'cc60d15f-9aaf-4a7f-a39b-3c88f819bad4',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'group_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Number->allGroupPatientList[ E:\wook\201804\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.075004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_group_patient` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SELECT s.`group_id`,s.`member_id`,m.`member_name`,m.`mobile`,m.`portrait`,m.`sex`,m.`age`,m.`is_type` FROM `jd_group_patient` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 2 and s.group_id = 2 and s.`member_id` = m.`member_id` ) ORDER BY `s`.`add_date`  ASC [ RunTime:0.050003s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_group_patient` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 2 and s.group_id = 2 and s.`member_id` = m.`member_id` ) LIMIT 1 [ RunTime:0.049003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-18T17:57:43+08:00 ] 0.0.0.0 POST /doctor/updatePatientGroup
+[ info ] localhost:8020/doctor/updatePatientGroup [运行时间：0.027002s][吞吐率：37.03req/s] [内存消耗：1,714.23kb] [文件加载：39]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'doctor',
+    2 => 'updatePatientGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------591808203644018736984696',
+  'content-length' => '384',
+  'x-original-url' => '/doctor/updatePatientGroup',
+  'postman-token' => '4acb34f9-407a-4006-b07e-d48f3d303513',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'group_name' => '14',
+  'group_id' => '2',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-18T17:58:01+08:00 ] 0.0.0.0 POST /number/updatePatientGroup
+[ info ] localhost:8020/number/updatePatientGroup [运行时间：0.256014s][吞吐率：3.91req/s] [内存消耗：2,872.48kb] [文件加载：49]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'updatePatientGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------215286340361581690320443',
+  'content-length' => '384',
+  'x-original-url' => '/number/updatePatientGroup',
+  'postman-token' => 'a7e0625d-0509-484f-be26-31740adb788c',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'group_name' => '14',
+  'group_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Number->updatePatientGroup[ E:\wook\201804\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.080004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_patient_group` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] UPDATE `jd_patient_group`  SET `doctor_id`=2,`group_name`='14',`group_name_eng`='14'  WHERE  `group_id` = 2 [ RunTime:0.055003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-18T17:58:07+08:00 ] 0.0.0.0 POST /number/updatePatientGroup
+[ info ] localhost:8020/number/updatePatientGroup [运行时间：0.266015s][吞吐率：3.76req/s] [内存消耗：2,872.42kb] [文件加载：49]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'updatePatientGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------746033211980735129566766',
+  'content-length' => '385',
+  'x-original-url' => '/number/updatePatientGroup',
+  'postman-token' => 'a591b650-78c0-4213-9351-28db7a1b0826',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'group_name' => '141',
+  'group_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Number->updatePatientGroup[ E:\wook\201804\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_patient_group` [ RunTime:0.058004s ]
+[ sql ] [ SQL ] UPDATE `jd_patient_group`  SET `doctor_id`=2,`group_name`='141',`group_name_eng`='141'  WHERE  `group_id` = 2 [ RunTime:0.066004s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-18T18:03:44+08:00 ] 0.0.0.0 POST /notice/noticeList
+[ info ] localhost:8020/notice/noticeList [运行时间：0.228013s][吞吐率：4.39req/s] [内存消耗：2,614.36kb] [文件加载：44]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'notice',
+    2 => 'noticeList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------780941862713139493250437',
+  'content-length' => '165',
+  'x-original-url' => '/notice/noticeList',
+  'postman-token' => '44186f13-07bd-4e94-8bb0-6a532f4b9e59',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Notice->noticeList[ E:\wook\201804\judeng\application\home\controller\Notice.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.081004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_notice` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT `notice_id`,`notice_name`,`add_date` FROM `jd_notice` WHERE  (  doctor_id = 2 ) ORDER BY `release_date`  DESC [ RunTime:0.053004s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-18T18:05:55+08:00 ] 0.0.0.0 POST /notice/noticeList
+[ info ] localhost:8020/notice/noticeList [运行时间：0.222013s][吞吐率：4.50req/s] [内存消耗：2,605.45kb] [文件加载：44]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'notice',
+    2 => 'noticeList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------286418620477307878395446',
+  'content-length' => '166',
+  'x-original-url' => '/notice/noticeList',
+  'postman-token' => '8db0d096-4ea5-48d2-8fd2-35ea4a41201b',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '10',
+)
+[ info ] [ RUN ] app\home\controller\Notice->noticeList[ E:\wook\201804\judeng\application\home\controller\Notice.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.079004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_notice` [ RunTime:0.054004s ]
+[ sql ] [ SQL ] SELECT `notice_id`,`notice_name`,`add_date` FROM `jd_notice` WHERE  (  doctor_id = 10 ) ORDER BY `release_date`  DESC [ RunTime:0.052003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-18T18:06:05+08:00 ] 0.0.0.0 POST /notice/noticeList
+[ info ] localhost:8020/notice/noticeList [运行时间：0.221012s][吞吐率：4.52req/s] [内存消耗：2,604.95kb] [文件加载：44]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'notice',
+    2 => 'noticeList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------336144777630416212417341',
+  'content-length' => '166',
+  'x-original-url' => '/notice/noticeList',
+  'postman-token' => '60bee3b2-b3b1-4d4e-bd15-711bcd453bba',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '10',
+)
+[ info ] [ RUN ] app\home\controller\Notice->noticeList[ E:\wook\201804\judeng\application\home\controller\Notice.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.080005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_notice` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT `notice_id`,`notice_name`,`add_date` FROM `jd_notice` WHERE  (  doctor_id = 10 ) ORDER BY `release_date`  DESC [ RunTime:0.052003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-18T18:06:16+08:00 ] 0.0.0.0 POST /notice/noticeList
+[ info ] localhost:8020/notice/noticeList [运行时间：0.222013s][吞吐率：4.50req/s] [内存消耗：2,613.75kb] [文件加载：44]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'notice',
+    2 => 'noticeList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------399897496459571864697432',
+  'content-length' => '165',
+  'x-original-url' => '/notice/noticeList',
+  'postman-token' => '42baf29b-3f07-41c1-87c4-3c961409fb22',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Notice->noticeList[ E:\wook\201804\judeng\application\home\controller\Notice.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.079004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_notice` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT `notice_id`,`notice_name`,`add_date` FROM `jd_notice` WHERE  (  doctor_id = 2 ) ORDER BY `release_date`  DESC [ RunTime:0.053003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-18T18:07:45+08:00 ] 0.0.0.0 POST /notice/noticeList
+[ info ] localhost:8020/notice/noticeList [运行时间：0.217012s][吞吐率：4.61req/s] [内存消耗：2,613.75kb] [文件加载：44]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'notice',
+    2 => 'noticeList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------882111249608261544786791',
+  'content-length' => '165',
+  'x-original-url' => '/notice/noticeList',
+  'postman-token' => '752394a6-4b85-49ef-983d-599413a4d065',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Notice->noticeList[ E:\wook\201804\judeng\application\home\controller\Notice.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.077005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_notice` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SELECT `notice_id`,`notice_name`,`add_date` FROM `jd_notice` WHERE  (  doctor_id = 2 ) ORDER BY `release_date`  DESC [ RunTime:0.052003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-18T18:12:35+08:00 ] 0.0.0.0 POST /notice/noticeList
+[ info ] localhost:8020/notice/noticeList [运行时间：0.234013s][吞吐率：4.27req/s] [内存消耗：2,613.75kb] [文件加载：44]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'notice',
+    2 => 'noticeList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------011277115434925185590391',
+  'content-length' => '165',
+  'x-original-url' => '/notice/noticeList',
+  'postman-token' => '1991b7a2-0da2-4fc9-b25d-c322ad130785',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Notice->noticeList[ E:\wook\201804\judeng\application\home\controller\Notice.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_notice` [ RunTime:0.057004s ]
+[ sql ] [ SQL ] SELECT `notice_id`,`notice_name`,`add_date` FROM `jd_notice` WHERE  (  doctor_id = 2 ) ORDER BY `release_date`  DESC [ RunTime:0.057003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-18T18:12:38+08:00 ] 0.0.0.0 POST /notice/noticeList
+[ info ] localhost:8020/notice/noticeList [运行时间：0.230013s][吞吐率：4.35req/s] [内存消耗：2,613.75kb] [文件加载：44]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'notice',
+    2 => 'noticeList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------697061385377898740655340',
+  'content-length' => '165',
+  'x-original-url' => '/notice/noticeList',
+  'postman-token' => '4cced85f-06f1-4f7a-a047-a45c4eb86800',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Notice->noticeList[ E:\wook\201804\judeng\application\home\controller\Notice.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_notice` [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SELECT `notice_id`,`notice_name`,`add_date` FROM `jd_notice` WHERE  (  doctor_id = 2 ) ORDER BY `release_date`  DESC [ RunTime:0.057004s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-18T18:14:09+08:00 ] 0.0.0.0 POST /remind/medicine
+[ info ] localhost:8020/remind/medicine [运行时间：0.022001s][吞吐率：45.45req/s] [内存消耗：1,626.13kb] [文件加载：37]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'remind',
+    2 => 'medicine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------926477864674697573471505',
+  'content-length' => '165',
+  'x-original-url' => '/remind/medicine',
+  'postman-token' => '16d9d18e-8c15-459f-9dc0-aed20bd4e9b3',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Remind->medicine[ E:\wook\201804\judeng\application\home\controller\Remind.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: order_id[E:\wook\201804\judeng\application\home\controller\Remind.php:17]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-18T18:15:10+08:00 ] 0.0.0.0 POST /remind/medicine
+[ info ] localhost:8020/remind/medicine [运行时间：1.553089s][吞吐率：0.64req/s] [内存消耗：3,140.88kb] [文件加载：49]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'remind',
+    2 => 'medicine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------488605355182348483124535',
+  'content-length' => '166',
+  'x-original-url' => '/remind/medicine',
+  'postman-token' => '9e54e002-72f7-43e0-a96e-e8515fe33de7',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'order_id' => '168',
+)
+[ info ] [ RUN ] app\home\controller\Remind->medicine[ E:\wook\201804\judeng\application\home\controller\Remind.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.058004s ]
+[ sql ] [ SQL ] SELECT m.`member_name`,m.`openid`,m.`mobile` FROM `jd_order` `o` LEFT JOIN `jd_member` `m` ON o.`patient_id`=m.`member_id` WHERE  (  o.order_id = 168 ) LIMIT 1 [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wx_user` LIMIT 1 [ RunTime:0.059004s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-18T18:41:30+08:00 ] 0.0.0.0 POST /number/allPatient
+[ info ] localhost:8020/number/allPatient [运行时间：0.387022s][吞吐率：2.58req/s] [内存消耗：2,682.82kb] [文件加载：44]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allPatient',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------964962112506636369303554',
+  'content-length' => '378',
+  'x-original-url' => '/number/allPatient',
+  'postman-token' => 'cb0ff9d8-b219-4734-b9d6-878dfe18e2e0',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'title' => '1',
+  'group_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Number->allPatient[ E:\wook\201804\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.082005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_patient_group` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_patient_group` WHERE  (  group_id = 2 ) LIMIT 1 [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.054004s ]
+[ sql ] [ SQL ] SELECT s.`member_id`,s.`inquisition_name`,s.`inquisition`,m.`member_name`,m.`mobile`,m.`portrait`,m.`sex`,m.`age`,m.`is_type` FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 2 and s.`member_id` = m.`member_id` and (m.`member_name` like '%1%' or m.`mobile` like '%1%' or s.`grouping` like '%1%') ) ORDER BY `s`.`inquisition`  DESC [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 2 and s.`member_id` = m.`member_id` and (m.`member_name` like '%1%' or m.`mobile` like '%1%' or s.`grouping` like '%1%') ) LIMIT 1 [ RunTime:0.053003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-18T18:41:51+08:00 ] 0.0.0.0 POST /number/allGroupPatientList
+[ info ] localhost:8020/number/allGroupPatientList [运行时间：0.275016s][吞吐率：3.64req/s] [内存消耗：2,665.48kb] [文件加载：44]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allGroupPatientList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------879046020569786046993898',
+  'content-length' => '273',
+  'x-original-url' => '/number/allGroupPatientList',
+  'postman-token' => '2618f916-3c91-413e-b2e3-a451b2b266fb',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'group_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Number->allGroupPatientList[ E:\wook\201804\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.079004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_group_patient` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT s.`group_id`,s.`member_id`,m.`member_name`,m.`mobile`,m.`portrait`,m.`sex`,m.`age`,m.`is_type` FROM `jd_group_patient` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 2 and s.group_id = 2 and s.`member_id` = m.`member_id` ) ORDER BY `s`.`add_date`  ASC [ RunTime:0.054004s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_group_patient` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 2 and s.group_id = 2 and s.`member_id` = m.`member_id` ) LIMIT 1 [ RunTime:0.053003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-18T18:45:30+08:00 ] 0.0.0.0 POST /number/prescriptions
+[ info ] localhost:8020/number/prescriptions [运行时间：0.221012s][吞吐率：4.52req/s] [内存消耗：2,712.15kb] [文件加载：44]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'prescriptions',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------171950477179645767561863',
+  'content-length' => '269',
+  'x-original-url' => '/number/prescriptions',
+  'postman-token' => 'd9953466-a1c2-4f16-9646-8a3b7dd30963',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'type' => '1',
+)
+[ info ] [ RUN ] app\home\controller\Number->prescriptions[ E:\wook\201804\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.077005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT o.`pay_status`,o.`order_id`,o.`order_sn`,o.`order_status`,o.`patient_id`,o.`order_date`,op.`patient_mobile`,op.`patient_name`,op.`patient_sex`,op.`patient_age`,op.`dialectical` FROM `jd_order` `o`,`jd_order_prescription` `op` WHERE  (  o.`order_id` = op.`order_id` and o.order_type = 3 and o.doctor_id = 2  and o.`pay_status` = 0 ) ORDER BY `o`.`order_date`  DESC [ RunTime:0.053003s ]
+[ error ] [8]未定义数组下标: 8[E:\wook\201804\judeng\application\home\controller\Number.php:47]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-18T18:49:15+08:00 ] 0.0.0.0 POST /number/prescriptions
+[ info ] localhost:8020/number/prescriptions [运行时间：0.237014s][吞吐率：4.22req/s] [内存消耗：2,711.48kb] [文件加载：44]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'prescriptions',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------020541781899399755321761',
+  'content-length' => '269',
+  'x-original-url' => '/number/prescriptions',
+  'postman-token' => '0c8b6405-54c3-44e8-b7ab-15da464e8d86',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'type' => '1',
+)
+[ info ] [ RUN ] app\home\controller\Number->prescriptions[ E:\wook\201804\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.058004s ]
+[ sql ] [ SQL ] SELECT o.`pay_status`,o.`order_id`,o.`order_sn`,o.`order_status`,o.`patient_id`,o.`order_date`,op.`patient_mobile`,op.`patient_name`,op.`patient_sex`,op.`patient_age`,op.`dialectical` FROM `jd_order` `o`,`jd_order_prescription` `op` WHERE  (  o.`order_id` = op.`order_id` and o.order_type = 3 and o.doctor_id = 2  and o.`pay_status` = 0 ) ORDER BY `o`.`order_date`  DESC [ RunTime:0.058003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
