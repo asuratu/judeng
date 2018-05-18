@@ -1,0 +1,32 @@
+---------------------------------------------------------------
+[ 2018-05-18T07:32:06+08:00 ] 0.0.0.0 POST /inherit/upPic
+[ info ] localhost:7037/inherit/upPic [运行时间：0.429483s][吞吐率：2.33req/s] [内存消耗：3,304.71kb] [文件加载：53]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'upPic',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryjlCb1hZ3gCB5kixP',
+  'content-length' => '148304',
+  'x-original-url' => '/inherit/upPic',
+  'postman-token' => '50273af2-46a5-9622-9597-69c6df540e85',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Inherit->upPic[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ LOG ] INIT File

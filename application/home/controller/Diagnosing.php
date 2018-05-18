@@ -171,6 +171,9 @@ class Diagnosing extends Common
                 if ($data['member_id'] == '' || $data['hospital_repart_id'] == '' || $data['start_time'] == '' || $data['end_time'] == '') {
                     ajaxReturn(array('code' => 0, 'info' => '参数不完整', 'data' => []));
                 }
+                $data['start_time'] = strtotime($data['start_time']);
+                $data['end_time'] = strtotime($data['end_time']);
+
                 //参数检查
                 if ($data['start_time'] >= $data['end_time']) {
                     ajaxReturn(array('code' => 0, 'info' => '结束时间应大于开始时间!', 'data' => []));

@@ -331,6 +331,54 @@ class Inherit extends Common
      */
     public function testPic() {
         //保存图片数据流
+        $_fileExt = strrchr(strtolower($_FILES['file']['name']), '.');
+        $_tempFileName = date('Ymd,h,i,s') . randCode(6, 1) . $_fileExt;
+
+        $result = Model('User')->aliSaveFile(json_encode($_FILES['file']), 'uploads/code/', $_tempFileName, 'true');
+    }
+
+    public function saveUrlImg($img, $saveName, $isBase64 = false, $width = 0, $height = 0) {
+
+        $_path = ROOT_PATH . 'uploads/pics/l/' . $saveName;
+        if ($isBase64 == true) {
+
+            $oss_sdk_service = new \Vendors\Ali\ALIOSS();
+
+            // $response2 = $oss_sdk_service->upload_file_by_content(ALI_BUCKET,$saveName , array('content' => base64_decode($img), 'length' => '60000'));
+            $this->aliSaveFile(base64_decode($img), 'pics/l/', $saveName, true);
+
+            return;
+        } else {
+            // TODO 这里上传 微信 qq 用户的URL头像,需要裁剪!!
+            $this->aliSaveFile($img, 'pics/l/', $saveName, false, true);
+            return;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public function testPic1() {
+        //保存图片数据流
         foreach ($_FILES as $key => $val) {
             $file = request()->file($key);
             $path = OSS_PATH . 'uploads/paper/';
@@ -342,19 +390,20 @@ class Inherit extends Common
         var_dump($result);die;
     }
 
-
     public function upPic(){
         //oss上传
-        $bucketName = C('OSS_TEST_BUCKET');
+        $bucketName = config('OSS_TEST_BUCKET');
         require_once(ROOT_PATH . 'extend/OSS/OssClient.php');
         $ossClient = new \OSS\OssClient(config('OSS_ACCESS_ID'), config('OSS_ACCESS_KEY'), config('OSS_ENDPOINT'), false);
         $web=config('OSS_WEB_SITE');
         //图片
         $fFiles=$_FILES['pic_1'];
-        $rs=ossUpPic($fFiles,'s',$ossClient,$bucketName,$web,0);
+        $rs=ossUpPic($fFiles,'uploads',$ossClient,$bucketName,$web,0);
+
         if($rs['code']==1){
             //图片
             $img = $rs['msg'];
+            return $img;
             //如返回里面有缩略图：
             $thumb=$rs['thumb'];
         }else{
@@ -363,7 +412,59 @@ class Inherit extends Common
         }
     }
 
+    /**
+     *   阿里云OSS 上传文件
+     * @param type $fileName  待上传文件名 [或文件 base64, 或url]
+     * @param type $savePath  => pics/l , pics/s ,
+     * @param type $saveName  保存的文件名
+     * @param type $filePath  待上传文件所在目录
+     * @return type
+     */
+    public function aliSaveFile() {
+        /**
+         * 通过http body上传文件,适用于直接写入内容的上传，比较小的文件
+         * 调用方法如下：
+         * $upload_file_by_content = $oss_sdk_service->upload_file_by_content($bucket,$object,$upload_file_options);
+         * 其中的$bucket,$object以及$upload_file_options为必选参数，$upload_file_options必须为数组，且key必须为规定的值，否则会上传失败,
+         * $object是文件名称，如果上传的文件不是直接位于bucket下，而是位于某一子目录下，则$object = 'dir_name/dir_name/file_name'
+         * 其中的content 为文件的内容，$length为文件的大小
+         * $upload_file_options = array(
+         *    'content' => $content,
+         *    'length' => $length,
+         * );
+         */
+        /**
+         * 加载sdk包以及错误代码包
+         */
+        require_once(ROOT_PATH . 'extend/Ali/sdk.class.php');
+//实例化OSS Service
+        $oss_sdk_service = new \ALIOSS();
 
+//设置是否打开curl调试模式,该模式主要是为了方便调试使用，可以设置TRUE|FALSE
+        $oss_sdk_service->set_debug_mode(FALSE);
+        $bucket = 'xiaojd1';
+        $_fileExt = strrchr(strtolower($_FILES['file']['name']), '.');
+//        $object = date('Ymd,h,i,s') . randCode(6, 1) . $_fileExt;
+//        $content = '';
+//
+//        $upload_file_options = array(
+//            'content' => $_FILES['file'],
+//            'length' => strlen($content),
+//        );
+        $object = 'oss-file-name-'.time().'.txt';
+        $content = '';
+        for($i = 0;$i<= 100;$i++){
+            $content .= $i."\n";
+        }
+        $upload_file_options = array(
+            'content' => $content,
+            'length' => strlen($content),
+        );
+
+        $upload_file_by_content = $oss_sdk_service->upload_file_by_content($bucket,$object,$upload_file_options);
+        print_r($upload_file_by_content);die();
+
+    }
 
 
 

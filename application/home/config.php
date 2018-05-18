@@ -29,10 +29,10 @@ return [
     'maxDepartNum'=>6,
 
     //oss配置
-    "OSS_ACCESS_ID" => '',
-    "OSS_ACCESS_KEY"=> '',
+    "OSS_ACCESS_ID" => 'LTAIKPbNauq8fLsY',
+    "OSS_ACCESS_KEY"=> 'J6AUfej2SGrPwmvtHl3tpkyFQLOwdR',
     "OSS_ENDPOINT"  => 'oss-cn-shanghai.aliyuncs.com',
-    "OSS_TEST_BUCKET" => '',
+    "OSS_TEST_BUCKET" => 'xiaojd1',
     "OSS_WEB_SITE" =>'http://xiaojd1.oss-cn-shanghai.aliyuncs.com',    //上面4个就不用介绍了，这个OSS_WEB_SITE是oss的bucket创建后的外网访问地址，如需二级域名，可以指向二级域名，具体可以参考阿里云控制台里面的oss
 
     //oss文件上传配置

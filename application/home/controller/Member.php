@@ -490,6 +490,7 @@ class Member extends Common
                 ->join(['jd_hospital'=>'h'], 'd.hospital_id = h.hospital_id' , 'left')
                 ->field("d.*, t.title_name, a.name, h.hospital_name")
                 ->find();
+            $uinfo['birthday'] = date('Y-m-d', $uinfo['birthday']);
             unset($uinfo['password']);
             unset($uinfo['guid']);
             unset($uinfo['reg_date']);

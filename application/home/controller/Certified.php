@@ -34,7 +34,7 @@ class Certified extends Common
             $info['face_photo'] = config('url').$detail['face_photo'];
             $info['true_name'] = $detail['true_name'];
             $info['sex'] = $detail['sex'];
-            $info['birthday'] = $detail['birthday'];
+            $info['birthday'] = date('Y-m-d', $detail['birthday']);
             $info['idcode'] = $detail['idcode'];
             $info['hospital_id'] = $detail['hospital_id'];
             $info['title_id'] = $detail['title_id'];
@@ -95,7 +95,7 @@ class Certified extends Common
                 unset($upPaperInfo['face_photo']);
                 $upInfo['true_name'] = $data['true_name'];
                 $upInfo['sex'] = $data['sex'];
-                $upInfo['birthday'] = $data['birthday'];
+                $upInfo['birthday'] = strtotime($data['birthday']);
                 $upInfo['idcode'] = $data['idcode'];
                 $upInfo['hospital_id'] = $data['hospital_id'];//单选一个医院
                 $upInfo['title_id'] = $data['title_id'];//id字符串

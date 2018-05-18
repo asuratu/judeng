@@ -29,7 +29,12 @@ defined('TEMP_PATH') or define('TEMP_PATH', RUNTIME_PATH . 'temp' . DS);
 defined('CONF_PATH') or define('CONF_PATH', APP_PATH); // 配置文件目录
 defined('CONF_EXT') or define('CONF_EXT', EXT); // 配置文件后缀
 defined('ENV_PREFIX') or define('ENV_PREFIX', 'PHP_'); // 环境变量的配置前缀
+//OSS参数
 defined('OSS_PATH') or define('OSS_PATH', 'http://xiaojd1.oss-cn-shanghai.aliyuncs.com'); // 阿里云OSS外网路径
+defined('ALI_BUCKET') or define('ALI_BUCKET', 'xiaojd1');
+defined('OSS_ACCESS_ID') or define('OSS_ACCESS_ID', 'LTAIKPbNauq8fLsY');
+defined('OSS_ACCESS_KEY') or define('OSS_ACCESS_KEY', 'J6AUfej2SGrPwmvtHl3tpkyFQLOwdR');
+defined('OSS_ENDPOINT') or define('OSS_ACCESS_KEY', 'oss-cn-shanghai.aliyuncs.com');
 
 // 环境常量
 define('IS_CLI', PHP_SAPI == 'cli' ? true : false);

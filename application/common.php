@@ -301,41 +301,6 @@ function outputToText($str) {
 }
 
 
-/**
- *   阿里云OSS 上传文件
- * @param type $fileName  待上传文件名 [或文件 base64, 或url]
- * @param type $savePath  => pics/l , pics/s ,
- * @param type $saveName  保存的文件名
- * @param type $filePath  待上传文件所在目录
- * @return type
- */
-function aliSaveFile($fileName, $savePath, $saveName = '', $isContentSave = false, $isUrlSave = false, $filePath = TMP_PATH) {
-    if ($saveName == '')
-        $saveName = $fileName;
-    require_once(ROOT_PATH . 'extend/Ali/qrlib.php');
-    $oss_sdk_service = new \extend\Ali\ALIOSS();
-
-    $object = $savePath . $saveName; // 保存的路径和文件名
-
-    if ($isContentSave || $isUrlSave) {  // 通过内容上传
-        $upload_file_options = array(
-            'content' => $isUrlSave ? file_get_contents($fileName) : $fileName,
-            'length' => strlen($fileName),
-            \Vendors\Ali\ALIOSS::OSS_HEADERS => array(
-                'Expires' => '2015-01-01 08:00:00',
-            ),
-        );
-        $response = $oss_sdk_service->upload_file_by_content(ALI_BUCKET, $object, $upload_file_options);
-    } else {  // 通过本地路径上传
-        $file_path = $filePath . $fileName;  // 本地的文件路径名称
-//        $object = 'test1';
-//        $file_path = 'http://su.bdimg.com/static/superplus/img/logo_white_ee663702.png';  // url 无法上传??
-        $response = $oss_sdk_service->upload_file_by_file(ALI_BUCKET, $object, $file_path);
-    }
-    return $response;
-}
-
-
 // 返回json
 function backJson($code,$info){
     $arr['status']=$code;
@@ -359,13 +324,13 @@ function ossUpPic($fFiles,$n,$ossClient,$bucketName,$web,$isThumb=0){
         'code'=>0,
         'msg'=>'',
     );
-    if(!in_array($fType, C('oss_exts'))){
+    if(!in_array($fType, config('oss_exts'))){
         $back['msg']='文件格式不正确';
         return $back;
         exit;
     }
     $fSize=$fFiles['size'];
-    if($fSize>C('oss_maxSize')){
+    if($fSize>config('oss_maxSize')){
         $back['msg']='文件超过了1M';
         return $back;
         exit;
@@ -377,16 +342,15 @@ function ossUpPic($fFiles,$n,$ossClient,$bucketName,$web,$isThumb=0){
     $fup_n=$fFiles['tmp_name'];
     $file_n=time().'_'.rand(100,999);
     $object = $n."/".$file_n.$ext;//目标文件名
-
-
     if (is_null($ossClient)) exit(1);
+//    var_dump(222);die;
     $ossClient->uploadFile($bucketName, $object, $fup_n);
     if($isThumb==1){
         // 图片缩放，参考https://help.aliyun.com/document_detail/44688.html?spm=5176.doc32174.6.481.RScf0S
-        $back['thumb']= $web.$object."?x-oss-process=image/resize,h_300,w_300";
+        $back['thumb']= $web.'/'.$object."?x-oss-process=image/resize,h_300,w_300";
     }
     $back['code']=1;
-    $back['msg']=$web.$object;
+    $back['msg']=$web.'/'.$object;
     return $back;
     exit;
 }
