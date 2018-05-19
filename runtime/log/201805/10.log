@@ -1977,3 +1977,99 @@
 [ sql ] [ DB ] CONNECT:[ UseTime:0.097980s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
 [ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.072566s ]
 [ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions` FROM `jd_drug_state` WHERE  `is_display` = 1 ORDER BY `sort` DESC [ RunTime:0.068379s ]
+---------------------------------------------------------------
+[ 2018-05-10T14:59:17+08:00 ] 0.0.0.0 POST /number/addGroupPatient
+[ info ] localhost:8020/number/addGroupPatient [运行时间：1.228875s][吞吐率：0.81req/s] [内存消耗：2,783.45kb] [文件加载：47]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'addGroupPatient',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------165581398625085240873405',
+  'content-length' => '610',
+  'x-original-url' => '/number/addGroupPatient',
+  'postman-token' => 'a9ec7694-655f-4a01-91e1-9a3542100e7d',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'group_id' => '2',
+  'member_id' => '1',
+  'member_name' => 'www',
+  'group_name' => '分组',
+)
+[ info ] [ RUN ] app\home\controller\Number->addGroupPatient[ D:\works\201805\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.238309s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_group_patient` [ RunTime:0.106550s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_group_patient` WHERE  `doctor_id` = 2  AND `group_id` = 2  AND `member_id` = 1 LIMIT 1 [ RunTime:0.105918s ]
+[ sql ] [ SQL ] INSERT INTO `jd_group_patient` (`doctor_id` , `group_id` , `member_id` , `add_date`) VALUES (2 , 2 , 1 , 1525935557) [ RunTime:0.099114s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.100693s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor_member` WHERE  (  doctor_id = 2 and member_id = 1 ) LIMIT 1 [ RunTime:0.120980s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_member`  SET `doctor_id`=2,`member_id`=1,`grouping`='1,2,3,分组1,分组'  WHERE  `dcmember_id` = 1 [ RunTime:0.099739s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_patient_group` [ RunTime:0.092898s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_patient_group` WHERE  (  group_id = 2 ) LIMIT 1 [ RunTime:0.102958s ]
+[ sql ] [ SQL ] UPDATE `jd_patient_group`  SET `group_member_id`='11,1',`group_member_name`='王硕,www'  WHERE  `group_id` = 2 [ RunTime:0.099869s ]
+[ error ] [8]未定义数组索引: only_token[D:\works\201805\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-10T15:00:02+08:00 ] 0.0.0.0 POST /number/addGroupPatient
+[ info ] localhost:8020/number/addGroupPatient [运行时间：1.674750s][吞吐率：0.60req/s] [内存消耗：2,783.66kb] [文件加载：47]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'addGroupPatient',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------061214770859384893631084',
+  'content-length' => '610',
+  'x-original-url' => '/number/addGroupPatient',
+  'postman-token' => '5b3fe3df-a1dc-4958-8a85-809eae13be14',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'group_id' => '2',
+  'member_id' => '1',
+  'member_name' => 'www',
+  'group_name' => '分组',
+)
+[ info ] [ RUN ] app\home\controller\Number->addGroupPatient[ D:\works\201805\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.261156s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_group_patient` [ RunTime:0.166096s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_group_patient` WHERE  `doctor_id` = 2  AND `group_id` = 2  AND `member_id` = 1 LIMIT 1 [ RunTime:0.153517s ]
+[ sql ] [ SQL ] INSERT INTO `jd_group_patient` (`doctor_id` , `group_id` , `member_id` , `add_date`) VALUES (2 , 2 , 1 , 1525935601) [ RunTime:0.158530s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.161391s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor_member` WHERE  (  doctor_id = 2 and member_id = 1 ) LIMIT 1 [ RunTime:0.158914s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_member`  SET `doctor_id`=2,`member_id`=1,`grouping`='1,2,3,分组1,分组'  WHERE  `dcmember_id` = 1 [ RunTime:0.153327s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_patient_group` [ RunTime:0.170618s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_patient_group` WHERE  (  group_id = 2 ) LIMIT 1 [ RunTime:0.149936s ]
+[ sql ] [ SQL ] UPDATE `jd_patient_group`  SET `group_member_id`='11,1',`group_member_name`='王硕,www'  WHERE  `group_id` = 2 [ RunTime:0.102813s ]
+[ error ] [8]未定义数组索引: only_token[D:\works\201805\judeng\application\common.php:82]
