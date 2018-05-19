@@ -1,8 +1,6 @@
 <?php
 namespace app\home\controller;
 use app\tools\Html;
-use think\Paginator;
-use think\Request;
 use app\tools\Spell;
 use think\Db;
 class Number extends Common
@@ -36,7 +34,7 @@ class Number extends Common
                 $where = ' and o.`pay_status` = 0';
             }
             $data['pageCount'] = ($data['page'] - 1) * $data['pageSize'];
-            $prescription = Db::field('o.`pay_status`, o.`order_id`, o.`order_sn`, o.`order_status`, o.`order_date`, op.`patient_mobile`, op.`patient_name`, op.`patient_sex`, op.`patient_age`, op.`dialectical`')
+            $prescription = Db::field('o.`pay_status`, o.`order_id`, o.`order_sn`, o.`order_status`, o.`patient_id`, o.`order_date`, op.`patient_mobile`, op.`patient_name`, op.`patient_sex`, op.`patient_age`, op.`dialectical`')
                 ->table('jd_order o, jd_order_prescription op')
                 ->where("o.`order_id` = op.`order_id` and o.order_type = 3 and o.doctor_id = {$data['doctor_id']} {$where}")
                 ->order('o.order_date', 'DESC')
@@ -55,16 +53,10 @@ class Number extends Common
         }
     }
 
-    /**
-     * 提醒购药
-     */
-    public function medicine()
-    {
-        if($this->request->isPost()) {
-            $data=input('post.');
-            ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>[]));
-
-        }
+    // 测试内部生成医生患者名单接口
+    public function doctorMember() {
+        // 第一个参数用户ID， 第二个参数医生ID， 第三个是具体服务类型名称
+        Model('Number')->doctorMember(2, 2, '初诊');
     }
 
     /**
@@ -136,7 +128,7 @@ class Number extends Common
             }
             $group_member = explode(',', $group['group_member_id']);
 
-            $comment = Db::field('s.`member_id`, s.`inquisition_name`, s.`inquisition`, m.`member_name`, m.`mobile`, m.`portrait`, m.`sex`, m.`birthday`, m.`is_type`')
+            $comment = Db::field('s.`member_id`, s.`inquisition_name`, s.`inquisition`, m.`member_name`, m.`mobile`, m.`portrait`, m.`sex`, m.`age`, m.`is_type`')
                 ->table('jd_doctor_member s, jd_member m')
                 ->where("s.doctor_id = {$data['doctor_id']} and s.`member_id` = m.`member_id` and (m.`member_name` like '%{$data['title']}%' or m.`mobile` like '%{$data['title']}%' or s.`grouping` like '%{$data['title']}%')")
                 ->order('s.inquisition', 'DESC')
@@ -150,8 +142,6 @@ class Number extends Common
                 $order[$key]['mobile'] = isset($val['mobile']) ? $val['mobile'] : '未填写手机号码';
                 $order[$key]['inquisition'] = date('Y-m-d H:i', $val['inquisition']);
 
-                $age = date('Y', time()) - date('Y', strtotime($val['birthday']));
-                $order[$key]['birthday'] = $age;
                 $order[$key]['group_type'] = (string)(intval(in_array($val['member_id'], $group_member)));
             }
             $total = Db::table('jd_doctor_member s, jd_member m')
@@ -287,7 +277,7 @@ class Number extends Common
                 $data['pageSize'] = 10;
             }
             $data['pageCount'] = ($data['page'] - 1) * $data['pageSize'];
-            $comment = Db::field('s.`group_id`, s.`member_id`, m.`member_name`, m.`mobile`, m.`portrait`, m.`sex`, m.`birthday`, m.`is_type`')
+            $comment = Db::field('s.`group_id`, s.`member_id`, m.`member_name`, m.`mobile`, m.`portrait`, m.`sex`, m.`age`, m.`is_type`')
                 ->table('jd_group_patient s, jd_member m')
                 ->where("s.doctor_id = {$data['doctor_id']} and s.group_id = {$data['group_id']} and s.`member_id` = m.`member_id`")
                 ->order('s.add_date', 'ASC')
@@ -299,9 +289,6 @@ class Number extends Common
                 $order[$key]['is_type'] = $this->view->setting['aryMemberType'][$val['is_type']];
                 $order[$key]['portrait'] = $this->view->setting['base_host'] . $val['portrait'];
                 $order[$key]['mobile'] = isset($val['mobile']) ? $val['mobile'] : '未填写手机号码';
-
-                $age = date('Y', time()) - date('Y', strtotime($val['birthday']));
-                $order[$key]['birthday'] = $age;
             }
             $total = Db::table('jd_group_patient s, jd_member m')
                 ->where("s.doctor_id = {$data['doctor_id']} and s.group_id = {$data['group_id']} and s.`member_id` = m.`member_id`")

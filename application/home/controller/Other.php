@@ -63,7 +63,10 @@ class Other extends Common
 
             //获取医院数组
             $map['is_display'] = 1;
-            $list=db('hospital')->where($map)->field("`hospital_id`,`hospital_name`")->order("`sort` DESC")->select();
+            if ($data['area_id']) {
+                $map['area_id'] = $data['area_id'];
+            }
+            $list=db('hospital')->where($map)->field("`hospital_id`,`hospital_name`, area_id")->order("`sort` DESC")->select();
             foreach ($list as $key => $val) {
                 if ($val['hospital_id'] == $hospital) {
                     $list[$key]['selected'] = 1;
@@ -76,10 +79,10 @@ class Other extends Common
     }
 
     /**
-     * @Title: getbankList
+     * @Title: getBankList
      * @Description: TODO 获取银行列表
      */
-    public function getbankList() {
+    public function getBankList() {
         if($this->request->isPost())
         {
             $data=input('post.');
@@ -87,11 +90,6 @@ class Other extends Common
             if($res['code']==0)
             {
                 ajaxReturn($res);
-            }
-
-            if($data['bank_id']=='')
-            {
-                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
 
             //获取银行数组
@@ -105,7 +103,6 @@ class Other extends Common
                     $list[$key]['selected'] = 0;
                 }
             }
-
             ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>$list));
         }
     }
@@ -148,6 +145,7 @@ class Other extends Common
             ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>$list));
         }
     }
+
 
     /**
      * @Title: getGoodAtList

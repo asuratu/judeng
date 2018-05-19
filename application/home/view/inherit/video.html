@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta name="keywords" />
+    <meta name="description" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <link type="text/css" href="/public/home/css/base.css" rel="stylesheet" />
+    <script type="text/javascript" src="/public/home/js/jquery.min.js"></script>
+</head>
+<body>
+<div class="page-tit">传承视频</div>
+<div class="video-box">
+    <video src="{$info.video_url}" controls poster="{$info.video_cover}"></video>
+</div>
+<div class="editor video-detail">
+    <div class="wrapper">
+        <h3>{$info.title}</h3>
+        <h4>{$info.release_date}</h4>
+        {$info.substance}
+    </div>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="/public/home/js/common.js"></script>

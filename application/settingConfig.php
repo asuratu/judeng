@@ -4,8 +4,8 @@ return array(
     'aryDoctorStar' => array('一星', '二星', '三星', '四星', '五星'),
     'aryOrderPayStatus' => array('未付款', '付款中', '已付款', '待退款', '已退款'),
     'aryOrderPayType' => array('未选择', '微信', '支付宝'),
-    'base_host' => 'http://www.only1class.com',
-    'ose_host' => 'http://www.only1class.com',
+    'base_host' => 'http://39.105.19.169:88',
+    'ose_host' => 'http://39.105.19.169:88',
     'aryOrderType' => array('问诊', '复诊', '诊后咨询'),
     'aryOrderStatus' => array(
         '-1' => '已取消',
@@ -16,10 +16,11 @@ return array(
         '4' => '已完成',
         '5' => '待退货',
         '6' => '已退货',
+        '7' => '已过期',
+        '8' => '待审核',
     ),
     'aryDisplay' => array('否', '是'),
     'arySex' => array('男', '女'),
     'aryServiceEvaluation' => array('很满意', '满意', '还可以'),
-    'aryQuestionType' => array('常见问题', '邀请医生', '关于小橘灯'),
     'aryMemberType' => array('公众号患者', '手机号患者'),
 );

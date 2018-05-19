@@ -74,6 +74,10 @@ class Member extends Common
                     $info['token'] = $h->getToken();
                     $_SESSION['uinfo']=$info;
 
+                    $con = Model('Setting')->findAdmin();
+                    $info['version_number'] = $con['version_number'];
+                    $info['service_hot'] = $con['service_hot'];
+
                     ajaxReturn(array('code' =>1, 'info' => '登录成功','data'=>[$info]));
                 }else
                 {
@@ -87,6 +91,10 @@ class Member extends Common
         }
     }
 
+    /**
+     * @Title: doSmsLogin
+     * @Description: TODO 短信登录
+     */
     public function doSmsLogin()
     {
         if($this->request->isPost()) {
@@ -170,7 +178,153 @@ class Member extends Common
                     $h=new \Easemob($options);
                     $info['token'] = $h->getToken();
                     $_SESSION['uinfo']=$info;
+
+                $con = Model('Setting')->findAdmin();
+                $info['version_number'] = $con['version_number'];
+                $info['service_hot'] = $con['service_hot'];
+
                     ajaxReturn(array('code' =>1, 'info' => '登录成功','data'=>[$info]));
+
+            }else
+            {
+                ajaxReturn(array('code'=>0,'info'=>'手机号码不存在！','data'=>[]));
+            }
+
+        }
+    }
+
+    /**
+     * @Title: forgetPsd
+     * @Description: TODO 忘记密码
+     */
+    public function forgetPsd()
+    {
+        if($this->request->isPost()) {
+            session_start();
+            $ticket=session_id();
+            $data=input('post.');
+            if($data['mobile']==''||$data['smscode']==''|| $data['password']=='' || $data['newPassword']=='')
+            {
+               ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+            }
+            if(!preg_match("/^1[3|4|5|7|8|][0-9]{1}[0-9]{8}$/",$data['mobile']))
+            {
+                ajaxReturn(array('code' =>0, 'info' => '手机号码格式不正确！','data'=>[]));
+            }
+            if($data['password'] != $data['newPassword'])
+            {
+                ajaxReturn(array('code' =>0, 'info' => '两次输入的密码不一致！','data'=>[]));
+            }
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
+
+            //验证短信
+            $mobile=$data['mobile'];
+            session_id(md5($mobile));
+            session_start();
+            $token = $_SESSION['tokencode'];
+
+            if(empty($token))
+            {
+                ajaxReturn(array('code'=>0,'info'=>'请先获取短信验证码！','data'=>[]));
+            }
+            if($token['code']!=$data['smscode'])
+            {
+                ajaxReturn(array('code'=>0, 'info'=>'短信验证码不正确！','data'=>[]));
+            }
+            if (!empty($token)&&$token['expired_at']<time() )
+            {
+                ajaxReturn(array('code'=>0, 'info'=>'短信验证码超时！','data'=>[]));
+            }
+
+
+            $map['mobile']=$data['mobile'];
+            $info=db('doctor')->where($map)->field("member_id,member_sn,member_name,mobile,password,guid, true_name, is_clinic, is_certified, login_state, device_tokens, is_status")->find();
+            if(!empty($info))
+            {
+                //是否被冻结
+                if ($info['is_status'] == 1) {
+                    ajaxReturn(array('code'=>0,'info'=>'该账号被冻结！','data'=>[]));
+                }
+                    $info['ticket']=$ticket;
+                    unset($info['password']);
+
+                    //更新密码
+                    $temp['password'] = md5(md5($data['password']).$info['guid']);
+                    $temp['release_date'] = time();
+                    db('doctor')->where($map)->update($temp);
+                    ajaxReturn(array('code' =>1, 'info' => '修改成功','data'=>[]));
+
+            }else
+            {
+                ajaxReturn(array('code'=>0,'info'=>'手机号码不存在！','data'=>[]));
+            }
+
+        }
+    }
+
+    /**
+     * @Title: updatePsd
+     * @Description: TODO 修改密码
+     */
+    public function updatePsd()
+    {
+        if($this->request->isPost()) {
+            session_start();
+            $ticket=session_id();
+            $data=input('post.');
+            if($data['mobile']==''||$data['smscode']==''|| $data['newPassword']=='')
+            {
+               ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+            }
+            if(!preg_match("/^1[3|4|5|7|8|][0-9]{1}[0-9]{8}$/",$data['mobile']))
+            {
+                ajaxReturn(array('code' =>0, 'info' => '手机号码格式不正确！','data'=>[]));
+            }
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
+
+            //验证短信
+            $mobile=$data['mobile'];
+            session_id(md5($mobile));
+            session_start();
+            $token = $_SESSION['tokencode'];
+
+            if(empty($token))
+            {
+                ajaxReturn(array('code'=>0,'info'=>'请先获取短信验证码！','data'=>[]));
+            }
+            if($token['code']!=$data['smscode'])
+            {
+                ajaxReturn(array('code'=>0, 'info'=>'短信验证码不正确！','data'=>[]));
+            }
+            if (!empty($token)&&$token['expired_at']<time() )
+            {
+                ajaxReturn(array('code'=>0, 'info'=>'短信验证码超时！','data'=>[]));
+            }
+
+            $map['mobile']=$data['mobile'];
+            $info=db('doctor')->where($map)->field("member_id,member_sn,member_name,mobile,password,guid, true_name, is_clinic, is_certified, login_state, device_tokens, is_status")->find();
+            if(!empty($info))
+            {
+                //是否被冻结
+                if ($info['is_status'] == 1) {
+                    ajaxReturn(array('code'=>0,'info'=>'该账号被冻结！','data'=>[]));
+                }
+                    $info['ticket']=$ticket;
+                    unset($info['password']);
+
+                    //更新密码
+                    $temp['password'] = md5(md5($data['newPassword']).$info['guid']);
+                    $temp['release_date'] = time();
+                    db('doctor')->where($map)->update($temp);
+                    ajaxReturn(array('code' =>1, 'info' => '修改成功','data'=>[]));
 
             }else
             {
@@ -243,7 +397,8 @@ class Member extends Common
             $data['password']=md5(md5($data['password']).$data['guid']);
 
             //生成医生邀请医生的二维码图片路径
-            $data['to_doctor_url'] = createPic('https://www.baidu.com');
+            $registUrl = config('url').'/member/webRegist?id='.$data['invite'];
+            $data['to_doctor_url'] = createPic($registUrl);
             $invite_code = $data['invite_code'];
             unset($data['invite_code']);
             $_identify = db('doctor')->insertGetId($data);
@@ -278,6 +433,22 @@ class Member extends Common
 
         }
     }
+
+    public function webRegist()
+    {
+        //查询地区
+        $map['is_display'] = 1;
+        $areaList=db('area')->where($map)->field("`area_id`,`name`")->order("`sort` DESC")->select();
+        //查询医院
+        $hospitalList=db('hospital')->where($map)->field("`hospital_id`,`hospital_name`, area_id")->order("`sort` DESC")->select();
+
+        $this->assign("area", $areaList);
+        $this->assign("hospital", $hospitalList);
+        $this->assign("code", $_GET['id']);
+        return  $this->fetch('/doctor/regist');
+    }
+
+
 
     /**
      +-------------------------------------------------------------
@@ -328,6 +499,7 @@ class Member extends Common
                 ->join(['jd_hospital'=>'h'], 'd.hospital_id = h.hospital_id' , 'left')
                 ->field("d.*, t.title_name, a.name, h.hospital_name")
                 ->find();
+            $uinfo['birthday'] = date('Y-m-d', $uinfo['birthday']);
             unset($uinfo['password']);
             unset($uinfo['guid']);
             unset($uinfo['reg_date']);

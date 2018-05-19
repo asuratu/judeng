@@ -242,3 +242,71 @@ function createPic($url) {
     \QRcode::png($url, $filename, 'L', 10, 2);
     return '/uploads/code/'.basename($filename);
 }
+
+
+/**
+ * @Title: birthday
+ * @param $birthday
+ * @Description: TODO 根据生日计算年龄 格式: 1986-07-22
+ * @return bool|false|int
+ * @author TUGE
+ * @date
+ */
+function getAge($birthday){
+    $age = strtotime($birthday);
+    if($age === false){
+        return false;
+    }
+    list($y1,$m1,$d1) = explode("-",date("Y-m-d",$age));
+    $now = strtotime("now");
+    list($y2,$m2,$d2) = explode("-",date("Y-m-d",$now));
+    $age = $y2 - $y1;
+    if((int)($m2.$d2) < (int)($m1.$d1))
+        $age -= 1;
+    return $age;
+}
+
+/**
+ * 生成订单编号
+ * @return string
+ */
+function createOrderCode() {
+    return date('Ymd') . substr(microtime(), 2, 6);
+}
+
+/**
+ * 入库，输入框进入数据库，替换成HTML
+ * @param $str
+ * @param string $length
+ * @return string|void
+ */
+function getTextToHtml($str, $length = '') {
+    if (!isset($str))
+        return;
+    $str = htmlspecialchars(stripslashes(trim($str)), ENT_QUOTES);
+    return $length && (strlen($str) > $length) ? self::getLenStr($str, $length) : $str;
+}
+
+/**
+ * 出库，输出到输入框
+ * 去除Html格式，用于显示输出
+ * @param $str
+ * @return string|void
+ */
+function outputToText($str) {
+    if (!isset($str))
+        return;
+    return stripslashes(str_replace(array('&amp;', '&lt;', '&gt;', '&quot;', '&#039;',
+        '&nbsp;'), array('&', '<', '>', '"', '\'', ' '), trim($str)));
+}
+
+
+// 返回json
+function backJson($code,$info){
+    $arr['status']=$code;
+    $arr['info']=$info;
+    print_r(json_encode($arr));
+    exit;
+}
+
+
