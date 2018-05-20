@@ -14,12 +14,14 @@ return [
     'type'            => 'mysql',
     // 服务器地址
     'hostname'        => '39.105.19.169',
+//    'hostname'        => 'localhost',
     // 数据库名
     'database'        => 'judeng',
     // 用户名
     'username'        => 'root',
     // 密码
     'password'        => 'qwer123..',
+//    'password'        => 'root',
     // 端口
     'hostport'        => '3306',
     // 连接dsn

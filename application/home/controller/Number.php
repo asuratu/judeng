@@ -33,7 +33,6 @@ class Number extends Common
             } else {
                 $where = ' and o.`pay_status` = 0';
             }
-            $data['pageCount'] = ($data['page'] - 1) * $data['pageSize'];
             $prescription = Db::field('o.`pay_status`, o.`order_id`, o.`order_sn`, o.`order_status`, o.`patient_id`, o.`order_date`, op.`patient_mobile`, op.`patient_name`, op.`patient_sex`, op.`patient_age`, op.`dialectical`')
                 ->table('jd_order o, jd_order_prescription op')
                 ->where("o.`order_id` = op.`order_id` and o.order_type = 3 and o.doctor_id = {$data['doctor_id']} {$where}")
@@ -47,11 +46,142 @@ class Number extends Common
                 $order[$key]['order_status'] = $this->view->setting['aryOrderStatus'][$val['order_status']];
                 $order[$key]['order_date'] = date('Y-m-d H:i', $val['order_date']);
             }
-
-            ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>$order));
+            $total = Db::table('jd_order o, jd_order_prescription op')
+                ->where("o.`order_id` = op.`order_id` and o.order_type = 3 and o.doctor_id = {$data['doctor_id']} {$where}")
+                ->count();
+            ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>$order,'total'=>$total));
 
         }
     }
+
+    // 待购药 待复诊订单
+    public function findConsultation()
+    {
+        if($this->request->isPost()) {
+            $data=input('post.');
+            if($data['doctor_id']==''||$data['type']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+            }
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
+            if (!isset($data['page'])) {
+                $data['page'] = 1;
+            }
+            if (!isset($data['pageSize'])) {
+                $data['pageSize'] = 10;
+            }
+            $data['pageCount'] = ($data['page'] - 1) * $data['pageSize'];
+
+            if ($data['type'] == 0) {
+                $type_name = '购药时间：';
+            } else {
+                $type_name = '复诊时间：';
+            }
+            $prescription = Db::field('o.`pay_status`, o.`order_id`, o.`order_sn`, o.`order_status`, o.`patient_id`, o.`order_date`, m.`mobile`, m.`member_name`, m.`sex`, m.`age`')
+                ->table('jd_order o, jd_member m')
+                ->where("o.`patient_id` = m.`member_id` and o.order_type = {$data['type']} and o.doctor_id = {$data['doctor_id']}")
+                ->order('o.order_date', 'DESC')
+                ->limit($data['pageCount'],$data['pageCount'])
+                ->select();
+            $order = array();
+            foreach ($prescription as $key => $val) {
+                array_push($order, $val);
+                $order[$key]['pay_status_name'] = $this->view->setting['aryOrderPayStatus'][$val['pay_status']];
+                $order[$key]['order_status'] = $this->view->setting['aryOrderStatus'][$val['order_status']];
+                $order[$key]['order_date'] = $type_name . date('Y-m-d', $val['order_date']);
+
+                // 获取患者和医生环信token
+            }
+            $total = Db::table('jd_order o, jd_member m')
+                ->where("o.`patient_id` = m.`member_id` and o.order_type = {$data['type']} and o.doctor_id = {$data['doctor_id']}")
+                ->count();
+            ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>$order,'total'=>$total));
+
+        }
+    }
+
+    // 咨询页面患者列表
+    public function allConsultationPatient()
+    {
+        if($this->request->isPost()) {
+            $data=input('post.');
+            if($data['doctor_id']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+            }
+            if (!isset($data['page'])) {
+                $data['page'] = 1;
+            }
+            if (!isset($data['pageSize'])) {
+                $data['pageSize'] = 10;
+            }
+            $data['pageCount'] = ($data['page'] - 1) * $data['pageSize'];
+
+            $comment = Db::field('s.`member_id`, s.`synopsis`, s.`end_date`, m.`member_name`, m.`mobile`, m.`portrait`, m.`sex`, m.`age`')
+                ->table('jd_doctor_member s, jd_member m')
+                ->where("s.doctor_id = {$data['doctor_id']} and s.`member_id` = m.`member_id` and (m.`member_name` like '%{$data['title']}%' or m.`mobile` like '%{$data['title']}%' or s.`grouping` like '%{$data['title']}%')")
+                ->order('s.end_date', 'DESC')
+                ->limit($data['pageCount'],$data['pageCount'])
+                ->select();
+            $order = array();
+            foreach ($comment as $key => $val) {
+                array_push($order, $val);
+                $order[$key]['portrait'] = $this->view->setting['base_host'] . $val['portrait'];
+                $order[$key]['end_date'] = date('m-d', $val['end_date']);
+
+                // 获取患者和医生环信token
+            }
+            $total = Db::table('jd_doctor_member s, jd_member m')
+                ->where("s.doctor_id = {$data['doctor_id']} and s.`member_id` = m.`member_id` and (m.`member_name` like '%{$data['title']}%' or m.`mobile` like '%{$data['title']}%' or s.`grouping` like '%{$data['title']}%')")
+                ->count();
+            ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>$order,'total'=>$total));
+
+        }
+    }
+
+    // 修改患者列表最后一条显示内容
+    public function updateConsultationPatient()
+    {
+        if($this->request->isPost()) {
+            $data=input('post.');
+            if($data['doctor_id']==''||$data['member_id']==''||$data['synopsis']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+            }
+            $time = time();
+            $data['synopsis'] = Html::getTextToHtml($data['synopsis'], 20);
+            $haircount = db('doctor_member')->where("doctor_id = {$data['doctor_id']} and member_id = {$data['member_id']}")->count();
+            if ($haircount) {
+                $update = array(
+                    "synopsis" => $data['synopsis'],
+                    "end_date" => $time,
+                );
+                $_return = db('doctor_member')->where("doctor_id = {$data['doctor_id']} and member_id = {$data['member_id']}")->update($update);
+            } else {
+                $hair_info = array(
+                    'member_id' => $data['member_id'],
+                    'doctor_id' => $data['doctor_id'],
+                    'inquisition_name' => '问诊',
+                    'inquisition' => $time,
+                    'grouping' => '',
+                    'end_date' => $time,
+                    'synopsis' => $data['synopsis'],
+                    'add_date' => $time,
+                );
+                $_return = db('doctor_member')->insertGetId($hair_info);
+            }
+            if ($_return) {
+                ajaxReturn(array('code'=>1,'info'=>'ok'));
+            } else {
+                ajaxReturn(array('code'=>0,'info'=>'添加或修改失败'));
+            }
+        }
+    }
+
 
     // 测试内部生成医生患者名单接口
     public function doctorMember() {

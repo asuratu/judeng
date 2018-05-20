@@ -1,0 +1,2181 @@
+---------------------------------------------------------------
+[ 2018-05-20T11:23:49+08:00 ] 0.0.0.0 POST /remind/medicine
+[ info ] localhost:8020/remind/medicine [运行时间：1.591257s][吞吐率：0.63req/s] [内存消耗：3,143.56kb] [文件加载：49]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'remind',
+    2 => 'medicine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------481161024316533791460754',
+  'content-length' => '166',
+  'x-original-url' => '/remind/medicine',
+  'postman-token' => '024300e9-1478-4c91-98f8-996abb3801b3',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'order_id' => '168',
+)
+[ info ] [ RUN ] app\home\controller\Remind->medicine[ D:\works\201805\judeng\application\home\controller\Remind.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.207009s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.128646s ]
+[ sql ] [ SQL ] SELECT m.`member_name`,m.`openid`,m.`mobile`,o.`order_type`,o.`doctor_id` FROM `jd_order` `o` LEFT JOIN `jd_member` `m` ON o.`patient_id`=m.`member_id` WHERE  (  o.order_id = 168 ) LIMIT 1 [ RunTime:0.128806s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.128880s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wx_user` LIMIT 1 [ RunTime:0.131165s ]
+[ error ] [8]unserialize(): Error at offset 0 of 733 bytes[D:\works\201805\judeng\thinkphp\library\think\cache\driver\File.php:120]
+[ error ] [8]未定义数组索引: only_token[D:\works\201805\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-20T11:26:41+08:00 ] 0.0.0.0 POST /remind/medicine
+[ info ] localhost:8020/remind/medicine [运行时间：0.455981s][吞吐率：2.19req/s] [内存消耗：2,502.84kb] [文件加载：41]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'remind',
+    2 => 'medicine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------216257465719038216479398',
+  'content-length' => '166',
+  'x-original-url' => '/remind/medicine',
+  'postman-token' => '4e0252b6-5dc6-4449-ae6d-4e97e0ee145c',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'order_id' => '168',
+)
+[ info ] [ RUN ] app\home\controller\Remind->medicine[ D:\works\201805\judeng\application\home\controller\Remind.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.173966s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.122097s ]
+[ sql ] [ SQL ] SELECT m.`member_name`,m.`openid`,m.`mobile`,o.`order_type`,o.`doctor_id` FROM `jd_order` `o` LEFT JOIN `jd_member` `m` ON o.`patient_id`=m.`member_id` WHERE  (  o.order_id = 168 ) LIMIT 1 [ RunTime:0.115731s ]
+---------------------------------------------------------------
+[ 2018-05-20T11:27:15+08:00 ] 0.0.0.0 POST /remind/medicine
+[ info ] localhost:8020/remind/medicine [运行时间：1.533557s][吞吐率：0.65req/s] [内存消耗：2,502.84kb] [文件加载：41]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'remind',
+    2 => 'medicine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------576172530493291790311051',
+  'content-length' => '166',
+  'x-original-url' => '/remind/medicine',
+  'postman-token' => '9756b09b-e733-4121-ae17-3ddd9f415357',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'order_id' => '168',
+)
+[ info ] [ RUN ] app\home\controller\Remind->medicine[ D:\works\201805\judeng\application\home\controller\Remind.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.168651s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.173667s ]
+[ sql ] [ SQL ] SELECT m.`member_name`,m.`openid`,m.`mobile`,o.`order_type`,o.`doctor_id` FROM `jd_order` `o` LEFT JOIN `jd_member` `m` ON o.`patient_id`=m.`member_id` WHERE  (  o.order_id = 168 ) LIMIT 1 [ RunTime:0.156314s ]
+---------------------------------------------------------------
+[ 2018-05-20T12:09:58+08:00 ] 0.0.0.0 POST /remind/medicine
+[ info ] localhost:8020/remind/medicine [运行时间：0.673720s][吞吐率：1.48req/s] [内存消耗：3,077.82kb] [文件加载：51]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'remind',
+    2 => 'medicine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------085074380119965715879208',
+  'content-length' => '166',
+  'x-original-url' => '/remind/medicine',
+  'postman-token' => '75567d97-cb18-48a2-b7e4-afb072159e1b',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'order_id' => '168',
+)
+[ info ] [ RUN ] app\home\controller\Remind->medicine[ D:\works\201805\judeng\application\home\controller\Remind.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: doctor_id[D:\works\201805\judeng\application\home\controller\Remind.php:23]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and order_id = 168 and day_date = 1526745600 ) LIMIT 1' at line 1[D:\works\201805\judeng\thinkphp\library\think\db\Connection.php:388]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.178559s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.121255s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.120670s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_daycount` [ RunTime:0.124378s ]
+---------------------------------------------------------------
+[ 2018-05-20T12:11:28+08:00 ] 0.0.0.0 POST /remind/medicine
+[ info ] localhost:8020/remind/medicine [运行时间：0.628194s][吞吐率：1.59req/s] [内存消耗：3,078.31kb] [文件加载：51]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'remind',
+    2 => 'medicine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------595937385352304771089112',
+  'content-length' => '166',
+  'x-original-url' => '/remind/medicine',
+  'postman-token' => 'e86a5d5f-4885-4611-94e4-fe52732a92a6',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'order_id' => '168',
+)
+[ info ] [ RUN ] app\home\controller\Remind->medicine[ D:\works\201805\judeng\application\home\controller\Remind.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: doctor_id[D:\works\201805\judeng\application\home\controller\Remind.php:23]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and order_id = 168 and day_date = 1526745600 ) LIMIT 1' at line 1[D:\works\201805\judeng\thinkphp\library\think\db\Connection.php:388]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.178678s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.117926s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.121127s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_daycount` [ RunTime:0.117452s ]
+---------------------------------------------------------------
+[ 2018-05-20T12:12:12+08:00 ] 0.0.0.0 POST /remind/medicine
+[ info ] localhost:8020/remind/medicine [运行时间：0.458227s][吞吐率：2.18req/s] [内存消耗：2,995.97kb] [文件加载：46]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'remind',
+    2 => 'medicine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------091285206565964534962889',
+  'content-length' => '166',
+  'x-original-url' => '/remind/medicine',
+  'postman-token' => '2d6b2ef9-1ce0-45e6-818c-659b7c449adc',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'order_id' => '168',
+)
+[ info ] [ RUN ] app\home\controller\Remind->medicine[ D:\works\201805\judeng\application\home\controller\Remind.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: doctor_id[D:\works\201805\judeng\application\home\controller\Remind.php:23]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.183928s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.118517s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.119789s ]
+---------------------------------------------------------------
+[ 2018-05-20T12:13:04+08:00 ] 0.0.0.0 POST /remind/medicine
+[ info ] localhost:8020/remind/medicine [运行时间：0.453093s][吞吐率：2.21req/s] [内存消耗：2,995.94kb] [文件加载：46]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'remind',
+    2 => 'medicine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------250118132173005607951196',
+  'content-length' => '166',
+  'x-original-url' => '/remind/medicine',
+  'postman-token' => '98c84984-08f4-4a3f-a1b2-1984c847b40d',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'order_id' => '168',
+)
+[ info ] [ RUN ] app\home\controller\Remind->medicine[ D:\works\201805\judeng\application\home\controller\Remind.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: doctor_id[D:\works\201805\judeng\application\home\controller\Remind.php:23]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.179978s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.119282s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.119826s ]
+---------------------------------------------------------------
+[ 2018-05-20T12:13:20+08:00 ] 0.0.0.0 POST /remind/medicine
+[ info ] localhost:8020/remind/medicine [运行时间：0.647064s][吞吐率：1.55req/s] [内存消耗：3,078.32kb] [文件加载：51]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'remind',
+    2 => 'medicine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------551695725225354960006071',
+  'content-length' => '166',
+  'x-original-url' => '/remind/medicine',
+  'postman-token' => 'de0c6b07-bec5-4e5d-88e8-688786021218',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'order_id' => '168',
+)
+[ info ] [ RUN ] app\home\controller\Remind->medicine[ D:\works\201805\judeng\application\home\controller\Remind.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: doctor_id[D:\works\201805\judeng\application\home\controller\Remind.php:23]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and order_id = 168 and day_date = 1526745600 ) LIMIT 1' at line 1[D:\works\201805\judeng\thinkphp\library\think\db\Connection.php:388]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.179499s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.119867s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.118744s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_daycount` [ RunTime:0.121167s ]
+---------------------------------------------------------------
+[ 2018-05-20T12:13:54+08:00 ] 0.0.0.0 POST /remind/medicine
+[ info ] localhost:8020/remind/medicine [运行时间：0.799214s][吞吐率：1.25req/s] [内存消耗：3,078.52kb] [文件加载：51]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'remind',
+    2 => 'medicine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------726338074384036181152777',
+  'content-length' => '166',
+  'x-original-url' => '/remind/medicine',
+  'postman-token' => '7d7589b2-40c9-4e19-9864-feb28cb699a7',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'order_id' => '168',
+)
+[ info ] [ RUN ] app\home\controller\Remind->medicine[ D:\works\201805\judeng\application\home\controller\Remind.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: doctor_id[D:\works\201805\judeng\application\home\controller\Remind.php:23]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and order_id = 168 and day_date = 1526745600 ) LIMIT 1' at line 1[D:\works\201805\judeng\thinkphp\library\think\db\Connection.php:388]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.225031s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.150789s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.156177s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_daycount` [ RunTime:0.153148s ]
+---------------------------------------------------------------
+[ 2018-05-20T12:15:18+08:00 ] 0.0.0.0 POST /remind/medicine
+[ info ] localhost:8020/remind/medicine [运行时间：0.830397s][吞吐率：1.20req/s] [内存消耗：3,079.16kb] [文件加载：51]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'remind',
+    2 => 'medicine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------785008990594481732955820',
+  'content-length' => '166',
+  'x-original-url' => '/remind/medicine',
+  'postman-token' => '99394f33-69d2-4d67-ab2e-1d0b3591c1ab',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'order_id' => '168',
+)
+[ info ] [ RUN ] app\home\controller\Remind->medicine[ D:\works\201805\judeng\application\home\controller\Remind.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: doctor_id[D:\works\201805\judeng\application\home\controller\Remind.php:23]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and order_id = 168 and day_date = 1526745600 ) LIMIT 1' at line 1[D:\works\201805\judeng\thinkphp\library\think\db\Connection.php:388]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.229290s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.157886s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.174290s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_daycount` [ RunTime:0.157838s ]
+---------------------------------------------------------------
+[ 2018-05-20T12:15:45+08:00 ] 0.0.0.0 POST /remind/medicine
+[ info ] localhost:8020/remind/medicine [运行时间：0.815279s][吞吐率：1.23req/s] [内存消耗：3,079.38kb] [文件加载：51]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'remind',
+    2 => 'medicine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------515014648342278660492128',
+  'content-length' => '166',
+  'x-original-url' => '/remind/medicine',
+  'postman-token' => '47a3c545-b494-49df-b185-ca481c51671a',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'order_id' => '168',
+)
+[ info ] [ RUN ] app\home\controller\Remind->medicine[ D:\works\201805\judeng\application\home\controller\Remind.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: doctor_id[D:\works\201805\judeng\application\home\controller\Remind.php:23]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and order_id = 168 and day_date = 1526745600 ) LIMIT 1' at line 1[D:\works\201805\judeng\thinkphp\library\think\db\Connection.php:388]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.237629s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.152440s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.158745s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_daycount` [ RunTime:0.153428s ]
+---------------------------------------------------------------
+[ 2018-05-20T12:15:57+08:00 ] 0.0.0.0 POST /remind/medicine
+[ info ] localhost:8020/remind/medicine [运行时间：0.590086s][吞吐率：1.69req/s] [内存消耗：2,996.98kb] [文件加载：46]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'remind',
+    2 => 'medicine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------613276995273588352980421',
+  'content-length' => '166',
+  'x-original-url' => '/remind/medicine',
+  'postman-token' => '6ec0c154-8b92-4727-8ac2-50b74c0114e6',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'order_id' => '168',
+)
+[ info ] [ RUN ] app\home\controller\Remind->medicine[ D:\works\201805\judeng\application\home\controller\Remind.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: doctor_id[D:\works\201805\judeng\application\home\controller\Remind.php:23]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.230041s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.154857s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.155361s ]
+---------------------------------------------------------------
+[ 2018-05-20T12:16:36+08:00 ] 0.0.0.0 POST /remind/medicine
+[ info ] localhost:8020/remind/medicine [运行时间：0.817348s][吞吐率：1.22req/s] [内存消耗：3,078.18kb] [文件加载：51]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'remind',
+    2 => 'medicine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------927923755996707084572747',
+  'content-length' => '166',
+  'x-original-url' => '/remind/medicine',
+  'postman-token' => '14c65617-b6fa-4b37-b417-1a3922e59da2',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'order_id' => '168',
+)
+[ info ] [ RUN ] app\home\controller\Remind->medicine[ D:\works\201805\judeng\application\home\controller\Remind.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: doctor_id[D:\works\201805\judeng\application\home\controller\Remind.php:23]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1[D:\works\201805\judeng\thinkphp\library\think\db\Connection.php:388]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.233352s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.152148s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.162606s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_daycount` [ RunTime:0.150977s ]
+---------------------------------------------------------------
+[ 2018-05-20T12:17:33+08:00 ] 0.0.0.0 POST /remind/medicine
+[ info ] localhost:8020/remind/medicine [运行时间：0.824911s][吞吐率：1.21req/s] [内存消耗：3,078.18kb] [文件加载：51]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'remind',
+    2 => 'medicine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------398072153849177699827881',
+  'content-length' => '166',
+  'x-original-url' => '/remind/medicine',
+  'postman-token' => 'bb08739b-0751-4a06-9bf9-4d50e37cd9b5',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'order_id' => '168',
+)
+[ info ] [ RUN ] app\home\controller\Remind->medicine[ D:\works\201805\judeng\application\home\controller\Remind.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: doctor_id[D:\works\201805\judeng\application\home\controller\Remind.php:23]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1[D:\works\201805\judeng\thinkphp\library\think\db\Connection.php:388]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.230137s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.151664s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.165628s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_daycount` [ RunTime:0.158645s ]
+---------------------------------------------------------------
+[ 2018-05-20T12:18:21+08:00 ] 0.0.0.0 POST /remind/medicine
+[ info ] localhost:8020/remind/medicine [运行时间：0.828413s][吞吐率：1.21req/s] [内存消耗：3,078.59kb] [文件加载：51]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'remind',
+    2 => 'medicine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------517921706323511122558709',
+  'content-length' => '166',
+  'x-original-url' => '/remind/medicine',
+  'postman-token' => '6ac2d16c-dd2e-4f78-b77d-b97ff8be5c67',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'order_id' => '168',
+)
+[ info ] [ RUN ] app\home\controller\Remind->medicine[ D:\works\201805\judeng\application\home\controller\Remind.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: doctor_id[D:\works\201805\judeng\application\home\controller\Remind.php:23]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1[D:\works\201805\judeng\thinkphp\library\think\db\Connection.php:388]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.228027s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.168618s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.155596s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_daycount` [ RunTime:0.156038s ]
+---------------------------------------------------------------
+[ 2018-05-20T12:18:51+08:00 ] 0.0.0.0 POST /remind/medicine
+[ info ] localhost:8020/remind/medicine [运行时间：0.878246s][吞吐率：1.14req/s] [内存消耗：2,918.92kb] [文件加载：43]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'remind',
+    2 => 'medicine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------794023775738248832186219',
+  'content-length' => '275',
+  'x-original-url' => '/remind/medicine',
+  'postman-token' => 'aae81c4a-fb57-4983-a72e-1521f95345e5',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'order_id' => '168',
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Remind->medicine[ D:\works\201805\judeng\application\home\controller\Remind.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.231177s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.151747s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.153199s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_daycount` [ RunTime:0.153425s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor_daycount` WHERE  (  doctor_id = 2 and order_id = 168 and day_date = 1526745600 ) LIMIT 1 [ RunTime:0.154301s ]
+---------------------------------------------------------------
+[ 2018-05-20T12:19:03+08:00 ] 0.0.0.0 POST /remind/medicine
+[ info ] localhost:8020/remind/medicine [运行时间：0.697949s][吞吐率：1.43req/s] [内存消耗：2,915.91kb] [文件加载：43]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'remind',
+    2 => 'medicine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------915822939981733608588013',
+  'content-length' => '275',
+  'x-original-url' => '/remind/medicine',
+  'postman-token' => '9a712142-eb09-4bad-a6a6-63d71dddbd8e',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'order_id' => '168',
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Remind->medicine[ D:\works\201805\judeng\application\home\controller\Remind.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.187997s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.121328s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.121407s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_daycount` [ RunTime:0.121160s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor_daycount` WHERE  (  doctor_id = 2 and order_id = 168 and day_date = 1526745600 ) LIMIT 1 [ RunTime:0.120515s ]
+---------------------------------------------------------------
+[ 2018-05-20T12:19:16+08:00 ] 0.0.0.0 POST /remind/medicine
+[ info ] localhost:8020/remind/medicine [运行时间：0.732220s][吞吐率：1.37req/s] [内存消耗：2,915.53kb] [文件加载：43]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'remind',
+    2 => 'medicine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------741594829193916155109347',
+  'content-length' => '275',
+  'x-original-url' => '/remind/medicine',
+  'postman-token' => 'af70aab3-9f85-44ca-aabb-f229170d013f',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'order_id' => '168',
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Remind->medicine[ D:\works\201805\judeng\application\home\controller\Remind.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.187105s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.124656s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.124373s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_daycount` [ RunTime:0.132615s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor_daycount` WHERE  (  doctor_id = 2 and order_id = 168 and day_date = 1526745600 ) LIMIT 1 [ RunTime:0.126206s ]
+---------------------------------------------------------------
+[ 2018-05-20T12:19:38+08:00 ] 0.0.0.0 POST /remind/medicine
+[ info ] localhost:8020/remind/medicine [运行时间：2.345966s][吞吐率：0.43req/s] [内存消耗：3,227.82kb] [文件加载：50]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'remind',
+    2 => 'medicine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------928311379517203546909454',
+  'content-length' => '275',
+  'x-original-url' => '/remind/medicine',
+  'postman-token' => '0b551682-30bf-4a5a-98e0-995a979dbdd6',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'order_id' => '168',
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Remind->medicine[ D:\works\201805\judeng\application\home\controller\Remind.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.226909s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.154251s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.155192s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_daycount` [ RunTime:0.155220s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor_daycount` WHERE  (  doctor_id = 2 and order_id = 168 and day_date = 1526745600 ) LIMIT 1 [ RunTime:0.150844s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.158318s ]
+[ sql ] [ SQL ] SELECT m.`member_name`,m.`openid`,m.`mobile`,o.`order_type`,o.`doctor_id` FROM `jd_order` `o` LEFT JOIN `jd_member` `m` ON o.`patient_id`=m.`member_id` WHERE  (  o.order_id = 168 ) LIMIT 1 [ RunTime:0.157513s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_daycount` WHERE  (  doctor_id = 2 and order_id = 168 and day_date = 1526745600 ) LIMIT 1 [ RunTime:0.150774s ]
+[ sql ] [ SQL ] INSERT INTO `jd_doctor_daycount` (`doctor_id` , `order_id` , `day_count` , `day_date` , `add_date`) VALUES (2 , 168 , 1 , 1526745600 , 1526789977) [ RunTime:0.160388s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.153700s ]
+[ error ] [8]未定义数组索引: only_token[D:\works\201805\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-20T12:19:44+08:00 ] 0.0.0.0 POST /remind/medicine
+[ info ] localhost:8020/remind/medicine [运行时间：1.480417s][吞吐率：0.68req/s] [内存消耗：3,225.01kb] [文件加载：50]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'remind',
+    2 => 'medicine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------695414178615270766931940',
+  'content-length' => '275',
+  'x-original-url' => '/remind/medicine',
+  'postman-token' => '6f37dffb-ac7f-4d02-a497-4b1c0a5e982a',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'order_id' => '168',
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Remind->medicine[ D:\works\201805\judeng\application\home\controller\Remind.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.176790s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.117734s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.119782s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_daycount` [ RunTime:0.121300s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor_daycount` WHERE  (  doctor_id = 2 and order_id = 168 and day_date = 1526745600 ) LIMIT 1 [ RunTime:0.120073s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.126570s ]
+[ sql ] [ SQL ] SELECT m.`member_name`,m.`openid`,m.`mobile`,o.`order_type`,o.`doctor_id` FROM `jd_order` `o` LEFT JOIN `jd_member` `m` ON o.`patient_id`=m.`member_id` WHERE  (  o.order_id = 168 ) LIMIT 1 [ RunTime:0.119401s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_daycount` WHERE  (  doctor_id = 2 and order_id = 168 and day_date = 1526745600 ) LIMIT 1 [ RunTime:0.122521s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_daycount`  SET `day_count`=`day_count`+1  WHERE  (  doctor_id = 2 and order_id = 168 and day_date = 1526745600 ) [ RunTime:0.125002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.119391s ]
+[ error ] [8]未定义数组索引: only_token[D:\works\201805\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-20T12:19:48+08:00 ] 0.0.0.0 POST /remind/medicine
+[ info ] localhost:8020/remind/medicine [运行时间：1.855168s][吞吐率：0.54req/s] [内存消耗：3,225.01kb] [文件加载：50]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'remind',
+    2 => 'medicine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------342582759316030448605818',
+  'content-length' => '275',
+  'x-original-url' => '/remind/medicine',
+  'postman-token' => 'a6494f61-1986-4377-b0c0-f7749a5f4700',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'order_id' => '168',
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Remind->medicine[ D:\works\201805\judeng\application\home\controller\Remind.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.232479s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.155654s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.154560s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_daycount` [ RunTime:0.162574s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor_daycount` WHERE  (  doctor_id = 2 and order_id = 168 and day_date = 1526745600 ) LIMIT 1 [ RunTime:0.171811s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.153296s ]
+[ sql ] [ SQL ] SELECT m.`member_name`,m.`openid`,m.`mobile`,o.`order_type`,o.`doctor_id` FROM `jd_order` `o` LEFT JOIN `jd_member` `m` ON o.`patient_id`=m.`member_id` WHERE  (  o.order_id = 168 ) LIMIT 1 [ RunTime:0.152608s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_daycount` WHERE  (  doctor_id = 2 and order_id = 168 and day_date = 1526745600 ) LIMIT 1 [ RunTime:0.152895s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_daycount`  SET `day_count`=`day_count`+1  WHERE  (  doctor_id = 2 and order_id = 168 and day_date = 1526745600 ) [ RunTime:0.160680s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.155753s ]
+[ error ] [8]未定义数组索引: only_token[D:\works\201805\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-20T12:19:57+08:00 ] 0.0.0.0 POST /remind/medicine
+[ info ] localhost:8020/remind/medicine [运行时间：0.712875s][吞吐率：1.40req/s] [内存消耗：2,996.54kb] [文件加载：46]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'remind',
+    2 => 'medicine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------982776698595444025639105',
+  'content-length' => '275',
+  'x-original-url' => '/remind/medicine',
+  'postman-token' => 'c3aa531c-dfb2-42f6-87c1-8e4898d9824c',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'order_id' => '168',
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Remind->medicine[ D:\works\201805\judeng\application\home\controller\Remind.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.185305s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.125208s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.120358s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_daycount` [ RunTime:0.121047s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor_daycount` WHERE  (  doctor_id = 2 and order_id = 168 and day_date = 1526745600 ) LIMIT 1 [ RunTime:0.128716s ]
+[ error ] [8]未定义数组索引: only_token[D:\works\201805\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-20T16:04:00+08:00 ] 0.0.0.0 POST /number/prescriptions
+[ info ] localhost:8020/number/prescriptions [运行时间：0.070158s][吞吐率：14.25req/s] [内存消耗：2,660.82kb] [文件加载：44]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'prescriptions',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------404280413548954319054796',
+  'content-length' => '269',
+  'x-original-url' => '/number/prescriptions',
+  'postman-token' => '668610f1-82a6-4516-b105-eaa81ed17077',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'type' => '1',
+)
+[ info ] [ RUN ] app\home\controller\Number->prescriptions[ D:\works\201805\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [1045]SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)[D:\works\201805\judeng\thinkphp\library\think\db\Connection.php:293]
+---------------------------------------------------------------
+[ 2018-05-20T16:04:22+08:00 ] 0.0.0.0 POST /number/prescriptions
+[ info ] localhost:8020/number/prescriptions [运行时间：0.039646s][吞吐率：25.22req/s] [内存消耗：2,711.16kb] [文件加载：44]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'prescriptions',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------648599473148121549787363',
+  'content-length' => '269',
+  'x-original-url' => '/number/prescriptions',
+  'postman-token' => '6b6043d5-4019-4cc2-9382-0544a7091417',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'type' => '1',
+)
+[ info ] [ RUN ] app\home\controller\Number->prescriptions[ D:\works\201805\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000825s ] mysql:host=localhost;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.005866s ]
+[ sql ] [ SQL ] SELECT o.`pay_status`,o.`order_id`,o.`order_sn`,o.`order_status`,o.`patient_id`,o.`order_date`,op.`patient_mobile`,op.`patient_name`,op.`patient_sex`,op.`patient_age`,op.`dialectical` FROM `jd_order` `o`,`jd_order_prescription` `op` WHERE  (  o.`order_id` = op.`order_id` and o.order_type = 3 and o.doctor_id = 2  and o.`pay_status` = 0 ) ORDER BY `o`.`order_date`  DESC [ RunTime:0.000606s ]
+[ error ] [8]未定义数组索引: only_token[D:\works\201805\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-20T16:08:08+08:00 ] 0.0.0.0 POST /number/prescriptions
+[ info ] localhost:8020/number/prescriptions [运行时间：0.040812s][吞吐率：24.50req/s] [内存消耗：2,711.16kb] [文件加载：44]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'prescriptions',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------800077576515162907437850',
+  'content-length' => '269',
+  'x-original-url' => '/number/prescriptions',
+  'postman-token' => '4ad546d9-c739-4121-805a-4ffe0929ddd7',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'type' => '1',
+)
+[ info ] [ RUN ] app\home\controller\Number->prescriptions[ D:\works\201805\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010629s ] mysql:host=localhost;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.005996s ]
+[ sql ] [ SQL ] SELECT o.`pay_status`,o.`order_id`,o.`order_sn`,o.`order_status`,o.`patient_id`,o.`order_date`,op.`patient_mobile`,op.`patient_name`,op.`patient_sex`,op.`patient_age`,op.`dialectical` FROM `jd_order` `o`,`jd_order_prescription` `op` WHERE  (  o.`order_id` = op.`order_id` and o.order_type = 3 and o.doctor_id = 2  and o.`pay_status` = 0 ) ORDER BY `o`.`order_date`  DESC [ RunTime:0.000452s ]
+[ error ] [8]未定义数组索引: only_token[D:\works\201805\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-20T16:10:54+08:00 ] 0.0.0.0 POST /number/allGroupPatientList
+[ info ] localhost:8020/number/allGroupPatientList [运行时间：0.032912s][吞吐率：30.38req/s] [内存消耗：2,665.47kb] [文件加载：44]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allGroupPatientList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------324668952116510307991360',
+  'content-length' => '273',
+  'x-original-url' => '/number/allGroupPatientList',
+  'postman-token' => 'a67183eb-94a7-40ec-b10c-6b05767c06d3',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'group_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Number->allGroupPatientList[ D:\works\201805\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000724s ] mysql:host=localhost;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_group_patient` [ RunTime:0.005115s ]
+[ sql ] [ SQL ] SELECT s.`group_id`,s.`member_id`,m.`member_name`,m.`mobile`,m.`portrait`,m.`sex`,m.`age`,m.`is_type` FROM `jd_group_patient` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 2 and s.group_id = 2 and s.`member_id` = m.`member_id` ) ORDER BY `s`.`add_date`  ASC [ RunTime:0.000473s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_group_patient` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 2 and s.group_id = 2 and s.`member_id` = m.`member_id` ) LIMIT 1 [ RunTime:0.000466s ]
+[ error ] [8]未定义数组索引: only_token[D:\works\201805\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-20T16:10:57+08:00 ] 0.0.0.0 POST /number/allGroupPatientList
+[ info ] localhost:8020/number/allGroupPatientList [运行时间：0.019048s][吞吐率：52.50req/s] [内存消耗：1,721.05kb] [文件加载：37]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allGroupPatientList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------675632286092363664589570',
+  'content-length' => '165',
+  'x-original-url' => '/number/allGroupPatientList',
+  'postman-token' => '4b909d4b-c51e-4269-a17d-22cf9f7bb18a',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Number->allGroupPatientList[ D:\works\201805\judeng\application\home\controller\Number.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: group_id[D:\works\201805\judeng\application\home\controller\Number.php:269]
+[ error ] [8]未定义数组索引: only_token[D:\works\201805\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-20T16:11:50+08:00 ] 0.0.0.0 POST /number/allPatient
+[ info ] localhost:8020/number/allPatient [运行时间：0.047636s][吞吐率：20.99req/s] [内存消耗：2,679.90kb] [文件加载：44]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allPatient',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------577225645890018300935817',
+  'content-length' => '379',
+  'x-original-url' => '/number/allPatient',
+  'postman-token' => '01874c09-8064-4c34-9dea-ec5a1bd64335',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'type' => '1',
+  'order_id' => '168',
+)
+[ info ] [ RUN ] app\home\controller\Number->allPatient[ D:\works\201805\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: group_id[D:\works\201805\judeng\application\home\controller\Number.php:123]
+[ error ] [8]未定义数组索引: title[D:\works\201805\judeng\application\home\controller\Number.php:133]
+[ error ] [8]未定义数组索引: title[D:\works\201805\judeng\application\home\controller\Number.php:133]
+[ error ] [8]未定义数组索引: title[D:\works\201805\judeng\application\home\controller\Number.php:133]
+[ error ] [8]未定义数组索引: title[D:\works\201805\judeng\application\home\controller\Number.php:148]
+[ error ] [8]未定义数组索引: title[D:\works\201805\judeng\application\home\controller\Number.php:148]
+[ error ] [8]未定义数组索引: title[D:\works\201805\judeng\application\home\controller\Number.php:148]
+[ error ] [8]未定义数组索引: only_token[D:\works\201805\judeng\application\common.php:82]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000708s ] mysql:host=localhost;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.007138s ]
+[ sql ] [ SQL ] SELECT s.`member_id`,s.`inquisition_name`,s.`inquisition`,m.`member_name`,m.`mobile`,m.`portrait`,m.`sex`,m.`age`,m.`is_type` FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 2 and s.`member_id` = m.`member_id` and (m.`member_name` like '%%' or m.`mobile` like '%%' or s.`grouping` like '%%') ) ORDER BY `s`.`inquisition`  DESC [ RunTime:0.000587s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 2 and s.`member_id` = m.`member_id` and (m.`member_name` like '%%' or m.`mobile` like '%%' or s.`grouping` like '%%') ) LIMIT 1 [ RunTime:0.000334s ]
+---------------------------------------------------------------
+[ 2018-05-20T16:12:03+08:00 ] 0.0.0.0 POST /number/allPatient
+[ info ] localhost:8020/number/allPatient [运行时间：0.045528s][吞吐率：21.96req/s] [内存消耗：2,682.40kb] [文件加载：44]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allPatient',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------440922221327794552316357',
+  'content-length' => '378',
+  'x-original-url' => '/number/allPatient',
+  'postman-token' => '6065e8fc-aaee-4983-bd61-94229a4a3b7b',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'title' => '1',
+  'group_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Number->allPatient[ D:\works\201805\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010033s ] mysql:host=localhost;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_patient_group` [ RunTime:0.005250s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_patient_group` WHERE  (  group_id = 2 ) LIMIT 1 [ RunTime:0.000395s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.005188s ]
+[ sql ] [ SQL ] SELECT s.`member_id`,s.`inquisition_name`,s.`inquisition`,m.`member_name`,m.`mobile`,m.`portrait`,m.`sex`,m.`age`,m.`is_type` FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 2 and s.`member_id` = m.`member_id` and (m.`member_name` like '%1%' or m.`mobile` like '%1%' or s.`grouping` like '%1%') ) ORDER BY `s`.`inquisition`  DESC [ RunTime:0.000534s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 2 and s.`member_id` = m.`member_id` and (m.`member_name` like '%1%' or m.`mobile` like '%1%' or s.`grouping` like '%1%') ) LIMIT 1 [ RunTime:0.000333s ]
+[ error ] [8]未定义数组索引: only_token[D:\works\201805\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-20T16:24:30+08:00 ] 0.0.0.0 POST /number/allZixunPatient
+[ info ] localhost:8020/number/allZixunPatient [运行时间：0.043272s][吞吐率：23.11req/s] [内存消耗：2,697.02kb] [文件加载：44]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allZixunPatient',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------271648991977175644548970',
+  'content-length' => '378',
+  'x-original-url' => '/number/allZixunPatient',
+  'postman-token' => 'a2de2e58-b92c-40bc-8274-7dbdcb71c20a',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'title' => '1',
+  'group_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Number->allZixunPatient[ D:\works\201805\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003056s ] mysql:host=localhost;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_patient_group` [ RunTime:0.007374s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_patient_group` WHERE  (  group_id = 2 ) LIMIT 1 [ RunTime:0.000285s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.005386s ]
+[ sql ] [ SQL ] SELECT s.`member_id`,s.`inquisition_name`,s.`inquisition`,m.`member_name`,m.`mobile`,m.`portrait`,m.`sex`,m.`age`,m.`is_type` FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 2 and s.`member_id` = m.`member_id` and (m.`member_name` like '%1%' or m.`mobile` like '%1%' or s.`grouping` like '%1%') ) ORDER BY `s`.`inquisition`  DESC [ RunTime:0.000615s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 2 and s.`member_id` = m.`member_id` and (m.`member_name` like '%1%' or m.`mobile` like '%1%' or s.`grouping` like '%1%') ) LIMIT 1 [ RunTime:0.000174s ]
+[ error ] [8]未定义数组索引: only_token[D:\works\201805\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-20T16:27:52+08:00 ] 0.0.0.0 POST /number/allZixunPatient
+[ info ] localhost:8020/number/allZixunPatient [运行时间：1.265735s][吞吐率：0.79req/s] [内存消耗：2,696.90kb] [文件加载：44]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allZixunPatient',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------550749758832248638117047',
+  'content-length' => '378',
+  'x-original-url' => '/number/allZixunPatient',
+  'postman-token' => '338511ab-b52c-4764-bd67-d23fa57ac538',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'title' => '1',
+  'group_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Number->allZixunPatient[ D:\works\201805\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.392527s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_patient_group` [ RunTime:0.139296s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_patient_group` WHERE  (  group_id = 2 ) LIMIT 1 [ RunTime:0.134432s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.287225s ]
+[ sql ] [ SQL ] SELECT s.`member_id`,s.`inquisition_name`,s.`inquisition`,m.`member_name`,m.`mobile`,m.`portrait`,m.`sex`,m.`age`,m.`is_type` FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 2 and s.`member_id` = m.`member_id` and (m.`member_name` like '%1%' or m.`mobile` like '%1%' or s.`grouping` like '%1%') ) ORDER BY `s`.`inquisition`  DESC [ RunTime:0.144905s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 2 and s.`member_id` = m.`member_id` and (m.`member_name` like '%1%' or m.`mobile` like '%1%' or s.`grouping` like '%1%') ) LIMIT 1 [ RunTime:0.135991s ]
+[ error ] [8]未定义数组索引: only_token[D:\works\201805\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-20T16:36:34+08:00 ] 0.0.0.0 POST /number/allConsultationPatient
+[ info ] localhost:8020/number/allConsultationPatient [运行时间：0.860657s][吞吐率：1.16req/s] [内存消耗：2,687.66kb] [文件加载：44]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allConsultationPatient',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------897801628236360046130163',
+  'content-length' => '378',
+  'x-original-url' => '/number/allConsultationPatient',
+  'postman-token' => '5b1ca276-9e85-4364-b18e-e5c1a2ab6591',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'title' => '1',
+  'group_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Number->allConsultationPatient[ D:\works\201805\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.387461s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.152507s ]
+[ sql ] [ SQL ] SELECT s.`member_id`,s.`synopsis`,s.`end_date`,m.`member_name`,m.`mobile`,m.`portrait`,m.`sex`,m.`age`,m.`is_type` FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 2 and s.`member_id` = m.`member_id` and (m.`member_name` like '%1%' or m.`mobile` like '%1%' or s.`grouping` like '%1%') ) ORDER BY `s`.`end_date`  DESC [ RunTime:0.147401s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 2 and s.`member_id` = m.`member_id` and (m.`member_name` like '%1%' or m.`mobile` like '%1%' or s.`grouping` like '%1%') ) LIMIT 1 [ RunTime:0.139832s ]
+[ error ] [8]未定义变量: group[D:\works\201805\judeng\application\home\controller\Number.php:91]
+[ error ] [8]未定义数组索引: only_token[D:\works\201805\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-20T19:07:28+08:00 ] 0.0.0.0 POST /number/findConsultation
+[ info ] localhost:8020/number/findConsultation [运行时间：0.033020s][吞吐率：30.28req/s] [内存消耗：2,679.89kb] [文件加载：44]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'findConsultation',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------788793984347601880206628',
+  'content-length' => '269',
+  'x-original-url' => '/number/findConsultation',
+  'postman-token' => '91e5f73f-4995-4074-9b40-4e47d1f66144',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Number->findConsultation[ D:\works\201805\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [2002]SQLSTATE[HY000] [2002] �׽��ֲ�������һ���޷����ӵ�������
+[D:\works\201805\judeng\thinkphp\library\think\db\Connection.php:293]
+---------------------------------------------------------------
+[ 2018-05-20T19:10:34+08:00 ] 0.0.0.0 POST /number/findConsultation
+[ info ] localhost:8020/number/findConsultation [运行时间：0.040141s][吞吐率：24.91req/s] [内存消耗：2,680.23kb] [文件加载：44]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'findConsultation',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------362974790722395767658563',
+  'content-length' => '269',
+  'x-original-url' => '/number/findConsultation',
+  'postman-token' => 'c063ea7c-bfb0-457c-a9f8-423a4f5bc4cd',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Number->findConsultation[ D:\works\201805\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [2002]SQLSTATE[HY000] [2002] �׽��ֲ�������һ���޷����ӵ�������
+[D:\works\201805\judeng\thinkphp\library\think\db\Connection.php:293]
+---------------------------------------------------------------
+[ 2018-05-20T19:11:08+08:00 ] 0.0.0.0 POST /number/findConsultation
+[ info ] localhost:8020/number/findConsultation [运行时间：1.097622s][吞吐率：0.91req/s] [内存消耗：2,755.77kb] [文件加载：41]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'findConsultation',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------622121590826072564282614',
+  'content-length' => '269',
+  'x-original-url' => '/number/findConsultation',
+  'postman-token' => 'dfda1a8a-f97e-4836-bc81-a92906c0ac0e',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Number->findConsultation[ D:\works\201805\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.448628s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.375857s ]
+[ sql ] [ SQL ] SELECT o.`pay_status`,o.`order_id`,o.`order_sn`,o.`order_status`,o.`patient_id`,o.`order_date`,m.`mobile`,m.`member_name`,m.`sex`,m.`age` FROM `jd_order` `o`,`jd_member` `m` WHERE  (  o.`patient_id` = m.`member_id` and o.order_type = 0 and o.doctor_id = 2 ) ORDER BY `o`.`order_date`  DESC [ RunTime:0.232657s ]
+---------------------------------------------------------------
+[ 2018-05-20T19:11:27+08:00 ] 0.0.0.0 POST /number/findConsultation
+[ info ] localhost:8020/number/findConsultation [运行时间：0.803867s][吞吐率：1.24req/s] [内存消耗：2,891.06kb] [文件加载：44]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'findConsultation',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------008934511873464077119297',
+  'content-length' => '269',
+  'x-original-url' => '/number/findConsultation',
+  'postman-token' => 'f704732f-8f47-4c6a-9ed6-338af85aa88b',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Number->findConsultation[ D:\works\201805\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.414508s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.159856s ]
+[ sql ] [ SQL ] SELECT o.`pay_status`,o.`order_id`,o.`order_sn`,o.`order_status`,o.`patient_id`,o.`order_date`,m.`mobile`,m.`member_name`,m.`sex`,m.`age` FROM `jd_order` `o`,`jd_member` `m` WHERE  (  o.`patient_id` = m.`member_id` and o.order_type = 0 and o.doctor_id = 2 ) ORDER BY `o`.`order_date`  DESC [ RunTime:0.198492s ]
+[ error ] [8]未定义数组索引: only_token[D:\works\201805\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-20T19:13:02+08:00 ] 0.0.0.0 POST /number/findConsultation
+[ info ] localhost:8020/number/findConsultation [运行时间：0.722898s][吞吐率：1.38req/s] [内存消耗：2,858.64kb] [文件加载：44]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'findConsultation',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------868553608594299494243093',
+  'content-length' => '269',
+  'x-original-url' => '/number/findConsultation',
+  'postman-token' => 'db203bf6-687e-4b6e-aa6f-2b2346f5a261',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Number->findConsultation[ D:\works\201805\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.218625s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.143505s ]
+[ sql ] [ SQL ] SELECT o.`pay_status`,o.`order_id`,o.`order_sn`,o.`order_status`,o.`patient_id`,o.`order_date`,m.`mobile`,m.`member_name`,m.`sex`,m.`age` FROM `jd_order` `o`,`jd_member` `m` WHERE  (  o.`patient_id` = m.`member_id` and o.order_type = 0 and o.doctor_id = 2 ) ORDER BY `o`.`order_date`  DESC [ RunTime:0.153210s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_order` `o`,`jd_member` `m` WHERE  (  o.`patient_id` = m.`member_id` and o.order_type = 0 and o.doctor_id = 2 ) LIMIT 1 [ RunTime:0.170166s ]
+[ error ] [8]未定义数组索引: only_token[D:\works\201805\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-20T19:13:52+08:00 ] 0.0.0.0 POST /number/prescriptions
+[ info ] localhost:8020/number/prescriptions [运行时间：0.910595s][吞吐率：1.10req/s] [内存消耗：2,723.98kb] [文件加载：44]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'prescriptions',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------240295235491511745643756',
+  'content-length' => '269',
+  'x-original-url' => '/number/prescriptions',
+  'postman-token' => 'de767b45-1c4f-45cc-891f-69b148adb67d',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'type' => '1',
+)
+[ info ] [ RUN ] app\home\controller\Number->prescriptions[ D:\works\201805\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.222217s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.167988s ]
+[ sql ] [ SQL ] SELECT o.`pay_status`,o.`order_id`,o.`order_sn`,o.`order_status`,o.`patient_id`,o.`order_date`,op.`patient_mobile`,op.`patient_name`,op.`patient_sex`,op.`patient_age`,op.`dialectical` FROM `jd_order` `o`,`jd_order_prescription` `op` WHERE  (  o.`order_id` = op.`order_id` and o.order_type = 3 and o.doctor_id = 2  and o.`pay_status` = 0 ) ORDER BY `o`.`order_date`  DESC [ RunTime:0.357933s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_order` `o`,`jd_order_prescription` `op` WHERE  (  o.`order_id` = op.`order_id` and o.order_type = 3 and o.doctor_id = 2  and o.`pay_status` = 0 ) LIMIT 1 [ RunTime:0.133557s ]
+[ error ] [8]未定义数组索引: only_token[D:\works\201805\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-20T19:14:42+08:00 ] 0.0.0.0 POST /number/findConsultation
+[ info ] localhost:8020/number/findConsultation [运行时间：0.787639s][吞吐率：1.27req/s] [内存消耗：2,858.64kb] [文件加载：44]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'findConsultation',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------221969732984886090518922',
+  'content-length' => '269',
+  'x-original-url' => '/number/findConsultation',
+  'postman-token' => '4ebe7638-47c3-4376-b936-cdbdf7d4eb74',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Number->findConsultation[ D:\works\201805\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.267301s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.166851s ]
+[ sql ] [ SQL ] SELECT o.`pay_status`,o.`order_id`,o.`order_sn`,o.`order_status`,o.`patient_id`,o.`order_date`,m.`mobile`,m.`member_name`,m.`sex`,m.`age` FROM `jd_order` `o`,`jd_member` `m` WHERE  (  o.`patient_id` = m.`member_id` and o.order_type = 0 and o.doctor_id = 2 ) ORDER BY `o`.`order_date`  DESC [ RunTime:0.156406s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_order` `o`,`jd_member` `m` WHERE  (  o.`patient_id` = m.`member_id` and o.order_type = 0 and o.doctor_id = 2 ) LIMIT 1 [ RunTime:0.167272s ]
+[ error ] [8]未定义数组索引: only_token[D:\works\201805\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-20T19:31:50+08:00 ] 0.0.0.0 POST /number/updateConsultationPatient
+[ info ] localhost:8020/number/updateConsultationPatient [运行时间：0.624436s][吞吐率：1.60req/s] [内存消耗：2,848.70kb] [文件加载：48]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'updateConsultationPatient',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------761957370812379005235729',
+  'content-length' => '389',
+  'x-original-url' => '/number/updateConsultationPatient',
+  'postman-token' => '162893b8-466a-4eab-a94d-cb29779028a3',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'member_id' => '2',
+  'synopsis' => 'synopsis',
+)
+[ info ] [ RUN ] app\home\controller\Number->updateConsultationPatient[ D:\works\201805\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.259829s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.167591s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` WHERE  (  doctor_id = 2 and member_id = 2 ) LIMIT 1 [ RunTime:0.143719s ]
+[ error ] [4096]Argument 1 passed to think\db\Query::update() must be of the type array, string given, called in D:\works\201805\judeng\application\home\controller\Number.php on line 155 and defined[D:\works\201805\judeng\thinkphp\library\think\db\Query.php:2210]
+[ error ] [2]array_merge(): Argument #2 is not an array[D:\works\201805\judeng\thinkphp\library\think\db\Query.php:2213]
+---------------------------------------------------------------
+[ 2018-05-20T19:32:30+08:00 ] 0.0.0.0 POST /number/updateConsultationPatient
+[ info ] localhost:8020/number/updateConsultationPatient [运行时间：0.578177s][吞吐率：1.73req/s] [内存消耗：2,693.19kb] [文件加载：42]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'updateConsultationPatient',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------231793770929798372267275',
+  'content-length' => '389',
+  'x-original-url' => '/number/updateConsultationPatient',
+  'postman-token' => '94b2589c-2256-48e7-824e-48326c249850',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'member_id' => '2',
+  'synopsis' => 'synopsis',
+)
+[ info ] [ RUN ] app\home\controller\Number->updateConsultationPatient[ D:\works\201805\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.243671s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.154416s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` WHERE  (  doctor_id = 2 and member_id = 2 ) LIMIT 1 [ RunTime:0.148026s ]
+---------------------------------------------------------------
+[ 2018-05-20T19:32:44+08:00 ] 0.0.0.0 POST /number/updateConsultationPatient
+[ info ] localhost:8020/number/updateConsultationPatient [运行时间：0.652803s][吞吐率：1.53req/s] [内存消耗：2,693.12kb] [文件加载：42]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'updateConsultationPatient',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------111136062114998529497692',
+  'content-length' => '389',
+  'x-original-url' => '/number/updateConsultationPatient',
+  'postman-token' => 'f89d5d58-d097-4a44-b84a-d83fa517b95a',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'member_id' => '2',
+  'synopsis' => 'synopsis',
+)
+[ info ] [ RUN ] app\home\controller\Number->updateConsultationPatient[ D:\works\201805\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.301708s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.169103s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` WHERE  (  doctor_id = 2 and member_id = 2 ) LIMIT 1 [ RunTime:0.154813s ]
+---------------------------------------------------------------
+[ 2018-05-20T19:32:49+08:00 ] 0.0.0.0 POST /number/updateConsultationPatient
+[ info ] localhost:8020/number/updateConsultationPatient [运行时间：0.726594s][吞吐率：1.38req/s] [内存消耗：2,693.12kb] [文件加载：42]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'updateConsultationPatient',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------679855484296796752069980',
+  'content-length' => '389',
+  'x-original-url' => '/number/updateConsultationPatient',
+  'postman-token' => '55244688-f02b-42a4-9086-3690d5aea900',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'member_id' => '2',
+  'synopsis' => 'synopsis',
+)
+[ info ] [ RUN ] app\home\controller\Number->updateConsultationPatient[ D:\works\201805\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.248983s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.302703s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` WHERE  (  doctor_id = 2 and member_id = 2 ) LIMIT 1 [ RunTime:0.145241s ]
+---------------------------------------------------------------
+[ 2018-05-20T19:33:15+08:00 ] 0.0.0.0 POST /number/updateConsultationPatient
+[ info ] localhost:8020/number/updateConsultationPatient [运行时间：10.599996s][吞吐率：0.09req/s] [内存消耗：2,848.76kb] [文件加载：48]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'updateConsultationPatient',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------498419706557949709438823',
+  'content-length' => '389',
+  'x-original-url' => '/number/updateConsultationPatient',
+  'postman-token' => '10352ee7-0635-43ed-8350-005bea35c6cc',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'member_id' => '2',
+  'synopsis' => 'synopsis',
+)
+[ info ] [ RUN ] app\home\controller\Number->updateConsultationPatient[ D:\works\201805\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:10.267005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.144270s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` WHERE  (  doctor_id = 2 and member_id = 2 ) LIMIT 1 [ RunTime:0.152497s ]
+[ error ] [4096]Argument 1 passed to think\db\Query::update() must be of the type array, string given, called in D:\works\201805\judeng\application\home\controller\Number.php on line 155 and defined[D:\works\201805\judeng\thinkphp\library\think\db\Query.php:2210]
+[ error ] [2]array_merge(): Argument #2 is not an array[D:\works\201805\judeng\thinkphp\library\think\db\Query.php:2213]
+---------------------------------------------------------------
+[ 2018-05-20T19:34:45+08:00 ] 0.0.0.0 POST /number/updateConsultationPatient
+[ info ] localhost:8020/number/updateConsultationPatient [运行时间：0.709208s][吞吐率：1.41req/s] [内存消耗：2,783.55kb] [文件加载：45]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'updateConsultationPatient',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------219209383296669360832467',
+  'content-length' => '389',
+  'x-original-url' => '/number/updateConsultationPatient',
+  'postman-token' => '13ed92bf-8c4b-4716-b6ff-7767ed0c2e04',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'member_id' => '3',
+  'synopsis' => 'synopsis',
+)
+[ info ] [ RUN ] app\home\controller\Number->updateConsultationPatient[ D:\works\201805\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.237765s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.146698s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` WHERE  (  doctor_id = 2 and member_id = 3 ) LIMIT 1 [ RunTime:0.148951s ]
+[ sql ] [ SQL ] INSERT INTO `jd_doctor_member` (`member_id` , `doctor_id` , `inquisition_name` , `inquisition` , `grouping` , `end_date` , `synopsis` , `add_date`) VALUES (3 , 2 , '问诊' , 1526816085 , '' , 1526816085 , 'synopsis' , 1526816085) [ RunTime:0.143729s ]
+[ error ] [8]未定义数组索引: only_token[D:\works\201805\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-20T19:35:37+08:00 ] 0.0.0.0 POST /number/updateConsultationPatient
+[ info ] localhost:8020/number/updateConsultationPatient [运行时间：2.042872s][吞吐率：0.49req/s] [内存消耗：2,783.59kb] [文件加载：45]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'updateConsultationPatient',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------787510822289359049739244',
+  'content-length' => '389',
+  'x-original-url' => '/number/updateConsultationPatient',
+  'postman-token' => '5c17a6a5-2968-4776-a836-ac8347dc3e03',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'member_id' => '3',
+  'synopsis' => 'synopsis',
+)
+[ info ] [ RUN ] app\home\controller\Number->updateConsultationPatient[ D:\works\201805\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.078094s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.221624s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` WHERE  (  doctor_id = 2 and member_id = 3 ) LIMIT 1 [ RunTime:0.168822s ]
+[ sql ] [ SQL ] INSERT INTO `jd_doctor_member` (`member_id` , `doctor_id` , `inquisition_name` , `inquisition` , `grouping` , `end_date` , `synopsis` , `add_date`) VALUES (3 , 2 , '问诊' , 1526816135 , '' , 1526816135 , 'synopsis' , 1526816135) [ RunTime:0.539739s ]
+[ error ] [8]未定义数组索引: only_token[D:\works\201805\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-20T19:35:39+08:00 ] 0.0.0.0 POST /number/updateConsultationPatient
+[ info ] localhost:8020/number/updateConsultationPatient [运行时间：0.657015s][吞吐率：1.52req/s] [内存消耗：2,837.70kb] [文件加载：47]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'updateConsultationPatient',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------190785302318846992466482',
+  'content-length' => '389',
+  'x-original-url' => '/number/updateConsultationPatient',
+  'postman-token' => '6ca90707-663d-4117-bd3d-ec214f2d0151',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'member_id' => '3',
+  'synopsis' => 'synopsis',
+)
+[ info ] [ RUN ] app\home\controller\Number->updateConsultationPatient[ D:\works\201805\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.279585s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.187203s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` WHERE  (  doctor_id = 2 and member_id = 3 ) LIMIT 1 [ RunTime:0.143244s ]
+[ error ] [0]数据表字段不存在:[0][D:\works\201805\judeng\thinkphp\library\think\db\Builder.php:109]
+---------------------------------------------------------------
+[ 2018-05-20T19:37:11+08:00 ] 0.0.0.0 POST /number/updateConsultationPatient
+[ info ] localhost:8020/number/updateConsultationPatient [运行时间：0.798976s][吞吐率：1.25req/s] [内存消耗：2,776.68kb] [文件加载：45]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'updateConsultationPatient',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------495129271519997912933239',
+  'content-length' => '389',
+  'x-original-url' => '/number/updateConsultationPatient',
+  'postman-token' => '49042fb6-5550-464d-9630-104c6545122c',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'member_id' => '3',
+  'synopsis' => 'synopsis',
+)
+[ info ] [ RUN ] app\home\controller\Number->updateConsultationPatient[ D:\works\201805\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.360694s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.140266s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` WHERE  (  doctor_id = 2 and member_id = 3 ) LIMIT 1 [ RunTime:0.122306s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_member`  SET `synopsis`='synopsis',`end_date`=1526816230  WHERE  (  doctor_id = 2 and member_id = 3 ) [ RunTime:0.141458s ]
+[ error ] [8]未定义数组索引: only_token[D:\works\201805\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-20T19:37:15+08:00 ] 0.0.0.0 POST /number/updateConsultationPatient
+[ info ] localhost:8020/number/updateConsultationPatient [运行时间：0.694324s][吞吐率：1.44req/s] [内存消耗：2,776.73kb] [文件加载：45]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'updateConsultationPatient',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------956607018045193765264663',
+  'content-length' => '390',
+  'x-original-url' => '/number/updateConsultationPatient',
+  'postman-token' => '80c39e31-7159-4763-a6c3-8e5d9588b897',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'member_id' => '3',
+  'synopsis' => 'synopsis1',
+)
+[ info ] [ RUN ] app\home\controller\Number->updateConsultationPatient[ D:\works\201805\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.187429s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.141994s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` WHERE  (  doctor_id = 2 and member_id = 3 ) LIMIT 1 [ RunTime:0.156939s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_member`  SET `synopsis`='synopsis1',`end_date`=1526816234  WHERE  (  doctor_id = 2 and member_id = 3 ) [ RunTime:0.170523s ]
+[ error ] [8]未定义数组索引: only_token[D:\works\201805\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-20T19:37:17+08:00 ] 0.0.0.0 POST /number/updateConsultationPatient
+[ info ] localhost:8020/number/updateConsultationPatient [运行时间：0.679182s][吞吐率：1.47req/s] [内存消耗：2,776.73kb] [文件加载：45]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'updateConsultationPatient',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------030811943499489007528441',
+  'content-length' => '390',
+  'x-original-url' => '/number/updateConsultationPatient',
+  'postman-token' => '566f39d9-3495-4de4-b971-1a8991e5b8ff',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'member_id' => '3',
+  'synopsis' => 'synopsis1',
+)
+[ info ] [ RUN ] app\home\controller\Number->updateConsultationPatient[ D:\works\201805\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.248118s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.127130s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` WHERE  (  doctor_id = 2 and member_id = 3 ) LIMIT 1 [ RunTime:0.128518s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_member`  SET `synopsis`='synopsis1',`end_date`=1526816236  WHERE  (  doctor_id = 2 and member_id = 3 ) [ RunTime:0.150352s ]
+[ error ] [8]未定义数组索引: only_token[D:\works\201805\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-20T20:34:22+08:00 ] 0.0.0.0 POST /home/find
+[ info ] localhost:8020/home/find [运行时间：1.876226s][吞吐率：0.53req/s] [内存消耗：2,632.27kb] [文件加载：44]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'home',
+    2 => 'find',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------736619953982030822664862',
+  'content-length' => '390',
+  'x-original-url' => '/home/find',
+  'postman-token' => '24d74834-1d81-4269-9e9b-80f8b8ec4060',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'member_id' => '3',
+  'synopsis' => 'synopsis1',
+)
+[ info ] [ RUN ] app\home\controller\Home->find[ D:\works\201805\judeng\application\home\controller\Home.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.263313s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.134020s ]
+[ sql ] [ SQL ] SELECT `member_name`,`portrait`,`is_certified` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.139359s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.272277s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_order` `o`,`jd_order_prescription` `op` WHERE  (  o.`order_id` = op.`order_id` and o.order_type = 3 and o.doctor_id = 2 ) LIMIT 1 [ RunTime:0.459672s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.144611s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 2 and s.`member_id` = m.`member_id` and (m.`member_name` like '%%' or m.`mobile` like '%%' or s.`grouping` like '%%') ) LIMIT 1 [ RunTime:0.136347s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_service_evaluation` [ RunTime:0.143543s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_service_evaluation` `s`,`jd_member` `m` WHERE  (  s.is_show = 1 and s.doctor_id = 2 and s.`member_id` = m.`member_id` ) LIMIT 1 [ RunTime:0.128302s ]
+[ error ] [8]未定义数组索引: title[D:\works\201805\judeng\application\home\controller\Home.php:34]
+[ error ] [8]未定义数组索引: title[D:\works\201805\judeng\application\home\controller\Home.php:34]
+[ error ] [8]未定义数组索引: title[D:\works\201805\judeng\application\home\controller\Home.php:34]
+[ error ] [8]未定义数组索引: only_token[D:\works\201805\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-20T20:35:59+08:00 ] 0.0.0.0 POST /home/find
+[ info ] localhost:8020/home/find [运行时间：1.835713s][吞吐率：0.54req/s] [内存消耗：3,060.13kb] [文件加载：46]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'home',
+    2 => 'find',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------803086124361966342381437',
+  'content-length' => '390',
+  'x-original-url' => '/home/find',
+  'postman-token' => '4a56d7d2-823e-4f16-87e7-dfb965988611',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'member_id' => '3',
+  'synopsis' => 'synopsis1',
+)
+[ info ] [ RUN ] app\home\controller\Home->find[ D:\works\201805\judeng\application\home\controller\Home.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.214028s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.142877s ]
+[ sql ] [ SQL ] SELECT `member_name`,`portrait`,`is_certified` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.138533s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.260532s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_order` `o`,`jd_order_prescription` `op` WHERE  (  o.`order_id` = op.`order_id` and o.order_type = 3 and o.doctor_id = 2 ) LIMIT 1 [ RunTime:0.185987s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.137432s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 2 and s.`member_id` = m.`member_id` and (m.`member_name` like '%%' or m.`mobile` like '%%' or s.`grouping` like '%%') ) LIMIT 1 [ RunTime:0.142486s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_service_evaluation` [ RunTime:0.137123s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_service_evaluation` `s`,`jd_member` `m` WHERE  (  s.is_show = 1 and s.doctor_id = 2 and s.`member_id` = m.`member_id` ) LIMIT 1 [ RunTime:0.142368s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.136863s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.141436s ]
+[ error ] [8]未定义数组索引: title[D:\works\201805\judeng\application\home\controller\Home.php:34]
+[ error ] [8]未定义数组索引: title[D:\works\201805\judeng\application\home\controller\Home.php:34]
+[ error ] [8]未定义数组索引: title[D:\works\201805\judeng\application\home\controller\Home.php:34]
+[ error ] [8]未定义数组索引: only_token[D:\works\201805\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-20T22:49:51+08:00 ] 0.0.0.0 POST /other/getAd
+[ info ] localhost:8020/other/getAd [运行时间：0.026952s][吞吐率：37.10req/s] [内存消耗：1,669.98kb] [文件加载：37]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'other',
+    2 => 'getAd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------470620138998944770310192',
+  'content-length' => '390',
+  'x-original-url' => '/other/getAd',
+  'postman-token' => '9dc63aa6-726f-40df-aa70-66e84412abcd',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'member_id' => '3',
+  'synopsis' => 'synopsis1',
+)
+[ info ] [ RUN ] app\home\controller\Other->getAd[ D:\works\201805\judeng\application\home\controller\Other.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: type_id[D:\works\201805\judeng\application\home\controller\Other.php:245]
+[ error ] [8]未定义数组索引: only_token[D:\works\201805\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-20T22:50:03+08:00 ] 0.0.0.0 POST /other/getAd
+[ info ] localhost:8020/other/getAd [运行时间：0.878272s][吞吐率：1.14req/s] [内存消耗：2,615.84kb] [文件加载：44]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'other',
+    2 => 'getAd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------595086786278052636492858',
+  'content-length' => '497',
+  'x-original-url' => '/other/getAd',
+  'postman-token' => '08b52ff3-be21-4036-8b5d-e6bbbfda731e',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'member_id' => '3',
+  'synopsis' => 'synopsis1',
+  'type_id' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Other->getAd[ D:\works\201805\judeng\application\home\controller\Other.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.298063s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_ad` [ RunTime:0.385324s ]
+[ sql ] [ SQL ] SELECT `ad_title`,`ad_img`,`ad_url`,`add_date` FROM `jd_ad` WHERE  (  type_id = 0 and is_display = 1 ) ORDER BY `ad_sort` ASC [ RunTime:0.163961s ]
+[ error ] [8]未定义数组索引: only_token[D:\works\201805\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-20T22:54:00+08:00 ] 0.0.0.0 POST /home/find
+[ info ] localhost:8020/home/find [运行时间：1.746557s][吞吐率：0.57req/s] [内存消耗：3,060.13kb] [文件加载：46]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'home',
+    2 => 'find',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------257507639222601879659892',
+  'content-length' => '390',
+  'x-original-url' => '/home/find',
+  'postman-token' => '65275ad8-d623-46e6-9998-2f0d04393dd6',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'member_id' => '3',
+  'synopsis' => 'synopsis1',
+)
+[ info ] [ RUN ] app\home\controller\Home->find[ D:\works\201805\judeng\application\home\controller\Home.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.263873s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.087548s ]
+[ sql ] [ SQL ] SELECT `member_name`,`portrait`,`is_certified` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.108138s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.069857s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_order` `o`,`jd_order_prescription` `op` WHERE  (  o.`order_id` = op.`order_id` and o.order_type = 3 and o.doctor_id = 2 ) LIMIT 1 [ RunTime:0.072972s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.073862s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 2 and s.`member_id` = m.`member_id` and (m.`member_name` like '%%' or m.`mobile` like '%%' or s.`grouping` like '%%') ) LIMIT 1 [ RunTime:0.065963s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_service_evaluation` [ RunTime:0.117542s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_service_evaluation` `s`,`jd_member` `m` WHERE  (  s.is_show = 1 and s.doctor_id = 2 and s.`member_id` = m.`member_id` ) LIMIT 1 [ RunTime:0.105842s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.217634s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.510394s ]
+[ error ] [8]未定义数组索引: title[D:\works\201805\judeng\application\home\controller\Home.php:34]
+[ error ] [8]未定义数组索引: title[D:\works\201805\judeng\application\home\controller\Home.php:34]
+[ error ] [8]未定义数组索引: title[D:\works\201805\judeng\application\home\controller\Home.php:34]
+[ error ] [8]未定义数组索引: only_token[D:\works\201805\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-20T22:54:04+08:00 ] 0.0.0.0 POST /home/find
+[ info ] localhost:8020/home/find [运行时间：0.940771s][吞吐率：1.06req/s] [内存消耗：3,059.24kb] [文件加载：46]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'home',
+    2 => 'find',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------838229769703918288812255',
+  'content-length' => '165',
+  'x-original-url' => '/home/find',
+  'postman-token' => '2b05b6c2-e2c1-42d4-9118-0af98165b34f',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Home->find[ D:\works\201805\judeng\application\home\controller\Home.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.107141s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.081095s ]
+[ sql ] [ SQL ] SELECT `member_name`,`portrait`,`is_certified` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.068481s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.069854s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_order` `o`,`jd_order_prescription` `op` WHERE  (  o.`order_id` = op.`order_id` and o.order_type = 3 and o.doctor_id = 2 ) LIMIT 1 [ RunTime:0.076717s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.067758s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 2 and s.`member_id` = m.`member_id` and (m.`member_name` like '%%' or m.`mobile` like '%%' or s.`grouping` like '%%') ) LIMIT 1 [ RunTime:0.084918s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_service_evaluation` [ RunTime:0.110002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_service_evaluation` `s`,`jd_member` `m` WHERE  (  s.is_show = 1 and s.doctor_id = 2 and s.`member_id` = m.`member_id` ) LIMIT 1 [ RunTime:0.074875s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.075567s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.071556s ]
+[ error ] [8]未定义数组索引: title[D:\works\201805\judeng\application\home\controller\Home.php:34]
+[ error ] [8]未定义数组索引: title[D:\works\201805\judeng\application\home\controller\Home.php:34]
+[ error ] [8]未定义数组索引: title[D:\works\201805\judeng\application\home\controller\Home.php:34]
+[ error ] [8]未定义数组索引: only_token[D:\works\201805\judeng\application\common.php:82]

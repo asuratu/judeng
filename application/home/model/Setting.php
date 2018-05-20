@@ -10,7 +10,7 @@ class Setting extends Model
         $con = db('sys_setting')->select();
         $configname = array();
         foreach ($con as $val) {
-            $configname[$val['field_name']] = $val['field_desc'];
+            $configname[$val['field_name']] = $val['synopsis'];
         }
         return $configname;
     }
