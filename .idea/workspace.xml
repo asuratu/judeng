@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34203c8e-499c-4b15-a88d-2fca07808af4" name="默认的" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtime/cache/0a/df3e9813f52cf8f9237017cb14bd3a.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/information/~$泰坤堂接口0518.docx" afterPath="$PROJECT_DIR$/information/~$泰坤堂接口0518.docx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/information/王硕泰坤堂接口0518.docx" afterPath="$PROJECT_DIR$/information/王硕泰坤堂接口0518.docx" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/information/~$泰坤堂接口0518.docx" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/home/controller/Notice.php" afterPath="$PROJECT_DIR$/application/home/controller/Notice.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/home/controller/Number.php" afterPath="$PROJECT_DIR$/application/home/controller/Number.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/home/controller/Remind.php" afterPath="$PROJECT_DIR$/application/home/controller/Remind.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/settingConfig.php" afterPath="$PROJECT_DIR$/application/settingConfig.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/log/201805/18.log" afterPath="$PROJECT_DIR$/runtime/log/201805/18.log" />
     </list>
     <ignored path="jdapi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,7 +27,7 @@
       <file leaf-file-name="Number.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/home/controller/Number.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1269">
+            <state relative-caret-position="1188">
               <caret line="46" column="83" lean-forward="false" selection-start-line="46" selection-start-column="69" selection-end-line="46" selection-end-column="83" />
               <folding>
                 <element signature="e#37#56#0#PHP" expanded="true" />
@@ -46,8 +39,8 @@
       <file leaf-file-name="Remind.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/home/controller/Remind.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="41" column="48" lean-forward="true" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
+            <state relative-caret-position="783">
+              <caret line="41" column="48" lean-forward="false" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
               <folding>
                 <element signature="e#37#56#0#PHP" expanded="true" />
               </folding>
@@ -68,7 +61,7 @@
       <file leaf-file-name="Weixin.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/home/model/Weixin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
+            <state relative-caret-position="216">
               <caret line="8" column="35" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="35" />
               <folding />
             </state>
@@ -78,7 +71,7 @@
       <file leaf-file-name="Notice.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/home/controller/Notice.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4266">
+            <state relative-caret-position="4374">
               <caret line="163" column="78" lean-forward="false" selection-start-line="163" selection-start-column="78" selection-end-line="163" selection-end-column="78" />
               <folding>
                 <element signature="e#37#56#0#PHP" expanded="true" />
@@ -90,7 +83,7 @@
       <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
+            <state relative-caret-position="810">
               <caret line="38" column="9" lean-forward="false" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
               <folding />
             </state>
@@ -100,7 +93,7 @@
       <file leaf-file-name="Setup.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/home/controller/Setup.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="641">
+            <state relative-caret-position="3456">
               <caret line="132" column="45" lean-forward="false" selection-start-line="132" selection-start-column="45" selection-end-line="132" selection-end-column="45" />
               <folding>
                 <element signature="e#37#56#0#PHP" expanded="true" />
@@ -112,7 +105,7 @@
       <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/home/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-270">
+            <state relative-caret-position="297">
               <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="27" />
               <folding>
                 <marker date="1526615362197" expanded="true" signature="21:27" ph="..." />
@@ -134,7 +127,7 @@
       <file leaf-file-name="Doctor.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/home/controller/Doctor.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
+            <state relative-caret-position="3186">
               <caret line="119" column="9" lean-forward="false" selection-start-line="113" selection-start-column="8" selection-end-line="119" selection-end-column="9" />
               <folding>
                 <element signature="e#37#55#0#PHP" expanded="true" />
@@ -264,6 +257,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -455,7 +449,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -577,12 +570,13 @@
       <workItem from="1526348394760" duration="23641000" />
       <workItem from="1526432462181" duration="18320000" />
       <workItem from="1526521728681" duration="11732000" />
-      <workItem from="1526614801455" duration="17150000" />
+      <workItem from="1526614801455" duration="17424000" />
+      <workItem from="1526864836812" duration="601000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="168507000" />
+    <option name="totallyTimeSpent" value="169382000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -767,7 +761,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
           <caret line="113" column="30" lean-forward="false" selection-start-line="113" selection-start-column="28" selection-end-line="113" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -861,7 +854,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="6" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="18" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -869,7 +861,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -924,7 +915,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/home/model/Weixin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
+        <state relative-caret-position="216">
           <caret line="8" column="35" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="35" />
           <folding />
         </state>
@@ -932,7 +923,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/home/controller/Setup.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="641">
+        <state relative-caret-position="3456">
           <caret line="132" column="45" lean-forward="false" selection-start-line="132" selection-start-column="45" selection-end-line="132" selection-end-column="45" />
           <folding>
             <element signature="e#37#56#0#PHP" expanded="true" />
@@ -942,7 +933,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/home/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-270">
+        <state relative-caret-position="297">
           <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="27" />
           <folding>
             <marker date="1526615362197" expanded="true" signature="21:27" ph="..." />
@@ -952,7 +943,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
+        <state relative-caret-position="810">
           <caret line="38" column="9" lean-forward="false" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
           <folding />
         </state>
@@ -960,7 +951,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/home/controller/Doctor.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
+        <state relative-caret-position="3186">
           <caret line="119" column="9" lean-forward="false" selection-start-line="113" selection-start-column="8" selection-end-line="119" selection-end-column="9" />
           <folding>
             <element signature="e#37#55#0#PHP" expanded="true" />
@@ -970,7 +961,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/home/controller/Notice.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4266">
+        <state relative-caret-position="4374">
           <caret line="163" column="78" lean-forward="false" selection-start-line="163" selection-start-column="78" selection-end-line="163" selection-end-column="78" />
           <folding>
             <element signature="e#37#56#0#PHP" expanded="true" />
@@ -988,7 +979,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/home/controller/Number.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1269">
+        <state relative-caret-position="1188">
           <caret line="46" column="83" lean-forward="false" selection-start-line="46" selection-start-column="69" selection-end-line="46" selection-end-column="83" />
           <folding>
             <element signature="e#37#56#0#PHP" expanded="true" />
@@ -998,8 +989,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/home/controller/Remind.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="41" column="48" lean-forward="true" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
+        <state relative-caret-position="783">
+          <caret line="41" column="48" lean-forward="false" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
           <folding>
             <element signature="e#37#56#0#PHP" expanded="true" />
           </folding>
