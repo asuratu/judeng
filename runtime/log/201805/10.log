@@ -1,0 +1,2075 @@
+---------------------------------------------------------------
+[ 2018-05-10T00:03:26+08:00 ] 0.0.0.0 POST /prescription/checkTaboo
+[ info ] localhost:7037/prescription/checkTaboo [运行时间：0.033902s][吞吐率：29.50req/s] [内存消耗：1,928.92kb] [文件加载：44]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'checkTaboo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryCSf9e7h2BwrWM1Hx',
+  'content-length' => '135',
+  'x-original-url' => '/prescription/checkTaboo',
+  'postman-token' => '0f7352f7-7c6f-5239-8a15-5d093a2239da',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'str' => 'b',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->checkTaboo[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-10T00:05:58+08:00 ] 0.0.0.0 POST /prescription/getSimilarDrug
+[ info ] localhost:7037/prescription/getSimilarDrug [运行时间：0.494855s][吞吐率：2.02req/s] [内存消耗：2,974.06kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getSimilarDrug',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary1P29M3KXCzNqt77z',
+  'content-length' => '238',
+  'x-original-url' => '/prescription/getSimilarDrug',
+  'postman-token' => 'f69c1818-e6db-cc31-eff1-dde4293b339a',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'prescription_id' => '1',
+  'str' => 'b',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getSimilarDrug[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.184104s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug` [ RunTime:0.128186s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`drug_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `keywords` LIKE '%B%' ORDER BY `add_date` ASC [ RunTime:0.111761s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-10T00:06:30+08:00 ] 0.0.0.0 POST /prescription/getSimilarDrug
+[ info ] localhost:7037/prescription/getSimilarDrug [运行时间：0.668388s][吞吐率：1.50req/s] [内存消耗：2,966.22kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getSimilarDrug',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryS7oTa5ylvzW4D7gp',
+  'content-length' => '240',
+  'x-original-url' => '/prescription/getSimilarDrug',
+  'postman-token' => 'b3149707-11b1-9c15-2589-e110d63e6316',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'prescription_id' => '1',
+  'str' => 'cbm',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getSimilarDrug[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.323400s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug` [ RunTime:0.117294s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`drug_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `keywords` LIKE '%CBM%' ORDER BY `add_date` ASC [ RunTime:0.166239s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-10T00:17:07+08:00 ] 0.0.0.0 POST /prescription/checkTaboo
+[ info ] localhost:7037/prescription/checkTaboo [运行时间：0.043837s][吞吐率：22.81req/s] [内存消耗：1,929.03kb] [文件加载：44]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'checkTaboo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarywQsUv9ISYTRgGGKC',
+  'content-length' => '223',
+  'x-original-url' => '/prescription/checkTaboo',
+  'postman-token' => '6e61a692-20ce-6cb8-3b27-894eaa003604',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'tabooStr' => 'WyJcdTVkZGRcdTRlNGMiLCJcdTVkZGRcdTRlNGMiLCJcdTk2NDRcdTViNTAiLCJcdTUzNGFcdTU5MGYiXQ==',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->checkTaboo[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-10T00:18:03+08:00 ] 0.0.0.0 POST /prescription/checkTaboo
+[ info ] localhost:7037/prescription/checkTaboo [运行时间：0.041872s][吞吐率：23.88req/s] [内存消耗：1,929.27kb] [文件加载：44]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'checkTaboo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryDuf5uPUIL5AxnDo4',
+  'content-length' => '223',
+  'x-original-url' => '/prescription/checkTaboo',
+  'postman-token' => '97bd1510-69ba-6f7e-5a48-42e3427b156a',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'tabooStr' => 'WyJcdTVkZGRcdTRlNGMiLCJcdTVkZGRcdTRlNGMiLCJcdTk2NDRcdTViNTAiLCJcdTUzNGFcdTU5MGYiXQ==',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->checkTaboo[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-10T00:22:11+08:00 ] 0.0.0.0 POST /prescription/checkTaboo
+[ info ] localhost:7037/prescription/checkTaboo [运行时间：0.547774s][吞吐率：1.83req/s] [内存消耗：3,029.01kb] [文件加载：58]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'checkTaboo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryl5AQLScUQzkE6yE2',
+  'content-length' => '223',
+  'x-original-url' => '/prescription/checkTaboo',
+  'postman-token' => 'dfccfdf8-dd39-196a-5c5f-6badd2f5ee55',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'tabooStr' => 'WyJcdTVkZGRcdTRlNGMiLCJcdTVkZGRcdTRlNGMiLCJcdTk2NDRcdTViNTAiLCJcdTUzNGFcdTU5MGYiXQ==',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->checkTaboo[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.286981s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug` [ RunTime:0.104169s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'name' in 'where clause'[D:\workLP\20180502\judeng\wwwroot\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-05-10T00:22:38+08:00 ] 0.0.0.0 POST /prescription/checkTaboo
+[ info ] localhost:7037/prescription/checkTaboo [运行时间：0.459622s][吞吐率：2.18req/s] [内存消耗：2,871.70kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'checkTaboo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryv4Wm3uMh2f9qw2mb',
+  'content-length' => '223',
+  'x-original-url' => '/prescription/checkTaboo',
+  'postman-token' => '027f5558-d2a3-44fb-0edd-679711004ce1',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'tabooStr' => 'WyJcdTVkZGRcdTRlNGMiLCJcdTVkZGRcdTRlNGMiLCJcdTk2NDRcdTViNTAiLCJcdTUzNGFcdTU5MGYiXQ==',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->checkTaboo[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.164819s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_record` [ RunTime:0.117988s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = '川乌' LIMIT 1 [ RunTime:0.119889s ]
+---------------------------------------------------------------
+[ 2018-05-10T00:26:22+08:00 ] 0.0.0.0 POST /prescription/checkTaboo
+[ info ] localhost:7037/prescription/checkTaboo [运行时间：0.526955s][吞吐率：1.90req/s] [内存消耗：2,873.77kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'checkTaboo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryXzk8YvzbXqYnJf6B',
+  'content-length' => '223',
+  'x-original-url' => '/prescription/checkTaboo',
+  'postman-token' => 'e60c76a2-0587-3e53-5165-47803178e43c',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'tabooStr' => 'WyJcdTVkZGRcdTRlNGMiLCJcdTVkZGRcdTRlNGMiLCJcdTk2NDRcdTViNTAiLCJcdTUzNGFcdTU5MGYiXQ==',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->checkTaboo[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.250616s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_record` [ RunTime:0.108566s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = '川乌' LIMIT 1 [ RunTime:0.107981s ]
+---------------------------------------------------------------
+[ 2018-05-10T00:26:51+08:00 ] 0.0.0.0 POST /prescription/checkTaboo
+[ info ] localhost:7037/prescription/checkTaboo [运行时间：0.614679s][吞吐率：1.63req/s] [内存消耗：2,876.63kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'checkTaboo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary04ceCh0u6ujeUiqw',
+  'content-length' => '223',
+  'x-original-url' => '/prescription/checkTaboo',
+  'postman-token' => '5885e0dc-2cd2-58b0-435c-69139edc9d4e',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'tabooStr' => 'WyJcdTVkZGRcdTRlNGMiLCJcdTVkZGRcdTRlNGMiLCJcdTk2NDRcdTViNTAiLCJcdTUzNGFcdTU5MGYiXQ==',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->checkTaboo[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.255592s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_record` [ RunTime:0.096093s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = '川乌' LIMIT 1 [ RunTime:0.102199s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `key` = 2  AND `type` = 0 LIMIT 1 [ RunTime:0.105206s ]
+---------------------------------------------------------------
+[ 2018-05-10T00:27:05+08:00 ] 0.0.0.0 POST /prescription/checkTaboo
+[ info ] localhost:7037/prescription/checkTaboo [运行时间：0.559441s][吞吐率：1.79req/s] [内存消耗：2,885.14kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'checkTaboo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryOXgObHP08zZB31wC',
+  'content-length' => '223',
+  'x-original-url' => '/prescription/checkTaboo',
+  'postman-token' => '5c8af965-4cd2-2204-365b-bcf0c4da74e2',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'tabooStr' => 'WyJcdTVkZGRcdTRlNGMiLCJcdTVkZGRcdTRlNGMiLCJcdTk2NDRcdTViNTAiLCJcdTUzNGFcdTU5MGYiXQ==',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->checkTaboo[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.160087s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_record` [ RunTime:0.107904s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = '川乌' LIMIT 1 [ RunTime:0.114604s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `key` = 2  AND `type` = 0 [ RunTime:0.118736s ]
+---------------------------------------------------------------
+[ 2018-05-10T00:32:24+08:00 ] 0.0.0.0 POST /prescription/checkTaboo
+[ info ] localhost:7037/prescription/checkTaboo [运行时间：1.191327s][吞吐率：0.84req/s] [内存消耗：2,963.35kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'checkTaboo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryzKQpTBxCdZWBYccp',
+  'content-length' => '223',
+  'x-original-url' => '/prescription/checkTaboo',
+  'postman-token' => '24e8b9f2-9094-52a3-107c-219133a45408',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'tabooStr' => 'WyJcdTVkZGRcdTRlNGMiLCJcdTVkZGRcdTRlNGMiLCJcdTk2NDRcdTViNTAiLCJcdTUzNGFcdTU5MGYiXQ==',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->checkTaboo[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.288530s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_record` [ RunTime:0.098725s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = '川乌' LIMIT 1 [ RunTime:0.125929s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `key` = 2  AND `type` = 0 [ RunTime:0.167716s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = '附子' LIMIT 1 [ RunTime:0.105645s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `key` = 2  AND `type` = 0 [ RunTime:0.109759s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = '半夏' LIMIT 1 [ RunTime:0.106780s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `key` = 2  AND `type` = 1 [ RunTime:0.116135s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-10T00:33:30+08:00 ] 0.0.0.0 POST /prescription/checkTaboo
+[ info ] localhost:7037/prescription/checkTaboo [运行时间：0.618335s][吞吐率：1.62req/s] [内存消耗：2,965.16kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'checkTaboo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryQ6TZBtl8iJcnkLS4',
+  'content-length' => '223',
+  'x-original-url' => '/prescription/checkTaboo',
+  'postman-token' => '25c17701-f8e5-9f16-9e9f-594216453b2c',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'tabooStr' => 'WyJcdTVkZGRcdTRlNGMiLCJcdTVkZGRcdTRlNGMiLCJcdTk2NDRcdTViNTAiLCJcdTUzNGFcdTU5MGYiXQ==',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->checkTaboo[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.231085s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_record` [ RunTime:0.115962s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = '川乌' LIMIT 1 [ RunTime:0.106585s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `key` = 2  AND `type` = 0 [ RunTime:0.095459s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-10T00:35:05+08:00 ] 0.0.0.0 POST /prescription/checkTaboo
+[ info ] localhost:7037/prescription/checkTaboo [运行时间：0.516541s][吞吐率：1.94req/s] [内存消耗：2,965.16kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'checkTaboo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryrFcXAnBAbMBsCaRA',
+  'content-length' => '223',
+  'x-original-url' => '/prescription/checkTaboo',
+  'postman-token' => 'b23f70c2-4e34-616a-2683-325345b6755e',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'tabooStr' => 'WyJcdTVkZGRcdTRlNGMiLCJcdTVkZGRcdTRlNGMiLCJcdTk2NDRcdTViNTAiLCJcdTUzNGFcdTU5MGYiXQ==',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->checkTaboo[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.160001s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_record` [ RunTime:0.094539s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = '川乌' LIMIT 1 [ RunTime:0.102990s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `key` = 2  AND `type` = 0 [ RunTime:0.091474s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-10T00:41:44+08:00 ] 0.0.0.0 POST /prescription/checkTaboo
+[ info ] localhost:7037/prescription/checkTaboo [运行时间：1.148899s][吞吐率：0.87req/s] [内存消耗：2,966.63kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'checkTaboo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryVNivcP4bYEDelWo6',
+  'content-length' => '223',
+  'x-original-url' => '/prescription/checkTaboo',
+  'postman-token' => 'aab9214d-f831-90c8-e7d9-c516d822d730',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'tabooStr' => 'WyJcdTVkZGRcdTRlNGMiLCJcdTVkZGRcdTRlNGMiLCJcdTk2NDRcdTViNTAiLCJcdTUzNGFcdTU5MGYiXQ==',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->checkTaboo[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.298199s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_record` [ RunTime:0.119681s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = '川乌' LIMIT 1 [ RunTime:0.105965s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `key` = 2  AND `type` = 0 [ RunTime:0.102900s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = '附子' LIMIT 1 [ RunTime:0.115908s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `key` = 2  AND `type` = 0 [ RunTime:0.108064s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = '半夏' LIMIT 1 [ RunTime:0.115992s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `key` = 2  AND `type` = 1 [ RunTime:0.096121s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-10T00:47:46+08:00 ] 0.0.0.0 POST /prescription/checkTaboo
+[ info ] localhost:7037/prescription/checkTaboo [运行时间：0.842938s][吞吐率：1.19req/s] [内存消耗：2,963.91kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'checkTaboo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryxFt4O4MX3h0ZYIfp',
+  'content-length' => '183',
+  'x-original-url' => '/prescription/checkTaboo',
+  'postman-token' => 'a607250b-f4fa-c5f9-7021-d8f0fad8b4e3',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'tabooStr' => 'WyJcdTVkZGRcdTRlNGMiLCJcdTUzNGFcdTU5MGYiXQ==',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->checkTaboo[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.264585s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_record` [ RunTime:0.104937s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = '川乌' LIMIT 1 [ RunTime:0.111022s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `key` = 2  AND `type` = 0 [ RunTime:0.114660s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = '半夏' LIMIT 1 [ RunTime:0.094865s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `key` = 2  AND `type` = 1 [ RunTime:0.084710s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-10T00:52:26+08:00 ] 0.0.0.0 POST /prescription/checkTaboo
+[ info ] localhost:7037/prescription/checkTaboo [运行时间：0.687724s][吞吐率：1.45req/s] [内存消耗：2,965.66kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'checkTaboo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryllMhd8Bs37DaCB76',
+  'content-length' => '183',
+  'x-original-url' => '/prescription/checkTaboo',
+  'postman-token' => 'ca674e5f-790a-bfc4-d496-b01ea3e65474',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'tabooStr' => 'WyJcdTVkZGRcdTRlNGMiLCJcdTUzNGFcdTU5MGYiXQ==',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->checkTaboo[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.198653s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_record` [ RunTime:0.115424s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = '川乌'  AND `type` = 1 LIMIT 1 [ RunTime:0.107437s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `key` = 2  AND `type` = 0 [ RunTime:0.094670s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = '半夏'  AND `type` = 1 LIMIT 1 [ RunTime:0.100904s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-10T00:53:14+08:00 ] 0.0.0.0 POST /prescription/checkTaboo
+[ info ] localhost:7037/prescription/checkTaboo [运行时间：0.041416s][吞吐率：24.15req/s] [内存消耗：1,933.63kb] [文件加载：44]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'checkTaboo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryvZALXkz4f5UJAQzB',
+  'content-length' => '183',
+  'x-original-url' => '/prescription/checkTaboo',
+  'postman-token' => '4423f3e8-c1b5-e407-519a-6f7ec97337b4',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'tabooStr' => 'WyJcdTVkZGRcdTRlNGMiLCJcdTUzNGFcdTU5MGYiXQ==',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->checkTaboo[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-10T00:53:36+08:00 ] 0.0.0.0 POST /prescription/checkTaboo
+[ info ] localhost:7037/prescription/checkTaboo [运行时间：1.383834s][吞吐率：0.72req/s] [内存消耗：2,968.18kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'checkTaboo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary1qA27rvf2ot7BEed',
+  'content-length' => '223',
+  'x-original-url' => '/prescription/checkTaboo',
+  'postman-token' => '1d8b9eeb-fc65-ced5-06e9-171247654827',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'tabooStr' => 'WyJcdTVkZGRcdTRlNGMiLCJcdTVkZGRcdTRlNGMiLCJcdTk2NDRcdTViNTAiLCJcdTUzNGFcdTU5MGYiXQ==',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->checkTaboo[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.235242s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_record` [ RunTime:0.111423s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = '川乌'  AND `type` = 1 LIMIT 1 [ RunTime:0.115145s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `key` = 2  AND `type` = 0 [ RunTime:0.112278s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = '附子'  AND `type` = 1 LIMIT 1 [ RunTime:0.095229s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `key` = 2  AND `type` = 0 [ RunTime:0.492902s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = '半夏'  AND `type` = 1 LIMIT 1 [ RunTime:0.153854s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-10T09:26:53+08:00 ] 0.0.0.0 POST /prescription/checkTaboo
+[ info ] localhost:7037/prescription/checkTaboo [运行时间：0.568811s][吞吐率：1.76req/s] [内存消耗：2,968.18kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'checkTaboo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryhtkuvA2IWHnBycMj',
+  'content-length' => '223',
+  'x-original-url' => '/prescription/checkTaboo',
+  'postman-token' => '815046f7-6fb8-8896-afd3-a07c5e1a1300',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'tabooStr' => 'WyJcdTVkZGRcdTRlNGMiLCJcdTVkZGRcdTRlNGMiLCJcdTk2NDRcdTViNTAiLCJcdTUzNGFcdTU5MGYiXQ==',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->checkTaboo[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.094816s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_record` [ RunTime:0.074624s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = '川乌'  AND `type` = 1 LIMIT 1 [ RunTime:0.062238s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `key` = 2  AND `type` = 0 [ RunTime:0.061920s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = '附子'  AND `type` = 1 LIMIT 1 [ RunTime:0.062070s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `key` = 2  AND `type` = 0 [ RunTime:0.062203s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = '半夏'  AND `type` = 1 LIMIT 1 [ RunTime:0.069334s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-10T09:39:11+08:00 ] 0.0.0.0 POST /other/getTitleList
+[ info ] localhost:7037/other/getTitleList [运行时间：21.070622s][吞吐率：0.05req/s] [内存消耗：2,950.08kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'other',
+    2 => 'getTitleList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarypCjXeOX2vQqJPO4t',
+  'content-length' => '144',
+  'x-original-url' => '/other/getTitleList',
+  'postman-token' => '2c3d6192-65d8-cf0d-77d0-4a777cf0540a',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'title_id' => '16,17',
+)
+[ info ] [ RUN ] app\home\controller\Other->getTitleList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Other.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [2002]SQLSTATE[HY000] [2002] �������ӷ���һ��ʱ���û����ȷ�𸴻����ӵ�����û�з�Ӧ�����ӳ���ʧ�ܡ�
+[D:\workLP\20180502\judeng\wwwroot\thinkphp\library\think\db\Connection.php:293]
+---------------------------------------------------------------
+[ 2018-05-10T09:39:42+08:00 ] 0.0.0.0 POST /other/getTitleList
+[ info ] localhost:7037/other/getTitleList [运行时间：21.076820s][吞吐率：0.05req/s] [内存消耗：2,950.08kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'other',
+    2 => 'getTitleList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryzhAEAJKBNk9pO5uJ',
+  'content-length' => '144',
+  'x-original-url' => '/other/getTitleList',
+  'postman-token' => '5bb4c35d-9418-7201-2fbc-795131ec0051',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'title_id' => '16,17',
+)
+[ info ] [ RUN ] app\home\controller\Other->getTitleList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Other.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [2002]SQLSTATE[HY000] [2002] �������ӷ���һ��ʱ���û����ȷ�𸴻����ӵ�����û�з�Ӧ�����ӳ���ʧ�ܡ�
+[D:\workLP\20180502\judeng\wwwroot\thinkphp\library\think\db\Connection.php:293]
+---------------------------------------------------------------
+[ 2018-05-10T09:45:11+08:00 ] 0.0.0.0 POST /other/getTitleList
+[ info ] localhost:7037/other/getTitleList [运行时间：0.267175s][吞吐率：3.74req/s] [内存消耗：2,959.96kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'other',
+    2 => 'getTitleList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryBDr6InKrVFAxTHdh',
+  'content-length' => '144',
+  'x-original-url' => '/other/getTitleList',
+  'postman-token' => '218be02e-ac45-84d6-ac6c-3873a3ecc6f5',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'title_id' => '16,17',
+)
+[ info ] [ RUN ] app\home\controller\Other->getTitleList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Other.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.092878s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_title` [ RunTime:0.062212s ]
+[ sql ] [ SQL ] SELECT `title_id`,`title_name` FROM `jd_title` WHERE  `is_show` = 1 ORDER BY `sort` DESC [ RunTime:0.059017s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-10T09:45:25+08:00 ] 0.0.0.0 POST /other/getTitleList
+[ info ] localhost:7037/other/getTitleList [运行时间：0.245975s][吞吐率：4.07req/s] [内存消耗：2,959.75kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'other',
+    2 => 'getTitleList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryhv9CfeIRYsRnONk1',
+  'content-length' => '139',
+  'x-original-url' => '/other/getTitleList',
+  'postman-token' => '85d23594-a32f-0db1-205f-00ab4ee81418',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'title_id' => '',
+)
+[ info ] [ RUN ] app\home\controller\Other->getTitleList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Other.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.085072s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_title` [ RunTime:0.056631s ]
+[ sql ] [ SQL ] SELECT `title_id`,`title_name` FROM `jd_title` WHERE  `is_show` = 1 ORDER BY `sort` DESC [ RunTime:0.057919s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-10T09:53:20+08:00 ] 0.0.0.0 POST /other/getTitleList
+[ info ] localhost:7037/other/getTitleList [运行时间：0.041870s][吞吐率：23.88req/s] [内存消耗：2,011.80kb] [文件加载：47]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'other',
+    2 => 'getTitleList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryAYKKTzMdtArbdfBn',
+  'content-length' => '139',
+  'x-original-url' => '/other/getTitleList',
+  'postman-token' => 'e86a177f-f1ff-d556-4704-d2e0ee9cc474',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'title_id' => '',
+)
+[ info ] [ RUN ] app\home\controller\Other->getTitleList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Other.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: _time[D:\workLP\20180502\judeng\wwwroot\application\common.php:106]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-10T10:05:11+08:00 ] 0.0.0.0 POST /other/getTitleList
+[ info ] localhost:7037/other/getTitleList [运行时间：0.279626s][吞吐率：3.58req/s] [内存消耗：2,960.20kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'other',
+    2 => 'getTitleList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryMbGRVpZxaoIc9ef9',
+  'content-length' => '364',
+  'x-original-url' => '/other/getTitleList',
+  'postman-token' => '466f547e-d3d7-5070-f048-28003580e215',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'title_id' => '',
+  '_time' => '1525917881',
+  'sign' => '40e197bc7ba309b65ad03e8078727170',
+)
+[ info ] [ RUN ] app\home\controller\Other->getTitleList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Other.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.097402s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_title` [ RunTime:0.067238s ]
+[ sql ] [ SQL ] SELECT `title_id`,`title_name` FROM `jd_title` WHERE  `is_show` = 1 ORDER BY `sort` DESC [ RunTime:0.059772s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-10T10:05:17+08:00 ] 0.0.0.0 POST /other/getTitleList
+[ info ] localhost:7037/other/getTitleList [运行时间：0.038313s][吞吐率：26.10req/s] [内存消耗：2,012.45kb] [文件加载：47]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'other',
+    2 => 'getTitleList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryzCc62LeV1jUWhfrx',
+  'content-length' => '365',
+  'x-original-url' => '/other/getTitleList',
+  'postman-token' => '41678d75-c463-c332-89a6-2c49345649f0',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'title_id' => '',
+  '_time' => '1525917881',
+  'sign' => '40e197bc7ba309b65ad03e80787271701',
+)
+[ info ] [ RUN ] app\home\controller\Other->getTitleList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Other.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-10T10:05:24+08:00 ] 0.0.0.0 POST /other/getTitleList
+[ info ] localhost:7037/other/getTitleList [运行时间：0.290355s][吞吐率：3.44req/s] [内存消耗：2,960.20kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'other',
+    2 => 'getTitleList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary7flCqLYl7ImxBZBB',
+  'content-length' => '364',
+  'x-original-url' => '/other/getTitleList',
+  'postman-token' => 'bd7eeedf-0130-5dbb-1dd8-b0537d18745d',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'title_id' => '',
+  '_time' => '1525917881',
+  'sign' => '40e197bc7ba309b65ad03e8078727170',
+)
+[ info ] [ RUN ] app\home\controller\Other->getTitleList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Other.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.106372s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_title` [ RunTime:0.068147s ]
+[ sql ] [ SQL ] SELECT `title_id`,`title_name` FROM `jd_title` WHERE  `is_show` = 1 ORDER BY `sort` DESC [ RunTime:0.064334s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-10T10:05:28+08:00 ] 0.0.0.0 POST /other/getTitleList
+[ info ] localhost:7037/other/getTitleList [运行时间：0.037176s][吞吐率：26.90req/s] [内存消耗：2,012.45kb] [文件加载：47]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'other',
+    2 => 'getTitleList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryn7tfUdpIDCz6a5ME',
+  'content-length' => '365',
+  'x-original-url' => '/other/getTitleList',
+  'postman-token' => '94f6b762-2c8a-bf63-1308-eeeaeec8d48b',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'title_id' => '',
+  '_time' => '1525917881',
+  'sign' => '40e197bc7ba309b65ad03e80787271709',
+)
+[ info ] [ RUN ] app\home\controller\Other->getTitleList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Other.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-10T10:24:22+08:00 ] 0.0.0.0 POST /prescription/getPrescriptionTypeList
+[ info ] localhost:7037/prescription/getPrescriptionTypeList [运行时间：0.052068s][吞吐率：19.21req/s] [内存消耗：2,002.34kb] [文件加载：47]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getPrescriptionTypeList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryh0nVWZwW8zgfy2Le',
+  'content-length' => '44',
+  'x-original-url' => '/prescription/getPrescriptionTypeList',
+  'postman-token' => 'ac3ac94f-6a7e-39d3-4d56-09759dc96414',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getPrescriptionTypeList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: _time[D:\workLP\20180502\judeng\wwwroot\application\common.php:106]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-10T10:25:11+08:00 ] 0.0.0.0 POST /prescription/getPrescriptionTypeList
+[ info ] localhost:7037/prescription/getPrescriptionTypeList [运行时间：0.272512s][吞吐率：3.67req/s] [内存消耗：2,950.30kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getPrescriptionTypeList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryZUSlncY8DvEHUsGH',
+  'content-length' => '44',
+  'x-original-url' => '/prescription/getPrescriptionTypeList',
+  'postman-token' => '46cdcbbb-2efa-7ddf-8727-632d3eda7083',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getPrescriptionTypeList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.089805s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.067355s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name` FROM `jd_drug_state` WHERE  `is_display` = 1 ORDER BY `sort` DESC [ RunTime:0.059706s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-10T10:25:44+08:00 ] 0.0.0.0 POST /prescription/getPrescriptionTypeList
+[ info ] localhost:7037/prescription/getPrescriptionTypeList [运行时间：0.274867s][吞吐率：3.64req/s] [内存消耗：2,950.30kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getPrescriptionTypeList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryAyBopHpzaNJYBOrZ',
+  'content-length' => '44',
+  'x-original-url' => '/prescription/getPrescriptionTypeList',
+  'postman-token' => 'e531f8fb-551c-d8f3-429b-7f6aa504b078',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getPrescriptionTypeList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.090725s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.062711s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name` FROM `jd_drug_state` WHERE  `is_display` = 1 ORDER BY `sort` DESC [ RunTime:0.061510s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-10T10:33:52+08:00 ] 0.0.0.0 POST /other/getAreaList
+[ info ] localhost:7037/other/getAreaList [运行时间：0.279429s][吞吐率：3.58req/s] [内存消耗：2,957.78kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'other',
+    2 => 'getAreaList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryg3YAA0tjx1OgClz0',
+  'content-length' => '139',
+  'x-original-url' => '/other/getAreaList',
+  'postman-token' => 'f5a8484f-3b9b-9486-8d31-fdca6d187f2b',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'area_id' => '3',
+)
+[ info ] [ RUN ] app\home\controller\Other->getAreaList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Other.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.094973s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_area` [ RunTime:0.065314s ]
+[ sql ] [ SQL ] SELECT `area_id`,`name` FROM `jd_area` WHERE  `is_display` = 1 ORDER BY `sort` DESC [ RunTime:0.062447s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-10T10:38:03+08:00 ] 0.0.0.0 POST /other/getAreaList
+[ info ] localhost:7037/other/getAreaList [运行时间：0.276183s][吞吐率：3.62req/s] [内存消耗：2,958.45kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'other',
+    2 => 'getAreaList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryNZG1sGkA8HnL9WwP',
+  'content-length' => '367',
+  'x-original-url' => '/other/getAreaList',
+  'postman-token' => '118a0841-3880-d036-3041-b5617834d1b4',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'area_id' => '5df9bfda23d0553048b3252692a17a5d',
+  '_time' => '1525919821',
+)
+[ info ] [ RUN ] app\home\controller\Other->getAreaList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Other.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.102383s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_area` [ RunTime:0.060545s ]
+[ sql ] [ SQL ] SELECT `area_id`,`name` FROM `jd_area` WHERE  `is_display` = 1 ORDER BY `sort` DESC [ RunTime:0.061902s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-10T10:38:13+08:00 ] 0.0.0.0 POST /other/getAreaList
+[ info ] localhost:7037/other/getAreaList [运行时间：3.278553s][吞吐率：0.31req/s] [内存消耗：2,958.45kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'other',
+    2 => 'getAreaList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarySa1vjdPUIZgvdMNl',
+  'content-length' => '368',
+  'x-original-url' => '/other/getAreaList',
+  'postman-token' => 'dd2f4c64-c4af-a6b9-81f2-0ac314f9f117',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'area_id' => '5df9bfda23d0553048b3252692a17a5d1',
+  '_time' => '1525919821',
+)
+[ info ] [ RUN ] app\home\controller\Other->getAreaList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Other.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:3.095033s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_area` [ RunTime:0.059688s ]
+[ sql ] [ SQL ] SELECT `area_id`,`name` FROM `jd_area` WHERE  `is_display` = 1 ORDER BY `sort` DESC [ RunTime:0.064790s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-10T10:38:25+08:00 ] 0.0.0.0 POST /other/getAreaList
+[ info ] localhost:7037/other/getAreaList [运行时间：0.043895s][吞吐率：22.78req/s] [内存消耗：2,012.44kb] [文件加载：47]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'other',
+    2 => 'getAreaList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryvh60VLk6pvcD8OeZ',
+  'content-length' => '368',
+  'x-original-url' => '/other/getAreaList',
+  'postman-token' => '24452705-9f81-5855-3399-2a534a7a1c77',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'area_id' => '5df9bfda23d0553048b3252692a17a5d1',
+  '_time' => '1525919821',
+)
+[ info ] [ RUN ] app\home\controller\Other->getAreaList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Other.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: sign[D:\workLP\20180502\judeng\wwwroot\application\common.php:119]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-10T10:38:29+08:00 ] 0.0.0.0 POST /other/getAreaList
+[ info ] localhost:7037/other/getAreaList [运行时间：0.038017s][吞吐率：26.30req/s] [内存消耗：2,012.44kb] [文件加载：47]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'other',
+    2 => 'getAreaList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryG3n1qSTkR9D5Xaii',
+  'content-length' => '367',
+  'x-original-url' => '/other/getAreaList',
+  'postman-token' => '37d59df5-9ea7-9c6e-4a22-979e9309ffd3',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'area_id' => '5df9bfda23d0553048b3252692a17a5d',
+  '_time' => '1525919821',
+)
+[ info ] [ RUN ] app\home\controller\Other->getAreaList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Other.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: sign[D:\workLP\20180502\judeng\wwwroot\application\common.php:119]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-10T10:38:30+08:00 ] 0.0.0.0 POST /other/getAreaList
+[ info ] localhost:7037/other/getAreaList [运行时间：0.039793s][吞吐率：25.13req/s] [内存消耗：2,012.44kb] [文件加载：47]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'other',
+    2 => 'getAreaList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryCGd9jez1hqrdZGKt',
+  'content-length' => '367',
+  'x-original-url' => '/other/getAreaList',
+  'postman-token' => '598acfe8-cb99-0fa7-89a5-df6d39338430',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'area_id' => '5df9bfda23d0553048b3252692a17a5d',
+  '_time' => '1525919821',
+)
+[ info ] [ RUN ] app\home\controller\Other->getAreaList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Other.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: sign[D:\workLP\20180502\judeng\wwwroot\application\common.php:119]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-10T10:38:53+08:00 ] 0.0.0.0 POST /other/getAreaList
+[ info ] localhost:7037/other/getAreaList [运行时间：0.045014s][吞吐率：22.22req/s] [内存消耗：2,012.44kb] [文件加载：47]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'other',
+    2 => 'getAreaList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryW4gHszjocFqTAFY1',
+  'content-length' => '367',
+  'x-original-url' => '/other/getAreaList',
+  'postman-token' => '195347d0-4fc4-05a0-7b79-81c25494ce8e',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'area_id' => '5df9bfda23d0553048b3252692a17a5d',
+  '_time' => '1525919821',
+)
+[ info ] [ RUN ] app\home\controller\Other->getAreaList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Other.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: sign[D:\workLP\20180502\judeng\wwwroot\application\common.php:119]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-10T10:39:05+08:00 ] 0.0.0.0 POST /other/getAreaList
+[ info ] localhost:7037/other/getAreaList [运行时间：0.045464s][吞吐率：22.00req/s] [内存消耗：1,932.24kb] [文件加载：44]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'other',
+    2 => 'getAreaList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary0AVOgtsLVfMr3hJ6',
+  'content-length' => '367',
+  'x-original-url' => '/other/getAreaList',
+  'postman-token' => 'a570d306-eb91-ad3e-5437-520a6ab45077',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'area_id' => '5df9bfda23d0553048b3252692a17a5d',
+  '_time' => '1525919821',
+)
+[ info ] [ RUN ] app\home\controller\Other->getAreaList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Other.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-10T10:39:44+08:00 ] 0.0.0.0 POST /other/getAreaList
+[ info ] localhost:7037/other/getAreaList [运行时间：0.043379s][吞吐率：23.05req/s] [内存消耗：2,011.15kb] [文件加载：47]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'other',
+    2 => 'getAreaList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarycGeEzAIXRsEKhLZB',
+  'content-length' => '367',
+  'x-original-url' => '/other/getAreaList',
+  'postman-token' => 'b25a10df-83d2-2afa-3323-59dc9f676e4d',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'area_id' => '5df9bfda23d0553048b3252692a17a5d',
+  '_time' => '1525919821',
+)
+[ info ] [ RUN ] app\home\controller\Other->getAreaList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Other.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: sign[D:\workLP\20180502\judeng\wwwroot\application\common.php:120]
+---------------------------------------------------------------
+[ 2018-05-10T10:39:58+08:00 ] 0.0.0.0 POST /other/getAreaList
+[ info ] localhost:7037/other/getAreaList [运行时间：0.040658s][吞吐率：24.60req/s] [内存消耗：1,932.90kb] [文件加载：44]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'other',
+    2 => 'getAreaList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary6of0BRBie04wEVRm',
+  'content-length' => '364',
+  'x-original-url' => '/other/getAreaList',
+  'postman-token' => 'f892be6e-0ae2-7d6e-e9e4-0dfe07b14db0',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'area_id' => '3',
+  '_time' => '1525919821',
+  'sign' => '5df9bfda23d0553048b3252692a17a5d',
+)
+[ info ] [ RUN ] app\home\controller\Other->getAreaList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Other.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-10T10:40:10+08:00 ] 0.0.0.0 POST /other/getAreaList
+[ info ] localhost:7037/other/getAreaList [运行时间：0.288473s][吞吐率：3.47req/s] [内存消耗：2,958.65kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'other',
+    2 => 'getAreaList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryAGAiPvXG7aWiqTSo',
+  'content-length' => '364',
+  'x-original-url' => '/other/getAreaList',
+  'postman-token' => '69f0a870-9f7e-0613-5e22-2cb830ae5ebc',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'area_id' => '3',
+  '_time' => '1525919821',
+  'sign' => '5df9bfda23d0553048b3252692a17a5d',
+)
+[ info ] [ RUN ] app\home\controller\Other->getAreaList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Other.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.095576s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_area` [ RunTime:0.071106s ]
+[ sql ] [ SQL ] SELECT `area_id`,`name` FROM `jd_area` WHERE  `is_display` = 1 ORDER BY `sort` DESC [ RunTime:0.067986s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-10T10:40:15+08:00 ] 0.0.0.0 POST /other/getAreaList
+[ info ] localhost:7037/other/getAreaList [运行时间：0.042090s][吞吐率：23.76req/s] [内存消耗：2,012.53kb] [文件加载：47]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'other',
+    2 => 'getAreaList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryX678cIRKjGJ1DpGf',
+  'content-length' => '365',
+  'x-original-url' => '/other/getAreaList',
+  'postman-token' => 'bb35e981-247e-d7e5-56b6-8c6919077ecf',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'area_id' => '3',
+  '_time' => '1525919821',
+  'sign' => '5df9bfda23d0553048b3252692a17a5d1',
+)
+[ info ] [ RUN ] app\home\controller\Other->getAreaList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Other.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-10T10:40:19+08:00 ] 0.0.0.0 POST /other/getAreaList
+[ info ] localhost:7037/other/getAreaList [运行时间：0.272496s][吞吐率：3.67req/s] [内存消耗：2,958.65kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'other',
+    2 => 'getAreaList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarydWtgxrwPawPhtBIb',
+  'content-length' => '364',
+  'x-original-url' => '/other/getAreaList',
+  'postman-token' => '2ce1e939-8515-f824-2223-47e1891568f7',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'area_id' => '3',
+  '_time' => '1525919821',
+  'sign' => '5df9bfda23d0553048b3252692a17a5d',
+)
+[ info ] [ RUN ] app\home\controller\Other->getAreaList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Other.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.091844s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_area` [ RunTime:0.064506s ]
+[ sql ] [ SQL ] SELECT `area_id`,`name` FROM `jd_area` WHERE  `is_display` = 1 ORDER BY `sort` DESC [ RunTime:0.061431s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-10T10:47:22+08:00 ] 0.0.0.0 POST /prescription/getPrescriptionTypeList
+[ info ] localhost:7037/prescription/getPrescriptionTypeList [运行时间：0.276609s][吞吐率：3.62req/s] [内存消耗：2,950.30kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getPrescriptionTypeList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryVWJylhFJjSv2Bk2q',
+  'content-length' => '44',
+  'x-original-url' => '/prescription/getPrescriptionTypeList',
+  'postman-token' => 'eb14f4b8-aaef-1688-ba8c-e8b40ae41a5f',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getPrescriptionTypeList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.090282s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.064829s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name` FROM `jd_drug_state` WHERE  `is_display` = 1 ORDER BY `sort` DESC [ RunTime:0.058541s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-10T10:57:21+08:00 ] 0.0.0.0 POST /prescription/getPrescriptionTypeList
+[ info ] localhost:7037/prescription/getPrescriptionTypeList [运行时间：0.282671s][吞吐率：3.54req/s] [内存消耗：2,950.65kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getPrescriptionTypeList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryAEfa5vAr6SQ3XqN2',
+  'content-length' => '44',
+  'x-original-url' => '/prescription/getPrescriptionTypeList',
+  'postman-token' => 'ce4e0bd5-a729-b3cb-d3f3-05feafd25c7f',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getPrescriptionTypeList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.100905s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.061294s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name` FROM `jd_drug_state` WHERE  `is_display` = 1 ORDER BY `sort` DESC [ RunTime:0.061627s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-10T10:57:28+08:00 ] 0.0.0.0 POST /prescription/getDrugRelationList
+[ info ] localhost:7037/prescription/getDrugRelationList [运行时间：0.038378s][吞吐率：26.06req/s] [内存消耗：1,922.98kb] [文件加载：44]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getDrugRelationList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryjzg1Mf7AzF0dRWkf',
+  'content-length' => '44',
+  'x-original-url' => '/prescription/getDrugRelationList',
+  'postman-token' => '0a3f5128-b175-809f-b8cc-5240f51ff4b8',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getDrugRelationList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-10T13:42:39+08:00 ] 0.0.0.0 POST /prescription/getDrugRelationList
+[ info ] localhost:7037/prescription/getDrugRelationList [运行时间：0.318305s][吞吐率：3.14req/s] [内存消耗：2,890.27kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getDrugRelationList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarycF13IjOor6AWZFA4',
+  'content-length' => '139',
+  'x-original-url' => '/prescription/getDrugRelationList',
+  'postman-token' => '629bb8c5-de65-59cb-d021-be93eb825505',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'area_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getDrugRelationList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.108965s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.071548s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_state` WHERE  `is_display` = 1 ORDER BY `sort` DESC [ RunTime:0.088834s ]
+---------------------------------------------------------------
+[ 2018-05-10T13:44:41+08:00 ] 0.0.0.0 POST /prescription/getDrugRelationList
+[ info ] localhost:7037/prescription/getDrugRelationList [运行时间：0.044041s][吞吐率：22.71req/s] [内存消耗：1,733.80kb] [文件加载：41]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getDrugRelationList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary26lmdiqjm8dAaCVh',
+  'content-length' => '139',
+  'x-original-url' => '/prescription/getDrugRelationList',
+  'postman-token' => 'f748e468-a544-635a-0189-e8ecde66be4f',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'area_id' => '2',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [4]语法错误: unexpected ')'[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php:129]
+---------------------------------------------------------------
+[ 2018-05-10T13:44:58+08:00 ] 0.0.0.0 POST /prescription/getDrugRelationList
+[ info ] localhost:7037/prescription/getDrugRelationList [运行时间：0.335835s][吞吐率：2.98req/s] [内存消耗：3,027.45kb] [文件加载：57]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getDrugRelationList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryhGmLb8yL6JvSGKHb',
+  'content-length' => '139',
+  'x-original-url' => '/prescription/getDrugRelationList',
+  'postman-token' => '5fd5323a-53d0-436e-7718-44d1e45277ac',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'area_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getDrugRelationList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.126444s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.072057s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions` FROM `jd_drug_state` WHERE  `is_display` = 1 ORDER BY `sort` DESC [ RunTime:0.065963s ]
+[ error ] [8]未定义数组索引: tabooStr[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php:137]
+[ error ] [2]array_unique() expects parameter 1 to be array, null given[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php:138]
+---------------------------------------------------------------
+[ 2018-05-10T13:45:10+08:00 ] 0.0.0.0 POST /prescription/getDrugRelationList
+[ info ] localhost:7037/prescription/getDrugRelationList [运行时间：0.319584s][吞吐率：3.13req/s] [内存消耗：3,027.45kb] [文件加载：57]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getDrugRelationList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryyjZH502Us0N4W1Ru',
+  'content-length' => '139',
+  'x-original-url' => '/prescription/getDrugRelationList',
+  'postman-token' => 'd90c3733-4667-2a26-71c4-e394ee9af2d7',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'area_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getDrugRelationList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.108496s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.066056s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions` FROM `jd_drug_state` WHERE  `is_display` = 1 ORDER BY `sort` DESC [ RunTime:0.067326s ]
+[ error ] [8]未定义数组索引: tabooStr[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php:137]
+[ error ] [2]array_unique() expects parameter 1 to be array, null given[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php:138]
+---------------------------------------------------------------
+[ 2018-05-10T13:45:38+08:00 ] 0.0.0.0 POST /prescription/getDrugRelationList
+[ info ] localhost:7037/prescription/getDrugRelationList [运行时间：0.316285s][吞吐率：3.16req/s] [内存消耗：3,027.40kb] [文件加载：57]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getDrugRelationList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarynT8IW6JBWVggh7tD',
+  'content-length' => '139',
+  'x-original-url' => '/prescription/getDrugRelationList',
+  'postman-token' => '47b1d6c5-2e37-521c-8c9b-ae1d7f26e474',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'area_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getDrugRelationList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.112084s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.074271s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions` FROM `jd_drug_state` WHERE  `is_display` = 1 ORDER BY `sort` DESC [ RunTime:0.067049s ]
+[ error ] [8]未定义数组索引: tabooStr[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php:137]
+[ error ] [2]array_unique() expects parameter 1 to be array, null given[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php:138]
+---------------------------------------------------------------
+[ 2018-05-10T13:45:41+08:00 ] 0.0.0.0 POST /prescription/getDrugRelationList
+[ info ] localhost:7037/prescription/getDrugRelationList [运行时间：0.289325s][吞吐率：3.46req/s] [内存消耗：2,881.59kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getDrugRelationList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryWBHl5B8eHIsvKfkB',
+  'content-length' => '139',
+  'x-original-url' => '/prescription/getDrugRelationList',
+  'postman-token' => '78b7240f-1e40-d832-e2fc-cbee876548e5',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'area_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getDrugRelationList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.097980s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.072566s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions` FROM `jd_drug_state` WHERE  `is_display` = 1 ORDER BY `sort` DESC [ RunTime:0.068379s ]
+---------------------------------------------------------------
+[ 2018-05-10T14:59:17+08:00 ] 0.0.0.0 POST /number/addGroupPatient
+[ info ] localhost:8020/number/addGroupPatient [运行时间：1.228875s][吞吐率：0.81req/s] [内存消耗：2,783.45kb] [文件加载：47]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'addGroupPatient',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------165581398625085240873405',
+  'content-length' => '610',
+  'x-original-url' => '/number/addGroupPatient',
+  'postman-token' => 'a9ec7694-655f-4a01-91e1-9a3542100e7d',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'group_id' => '2',
+  'member_id' => '1',
+  'member_name' => 'www',
+  'group_name' => '分组',
+)
+[ info ] [ RUN ] app\home\controller\Number->addGroupPatient[ D:\works\201805\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.238309s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_group_patient` [ RunTime:0.106550s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_group_patient` WHERE  `doctor_id` = 2  AND `group_id` = 2  AND `member_id` = 1 LIMIT 1 [ RunTime:0.105918s ]
+[ sql ] [ SQL ] INSERT INTO `jd_group_patient` (`doctor_id` , `group_id` , `member_id` , `add_date`) VALUES (2 , 2 , 1 , 1525935557) [ RunTime:0.099114s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.100693s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor_member` WHERE  (  doctor_id = 2 and member_id = 1 ) LIMIT 1 [ RunTime:0.120980s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_member`  SET `doctor_id`=2,`member_id`=1,`grouping`='1,2,3,分组1,分组'  WHERE  `dcmember_id` = 1 [ RunTime:0.099739s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_patient_group` [ RunTime:0.092898s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_patient_group` WHERE  (  group_id = 2 ) LIMIT 1 [ RunTime:0.102958s ]
+[ sql ] [ SQL ] UPDATE `jd_patient_group`  SET `group_member_id`='11,1',`group_member_name`='王硕,www'  WHERE  `group_id` = 2 [ RunTime:0.099869s ]
+[ error ] [8]未定义数组索引: only_token[D:\works\201805\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-10T15:00:02+08:00 ] 0.0.0.0 POST /number/addGroupPatient
+[ info ] localhost:8020/number/addGroupPatient [运行时间：1.674750s][吞吐率：0.60req/s] [内存消耗：2,783.66kb] [文件加载：47]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'addGroupPatient',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------061214770859384893631084',
+  'content-length' => '610',
+  'x-original-url' => '/number/addGroupPatient',
+  'postman-token' => '5b3fe3df-a1dc-4958-8a85-809eae13be14',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'group_id' => '2',
+  'member_id' => '1',
+  'member_name' => 'www',
+  'group_name' => '分组',
+)
+[ info ] [ RUN ] app\home\controller\Number->addGroupPatient[ D:\works\201805\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.261156s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_group_patient` [ RunTime:0.166096s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_group_patient` WHERE  `doctor_id` = 2  AND `group_id` = 2  AND `member_id` = 1 LIMIT 1 [ RunTime:0.153517s ]
+[ sql ] [ SQL ] INSERT INTO `jd_group_patient` (`doctor_id` , `group_id` , `member_id` , `add_date`) VALUES (2 , 2 , 1 , 1525935601) [ RunTime:0.158530s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.161391s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor_member` WHERE  (  doctor_id = 2 and member_id = 1 ) LIMIT 1 [ RunTime:0.158914s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_member`  SET `doctor_id`=2,`member_id`=1,`grouping`='1,2,3,分组1,分组'  WHERE  `dcmember_id` = 1 [ RunTime:0.153327s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_patient_group` [ RunTime:0.170618s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_patient_group` WHERE  (  group_id = 2 ) LIMIT 1 [ RunTime:0.149936s ]
+[ sql ] [ SQL ] UPDATE `jd_patient_group`  SET `group_member_id`='11,1',`group_member_name`='王硕,www'  WHERE  `group_id` = 2 [ RunTime:0.102813s ]
+[ error ] [8]未定义数组索引: only_token[D:\works\201805\judeng\application\common.php:82]
