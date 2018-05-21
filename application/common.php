@@ -310,3 +310,73 @@ function backJson($code,$info){
 }
 
 
+/**
+ * @Title: getFile
+ * @param $url  目标文件路径
+ * @param string $save_dir 保存路径
+ * @param string $filename 保存文件名
+ * @param int $type 0 1 都可用
+ * @Description: TODO 远程下载文件到服务器
+ * @return array|bool
+ * @author TUGE
+ * @date
+ */
+function getFile($url, $save_dir = '', $filename = '', $type = 0) {
+    if (trim($url) == '') {
+        return false;
+    }
+    if (trim($save_dir) == '') {
+        $save_dir = './';
+    }
+    if (0 !== strrpos($save_dir, '/')) {
+        $save_dir.= '/';
+    }
+    //创建保存目录
+    if (!file_exists($save_dir) && !mkdir($save_dir, 0777, true)) {
+        return false;
+    }
+    //获取远程文件所采用的方法
+    if ($type) {
+        $ch = curl_init();
+        $timeout = 5;
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
+        $content = curl_exec($ch);
+        curl_close($ch);
+    } else {
+        ob_start();
+        readfile($url);
+        $content = ob_get_contents();
+        ob_end_clean();
+    }
+    //echo $content;
+    $size = strlen($content);
+    //文件大小
+    $fp2 = @fopen($save_dir . $filename, 'a');
+    fwrite($fp2, $content);
+    fclose($fp2);
+    unset($content, $url);
+    return array(
+        'file_name' => $filename,
+        'save_path' => $save_dir . $filename,
+        'file_size' => $size
+    );
+}
+
+
+/*解压GZ文件*/
+function unzip_gz($gz_file){
+    $buffer_size = 4096; // read 4kb at a time
+    $out_file_name = str_replace('.gz', '', $gz_file);
+    $file = gzopen($gz_file, 'rb');
+    $out_file = fopen($out_file_name, 'wb');
+    $str='';
+    while(!gzeof($file)) {
+        fwrite($out_file, gzread($file, $buffer_size));
+    }
+    fclose($out_file);
+    gzclose($file);
+ }
+
+

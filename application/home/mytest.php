@@ -310,7 +310,7 @@ switch($i){
 		break;
 	case 69://导出聊天记录-------不分页
 		$ql="select+*+where+timestamp>1435536480000";
-		var_dump($h->getChatRecord($ql));
+		var_dump($h->getChatRecord($ql));die;
 		break;
 	case 70://导出聊天记录-------分页
 		$ql="select+*+where+timestamp>1435536480000";
