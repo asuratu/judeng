@@ -95,6 +95,16 @@ class Number extends Common
                 $order[$key]['order_date'] = $type_name . date('Y-m-d', $val['order_date']);
 
                 // 获取患者和医生环信token
+                //获取环信token
+                import('Easemob', EXTEND_PATH);
+
+                $options['client_id'] = config('client_id');
+                $options['client_secret'] = config('client_secret');
+                $options['org_name'] = config('org_name');
+                $options['app_name'] = config('app_name');
+
+                $h=new \Easemob($options);
+                $order[$key]['token'] = $h->getToken();
             }
             $total = Db::table('jd_order o, jd_member m')
                 ->where("o.`patient_id` = m.`member_id` and o.order_type = {$data['type']} and o.doctor_id = {$data['doctor_id']}")
@@ -134,6 +144,16 @@ class Number extends Common
                 $order[$key]['end_date'] = date('m-d', $val['end_date']);
 
                 // 获取患者和医生环信token
+                //获取环信token
+                import('Easemob', EXTEND_PATH);
+
+                $options['client_id'] = config('client_id');
+                $options['client_secret'] = config('client_secret');
+                $options['org_name'] = config('org_name');
+                $options['app_name'] = config('app_name');
+
+                $h=new \Easemob($options);
+                $order[$key]['token'] = $h->getToken();
             }
             $total = Db::table('jd_doctor_member s, jd_member m')
                 ->where("s.doctor_id = {$data['doctor_id']} and s.`member_id` = m.`member_id` and (m.`member_name` like '%{$data['title']}%' or m.`mobile` like '%{$data['title']}%' or s.`grouping` like '%{$data['title']}%')")
