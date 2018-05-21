@@ -269,6 +269,19 @@ class Doctor extends Common
         }
     }
 
+    // 设置正在聊天中，设置退出聊天中
+    public function chat() {
+        if($this->request->isPost()) {
+            $data=input('post.');
+            if($data['doctor_id']==''||$data['member_id']==''||$data['is_chat']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+            }
+            db('doctor_member')->where("doctor_id = {$data['doctor_id']} and member_id = {$data['member_id']}")->update(array('is_chat' => $data['is_chat'], 'release_date' => time()));
+            ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[]));
+        }
+    }
+
 
     public function removal($group) {
         if (!$group) {
