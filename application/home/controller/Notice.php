@@ -37,7 +37,7 @@ class Notice extends Common
                         'notice_id' => $noticeId,
                         'src' => $val1,
                         'src_size' => $upPaperSize[$key1]['src_size'],
-                    );
+                    ); 
                     db('notice_attach')->insert($notice_attach);
                 }
 
