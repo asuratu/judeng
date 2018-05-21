@@ -58,13 +58,16 @@ class Image extends Common
                 $sendHair['openid'] = $val;
                 Model('Weixin')->messageTemplate(2, $sendHair);
             }
-            // 短信推送
+//            // 短信推送
             if ($data['is_type'] == 1) {
-                // 之后开发
-
+                // 后期再次测试
+                foreach ($mobile_number as $val) {
+                    sendSMS($val, '测试图文短信群发');
+                }
             }
 
             // 增加一条发送记录
+            $data['is_type'] = count($mobile_number) > 0 ? 1 : 0;     // 如果短信发送里面有短信用户，就增加一次发送记录
             $this->addHaircount($data['doctor_id'], $data['is_type']);
 
             ajaxReturn(array('code' =>1, 'info' => 'ok'));

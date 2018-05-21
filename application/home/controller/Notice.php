@@ -32,10 +32,9 @@ class Notice extends Common
                 }
 
                 $upPaperInfo = json_decode(Model('Oss')->upPic('uploads/notice'), true);
-
                 foreach ($upPaperInfo as $key1=>$val1) {
                     $notice_attach = array(
-                        'notice_id' => $data['notice_id'],
+                        'notice_id' => $noticeId,
                         'src' => $val1,
                         'src_size' => $upPaperSize[$key1]['src_size'],
                     );
