@@ -111,7 +111,7 @@ class Doctor extends Common
 
     // 医生公告列表获取
     public function noticeList($doctorId) {
-        $doctorNotice = db('notice')->where("doctor_id = {$doctorId}")->field('notice_name, add_date')->select();
+        $doctorNotice = db('notice')->where("doctor_id = {$doctorId}")->field('notice_id, notice_name, add_date')->select();
         $notice = array();
         foreach ($doctorNotice as $key => $val) {
             array_push($notice, $val);

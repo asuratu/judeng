@@ -110,8 +110,9 @@ class Image extends Common
     // 查询群发图文的次数
     public function haircount($doctor_id) {
         // 算出这个月的时间戳
-        $haircount = 90;
-        $messagecount = 20;
+        $con = Model('Setting')->findAdmin();
+        $haircount = $con['group_number'];
+        $messagecount = $con['message_number'];
         $moon_date = strtotime(date('Y-m', time()));
         $hair = db('doctor_haircount')->where("doctor_id = {$doctor_id} and moon_date = {$moon_date}")->find();
         $number = array();

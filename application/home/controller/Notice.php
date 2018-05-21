@@ -106,7 +106,7 @@ class Notice extends Common
         }
     }
 
-    // 删除功能
+    // 删除公告功能
     public function deleteNotice()
     {
         if ($this->request->isPost()) {
@@ -132,6 +132,36 @@ class Notice extends Common
                 Db::rollback();
                 return false;
             }
+        }
+    }
+
+    // 公告列表接口
+    public function noticeList() {
+        if ($this->request->isPost()) {
+            $data = input('post.');
+            if ($data['doctor_id'] == '') {
+                ajaxReturn(array('code' => 0, 'info' => '参数不完整', 'data' => []));
+            }
+            if (!isset($data['page'])) {
+                $data['page'] = 1;
+            }
+            if (!isset($data['pageSize'])) {
+                $data['pageSize'] = 10;
+            }
+            $data['pageCount'] = ($data['page'] - 1) * $data['pageSize'];
+            $doctorNotice = db('notice')->where("doctor_id = {$data['doctor_id']}")
+                ->field('notice_id, notice_name, add_date')
+                ->order('release_date', 'DESC')
+                ->limit($data['pageCount'],$data['pageCount'])
+                ->select();
+            $notice = array();
+            foreach ($doctorNotice as $key => $val) {
+                array_push($notice, $val);
+                $notice[$key]['notice_name'] = $val['notice_name'];
+                $notice[$key]['add_date'] = date('Y-m-d', $val['add_date']);
+            }
+
+            ajaxReturn(array('code' => 1, 'info' => 'ok', 'data' => $notice));
         }
     }
 
