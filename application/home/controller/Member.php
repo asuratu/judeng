@@ -491,6 +491,7 @@ class Member extends Common
                 ->field("d.*, t.title_name, a.name, h.hospital_name")
                 ->find();
             $uinfo['birthday'] = date('Y-m-d', $uinfo['birthday']);
+            $uinfo['to_doctor_url'] = config('url').$uinfo['to_doctor_url'];
             unset($uinfo['password']);
             unset($uinfo['guid']);
             unset($uinfo['reg_date']);

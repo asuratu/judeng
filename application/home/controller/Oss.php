@@ -14,6 +14,7 @@ class Oss extends Common
         //$upPaperInfo 数组
 
         $upPaperInfo = json_decode(Model('Oss')->upPic('uploads/paper'), true);
+
     }
 
 }
