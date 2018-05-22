@@ -517,17 +517,16 @@ class Member extends Common
 
             // 开方数
             $uinfo['prescriptions'] = Db::table('jd_order o, jd_order_prescription op')
-                ->where("o.`order_id` = op.`order_id` and o.order_type = 3 and o.doctor_id = {$data['doctor_id']}")
+                ->where("o.`order_id` = op.`order_id` and o.order_type = 3 and o.doctor_id = {$data['member_id']}")
                 ->count();
-
             // 患者数
             $uinfo['patient'] = Db::table('jd_doctor_member s, jd_member m')
-                ->where("s.doctor_id = {$data['doctor_id']} and s.`member_id` = m.`member_id` and (m.`member_name` like '%{$data['title']}%' or m.`mobile` like '%{$data['title']}%' or s.`grouping` like '%{$data['title']}%')")
+                ->where("s.doctor_id = {$data['member_id']} and s.`member_id` = m.`member_id` and (m.`member_name` like '%{$data['title']}%' or m.`mobile` like '%{$data['title']}%' or s.`grouping` like '%{$data['title']}%')")
                 ->count();
 
             // 评论数
             $uinfo['comment'] = Db::table('jd_service_evaluation s, jd_member m')
-                ->where("s.is_show = 1 and s.doctor_id = {$data['doctor_id']} and s.`member_id` = m.`member_id`")
+                ->where("s.is_show = 1 and s.doctor_id = {$data['member_id']} and s.`member_id` = m.`member_id`")
                 ->count();
 
             $con = Model('Setting')->findAdmin();
