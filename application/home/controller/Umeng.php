@@ -1,6 +1,7 @@
 <?php
 namespace app\home\controller;
 use app\tools\Html;
+use think\Model;
 use think\Paginator;
 use think\Request;
 use app\tools\Spell;
@@ -48,6 +49,11 @@ class Umeng extends Common
                 }
 
                 // 下面执行推送
+                if ($doctor['is_system'] == 0) {     // is_system == 0 为安卓系统
+                    Model('Umeng')->testIos();
+                } else {
+                    Model('Umeng')->testIos();
+                }
 
             } else {                   // 如果是免打扰时间段就不进行友盟推送
                 ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[]));
