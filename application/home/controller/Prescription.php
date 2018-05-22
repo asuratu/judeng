@@ -49,9 +49,12 @@ class Prescription extends Common
             //根据字符串模糊查找药材信息
             $map['Is_user'] = 1;
             $map['keywords']=array('like','%'.strtoupper($data['str']).'%');
-                $list=db('drug')->where($map)->field("`drug_id`,`drug_name`,`Drug_unit`,`price`,`num`, `other_name`")->order("`add_date` ASC")->select();
-
-            ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>[base64_encode(json_encode($list))]));
+            $list=db('drug')->where($map)->field("`drug_id`,`drug_name`,`Drug_unit`,`price`,`num`, `other_name`")->order("`add_date` ASC")->select();
+            if (count($list) > 0) {
+                ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>[base64_encode(json_encode($list))]));
+            } else {
+                ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>[]));
+            }
         }
     }
 
@@ -184,9 +187,10 @@ class Prescription extends Common
                     ->join(['jd_prescription'=>'p'], 'd.prescription_id = p.prescription_id' , 'inner')
                     ->join(['jd_drug_state'=>'ds'], 'd.state_id = ds.state_id' , 'inner')
                     ->where($houseMap)
-                    ->field("d.`relation_id`, d.`prescription_id`, d.`state_id`, d.`describe`, p.`prescription_name`, p.`area_name`")
+                    ->field("d.`relation_id`, d.`prescription_id`, d.`state_id`, d.`describe`, p.`prescription_name`, p.`prescription_id`, p.`area_name`")
                     ->order("d.`sort` DESC")
                     ->select();
+
 
                 if (count($houseArr) > 0) {
                     $tempInfo['state_house_name'] = $tempInfo['state_name'].'.'.$houseArr[0]['area_name'].'-'.$houseArr[0]['prescription_name'];
@@ -195,6 +199,7 @@ class Prescription extends Common
                     $tempInfo['price'] = 0;
                     $tempInfo['drug_str'] = '';
                     $tempInfo['is_taboo'] = 0;
+                    $tempInfo['prescription_id'] = $houseArr[0]['prescription_id'];
                     $tempInfo['dose'] = 0;
                     $tempInfo['taboo_content'] = '';
 
@@ -224,14 +229,14 @@ class Prescription extends Common
                     ->join(['jd_prescription'=>'p'], 'd.prescription_id = p.prescription_id' , 'inner')
                     ->join(['jd_drug_state'=>'ds'], 'd.state_id = ds.state_id' , 'inner')
                     ->where($houseMap)
-                    ->field("d.`relation_id`, d.`prescription_id`, d.`state_id`, d.`describe`, p.`prescription_name`, p.`area_name`")
+                    ->field("d.`relation_id`, d.`prescription_id`, d.`state_id`, d.`describe`, p.`prescription_name`, p.`prescription_id`, p.`area_name`")
                     ->count();
                 $houseMap['d.`relation_id`'] = $drugtempInfo['relation_id'];
                 $houseArr = db('drug_relation')->alias('d')
                     ->join(['jd_prescription'=>'p'], 'd.prescription_id = p.prescription_id' , 'inner')
                     ->join(['jd_drug_state'=>'ds'], 'd.state_id = ds.state_id' , 'inner')
                     ->where($houseMap)
-                    ->field("d.`relation_id`, d.`prescription_id`, d.`state_id`, d.`describe`, p.`prescription_name`, p.`area_name`")
+                    ->field("d.`relation_id`, d.`prescription_id`, d.`state_id`, d.`describe`, p.`prescription_name`, p.`prescription_id`, p.`area_name`")
                     ->order("d.`sort` DESC")
                     ->find();
                 if (!$houseArr) {
@@ -239,6 +244,7 @@ class Prescription extends Common
                 }
                 $drugtempInfo['state_house_name'] = $tempInfo['state_name'].'.'.$houseArr['area_name'].'-'.$houseArr['prescription_name'];
                 $drugtempInfo['left_num'] = $houseAllArr - 1;
+                $drugtempInfo['prescription_id'] = $houseArr['prescription_id'];
 
                 ajaxReturn(array('code'=>1,'info'=>'ok~!','data'=>[$drugtempInfo]));
             }

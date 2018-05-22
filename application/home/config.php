@@ -23,7 +23,7 @@ return [
     'url'=>'http://localhost:7037',
 
     //药房相关参数
-    'lessCount'=>20,//药品库存预留量, 下单量大于该值无法下单
+    'lessCount'=>0,//药品库存预留量, 下单量大于该值无法下单
 
     //医生的绑定的科室数量上限
     'maxDepartNum'=>6,
