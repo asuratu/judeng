@@ -1,6 +1,8 @@
 <?php
 namespace app\home\controller;
 use think\Request;
+use think\Db;
+
 class Member extends Common
 {
     /**
@@ -510,6 +512,27 @@ class Member extends Common
             unset($uinfo['login_time']);
             unset($uinfo['aid']);
             unset($uinfo['operate_date']);
+
+            $doctor['certified'] = $this->view->setting['aryCertified'][$uinfo['is_certified']];
+
+            // 开方数
+            $uinfo['prescriptions'] = Db::table('jd_order o, jd_order_prescription op')
+                ->where("o.`order_id` = op.`order_id` and o.order_type = 3 and o.doctor_id = {$data['doctor_id']}")
+                ->count();
+
+            // 患者数
+            $uinfo['patient'] = Db::table('jd_doctor_member s, jd_member m')
+                ->where("s.doctor_id = {$data['doctor_id']} and s.`member_id` = m.`member_id` and (m.`member_name` like '%{$data['title']}%' or m.`mobile` like '%{$data['title']}%' or s.`grouping` like '%{$data['title']}%')")
+                ->count();
+
+            // 评论数
+            $uinfo['comment'] = Db::table('jd_service_evaluation s, jd_member m')
+                ->where("s.is_show = 1 and s.doctor_id = {$data['doctor_id']} and s.`member_id` = m.`member_id`")
+                ->count();
+
+            $con = Model('Setting')->findAdmin();
+            $uinfo['version_number'] = $con['version_number'];
+            $uinfo['service_hot'] = $con['service_hot'];
 
 
             if (!empty($uinfo)) {

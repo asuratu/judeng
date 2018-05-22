@@ -32,10 +32,9 @@ class Notice extends Common
                 }
 
                 $upPaperInfo = json_decode(Model('Oss')->upPic('uploads/notice'), true);
-
                 foreach ($upPaperInfo as $key1=>$val1) {
                     $notice_attach = array(
-                        'notice_id' => $data['notice_id'],
+                        'notice_id' => $noticeId,
                         'src' => $val1,
                         'src_size' => $upPaperSize[$key1]['src_size'],
                     );
@@ -181,7 +180,6 @@ class Notice extends Common
             $attach = array();
             foreach ($notice_attach as $key => $val) {
                 array_push($attach, $val);
-                $attach[$key]['src'] = $this->view->setting['base_host'] . $val['src'];
             }
 
             if ($notice) {

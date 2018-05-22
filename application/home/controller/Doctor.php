@@ -34,7 +34,6 @@ class Doctor extends Common
             } else {
                 ajaxReturn(array('code'=>0,'info'=>'修改失败','data'=>[]));
             }
-
         }
     }
 
@@ -150,5 +149,151 @@ class Doctor extends Common
         }
         $good = trim($good, '、');
         return $good;
+    }
+
+    // 获取医生手机是苹果还是安卓，保存设备号
+
+
+    // 设置免打扰时间 保存时间戳
+    public function disturb() {
+        if($this->request->isPost()) {
+            $data=input('post.');
+            if($data['doctor_id']==''||$data['disturb_start']==''|| $data['disturb_end']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+            }
+
+            // 处理时间
+            $date = date('Y-m-d', time());
+            $strdate = strtotime($date);
+            $startdate = $date . $data['disturb_start'] . ':00';
+            $enddate = $date . $data['disturb_end'] . ':00';
+            $start = strtotime($startdate) - $strdate;
+            $end = strtotime($enddate) - $strdate;
+
+
+            $doctor = array(
+                'member_id' => $data['doctor_id'],
+                'disturb_start' => $start,
+                'disturb_end' => $end,
+                'release_date' => time(),
+            );
+
+            $return = db('doctor')->update($doctor);
+            if ($return) {
+                ajaxReturn(array('code'=>1,'info'=>'修改成功','data'=>[]));
+            } else {
+                ajaxReturn(array('code'=>0,'info'=>'修改失败','data'=>[]));
+            }
+        }
+    }
+
+    // 医生查看患者档案
+    public function patientFile() {
+        if($this->request->isPost()) {
+            $data=input('post.');
+            if($data['doctor_id']==''||$data['member_id']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+            }
+
+            // 查询患者简介信息
+            $member = db('member')->where("member_id = {$data['member_id']}")->field("portrait, mobile, true_name, sex, birthday")->find();
+            if (!$member) {
+                ajaxReturn(array('code'=>0,'info'=>'患者信息不存在','data'=>[]));
+            }
+
+            $member['sex'] = $this->view->setting['arySex'][$member['sex']];
+
+            $member_info = db('member_info')->where("member_id = {$data['member_id']}")->field("allergy, medical, habit, other_habit")->find();
+            if ($member_info) {
+                $member['allergy'] = $member_info['allergy'];
+                $member['medical'] = $member_info['medical'];
+                $member['habit'] = $this->removal($member_info['habit']);
+                $member['other_habit'] = $member_info['other_habit'];
+            } else {
+                $member['allergy'] = '无';
+                $member['medical'] = '无';
+                $member['habit'] = array();
+                $member['other_habit'] = '无';
+            }
+            $member['token'] = Model('Setting')->huanxin();
+
+            // 查询患者所在分组
+            $group = db('doctor_member')->where("doctor_id = {$data['doctor_id']} and member_id = {$data['member_id']}")->field("grouping")->find();
+
+            // 对取到的数据进行处理
+            $group_removal = $this->removal($group['grouping']);
+
+            if ($member) {
+                db('doctor_member')->where("doctor_id = {$data['doctor_id']} and member_id = {$data['member_id']}")->update(array('is_status' => 0, 'release_date' => time()));
+                ajaxReturn(array('code'=>1,'info'=>'ok','data'=>$member,'group_removal'=>$group_removal));
+            } else {
+                ajaxReturn(array('code'=>0,'info'=>'患者信息不存在','data'=>[]));
+            }
+        }
+    }
+
+    // 设置医生下面的患者已经查看（不做，嵌入在患者档案里面）
+
+    // 咨询查看 患者咨询数量清0
+    public function counselling() {
+        if($this->request->isPost()) {
+            $data=input('post.');
+            if($data['doctor_id']==''||$data['member_id']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+            }
+
+            db('doctor_member')->where("doctor_id = {$data['doctor_id']} and member_id = {$data['member_id']}")->update(array('counsell_number' => 0, 'release_date' => time()));
+            ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[]));
+        }
+    }
+
+    // 查询咨询，患者的未读数量
+    public function counsellNumber() {
+        if($this->request->isPost()) {
+            $data=input('post.');
+            if($data['doctor_id']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+            }
+
+            $doctor = db('doctor_member')->where("doctor_id = {$data['doctor_id']}")->field("sum(is_status) as patient, sum(counsell_number) as counsell")->find();
+            if (!$doctor) {
+                $doctor = array();
+                $doctor['patient'] = (string)0;
+                $doctor['counsell'] = (string)0;
+            }
+            ajaxReturn(array('code'=>1,'info'=>'ok','data'=>$doctor));
+        }
+    }
+
+    // 设置正在聊天中，设置退出聊天中
+    public function chat() {
+        if($this->request->isPost()) {
+            $data=input('post.');
+            if($data['doctor_id']==''||$data['member_id']==''||$data['is_chat']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+            }
+            db('doctor_member')->where("doctor_id = {$data['doctor_id']} and member_id = {$data['member_id']}")->update(array('is_chat' => $data['is_chat'], 'release_date' => time()));
+            ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[]));
+        }
+    }
+
+
+    public function removal($group) {
+        if (!$group) {
+            $group = '';
+        }
+        $group = explode(',', $group);
+        $group_removal = array();
+        foreach ($group as $val) {
+            if ($val != '') {
+                $group_removal[] = $val;
+            }
+        }
+        return $group_removal;
     }
 }

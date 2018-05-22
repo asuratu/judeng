@@ -56,6 +56,12 @@ class Blacklist extends Common
         if ($_return == 0) {
             ajaxReturn(array('code' =>0, 'info' => '增删黑名单操作失败'));
         } else {
+            $update = array(
+                'is_show' => $type,
+                'release_date' => $time,
+            );
+            db('doctor_member')->where("doctor_id = {$doctor_id} and member_id = {$member_id}")->update($update);
+            db('group_patient')->where("doctor_id = {$doctor_id} and member_id = {$member_id}")->update($update);
             ajaxReturn(array('code' =>1, 'info' => 'ok'));
         }
 

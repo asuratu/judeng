@@ -70,7 +70,7 @@ class Weixin extends Model
                     'remark'=> array('value' => $post['remark'], 'color' => '#173177'),             // 底部信息
                 );
                 break;
-                case 6: // 购药提醒
+            case 6: // 购药提醒
                 $template_id = '5pQMbCVtzd6TUWJaKb-IyjX469uz6PIRnG_vD_ppJMA';
                 $_url = $post['url'];
                 $_data =  array(

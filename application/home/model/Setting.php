@@ -44,4 +44,18 @@ class Setting extends Model
         }
     }
 
+    // 获取环信token
+    public function huanxin() {
+        //获取环信token
+        import('Easemob', EXTEND_PATH);
+
+        $options['client_id'] = config('client_id');
+        $options['client_secret'] = config('client_secret');
+        $options['org_name'] = config('org_name');
+        $options['app_name'] = config('app_name');
+
+        $h=new \Easemob($options);
+        return $h->getToken();
+    }
+
 }
