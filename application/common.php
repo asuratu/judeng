@@ -379,4 +379,38 @@ function unzip_gz($gz_file){
     gzclose($file);
  }
 
+/**
+ * @Title: postJson
+ * @param $url
+ * @param $data
+ * @Description: TODO 模拟json发送数据
+ * @return bool|mixed
+ * @author TUGE
+ * @date
+ */
+function postJson($url,$data)
+{
+    $ch = curl_init();
+    if(stripos($url,"https://")!==FALSE)
+    {
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+    }
+    $data = json_encode($data);
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1 );
+    curl_setopt($ch, CURLOPT_POST,true);
+    curl_setopt($ch, CURLOPT_POSTFIELDS,$data);
+    curl_setopt($ch, CURLOPT_HEADER, 0);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json; charset=utf-8', 'Content-Length:' . strlen($data)));
+    $content = curl_exec($ch);
+    $status = curl_getinfo($ch);
+    curl_close($ch);
+    if(intval($status["http_code"])==200){
+        return $content;
+    }else{
+        return false;
+    }
+}
+
 

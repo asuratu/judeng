@@ -137,6 +137,13 @@ class Order extends Common
                     ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
                 }
 
+                //查询当前医生信息
+                $doctorMap['member_id'] = $data['doctor_id'];
+                $doctorInfo = db('doctor')->where($doctorMap)->field("`member_name`")->find();
+                //查询患者信息
+                $mobileMap['mobile'] = $data['mobile'];
+                $patientInfo = db('member')->where($mobileMap)->field("*")->find();
+
                 //只有在线开方能计算价格
                 if ($data['type'] == 0) {
                     //计算价格
@@ -209,12 +216,9 @@ class Order extends Common
                     $orderPrescriptionInsert['prescription_src'] = $upOss['prescription_src'];
                 }
 
-
                 if ($data['patient_id'] == 0) {
                     //手机号开方
                     //手机号匹配患者
-                    $mobileMap['mobile'] = $data['mobile'];
-                    $patientInfo = db('member')->where($mobileMap)->field("*")->find();
                     //若未注册则注册新的患者账号
                     if (!$patientInfo) {
                         $patientInsert['member_name'] = $data['patient_name'];
@@ -275,10 +279,25 @@ class Order extends Common
                 if ($data['type'] == 0) {
                     $orderPrescriptionInsert['total_price'] = $orderPrescriptionInsert['see_price']+$orderPrescriptionInsert['service_price']+$orderPrescriptionInsert['price']*$orderPrescriptionInsert['dose'];
                     //在线开方则会更新订单价格
-                    $updateOrderTemp['product_amount'] = $orderPrescriptionInsert['total_price'];
+                    $updateOrderTemp['product_amount'] = $orderPrescriptionInsert['price'];
+                    $updateOrderTemp['product_number'] = $orderPrescriptionInsert['dose'];
                     $updateOrderTemp['pay_amount'] = $orderPrescriptionInsert['total_price'];
                     $updateOrderMap['order_id'] = $orderPrescriptionInsert['order_id'];
                    $updateOrderPrice = db('order')->where($updateOrderMap)->update($updateOrderTemp);
+                   //推送消息模板到服务号,提醒支付
+
+                    $sendHair = array();
+//                    var_dump($doctorInfo);die;
+                    $sendHair['doctor_name'] = $doctorInfo['member_name'];
+                    $sendHair['hospital'] = '小橘灯中医';
+                    $sendHair['member_name'] = $orderPrescriptionInsert['patient_name'];
+                    $sendHair['prescription'] = $data['type'] == 1 ? '手机号开方':'在线开方';
+                    $sendHair['remark'] = '点击这里查看订单详情';
+                    $sendHair['url'] = 'http://wechat.bohetanglao.com/home/center/detail/ordersn/20180513983599.html';
+                    $sendHair['first'] = '来自' . $sendHair['doctor_name'] . '医生的开方订单';
+                    $sendHair['openid'] = $patientInfo['openid'];
+
+                    Model('Weixin')->messageTemplate(6, $sendHair);
                 } else {
                     $orderPrescriptionInsert['total_price'] = 0;
                     $updateOrderPrice = 1;

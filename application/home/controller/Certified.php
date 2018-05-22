@@ -112,6 +112,7 @@ class Certified extends Common
                 $upInfo['idcode'] = $data['idcode'];
                 $upInfo['hospital_id'] = $data['hospital_id'];//单选一个医院
                 $upInfo['title_id'] = $data['title_id'];//id字符串
+                $upInfo['title_str'] = $data['title_str'];//名称字符串
                 $upInfo['hospital_repart_str'] = $data['hospital_repart_str'];
                 $upInfo['goodat_id'] = $data['goodat_id'];
                 $upInfo['introduction'] = $data['introduction'];

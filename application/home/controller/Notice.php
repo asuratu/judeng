@@ -180,7 +180,6 @@ class Notice extends Common
             $attach = array();
             foreach ($notice_attach as $key => $val) {
                 array_push($attach, $val);
-                $attach[$key]['src'] = $this->view->setting['base_host'] . $val['src'];
             }
 
             if ($notice) {
