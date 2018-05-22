@@ -22,6 +22,7 @@ class Umeng extends Model
     */
     public function PtoAndroid($device_tokens, $ticker, $title, $text)
     {
+
         if (count($device_tokens) > 500) {
             die('设备超过500个');
         }
@@ -44,7 +45,7 @@ class Umeng extends Model
 
     public function testA()
     {
-        $device_tokens = array('ApBdi6KU3myOMevTXALOPsvGmXP6WgjdRO0yVR8ROLen');
+        $device_tokens = array('D584D61C-EF20-4F76-8BE9-19B81FB7B141');
         $this->PtoAndroid($device_tokens, '通知栏的文字', '测试标题', '测试内容');
     }
 
@@ -67,7 +68,6 @@ class Umeng extends Model
 
         //发送请求
         $res = $this->_curl($url, $post_data);
-        var_dump($res);die;
         //判断
         if ($res['ret'] != 'SUCCESS') {
             //发送失败，
@@ -77,7 +77,7 @@ class Umeng extends Model
 
     public function testIos()
     {
-        $device_tokens = array('dd61807869efb4664491cd36eca8843a111a96d39e9772ea7940f0e83ce217c6');
+        $device_tokens = array('D584D61C-EF20-4F76-8BE9-19B81FB7B141');
         $this->PtoIos($device_tokens, 'hello');
     }
 
@@ -120,7 +120,7 @@ class Umeng extends Model
                     device_tokens 	array 设备号
         @return
     */
-    private function _android($device_tokens, $ticker, $title, $text, $type = 'broadcast')
+    private function _android($device_tokens, $ticker, $title, $text, $type = 'unicast')
     {
 
         $temp_arr = array(
@@ -142,8 +142,6 @@ class Umeng extends Model
                 'description' 			=> 'cccc',//描述
 			);
 
-//        return '{"policy":{"expire_time":"2018-05-25 13:55:15"},"description":"1","production_mode":true,"appkey":"5b027216f29d9847b500007d","payload":{"body":{"custom":"111"},"display_type":"message"},"type":"broadcast","timestamp":"1526969160183"}';
-
 			return json_encode($temp_arr);
 		}
 
@@ -156,7 +154,7 @@ class Umeng extends Model
                     device_tokens 	array 设备号
         @return
     */
-    private function _ios($device_tokens, $text, $type = 'broadcast')
+    private function _ios($device_tokens, $text, $type = 'unicast')
     {
         $temp_arr = array(
             'appkey' => $this->_config['ios_app_key'],

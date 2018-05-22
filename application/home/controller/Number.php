@@ -263,7 +263,7 @@ class Number extends Common
             }
             $group_member = explode(',', $group['group_member_id']);
 
-            $comment = Db::field('s.`member_id`, s.`inquisition_name`, s.`inquisition`, m.`member_name`, m.`mobile`, m.`portrait`, m.`sex`, m.`age`, m.`is_type`')
+            $comment = Db::field('s.`member_id`, s.`inquisition_name`, s.`inquisition`, m.`member_name`, m.`mobile`, m.`portrait`, m.`sex`, m.`age`, m.`openid`, m.`is_type`')
                 ->table('jd_doctor_member s, jd_member m')
                 ->where("s.doctor_id = {$data['doctor_id']} and s.`is_show` = 1 and s.`member_id` = m.`member_id` and (m.`member_name` like '%{$data['title']}%' or m.`mobile` like '%{$data['title']}%' or s.`grouping` like '%{$data['title']}%')")
                 ->order('s.inquisition', 'DESC')
@@ -412,7 +412,7 @@ class Number extends Common
                 $data['pageSize'] = 10;
             }
             $data['pageCount'] = ($data['page'] - 1) * $data['pageSize'];
-            $comment = Db::field('s.`group_id`, s.`member_id`, m.`member_name`, m.`mobile`, m.`portrait`, m.`sex`, m.`age`, m.`is_type`')
+            $comment = Db::field('s.`group_id`, s.`member_id`, m.`member_name`, m.`mobile`, m.`portrait`, m.`sex`, m.`age`, m.`openid`, m.`is_type`')
                 ->table('jd_group_patient s, jd_member m')
                 ->where("s.doctor_id = {$data['doctor_id']} and s.`is_show` = 1 and s.group_id = {$data['group_id']} and s.`member_id` = m.`member_id`")
                 ->order('s.add_date', 'ASC')
@@ -440,20 +440,45 @@ class Number extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
-            if($data['doctor_id']==''||$data['group_id']==''||$data['member_id']==''||$data['member_name']==''||$data['group_name']=='')
+            if($data['doctor_id']==''||$data['member_id']==''||$data['member_name']==''||$data['group_name']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
+            $type = 0;
+            if (isset($data['group_id']) && $data['group_id'] >0) {
+                $group_id = db('patient_group')->where("group_id = {$data['group_id']}")->count();
+                if ($group_id > 0) {
+                    $type = 1;
+                }
+            }
+            if ($type != 1) {
+                $data['group_name'] = Html::getTextToHtml($data['group_name'], 200);
+                $data['group_name_eng'] = str_replace(' ', '', Spell::getChineseChar($data['group_name']));
+                $patient = array();
+                $patient['doctor_id'] = intval($data['doctor_id']);
+                $patient['group_name'] = $data['group_name'];
+                $patient['group_name_eng'] = $data['group_name_eng'];
+                $patient['group_member_id'] = '';
+                $patient['group_member_name'] = '';
+                $patient['add_date'] = time();
+                $data['group_id'] = db('patient_group')->insertGetId($patient);
+            }
+
+
             $patient = array();
             $patient['doctor_id'] = intval($data['doctor_id']);
             $patient['group_id'] = intval($data['group_id']);
-            $patient['member_id'] = intval($data['member_id']);
-            $count = db('group_patient')->where($patient)->count();
-            if (!$count) {
-                $patient['add_date'] = time();
-                db('group_patient')->insert($patient);
-                $this->uploadMember($data['doctor_id'], $data['group_id'], $data['member_id'], $data['member_name'], $data['group_name'], 0);
-                $this->uploadGroup($data['doctor_id'], $data['group_id'], $data['member_id'], $data['member_name'], $data['group_name'], 0);
+            $member = explode(',',$data['member_id']);
+            $member_name = explode(',',$data['member_name']);
+            foreach ($member as $key => $val) {
+                $name = isset($member_name[$key]) ? $member_name[$key] : '';
+                $patient['member_id'] = intval($val);
+                $count = db('group_patient')->where($patient)->count();
+                if (!$count) {
+                    db('group_patient')->insert($patient);
+                    $this->uploadMember($data['doctor_id'], $data['group_id'], $patient['member_id'], $name, $data['group_name'], 0);
+                    $this->uploadGroup($data['doctor_id'], $data['group_id'], $patient['member_id'], $name, $data['group_name'], 0);
+                }
             }
             ajaxReturn(array('code' =>1, 'info' => 'ok'));
         }
