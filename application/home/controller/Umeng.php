@@ -27,6 +27,8 @@ class Umeng extends Common
                 ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[]));
             }
 
+            $data['comment'] = Html::getTextToHtml($data['comment'], 20);
+
             // 医生咨询消息加一（有择自增，没有则添加）
             Model('Number')->doctorCounsell($data['member_id'], $data['doctor_id']);
 
@@ -50,10 +52,11 @@ class Umeng extends Common
 
                 // 下面执行推送
                 if ($doctor['is_system'] == 0) {     // is_system == 0 为安卓系统
-                    Model('Umeng')->testIos();
+                    Model('Umeng')->PtoAndroid(array($doctor['device_tokens']), $data['comment'], '患者咨询', $data['comment']);
                 } else {
-                    Model('Umeng')->testIos();
+                    Model('Umeng')->PtoIos(array($doctor['device_tokens']), $data['comment']);
                 }
+                ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[]));
 
             } else {                   // 如果是免打扰时间段就不进行友盟推送
                 ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[]));
