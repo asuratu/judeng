@@ -7280,3 +7280,355 @@
 [ sql ] [ SQL ] DELETE FROM `jd_doctor_disturbcount`    WHERE  (  doctor_id = 2 ) [ RunTime:0.059003s ]
 [ sql ] [ SQL ] UPDATE `jd_doctor`  SET `disturb_start`=0,`disturb_end`=0,`release_date`=1527077181  WHERE  `member_id` = 2 [ RunTime:0.057004s ]
 [ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-23T20:11:04+08:00 ] 0.0.0.0 POST /umeng/send
+[ info ] localhost:8020/umeng/send [运行时间：0.617036s][吞吐率：1.62req/s] [内存消耗：3,206.09kb] [文件加载：48]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'umeng',
+    2 => 'send',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------947107001975479191571711',
+  'content-length' => '382',
+  'x-original-url' => '/umeng/send',
+  'postman-token' => 'ce6782a6-7fdf-4ca0-8719-e0063ad087e0',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'member_id' => '2',
+  'comment' => 'aa',
+)
+[ info ] [ RUN ] app\home\controller\Umeng->send[ E:\wook\201804\judeng\application\home\controller\Umeng.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SELECT `is_system`,`device_tokens`,`disturb_start`,`disturb_end` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.057004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` WHERE  (  member_id = 2 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.056004s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_member`  SET `counsell_number`=`counsell_number`+1  WHERE  (  member_id = 2 and doctor_id = 2 ) [ RunTime:0.060003s ]
+[ sql ] [ SQL ] SELECT `is_chat`,`is_show` FROM `jd_doctor_member` WHERE  (  doctor_id = 2 and member_id = 2 ) LIMIT 1 [ RunTime:0.055003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-23T20:11:12+08:00 ] 0.0.0.0 POST /doctor/disturb
+[ info ] localhost:8020/doctor/disturb [运行时间：0.464027s][吞吐率：2.16req/s] [内存消耗：2,798.80kb] [文件加载：47]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'doctor',
+    2 => 'disturb',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------633335856513866173421086',
+  'content-length' => '504',
+  'x-original-url' => '/doctor/disturb',
+  'postman-token' => 'b4371e7a-d50b-4b4a-8e7e-5562ee319bec',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'disturb_start' => '03:00',
+  'disturb_end' => '03:02',
+  'is_type' => '1',
+)
+[ info ] [ RUN ] app\home\controller\Doctor->disturb[ E:\wook\201804\judeng\application\home\controller\Doctor.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.083004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.057004s ]
+[ sql ] [ SQL ] SELECT `member_name`,`mobile`,`is_system`,`device_tokens` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_disturbcount` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_disturbcount` WHERE  (  doctor_id = 2 ) LIMIT 1 [ RunTime:0.055003s ]
+[ sql ] [ SQL ] DELETE FROM `jd_doctor_disturbcount`    WHERE  (  doctor_id = 2 ) [ RunTime:0.055004s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `disturb_start`=0,`disturb_end`=0,`release_date`=1527077472  WHERE  `member_id` = 2 [ RunTime:0.059003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-23T20:11:27+08:00 ] 0.0.0.0 POST /umeng/send
+[ info ] localhost:8020/umeng/send [运行时间：0.491028s][吞吐率：2.04req/s] [内存消耗：3,206.09kb] [文件加载：48]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'umeng',
+    2 => 'send',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------781677703660986965595300',
+  'content-length' => '382',
+  'x-original-url' => '/umeng/send',
+  'postman-token' => 'caa88fd2-ba2e-423c-9b04-f79657b963a1',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'member_id' => '2',
+  'comment' => 'aa',
+)
+[ info ] [ RUN ] app\home\controller\Umeng->send[ E:\wook\201804\judeng\application\home\controller\Umeng.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.080004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.054004s ]
+[ sql ] [ SQL ] SELECT `is_system`,`device_tokens`,`disturb_start`,`disturb_end` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` WHERE  (  member_id = 2 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.053003s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_member`  SET `counsell_number`=`counsell_number`+1  WHERE  (  member_id = 2 and doctor_id = 2 ) [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT `is_chat`,`is_show` FROM `jd_doctor_member` WHERE  (  doctor_id = 2 and member_id = 2 ) LIMIT 1 [ RunTime:0.051002s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-23T20:12:04+08:00 ] 0.0.0.0 POST /doctor/disturb
+[ info ] localhost:8020/doctor/disturb [运行时间：0.463027s][吞吐率：2.16req/s] [内存消耗：2,798.85kb] [文件加载：47]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'doctor',
+    2 => 'disturb',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------086944849248961848423583',
+  'content-length' => '504',
+  'x-original-url' => '/doctor/disturb',
+  'postman-token' => 'bfcc69f9-9f50-4539-b34d-719a0029c7b5',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'disturb_start' => '03:00',
+  'disturb_end' => '22:00',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Doctor->disturb[ E:\wook\201804\judeng\application\home\controller\Doctor.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.083004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SELECT `member_name`,`mobile`,`is_system`,`device_tokens` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_disturbcount` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_disturbcount` WHERE  (  doctor_id = 2 ) LIMIT 1 [ RunTime:0.056004s ]
+[ sql ] [ SQL ] DELETE FROM `jd_doctor_disturbcount`    WHERE  (  doctor_id = 2 ) [ RunTime:0.055003s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `disturb_start`=10800,`disturb_end`=79200,`release_date`=1527077524  WHERE  `member_id` = 2 [ RunTime:0.057003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-23T20:12:19+08:00 ] 0.0.0.0 POST /umeng/send
+[ info ] localhost:8020/umeng/send [运行时间：0.562032s][吞吐率：1.78req/s] [内存消耗：3,137.52kb] [文件加载：47]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'umeng',
+    2 => 'send',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------383423735700683173746525',
+  'content-length' => '382',
+  'x-original-url' => '/umeng/send',
+  'postman-token' => 'a0de5c98-ed28-435a-b2d2-63fbf965db12',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'member_id' => '2',
+  'comment' => 'aa',
+)
+[ info ] [ RUN ] app\home\controller\Umeng->send[ E:\wook\201804\judeng\application\home\controller\Umeng.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.080004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT `is_system`,`device_tokens`,`disturb_start`,`disturb_end` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` WHERE  (  member_id = 2 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.054003s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_member`  SET `counsell_number`=`counsell_number`+1  WHERE  (  member_id = 2 and doctor_id = 2 ) [ RunTime:0.055004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_disturbcount` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_disturbcount` WHERE  (  doctor_id = 2 ) LIMIT 1 [ RunTime:0.054003s ]
+[ sql ] [ SQL ] INSERT INTO `jd_doctor_disturbcount` (`doctor_id` , `disturb_count` , `add_date`) VALUES (2 , 1 , 1527077539) [ RunTime:0.055003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-23T20:12:34+08:00 ] 0.0.0.0 POST /umeng/send
+[ info ] localhost:8020/umeng/send [运行时间：0.537031s][吞吐率：1.86req/s] [内存消耗：3,133.37kb] [文件加载：47]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'umeng',
+    2 => 'send',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------919944665561054411919126',
+  'content-length' => '382',
+  'x-original-url' => '/umeng/send',
+  'postman-token' => '83621817-9450-4ca3-ba69-13964939cf3f',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'member_id' => '2',
+  'comment' => 'aa',
+)
+[ info ] [ RUN ] app\home\controller\Umeng->send[ E:\wook\201804\judeng\application\home\controller\Umeng.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.077005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT `is_system`,`device_tokens`,`disturb_start`,`disturb_end` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` WHERE  (  member_id = 2 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.052003s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_member`  SET `counsell_number`=`counsell_number`+1  WHERE  (  member_id = 2 and doctor_id = 2 ) [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_disturbcount` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_disturbcount` WHERE  (  doctor_id = 2 ) LIMIT 1 [ RunTime:0.050003s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_disturbcount`  SET `disturb_count`=`disturb_count`+1  WHERE  (  doctor_id = 2 ) [ RunTime:0.054003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-23T20:12:42+08:00 ] 0.0.0.0 POST /doctor/disturb
+[ info ] localhost:8020/doctor/disturb [运行时间：0.340019s][吞吐率：2.94req/s] [内存消耗：2,605.66kb] [文件加载：41]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'doctor',
+    2 => 'disturb',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------562201599244161758652942',
+  'content-length' => '504',
+  'x-original-url' => '/doctor/disturb',
+  'postman-token' => 'a366d7f5-0bd5-4ed9-a33e-6ac2b392c05c',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'disturb_start' => '03:00',
+  'disturb_end' => '22:00',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Doctor->disturb[ E:\wook\201804\judeng\application\home\controller\Doctor.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.083005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SELECT `member_name`,`mobile`,`is_system`,`device_tokens` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_disturbcount` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_disturbcount` WHERE  (  doctor_id = 2 ) LIMIT 1 [ RunTime:0.054003s ]
+---------------------------------------------------------------
+[ 2018-05-23T20:13:06+08:00 ] 0.0.0.0 POST /doctor/disturb
+[ info ] localhost:8020/doctor/disturb [运行时间：0.593034s][吞吐率：1.69req/s] [内存消耗：3,227.95kb] [文件加载：49]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'doctor',
+    2 => 'disturb',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------320569825209289561692481',
+  'content-length' => '504',
+  'x-original-url' => '/doctor/disturb',
+  'postman-token' => '9030f472-b6c2-4ba6-a6d1-22feca54266b',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'disturb_start' => '03:00',
+  'disturb_end' => '22:00',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Doctor->disturb[ E:\wook\201804\judeng\application\home\controller\Doctor.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.080004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT `member_name`,`mobile`,`is_system`,`device_tokens` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_disturbcount` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_disturbcount` WHERE  (  doctor_id = 2 ) LIMIT 1 [ RunTime:0.053003s ]
+[ sql ] [ SQL ] DELETE FROM `jd_doctor_disturbcount`    WHERE  (  doctor_id = 2 ) [ RunTime:0.055003s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `disturb_start`=10800,`disturb_end`=79200,`release_date`=1527077586  WHERE  `member_id` = 2 [ RunTime:0.058004s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
