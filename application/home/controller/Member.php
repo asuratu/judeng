@@ -521,7 +521,7 @@ class Member extends Common
                 ->count();
             // 患者数
             $uinfo['patient'] = Db::table('jd_doctor_member s, jd_member m')
-                ->where("s.doctor_id = {$data['member_id']} and s.`member_id` = m.`member_id` and (m.`member_name` like '%{$data['title']}%' or m.`mobile` like '%{$data['title']}%' or s.`grouping` like '%{$data['title']}%')")
+                ->where("s.doctor_id = {$data['member_id']} and s.`member_id` = m.`member_id`)")
                 ->count();
 
             // 评论数

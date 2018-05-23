@@ -91,3 +91,63 @@
 [ sql ] [ SQL ] SELECT `special_name`,`special_id`,`content` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.181900s ]
 [ sql ] [ SQL ] SELECT `special_name`,`special_id`,`content` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.209981s ]
 [ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-23T09:24:06+08:00 ] 0.0.0.0 GET /
+[ info ] localhost:8020/ [运行时间：0.169009s][吞吐率：5.92req/s] [内存消耗：1,297.58kb] [文件加载：28]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.119 Safari/537.36',
+  'host' => 'localhost:8020',
+  'cookie' => 'pgv_pvid=4446966272; UM_distinctid=16300e666aa99-03bc5a7eb441f3-4545092c-1fa400-16300e666ab621; _ga=GA1.1.2140194652.1524728490; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1524791001,1525221928,1525740768; _gid=GA1.1.1126679641.1526970166; CNZZDATA1262804032=1090891437-1524726210-%7C1526972336',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Index->index[ E:\wook\201804\judeng\application\home\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-23T09:24:08+08:00 ] 0.0.0.0 GET /favicon.ico
+[ info ] localhost:8020/favicon.ico [运行时间：0.080004s][吞吐率：12.50req/s] [内存消耗：1,343.94kb] [文件加载：31]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'favicon.ico',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/favicon.ico',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.119 Safari/537.36',
+  'referer' => 'http://localhost:8020/',
+  'host' => 'localhost:8020',
+  'cookie' => 'pgv_pvid=4446966272; UM_distinctid=16300e666aa99-03bc5a7eb441f3-4545092c-1fa400-16300e666ab621; _ga=GA1.1.2140194652.1524728490; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1524791001,1525221928,1525740768; _gid=GA1.1.1126679641.1526970166; CNZZDATA1262804032=1090891437-1524726210-%7C1526972336',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
