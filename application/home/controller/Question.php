@@ -5,6 +5,17 @@ use think\Db;
 
 class Question extends Common
 {
+
+    public function find()
+    {
+        $data=input('uid/d');
+        //查询问题详情页面
+        $question = db('question')->where("question_id = {$data}")->find();
+        $question['question_answer'] = Html::outputToText($question['question_answer']);
+        $this->assign("question", $question);
+        return  $this->fetch('/question/qa');
+    }
+
     /**
      * 问题列表
      */
@@ -41,7 +52,7 @@ class Question extends Common
             $question_id = $val['type_id'];
             $question_type[$question_key]['question'][$question_title]['question_id'] = $val['question_id'];
             $question_type[$question_key]['question'][$question_title]['question_title'] = $val['question_title'];
-            $question_type[$question_key]['question'][$question_title]['question_url'] = $this->view->setting['base_host'] . '/' . $val['question_id'];;
+            $question_type[$question_key]['question'][$question_title]['question_url'] = $this->view->setting['base_host'] . '/question/find/uid/' . $val['question_id'];;
         }
         return $question_type;
     }

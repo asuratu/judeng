@@ -38,8 +38,8 @@ class Umeng extends Common
 
             // 判断是否推送友盟消息  判断方法(医生是否把这个患者设成黑名单，是否在这个时间段设置成免打扰)
             $time = time();
-            $disturb_start = date('Y-m-d', $time) . $doctor['disturb_start'];
-            $disturb_end = date('Y-m-d', $time) . $doctor['disturb_end'];
+            $disturb_start = strtotime(date('Y-m-d', $time)) + $doctor['disturb_start'];
+            $disturb_end = strtotime(date('Y-m-d', $time)) + $doctor['disturb_end'];
             if ($time < $disturb_start || $time > $disturb_end) {         //
                 $counsell = db('doctor_member')->where("doctor_id = {$data['doctor_id']} and member_id = {$data['member_id']}")->field("is_chat, is_show")->find();
                 if (!$counsell) { // 如果不存在 则直接退出
@@ -59,10 +59,28 @@ class Umeng extends Common
                 ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[]));
 
             } else {                   // 如果是免打扰时间段就不进行友盟推送
+                // 免打扰时间段，用户发送消息后执行关闭免打扰后友盟推送表加一
+                $this->addDisturbcount($data['doctor_id']);
                 ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[]));
             }
 
         }
+    }
+
+    // 添加关闭免打扰后执行的友盟操作的次数
+    public function addDisturbcount($doctor_id) {
+        $haircount = db('doctor_disturbcount')->where("doctor_id = {$doctor_id}")->count();
+        if ($haircount) {
+            db('doctor_disturbcount')->where("doctor_id = {$doctor_id}")->setInc('disturb_count',1);
+        } else {
+            $hair_info = array(
+                'doctor_id' => $doctor_id,
+                'disturb_count' => 1,
+                'add_date' => time(),
+            );
+            db('doctor_disturbcount')->insert($hair_info);
+        }
+        return true;
     }
 
 }

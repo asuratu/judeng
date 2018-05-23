@@ -521,17 +521,29 @@ class Member extends Common
                 ->count();
             // 患者数
             $uinfo['patient'] = Db::table('jd_doctor_member s, jd_member m')
-                ->where("s.doctor_id = {$data['member_id']} and s.`member_id` = m.`member_id`)")
+                ->where("s.doctor_id = {$data['member_id']} and s.`member_id` = m.`member_id`")
                 ->count();
 
             // 评论数
             $uinfo['comment'] = Db::table('jd_service_evaluation s, jd_member m')
                 ->where("s.is_show = 1 and s.doctor_id = {$data['member_id']} and s.`member_id` = m.`member_id`")
                 ->count();
-
             $con = Model('Setting')->findAdmin();
+            $uinfo['disturb_start'] = $uinfo['disturb_start'] + strtotime('1995-00-00');
+            $uinfo['disturb_end'] = $uinfo['disturb_end'] + strtotime('1995-00-00');
+            $uinfo['disturb_start'] = date('H:i', $uinfo['disturb_start']);
+            $uinfo['disturb_end'] = date('H:i', $uinfo['disturb_end']);
             $uinfo['version_number'] = $con['version_number'];
             $uinfo['service_hot'] = $con['service_hot'];
+
+            $list=db('ad')->where("type_id = 0 and is_display = 1")->field("`ad_title`,`ad_img`,`ad_url`,`add_date`")->order("`ad_sort` ASC")->select();
+            $order = array();
+            foreach ($list as $key => $val) {
+                array_push($order, $val);
+                $order[$key]['ad_img'] = $val['ad_img'];
+                $order[$key]['add_date'] = date('Y-m-d H:i', $val['add_date']);
+            }
+            $uinfo['ad'] = $order;
 
 
             if (!empty($uinfo)) {

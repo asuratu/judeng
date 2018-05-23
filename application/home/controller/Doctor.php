@@ -163,6 +163,29 @@ class Doctor extends Common
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
 
+            $doctor = db('doctor')->where("member_id = {$data['doctor_id']}")->field("member_name, mobile, is_system, device_tokens")->find();
+            if (!$doctor) {         // 验证医生信息是否存在，不存在直接退出
+                ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[]));
+            }
+
+            if ($data['is_type']=='') {
+                $data['is_type'] = 0;
+            }
+
+            // 查询免打扰这个期间是否有患者咨询过一生
+            $umeng = db('doctor_disturbcount')->where("doctor_id = {$data['doctor_id']}")->count();
+            if ($umeng) {
+                $doctor['member_name'] = $doctor['member_name'] ? $doctor['member_name'] : $doctor['mobile'];
+                $data['comment'] = $doctor['member_name'] . '医生，有患者咨询了您，请及时处理。';
+                if ($doctor['is_system'] == 0) {     // is_system == 0 为安卓系统
+                    Model('Umeng')->PtoAndroid(array($doctor['device_tokens']), $data['comment'], '免打扰期间患者咨询', $data['comment']);
+                } else {
+                    Model('Umeng')->PtoIos(array($doctor['device_tokens']), $data['comment']);
+                }
+            }
+            // 删除免打扰期间患者咨询的次数
+            db('doctor_disturbcount')->where("doctor_id = {$data['doctor_id']}")->delete();
+
             // 处理时间
             $date = date('Y-m-d', time());
             $strdate = strtotime($date);
@@ -171,6 +194,10 @@ class Doctor extends Common
             $start = strtotime($startdate) - $strdate;
             $end = strtotime($enddate) - $strdate;
 
+            if ($data['is_type'] == 1) {
+                $start = 0;
+                $end = 0;
+            }
 
             $doctor = array(
                 'member_id' => $data['doctor_id'],

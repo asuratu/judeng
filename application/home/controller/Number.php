@@ -96,7 +96,7 @@ class Number extends Common
 
                 // 获取患者和医生环信token
                 // 获取患者和医生环信token
-                $order[$key]['token'] = Model('Setting')->huanxin();
+//                $order[$key]['token'] = Model('Setting')->huanxin();
             }
             $total = Db::table('jd_order o, jd_member m')
                 ->where("o.`patient_id` = m.`member_id` and o.order_type = {$data['type']} and o.doctor_id = {$data['doctor_id']}")
@@ -135,8 +135,8 @@ class Number extends Common
                 $order[$key]['portrait'] = $this->view->setting['base_host'] . $val['portrait'];
                 $order[$key]['end_date'] = date('m-d', $val['end_date']);
 
-                // 获取患者和医生环信token
-                $order[$key]['token'] = Model('Setting')->huanxin();
+                // 获取患者和医生环信token (用不到)
+//                $order[$key]['token'] = Model('Setting')->huanxin();
             }
             $total = Db::table('jd_doctor_member s, jd_member m')
                 ->where("s.doctor_id = {$data['doctor_id']} and s.`is_show` = 1 and s.`member_id` = m.`member_id` and (m.`member_name` like '%{$data['title']}%' or m.`mobile` like '%{$data['title']}%' or s.`grouping` like '%{$data['title']}%')")
