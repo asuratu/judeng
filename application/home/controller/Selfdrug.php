@@ -7,7 +7,7 @@ class Selfdrug extends Common
 
     /**
      * @Title: addSelfDrug
-     * @Description: TODO 创建调制服务包
+     * @Description: TODO 创建/修改调制服务包
      */
     public function addSelfDrug() {
         if($this->request->isPost())
@@ -22,42 +22,116 @@ class Selfdrug extends Common
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
-            
-            //获取传承的详细信息
-            $map['i.`is_display`'] = 1;
-            $map['i.`inherit_id`'] = $data['inherit_id'];
-            $inheritDetail = db('inherit')->alias('i')
-                ->join(['jd_doctor'=>'d'], 'i.member_id = d.member_id' , 'inner')
-                ->where($map)
-                ->field("i.*, d.title_id, d.member_name")
-                ->find();
-            //处理图片路径
-            $inheritDetail['banner'] = $inheritDetail['banner'];
-            //处理简介的H5
-            $inheritDetail['culture'] = config('url').'/inherit/detail?id='.$data['inherit_id'];
-            //判断是否加入过该传承
-            $exist = db('inherit_doctor')->where("(`member_id` = {$data['member_id']} OR `parent_id` = {$data['member_id']}) AND `is_checked` = 1 AND `inherit_id` = {$data['inherit_id']}")->count();
-            if ($exist > 0) {
-                $used = 1;
-            } else {
-                $used = 0;
+
+            //查询当前医生信息
+            if ($data['self_goods_id'] > 0) {
+                $goodsMap['self_goods_id'] = $data['self_goods_id'];
+                $goodsInfo = db('self_goods')->where("self_goods_id = {$data['self_goods_id']} AND is_checked IN(2,3)")->field("*")->find();
+                if (!$goodsInfo) {
+                    ajaxReturn(array('code'=>0,'info'=>'该调制包不存在或不可修改!','data'=>[]));
+                }
             }
 
-            //判断是否特色方剂
-            $specialNum = db('special')->where("`is_display` = 1 AND `inherit_id` = {$data['inherit_id']}")->count();
-            if ($specialNum > 0) {
-                $useSpecial = 1;
-            } else {
-                $useSpecial = 0;
+
+
+            //计算价格
+            $drugSumPrice = 0;//价格
+            $lessCountArr = array();//超量
+            $otherNameArr = array();//别名
+            $alertArr = array();//是否下架
+
+            $data['prescription_id'] = 1;//默认从1药房发药
+            foreach (json_decode(base64_decode($data['content'])) as $key => $val) {
+                $drugDetailMap['Is_user'] = 1;
+
+                //TODO 此处不能用drug_id来定位药材, 应该用药房id和药品统一名(别名)
+                $drugDetailMap['prescription_id'] = $data['prescription_id'];
+                $drugDetailMap['nick_name'] = $val[1];
+
+                $list=db('drug')->where($drugDetailMap)->field("`drug_id`,`nick_name`,`Drug_unit`,`price`,`num`, `other_name`")->find();
+                array_push($otherNameArr, $list['other_name']);
+                if (!$list) {
+                    array_push($alertArr, $val[1]);
+                }
+                $list['total_price'] = $val[2]*$list['price'];
+                $drugSumPrice += $list['total_price'];
+                if ($val[2] > $list['num'] - config('lessCount') ) {
+                    array_push($lessCountArr, $val[1]);
+                }
             }
 
-            //查询医生职称
-            if ($inheritDetail['title_id']) {
-                $inheritDetail['title_str'] = db('title')->where('title_id','in',$inheritDetail['title_id'])->field("`title_name`")->select();
-            } else {
-                $inheritDetail['title_str'] = '';
+            if (count($alertArr) > 0) {
+                ajaxReturn(array('code'=>0,'info'=>'药材['.implode(',', $alertArr).']在该药房已下架!','data'=>[]));
             }
-            ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>['content'=>$inheritDetail, 'used'=>$used, 'useSpecial'=>$useSpecial]));
+
+            //单剂价格
+            $orderPrescriptionInsert['one_price'] = $drugSumPrice;
+            //计算库存
+            if (count($lessCountArr) > 0) {
+                ajaxReturn(array('code'=>0,'info'=>'药材['.implode(',', $lessCountArr).']在该药房库存不足!','data'=>[]));
+            }
+            //查询配药禁忌
+            $tabooArr = array();
+            foreach ($otherNameArr as $val) {
+                $tabooArr2 = array();
+                $temp['name'] = $val;
+                $temp['type'] = 1;//可以防止反复添加
+                $target = db('drug_record')->where($temp)->field("*")->find();
+                if ($target) {
+                    array_push($tabooArr2, $val);
+                    $contrastTemp['key'] = $target['key'];
+                    $contrastTemp['type'] = abs($target['type']-1);
+                    $contrastList = db('drug_record')->where($contrastTemp)->field("*")->select();
+                    foreach ($contrastList as $val2) {
+                        if (in_array($val2['name'], $otherNameArr)) {
+                            array_push($tabooArr2, $val2['name']);
+                        }
+                    }
+                    array_push($tabooArr, $tabooArr2);
+                }
+            }
+            if (count($tabooArr) > 0) {
+                $orderPrescriptionInsert['is_taboo'] = 1;
+                $orderPrescriptionInsert['taboo_content'] = json_encode($tabooArr);
+            } else {
+                $orderPrescriptionInsert['is_taboo'] = 0;
+                $orderPrescriptionInsert['taboo_content'] = '';
+            }
+
+            //数据插入
+            $orderPrescriptionInsert['content'] = base64_decode($data['content']);
+            $orderPrescriptionInsert['inherit_drug'] = $data['inherit_drug'] ? base64_decode($data['inherit_drug']) : '';
+            $orderPrescriptionInsert['self_goods_name'] = $data['self_goods_name'];
+            $orderPrescriptionInsert['member_id'] = $data['member_id'];
+            $orderPrescriptionInsert['self_goods_sn'] = '' . date('Ymd') . mt_rand(100000,999999);
+            $orderPrescriptionInsert['special_id'] = $data['special_id'];
+            $orderPrescriptionInsert['inherit_id'] = $data['inherit_id'];
+            $orderPrescriptionInsert['on_line'] = $data['on_line'];
+            $orderPrescriptionInsert['referral'] = $data['referral'];
+            $orderPrescriptionInsert['love'] = $data['love'];
+            $orderPrescriptionInsert['add_date'] = time();
+            $orderPrescriptionInsert['release_date'] = time();
+            $orderPrescriptionInsert['is_checked'] = 1;
+            $orderPrescriptionInsert['end_date'] = time()+31536000;
+            //计算总价
+            $orderPrescriptionInsert['price'] = $orderPrescriptionInsert['one_price']*$data['dose'] + $data['service_price']+$data['see_price'];
+            $orderPrescriptionInsert['scope'] = $data['scope'];
+            $orderPrescriptionInsert['advantage'] = $data['advantage'];
+            $orderPrescriptionInsert['description'] = $data['description'];
+            $orderPrescriptionInsert['precautions'] = $data['precautions'];
+            $orderPrescriptionInsert['service_price'] = $data['service_price'];
+            $orderPrescriptionInsert['see_price'] = $data['see_price'];
+            $orderPrescriptionInsert['prescription_status'] = $data['prescription_status'];
+            $orderPrescriptionInsert['dose'] = $data['dose'];
+            $orderPrescriptionInsert['taking'] = $data['taking'];
+            $orderPrescriptionInsert['inherit_drug'] = $data['inherit_drug'];
+
+            if ($data['self_goods_id'] > 0) {
+                $_identity = db('self_goods')->where("self_goods_id = {$data['self_goods_id']}")->update($orderPrescriptionInsert);
+            } else {
+                $_identity = db('self_goods')->insertGetId($orderPrescriptionInsert);
+            }
+            ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[]));
         }
     }
 
@@ -98,6 +172,122 @@ class Selfdrug extends Common
             ajaxReturn(array('code'=>1,'info'=>'ok','data'=>$existDetail));
         }
     }
+
+
+    /**
+     * @Title: getSelfGoodsDetail
+     * @Description: TODO 查看调制服务包详情
+     */
+    public function getSelfGoodsDetail() {
+        if($this->request->isPost())
+        {
+            $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
+            if($data['self_goods_id']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+            }
+
+            //查询服务包详细信息
+            $goodsInfo = db('self_goods')
+                ->alias('sg')
+                ->join(['jd_doctor'=>'d'], 'd.member_id = sg.member_id' , 'inner')
+                ->where("sg.self_goods_id = {$data['self_goods_id']}")
+                ->field("sg.*, d.true_name, d.title_str")
+                ->find();
+
+            //是否显示方剂标识
+            if ($goodsInfo['content'] != '') {
+                $goodsInfo['has_self_drug'] = 1;
+            } else {
+                $goodsInfo['has_self_drug'] = 0;
+            }
+
+            //是否显示传承标识
+            if ($goodsInfo['special_id'] &&  $goodsInfo['inherit_id']) {
+                $goodsInfo['has_inherit'] = 1;
+            } else {
+                $goodsInfo['has_inherit'] = 0;
+            }
+            ajaxReturn(array('code'=>1,'info'=>'ok!','data'=>[$goodsInfo]));
+        }
+    }
+
+
+    /**
+     * @Title: getSelfGoodsList
+     * @Description: TODO 查看调制服务包列表(分页)
+     */
+    public function getSelfGoodsList() {
+        if($this->request->isPost())
+        {
+            $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
+            if($data['member_id']=='' || $data['type']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+            }
+            $data['page'] = $data['page'] ? intval($data['page']) : 1;
+            $data['pageSize'] = $data['pageSize'] ? intval($data['pageSize']) : 5;
+            $start = ($data['page']-1)*$data['pageSize'];
+
+            switch ($data['type']) {
+                case 0://审核通过
+                    $data['is_checked'] = 2;
+                    break;
+                case 1://审核中
+                    $data['is_checked'] = 1;
+                    break;
+                default://未通过
+                    $data['is_checked'] = 3;
+                    break;
+            }
+
+            //查询服务包详细信息
+            $goodsInfo = db('self_goods')
+                ->alias('sg')
+                ->join(['jd_doctor'=>'d'], 'd.member_id = sg.member_id' , 'inner')
+                ->join(['jd_special'=>'s'], 's.special_id = sg.special_id' , 'left')
+                ->where("sg.member_id = {$data['member_id']} AND sg.is_checked = {$data['is_checked']}")
+                ->field("sg.special_id, sg.content, sg.inherit_id, sg.self_goods_id, sg.self_goods_name, sg.to_top, sg.advantage, sg.add_date, sg.price, sg.scope, s.special_name, d.true_name, d.title_str")
+                ->limit($start,$data['pageSize'])
+                ->order("sg.add_date DESC")
+                ->select();
+
+            foreach ($goodsInfo as $key => $val) {
+                //是否显示方剂标识
+                if ($goodsInfo[$key]['content'] != '') {
+                    $goodsInfo[$key]['has_self_drug'] = 1;
+                } else {
+                    $goodsInfo[$key]['has_self_drug'] = 0;
+                }
+
+                //是否显示传承标识
+                if ($goodsInfo[$key]['special_id'] &&  $goodsInfo[$key]['inherit_id']) {
+                    $goodsInfo[$key]['has_inherit'] = 1;
+                } else {
+                    $goodsInfo[$key]['has_inherit'] = 0;
+                }
+            }
+
+
+            ajaxReturn(array('code'=>1,'info'=>'ok!','data'=>[$goodsInfo]));
+        }
+    }
+
+
+
+
+
+
 
 
 

@@ -49,7 +49,7 @@ class Prescription extends Common
             //根据字符串模糊查找药材信息
             $map['Is_user'] = 1;
             $map['keywords']=array('like','%'.strtoupper($data['str']).'%');
-            $list=db('drug')->where($map)->field("`drug_id`,`drug_name`,`Drug_unit`,`price`,`num`, `other_name`")->order("`add_date` ASC")->select();
+            $list=db('drug')->where($map)->field("`drug_id`,`nick_name`,`Drug_unit`,`price`,`num`, `other_name`")->order("`add_date` ASC")->select();
             if (count($list) > 0) {
                 ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>[base64_encode(json_encode($list))]));
             } else {
@@ -195,6 +195,7 @@ class Prescription extends Common
                 if (count($houseArr) > 0) {
                     $tempInfo['state_house_name'] = $tempInfo['state_name'].'.'.$houseArr[0]['area_name'].'-'.$houseArr[0]['prescription_name'];
                     $tempInfo['relation_id'] = $houseArr[0]['relation_id'];
+                    $tempInfo['prescription_id'] = $houseArr[0]['prescription_id'];
                     $tempInfo['left_num'] = count($houseArr)-1;
                     $tempInfo['price'] = 0;
                     $tempInfo['drug_str'] = '';
@@ -298,20 +299,27 @@ class Prescription extends Common
             $drugSumPrice = 0;//价格
             $lessCountArr = array();//超量
             $otherNameArr = array();//别名
+            $alertArr = array();//是否下架
             foreach (json_decode($tempMap['drug_str']) as $key => $val) {
                 $drugDetailMap['Is_user'] = 1;
-                $drugDetailMap['drug_id'] = $val[0];
 
-                $list=db('drug')->where($drugDetailMap)->field("`drug_id`,`drug_name`,`Drug_unit`,`price`,`num`, `other_name`")->find();
+                //TODO 此处不能用drug_id来定位药材, 应该用药房id和药品统一名(别名)
+                $drugDetailMap['prescription_id'] = $data['prescription_id'];
+                $drugDetailMap['nick_name'] = $val[1];
+
+                $list=db('drug')->where($drugDetailMap)->field("`drug_id`,`nick_name`,`Drug_unit`,`price`,`num`, `other_name`")->find();
                 array_push($otherNameArr, $list['other_name']);
                 if (!$list) {
-                    ajaxReturn(array('code'=>0,'info'=>'药材['.$val[1].']在该药房已下架!','data'=>[]));
+                    array_push($alertArr, $val[1]);
                 }
                 $list['total_price'] = $val[2]*$list['price'];
                 $drugSumPrice += $list['total_price'];
                 if ($val[2] > $list['num'] - config('lessCount') ) {
                     array_push($lessCountArr, $val[1]);
                 }
+            }
+            if (count($alertArr) > 0) {
+                ajaxReturn(array('code'=>0,'info'=>'药材['.implode(',', $alertArr).']在该药房已下架!','data'=>[]));
             }
             $tempMap['price'] = $drugSumPrice;
             //计算库存
@@ -373,7 +381,7 @@ class Prescription extends Common
 //
 //            $str = 'W1sxNywiXHU1MjM2XHU1ZGRkXHU0ZTRjIiw0XSxbMzE1LCJcdTcxOWZcdTk2NDRcdTcyNDciLDMwXSxbNDg1LCJcdTZjZDVcdTUzNGFcdTU5MGYiLDk0XV0=';
 
-            if($data['drug_str'] == '')
+            if($data['drug_str'] == '' || $data['prescription_id'] == '')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
@@ -386,14 +394,16 @@ class Prescription extends Common
             $drugSumPrice = 0;
             foreach ($drugMap['drug_arr'] as $key => $val) {
                 $drugDetailMap['Is_user'] = 1;
-                $drugDetailMap['drug_id'] = $val[0];
+                $drugDetailMap['nick_name'] = $val[1];
+                $drugDetailMap['prescription_id'] = $data['prescription_id'];
 
-                $list=db('drug')->where($drugDetailMap)->field("`drug_id`,`drug_name`,`Drug_unit`,`price`,`num`, `other_name`")->find();
+                $list=db('drug')->where($drugDetailMap)->field("`drug_id`,`nick_name`,`Drug_unit`,`price`,`num`, `other_name`")->find();
                 $list['count'] = $val[2];
                 $list['total_price'] = $val[2]*$list['price'];
                 array_push($drugDetailArrSon, $list);
                 $drugSumPrice += $list['total_price'];
             }
+
             $drugDetailArr['drugList'] = $drugDetailArrSon;
             $drugDetailArr['drugCount'] = count($drugDetailArrSon);
             $drugDetailArr['drugSumPrice'] = $drugSumPrice;
@@ -416,7 +426,7 @@ class Prescription extends Common
                 ajaxReturn($res);
             }
 
-            if($data['temp_id']=='' || $data['member_id']=='' || $data['temp_name'] == '' || $data['drug_str'] == '' || $data['instructions'] == '')
+            if($data['temp_id']=='' || $data['member_id']=='' || $data['temp_name'] == '' || $data['drug_str'] == '' || $data['instructions'] == '' || $data['prescription_id'] == '')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
@@ -454,20 +464,26 @@ class Prescription extends Common
             $drugSumPrice = 0;//价格
             $lessCountArr = array();//超量
             $otherNameArr = array();//别名
+            $alertArr = array();//是否下架
             foreach (json_decode($tempMap['drug_str']) as $key => $val) {
                 $drugDetailMap['Is_user'] = 1;
-                $drugDetailMap['drug_id'] = $val[0];
+                //TODO 此处不能用drug_id来定位药材, 应该用药房id和药品统一名(别名)
+                $drugDetailMap['prescription_id'] = $data['prescription_id'];
+                $drugDetailMap['nick_name'] = $val[1];
 
-                $list=db('drug')->where($drugDetailMap)->field("`drug_id`,`drug_name`,`Drug_unit`,`price`,`num`, `other_name`")->find();
+                $list=db('drug')->where($drugDetailMap)->field("`drug_id`,`nick_name`,`Drug_unit`,`price`,`num`, `other_name`")->find();
                 array_push($otherNameArr, $list['other_name']);
                 if (!$list) {
-                    ajaxReturn(array('code'=>0,'info'=>'药材['.$val[1].']在该药房已下架!','data'=>[]));
+                    array_push($alertArr, $val[1]);
                 }
                 $list['total_price'] = $val[2]*$list['price'];
                 $drugSumPrice += $list['total_price'];
                 if ($val[2] > $list['num'] - config('lessCount') ) {
                     array_push($lessCountArr, $val[1]);
                 }
+            }
+            if (count($alertArr) > 0) {
+                ajaxReturn(array('code'=>0,'info'=>'药材['.implode(',', $alertArr).']在该药房已下架!','data'=>[]));
             }
             $tempMap['price'] = $drugSumPrice;
             //计算库存

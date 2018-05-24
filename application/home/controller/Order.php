@@ -132,7 +132,7 @@ class Order extends Common
                     ajaxReturn($res);
                 }
 
-                if($data['doctor_id']=='' || $data['patient_id']=='' || $data['type']=='')
+                if($data['doctor_id']=='' || $data['patient_id']=='' || $data['type']=='' || $data['prescription_id']=='')
                 {
                     ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
                 }
@@ -150,14 +150,18 @@ class Order extends Common
                     $drugSumPrice = 0;//价格
                     $lessCountArr = array();//超量
                     $otherNameArr = array();//别名
+                    $alertArr = array();//是否下架
                     foreach (json_decode(base64_decode($data['drug_str'])) as $key => $val) {
                         $drugDetailMap['Is_user'] = 1;
-                        $drugDetailMap['drug_id'] = $val[0];
 
-                        $list=db('drug')->where($drugDetailMap)->field("`drug_id`,`drug_name`,`Drug_unit`,`price`,`num`, `other_name`")->find();
+                        //TODO 此处不能用drug_id来定位药材, 应该用药房id和药品统一名(别名)
+                        $drugDetailMap['prescription_id'] = $data['prescription_id'];
+                        $drugDetailMap['nick_name'] = $val[1];
+
+                        $list=db('drug')->where($drugDetailMap)->field("`drug_id`,`nick_name`,`Drug_unit`,`price`,`num`, `other_name`")->find();
                         array_push($otherNameArr, $list['other_name']);
                         if (!$list) {
-                            ajaxReturn(array('code'=>0,'info'=>'药材['.$val[1].']在该药房已下架!','data'=>[]));
+                            array_push($alertArr, $val[1]);
                         }
                         $list['total_price'] = $val[2]*$list['price'];
                         $drugSumPrice += $list['total_price'];
@@ -165,6 +169,11 @@ class Order extends Common
                             array_push($lessCountArr, $val[1]);
                         }
                     }
+
+                    if (count($alertArr) > 0) {
+                        ajaxReturn(array('code'=>0,'info'=>'药材['.implode(',', $alertArr).']在该药房已下架!','data'=>[]));
+                    }
+
                     $orderPrescriptionInsert['price'] = $drugSumPrice;
                     //计算库存
                     if (count($lessCountArr) > 0) {
@@ -371,6 +380,97 @@ class Order extends Common
             }
 
 
+        }
+    }
+
+    /**
+     * @Title: checkDrugNum
+     * @Description: TODO 实时核实库存接口
+     * @return bool
+     * @author TUGE
+     * @date
+     */
+    public function checkDrugNum() {
+        if($this->request->isPost())
+        {
+            try{
+                Db::startTrans();
+                $data=input('post.');
+                $res=checkSign($data);
+                if($res['code']==0)
+                {
+                    ajaxReturn($res);
+                }
+
+                if($data['drug_str']=='' || $data['prescription_id']=='')
+                {
+                    ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+                }
+
+                //只有在线开方能计算价格
+                if ($data['type'] == 0) {
+                    //计算价格
+                    $drugSumPrice = 0;//价格
+                    $lessCountArr = array();//超量
+                    $otherNameArr = array();//别名
+                    $alertArr = array();//是否下架
+                    foreach (json_decode(base64_decode($data['drug_str'])) as $key => $val) {
+                        $drugDetailMap['Is_user'] = 1;
+
+                        //TODO 此处不能用drug_id来定位药材, 应该用药房id和药品统一名(别名)
+                        $drugDetailMap['prescription_id'] = $data['prescription_id'];
+                        $drugDetailMap['nick_name'] = $val[1];
+
+                        $list=db('drug')->where($drugDetailMap)->field("`drug_id`,`nick_name`,`Drug_unit`,`price`,`num`, `other_name`")->find();
+                        array_push($otherNameArr, $list['other_name']);
+                        if (!$list) {
+                            array_push($alertArr, $val[1]);
+                        }
+                        $list['total_price'] = $val[2]*$list['price'];
+                        $drugSumPrice += $list['total_price'];
+                        if ($val[2] > $list['num'] - config('lessCount') ) {
+                            array_push($lessCountArr, $val[1]);
+                        }
+                    }
+
+                    //查询配药禁忌
+                    $tabooArr = array();
+                    foreach ($otherNameArr as $val) {
+                        $tabooArr2 = array();
+                        $temp['name'] = $val;
+                        $temp['type'] = 1;//可以防止反复添加
+                        $target = db('drug_record')->where($temp)->field("*")->find();
+                        if ($target) {
+                            array_push($tabooArr2, $val);
+                            $contrastTemp['key'] = $target['key'];
+                            $contrastTemp['type'] = abs($target['type']-1);
+                            $contrastList = db('drug_record')->where($contrastTemp)->field("*")->select();
+                            foreach ($contrastList as $val2) {
+                                if (in_array($val2['name'], $otherNameArr)) {
+                                    array_push($tabooArr2, $val2['name']);
+                                }
+                            }
+                            array_push($tabooArr, $tabooArr2);
+                        }
+                    }
+                    if (count($tabooArr) > 0) {
+                        $orderPrescriptionInsert['is_taboo'] = 1;
+                        $orderPrescriptionInsert['taboo_content'] = ($tabooArr);
+                    } else {
+                        $orderPrescriptionInsert['is_taboo'] = 0;
+                        $orderPrescriptionInsert['taboo_content'] = '';
+                    }
+                }
+
+                Db::commit();
+                ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>[['is_taboo'=>$orderPrescriptionInsert['is_taboo'], 'taboo_content'=>$orderPrescriptionInsert['taboo_content'], 'lessCountArr'=>$lessCountArr, 'alertArr'=>$alertArr, 'price'=>$drugSumPrice]]));
+
+            } catch (Exception $e) {
+                Db::rollback();
+                return false;
+            }
+
+
 
 
 
@@ -379,5 +479,6 @@ class Order extends Common
 
         }
     }
+
 
 }

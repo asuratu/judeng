@@ -231,6 +231,35 @@ class Other extends Common
     }
 
     /**
+     * @Title: getDiseaseList
+     * @Description: TODO 获取疾病列表
+     */
+    public function getDiseaseList() {
+        if($this->request->isPost())
+        {
+            $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
+
+            $diseaseArr = explode(',',$data['disease_str']);
+
+            //获取职称数组
+            $list=db('disease')->where('is_display = 1')->field("disease_id, disease_name")->order("`sort` DESC")->select();
+            foreach ($list as $key=>$val) {
+                if (in_array($val['disease_name'], $diseaseArr)) {
+                    $list[$key]['selected'] = 1;
+                } else {
+                    $list[$key]['selected'] = 0;
+                }
+            }
+            ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>$list));
+        }
+    }
+
+    /**
      * 广告管理
      */
     public function getAd() {

@@ -383,7 +383,7 @@ function unzip_gz($gz_file){
  * @Title: postJson
  * @param $url
  * @param $data
- * @Description: TODO 模拟json发送数据
+ * @Description: TODO 模拟json发数据
  * @return bool|mixed
  * @author TUGE
  * @date
@@ -412,5 +412,16 @@ function postJson($url,$data)
         return false;
     }
 }
+
+
+/*写文件*/
+function tglog($content){
+    $filename =$_SERVER['DOCUMENT_ROOT']. '/runtime/tglog/'.date('Y-m-d').'.txt';
+    $Ts=fopen($filename,"a+");
+    fputs($Ts,"执行日期："."\r\n".date('Y-m-d H:i:s',time()).  ' ' . "\n" .$content."\n");
+    fclose($Ts);
+}
+
+
 
 

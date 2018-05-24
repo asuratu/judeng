@@ -149,7 +149,7 @@ class Diagnosing extends Common
                     $arr1[$hospitalInfo['hospital_id']]['content'][] = $departInfo;
                 }
             }
-            ajaxReturn(array('code' => 1, 'info' => 'ok', 'data' => $arr1));
+            ajaxReturn(array('code' => 1, 'info' => 'ok', 'data' => array_values($arr1)));
         }
     }
 

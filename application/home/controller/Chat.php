@@ -78,4 +78,38 @@ class Chat extends Common
             var_dump(2);die;
         }
     }
+
+    /**
+     * @Title: findChatDoc
+     * @Description: TODO 查询某个小时内的聊天文件,2018052510(2017年5月25日上午10点的聊天记录)
+     */
+    public function findChatDoc(){
+        if($this->request->isPost())
+        {
+            $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
+
+            if($data['timestamp']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+            }
+
+            $logDetail = db('chat_log')->where("add_data = {$data['timestamp']} AND is_success = 1")->field("file_url")->select();
+
+            if (empty($logDetail)) {
+                ajaxReturn(array('code'=>0,'info'=>'该时间段无记录','data'=>[]));
+            } else {
+                foreach ($logDetail as $key=>$val) {
+                    $logDetail[$key]['file_url'] = config('url').$val['file_url'];
+                }
+                ajaxReturn(array('code'=>1,'info'=>'ok','data'=>$logDetail));
+            }
+        }
+    }
+
+
 }

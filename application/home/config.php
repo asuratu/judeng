@@ -19,8 +19,8 @@ return [
     'app_name'=>'xiaojudeng',
 
     //接口域名
-//    'url'=>'http://39.105.19.169:88',
-    'url'=>'http://localhost:7037',
+    'url'=>'http://39.105.19.169:88',
+//    'url'=>'http://localhost:7037',
 
     //药房相关参数
     'lessCount'=>0,//药品库存预留量, 下单量大于该值无法下单

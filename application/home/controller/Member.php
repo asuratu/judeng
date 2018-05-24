@@ -116,7 +116,9 @@ class Member extends Common
             {
                 ajaxReturn($res);
             }
-
+            tglog('验证短信');
+            tglog(json_encode($data));
+            tglog('验证短信');
             //验证短信
             $mobile=$data['mobile'];
             session_id(md5($mobile));
@@ -597,7 +599,9 @@ class Member extends Common
             $mobile=$data['mobile'];
             $map['mobile']=$mobile;
             $timer = 300;
-
+            tglog('发送短信');
+            tglog(json_encode($data));
+            tglog('发送短信');
             if($data['type']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
