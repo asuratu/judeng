@@ -280,7 +280,7 @@ class Other extends Common
             $order = array();
             foreach ($list as $key => $val) {
                 array_push($order, $val);
-                $order[$key]['ad_img'] = $this->view->setting['base_host'] . $val['ad_img'];
+                $order[$key]['ad_img'] = $val['ad_img'];
                 $order[$key]['add_date'] = date('Y-m-d H:i', $val['add_date']);
             }
             ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>$order));

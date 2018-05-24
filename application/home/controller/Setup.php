@@ -27,7 +27,7 @@ class Setup extends Common
             // 查询后台配置的参数
             $con = Model('Setting')->findAdmin();
             $doctor['first_price'] = $doctor['first_price'] == 0 ? $con['diagnosis_price'] : $doctor['first_price'];
-            $doctor['consultation_price'] = $doctor['consultation_price'] == 0 ? $con['revisit_number'] : $doctor['consultation_price'];
+            $doctor['consultation_price'] = $doctor['consultation_price'] == 0 ? $con['revisit_price'] : $doctor['consultation_price'];
 
             // 查询医生每日接单数量
             $receiptCount = $this->receiptCount($data['doctor_id']);
@@ -72,10 +72,10 @@ class Setup extends Common
     public function updateInquiry() {
         if($this->request->isPost()) {
             $data=input('post.');
-            if($data['doctor_id']==''||$data['online_inquiry']==''||$data['love_inquiry']==''||$data['graphic_speech']==''||$data['first_price']==''||$data['consultation_price']==''||$data['receipt']=='')
-            {
-                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
-            }
+//            if($data['doctor_id']==''||$data['online_inquiry']==''||$data['love_inquiry']==''||$data['graphic_speech']==''||$data['first_price']==''||$data['consultation_price']==''||$data['receipt']=='')
+//            {
+//                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+//            }
             $prescription = array();
             $prescription['online_inquiry'] = $data['online_inquiry'];
             $prescription['love_inquiry'] = $data['love_inquiry'];
@@ -98,14 +98,15 @@ class Setup extends Common
     public function updatePrescription() {
         if($this->request->isPost()) {
             $data=input('post.');
-            if($data['doctor_id']==''||$data['open_pharmacy']==''||$data['platform_default']==''||$data['inherit']==''||$data['concealment_number']==''||$data['questions_number']=='')
-            {
-                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
-            }
+//            if($data['doctor_id']==''||$data['open_pharmacy']==''||$data['platform_default']==''||$data['inherit']==''||$data['inherit_feature']==''||$data['concealment_number']==''||$data['questions_number']=='')
+//            {
+//                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+//            }
             $prescription = array();
             $prescription['open_pharmacy'] = $data['open_pharmacy'];
             $prescription['platform_default'] = $data['platform_default'];
             $prescription['inherit'] = $data['inherit'];
+            $prescription['inherit_feature'] = $data['inherit_feature'];
             $prescription['concealment_number'] = $data['concealment_number'];
             $prescription['questions_number'] = $data['questions_number'];
             $prescription['release_date'] = time();
