@@ -206,6 +206,8 @@ class Order extends Common
                         $orderPrescriptionInsert['is_taboo'] = 0;
                         $orderPrescriptionInsert['taboo_content'] = '';
                     }
+
+
                     $orderPrescriptionInsert['prescription_src'] = '';
                 } else{
                     //拍照开方
@@ -364,8 +366,6 @@ class Order extends Common
                 }
 
                 $_identityPrescription = db('order_prescription')->insertGetId($orderPrescriptionInsert);
-
-
 
                 if ($_identityPrescription && $orderPrescriptionInsert['order_id'] && $updateOrderPrice && $_identify) {
                     Db::commit();
