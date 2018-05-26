@@ -1,13 +1,20 @@
 ---------------------------------------------------------------
+<<<<<<< 0d28999a8041441aa5afc8dffe4d7085407132e0
 [ 2018-05-26T00:03:42+08:00 ] 0.0.0.0 POST /prescription/getDrugRelationList
 [ info ] localhost:7037/prescription/getDrugRelationList [运行时间：1.670060s][吞吐率：0.60req/s] [内存消耗：3,774.55kb] [文件加载：54]
 [ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+=======
+[ 2018-05-26T18:31:27+08:00 ] 0.0.0.0 POST /number/prescriptions
+[ info ] localhost:8020/number/prescriptions [运行时间：0.517764s][吞吐率：1.93req/s] [内存消耗：2,787.81kb] [文件加载：44]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+>>>>>>> no message
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'home',
+<<<<<<< 0d28999a8041441aa5afc8dffe4d7085407132e0
     1 => 'prescription',
     2 => 'getDrugRelationList',
   ),
@@ -22,11 +29,26 @@
   'host' => 'localhost:7037',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate, br',
+=======
+    1 => 'number',
+    2 => 'prescriptions',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------100332173982127850283575',
+  'content-length' => '269',
+  'x-original-url' => '/number/prescriptions',
+  'postman-token' => '8ae1487a-45b1-4000-a3f1-5450269064a1',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+>>>>>>> no message
   'accept' => '*/*',
   'connection' => 'keep-alive',
   'cache-control' => 'no-cache',
 )
 [ info ] [ PARAM ] array (
+<<<<<<< 0d28999a8041441aa5afc8dffe4d7085407132e0
   'area_id' => '2',
 )
 [ info ] [ RUN ] app\home\controller\Prescription->getDrugRelationList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
@@ -862,3 +884,16 @@
 [ sql ] [ SQL ] SELECT `id`.`pay_num`,`id`.`proud`,`id`.`use_drug` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.`is_checked` = 1 AND id.`inherit_id` = 2 AND id.member_id = 4 ) LIMIT 1 [ RunTime:0.112171s ]
 [ sql ] [ SQL ] SELECT `self_goods_name` FROM `jd_self_goods` WHERE  (  member_id = 4 AND is_checked = 2 AND end_date > 1527266235 ) [ RunTime:0.104196s ]
 [ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+=======
+  'doctor_id' => '2',
+  'type' => '1',
+)
+[ info ] [ RUN ] app\home\controller\Number->prescriptions[ D:\works\201805\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.107151s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.069430s ]
+[ sql ] [ SQL ] SELECT o.`pay_status`,o.`order_id`,o.`order_sn`,o.`order_status`,o.`patient_id`,o.`order_date`,op.`patient_mobile`,op.`patient_name`,op.`patient_sex`,op.`patient_age`,op.`dialectical` FROM `jd_order` `o`,`jd_order_prescription` `op` WHERE  (  o.`order_id` = op.`order_id` and o.order_type = 3 and o.doctor_id = 2  and o.`pay_status` = 0 ) ORDER BY `o`.`order_date`  DESC [ RunTime:0.090588s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_order` `o`,`jd_order_prescription` `op` WHERE  (  o.`order_id` = op.`order_id` and o.order_type = 3 and o.doctor_id = 2  and o.`pay_status` = 0 ) LIMIT 1 [ RunTime:0.174821s ]
+[ error ] [8]未定义数组索引: only_token[D:\works\201805\judeng\application\common.php:82]
+>>>>>>> no message
