@@ -49,7 +49,7 @@ class Order extends Common
                     ->join(['jd_prescription'=>'p'], 'd.prescription_id = p.prescription_id' , 'inner')
                     ->join(['jd_drug_state'=>'ds'], 'd.state_id = ds.state_id' , 'inner')
                     ->where($houseMap)
-                    ->field("d.`relation_id`, d.`prescription_id`, d.`state_id`, d.`describe`, p.`prescription_name`, p.`area_name`, ds.`state_name`, ds.`make`, ds.`taking`, ds.`instructions`, ds.`weight`, ds.`pic`")
+                    ->field("d.`relation_id`, d.`prescription_id`, d.`state_id`, d.`describe`, p.`prescription_name`, p.`prescription_id`, p.`area_name`, ds.`state_name`, ds.`make`, ds.`taking`, ds.`instructions`, ds.`weight`, ds.`pic`")
                     ->order('d.`relation_id` DESC')
                     ->find();
 
@@ -63,7 +63,7 @@ class Order extends Common
                     ->join(['jd_prescription'=>'p'], 'd.prescription_id = p.prescription_id' , 'inner')
                     ->join(['jd_drug_state'=>'ds'], 'd.state_id = ds.state_id' , 'inner')
                     ->where($houseMap)
-                    ->field("d.`relation_id`, d.`prescription_id`, d.`state_id`, d.`describe`, p.`prescription_name`, p.`area_name`, ds.`state_name`, ds.`make`, ds.`taking`, ds.`instructions`, ds.`weight`, ds.`pic`")
+                    ->field("d.`relation_id`, d.`prescription_id`, d.`state_id`, d.`describe`, p.`prescription_name`, p.`prescription_id`, p.`area_name`, ds.`state_name`, ds.`make`, ds.`taking`, ds.`instructions`, ds.`weight`, ds.`pic`")
                     ->order('d.`relation_id` DESC')
                     ->find();
                 $houseMap['d.`state_id`'] = $houseAllArr['state_id'];
@@ -77,6 +77,7 @@ class Order extends Common
             $houseAllArr['pic'] = config('url') . $houseAllArr['pic'];
 
             $mainInfo['state_id'] = $houseAllArr['state_id'];
+            $mainInfo['prescription_id'] = $houseAllArr['prescription_id'];
             $mainInfo['area_id'] = $data['area_id'];
             $mainInfo['relation_id'] = $houseAllArr['relation_id'];
             $mainInfo['make'] = $houseAllArr['make'];
@@ -135,6 +136,10 @@ class Order extends Common
                 if($data['doctor_id']=='' || $data['patient_id']=='' || $data['type']=='' || $data['prescription_id']=='')
                 {
                     ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+                }
+
+                if (json_decode(base64_decode($data['drug_str'])) == null) {
+                    ajaxReturn(array('code'=>0,'info'=>'药品参数不符合规范!','data'=>[]));
                 }
 
                 //查询当前医生信息
@@ -234,9 +239,9 @@ class Order extends Common
                     //手机号匹配患者
                     //若未注册则注册新的患者账号
                     if (!$patientInfo) {
-                        $patientInsert['member_name'] = $data['patient_name'];
-                        $patientInsert['mobile'] = $data['mobile'];
-                        $patientInsert['sex'] = $data['sex'];
+                        $patientInsert['member_name'] = $data['patient_name'] ?: '';
+                        $patientInsert['mobile'] = $data['mobile'] ?: '';
+                        $patientInsert['sex'] = $data['sex'] ?: 0;
                         $patientInsert['reg_date'] = time();
                         $patientInsert['release_date'] = time();
                         $patientInsert['is_type'] = 1;
