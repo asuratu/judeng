@@ -27,7 +27,7 @@ class Wx extends Controller {
             $res = json_decode($res, true);
             if ($res['ticket']) {
                 $uri = 'https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=' . urlencode($res['ticket']);
-                ajaxReturn(array('code' => 0, 'info' => 'ok', 'data' => [$uri]));
+                ajaxReturn(array('code' => 1, 'info' => 'ok', 'data' => [$uri]));
             }
         }
     }

@@ -221,8 +221,10 @@ class Order extends Common
 //                    }
 
                     //保存图片数据流 - OSS
-                    $upOss = json_decode(Model('Oss')->upPic('uploads/prescription'), true);
-                    $orderPrescriptionInsert['prescription_src'] = $upOss['prescription_src'];
+                    if ($_FILES) {
+                        $upOss = json_decode(Model('Oss')->upPic('uploads/prescription'), true);
+                        $orderPrescriptionInsert['prescription_src'] = $upOss['prescription_src'];
+                    }
                 }
 
                 if ($data['patient_id'] == 0) {
@@ -269,22 +271,22 @@ class Order extends Common
                 $orderPrescriptionInsert['order_id'] = db('order')->insertGetId($newOrder);
 
 
-                $orderPrescriptionInsert['patient_name'] = $data['patient_name'];
-                $orderPrescriptionInsert['patient_mobile'] = $data['mobile'];
-                $orderPrescriptionInsert['patient_sex'] = $data['sex'];
-                $orderPrescriptionInsert['patient_age'] = $data['age'];
-                $orderPrescriptionInsert['dialectical'] = $data['dialectical'];
+                $orderPrescriptionInsert['patient_name'] = $data['patient_name'] ?: '';
+                $orderPrescriptionInsert['patient_mobile'] = $data['mobile'] ?: '';
+                $orderPrescriptionInsert['patient_sex'] = $data['sex'] ?: 0;
+                $orderPrescriptionInsert['patient_age'] = $data['age'] ?: 0;
+                $orderPrescriptionInsert['dialectical'] = $data['dialectical'] ?: '';
                 $orderPrescriptionInsert['prescription_status'] = $data['prescription_status'];
-                $orderPrescriptionInsert['drug_str'] = base64_decode($data['drug_str']);
-                $orderPrescriptionInsert['dose'] = $data['dose'];
-                $orderPrescriptionInsert['state_id'] = $data['state_id'];
-                $orderPrescriptionInsert['relation_id'] = $data['relation_id'];
-                $orderPrescriptionInsert['make'] = $data['make'];
-                $orderPrescriptionInsert['weight'] = $data['weight'];
-                $orderPrescriptionInsert['taking'] = $data['taking'];
-                $orderPrescriptionInsert['instructions'] = $data['instructions'];
-                $orderPrescriptionInsert['service_price'] = $data['service_price'];
-                $orderPrescriptionInsert['see_price'] = $data['see_price'];
+                $orderPrescriptionInsert['drug_str'] = $data['drug_str'] ? base64_decode($data['drug_str']) : '';
+                $orderPrescriptionInsert['dose'] = $data['dose'] ?: 0;
+                $orderPrescriptionInsert['state_id'] = $data['state_id'] ?: 0;
+                $orderPrescriptionInsert['relation_id'] = $data['relation_id'] ?: 0;
+                $orderPrescriptionInsert['make'] = $data['make'] ?: '';
+                $orderPrescriptionInsert['weight'] = $data['weight'] ?: '';
+                $orderPrescriptionInsert['taking'] = $data['taking'] ?: '';
+                $orderPrescriptionInsert['instructions'] = $data['instructions'] ?: '';
+                $orderPrescriptionInsert['service_price'] = $data['service_price'] ?: 0;
+                $orderPrescriptionInsert['see_price'] = $data['see_price'] ?: 0;
                 if ($data['type'] == 0) {
                     $orderPrescriptionInsert['total_price'] = $orderPrescriptionInsert['see_price']+$orderPrescriptionInsert['service_price']+$orderPrescriptionInsert['price']*$orderPrescriptionInsert['dose'];
                     //在线开方则会更新订单价格
@@ -359,10 +361,10 @@ class Order extends Common
                     // 第一个参数用户ID， 第二个参数医生ID， 第三个是具体服务类型名称
                     Model('Number')->doctorMember($data['patient_id'], $data['doctor_id'], '拍照开方');
                     $orderPrescriptionInsert['prescription_type'] = 1;
+                    $_identify = 1;
                 } else {
                     ajaxReturn(array('code'=>0,'info'=>'开方类型不正确!','data'=>[]));
                 }
-
                 $_identityPrescription = db('order_prescription')->insertGetId($orderPrescriptionInsert);
 
 
@@ -469,13 +471,6 @@ class Order extends Common
                 Db::rollback();
                 return false;
             }
-
-
-
-
-
-
-
 
         }
     }

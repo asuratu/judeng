@@ -2736,3 +2736,1080 @@
 [ error ] [8]未定义数组索引: title[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:526]
 [ error ] [8]未定义数组索引: title[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:526]
 [ error ] [8]未定义数组索引: title[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:526]
+---------------------------------------------------------------
+[ 2018-05-24T17:55:10+08:00 ] 0.0.0.0 POST /diagnosing/getDiaHospitalList
+[ info ] localhost:7037/diagnosing/getDiaHospitalList [运行时间：0.716368s][吞吐率：1.40req/s] [内存消耗：3,705.88kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'diagnosing',
+    2 => 'getDiaHospitalList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryOehmcwrfjblkPEMA',
+  'content-length' => '141',
+  'x-original-url' => '/diagnosing/getDiaHospitalList',
+  'postman-token' => '55475250-156f-93ad-0a8c-ce45e9d48b7a',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=aa7ea6451a4b6bbee19801ed6db9d42a',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Diagnosing->getDiaHospitalList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Diagnosing.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.093941s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.063460s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.066133s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital_repart` [ RunTime:0.061209s ]
+[ sql ] [ SQL ] SELECT `hr`.`hospital_repart_id`,`hr`.`hospital_id`,`d`.`department_name` FROM `jd_hospital_repart` `hr` LEFT JOIN `jd_department` `d` ON `hr`.`department_id`=`d`.`department_id` WHERE  hr.`hospital_repart_id` = '12' LIMIT 1 [ RunTime:0.061819s ]
+[ sql ] [ SQL ] SELECT `hr`.`hospital_repart_id`,`hr`.`hospital_id`,`d`.`department_name` FROM `jd_hospital_repart` `hr` LEFT JOIN `jd_department` `d` ON `hr`.`department_id`=`d`.`department_id` WHERE  hr.`hospital_repart_id` = '6' LIMIT 1 [ RunTime:0.061033s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital` [ RunTime:0.061909s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hospital` WHERE  `hospital_id` = 9 LIMIT 1 [ RunTime:0.061940s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-24T17:55:41+08:00 ] 0.0.0.0 POST /diagnosing/getAddHospitalList
+[ info ] localhost:7037/diagnosing/getAddHospitalList [运行时间：0.730579s][吞吐率：1.37req/s] [内存消耗：3,709.48kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'diagnosing',
+    2 => 'getAddHospitalList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryyGxYiLgHL8VXGVbx',
+  'content-length' => '236',
+  'x-original-url' => '/diagnosing/getAddHospitalList',
+  'postman-token' => '3f262e0c-4213-4b54-910c-dcaf36683dda',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=aa7ea6451a4b6bbee19801ed6db9d42a',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'area_id' => '2',
+  'member_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Diagnosing->getAddHospitalList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Diagnosing.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086807s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.059750s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.066088s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital` [ RunTime:0.060125s ]
+[ sql ] [ SQL ] SELECT `hospital_id`,`hospital_name`,`area_id`,`address` FROM `jd_hospital` WHERE  `is_display` = 1  AND `area_id` = 2 ORDER BY `sort` DESC [ RunTime:0.058138s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital_repart` [ RunTime:0.058222s ]
+[ sql ] [ SQL ] SELECT `hr`.`hospital_repart_id`,`d`.`department_name` FROM `jd_hospital_repart` `hr` LEFT JOIN `jd_department` `d` ON `hr`.`department_id`=`d`.`department_id` WHERE  `hospital_id` = 12 [ RunTime:0.059910s ]
+[ sql ] [ SQL ] SELECT `hr`.`hospital_repart_id`,`d`.`department_name` FROM `jd_hospital_repart` `hr` LEFT JOIN `jd_department` `d` ON `hr`.`department_id`=`d`.`department_id` WHERE  `hospital_id` = 9 [ RunTime:0.058435s ]
+[ sql ] [ SQL ] SELECT `hr`.`hospital_repart_id`,`d`.`department_name` FROM `jd_hospital_repart` `hr` LEFT JOIN `jd_department` `d` ON `hr`.`department_id`=`d`.`department_id` WHERE  `hospital_id` = 6 [ RunTime:0.057713s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-24T17:55:52+08:00 ] 0.0.0.0 POST /diagnosing/getAddHospitalList
+[ info ] localhost:7037/diagnosing/getAddHospitalList [运行时间：0.466328s][吞吐率：2.14req/s] [内存消耗：3,691.09kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'diagnosing',
+    2 => 'getAddHospitalList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryB4osebUyodsZKCAe',
+  'content-length' => '236',
+  'x-original-url' => '/diagnosing/getAddHospitalList',
+  'postman-token' => 'd3b95c8b-d92b-84a5-4fa9-cc8fd2fa13f4',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=aa7ea6451a4b6bbee19801ed6db9d42a',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'area_id' => '3',
+  'member_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Diagnosing->getAddHospitalList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Diagnosing.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.092042s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.063530s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.063614s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital` [ RunTime:0.062315s ]
+[ sql ] [ SQL ] SELECT `hospital_id`,`hospital_name`,`area_id`,`address` FROM `jd_hospital` WHERE  `is_display` = 1  AND `area_id` = 3 ORDER BY `sort` DESC [ RunTime:0.061591s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-24T17:56:00+08:00 ] 0.0.0.0 POST /diagnosing/getAddHospitalList
+[ info ] localhost:7037/diagnosing/getAddHospitalList [运行时间：0.788675s][吞吐率：1.27req/s] [内存消耗：3,709.48kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'diagnosing',
+    2 => 'getAddHospitalList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryAK3WpbPkfpVBAMvg',
+  'content-length' => '236',
+  'x-original-url' => '/diagnosing/getAddHospitalList',
+  'postman-token' => '58610144-821e-425a-cd95-ea3ad75398ca',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=aa7ea6451a4b6bbee19801ed6db9d42a',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'area_id' => '2',
+  'member_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Diagnosing->getAddHospitalList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Diagnosing.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.089965s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.063309s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.063305s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital` [ RunTime:0.060452s ]
+[ sql ] [ SQL ] SELECT `hospital_id`,`hospital_name`,`area_id`,`address` FROM `jd_hospital` WHERE  `is_display` = 1  AND `area_id` = 2 ORDER BY `sort` DESC [ RunTime:0.060944s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital_repart` [ RunTime:0.061649s ]
+[ sql ] [ SQL ] SELECT `hr`.`hospital_repart_id`,`d`.`department_name` FROM `jd_hospital_repart` `hr` LEFT JOIN `jd_department` `d` ON `hr`.`department_id`=`d`.`department_id` WHERE  `hospital_id` = 12 [ RunTime:0.060817s ]
+[ sql ] [ SQL ] SELECT `hr`.`hospital_repart_id`,`d`.`department_name` FROM `jd_hospital_repart` `hr` LEFT JOIN `jd_department` `d` ON `hr`.`department_id`=`d`.`department_id` WHERE  `hospital_id` = 9 [ RunTime:0.061247s ]
+[ sql ] [ SQL ] SELECT `hr`.`hospital_repart_id`,`d`.`department_name` FROM `jd_hospital_repart` `hr` LEFT JOIN `jd_department` `d` ON `hr`.`department_id`=`d`.`department_id` WHERE  `hospital_id` = 6 [ RunTime:0.065818s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-24T18:12:23+08:00 ] 0.0.0.0 POST /member/getDoctorInfo
+[ info ] localhost:7037/member/getDoctorInfo [运行时间：1.067100s][吞吐率：0.94req/s] [内存消耗：4,250.58kb] [文件加载：53]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getDoctorInfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryokVBIgSnOOAS7Luv',
+  'content-length' => '254',
+  'x-original-url' => '/member/getDoctorInfo',
+  'postman-token' => '74cf7df6-7942-83cc-db5c-8e455fef397c',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=aa7ea6451a4b6bbee19801ed6db9d42a',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '2',
+  'only_token' => '1525679145Omj*yI',
+)
+[ info ] [ RUN ] app\home\controller\Member->getDoctorInfo[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.085238s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.059515s ]
+[ sql ] [ SQL ] SELECT `d`.*,`t`.`title_name`,`a`.`name`,`h`.`hospital_name` FROM `jd_doctor` `d` LEFT JOIN `jd_title` `t` ON `d`.`title_id`=`t`.`title_id` LEFT JOIN `jd_area` `a` ON `d`.`area_id`=`a`.`area_id` LEFT JOIN `jd_hospital` `h` ON `d`.`hospital_id`=`h`.`hospital_id` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.060729s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.057299s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_order` `o`,`jd_order_prescription` `op` WHERE  (  o.`order_id` = op.`order_id` and o.order_type = 3 and o.doctor_id = 2 ) LIMIT 1 [ RunTime:0.056477s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.058713s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 2 and s.`member_id` = m.`member_id` ) LIMIT 1 [ RunTime:0.056340s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_service_evaluation` [ RunTime:0.060256s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_service_evaluation` `s`,`jd_member` `m` WHERE  (  s.is_show = 1 and s.doctor_id = 2 and s.`member_id` = m.`member_id` ) LIMIT 1 [ RunTime:0.056643s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.058162s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.058546s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_ad` [ RunTime:0.061053s ]
+[ sql ] [ SQL ] SELECT `ad_title`,`ad_img`,`ad_url`,`add_date` FROM `jd_ad` WHERE  (  type_id = 0 and is_display = 1 ) ORDER BY `ad_sort` ASC [ RunTime:0.057708s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `only_token` = '1525679145Omj*yI'  AND `is_status` = 0 LIMIT 1 [ RunTime:0.057902s ]
+---------------------------------------------------------------
+[ 2018-05-24T18:19:03+08:00 ] 0.0.0.0 POST /sale/mySaleDetail
+[ info ] localhost:7037/sale/mySaleDetail [运行时间：0.422493s][吞吐率：2.37req/s] [内存消耗：3,693.51kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'sale',
+    2 => 'mySaleDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryhLpW0Sb1AbEm77TU',
+  'content-length' => '141',
+  'x-original-url' => '/sale/mySaleDetail',
+  'postman-token' => '9ec0cf76-f77a-a408-3034-2ff7af490e33',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=aa7ea6451a4b6bbee19801ed6db9d42a',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Sale->mySaleDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sale.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.092180s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.062204s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` WHERE  (  o.`doctor_id` = 2 AND o.pay_status = 2 AND o.order_type = 4 ) ORDER BY o.order_date DESC [ RunTime:0.073801s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` WHERE  (  op.`parent_id` = 2 AND o.pay_status = 2 AND o.order_type = 4 ) ORDER BY o.order_date DESC [ RunTime:0.065804s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-24T18:19:15+08:00 ] 0.0.0.0 POST /sale/mySaleDetail
+[ info ] localhost:7037/sale/mySaleDetail [运行时间：0.405504s][吞吐率：2.47req/s] [内存消耗：3,693.51kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'sale',
+    2 => 'mySaleDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarys4HVIqQWMi2bFU3a',
+  'content-length' => '141',
+  'x-original-url' => '/sale/mySaleDetail',
+  'postman-token' => '7277f4b0-4b5c-27cc-698c-dbcb83485359',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=aa7ea6451a4b6bbee19801ed6db9d42a',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Sale->mySaleDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sale.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.087285s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.059328s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` WHERE  (  o.`doctor_id` = 2 AND o.pay_status = 2 AND o.order_type = 4 ) ORDER BY o.order_date DESC [ RunTime:0.058616s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` WHERE  (  op.`parent_id` = 2 AND o.pay_status = 2 AND o.order_type = 4 ) ORDER BY o.order_date DESC [ RunTime:0.060255s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-24T18:19:32+08:00 ] 0.0.0.0 POST /sale/selfGoodsList
+[ info ] localhost:7037/sale/selfGoodsList [运行时间：0.311453s][吞吐率：3.21req/s] [内存消耗：3,611.94kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'sale',
+    2 => 'selfGoodsList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryHRJ1sXssGLqVVlmX',
+  'content-length' => '141',
+  'x-original-url' => '/sale/selfGoodsList',
+  'postman-token' => '25637417-3455-73f6-03bb-411cc128c3c2',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=aa7ea6451a4b6bbee19801ed6db9d42a',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Sale->selfGoodsList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sale.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.087367s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.060481s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` WHERE  (  o.`doctor_id` = 2 AND o.pay_status = 2 AND o.order_type = 4 ) ORDER BY o.order_date DESC [ RunTime:0.064246s ]
+---------------------------------------------------------------
+[ 2018-05-24T18:21:38+08:00 ] 0.0.0.0 POST /sale/selfGoodsList
+[ info ] localhost:7037/sale/selfGoodsList [运行时间：0.319141s][吞吐率：3.13req/s] [内存消耗：3,611.94kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'sale',
+    2 => 'selfGoodsList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryzysi997ZBMAYJzUx',
+  'content-length' => '141',
+  'x-original-url' => '/sale/selfGoodsList',
+  'postman-token' => 'a13f2125-845c-072d-8bc4-3450ab8a67da',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=aa7ea6451a4b6bbee19801ed6db9d42a',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Sale->selfGoodsList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sale.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.089165s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.061769s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` WHERE  (  o.`doctor_id` = 2 AND o.pay_status = 2 AND o.order_type = 4 ) ORDER BY o.order_date DESC [ RunTime:0.061131s ]
+---------------------------------------------------------------
+[ 2018-05-24T18:29:16+08:00 ] 0.0.0.0 POST /diagnosing/getDiaHospitalList
+[ info ] localhost:7037/diagnosing/getDiaHospitalList [运行时间：0.666326s][吞吐率：1.50req/s] [内存消耗：3,705.88kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'diagnosing',
+    2 => 'getDiaHospitalList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryNlSS2tfSskfUeKvT',
+  'content-length' => '141',
+  'x-original-url' => '/diagnosing/getDiaHospitalList',
+  'postman-token' => '7530f924-e6a1-d9ce-84e4-8b8ee793b281',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=aa7ea6451a4b6bbee19801ed6db9d42a',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Diagnosing->getDiaHospitalList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Diagnosing.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.085683s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.060929s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.061142s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital_repart` [ RunTime:0.060598s ]
+[ sql ] [ SQL ] SELECT `hr`.`hospital_repart_id`,`hr`.`hospital_id`,`d`.`department_name` FROM `jd_hospital_repart` `hr` LEFT JOIN `jd_department` `d` ON `hr`.`department_id`=`d`.`department_id` WHERE  hr.`hospital_repart_id` = '12' LIMIT 1 [ RunTime:0.058354s ]
+[ sql ] [ SQL ] SELECT `hr`.`hospital_repart_id`,`hr`.`hospital_id`,`d`.`department_name` FROM `jd_hospital_repart` `hr` LEFT JOIN `jd_department` `d` ON `hr`.`department_id`=`d`.`department_id` WHERE  hr.`hospital_repart_id` = '6' LIMIT 1 [ RunTime:0.056841s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital` [ RunTime:0.058351s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hospital` WHERE  `hospital_id` = 9 LIMIT 1 [ RunTime:0.057486s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-24T18:30:18+08:00 ] 0.0.0.0 POST /diagnosing/getAddHospitalList
+[ info ] localhost:7037/diagnosing/getAddHospitalList [运行时间：1.174869s][吞吐率：0.85req/s] [内存消耗：3,709.48kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'diagnosing',
+    2 => 'getAddHospitalList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarylPqVhlKt1xNzIRZJ',
+  'content-length' => '236',
+  'x-original-url' => '/diagnosing/getAddHospitalList',
+  'postman-token' => 'fa4a3f78-7464-2bb2-6338-72a930474e2f',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=aa7ea6451a4b6bbee19801ed6db9d42a',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'area_id' => '2',
+  'member_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Diagnosing->getAddHospitalList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Diagnosing.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084423s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.432345s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.089720s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital` [ RunTime:0.058707s ]
+[ sql ] [ SQL ] SELECT `hospital_id`,`hospital_name`,`area_id`,`address` FROM `jd_hospital` WHERE  `is_display` = 1  AND `area_id` = 2 ORDER BY `sort` DESC [ RunTime:0.058569s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital_repart` [ RunTime:0.059679s ]
+[ sql ] [ SQL ] SELECT `hr`.`hospital_repart_id`,`d`.`department_name` FROM `jd_hospital_repart` `hr` LEFT JOIN `jd_department` `d` ON `hr`.`department_id`=`d`.`department_id` WHERE  `hospital_id` = 12 [ RunTime:0.055963s ]
+[ sql ] [ SQL ] SELECT `hr`.`hospital_repart_id`,`d`.`department_name` FROM `jd_hospital_repart` `hr` LEFT JOIN `jd_department` `d` ON `hr`.`department_id`=`d`.`department_id` WHERE  `hospital_id` = 9 [ RunTime:0.057510s ]
+[ sql ] [ SQL ] SELECT `hr`.`hospital_repart_id`,`d`.`department_name` FROM `jd_hospital_repart` `hr` LEFT JOIN `jd_department` `d` ON `hr`.`department_id`=`d`.`department_id` WHERE  `hospital_id` = 6 [ RunTime:0.057683s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-24T18:30:25+08:00 ] 0.0.0.0 POST /diagnosing/getAddHospitalList
+[ info ] localhost:7037/diagnosing/getAddHospitalList [运行时间：0.776448s][吞吐率：1.29req/s] [内存消耗：3,704.22kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'diagnosing',
+    2 => 'getAddHospitalList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryZhW6p9mAW5M3grA9',
+  'content-length' => '236',
+  'x-original-url' => '/diagnosing/getAddHospitalList',
+  'postman-token' => 'b7e26c7e-b9bf-4cfa-a508-647336aca773',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=aa7ea6451a4b6bbee19801ed6db9d42a',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'area_id' => '1',
+  'member_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Diagnosing->getAddHospitalList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Diagnosing.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.111911s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.071619s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.073716s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital` [ RunTime:0.081635s ]
+[ sql ] [ SQL ] SELECT `hospital_id`,`hospital_name`,`area_id`,`address` FROM `jd_hospital` WHERE  `is_display` = 1  AND `area_id` = 1 ORDER BY `sort` DESC [ RunTime:0.070050s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital_repart` [ RunTime:0.072364s ]
+[ sql ] [ SQL ] SELECT `hr`.`hospital_repart_id`,`d`.`department_name` FROM `jd_hospital_repart` `hr` LEFT JOIN `jd_department` `d` ON `hr`.`department_id`=`d`.`department_id` WHERE  `hospital_id` = 17 [ RunTime:0.062982s ]
+[ sql ] [ SQL ] SELECT `hr`.`hospital_repart_id`,`d`.`department_name` FROM `jd_hospital_repart` `hr` LEFT JOIN `jd_department` `d` ON `hr`.`department_id`=`d`.`department_id` WHERE  `hospital_id` = 16 [ RunTime:0.061737s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-24T18:31:35+08:00 ] 0.0.0.0 POST /diagnosing/getAddHospitalList
+[ info ] localhost:7037/diagnosing/getAddHospitalList [运行时间：0.778948s][吞吐率：1.28req/s] [内存消耗：3,705.17kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'diagnosing',
+    2 => 'getAddHospitalList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarytpnKXqwMXBHVf27a',
+  'content-length' => '236',
+  'x-original-url' => '/diagnosing/getAddHospitalList',
+  'postman-token' => '51608ebb-2a7f-ca73-c214-f22779627d56',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=aa7ea6451a4b6bbee19801ed6db9d42a',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'area_id' => '1',
+  'member_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Diagnosing->getAddHospitalList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Diagnosing.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.093350s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.064991s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.066594s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital` [ RunTime:0.065300s ]
+[ sql ] [ SQL ] SELECT `hospital_id`,`hospital_name`,`area_id`,`address` FROM `jd_hospital` WHERE  `is_display` = 1  AND `area_id` = 1 ORDER BY `sort` DESC [ RunTime:0.065211s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital_repart` [ RunTime:0.065703s ]
+[ sql ] [ SQL ] SELECT `hr`.`hospital_repart_id`,`d`.`department_name` FROM `jd_hospital_repart` `hr` LEFT JOIN `jd_department` `d` ON `hr`.`department_id`=`d`.`department_id` WHERE  `hospital_id` = 17 [ RunTime:0.066717s ]
+[ sql ] [ SQL ] SELECT `hr`.`hospital_repart_id`,`d`.`department_name` FROM `jd_hospital_repart` `hr` LEFT JOIN `jd_department` `d` ON `hr`.`department_id`=`d`.`department_id` WHERE  `hospital_id` = 16 [ RunTime:0.064518s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-24T18:32:15+08:00 ] 0.0.0.0 POST /diagnosing/getDiaHospitalList
+[ info ] localhost:7037/diagnosing/getDiaHospitalList [运行时间：0.661989s][吞吐率：1.51req/s] [内存消耗：3,705.88kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'diagnosing',
+    2 => 'getDiaHospitalList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryGPQBI2eLoEutCKiD',
+  'content-length' => '141',
+  'x-original-url' => '/diagnosing/getDiaHospitalList',
+  'postman-token' => '1a4b762b-cf72-a7bf-a46a-3d65dff3e17e',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=aa7ea6451a4b6bbee19801ed6db9d42a',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Diagnosing->getDiaHospitalList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Diagnosing.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086125s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.060889s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.061072s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital_repart` [ RunTime:0.059590s ]
+[ sql ] [ SQL ] SELECT `hr`.`hospital_repart_id`,`hr`.`hospital_id`,`d`.`department_name` FROM `jd_hospital_repart` `hr` LEFT JOIN `jd_department` `d` ON `hr`.`department_id`=`d`.`department_id` WHERE  hr.`hospital_repart_id` = '12' LIMIT 1 [ RunTime:0.059746s ]
+[ sql ] [ SQL ] SELECT `hr`.`hospital_repart_id`,`hr`.`hospital_id`,`d`.`department_name` FROM `jd_hospital_repart` `hr` LEFT JOIN `jd_department` `d` ON `hr`.`department_id`=`d`.`department_id` WHERE  hr.`hospital_repart_id` = '6' LIMIT 1 [ RunTime:0.059137s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital` [ RunTime:0.059803s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hospital` WHERE  `hospital_id` = 9 LIMIT 1 [ RunTime:0.058400s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-24T18:32:51+08:00 ] 0.0.0.0 POST /diagnosing/getDiaHospitalList
+[ info ] localhost:7037/diagnosing/getDiaHospitalList [运行时间：0.756825s][吞吐率：1.32req/s] [内存消耗：3,708.84kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'diagnosing',
+    2 => 'getDiaHospitalList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryRQIGJ30qHpm6AHd5',
+  'content-length' => '141',
+  'x-original-url' => '/diagnosing/getDiaHospitalList',
+  'postman-token' => '3530bd87-6e1f-5fd0-6af3-6650f49af472',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=aa7ea6451a4b6bbee19801ed6db9d42a',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Diagnosing->getDiaHospitalList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Diagnosing.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.093227s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.063981s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.074635s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital_repart` [ RunTime:0.063263s ]
+[ sql ] [ SQL ] SELECT `hr`.`hospital_repart_id`,`hr`.`hospital_id`,`d`.`department_name` FROM `jd_hospital_repart` `hr` LEFT JOIN `jd_department` `d` ON `hr`.`department_id`=`d`.`department_id` WHERE  hr.`hospital_repart_id` = '19' LIMIT 1 [ RunTime:0.062906s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital` [ RunTime:0.061789s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hospital` WHERE  `hospital_id` = 16 LIMIT 1 [ RunTime:0.065548s ]
+[ sql ] [ SQL ] SELECT `hr`.`hospital_repart_id`,`hr`.`hospital_id`,`d`.`department_name` FROM `jd_hospital_repart` `hr` LEFT JOIN `jd_department` `d` ON `hr`.`department_id`=`d`.`department_id` WHERE  hr.`hospital_repart_id` = '6' LIMIT 1 [ RunTime:0.061545s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hospital` WHERE  `hospital_id` = 9 LIMIT 1 [ RunTime:0.062828s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-24T18:55:15+08:00 ] 0.0.0.0 POST /prescription/getTempDrugList
+[ info ] localhost:7037/prescription/getTempDrugList [运行时间：0.495901s][吞吐率：2.02req/s] [内存消耗：3,757.94kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDrugList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryldyfg9s1M578YgmA',
+  'content-length' => '362',
+  'x-original-url' => '/prescription/getTempDrugList',
+  'postman-token' => '7cb859bc-a6a2-ccae-40cd-67507d915d9e',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=aa7ea6451a4b6bbee19801ed6db9d42a',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'drug_str' => 'W1sxNywiXHU1MjM2XHU1ZGRkXHU0ZTRjIiw0XSxbMzE1LCJcdTcxOWZcdTk2NDRcdTcyNDciLDMwXSxbNDg1LCJcdTZjZDVcdTUzNGFcdTU5MGYiLDk0XV0=',
+  'prescription_id' => '1',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDrugList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.089241s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug` [ RunTime:0.059817s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `nick_name` = '制川乌'  AND `prescription_id` = 1 LIMIT 1 [ RunTime:0.059765s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `nick_name` = '熟附片'  AND `prescription_id` = 1 LIMIT 1 [ RunTime:0.061342s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `nick_name` = '法半夏'  AND `prescription_id` = 1 LIMIT 1 [ RunTime:0.060859s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-24T18:58:14+08:00 ] 0.0.0.0 POST /prescription/getSimilarDrug
+[ info ] localhost:7037/prescription/getSimilarDrug [运行时间：0.314661s][吞吐率：3.18req/s] [内存消耗：3,745.85kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getSimilarDrug',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryFh6rTecT6s8aI7XD',
+  'content-length' => '327',
+  'x-original-url' => '/prescription/getSimilarDrug',
+  'postman-token' => 'aacb3905-91ed-e435-82e2-cfbdff44c5fb',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=aa7ea6451a4b6bbee19801ed6db9d42a',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'prescription_id' => '1',
+  'str' => 'BZX',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getSimilarDrug[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.089073s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug` [ RunTime:0.066722s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `keywords` LIKE '%BZX%' ORDER BY `add_date` ASC [ RunTime:0.066026s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-24T18:58:24+08:00 ] 0.0.0.0 POST /prescription/getSimilarDrug
+[ info ] localhost:7037/prescription/getSimilarDrug [运行时间：0.315000s][吞吐率：3.17req/s] [内存消耗：3,751.91kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getSimilarDrug',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryMFlZKmRQXycADM1q',
+  'content-length' => '326',
+  'x-original-url' => '/prescription/getSimilarDrug',
+  'postman-token' => '8d5d0c7b-dde0-eaeb-b206-4cd1ba3e9d71',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=aa7ea6451a4b6bbee19801ed6db9d42a',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'prescription_id' => '1',
+  'str' => 'BX',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getSimilarDrug[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.093301s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug` [ RunTime:0.063227s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `keywords` LIKE '%BX%' ORDER BY `add_date` ASC [ RunTime:0.066679s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-24T19:05:03+08:00 ] 0.0.0.0 POST /prescription/getTempDetail
+[ info ] localhost:7037/prescription/getTempDetail [运行时间：0.756367s][吞吐率：1.32req/s] [内存消耗：3,771.75kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarym3fAHDj18KMO4J62',
+  'content-length' => '330',
+  'x-original-url' => '/prescription/getTempDetail',
+  'postman-token' => 'a47ab06e-aac1-4e7c-3326-041bd25304a4',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=aa7ea6451a4b6bbee19801ed6db9d42a',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'temp_id' => '4',
+  'state_id' => '7',
+  'area_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.107214s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.089362s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `state_id` = '7'  AND `is_display` = 1 LIMIT 1 [ RunTime:0.065138s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_temp` [ RunTime:0.061294s ]
+[ sql ] [ SQL ] SELECT `make`,`weight`,`taking`,`instructions`,`temp_name`,`relation_id`,`price`,`drug_str`,`is_taboo`,`taboo_content`,`dose` FROM `jd_temp` WHERE  `temp_id` = 4 LIMIT 1 [ RunTime:0.063242s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.064642s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = '2'  AND p.`is_display` = 1  AND d.`state_id` = '7' LIMIT 1 [ RunTime:0.063685s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`prescription_id`,p.`area_name` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = '2'  AND p.`is_display` = 1  AND d.`state_id` = '7'  AND d.`relation_id` = 32 ORDER BY d.`sort` DESC LIMIT 1 [ RunTime:0.062605s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-24T19:06:51+08:00 ] 0.0.0.0 POST /prescription/getTempDetail
+[ info ] localhost:7037/prescription/getTempDetail [运行时间：0.682156s][吞吐率：1.47req/s] [内存消耗：3,771.20kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryk6aMxGCj83GmttN4',
+  'content-length' => '331',
+  'x-original-url' => '/prescription/getTempDetail',
+  'postman-token' => 'bfdb2f5e-bbd8-b247-4b78-497dac250a86',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=aa7ea6451a4b6bbee19801ed6db9d42a',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'temp_id' => '14',
+  'state_id' => '7',
+  'area_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.091473s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.063638s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `state_id` = '7'  AND `is_display` = 1 LIMIT 1 [ RunTime:0.061625s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_temp` [ RunTime:0.062806s ]
+[ sql ] [ SQL ] SELECT `make`,`weight`,`taking`,`instructions`,`temp_name`,`relation_id`,`price`,`drug_str`,`is_taboo`,`taboo_content`,`dose` FROM `jd_temp` WHERE  `temp_id` = 14 LIMIT 1 [ RunTime:0.064394s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.062088s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = '2'  AND p.`is_display` = 1  AND d.`state_id` = '7' LIMIT 1 [ RunTime:0.061845s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`prescription_id`,p.`area_name` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = '2'  AND p.`is_display` = 1  AND d.`state_id` = '7'  AND d.`relation_id` = 33 ORDER BY d.`sort` DESC LIMIT 1 [ RunTime:0.060048s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-24T19:10:00+08:00 ] 0.0.0.0 POST /prescription/getTempDrugList
+[ info ] localhost:7037/prescription/getTempDrugList [运行时间：0.399799s][吞吐率：2.50req/s] [内存消耗：3,754.83kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDrugList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryQYYrUQojkAEXTLlG',
+  'content-length' => '307',
+  'x-original-url' => '/prescription/getTempDrugList',
+  'postman-token' => '0f6756aa-aa24-1795-2c3e-763f8368989b',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=aa7ea6451a4b6bbee19801ed6db9d42a',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'drug_str' => 'W1s4LCLliLbljYrlpI8iLDUsImciXSxbMTcsIuWItuW3neS5jCIsMSwiZyJdXQ== ',
+  'prescription_id' => '1',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDrugList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.090853s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug` [ RunTime:0.062480s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `nick_name` = '制半夏'  AND `prescription_id` = 1 LIMIT 1 [ RunTime:0.067318s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `nick_name` = '制川乌'  AND `prescription_id` = 1 LIMIT 1 [ RunTime:0.062155s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-24T19:13:17+08:00 ] 0.0.0.0 POST /prescription/getTempDrugList
+[ info ] localhost:7037/prescription/getTempDrugList [运行时间：0.456851s][吞吐率：2.19req/s] [内存消耗：3,754.83kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDrugList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryz3L0CnbNQ2bHqZge',
+  'content-length' => '306',
+  'x-original-url' => '/prescription/getTempDrugList',
+  'postman-token' => '966a83b7-1da0-2819-1713-30284cf0aec3',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=aa7ea6451a4b6bbee19801ed6db9d42a',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'drug_str' => 'W1s4LCLliLbljYrlpI8iLDUsImciXSxbMTcsIuWItuW3neS5jCIsMSwiZyJdXQ==',
+  'prescription_id' => '1',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDrugList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.096224s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug` [ RunTime:0.066895s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `nick_name` = '制半夏'  AND `prescription_id` = 1 LIMIT 1 [ RunTime:0.111994s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `nick_name` = '制川乌'  AND `prescription_id` = 1 LIMIT 1 [ RunTime:0.073875s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-24T19:14:31+08:00 ] 0.0.0.0 POST /prescription/getTempDrugList
+[ info ] localhost:7037/prescription/getTempDrugList [运行时间：0.405460s][吞吐率：2.47req/s] [内存消耗：3,753.78kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDrugList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarymdPQiv05VfvESAg8',
+  'content-length' => '306',
+  'x-original-url' => '/prescription/getTempDrugList',
+  'postman-token' => '4e243d89-b57e-2c00-4138-50aab9d4de32',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=aa7ea6451a4b6bbee19801ed6db9d42a',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'drug_str' => 'W1s4LCLliLbljYrlpI8iLDUsImciXSxbMTcsIuWItuW3neS5jCIsMSwiZyJdXQ==',
+  'prescription_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDrugList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.087983s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug` [ RunTime:0.060480s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `nick_name` = '制半夏'  AND `prescription_id` = 2 LIMIT 1 [ RunTime:0.059118s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `nick_name` = '制川乌'  AND `prescription_id` = 2 LIMIT 1 [ RunTime:0.061682s ]
+[ error ] [8]未定义数组索引: price[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php:402]
+[ error ] [8]未定义数组索引: price[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php:402]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-24T19:17:20+08:00 ] 0.0.0.0 POST /prescription/getTempDrugList
+[ info ] localhost:7037/prescription/getTempDrugList [运行时间：0.371556s][吞吐率：2.69req/s] [内存消耗：3,753.78kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDrugList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryRZXkceQ99v4ZzZBI',
+  'content-length' => '306',
+  'x-original-url' => '/prescription/getTempDrugList',
+  'postman-token' => '864a47b8-6053-4336-0e32-c883e818a8a2',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=aa7ea6451a4b6bbee19801ed6db9d42a',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'drug_str' => 'W1s4LCLliLbljYrlpI8iLDUsImciXSxbMTcsIuWItuW3neS5jCIsMSwiZyJdXQ==',
+  'prescription_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDrugList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.087165s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug` [ RunTime:0.060955s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `nick_name` = '制半夏'  AND `prescription_id` = 2 LIMIT 1 [ RunTime:0.058786s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `nick_name` = '制川乌'  AND `prescription_id` = 2 LIMIT 1 [ RunTime:0.058639s ]
+[ error ] [8]未定义数组索引: price[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php:402]
+[ error ] [8]未定义数组索引: price[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php:402]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-24T22:22:41+08:00 ] 0.0.0.0 POST /prescription/getTempDetail
+[ info ] localhost:7037/prescription/getTempDetail [运行时间：0.770230s][吞吐率：1.30req/s] [内存消耗：3,755.77kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary0A7X7usjxSewe87U',
+  'content-length' => '330',
+  'x-original-url' => '/prescription/getTempDetail',
+  'postman-token' => 'd599e4e5-d95d-3b48-dc57-74e1cb8ea98c',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'temp_id' => '0',
+  'state_id' => '7',
+  'area_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.258753s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.089902s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `state_id` = '7'  AND `is_display` = 1 LIMIT 1 [ RunTime:0.105021s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.106066s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`prescription_id`,p.`area_name` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = '2'  AND p.`is_display` = 1  AND d.`state_id` = '7' ORDER BY d.`sort` DESC [ RunTime:0.096617s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]

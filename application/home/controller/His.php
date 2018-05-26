@@ -10,8 +10,9 @@ class His extends Common
      */
     public function updateDrugList() {
         set_time_limit (0);
-        $url = 'http://192.168.30.31/tktservice/tkt_service.asmx/TKT_YP_Z_SELECT_ALL';
+        $url = 'http://192.168.20.31/tktservice/tkt_service.asmx/TKT_YP_Z_SELECT_ALL';
         $_info = curlGet($url);
+        var_dump($_info);die;
         $xml=new \SimpleXMLElement($_info);
         $array = json_decode(json_encode($xml),true);
 

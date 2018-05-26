@@ -54,15 +54,26 @@ class Doctor extends Common
             ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
         }
         $doctor = db('doctor')->where("member_id = {$data['doctor_id']}")
-            ->field('member_id, member_name, face_photo, goodat_id, introduction')
+            ->field('member_id, true_name, title_str, inherit, school_str, face_photo, goodat_id, introduction, hospital_id')
             ->find();
 
-        // 数据处理 TODO  涂革处理
-        $doctor['face_photo'] = $this->view->setting['base_host'] . $doctor['face_photo'];
+        //是否显示流派
+        if ($doctor['inherit']) {
+            $doctor['school_str'] = db('school')
+                ->where("school_id IN({$doctor['school_str']}) AND is_display = 1")
+                ->field('school_name')
+                ->select();
+        } else {
+            $doctor['school_str'] = array();
+        }
+        //第一医疗机构
+        $hospital = db('hospital')->where("hospital_id = {$doctor['hospital_id']}")
+            ->field('hospital_name')
+            ->find();
+        $doctor['hospital_name'] = $hospital['hospital_name'];
 
         // 查询擅长
         $doctor['goodat_id'] = $this->goodsId($doctor['goodat_id']);
-
 
         // 查询公告管理
         $doctorNotice = $this->noticeList($data['doctor_id']);
@@ -82,20 +93,68 @@ class Doctor extends Common
             ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
         }
         $doctor = db('doctor')->where("member_id = {$data['doctor_id']}")
-            ->field('member_id, member_name, face_photo, goodat_id, introduction')
+            ->field('member_id, inherit, member_name, face_photo, goodat_id, introduction, recom, is_clinic, hospital_id, hospital_repart_str, school_str, inherit title_str, graphic_speech, concealment_number, online_inquiry')
             ->find();
 
-        // 数据处理 TODO  涂革处理
-        $doctor['face_photo'] = $this->view->setting['base_host'] . $doctor['face_photo'];
+        //是否显示流派
+        if ($doctor['inherit']) {
+            $doctor['school_str'] = db('school')
+                ->where("school_id IN({$doctor['school_str']}) AND is_display = 1")
+                ->field('school_name')
+                ->select();
+        } else {
+            $doctor['school_str'] = array();
+        }
+
+        //第一医疗机构
+        $hospital = db('hospital')->where("hospital_id = {$doctor['hospital_id']}")
+            ->field('hospital_name')
+            ->find();
+        $doctor['hospital_name'] = $hospital['hospital_name'];
+        //第一科室
+        $keshiArr = db('hospital_repart')->alias('hr')
+            ->join(['jd_department'=>'d'], 'd.department_id = hr.department_id' , 'inner')
+            ->where("hr.hospital_repart_id IN({$doctor['hospital_repart_str']})")
+            ->field("d.department_name")
+            ->select();
+        $doctor['department_name'] = $keshiArr[0];
+        //是否有自建特色方剂
+        $existGoods = db('self_goods')
+            ->where("member_id = {$data['doctor_id']} AND content != '' AND is_checked = 2 AND end_date > ".time())
+            ->field('self_goods_id')
+            ->count();
+        $existGoods > 0 ? $doctor['has_self_goods'] = 1 : $doctor['has_self_goods'] = 0;
+        //付款人数
+        $doctor['payNum'] = db('order')
+            ->where("pay_status = 2 AND doctor_id = {$data['doctor_id']}")
+            ->field('distinct(patient_id)')
+            ->count();
+        //是否开启爱心问诊
+
+        //是否开启线上复诊
+
+        //是否开启图文咨询
+
+         //查询调制服务包列表
+        $doctor['selfGoodsList'] = db('self_goods')
+            ->where("member_id = {$data['doctor_id']} AND is_checked = 2 AND end_date > ".time())
+            ->field('self_goods_id, inherit_id, content, self_goods_name, advantage, price')
+            ->select();
+        $doctor['is_self_drug'] = $doctor['content'] != '' ? 1 : 0;
+        $doctor['is_inherit'] = $doctor['inherit_id'] != 0 ? 1 : 0;
+
+
+
+//         查询坐诊信息 TODO  涂革处理
+
+
+
+
+
+
 
         // 查询擅长
         $doctor['goodat_id'] = $this->goodsId($doctor['goodat_id']);
-
-//         查询问诊复诊爱心问诊 TODO  涂革处理
-
-//         查询调制服务包列表 TODO  涂革处理
-
-//         查询坐诊信息 TODO  涂革处理
 
         // 查询评价列表
         $doctorEvaluation = $this->evaluationList($data['doctor_id']);

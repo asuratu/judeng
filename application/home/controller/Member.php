@@ -596,7 +596,7 @@ class Member extends Common
 
     /**
      * @Title: getsms
-     * @Description: TODO 获取短信验证码
+     * @Description: TODO 获取短信验证码 60秒内只能获取一次验证码 有效时间是300秒
      */
     public function getsms()
     {
@@ -610,7 +610,8 @@ class Member extends Common
             }
             $mobile=$data['mobile'];
             $map['mobile']=$mobile;
-            $timer = 300;
+            $timer = 60; //发送验证码间隔时间
+            $expiredTimer = 300; //验证码的有效期
             tglog('发送短信');
             tglog(json_encode($data));
             tglog('发送短信');
@@ -654,7 +655,7 @@ class Member extends Common
             $body = sprintf(config('body'), $randcode);
             $status = sendSMS($mobile, $body);
             if ($status) {
-                $_SESSION['tokencode']= ['code' => $randcode, 'expired_at' => time() + $timer,'mobile'=>$mobile];
+                $_SESSION['tokencode']= ['code' => $randcode, 'expired_at' => time() + $expiredTimer,'mobile'=>$mobile];
                 ajaxReturn(array('code' => 1, 'info' => '短信发送成功','data'=>array($randcode)));
             } else {
                 ajaxReturn(array('code' => 0, 'info' => '短信发送失败','data'=>[]));

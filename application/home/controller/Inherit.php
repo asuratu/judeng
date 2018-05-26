@@ -1,5 +1,6 @@
 <?php
 namespace app\home\controller;
+use think\Controller;
 use think\Request;
 use think\Db;
 class Inherit extends Common
@@ -360,32 +361,133 @@ class Inherit extends Common
                 ->find();
 
             //查询工作室列表
-
             $studioList = db('inherit_doctor')->alias('id')
-                ->join(['jd_doctor'=>'d'], 'i.member_id = d.member_id' , 'inner')
-                ->where($map)
-                ->field("i.inherit_id, i.inherit_name, i.studio_intro, i.studio_address, i.studio_tel, d.member_id, d.member_name, d.face_photo")
-                ->find();
+                ->join(['jd_doctor'=>'d'], 'id.member_id = d.member_id' , 'inner')
+                ->where("id.`is_checked` = 1 AND id.`inherit_id` = {$data['inherit_id']} AND id.parent_id = {$inheritDetail['member_id']}")
+                ->field("id.inherit_id, id.parent_id, d.member_id, d.member_name, d.face_photo")
+                ->select();
 
+            foreach ($studioList as $key=>$val) {
+                //查询每个医生的信息
+                $doctorInfo = db('doctor')->where("member_id = {$val['member_id']}")
+                    ->field('member_id, inherit, member_name, face_photo, goodat_id, recom, is_clinic, hospital_id, hospital_repart_str, school_str, inherit, title_str, concealment_number')
+                    ->find();
 
-
-            //查询特色方剂列表
-            $data['page'] = $data['page'] ? intval($data['page']) : 1;
-            $data['pageSize'] = $data['pageSize'] ? intval($data['pageSize']) : 5;
-            $start = ($data['page']-1)*$data['pageSize'];
-
-            $specialMap['`is_display`'] = 1;
-            $specialMap['`inherit_id`'] = $data['inherit_id'];
-            $specialArr = db('special')->where($specialMap)->field("special_id, special_name, content, service_str")->limit($start,$data['pageSize'])->order("`sort` DESC")->select();
-            $totalNum = db('special')->where($specialMap)->field("special_id")->order("`sort` DESC")->count();
-            foreach ($specialArr as $key => $val) {
-                $contentArr = array();
-                foreach (json_decode($val['content']) as $key1=>$val1) {
-                    array_push($contentArr, $val1[1]);
+                //是否显示流派
+                if ($doctorInfo['inherit']) {
+                    $doctorInfo['school_str'] = db('school')
+                        ->where("school_id IN({$doctorInfo['school_str']}) AND is_display = 1")
+                        ->field('school_name')
+                        ->select();
+                } else {
+                    $doctorInfo['school_str'] = array();
                 }
-                $specialArr[$key]['content'] = base64_encode(json_encode($contentArr));
+// 查询擅长
+                $doctorInfo['goodat_id'] = Controller('Doctor')->goodsId($doctorInfo['goodat_id']);
+                //第一医疗机构
+                $hospital = db('hospital')->where("hospital_id = {$doctorInfo['hospital_id']}")
+                    ->field('hospital_name')
+                    ->find();
+                $doctorInfo['hospital_name'] = $hospital['hospital_name'];
+                //第一科室
+                $keshiArr = db('hospital_repart')->alias('hr')
+                    ->join(['jd_department'=>'d'], 'd.department_id = hr.department_id' , 'inner')
+                    ->where("hr.hospital_repart_id IN({$doctorInfo['hospital_repart_str']})")
+                    ->field("d.department_name")
+                    ->select();
+                $doctorInfo['department_name'] = $keshiArr[0];
+                //是否有自建特色方剂
+                $existGoods = db('self_goods')
+                    ->where("member_id = {$doctorInfo['member_id']} AND content != '' AND is_checked = 2 AND end_date > ".time())
+                    ->field('self_goods_id')
+                    ->count();
+                $existGoods > 0 ? $doctorInfo['has_self_goods'] = 1 : $doctorInfo['has_self_goods'] = 0;
+                //好评数和付款数
+                $inheritDocInfo = db('inherit_doctor')->alias('id')
+                    ->join(['jd_doctor'=>'d'], 'id.member_id = d.member_id' , 'inner')
+                    ->where("id.`is_checked` = 1 AND id.`inherit_id` = {$data['inherit_id']} AND id.member_id = {$doctorInfo['member_id']}")
+                    ->field("id.pay_num, id.proud, id.use_drug")
+                    ->find  ();
+                $doctorInfo['pay_num'] = $inheritDocInfo['pay_num'];
+                $doctorInfo['proud'] = $inheritDocInfo['proud'];
+                //使用过的特色方剂
+                $doctorInfo['use_drug'] = $inheritDocInfo['use_drug'];
+                //查找该医生的方剂
+                $doctorInfo['selfGoodsList'] = db('self_goods')
+                    ->where("member_id = {$doctorInfo['member_id']} AND is_checked = 2 AND end_date > " . time())
+                    ->field("self_goods_name")
+                    ->select();
+                $studioList[$key]['content'] = $doctorInfo;
             }
-            ajaxReturn(array('code'=>1, 'info'=>'ok!','data'=>['inherit'=>$inheritDetail, 'content'=>$specialArr, 'totalNum'=>$totalNum, 'used'=>$used]));
+
+            $firstList = $studioList;
+            //若当前不是传承人还应查工作站
+            
+            if ($data['member_id'] != $doctorInfo['member_id']) {
+                //工作站信息
+                $studioList = db('inherit_doctor')->alias('id')
+                    ->join(['jd_doctor'=>'d'], 'id.member_id = d.member_id' , 'inner')
+                    ->where("id.`is_checked` = 1 AND id.`inherit_id` = {$data['inherit_id']} AND id.parent_id = {$data['member_id']}")
+                    ->field("id.inherit_id, id.parent_id, d.member_id, d.member_name, d.face_photo")
+                    ->select();
+                foreach ($studioList as $key=>$val) {
+                    //查询每个医生的信息
+                    $doctorInfo = db('doctor')->where("member_id = {$val['member_id']}")
+                        ->field('member_id, inherit, member_name, face_photo, goodat_id, recom, is_clinic, hospital_id, hospital_repart_str, school_str, inherit, title_str, concealment_number')
+                        ->find();
+
+                    //是否显示流派
+                    if ($doctorInfo['inherit']) {
+                        $doctorInfo['school_str'] = db('school')
+                            ->where("school_id IN({$doctorInfo['school_str']}) AND is_display = 1")
+                            ->field('school_name')
+                            ->select();
+                    } else {
+                        $doctorInfo['school_str'] = array();
+                    }
+
+                    //第一医疗机构
+                    $hospital = db('hospital')->where("hospital_id = {$doctorInfo['hospital_id']}")
+                        ->field('hospital_name')
+                        ->find();
+                    $doctorInfo['hospital_name'] = $hospital['hospital_name'];
+                    //第一科室
+                    $keshiArr = db('hospital_repart')->alias('hr')
+                        ->join(['jd_department'=>'d'], 'd.department_id = hr.department_id' , 'inner')
+                        ->where("hr.hospital_repart_id IN({$doctorInfo['hospital_repart_str']})")
+                        ->field("d.department_name")
+                        ->select();
+                    $doctorInfo['department_name'] = $keshiArr[0];
+                    // 查询擅长
+                    $doctorInfo['goodat_id'] = Controller('Doctor')->goodsId($doctorInfo['goodat_id']);
+                    //是否有自建特色方剂
+                    $existGoods = db('self_goods')
+                        ->where("member_id = {$doctorInfo['member_id']} AND content != '' AND is_checked = 2 AND end_date > ".time())
+                        ->field('self_goods_id')
+                        ->count();
+                    $existGoods > 0 ? $doctorInfo['has_self_goods'] = 1 : $doctorInfo['has_self_goods'] = 0;
+                    //好评数和付款数
+                    $inheritDocInfo = db('inherit_doctor')->alias('id')
+                        ->join(['jd_doctor'=>'d'], 'id.member_id = d.member_id' , 'inner')
+                        ->where("id.`is_checked` = 1 AND id.`inherit_id` = {$data['inherit_id']} AND id.member_id = {$doctorInfo['member_id']}")
+                        ->field("id.pay_num, id.proud, id.use_drug")
+                        ->find  ();
+                    $doctorInfo['pay_num'] = $inheritDocInfo['pay_num'];
+                    $doctorInfo['proud'] = $inheritDocInfo['proud'];
+                    //使用过的特色方剂
+                    $doctorInfo['use_drug'] = $inheritDocInfo['use_drug'];
+                    //查找该医生的方剂
+                    $doctorInfo['selfGoodsList'] = db('self_goods')
+                        ->where("member_id = {$doctorInfo['member_id']} AND is_checked = 2 AND end_date > " . time())
+                        ->field("self_goods_name")
+                        ->select();
+                    $studioList[$key]['content'] = $doctorInfo;
+                }
+                $workStation = $studioList;
+            } else {
+                $workStation = array();
+            }
+            ajaxReturn(array('code'=>1, 'info'=>'ok!','data'=>[['inheritDetail'=>$inheritDetail, 'firstList'=>$firstList, 'workStation'=>$workStation]]));
         }
     }
 
