@@ -6,7 +6,7 @@ return array(
     'aryOrderPayType' => array('未选择', '微信', '支付宝'),
     'base_host' => 'http://39.105.19.169:88',
     'ose_host' => 'http://39.105.19.169:88',
-    'aryOrderType' => array('问诊', '复诊', '诊后咨询'),
+    'aryOrderType' => array('问诊', '复诊', '诊后咨询', '处方订单', '自建产品', '历史开方'),
     'aryOrderStatus' => array(
         '-1' => '已取消',
         '0' => '待付款',

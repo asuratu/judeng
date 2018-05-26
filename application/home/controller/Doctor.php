@@ -78,7 +78,8 @@ class Doctor extends Common
         // 查询公告管理
         $doctorNotice = $this->noticeList($data['doctor_id']);
         if ($doctor) {
-            ajaxReturn(array('code'=>1,'info'=>'修改成功','data'=>$doctor, 'notice' => $doctorNotice));
+            $doctor['notice'] = $doctorNotice;
+            ajaxReturn(array('code'=>1,'info'=>'修改成功','data'=>$doctor));
         } else {
             ajaxReturn(array('code'=>0,'info'=>'数据错误'));
         }
@@ -161,7 +162,9 @@ class Doctor extends Common
         // 查询公告管理
         $doctorNotice = $this->noticeList($data['doctor_id']);
         if ($doctor) {
-            ajaxReturn(array('code'=>1,'info'=>'修改成功','data'=>$doctor, 'evaluation' => $doctorEvaluation, 'notice' => $doctorNotice));
+            $doctor['evaluation'] = $doctorEvaluation;
+            $doctor['notice'] = $doctorNotice;
+            ajaxReturn(array('code'=>1,'info'=>'修改成功','data'=>$doctor));
         } else {
             ajaxReturn(array('code'=>0,'info'=>'数据错误'));
         }

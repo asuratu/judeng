@@ -206,6 +206,8 @@ class Order extends Common
                         $orderPrescriptionInsert['is_taboo'] = 0;
                         $orderPrescriptionInsert['taboo_content'] = '';
                     }
+
+
                     $orderPrescriptionInsert['prescription_src'] = '';
                 } else{
                     //拍照开方
@@ -366,8 +368,6 @@ class Order extends Common
                     ajaxReturn(array('code'=>0,'info'=>'开方类型不正确!','data'=>[]));
                 }
                 $_identityPrescription = db('order_prescription')->insertGetId($orderPrescriptionInsert);
-
-
 
                 if ($_identityPrescription && $orderPrescriptionInsert['order_id'] && $updateOrderPrice && $_identify) {
                     Db::commit();

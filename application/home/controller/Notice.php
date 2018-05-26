@@ -176,14 +176,14 @@ class Notice extends Common
             $notice = db('notice')->where("notice_id = {$data['notice_id']}")->field('notice_id, doctor_id, notice_name, content, release_date')->find();
             $notice['release_date'] = date('Y-m-d', $notice['release_date']);
             $notice_attach = db('notice_attach')->where("notice_id = {$data['notice_id']}")->select();
-
             $attach = array();
             foreach ($notice_attach as $key => $val) {
                 array_push($attach, $val);
             }
+            $notice['attach'] = $attach;
 
             if ($notice) {
-                ajaxReturn(array('code' => 1, 'info' => 'ok', 'data' => $notice, 'attach' => $attach));
+                ajaxReturn(array('code' => 1, 'info' => 'ok', 'data' => $notice));
             } else {
                 ajaxReturn(array('code' => 0, 'info' => '公告内容不存在，请刷新后再试!'));
             }
