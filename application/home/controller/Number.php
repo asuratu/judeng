@@ -49,8 +49,8 @@ class Number extends Common
             $total = Db::table('jd_order o, jd_order_prescription op')
                 ->where("o.`order_id` = op.`order_id` and o.order_type = 3 and o.doctor_id = {$data['doctor_id']} {$where}")
                 ->count();
-            $order['tatal'] = $total;
-            ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>$order));
+//            $order['tatal'] = $total;
+            ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>$order,'total'=>$total));
 
         }
     }
@@ -103,8 +103,8 @@ class Number extends Common
             $total = Db::table('jd_order o, jd_member m')
                 ->where("o.`patient_id` = m.`member_id` and o.order_type = {$data['type']} and o.doctor_id = {$data['doctor_id']}")
                 ->count();
-            $order['total'] = $total;
-            ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>$order));
+//            $order['total'] = $total;
+            ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>$order,'total'=>$total));
 
         }
     }
@@ -144,8 +144,8 @@ class Number extends Common
             $total = Db::table('jd_doctor_member s, jd_member m')
                 ->where("s.doctor_id = {$data['doctor_id']} and s.`is_show` = 1 and s.`member_id` = m.`member_id` and (m.`member_name` like '%{$data['title']}%' or m.`mobile` like '%{$data['title']}%' or s.`grouping` like '%{$data['title']}%')")
                 ->count();
-            $order['tatal'] = $total;
-            ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>$order));
+//            $order['tatal'] = $total;
+            ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>$order,'total'=>$total));
 
         }
     }
@@ -231,8 +231,8 @@ class Number extends Common
             $total = Db::table('jd_service_evaluation s, jd_member m')
                 ->where("s.is_show = 1 and s.doctor_id = {$data['doctor_id']} and s.`member_id` = m.`member_id`")
                 ->count();
-            $order['tatal'] = $total;
-            ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>$order));
+//            $order['tatal'] = $total;
+            ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>$order,'total'=>$total));
         }
     }
 
@@ -287,8 +287,8 @@ class Number extends Common
                 ->where("s.doctor_id = {$data['doctor_id']} and s.`is_show` = 1 and s.`member_id` = m.`member_id` and (m.`member_name` like '%{$data['title']}%' or m.`mobile` like '%{$data['title']}%' or s.`grouping` like '%{$data['title']}%')")
                 ->count();
             $order['group_member_name'] = $group['group_member_name'];
-            $order['total'] = $total;
-            ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>$order));
+//            $order['total'] = $total;
+            ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>$order,'total'=>$total));
 
         }
     }
@@ -434,8 +434,8 @@ class Number extends Common
             $total = Db::table('jd_group_patient s, jd_member m')
                 ->where("s.doctor_id = {$data['doctor_id']} and s.`is_show` = 1 and s.group_id = {$data['group_id']} and s.`member_id` = m.`member_id`")
                 ->count();
-            $order['total'] = $total;
-            ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>$order));
+//            $order['total'] = $total;
+            ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>$order,'total'=>$total));
 
         }
     }
