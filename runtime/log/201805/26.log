@@ -897,3 +897,91 @@
 [ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_order` `o`,`jd_order_prescription` `op` WHERE  (  o.`order_id` = op.`order_id` and o.order_type = 3 and o.doctor_id = 2  and o.`pay_status` = 0 ) LIMIT 1 [ RunTime:0.174821s ]
 [ error ] [8]未定义数组索引: only_token[D:\works\201805\judeng\application\common.php:82]
 >>>>>>> no message
+---------------------------------------------------------------
+[ 2018-05-26T21:51:42+08:00 ] 0.0.0.0 POST /number/allPatient
+[ info ] localhost:8020/number/allPatient [运行时间：0.354191s][吞吐率：2.82req/s] [内存消耗：2,741.70kb] [文件加载：44]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allPatient',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------423699630600125418992643',
+  'content-length' => '165',
+  'x-original-url' => '/number/allPatient',
+  'postman-token' => '8f135358-3f66-45c3-9e71-3b5aecaab715',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Number->allPatient[ D:\works\201805\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: group_id[D:\works\201805\judeng\application\home\controller\Number.php:260]
+[ error ] [8]未定义数组索引: title[D:\works\201805\judeng\application\home\controller\Number.php:272]
+[ error ] [8]未定义数组索引: title[D:\works\201805\judeng\application\home\controller\Number.php:272]
+[ error ] [8]未定义数组索引: title[D:\works\201805\judeng\application\home\controller\Number.php:272]
+[ error ] [8]未定义数组索引: title[D:\works\201805\judeng\application\home\controller\Number.php:287]
+[ error ] [8]未定义数组索引: title[D:\works\201805\judeng\application\home\controller\Number.php:287]
+[ error ] [8]未定义数组索引: title[D:\works\201805\judeng\application\home\controller\Number.php:287]
+[ error ] [8]未定义数组索引: only_token[D:\works\201805\judeng\application\common.php:82]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.104133s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.076603s ]
+[ sql ] [ SQL ] SELECT s.`member_id`,s.`inquisition_name`,s.`inquisition`,m.`member_name`,m.`mobile`,m.`portrait`,m.`sex`,m.`age`,m.`openid`,m.`is_type` FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 2 and s.`is_show` = 1 and s.`member_id` = m.`member_id` and (m.`member_name` like '%%' or m.`mobile` like '%%' or s.`grouping` like '%%') ) ORDER BY `s`.`inquisition`  DESC [ RunTime:0.068438s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 2 and s.`is_show` = 1 and s.`member_id` = m.`member_id` and (m.`member_name` like '%%' or m.`mobile` like '%%' or s.`grouping` like '%%') ) LIMIT 1 [ RunTime:0.071994s ]
+---------------------------------------------------------------
+[ 2018-05-26T21:54:19+08:00 ] 0.0.0.0 POST /number/allPatient
+[ info ] localhost:8020/number/allPatient [运行时间：0.360659s][吞吐率：2.77req/s] [内存消耗：2,741.93kb] [文件加载：44]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allPatient',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------678643493059032881503954',
+  'content-length' => '165',
+  'x-original-url' => '/number/allPatient',
+  'postman-token' => 'efa561ab-6d6c-4004-8481-9657edad078f',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Number->allPatient[ D:\works\201805\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: group_id[D:\works\201805\judeng\application\home\controller\Number.php:260]
+[ error ] [8]未定义数组索引: title[D:\works\201805\judeng\application\home\controller\Number.php:272]
+[ error ] [8]未定义数组索引: title[D:\works\201805\judeng\application\home\controller\Number.php:272]
+[ error ] [8]未定义数组索引: title[D:\works\201805\judeng\application\home\controller\Number.php:272]
+[ error ] [8]未定义数组索引: title[D:\works\201805\judeng\application\home\controller\Number.php:287]
+[ error ] [8]未定义数组索引: title[D:\works\201805\judeng\application\home\controller\Number.php:287]
+[ error ] [8]未定义数组索引: title[D:\works\201805\judeng\application\home\controller\Number.php:287]
+[ error ] [8]未定义数组索引: only_token[D:\works\201805\judeng\application\common.php:82]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.107968s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.079442s ]
+[ sql ] [ SQL ] SELECT s.`member_id`,s.`inquisition_name`,s.`inquisition`,m.`member_name`,m.`mobile`,m.`portrait`,m.`sex`,m.`age`,m.`openid`,m.`is_type` FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 2 and s.`is_show` = 1 and s.`member_id` = m.`member_id` and (m.`member_name` like '%%' or m.`mobile` like '%%' or s.`grouping` like '%%') ) ORDER BY `s`.`inquisition`  DESC [ RunTime:0.071365s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 2 and s.`is_show` = 1 and s.`member_id` = m.`member_id` and (m.`member_name` like '%%' or m.`mobile` like '%%' or s.`grouping` like '%%') ) LIMIT 1 [ RunTime:0.069917s ]

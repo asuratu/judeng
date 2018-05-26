@@ -286,9 +286,9 @@ class Number extends Common
             $total = Db::table('jd_doctor_member s, jd_member m')
                 ->where("s.doctor_id = {$data['doctor_id']} and s.`is_show` = 1 and s.`member_id` = m.`member_id` and (m.`member_name` like '%{$data['title']}%' or m.`mobile` like '%{$data['title']}%' or s.`grouping` like '%{$data['title']}%')")
                 ->count();
-            $order['group_member_name'] = $group['group_member_name'];
+//            $order['group_member_name'] = $group['group_member_name'];
 //            $order['total'] = $total;
-            ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>$order,'total'=>$total));
+            ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>$order,'total'=>$total,'group_member_name'=>$group['group_member_name']));
 
         }
     }
