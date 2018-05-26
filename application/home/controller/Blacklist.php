@@ -101,7 +101,8 @@ class Blacklist extends Common
             $total = Db::table('jd_blacklist b, jd_member m')
                 ->where("b.doctor_id = {$data['doctor_id']} and b.is_show = 0 and b.`member_id` = m.`member_id`")
                 ->count();
-            ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>$order,'total'=>$total));
+            $order['tatal'] = $total;
+            ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>$order));
 
         }
     }
