@@ -138,9 +138,7 @@ class Order extends Common
                     ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
                 }
 
-                if (json_decode(base64_decode($data['drug_str'])) == null) {
-                    ajaxReturn(array('code'=>0,'info'=>'药品参数不符合规范!','data'=>[]));
-                }
+
 
                 //查询当前医生信息
                 $doctorMap['member_id'] = $data['doctor_id'];
@@ -151,6 +149,9 @@ class Order extends Common
 
                 //只有在线开方能计算价格
                 if ($data['type'] == 0) {
+                    if (json_decode(base64_decode($data['drug_str'])) == null) {
+                        ajaxReturn(array('code'=>0,'info'=>'药品参数不符合规范!','data'=>[]));
+                    }
                     //计算价格
                     $drugSumPrice = 0;//价格
                     $lessCountArr = array();//超量
@@ -250,9 +251,9 @@ class Order extends Common
                         /**
                          * 此处根据年龄计算生日会不准确
                          */
-                        $patientInsert['birthday'] = date('Y')-$data['age'];
-                        $patientInsert['birthday'] .= '-00-00';
-                        $patientInsert['age'] = intval($data['age']);
+//                        $patientInsert['birthday'] = date('Y')-$data['age'];
+//                        $patientInsert['birthday'] .= '-00-00';
+                        $patientInsert['age'] = ($data['age'] ?: '');
                         $data['patient_id'] = db('member')->insertGetId($patientInsert);
                     } else {
                         $data['patient_id'] = $patientInfo['member_id'];
@@ -281,7 +282,7 @@ class Order extends Common
                 $orderPrescriptionInsert['patient_name'] = $data['patient_name'] ?: '';
                 $orderPrescriptionInsert['patient_mobile'] = $data['mobile'] ?: '';
                 $orderPrescriptionInsert['patient_sex'] = $data['sex'] ?: 0;
-                $orderPrescriptionInsert['patient_age'] = $data['age'] ?: 0;
+                $orderPrescriptionInsert['patient_age'] = $data['age'] ?: '';
                 $orderPrescriptionInsert['dialectical'] = $data['dialectical'] ?: '';
                 $orderPrescriptionInsert['prescription_status'] = $data['prescription_status'];
                 $orderPrescriptionInsert['drug_str'] = $data['drug_str'] ? base64_decode($data['drug_str']) : '';
