@@ -1,7 +1,9 @@
 <?php
 namespace app\home\controller;
+
 use think\Request;
 use app\tools\Html;
+use think\Db;
 
 class Doctor extends Common
 {
@@ -334,6 +336,39 @@ class Doctor extends Common
     }
 
     // 患者历史病例列表
+    public function praintCase() {
+        if($this->request->isPost()) {
+            $data=input('post.');
+            if($data['member_id']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+            }
+            if (!isset($data['page'])) {
+                $data['page'] = 1;
+            }
+            if (!isset($data['pageSize'])) {
+                $data['pageSize'] = 10;
+            }
+            $data['pageCount'] = ($data['page'] - 1) * $data['pageSize'];
+            $member = Db::field('op.`dialectical`,op.`drug_str`,op.`add_date`,d.`member_name`,d.`title_str`')
+                ->table('jd_order o, jd_order_prescription op, jd_doctor d')
+                ->where("o.patient_id = {$data['member_id']} and o.`order_id` = op.`order_id` and o.order_type = 3 and o.`doctor_id` = d.`member_id` and op.`prescription_type` != 1")
+                ->order('op.add_date', 'DESC')
+                ->limit($data['pageCount'],$data['pageSize'])
+                ->select();
+            $order = array();
+            foreach ($member as $key => $val) {
+                array_push($order, $val);
+                $order[$key]['drug_str'] = base64_encode($val['drug_str']);
+                $order[$key]['add_date'] = date('Y-m-d H:i', $val['add_date']);
+            }
+            $total = Db::table('jd_order o, jd_order_prescription op, jd_doctor d')
+                ->where("o.patient_id = {$data['member_id']} and o.`order_id` = op.`order_id` and o.order_type = 3 and o.`doctor_id` = d.`member_id` and op.`prescription_type` != 1")
+                ->count();
+
+            ajaxReturn(array('code'=>1,'info'=>'ok','data'=>$order,'total'=>$total));
+        }
+    }
 
     // 设置医生下面的患者已经查看（不做，嵌入在患者档案里面）
 
