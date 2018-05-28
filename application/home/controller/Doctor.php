@@ -94,7 +94,7 @@ class Doctor extends Common
             ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
         }
         $doctor = db('doctor')->where("member_id = {$data['doctor_id']}")
-            ->field('member_id, inherit, member_name, face_photo, goodat_id, introduction, recom, is_clinic, hospital_id, hospital_repart_str, school_str, inherit title_str, graphic_speech, concealment_number, online_inquiry')
+            ->field('member_id, inherit, member_name, face_photo, goodat_id, introduction, recom, is_clinic, hospital_id, hospital_repart_str, school_str, inherit title_str, graphic_speech, concealment_number, online_inquiry,first_price,consultation_price')
             ->find();
 
         //是否显示流派
