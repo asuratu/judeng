@@ -312,7 +312,8 @@ class Order extends Common
                     $sendHair['member_name'] = $orderPrescriptionInsert['patient_name'];
                     $sendHair['prescription'] = $data['type'] == 1 ? '手机号开方':'在线开方';
                     $sendHair['remark'] = '点击这里查看订单详情';
-                    $sendHair['url'] = 'http://wechat.bohetanglao.com/home/center/detail/ordersn/20180513983599.html';
+//                    $sendHair['url'] = 'http://wechat.bohetanglao.com/home/center/detail/ordersn/20180513983599.html';
+                    $sendHair['url'] = 'http://wechat.bohetanglao.com/home/center/detail/ordersn/'.$newOrder['order_sn'].'.html';
                     $sendHair['first'] = '来自' . $sendHair['doctor_name'] . '医生的开方订单';
                     $sendHair['openid'] = $patientInfo['openid'];
 
