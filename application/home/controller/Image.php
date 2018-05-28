@@ -36,7 +36,7 @@ class Image extends Common
             $sendHair['content'] = $data['content'];
             $sendHair['remark'] = '点击这里查看公告内容';
             if ($data['is_hair'] == 0) {                  // 0 为图文 1 链接
-                $sendHair['url'] = 'www.baidu.com';
+                $sendHair['url'] = 'http://wechat.bohetanglao.com/home/advise/chat/memberid/' . $data['doctor_id'] . '/type/0.html';
                 $sendHair['first'] = $sendHair['doctor_name'] . '医生:我发布了公告内容,请及时查看';
             } else {
                 $sendHair['url'] = $data['url'];
