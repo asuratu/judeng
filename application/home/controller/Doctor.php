@@ -94,7 +94,7 @@ class Doctor extends Common
             ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
         }
         $doctor = db('doctor')->where("member_id = {$data['doctor_id']}")
-            ->field('member_id, inherit, member_name, face_photo, goodat_id, introduction, recom, is_clinic, hospital_id, hospital_repart_str, school_str, inherit title_str, graphic_speech, concealment_number, online_inquiry,first_price,consultation_price')
+            ->field('member_id, inherit, true_name, face_photo, goodat_id, introduction, recom, is_clinic, hospital_id, hospital_repart_str, school_str, inherit title_str, graphic_speech, concealment_number, online_inquiry,first_price,consultation_price')
             ->find();
 
         //是否显示流派
@@ -144,16 +144,25 @@ class Doctor extends Common
         $doctor['is_self_drug'] = $doctor['content'] != '' ? 1 : 0;
         $doctor['is_inherit'] = $doctor['inherit_id'] != 0 ? 1 : 0;
 
-
-
-//         查询坐诊信息 TODO  涂革处理
-
-
-
-
-
-
-
+        //查询坐诊信息
+        $paibanMap['dl.`member_id`'] = $data['doctor_id'];
+        $paibanList = db('hospital_repart')->alias('hr')
+            ->join(['jd_department' => 'd'], 'hr.department_id = d.department_id', 'inner')
+            ->join(['jd_hospital' => 'h'], 'hr.hospital_id = h.hospital_id', 'inner')
+            ->join(['jd_diagnosis_list' => 'dl'], 'hr.hospital_repart_id = dl.hospital_repart_id', 'inner')
+            ->where("dl.`member_id` = {$data['doctor_id']} AND dl.start_time > ".time())
+            ->field("dl.diagnosis_id, dl.start_time, dl.end_time, h.hospital_name, d.department_name")
+            ->order('dl.start_time DESC')
+            ->select();
+        foreach ($paibanList as $key => $val) {
+            $paibanList[$key]['content'] = date('Y年m月d日 H:i', $val['start_time']) . '-' . date('Y年m月d日 H:i', $val['end_time']);
+            if (time() >= $val['start_time']) {
+                $paibanList[$key]['expired'] = 0;
+            } else {
+                $paibanList[$key]['expired'] = 1;
+            }
+        }
+        $doctor['paiban'] = $paibanList;
         // 查询擅长
         $doctor['goodat_id'] = $this->goodsId($doctor['goodat_id']);
 
