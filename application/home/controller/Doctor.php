@@ -313,15 +313,18 @@ class Doctor extends Common
 
             // 对取到的数据进行处理
             $group_removal = $this->removal($group['grouping']);
+            $member['group_removal'] = $group_removal;
 
             if ($member) {
                 db('doctor_member')->where("doctor_id = {$data['doctor_id']} and member_id = {$data['member_id']}")->update(array('is_status' => 0, 'release_date' => time()));
-                ajaxReturn(array('code'=>1,'info'=>'ok','data'=>$member,'group_removal'=>$group_removal));
+                ajaxReturn(array('code'=>1,'info'=>'ok','data'=>$member));
             } else {
                 ajaxReturn(array('code'=>0,'info'=>'患者信息不存在','data'=>[]));
             }
         }
     }
+
+    // 患者历史病例列表
 
     // 设置医生下面的患者已经查看（不做，嵌入在患者档案里面）
 
