@@ -591,10 +591,6 @@ class Member extends Common
      */
     public function getsms()
     {
-        $status = sendAliMass(1, 2, 3);
-        var_dump($status);die;
-
-
         if($this->request->isPost())
         {
             $data=input('post.');
