@@ -90,7 +90,7 @@ class Selfdrug extends Common
                     array_push($tabooArr, $tabooArr2);
                 }
             }
-            if (count($tabooArr) > 0) {
+            if (count($tabooArr) > 0 && count($tabooArr[0]) > 1) {
                 $orderPrescriptionInsert['is_taboo'] = 1;
                 $orderPrescriptionInsert['taboo_content'] = json_encode($tabooArr);
             } else {
@@ -269,6 +269,11 @@ class Selfdrug extends Common
                 } else {
                     $goodsInfo[$key]['has_self_drug'] = 0;
                 }
+                //处理null
+                if ($goodsInfo[$key]['special_name'] == null) {
+                    $goodsInfo[$key]['special_name'] = '';
+                }
+
 
                 //是否显示传承标识
                 if ($goodsInfo[$key]['special_id'] &&  $goodsInfo[$key]['inherit_id']) {
@@ -279,7 +284,7 @@ class Selfdrug extends Common
             }
 
 
-            ajaxReturn(array('code'=>1,'info'=>'ok!','data'=>[$goodsInfo]));
+            ajaxReturn(array('code'=>1,'info'=>'ok!','data'=>$goodsInfo));
         }
     }
 

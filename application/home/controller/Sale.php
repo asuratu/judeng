@@ -86,7 +86,14 @@ class Sale extends Common
                 $val['order_date'] = date('Y-m-d H:i:s', $val['order_date']);
                 $monthArr[$monthStr][] = $val;
             }
-            ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[$monthArr]));
+            $keyArr = array_keys($monthArr);
+            $valArr = array_values($monthArr);
+            $lastArr = array();
+            foreach ($valArr as $key1=>$val1) {
+                $lastArr[$key1]['key'] = $keyArr[$key1];
+                $lastArr[$key1]['value'] = $valArr[$key1];
+            }
+            ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[$lastArr]));
         }
     }
 
@@ -129,6 +136,14 @@ class Sale extends Common
                        $val['order_date'] = date('Y-m-d H:i:s', $val['order_date']);
                        $monthArr[$monthStr][] = $val;
                    }
+                   $keyArr = array_keys($monthArr);
+                   $valArr = array_values($monthArr);
+                   $lastArr = array();
+                   foreach ($valArr as $key1=>$val1) {
+                       $lastArr[$key1]['key'] = $keyArr[$key1];
+                       $lastArr[$key1]['value'] = $valArr[$key1];
+                   }
+//                   var_dump($lastArr);die;
                    break;
                case 1:
                     //我的销售
@@ -149,6 +164,14 @@ class Sale extends Common
                        $val['order_date'] = date('Y-m-d H:i:s', $val['order_date']);
                        $monthArr[$monthStr][] = $val;
                    }
+                   $keyArr = array_keys($monthArr);
+                   $valArr = array_values($monthArr);
+                   $lastArr = array();
+                   foreach ($valArr as $key1=>$val1) {
+                       $lastArr[$key1]['key'] = $keyArr[$key1];
+                       $lastArr[$key1]['value'] = $valArr[$key1];
+                   }
+//                   var_dump($lastArr);die;
                    break;
                default:
                    //团队出售调制服务包的情况
@@ -168,9 +191,17 @@ class Sale extends Common
                        $val['order_date'] = date('Y-m-d H:i:s', $val['order_date']);
                        $monthArr[$monthStr][] = $val;
                    }
+                   $keyArr = array_keys($monthArr);
+                   $valArr = array_values($monthArr);
+                   $lastArr = array();
+                   foreach ($valArr as $key1=>$val1) {
+                       $lastArr[$key1]['key'] = $keyArr[$key1];
+                       $lastArr[$key1]['value'] = $valArr[$key1];
+                   }
+//                   var_dump($lastArr);die;
                    break;
            }
-            ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[$monthArr]));
+            ajaxReturn(array('code'=>1,'info'=>'ok','data'=>$lastArr));
         }
     }
 

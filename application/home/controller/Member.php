@@ -19,7 +19,7 @@ class Member extends Common
             {
                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
-            if(!preg_match("/^1[3|4|5|7|8|][0-9]{1}[0-9]{8}$/",$data['mobile']))
+            if(!preg_match("/^1\d{10}$/",$data['mobile']))
             {
                 ajaxReturn(array('code' =>0, 'info' => '手机号码格式不正确！','data'=>[]));
             }
@@ -40,16 +40,7 @@ class Member extends Common
                 $pwd=md5(md5($data['password']).$info['guid']);
                 if($pwd==$info['password'])
                 {
-                    //若当前账号已有其他设备在线, 则前者会被挤掉
-//                    if ($info['login_state'] == 1) {
-//                        if ($info['device_tokens'] != $data['device_tokens']) {
-//                            // TODO 如何让该设备下线??  友盟推送
-//
-//                            var_dump('让前一台设备下线');die;
-//
-//
-//                        }
-//                    }
+
                     $info['ticket']=$ticket;
                     unset($info['password'],$info['guid']);
                     $temp['login_ip']=Request::instance()->ip();
@@ -107,7 +98,7 @@ class Member extends Common
             {
                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
-            if(!preg_match("/^1[3|4|5|7|8|][0-9]{1}[0-9]{8}$/",$data['mobile']))
+            if(!preg_match("/^1\d{10}$/",$data['mobile']))
             {
                 ajaxReturn(array('code' =>0, 'info' => '手机号码格式不正确！','data'=>[]));
             }
@@ -211,7 +202,7 @@ class Member extends Common
             {
                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
-            if(!preg_match("/^1[3|4|5|7|8|][0-9]{1}[0-9]{8}$/",$data['mobile']))
+            if(!preg_match("/^1\d{10}$/",$data['mobile']))
             {
                 ajaxReturn(array('code' =>0, 'info' => '手机号码格式不正确！','data'=>[]));
             }
@@ -284,7 +275,7 @@ class Member extends Common
             {
                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
-            if(!preg_match("/^1[3|4|5|7|8|][0-9]{1}[0-9]{8}$/",$data['mobile']))
+            if(!preg_match("/^1\d{10}$/",$data['mobile']))
             {
                 ajaxReturn(array('code' =>0, 'info' => '手机号码格式不正确！','data'=>[]));
             }
@@ -612,14 +603,11 @@ class Member extends Common
             $map['mobile']=$mobile;
             $timer = 60; //发送验证码间隔时间
             $expiredTimer = 300; //验证码的有效期
-            tglog('发送短信');
-            tglog(json_encode($data));
-            tglog('发送短信');
             if($data['type']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
-            if(!preg_match("/^1[3|4|5|7|8|][0-9]{1}[0-9]{8}$/", $mobile))
+            if(!preg_match("/^1\d{10}$/", $mobile))
             {
                 ajaxReturn(array('code' =>0, 'info' => '手机号码格式不正确！','data'=>[]));
             }
@@ -631,7 +619,6 @@ class Member extends Common
                 ajaxReturn(array('code'=>0, 'info'=>$timer.'秒内仅能获取一次验证码,请稍后重试','data'=>[]));
             }
             $randcode = randCode(6, 1);
-
 
 
             switch ($data['type']) {
@@ -665,7 +652,6 @@ class Member extends Common
             ajaxReturn(array('code' => 0, 'info' => '非法请求','data'=>[]));
         }
     }
-
 
     /**
      * @Title: test

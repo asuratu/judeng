@@ -205,7 +205,7 @@ class Order extends Common
                             array_push($tabooArr, $tabooArr2);
                         }
                     }
-                    if (count($tabooArr) > 0) {
+                    if (count($tabooArr) > 0 && count($tabooArr[0]) > 1) {
                         $orderPrescriptionInsert['is_taboo'] = 1;
                         $orderPrescriptionInsert['taboo_content'] = json_encode($tabooArr);
                     } else {
@@ -449,6 +449,7 @@ class Order extends Common
                         $temp['name'] = $val;
                         $temp['type'] = 1;//可以防止反复添加
                         $target = db('drug_record')->where($temp)->field("*")->find();
+
                         if ($target) {
                             array_push($tabooArr2, $val);
                             $contrastTemp['key'] = $target['key'];
@@ -462,7 +463,7 @@ class Order extends Common
                             array_push($tabooArr, $tabooArr2);
                         }
                     }
-                    if (count($tabooArr) > 0) {
+                    if (count($tabooArr) > 0 && count($tabooArr[0]) > 1) {
                         $orderPrescriptionInsert['is_taboo'] = 1;
                         $orderPrescriptionInsert['taboo_content'] = ($tabooArr);
                     } else {

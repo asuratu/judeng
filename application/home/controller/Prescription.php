@@ -98,7 +98,7 @@ class Prescription extends Common
                     array_push($tabooArr, $tabooArr2);
                 }
             }
-            if (count($tabooArr) > 0) {
+            if (count($tabooArr) > 0 && count($tabooArr[0]) > 1) {
                 ajaxReturn(array('code'=>0, 'info'=>'存在配伍禁忌!','data'=>$tabooArr));
             } else {
                 ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>[]));
@@ -346,7 +346,7 @@ class Prescription extends Common
                     array_push($tabooArr, $tabooArr2);
                 }
             }
-            if (count($tabooArr) > 0) {
+            if (count($tabooArr) > 0 && count($tabooArr[0]) > 1) {
                 $tempMap['is_taboo'] = 1;
                 $tempMap['taboo_content'] = json_encode($tabooArr);
             } else {
@@ -510,7 +510,7 @@ class Prescription extends Common
                     array_push($tabooArr, $tabooArr2);
                 }
             }
-            if (count($tabooArr) > 0) {
+            if (count($tabooArr) > 0 && count($tabooArr[0]) > 1) {
                 $tempMap['is_taboo'] = 1;
                 $tempMap['taboo_content'] = json_encode($tabooArr);
             } else {
