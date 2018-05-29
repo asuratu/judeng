@@ -194,6 +194,19 @@ function sendSMS($mobile,$body)
 }
 
 
+function sendAliSMS($mobile, $body)
+{
+    require_once(ROOT_PATH . 'extend\Alisms\api_demo\SmsDemo.php');
+    $h = new SmsDemo();
+    header("Content-Type:text/html;charset=utf-8");
+    var_dump(555);die;
+    $response = $h->sendSms();
+    echo "发送短信(sendSms)接口返回的结果:\n";
+    print_r($response);
+    die;
+}
+
+
 /**
  * @Title: get_client_ip
  * @param int $type
