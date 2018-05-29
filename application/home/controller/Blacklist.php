@@ -91,7 +91,7 @@ class Blacklist extends Common
                 ->table('jd_blacklist b, jd_member m')
                 ->where("b.doctor_id = {$data['doctor_id']} and b.is_show = 0 and b.`member_id` = m.`member_id`")
                 ->order('b.release_date', 'DESC')
-                ->limit($data['pageCount'],$data['pageCount'])
+                ->limit($data['pageCount'],$data['pageSize'])
                 ->select();
             $order = array();
             foreach ($comment as $key => $val) {

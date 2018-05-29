@@ -151,7 +151,7 @@ class Notice extends Common
             $doctorNotice = db('notice')->where("doctor_id = {$data['doctor_id']}")
                 ->field('notice_id, notice_name, add_date')
                 ->order('release_date', 'DESC')
-                ->limit($data['pageCount'],$data['pageCount'])
+                ->limit($data['pageCount'],$data['pageSize'])
                 ->select();
             $notice = array();
             foreach ($doctorNotice as $key => $val) {

@@ -37,7 +37,7 @@ class Number extends Common
                 ->table('jd_order o, jd_order_prescription op')
                 ->where("o.`order_id` = op.`order_id` and o.order_type = 3 and o.doctor_id = {$data['doctor_id']} {$where}")
                 ->order('o.order_date', 'DESC')
-                ->limit($data['pageCount'],$data['pageCount'])
+                ->limit($data['pageCount'],$data['pageSize'])
                 ->select();
             $order = array();
             foreach ($prescription as $key => $val) {
@@ -86,7 +86,7 @@ class Number extends Common
                 ->table('jd_order o, jd_member m')
                 ->where("o.`patient_id` = m.`member_id` and o.order_type = {$data['type']} and o.doctor_id = {$data['doctor_id']}")
                 ->order('o.order_date', 'DESC')
-                ->limit($data['pageCount'],$data['pageCount'])
+                ->limit($data['pageCount'],$data['pageSize'])
                 ->select();
             $order = array();
             foreach ($prescription as $key => $val) {
@@ -130,7 +130,7 @@ class Number extends Common
                 ->table('jd_doctor_member s, jd_member m')
                 ->where("s.doctor_id = {$data['doctor_id']} and s.`is_show` = 1 and s.`member_id` = m.`member_id` and (m.`member_name` like '%{$data['title']}%' or m.`mobile` like '%{$data['title']}%' or s.`grouping` like '%{$data['title']}%')")
                 ->order('s.end_date', 'DESC')
-                ->limit($data['pageCount'],$data['pageCount'])
+                ->limit($data['pageCount'],$data['pageSize'])
                 ->select();
             $order = array();
             foreach ($comment as $key => $val) {
@@ -219,7 +219,7 @@ class Number extends Common
                 ->table('jd_service_evaluation s, jd_member m')
                 ->where("s.is_show = 1 and s.doctor_id = {$data['doctor_id']} and s.`member_id` = m.`member_id`")
                 ->order('s.add_date', 'DESC')
-                ->limit($data['pageCount'],$data['pageCount'])
+                ->limit($data['pageCount'],$data['pageSize'])
                 ->select();
             $order = array();
             foreach ($comment as $key => $val) {
@@ -271,7 +271,7 @@ class Number extends Common
                 ->table('jd_doctor_member s, jd_member m')
                 ->where("s.doctor_id = {$data['doctor_id']} and s.`is_show` = 1 and s.`member_id` = m.`member_id` and (m.`member_name` like '%{$data['title']}%' or m.`mobile` like '%{$data['title']}%' or s.`grouping` like '%{$data['title']}%')")
                 ->order('s.inquisition', 'DESC')
-                ->limit($data['pageCount'],$data['pageCount'])
+                ->limit($data['pageCount'],$data['pageSize'])
                 ->select();
             $order = array();
             foreach ($comment as $key => $val) {
@@ -422,7 +422,7 @@ class Number extends Common
                 ->table('jd_group_patient s, jd_member m')
                 ->where("s.doctor_id = {$data['doctor_id']} and s.`is_show` = 1 and s.group_id = {$data['group_id']} and s.`member_id` = m.`member_id`")
                 ->order('s.add_date', 'ASC')
-                ->limit($data['pageCount'],$data['pageCount'])
+                ->limit($data['pageCount'],$data['pageSize'])
                 ->select();
             $order = array();
             foreach ($comment as $key => $val) {

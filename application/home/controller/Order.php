@@ -235,7 +235,7 @@ class Order extends Common
                     }
                 }
 
-                if ($data['patient_id'] == 0) {
+                if ($data['patient_id'] == 0 && $data['type'] == 0) {
                     //手机号开方
                     //手机号匹配患者
                     //若未注册则注册新的患者账号
@@ -258,7 +258,6 @@ class Order extends Common
                     } else {
                         $data['patient_id'] = $patientInfo['member_id'];
                     }
-
                 }
                 //生成新订单
                 $newOrder['order_sn'] = createOrderCode();
