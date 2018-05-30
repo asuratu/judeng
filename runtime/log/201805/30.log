@@ -1,0 +1,40 @@
+---------------------------------------------------------------
+[ 2018-05-30T23:13:22+08:00 ] 0.0.0.0 POST /number/addGroupPatient
+[ info ] localhost:8020/number/addGroupPatient [运行时间：0.338416s][吞吐率：2.95req/s] [内存消耗：2,889.85kb] [文件加载：49]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'addGroupPatient',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------563141960344720584805077',
+  'content-length' => '621',
+  'x-original-url' => '/number/addGroupPatient',
+  'postman-token' => 'cb58a48a-60e5-4c42-a628-aa716fac06c9',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'group_id' => '19',
+  'member_id' => '1,2',
+  'member_name' => 'www,222',
+  'group_name' => '分组ce11',
+)
+[ info ] [ RUN ] app\home\controller\Number->addGroupPatient[ D:\works\201805\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.105668s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_patient_group` [ RunTime:0.066055s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_patient_group` WHERE  (  group_id = 19 ) LIMIT 1 [ RunTime:0.072192s ]
+[ error ] [2]file_get_contents(vendor/dictionaries/pytable_without_tune.txt): failed to open stream: No such file or directory[D:\works\201805\judeng\application\Tools\Spell.php:9]
