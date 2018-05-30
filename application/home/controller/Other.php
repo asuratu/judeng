@@ -1,5 +1,7 @@
 <?php
 namespace app\home\controller;
+
+use app\tools\Spell;
 use think\Request;
 class Other extends Common
 {
@@ -284,6 +286,42 @@ class Other extends Common
                 $order[$key]['add_date'] = date('Y-m-d H:i', $val['add_date']);
             }
             ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>$order));
+        }
+    }
+
+    // 药品名，简拼其他的修改
+    public function jianpin() {
+        if($this->request->isPost())
+        {
+            return true;
+            $data=input('post.');
+            if (!isset($data['page'])) {
+                $data['page'] = 1;
+            }
+            if (!isset($data['pageSize'])) {
+                $data['pageSize'] = 50;
+            }
+            $data['pageCount'] = ($data['page'] - 1) * $data['pageSize'];
+
+            $prescription = db('drug')
+                ->where("keywords = ''")
+                ->select();
+            $_i = 1;
+            foreach ($prescription as $key => $val) {
+                $_i++;
+                var_dump($val['drug_id']);
+                $drug_name = explode('(', $val['drug_name']);
+                $keywords = str_replace(' ', '', Spell::getChineseChar($drug_name[0], true, true));
+                $keywords = isset($keywords) ? $keywords : '';
+                $update = array(
+                    'other_name' => $drug_name[0],
+                    'nick_name' => $drug_name[0],
+                    'keywords' => $keywords,
+                    'drug_id' => $val['drug_id'],
+                );
+                db('drug')->update($update);
+            }
+            ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>$_i));
         }
     }
 

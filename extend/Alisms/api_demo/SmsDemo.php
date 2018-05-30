@@ -68,11 +68,9 @@ class SmsDemo
      * @return stdClass
      */
     public static function sendSms() {
-        var_dump(333);die;
 
         // 初始化SendSmsRequest实例用于设置发送短信的参数
         $request = new SendSmsRequest();
-        var_dump(1);die;
         //可选-启用https协议
         //$request->setProtocol("https");
 
@@ -98,7 +96,6 @@ class SmsDemo
 
         // 发起访问请求
         $acsResponse = static::getAcsClient()->getAcsResponse($request);
-
         return $acsResponse;
     }
 

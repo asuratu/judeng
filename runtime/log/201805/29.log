@@ -717,3 +717,262 @@
 [ sql ] [ DB ] CONNECT:[ UseTime:0.096450s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
 [ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.069712s ]
 [ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `mobile` = '15021039435' LIMIT 1 [ RunTime:0.064215s ]
+---------------------------------------------------------------
+[ 2018-05-29T14:14:49+08:00 ] 0.0.0.0 POST /member/getsms
+[ info ] localhost:8020/member/getsms [运行时间：0.040002s][吞吐率：25.00req/s] [内存消耗：2,587.79kb] [文件加载：46]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------363791270239855617048050',
+  'content-length' => '165',
+  'x-original-url' => '/member/getsms',
+  'postman-token' => '361a4e3f-2966-49f8-9c84-449cac789f0c',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ E:\wook\201804\judeng\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-29T14:15:08+08:00 ] 0.0.0.0 POST /member/getsms
+[ info ] localhost:8020/member/getsms [运行时间：0.021001s][吞吐率：47.62req/s] [内存消耗：1,696.02kb] [文件加载：34]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------586793928880231559254789',
+  'content-length' => '165',
+  'x-original-url' => '/member/getsms',
+  'postman-token' => 'f47a2273-94da-4bd4-845d-f78154f3de39',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ E:\wook\201804\judeng\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-29T14:15:23+08:00 ] 0.0.0.0 POST /member/getsms
+[ info ] localhost:8020/member/getsms [运行时间：0.032002s][吞吐率：31.25req/s] [内存消耗：2,668.63kb] [文件加载：49]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------797497583134713090359910',
+  'content-length' => '165',
+  'x-original-url' => '/member/getsms',
+  'postman-token' => '0b4f95d3-e317-4417-96e3-90cc07fb25b5',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ E:\wook\201804\judeng\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-29T14:15:36+08:00 ] 0.0.0.0 POST /member/getsms
+[ info ] localhost:8020/member/getsms [运行时间：4.295246s][吞吐率：0.23req/s] [内存消耗：2,837.78kb] [文件加载：60]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------601747602565130949984192',
+  'content-length' => '165',
+  'x-original-url' => '/member/getsms',
+  'postman-token' => 'da9761ba-035a-4032-8c0b-4992c4be8db6',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ E:\wook\201804\judeng\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-29T14:16:03+08:00 ] 0.0.0.0 POST /member/getsms
+[ info ] localhost:8020/member/getsms [运行时间：0.056003s][吞吐率：17.86req/s] [内存消耗：2,785.38kb] [文件加载：58]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------322488339781810994144438',
+  'content-length' => '165',
+  'x-original-url' => '/member/getsms',
+  'postman-token' => '3a4622c5-0a22-4ce9-bd06-bc213bd3d5a2',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ E:\wook\201804\judeng\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-29T14:17:39+08:00 ] 0.0.0.0 POST /member/getsms
+[ info ] localhost:8020/member/getsms [运行时间：4.243243s][吞吐率：0.24req/s] [内存消耗：2,838.23kb] [文件加载：60]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------399842528866430088150566',
+  'content-length' => '165',
+  'x-original-url' => '/member/getsms',
+  'postman-token' => '5b050e0c-1269-44ff-94a4-d66eb46c3595',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ E:\wook\201804\judeng\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-29T14:24:43+08:00 ] 0.0.0.0 POST /member/getsms
+[ info ] localhost:8020/member/getsms [运行时间：0.023001s][吞吐率：43.48req/s] [内存消耗：1,778.53kb] [文件加载：37]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------653181361313433075461648',
+  'content-length' => '165',
+  'x-original-url' => '/member/getsms',
+  'postman-token' => '82934385-7d34-42c6-ac53-02d87d453ce0',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ E:\wook\201804\judeng\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: mobile[E:\wook\201804\judeng\application\home\controller\Member.php:602]
+[ error ] [8]未定义数组索引: type[E:\wook\201804\judeng\application\home\controller\Member.php:606]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-05-29T14:25:14+08:00 ] 0.0.0.0 POST /member/getsms
+[ info ] localhost:8020/member/getsms [运行时间：4.708269s][吞吐率：0.21req/s] [内存消耗：2,838.27kb] [文件加载：60]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------631204100704077696717736',
+  'content-length' => '165',
+  'x-original-url' => '/member/getsms',
+  'postman-token' => 'cc931533-e28b-4e75-a643-c288754cda1b',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ E:\wook\201804\judeng\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File

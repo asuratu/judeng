@@ -591,6 +591,7 @@ class Member extends Common
      */
     public function getsms()
     {
+        $status = sendAliSMS('1', '1');
         if($this->request->isPost())
         {
             $data=input('post.');
