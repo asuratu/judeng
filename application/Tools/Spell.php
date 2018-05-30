@@ -5,7 +5,7 @@ namespace app\tools;
 class Spell{
     public $spellArray = array();
 
-    static public function getArray() {
+    static public function getArray() { 
         return unserialize(file_get_contents('vendor/dictionaries/pytable_without_tune.txt'));
     }
     /**
