@@ -640,8 +640,8 @@ class Member extends Common
                     }
                     break;
             }
-            $body = sprintf(config('body'), $randcode);
-            $status = sendAliSMS($mobile, $body);
+//            $body = sprintf(config('body'), $randcode);
+            $status = sendAliSMS($mobile, $randcode);
             if ($status) {
                 $_SESSION['tokencode']= ['code' => $randcode, 'expired_at' => time() + $expiredTimer,'mobile'=>$mobile];
                 ajaxReturn(array('code' => 1, 'info' => '短信发送成功','data'=>array($randcode)));

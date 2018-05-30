@@ -193,17 +193,66 @@ function sendSMS($mobile,$body)
 
 }
 
-
+/**
+ * @Title: sendAliSMS
+ * @param $mobile
+ * @param $body
+ * @Description: TODO 阿里云发送单条短信
+ * @return bool
+ * @author TUGE
+ * @date
+ */
 function sendAliSMS($mobile, $body)
 {
     require_once(ROOT_PATH . 'extend\Alisms\api_demo\SmsDemo.php');
     $h = new SmsDemo();
     header("Content-Type:text/html;charset=utf-8");
-    var_dump(555);die;
-    $response = $h->sendSms();
-    echo "发送短信(sendSms)接口返回的结果:\n";
-    print_r($response);
-    die;
+    $response = $h->sendSms($mobile, $body);
+    if($response->Code == 'OK')
+    {
+        return true;
+    }else
+    {
+        return false;
+    }
+}
+
+/**
+ * @Title: sendAliMass
+ * @param $mobile
+ * @param $body
+ * @Description: TODO 阿里云群发短信
+ * @return bool
+ * @author TUGE
+ * @date
+ */
+function sendAliMass($mobileArr, $codeArr, $type)
+{
+    $mobileArr = array(
+        "15021039435",
+        "13310028293",
+    );
+
+    $codeArr = array(
+        array(
+            "code" => "123",
+        ),
+        array(
+            "code" => "456",
+        ),
+    );
+
+    require_once(ROOT_PATH . 'extend\Alisms\api_demo\SmsDemo.php');
+    $h = new SmsDemo();
+    header("Content-Type:text/html;charset=utf-8");
+    $response = $h->sendBatchSms($mobileArr, $codeArr, 0);
+    if($response->Code == 'OK')
+    {
+        return true;
+    }else
+    {
+        return false;
+    }
 }
 
 
