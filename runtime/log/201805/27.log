@@ -1,0 +1,120 @@
+---------------------------------------------------------------
+[ 2018-05-27T22:57:46+08:00 ] 0.0.0.0 GET /
+[ info ] localhost:8020/ [运行时间：0.040197s][吞吐率：24.88req/s] [内存消耗：1,298.89kb] [文件加载：28]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36',
+  'host' => 'localhost:8020',
+  'cookie' => 'PHPSESSID=po5sm7eufknfgs4vrng8q1jfp0; __qc_wId=548; pgv_pvid=8369831414; bdshare_firstime=1518961848412; PXAPP=2c04be3b881cb2c067c304998c610775; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1525963541; Hm_lpvt_5dd55c6682e0c7d344e29e785f9de1bb=1527387163',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Index->index[ D:\works\201805\judeng\application\home\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-27T22:57:54+08:00 ] 0.0.0.0 GET /admin
+[ info ] localhost:8020/admin [运行时间：0.020162s][吞吐率：49.60req/s] [内存消耗：1,345.32kb] [文件加载：31]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'admin',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/admin',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36',
+  'host' => 'localhost:8020',
+  'cookie' => 'PHPSESSID=po5sm7eufknfgs4vrng8q1jfp0; __qc_wId=548; pgv_pvid=8369831414; bdshare_firstime=1518961848412; PXAPP=2c04be3b881cb2c067c304998c610775; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1525963541; Hm_lpvt_5dd55c6682e0c7d344e29e785f9de1bb=1527387163',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-27T22:57:54+08:00 ] 0.0.0.0 GET /favicon.ico
+[ info ] localhost:8020/favicon.ico [运行时间：0.021055s][吞吐率：47.49req/s] [内存消耗：1,345.27kb] [文件加载：31]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'favicon.ico',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/favicon.ico',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36',
+  'referer' => 'http://localhost:8020/admin',
+  'host' => 'localhost:8020',
+  'cookie' => 'PHPSESSID=po5sm7eufknfgs4vrng8q1jfp0; __qc_wId=548; pgv_pvid=8369831414; bdshare_firstime=1518961848412; PXAPP=2c04be3b881cb2c067c304998c610775; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1525963541; Hm_lpvt_5dd55c6682e0c7d344e29e785f9de1bb=1527387163',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-27T22:58:00+08:00 ] 0.0.0.0 GET /
+[ info ] localhost:8020/ [运行时间：0.019787s][吞吐率：50.54req/s] [内存消耗：1,298.68kb] [文件加载：28]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36',
+  'host' => 'localhost:8020',
+  'cookie' => 'PHPSESSID=po5sm7eufknfgs4vrng8q1jfp0; __qc_wId=548; pgv_pvid=8369831414; bdshare_firstime=1518961848412; PXAPP=2c04be3b881cb2c067c304998c610775; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1525963541; Hm_lpvt_5dd55c6682e0c7d344e29e785f9de1bb=1527387163',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Index->index[ D:\works\201805\judeng\application\home\controller\Index.php ]
+[ info ] [ LOG ] INIT File
