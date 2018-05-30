@@ -248,7 +248,7 @@ class Diagnosing extends Common
                 ->join(['jd_department' => 'd'], 'hr.department_id = d.department_id', 'inner')
                 ->join(['jd_hospital' => 'h'], 'hr.hospital_id = h.hospital_id', 'inner')
                 ->join(['jd_diagnosis_list' => 'dl'], 'hr.hospital_repart_id = dl.hospital_repart_id', 'inner')
-                ->where($doctorMap)
+                ->where($paibanMap)
                 ->field("dl.diagnosis_id, dl.start_time, dl.end_time, h.hospital_name, d.department_name")
                 ->order('dl.start_time DESC')
                 ->select();

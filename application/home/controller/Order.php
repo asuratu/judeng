@@ -138,9 +138,7 @@ class Order extends Common
                     ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
                 }
 
-                if (json_decode(base64_decode($data['drug_str'])) == null) {
-                    ajaxReturn(array('code'=>0,'info'=>'药品参数不符合规范!','data'=>[]));
-                }
+
 
                 //查询当前医生信息
                 $doctorMap['member_id'] = $data['doctor_id'];
@@ -151,6 +149,9 @@ class Order extends Common
 
                 //只有在线开方能计算价格
                 if ($data['type'] == 0) {
+                    if (json_decode(base64_decode($data['drug_str'])) == null) {
+                        ajaxReturn(array('code'=>0,'info'=>'药品参数不符合规范!','data'=>[]));
+                    }
                     //计算价格
                     $drugSumPrice = 0;//价格
                     $lessCountArr = array();//超量
@@ -204,7 +205,7 @@ class Order extends Common
                             array_push($tabooArr, $tabooArr2);
                         }
                     }
-                    if (count($tabooArr) > 0) {
+                    if (count($tabooArr) > 0 && count($tabooArr[0]) > 1) {
                         $orderPrescriptionInsert['is_taboo'] = 1;
                         $orderPrescriptionInsert['taboo_content'] = json_encode($tabooArr);
                     } else {
@@ -234,7 +235,7 @@ class Order extends Common
                     }
                 }
 
-                if ($data['patient_id'] == 0) {
+                if ($data['patient_id'] == 0 && $data['type'] == 0) {
                     //手机号开方
                     //手机号匹配患者
                     //若未注册则注册新的患者账号
@@ -250,14 +251,13 @@ class Order extends Common
                         /**
                          * 此处根据年龄计算生日会不准确
                          */
-                        $patientInsert['birthday'] = date('Y')-$data['age'];
-                        $patientInsert['birthday'] .= '-00-00';
-                        $patientInsert['age'] = intval($data['age']);
+//                        $patientInsert['birthday'] = date('Y')-$data['age'];
+//                        $patientInsert['birthday'] .= '-00-00';
+                        $patientInsert['age'] = ($data['age'] ?: '');
                         $data['patient_id'] = db('member')->insertGetId($patientInsert);
                     } else {
                         $data['patient_id'] = $patientInfo['member_id'];
                     }
-
                 }
                 //生成新订单
                 $newOrder['order_sn'] = createOrderCode();
@@ -281,7 +281,7 @@ class Order extends Common
                 $orderPrescriptionInsert['patient_name'] = $data['patient_name'] ?: '';
                 $orderPrescriptionInsert['patient_mobile'] = $data['mobile'] ?: '';
                 $orderPrescriptionInsert['patient_sex'] = $data['sex'] ?: 0;
-                $orderPrescriptionInsert['patient_age'] = $data['age'] ?: 0;
+                $orderPrescriptionInsert['patient_age'] = $data['age'] ?: '';
                 $orderPrescriptionInsert['dialectical'] = $data['dialectical'] ?: '';
                 $orderPrescriptionInsert['prescription_status'] = $data['prescription_status'];
                 $orderPrescriptionInsert['drug_str'] = $data['drug_str'] ? base64_decode($data['drug_str']) : '';
@@ -311,7 +311,8 @@ class Order extends Common
                     $sendHair['member_name'] = $orderPrescriptionInsert['patient_name'];
                     $sendHair['prescription'] = $data['type'] == 1 ? '手机号开方':'在线开方';
                     $sendHair['remark'] = '点击这里查看订单详情';
-                    $sendHair['url'] = 'http://wechat.bohetanglao.com/home/center/detail/ordersn/20180513983599.html';
+//                    $sendHair['url'] = 'http://wechat.bohetanglao.com/home/center/detail/ordersn/20180513983599.html';
+                    $sendHair['url'] = 'http://wechat.bohetanglao.com/home/center/detail/ordersn/'.$newOrder['order_sn'].'.html';
                     $sendHair['first'] = '来自' . $sendHair['doctor_name'] . '医生的开方订单';
                     $sendHair['openid'] = $patientInfo['openid'];
 
@@ -447,6 +448,7 @@ class Order extends Common
                         $temp['name'] = $val;
                         $temp['type'] = 1;//可以防止反复添加
                         $target = db('drug_record')->where($temp)->field("*")->find();
+
                         if ($target) {
                             array_push($tabooArr2, $val);
                             $contrastTemp['key'] = $target['key'];
@@ -460,7 +462,7 @@ class Order extends Common
                             array_push($tabooArr, $tabooArr2);
                         }
                     }
-                    if (count($tabooArr) > 0) {
+                    if (count($tabooArr) > 0 && count($tabooArr[0]) > 1) {
                         $orderPrescriptionInsert['is_taboo'] = 1;
                         $orderPrescriptionInsert['taboo_content'] = ($tabooArr);
                     } else {

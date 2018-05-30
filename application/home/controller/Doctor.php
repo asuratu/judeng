@@ -1,7 +1,9 @@
 <?php
 namespace app\home\controller;
+
 use think\Request;
 use app\tools\Html;
+use think\Db;
 
 class Doctor extends Common
 {
@@ -94,7 +96,7 @@ class Doctor extends Common
             ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
         }
         $doctor = db('doctor')->where("member_id = {$data['doctor_id']}")
-            ->field('member_id, inherit, member_name, face_photo, goodat_id, introduction, recom, is_clinic, hospital_id, hospital_repart_str, school_str, inherit title_str, graphic_speech, concealment_number, online_inquiry')
+            ->field('member_id, inherit, true_name, face_photo, goodat_id, introduction, recom, is_clinic, hospital_id, hospital_repart_str, school_str, inherit, title_str, graphic_speech, concealment_number, online_inquiry,first_price,consultation_price')
             ->find();
 
         //是否显示流派
@@ -144,16 +146,25 @@ class Doctor extends Common
         $doctor['is_self_drug'] = $doctor['content'] != '' ? 1 : 0;
         $doctor['is_inherit'] = $doctor['inherit_id'] != 0 ? 1 : 0;
 
-
-
-//         查询坐诊信息 TODO  涂革处理
-
-
-
-
-
-
-
+        //查询坐诊信息
+        $paibanMap['dl.`member_id`'] = $data['doctor_id'];
+        $paibanList = db('hospital_repart')->alias('hr')
+            ->join(['jd_department' => 'd'], 'hr.department_id = d.department_id', 'inner')
+            ->join(['jd_hospital' => 'h'], 'hr.hospital_id = h.hospital_id', 'inner')
+            ->join(['jd_diagnosis_list' => 'dl'], 'hr.hospital_repart_id = dl.hospital_repart_id', 'inner')
+            ->where("dl.`member_id` = {$data['doctor_id']} AND dl.start_time > ".time())
+            ->field("dl.diagnosis_id, dl.start_time, dl.end_time, h.hospital_name, d.department_name")
+            ->order('dl.start_time DESC')
+            ->select();
+        foreach ($paibanList as $key => $val) {
+            $paibanList[$key]['content'] = date('Y年m月d日 H:i', $val['start_time']) . '-' . date('Y年m月d日 H:i', $val['end_time']);
+            if (time() >= $val['start_time']) {
+                $paibanList[$key]['expired'] = 0;
+            } else {
+                $paibanList[$key]['expired'] = 1;
+            }
+        }
+        $doctor['paiban'] = $paibanList;
         // 查询擅长
         $doctor['goodat_id'] = $this->goodsId($doctor['goodat_id']);
 
@@ -313,13 +324,49 @@ class Doctor extends Common
 
             // 对取到的数据进行处理
             $group_removal = $this->removal($group['grouping']);
+            $member['group_removal'] = $group_removal;
 
             if ($member) {
                 db('doctor_member')->where("doctor_id = {$data['doctor_id']} and member_id = {$data['member_id']}")->update(array('is_status' => 0, 'release_date' => time()));
-                ajaxReturn(array('code'=>1,'info'=>'ok','data'=>$member,'group_removal'=>$group_removal));
+                ajaxReturn(array('code'=>1,'info'=>'ok','data'=>$member));
             } else {
                 ajaxReturn(array('code'=>0,'info'=>'患者信息不存在','data'=>[]));
             }
+        }
+    }
+
+    // 患者历史病例列表
+    public function praintCase() {
+        if($this->request->isPost()) {
+            $data=input('post.');
+            if($data['member_id']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+            }
+            if (!isset($data['page'])) {
+                $data['page'] = 1;
+            }
+            if (!isset($data['pageSize'])) {
+                $data['pageSize'] = 10;
+            }
+            $data['pageCount'] = ($data['page'] - 1) * $data['pageSize'];
+            $member = Db::field('op.`dialectical`,op.`drug_str`,op.`add_date`,d.`member_name`,d.`title_str`')
+                ->table('jd_order o, jd_order_prescription op, jd_doctor d')
+                ->where("o.patient_id = {$data['member_id']} and o.`order_id` = op.`order_id` and o.order_type = 3 and o.`doctor_id` = d.`member_id` and op.`prescription_type` != 1")
+                ->order('op.add_date', 'DESC')
+                ->limit($data['pageCount'],$data['pageSize'])
+                ->select();
+            $order = array();
+            foreach ($member as $key => $val) {
+                array_push($order, $val);
+                $order[$key]['drug_str'] = base64_encode($val['drug_str']);
+                $order[$key]['add_date'] = date('Y-m-d H:i', $val['add_date']);
+            }
+            $total = Db::table('jd_order o, jd_order_prescription op, jd_doctor d')
+                ->where("o.patient_id = {$data['member_id']} and o.`order_id` = op.`order_id` and o.order_type = 3 and o.`doctor_id` = d.`member_id` and op.`prescription_type` != 1")
+                ->count();
+
+            ajaxReturn(array('code'=>1,'info'=>'ok','data'=>$order,'total'=>$total));
         }
     }
 

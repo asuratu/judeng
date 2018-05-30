@@ -193,6 +193,68 @@ function sendSMS($mobile,$body)
 
 }
 
+/**
+ * @Title: sendAliSMS
+ * @param $mobile
+ * @param $body
+ * @Description: TODO 阿里云发送单条短信
+ * @return bool
+ * @author TUGE
+ * @date
+ */
+function sendAliSMS($mobile, $body)
+{
+    require_once(ROOT_PATH . 'extend\Alisms\api_demo\SmsDemo.php');
+    $h = new SmsDemo();
+    header("Content-Type:text/html;charset=utf-8");
+    $response = $h->sendSms($mobile, $body);
+    if($response->Code == 'OK')
+    {
+        return true;
+    }else
+    {
+        return false;
+    }
+}
+
+/**
+ * @Title: sendAliMass
+ * @param $mobile
+ * @param $body
+ * @Description: TODO 阿里云群发短信
+ * @return bool
+ * @author TUGE
+ * @date
+ */
+function sendAliMass($mobileArr, $codeArr, $type)
+{
+    $mobileArr = array(
+        "15021039435",
+        "13310028293",
+    );
+
+    $codeArr = array(
+        array(
+            "code" => "123",
+        ),
+        array(
+            "code" => "456",
+        ),
+    );
+
+    require_once(ROOT_PATH . 'extend\Alisms\api_demo\SmsDemo.php');
+    $h = new SmsDemo();
+    header("Content-Type:text/html;charset=utf-8");
+    $response = $h->sendBatchSms($mobileArr, $codeArr, 0);
+    if($response->Code == 'OK')
+    {
+        return true;
+    }else
+    {
+        return false;
+    }
+}
+
 
 /**
  * @Title: get_client_ip

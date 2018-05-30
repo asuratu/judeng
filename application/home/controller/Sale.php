@@ -86,7 +86,14 @@ class Sale extends Common
                 $val['order_date'] = date('Y-m-d H:i:s', $val['order_date']);
                 $monthArr[$monthStr][] = $val;
             }
-            ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[$monthArr]));
+            $keyArr = array_keys($monthArr);
+            $valArr = array_values($monthArr);
+            $lastArr = array();
+            foreach ($valArr as $key1=>$val1) {
+                $lastArr[$key1]['key'] = $keyArr[$key1];
+                $lastArr[$key1]['value'] = $valArr[$key1];
+            }
+            ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[$lastArr]));
         }
     }
 
@@ -113,7 +120,39 @@ class Sale extends Common
                        ->join(['jd_order_product'=>'op'], 'op.order_id = o.order_id' , 'inner')
                        ->join(['jd_doctor'=>'d'], 'o.doctor_id = d.member_id' , 'inner')
                        ->where("(o.`doctor_id` = {$data['member_id']} OR op.`parent_id` = {$data['member_id']}) AND o.pay_status = 2 AND o.order_type = 4")
-                       ->field("o.order_date, o.order_id, o.pay_amount, op.commission, op.base_commission, op.product_name, d.true_name, d.portrait")
+                       ->field("o.order_date, o.order_id, o.pay_amount, op.commission, op.base_commission, op.product_name, op.parent_id, d.true_name, d.face_photo")
+                       ->order('o.order_date DESC')
+                       ->select();
+
+                   $monthArr = array();
+                   foreach ($orderDetail as $key=>$val) {
+                       //月份
+                       $monthStr = date('Y-m', $val['order_date']);
+                       if ($val['order_id'] == $data['member_id']) {
+                           $val['earn'] = $val['pay_amount']*(1-($val['commission']/100)-($val['base_commission']/100));
+                       } else {
+                           $val['earn'] = $val['pay_amount']*($val['commission']/100);
+                       }
+                       $val['order_date'] = date('Y-m-d H:i:s', $val['order_date']);
+                       $monthArr[$monthStr][] = $val;
+                   }
+                   $keyArr = array_keys($monthArr);
+                   $valArr = array_values($monthArr);
+                   $lastArr = array();
+                   foreach ($valArr as $key1=>$val1) {
+                       $lastArr[$key1]['key'] = $keyArr[$key1];
+                       $lastArr[$key1]['value'] = $valArr[$key1];
+                   }
+//                   var_dump($lastArr);die;
+                   break;
+               case 1:
+                    //我的销售
+                   //自己出售调制服务包的情况
+                   $orderDetail = db('order')->alias('o')
+                       ->join(['jd_order_product'=>'op'], 'op.order_id = o.order_id' , 'inner')
+                       ->join(['jd_doctor'=>'d'], 'o.doctor_id = d.member_id' , 'inner')
+                       ->where("(o.`doctor_id` = {$data['member_id']}) AND o.pay_status = 2 AND o.order_type = 4")
+                       ->field("o.order_date, o.order_id, o.pay_amount, op.commission, op.base_commission, op.product_name, op.parent_id, d.true_name, d.face_photo")
                        ->order('o.order_date DESC')
                        ->select();
 
@@ -125,34 +164,44 @@ class Sale extends Common
                        $val['order_date'] = date('Y-m-d H:i:s', $val['order_date']);
                        $monthArr[$monthStr][] = $val;
                    }
-                   break;
-               case 1:
-
+                   $keyArr = array_keys($monthArr);
+                   $valArr = array_values($monthArr);
+                   $lastArr = array();
+                   foreach ($valArr as $key1=>$val1) {
+                       $lastArr[$key1]['key'] = $keyArr[$key1];
+                       $lastArr[$key1]['value'] = $valArr[$key1];
+                   }
+//                   var_dump($lastArr);die;
                    break;
                default:
+                   //团队出售调制服务包的情况
+                   $orderDetail = db('order')->alias('o')
+                       ->join(['jd_order_product'=>'op'], 'op.order_id = o.order_id' , 'inner')
+                       ->join(['jd_doctor'=>'d'], 'o.doctor_id = d.member_id' , 'inner')
+                       ->where("(op.`parent_id` = {$data['member_id']} AND o.`doctor_id` != {$data['member_id']}) AND o.pay_status = 2 AND o.order_type = 4")
+                       ->field("o.order_date, o.order_id, o.pay_amount, op.commission, op.base_commission, op.product_name, op.parent_id, d.true_name, d.face_photo")
+                       ->order('o.order_date DESC')
+                       ->select();
 
+                   $monthArr = array();
+                   foreach ($orderDetail as $key=>$val) {
+                       //月份
+                       $monthStr = date('Y-m', $val['order_date']);
+                       $val['earn'] = $val['pay_amount']*($val['commission']/100);
+                       $val['order_date'] = date('Y-m-d H:i:s', $val['order_date']);
+                       $monthArr[$monthStr][] = $val;
+                   }
+                   $keyArr = array_keys($monthArr);
+                   $valArr = array_values($monthArr);
+                   $lastArr = array();
+                   foreach ($valArr as $key1=>$val1) {
+                       $lastArr[$key1]['key'] = $keyArr[$key1];
+                       $lastArr[$key1]['value'] = $valArr[$key1];
+                   }
+//                   var_dump($lastArr);die;
                    break;
            }
-
-
-            //自己出售调制服务包的情况
-            $orderDetail = db('order')->alias('o')
-                ->join(['jd_order_product'=>'op'], 'op.order_id = o.order_id' , 'inner')
-                ->join(['jd_doctor'=>'d'], 'o.doctor_id = d.member_id' , 'inner')
-                ->where("o.`doctor_id` = {$data['member_id']} AND o.pay_status = 2 AND o.order_type = 4")
-                ->field("o.order_date, o.order_id, o.pay_amount, op.commission, op.base_commission, op.product_name, d.true_name, d.portrait")
-                ->order('o.order_date DESC')
-                ->select();
-
-            $monthArr = array();
-            foreach ($orderDetail as $key=>$val) {
-                //月份
-                $monthStr = date('Y-m', $val['order_date']);
-                $val['earn'] = $val['pay_amount']*(1-($val['commission']/100)-($val['base_commission']/100));
-                $val['order_date'] = date('Y-m-d H:i:s', $val['order_date']);
-                $monthArr[$monthStr][] = $val;
-            }
-            ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[$monthArr]));
+            ajaxReturn(array('code'=>1,'info'=>'ok','data'=>$lastArr));
         }
     }
 
