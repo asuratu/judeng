@@ -400,6 +400,12 @@ class Member extends Common
 
             if($_identify)
             {
+                $diagnosis_set = array();
+                $diagnosis_set['member_id'] = $_identify;
+                $diagnosis_set['add_date'] = time();
+                $diagnosis_set['operate_date'] = $diagnosis_set['add_date'];
+                $diagnosis_set['release_date'] = $diagnosis_set['add_date'];
+                db('diagnosis_set')->insert($diagnosis_set);
                 unset($_SESSION['tokencode']);
 
                 //填写了邀请码
