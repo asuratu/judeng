@@ -19,7 +19,7 @@ class Setup extends Common
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
-            $doctor = db('doctor')->where("member_id = {$data['doctor_id']}")->field('online_inquiry, love_inquiry, graphic_speech, first_price, consultation_price, receipt')->find();
+            $doctor = db('diagnosis_set')->where("member_id = {$data['doctor_id']}")->field('all_open as online_inquiry, love_num as love_inquiry, graphic_speech, image_price as first_price, reimage_price as consultation_price, image_num as receipt')->find();
             if (!$doctor) {
                 ajaxReturn(array('code'=>0,'info'=>'医生信息不存在','data'=>[]));
             }
@@ -77,14 +77,14 @@ class Setup extends Common
 //                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
 //            }
             $prescription = array();
-            $prescription['online_inquiry'] = $data['online_inquiry'];
-            $prescription['love_inquiry'] = $data['love_inquiry'];
+            $prescription['all_open'] = $data['online_inquiry'];
+            $prescription['love_num'] = $data['love_inquiry'];
             $prescription['graphic_speech'] = $data['graphic_speech'];
-            $prescription['first_price'] = $data['first_price'];
-            $prescription['consultation_price'] = $data['consultation_price'];
-            $prescription['receipt'] = $data['receipt'];
+            $prescription['image_price'] = $data['first_price'];
+            $prescription['reimage_price'] = $data['consultation_price'];
+            $prescription['image_num'] = $data['receipt'];
             $prescription['release_date'] = time();
-            $doctor = db('doctor')->where("member_id = {$data['doctor_id']}")->update($prescription);
+            $doctor = db('diagnosis_set')->where("member_id = {$data['doctor_id']}")->update($prescription);
             if ($doctor) {
                 ajaxReturn(array('code'=>1,'info'=>'ok'));
             } else {

@@ -17,4 +17,16 @@ class Oss extends Common
 
     }
 
+    /**
+     * @Title: upPic
+     * @Description: TODO 上传图片阿里云OSS-支持多图
+     */
+    public function upPicAdmin(){
+        //保存图片数据流 - OSS
+        //$upPaperInfo 数组
+        $upPaperInfo = Model('Oss')->upPicFile($_GET['dir'], $_GET['files'], $_GET['name']);
+        return $upPaperInfo;
+    }
+
+
 }

@@ -38,6 +38,7 @@ return [
     //oss文件上传配置
     'oss_maxSize'=>1048576,    //1M
     'oss_exts'   =>array(// 设置附件上传类型
+        'jpg',
         'image/jpg',
         'image/gif',
         'image/png',

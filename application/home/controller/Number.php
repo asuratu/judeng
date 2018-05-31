@@ -49,7 +49,6 @@ class Number extends Common
             $total = Db::table('jd_order o, jd_order_prescription op')
                 ->where("o.`order_id` = op.`order_id` and o.order_type = 3 and o.doctor_id = {$data['doctor_id']} {$where}")
                 ->count();
-//            $order['tatal'] = $total;
             ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>$order,'total'=>$total));
 
         }

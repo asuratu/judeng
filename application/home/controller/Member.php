@@ -397,6 +397,7 @@ class Member extends Common
             $invite_code = $data['invite_code'];
             unset($data['invite_code']);
             $_identify = db('doctor')->insertGetId($data);
+
             if($_identify)
             {
                 unset($_SESSION['tokencode']);

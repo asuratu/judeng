@@ -91,15 +91,6 @@ class Certified extends Common
                     ajaxReturn(array('code'=>0, 'info'=>'您已提交过认证, 不可重复提交!','data'=>[]));
                 }
 
-                //保存图片数据流 - 本地
-//                foreach ($_FILES as $key => $val) {
-//                    $file = request()->file($key);
-//                    $path = ROOT_PATH . 'uploads/paper/';
-//                    $result = $file->move($path);
-//                    $upPaperInfo[$key] = '/uploads/paper/' . $result->getSaveName();
-//                    $upPaperInfo['release_date'] = time();
-//                }
-
                 //保存图片数据流 - OSS
                 $upPaperInfo = json_decode(Model('Oss')->upPic('uploads/paper'), true);
                 $upPaperInfo['release_date'] = time();
@@ -158,19 +149,10 @@ class Certified extends Common
                     Db::rollback();
                     ajaxReturn(array('code'=>0, 'info'=>'系统繁忙, 稍后再试!','data'=>[]));
                 }
-            } catch (Exception $e) {
+            } catch (\Exception $e) {
                 Db::rollback();
                 return false;
             }
-
-
-
-
-
-
-
-
         }
     }
-
 }
