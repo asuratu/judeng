@@ -35,7 +35,7 @@ class Number extends Common
             }
             $prescription = Db::field('o.`pay_status`, o.`order_id`, o.`order_sn`, o.`order_status`, o.`patient_id`, o.`order_date`, op.`patient_mobile`, op.`patient_name`, op.`patient_sex`, op.`patient_age`, op.`dialectical`')
                 ->table('jd_order o, jd_order_prescription op')
-                ->where("o.`order_id` = op.`order_id` and o.order_type = 3 and o.doctor_id = {$data['doctor_id']} {$where}")
+                ->where("o.`order_id` = op.`order_id` and op.`prescription_type` = 0 and o.order_type = 3 and o.doctor_id = {$data['doctor_id']} {$where}")
                 ->order('o.order_date', 'DESC')
                 ->limit($data['pageCount'],$data['pageSize'])
                 ->select();
@@ -47,7 +47,7 @@ class Number extends Common
                 $order[$key]['order_date'] = date('Y-m-d H:i', $val['order_date']);
             }
             $total = Db::table('jd_order o, jd_order_prescription op')
-                ->where("o.`order_id` = op.`order_id` and o.order_type = 3 and o.doctor_id = {$data['doctor_id']} {$where}")
+                ->where("o.`order_id` = op.`order_id` and op.`prescription_type` = 1 and o.order_type = 3 and o.doctor_id = {$data['doctor_id']} {$where}")
                 ->count();
             ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>$order,'total'=>$total));
 
@@ -76,14 +76,20 @@ class Number extends Common
             }
             $data['pageCount'] = ($data['page'] - 1) * $data['pageSize'];
 
+            $_where = "o.`order_id` = op.`order_id` and o.`patient_id` = m.`member_id` and op.`prescription_type` = 0 and o.order_type = 3 and o.doctor_id = {$data['doctor_id']}";
             if ($data['type'] == 0) {
+                $_where .= ' and o.order_status=0';
                 $type_name = '购药时间：';
             } else {
+                $seventime = '604800';          // 7 天
+                $onemoon = '2592000';           // 一个月
+                $_where .= " and (o.order_status=1 or o.order_status=2 or o.order_status=3) and o.pay_date >= {$seventime} and o.pay_date <= {$onemoon}";
+//                $_where .= " and (o.order_status=1 or o.order_status=2 or o.order_status=3)";
                 $type_name = '复诊时间：';
             }
             $prescription = Db::field('o.`pay_status`, o.`order_id`, o.`order_sn`, o.`order_status`, o.`patient_id`, o.`order_date`, m.`mobile`, m.`portrait`, m.`member_name`, m.`sex`, m.`age`')
-                ->table('jd_order o, jd_member m')
-                ->where("o.`patient_id` = m.`member_id` and o.order_type = {$data['type']} and o.doctor_id = {$data['doctor_id']}")
+                ->table('jd_order o, jd_order_prescription op, jd_member m')
+                ->where($_where)
                 ->order('o.order_date', 'DESC')
                 ->limit($data['pageCount'],$data['pageSize'])
                 ->select();
@@ -93,19 +99,41 @@ class Number extends Common
                 $order[$key]['portrait'] = $val['portrait'];
                 $order[$key]['pay_status_name'] = $this->view->setting['aryOrderPayStatus'][$val['pay_status']];
                 $order[$key]['order_status'] = $this->view->setting['aryOrderStatus'][$val['order_status']];
+                $order[$key]['add_date'] = $val['order_date'];
                 $order[$key]['order_date'] = $type_name . date('Y-m-d', $val['order_date']);
-
-                // 获取患者和医生环信token
-                // 获取患者和医生环信token
-//                $order[$key]['token'] = Model('Setting')->huanxin();
             }
-            $total = Db::table('jd_order o, jd_member m')
-                ->where("o.`patient_id` = m.`member_id` and o.order_type = {$data['type']} and o.doctor_id = {$data['doctor_id']}")
+            $order = $this->array_unset_tt($order, 'patient_id');
+            $orderPatient = array();
+            foreach ($order as $val) {
+                array_push($orderPatient, $val);
+            }
+            $total = Db::table('jd_order o, jd_order_prescription op, jd_member m')
+                ->where($_where)
                 ->count();
-//            $order['total'] = $total;
-            ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>$order,'total'=>$total));
+            ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>$orderPatient,'total'=>$total));
 
         }
+    }
+
+    // 二维数组去重
+    function array_unset_tt($arr,$key){
+        //建立一个目标数组
+        $res = array();
+        foreach ($arr as $value) {
+            //查看有没有重复项
+
+            if(isset($res[$value[$key]])){
+                //有：销毁
+
+                unset($value[$key]);
+
+            }
+            else{
+
+                $res[$value[$key]] = $value;
+            }
+        }
+        return $res;
     }
 
     // 咨询页面患者列表
@@ -285,8 +313,7 @@ class Number extends Common
             $total = Db::table('jd_doctor_member s, jd_member m')
                 ->where("s.doctor_id = {$data['doctor_id']} and s.`is_show` = 1 and s.`member_id` = m.`member_id` and (m.`member_name` like '%{$data['title']}%' or m.`mobile` like '%{$data['title']}%' or s.`grouping` like '%{$data['title']}%')")
                 ->count();
-//            $order['group_member_name'] = $group['group_member_name'];
-//            $order['total'] = $total;
+
             ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>$order,'total'=>$total,'group_member_name'=>$group['group_member_name']));
 
         }
@@ -433,7 +460,7 @@ class Number extends Common
             $total = Db::table('jd_group_patient s, jd_member m')
                 ->where("s.doctor_id = {$data['doctor_id']} and s.`is_show` = 1 and s.group_id = {$data['group_id']} and s.`member_id` = m.`member_id`")
                 ->count();
-//            $order['total'] = $total;
+
             ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>$order,'total'=>$total));
 
         }

@@ -1,8 +1,10 @@
 <?php
 namespace app\home\controller;
+
 use app\tools\Html;
 use app\tools\Spell;
 use think\Db;
+
 class Remind extends Common
 {
 
@@ -29,26 +31,22 @@ class Remind extends Common
                 ->alias('o')
                 ->join('member m', 'o.`patient_id` = m.`member_id`', 'LEFT')
                 ->where("o.order_id = {$data['order_id']}")
-                ->field("m.`member_name`, m.`openid`, m.`mobile`, o.`order_type`, o.`order_sn`, o.`doctor_id`")
+                ->field("m.`member_name`, m.`openid`, m.`mobile`, o.`order_type`, o.`order_status`, o.`order_sn`, o.`doctor_id`")
                 ->find();
             $member['member_name'] = $member['member_name'] ? $member['member_name'] : $member['mobile'];
 
-            if ($member['order_type'] == 0) {         // 0问诊 1复诊3 处方订单
+            if ($member['order_status'] == 0) {         // 0待购药 其他待复诊
                 $data['url'] = 'http://wechat.bohetanglao.com/home/center/detail/ordersn/'.$member['order_sn'].'.html';
-                $data['first'] = '您有一张待处理问诊单，请及时查看。';
-                $data['prescription'] = '门诊问诊';
-                $data['remark'] = '点击详情，跳转到该问诊单页~';
-            } else if ($member['order_type'] == 1) {                            // 待复诊提醒
-                $data['url'] = 'http://wechat.bohetanglao.com/home/center/detail/ordersn/'.$member['order_sn'].'.html';
+                $data['first'] = '您有一张待购药订单，请及时查看。';
+                $data['prescription'] = '门诊订单';
+                $data['remark'] = '点击详情，跳转到该订单单页~';
+            }  {                            // 待复诊提醒
+                $data['url'] = 'http://wechat.bohetanglao.com/home/advise/chat/memberid/' . $member['doctor_id'] . '/type/1.html';
                 $data['first'] = '您有一张待处理复诊单，请及时查看。';
                 $data['prescription'] = '门诊复诊';
-                $data['remark'] = '点击详情，跳转到该复诊单页~';
-            } else if ($member['order_type'] == 3) {                            // 待复诊提醒
-                $data['url'] = 'http://wechat.bohetanglao.com/home/center/detail/ordersn/'.$member['order_sn'].'.html';
-                $data['first'] = '您有一张待处理处方单，请及时查看。';
-                $data['prescription'] = '门诊处方';
-                $data['remark'] = '点击详情，跳转到该处方单页~';
+                $data['remark'] = '点击详情，跳转到聊天页面~';
             }
+            var_dump($data);die;
 
             // 增加一条发送记录
             $this->addMedicine($data['doctor_id'], $data['order_id']);
