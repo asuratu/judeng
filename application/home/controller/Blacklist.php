@@ -96,7 +96,7 @@ class Blacklist extends Common
             $order = array();
             foreach ($comment as $key => $val) {
                 array_push($order, $val);
-                $order[$key]['portrait'] = $this->view->setting['base_host'] . $val['portrait'];
+                $order[$key]['portrait'] = $val['portrait'];
             }
             $total = Db::table('jd_blacklist b, jd_member m')
                 ->where("b.doctor_id = {$data['doctor_id']} and b.is_show = 0 and b.`member_id` = m.`member_id`")

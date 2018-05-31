@@ -90,7 +90,7 @@ class Number extends Common
             $order = array();
             foreach ($prescription as $key => $val) {
                 array_push($order, $val);
-                $order[$key]['portrait'] = $this->view->setting['base_host'] . $val['portrait'];
+                $order[$key]['portrait'] = $val['portrait'];
                 $order[$key]['pay_status_name'] = $this->view->setting['aryOrderPayStatus'][$val['pay_status']];
                 $order[$key]['order_status'] = $this->view->setting['aryOrderStatus'][$val['order_status']];
                 $order[$key]['order_date'] = $type_name . date('Y-m-d', $val['order_date']);
@@ -134,7 +134,7 @@ class Number extends Common
             $order = array();
             foreach ($comment as $key => $val) {
                 array_push($order, $val);
-                $order[$key]['portrait'] = $this->view->setting['base_host'] . $val['portrait'];
+                $order[$key]['portrait'] = $val['portrait'];
                 $order[$key]['end_date'] = date('m-d', $val['end_date']);
 
                 // 获取患者和医生环信token (用不到)
@@ -276,7 +276,7 @@ class Number extends Common
             foreach ($comment as $key => $val) {
                 array_push($order, $val);
                 $order[$key]['is_type'] = $this->view->setting['aryMemberType'][$val['is_type']];
-                $order[$key]['portrait'] = $this->view->setting['base_host'] . $val['portrait'];
+                $order[$key]['portrait'] = $val['portrait'];
                 $order[$key]['mobile'] = isset($val['mobile']) ? $val['mobile'] : '未填写手机号码';
                 $order[$key]['inquisition'] = date('Y-m-d H:i', $val['inquisition']);
 
@@ -427,7 +427,7 @@ class Number extends Common
             foreach ($comment as $key => $val) {
                 array_push($order, $val);
                 $order[$key]['is_type'] = $this->view->setting['aryMemberType'][$val['is_type']];
-                $order[$key]['portrait'] = $this->view->setting['base_host'] . $val['portrait'];
+                $order[$key]['portrait'] = $val['portrait'];
                 $order[$key]['mobile'] = isset($val['mobile']) ? $val['mobile'] : '未填写手机号码';
             }
             $total = Db::table('jd_group_patient s, jd_member m')

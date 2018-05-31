@@ -203,7 +203,7 @@ class Doctor extends Common
         foreach ($doctorEvaluation as $key => $val) {
             array_push($evaluation, $val);
             $evaluation[$key]['evaluate_name'] = explode('#@#', $val['evaluate_name']);
-            $evaluation[$key]['portrait'] = $this->view->setting['base_host'] . $val['portrait'];
+            $evaluation[$key]['portrait'] = $val['portrait'];
             $evaluation[$key]['add_date'] = date('Y-m-d', $val['add_date']);
         }
         return $evaluation;
