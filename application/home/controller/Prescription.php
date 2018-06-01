@@ -83,7 +83,7 @@ class Prescription extends Common
             foreach ($drugArr as $val) {
                 $tabooArr2 = array();
                 $temp['name'] = $val;
-                $temp['type'] = 1;//可以防止反复添加
+                $temp['type'] = 1;//可以防止反复添
                 $target = db('drug_record')->where($temp)->field("*")->find();
                 if ($target) {
                     array_push($tabooArr2, $val);
@@ -91,11 +91,12 @@ class Prescription extends Common
                     $contrastTemp['type'] = abs($target['type']-1);
                     $contrastList = db('drug_record')->where($contrastTemp)->field("*")->select();
                     foreach ($contrastList as $val2) {
+                        $tempArr = $tabooArr2;
                         if (in_array($val2['name'], $drugArr)) {
-                            array_push($tabooArr2, $val2['name']);
+                            array_push($tempArr, $val2['name']);
+                            array_push($tabooArr, $tempArr);
                         }
                     }
-                    array_push($tabooArr, $tabooArr2);
                 }
             }
             if (count($tabooArr) > 0 && count($tabooArr[0]) > 1) {
@@ -331,7 +332,7 @@ class Prescription extends Common
             foreach ($otherNameArr as $val) {
                 $tabooArr2 = array();
                 $temp['name'] = $val;
-                $temp['type'] = 1;//可以防止反复添加
+                $temp['type'] = 1;//可以防止反复添
                 $target = db('drug_record')->where($temp)->field("*")->find();
                 if ($target) {
                     array_push($tabooArr2, $val);
@@ -339,11 +340,12 @@ class Prescription extends Common
                     $contrastTemp['type'] = abs($target['type']-1);
                     $contrastList = db('drug_record')->where($contrastTemp)->field("*")->select();
                     foreach ($contrastList as $val2) {
+                        $tempArr = $tabooArr2;
                         if (in_array($val2['name'], $otherNameArr)) {
-                            array_push($tabooArr2, $val2['name']);
+                            array_push($tempArr, $val2['name']);
+                            array_push($tabooArr, $tempArr);
                         }
                     }
-                    array_push($tabooArr, $tabooArr2);
                 }
             }
             if (count($tabooArr) > 0 && count($tabooArr[0]) > 1) {
@@ -495,7 +497,7 @@ class Prescription extends Common
             foreach ($otherNameArr as $val) {
                 $tabooArr2 = array();
                 $temp['name'] = $val;
-                $temp['type'] = 1;//可以防止反复添加
+                $temp['type'] = 1;//可以防止反复添
                 $target = db('drug_record')->where($temp)->field("*")->find();
                 if ($target) {
                     array_push($tabooArr2, $val);
@@ -503,11 +505,12 @@ class Prescription extends Common
                     $contrastTemp['type'] = abs($target['type']-1);
                     $contrastList = db('drug_record')->where($contrastTemp)->field("*")->select();
                     foreach ($contrastList as $val2) {
+                        $tempArr = $tabooArr2;
                         if (in_array($val2['name'], $otherNameArr)) {
-                            array_push($tabooArr2, $val2['name']);
+                            array_push($tempArr, $val2['name']);
+                            array_push($tabooArr, $tempArr);
                         }
                     }
-                    array_push($tabooArr, $tabooArr2);
                 }
             }
             if (count($tabooArr) > 0 && count($tabooArr[0]) > 1) {
@@ -589,7 +592,9 @@ class Prescription extends Common
 
             //获取模板数组
             $map['member_id'] = $data['member_id'];
-            $map['state_id'] = $data['state_id'];
+            if ($data['state_id'] > 0) {
+                $map['state_id'] = $data['state_id'];
+            }
             $stateArr = db('temp')->where($map)->field("`temp_id`,`temp_name`,`type`,`relation_id`,`drug_str`, `state_id`, `release_date`")->order("`release_date` DESC")->select();
             foreach ($stateArr as $key=>$val) {
                 $stateArr[$key]['drug_str'] = base64_encode($val['drug_str']);
@@ -620,11 +625,36 @@ class Prescription extends Common
 
             //获取自建的非经典模板数组
             $map['member_id'] = $data['member_id'];
-            $map['state_id'] = $data['state_id'];
+            if ($data['state_id'] > 0) {
+                $map['state_id'] = $data['state_id'];
+            }
             $map['type'] = 0;
             $stateArr = db('temp')->where($map)->field("`temp_id`,`temp_name`,`type`,`relation_id`,`drug_str`, `state_id`, `release_date`")->order("`release_date` DESC")->select();
             foreach ($stateArr as $key=>$val) {
                 $stateArr[$key]['drug_str'] = base64_encode($val['drug_str']);
+            }
+
+            //加入传承的特色方剂
+            $specialList = db('inherit_doctor')->alias('id')
+                ->join(['jd_special'=>'s'], 's.inherit_id = id.inherit_id' , 'inner')
+                ->join(['jd_inherit'=>'i'], 'i.inherit_id = id.inherit_id' , 'inner')
+                ->where("id.`member_id` = {$data['member_id']} AND i.is_display = 1 AND s.is_display = 1")
+                ->field("s.special_id, s.inherit_id, s.special_name, s.content, s.release_date")
+                ->order('s.sort DESC')
+                ->select();
+            $specialArr = array();
+            foreach ($specialList as $key=>$val) {
+                $contentArr = json_decode($val['content']);
+                foreach ($contentArr as $key1=>$val1) {
+                    $contentArr[$key1][2] = 0;
+                }
+                $specialArr[$key]['drug_str'] = base64_encode(json_encode($contentArr));
+                $specialArr[$key]['type'] = 1;
+                $specialArr[$key]['temp_id'] = $val['special_id'];
+                $specialArr[$key]['temp_name'] = $val['special_name'];
+                $specialArr[$key]['release_date'] = $val['release_date'];
+                $specialArr[$key]['state_id'] = 0;
+                $specialArr[$key]['relation_id'] = 0;
             }
 
             //获取经典模板数组
@@ -633,8 +663,9 @@ class Prescription extends Common
             $classicArr = db('temp')->where($map1)->field("`temp_id`,`temp_name`,`type`,`relation_id`,`drug_str`, `state_id`, `release_date`")->order("`release_date` DESC")->select();
             foreach ($classicArr as $key=>$val) {
                 $classicArr[$key]['drug_str'] = base64_encode($val['drug_str']);
+                $classicArr[$key]['type'] = 2;
             }
-            ajaxReturn(array('code'=>1, 'info'=>'ok!','data'=>array_merge($stateArr, $classicArr)));
+            ajaxReturn(array('code'=>1, 'info'=>'ok!','data'=>array_merge($stateArr, $specialArr, $classicArr)));
         }
     }
 

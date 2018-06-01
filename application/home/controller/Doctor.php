@@ -117,13 +117,13 @@ class Doctor extends Common
         //第一科室
         $keshiArr = db('hospital_repart')->alias('hr')
             ->join(['jd_department'=>'d'], 'd.department_id = hr.department_id' , 'inner')
-            ->where("hr.hospital_repart_id IN({$doctor['hospital_repart_str']})")
+            ->where("hr.hospital_repart_id IN({$doctor['hospital_repart_str']}) AND hr.is_show = 1")
             ->field("d.department_name")
             ->select();
         $doctor['department_name'] = $keshiArr[0];
         //是否有自建特色方剂
         $existGoods = db('self_goods')
-            ->where("member_id = {$data['doctor_id']} AND content != '' AND is_checked = 2 AND end_date > ".time())
+            ->where("member_id = {$data['doctor_id']} AND content != '' AND is_checked = 2 ")
             ->field('self_goods_id')
             ->count();
         $existGoods > 0 ? $doctor['has_self_goods'] = 1 : $doctor['has_self_goods'] = 0;
@@ -140,7 +140,7 @@ class Doctor extends Common
 
          //查询调制服务包列表
         $doctor['selfGoodsList'] = db('self_goods')
-            ->where("member_id = {$data['doctor_id']} AND is_checked = 2 AND end_date > ".time())
+            ->where("member_id = {$data['doctor_id']} AND is_checked = 2 ")
             ->field('self_goods_id, inherit_id, content, self_goods_name, advantage, price')
             ->select();
         $doctor['is_self_drug'] = $doctor['content'] != '' ? 1 : 0;
@@ -152,7 +152,7 @@ class Doctor extends Common
             ->join(['jd_department' => 'd'], 'hr.department_id = d.department_id', 'inner')
             ->join(['jd_hospital' => 'h'], 'hr.hospital_id = h.hospital_id', 'inner')
             ->join(['jd_diagnosis_list' => 'dl'], 'hr.hospital_repart_id = dl.hospital_repart_id', 'inner')
-            ->where("dl.`member_id` = {$data['doctor_id']} AND dl.start_time > ".time())
+            ->where("dl.`member_id` = {$data['doctor_id']} AND hr.is_show = 1 AND dl.start_time > ".time() )
             ->field("dl.diagnosis_id, dl.start_time, dl.end_time, h.hospital_name, d.department_name")
             ->order('dl.start_time DESC')
             ->select();

@@ -1,0 +1,902 @@
+---------------------------------------------------------------
+[ 2018-06-01T00:05:19+08:00 ] 0.0.0.0 POST /sheet/getSheetList
+[ info ] localhost:7037/sheet/getSheetList [运行时间：0.843520s][吞吐率：1.19req/s] [内存消耗：3,582.77kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'sheet',
+    2 => 'getSheetList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryxgS4vYMhjQbiK1Cz',
+  'content-length' => '424',
+  'x-original-url' => '/sheet/getSheetList',
+  'postman-token' => '197119a2-074c-33c3-97ea-09dd5be9674a',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'type_id' => '2',
+  'member_id' => '2',
+  'page' => '1',
+  'pageSize' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Sheet->getSheetList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sheet.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.375092s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sheet` [ RunTime:0.109691s ]
+[ sql ] [ SQL ] SELECT `sheet_id`,`title`,`release_date`,`list` FROM `jd_sheet` WHERE  (  is_display = 1 AND type_id = 2 AND member_id = 2 ) ORDER BY sort DESC LIMIT 0,2 [ RunTime:0.115877s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_sheet` WHERE  (  is_display = 1 AND type_id = 2 AND member_id = 2 ) LIMIT 1 [ RunTime:0.091261s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-01T00:05:49+08:00 ] 0.0.0.0 POST /sheet/getSheetList
+[ info ] localhost:7037/sheet/getSheetList [运行时间：0.751382s][吞吐率：1.33req/s] [内存消耗：3,582.88kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'sheet',
+    2 => 'getSheetList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryrZj32jBKHkqoJK2h',
+  'content-length' => '424',
+  'x-original-url' => '/sheet/getSheetList',
+  'postman-token' => '1ef9f0aa-3995-d5fe-0d5c-7461e252fd02',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'type_id' => '2',
+  'member_id' => '2',
+  'page' => '1',
+  'pageSize' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Sheet->getSheetList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sheet.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.293610s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sheet` [ RunTime:0.103395s ]
+[ sql ] [ SQL ] SELECT `sheet_id`,`title`,`release_date`,`list` FROM `jd_sheet` WHERE  (  is_display = 1 AND type_id = 2 AND member_id = 2 ) ORDER BY sort DESC LIMIT 0,2 [ RunTime:0.107565s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_sheet` WHERE  (  is_display = 1 AND type_id = 2 AND member_id = 2 ) LIMIT 1 [ RunTime:0.114237s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-01T00:13:15+08:00 ] 0.0.0.0 POST /sheet/sheetDetial
+[ info ] localhost:7037/sheet/sheetDetial [运行时间：0.351479s][吞吐率：2.85req/s] [内存消耗：3,705.02kb] [文件加载：59]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'sheet',
+    2 => 'sheetDetial',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarycpQqt4CFaAH9qQfS',
+  'content-length' => '238',
+  'x-original-url' => '/sheet/sheetDetial',
+  'postman-token' => '676f9b42-866d-18bc-bc22-62fc4e034883',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '2',
+  'sheet_id' => '14',
+)
+[ info ] [ RUN ] app\home\controller\Sheet->sheetDetial[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sheet.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: page[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sheet.php:76]
+[ error ] [8]未定义数组索引: pageSize[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sheet.php:77]
+[ error ] [8]未定义数组索引: type_id[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sheet.php:81]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND member_id = 2 ) ORDER BY sort DESC LIMIT 0,5' at line 1[D:\workLP\20180502\judeng\wwwroot\thinkphp\library\think\db\Connection.php:388]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.113255s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sheet` [ RunTime:0.068387s ]
+---------------------------------------------------------------
+[ 2018-06-01T00:36:15+08:00 ] 0.0.0.0 POST /prescription/getDrugRelationList
+[ info ] localhost:7037/prescription/getDrugRelationList [运行时间：1.572436s][吞吐率：0.64req/s] [内存消耗：3,785.40kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getDrugRelationList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarylg099fgZ6066BIBB',
+  'content-length' => '139',
+  'x-original-url' => '/prescription/getDrugRelationList',
+  'postman-token' => '00c38da0-93a7-2309-5b5e-7b85b8b58ff5',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'area_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getDrugRelationList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.210205s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.111367s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `is_display` = 1 ORDER BY `sort` DESC [ RunTime:0.115271s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.119770s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`area_name` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = '2'  AND p.`is_display` = 1  AND d.`state_id` = 7 ORDER BY d.`sort` DESC [ RunTime:0.112408s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`area_name` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = '2'  AND p.`is_display` = 1  AND d.`state_id` = 8 ORDER BY d.`sort` DESC [ RunTime:0.102534s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`area_name` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = '2'  AND p.`is_display` = 1  AND d.`state_id` = 6 ORDER BY d.`sort` DESC [ RunTime:0.097968s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`area_name` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = '2'  AND p.`is_display` = 1  AND d.`state_id` = 5 ORDER BY d.`sort` DESC [ RunTime:0.112253s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`area_name` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = '2'  AND p.`is_display` = 1  AND d.`state_id` = 3 ORDER BY d.`sort` DESC [ RunTime:0.107548s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`area_name` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = '2'  AND p.`is_display` = 1  AND d.`state_id` = 2 ORDER BY d.`sort` DESC [ RunTime:0.132255s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-01T00:42:13+08:00 ] 0.0.0.0 POST /prescription/getDrugRelationList
+[ info ] localhost:7037/prescription/getDrugRelationList [运行时间：1.525001s][吞吐率：0.66req/s] [内存消耗：3,794.80kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getDrugRelationList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryOovte6ajsnBOT5Kr',
+  'content-length' => '139',
+  'x-original-url' => '/prescription/getDrugRelationList',
+  'postman-token' => '13e195e3-2b9c-4806-02af-a740d4b2ab2c',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'area_id' => '1',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getDrugRelationList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.175412s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.114029s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `is_display` = 1 ORDER BY `sort` DESC [ RunTime:0.103726s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.103453s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`area_name` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = '1'  AND p.`is_display` = 1  AND d.`state_id` = 7 ORDER BY d.`sort` DESC [ RunTime:0.108881s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`area_name` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = '1'  AND p.`is_display` = 1  AND d.`state_id` = 8 ORDER BY d.`sort` DESC [ RunTime:0.096758s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`area_name` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = '1'  AND p.`is_display` = 1  AND d.`state_id` = 6 ORDER BY d.`sort` DESC [ RunTime:0.102994s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`area_name` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = '1'  AND p.`is_display` = 1  AND d.`state_id` = 5 ORDER BY d.`sort` DESC [ RunTime:0.098071s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`area_name` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = '1'  AND p.`is_display` = 1  AND d.`state_id` = 3 ORDER BY d.`sort` DESC [ RunTime:0.107520s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`area_name` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = '1'  AND p.`is_display` = 1  AND d.`state_id` = 2 ORDER BY d.`sort` DESC [ RunTime:0.120272s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-01T10:02:04+08:00 ] 0.0.0.0 POST /sheet/addSheet
+[ info ] localhost:7037/sheet/addSheet [运行时间：0.338761s][吞吐率：2.95req/s] [内存消耗：3,732.60kb] [文件加载：57]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'sheet',
+    2 => 'addSheet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryxhuSXcDDulKUf0JS',
+  'content-length' => '1061',
+  'x-original-url' => '/sheet/addSheet',
+  'postman-token' => '254f8311-1f3d-2bc7-8557-bf42b46913a6',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '2',
+  'type_id' => '2',
+  'title' => '这里是标题',
+  'list' => '[{"answer":"","answerStr":"","selectStr":"","srcs":"","tip":"让人","title":"方便","type":"0"},{"answer":"","answerStr":"红包,vb","selectStr":"","srcs":"","tip":"","title":"vn","type":"1"},{"answer":"","answerStr":"答案q,我哪哈","selectStr":"","srcs":"","tip":"","title":"单选","type":"1"},{"answer":"","answerStr":"的,符合,先解决,许久,是否健康","selectStr":"","srcs":"","tip":"","title":"复选","type":"2"},{"answer":"","answerStr":"","selectStr":"","srcs":"","tip":"","title":"图片问题","type":"3"}]',
+  'sheet_id' => '10',
+)
+[ info ] [ RUN ] app\home\controller\Sheet->addSheet[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sheet.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.095043s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sheet` [ RunTime:0.061453s ]
+[ sql ] [ SQL ] UPDATE `jd_sheet`  SET `member_id`=2,`type_id`=2,`title`='这里是标题',`list`='[{\"answer\":\"\",\"answerStr\":\"\",\"selectStr\":\"\",\"srcs\":\"\",\"tip\":\"让人\",\"title\":\"方便\",\"type\":\"0\"},{\"answer\":\"\",\"answerStr\":\"红包,vb\",\"selectStr\":\"\",\"srcs\":\"\",\"tip\":\"\",\"title\":\"vn\",\"type\":\"1\"},{\"answer\":\"\",\"answerStr\":\"答案q,我哪哈\",\"selectStr\":\"\",\"srcs\":\"\",\"tip\":\"\",\"title\":\"单选\",\"type\":\"1\"},{\"answer\":\"\",\"answerStr\":\"的,符合,先解决,许久,是否健康\",\"selectStr\":\"\",\"srcs\":\"\",\"tip\":\"\",\"title\":\"复选\",\"type\":\"2\"},{\"answer\":\"\",\"answerStr\":\"\",\"selectStr\":\"\",\"srcs\":\"\",\"tip\":\"\",\"title\":\"图片问题\",\"type\":\"3\"}]',`release_date`=1527818524  WHERE  `sheet_id` = 10 [ RunTime:0.062357s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-01T10:03:35+08:00 ] 0.0.0.0 POST /sheet/addSheet
+[ info ] localhost:7037/sheet/addSheet [运行时间：0.310854s][吞吐率：3.22req/s] [内存消耗：3,515.93kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'sheet',
+    2 => 'addSheet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryMZGzbfo2ybAvcAn4',
+  'content-length' => '1060',
+  'x-original-url' => '/sheet/addSheet',
+  'postman-token' => 'b5acb1cd-104a-53a0-7beb-064e10c94561',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '2',
+  'type_id' => '2',
+  'title' => '这里是标题',
+  'list' => '[{"answer":"","answerStr":"","selectStr":"","srcs":"","tip":"让人","title":"方便","type":"0"},{"answer":"","answerStr":"红包,vb","selectStr":"","srcs":"","tip":"","title":"vn","type":"1"},{"answer":"","answerStr":"答案q,我哪哈","selectStr":"","srcs":"","tip":"","title":"单选","type":"1"},{"answer":"","answerStr":"的,符合,先解决,许久,是否健康","selectStr":"","srcs":"","tip":"","title":"复选","type":"2"},{"answer":"","answerStr":"","selectStr":"","srcs":"","tip":"","title":"图片问题","type":"3"}]',
+  'sheet_id' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Sheet->addSheet[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sheet.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.089560s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sheet` [ RunTime:0.060102s ]
+[ sql ] [ SQL ] INSERT INTO `jd_sheet` (`member_id` , `type_id` , `title` , `list` , `release_date` , `add_date`) VALUES (2 , 2 , '这里是标题' , '[{\"answer\":\"\",\"answerStr\":\"\",\"selectStr\":\"\",\"srcs\":\"\",\"tip\":\"让人\",\"title\":\"方便\",\"type\":\"0\"},{\"answer\":\"\",\"answerStr\":\"红包,vb\",\"selectStr\":\"\",\"srcs\":\"\",\"tip\":\"\",\"title\":\"vn\",\"type\":\"1\"},{\"answer\":\"\",\"answerStr\":\"答案q,我哪哈\",\"selectStr\":\"\",\"srcs\":\"\",\"tip\":\"\",\"title\":\"单选\",\"type\":\"1\"},{\"answer\":\"\",\"answerStr\":\"的,符合,先解决,许久,是否健康\",\"selectStr\":\"\",\"srcs\":\"\",\"tip\":\"\",\"title\":\"复选\",\"type\":\"2\"},{\"answer\":\"\",\"answerStr\":\"\",\"selectStr\":\"\",\"srcs\":\"\",\"tip\":\"\",\"title\":\"图片问题\",\"type\":\"3\"}]' , 1527818615 , 1527818615) [ RunTime:0.066284s ]
+---------------------------------------------------------------
+[ 2018-06-01T10:04:18+08:00 ] 0.0.0.0 POST /sheet/addSheet
+[ info ] localhost:7037/sheet/addSheet [运行时间：0.306671s][吞吐率：3.26req/s] [内存消耗：3,515.91kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'sheet',
+    2 => 'addSheet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary5tXHVnoqxxZ92qsN',
+  'content-length' => '1060',
+  'x-original-url' => '/sheet/addSheet',
+  'postman-token' => 'a4fc76e7-0838-65f5-12b0-f72f09bf0237',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '2',
+  'type_id' => '2',
+  'title' => '这里是标题',
+  'list' => '[{"answer":"","answerStr":"","selectStr":"","srcs":"","tip":"让人","title":"方便","type":"0"},{"answer":"","answerStr":"红包,vb","selectStr":"","srcs":"","tip":"","title":"vn","type":"1"},{"answer":"","answerStr":"答案q,我哪哈","selectStr":"","srcs":"","tip":"","title":"单选","type":"1"},{"answer":"","answerStr":"的,符合,先解决,许久,是否健康","selectStr":"","srcs":"","tip":"","title":"复选","type":"2"},{"answer":"","answerStr":"","selectStr":"","srcs":"","tip":"","title":"图片问题","type":"3"}]',
+  'sheet_id' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Sheet->addSheet[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sheet.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.088075s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sheet` [ RunTime:0.059600s ]
+[ sql ] [ SQL ] INSERT INTO `jd_sheet` (`member_id` , `type_id` , `title` , `list` , `release_date` , `add_date`) VALUES (2 , 2 , '这里是标题' , '[{\"answer\":\"\",\"answerStr\":\"\",\"selectStr\":\"\",\"srcs\":\"\",\"tip\":\"让人\",\"title\":\"方便\",\"type\":\"0\"},{\"answer\":\"\",\"answerStr\":\"红包,vb\",\"selectStr\":\"\",\"srcs\":\"\",\"tip\":\"\",\"title\":\"vn\",\"type\":\"1\"},{\"answer\":\"\",\"answerStr\":\"答案q,我哪哈\",\"selectStr\":\"\",\"srcs\":\"\",\"tip\":\"\",\"title\":\"单选\",\"type\":\"1\"},{\"answer\":\"\",\"answerStr\":\"的,符合,先解决,许久,是否健康\",\"selectStr\":\"\",\"srcs\":\"\",\"tip\":\"\",\"title\":\"复选\",\"type\":\"2\"},{\"answer\":\"\",\"answerStr\":\"\",\"selectStr\":\"\",\"srcs\":\"\",\"tip\":\"\",\"title\":\"图片问题\",\"type\":\"3\"}]' , 1527818658 , 1527818658) [ RunTime:0.068902s ]
+---------------------------------------------------------------
+[ 2018-06-01T10:10:48+08:00 ] 0.0.0.0 POST /sheet/addSheet
+[ info ] localhost:7037/sheet/addSheet [运行时间：0.656335s][吞吐率：1.52req/s] [内存消耗：3,613.73kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'sheet',
+    2 => 'addSheet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarySct6FBOYsRrKmo3L',
+  'content-length' => '1060',
+  'x-original-url' => '/sheet/addSheet',
+  'postman-token' => 'd4d150b5-55c1-f103-1e1b-748bd583965f',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '2',
+  'type_id' => '2',
+  'title' => '这里是标题',
+  'list' => '[{"answer":"","answerStr":"","selectStr":"","srcs":"","tip":"让人","title":"方便","type":"0"},{"answer":"","answerStr":"红包,vb","selectStr":"","srcs":"","tip":"","title":"vn","type":"1"},{"answer":"","answerStr":"答案q,我哪哈","selectStr":"","srcs":"","tip":"","title":"单选","type":"1"},{"answer":"","answerStr":"的,符合,先解决,许久,是否健康","selectStr":"","srcs":"","tip":"","title":"复选","type":"2"},{"answer":"","answerStr":"","selectStr":"","srcs":"","tip":"","title":"图片问题","type":"3"}]',
+  'sheet_id' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Sheet->addSheet[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sheet.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.087311s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sheet` [ RunTime:0.061633s ]
+[ sql ] [ SQL ] INSERT INTO `jd_sheet` (`member_id` , `type_id` , `title` , `list` , `release_date` , `add_date`) VALUES (2 , 2 , '这里是标题' , '[{\"answer\":\"\",\"answerStr\":\"\",\"selectStr\":\"\",\"srcs\":\"\",\"tip\":\"让人\",\"title\":\"方便\",\"type\":\"0\"},{\"answer\":\"\",\"answerStr\":\"红包,vb\",\"selectStr\":\"\",\"srcs\":\"\",\"tip\":\"\",\"title\":\"vn\",\"type\":\"1\"},{\"answer\":\"\",\"answerStr\":\"答案q,我哪哈\",\"selectStr\":\"\",\"srcs\":\"\",\"tip\":\"\",\"title\":\"单选\",\"type\":\"1\"},{\"answer\":\"\",\"answerStr\":\"的,符合,先解决,许久,是否健康\",\"selectStr\":\"\",\"srcs\":\"\",\"tip\":\"\",\"title\":\"复选\",\"type\":\"2\"},{\"answer\":\"\",\"answerStr\":\"\",\"selectStr\":\"\",\"srcs\":\"\",\"tip\":\"\",\"title\":\"图片问题\",\"type\":\"3\"}]' , 1527819048 , 1527819048) [ RunTime:0.066489s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sheet_question` [ RunTime:0.063032s ]
+[ sql ] [ SQL ] INSERT INTO `jd_sheet_question` (`question_json` , `sheet_id` , `add_date` , `release_date`) VALUES ('{\"answer\":\"\",\"answerStr\":\"\",\"selectStr\":\"\",\"srcs\":\"\",\"tip\":\"\\u8ba9\\u4eba\",\"title\":\"\\u65b9\\u4fbf\",\"type\":\"0\"}' , 22 , 1527819048 , 1527819048) [ RunTime:0.061530s ]
+[ sql ] [ SQL ] INSERT INTO `jd_sheet_question` (`question_json` , `sheet_id` , `add_date` , `release_date`) VALUES ('{\"answer\":\"\",\"answerStr\":\"\\u7ea2\\u5305,vb\",\"selectStr\":\"\",\"srcs\":\"\",\"tip\":\"\",\"title\":\"vn\",\"type\":\"1\"}' , 22 , 1527819048 , 1527819048) [ RunTime:0.032450s ]
+[ sql ] [ SQL ] INSERT INTO `jd_sheet_question` (`question_json` , `sheet_id` , `add_date` , `release_date`) VALUES ('{\"answer\":\"\",\"answerStr\":\"\\u7b54\\u6848q,\\u6211\\u54ea\\u54c8\",\"selectStr\":\"\",\"srcs\":\"\",\"tip\":\"\",\"title\":\"\\u5355\\u9009\",\"type\":\"1\"}' , 22 , 1527819048 , 1527819048) [ RunTime:0.032068s ]
+[ sql ] [ SQL ] INSERT INTO `jd_sheet_question` (`question_json` , `sheet_id` , `add_date` , `release_date`) VALUES ('{\"answer\":\"\",\"answerStr\":\"\\u7684,\\u7b26\\u5408,\\u5148\\u89e3\\u51b3,\\u8bb8\\u4e45,\\u662f\\u5426\\u5065\\u5eb7\",\"selectStr\":\"\",\"srcs\":\"\",\"tip\":\"\",\"title\":\"\\u590d\\u9009\",\"type\":\"2\"}' , 22 , 1527819048 , 1527819048) [ RunTime:0.031868s ]
+[ sql ] [ SQL ] INSERT INTO `jd_sheet_question` (`question_json` , `sheet_id` , `add_date` , `release_date`) VALUES ('{\"answer\":\"\",\"answerStr\":\"\",\"selectStr\":\"\",\"srcs\":\"\",\"tip\":\"\",\"title\":\"\\u56fe\\u7247\\u95ee\\u9898\",\"type\":\"3\"}' , 22 , 1527819048 , 1527819048) [ RunTime:0.032273s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-01T10:16:59+08:00 ] 0.0.0.0 POST /sheet/addSheet
+[ info ] localhost:7037/sheet/addSheet [运行时间：0.328758s][吞吐率：3.04req/s] [内存消耗：3,515.20kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'sheet',
+    2 => 'addSheet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryciU9tBGRAhRetqRH',
+  'content-length' => '1061',
+  'x-original-url' => '/sheet/addSheet',
+  'postman-token' => '0324d640-1222-14b6-a149-e754e99c89d1',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '2',
+  'type_id' => '2',
+  'title' => '这里是标题',
+  'list' => '[{"answer":"","answerStr":"","selectStr":"","srcs":"","tip":"让人","title":"方便","type":"0"},{"answer":"","answerStr":"红包,vb","selectStr":"","srcs":"","tip":"","title":"vn","type":"1"},{"answer":"","answerStr":"答案q,我哪哈","selectStr":"","srcs":"","tip":"","title":"单选","type":"1"},{"answer":"","answerStr":"的,符合,先解决,许久,是否健康","selectStr":"","srcs":"","tip":"","title":"复选","type":"2"},{"answer":"","answerStr":"","selectStr":"","srcs":"","tip":"","title":"图片问题","type":"3"}]',
+  'sheet_id' => '22',
+)
+[ info ] [ RUN ] app\home\controller\Sheet->addSheet[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sheet.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.091836s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sheet` [ RunTime:0.061645s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sheet` WHERE  (  sheet_id = 22 AND is_display = 1 ) LIMIT 1 [ RunTime:0.062600s ]
+---------------------------------------------------------------
+[ 2018-06-01T10:17:19+08:00 ] 0.0.0.0 POST /sheet/addSheet
+[ info ] localhost:7037/sheet/addSheet [运行时间：0.311778s][吞吐率：3.21req/s] [内存消耗：3,509.76kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'sheet',
+    2 => 'addSheet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryaUmeMhQAP4qmn3Rl',
+  'content-length' => '1061',
+  'x-original-url' => '/sheet/addSheet',
+  'postman-token' => 'c2b57fe4-2919-c9d7-9c1e-e2f524b94151',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '2',
+  'type_id' => '2',
+  'title' => '这里是标题',
+  'list' => '[{"answer":"","answerStr":"","selectStr":"","srcs":"","tip":"让人","title":"方便","type":"0"},{"answer":"","answerStr":"红包,vb","selectStr":"","srcs":"","tip":"","title":"vn","type":"1"},{"answer":"","answerStr":"答案q,我哪哈","selectStr":"","srcs":"","tip":"","title":"单选","type":"1"},{"answer":"","answerStr":"的,符合,先解决,许久,是否健康","selectStr":"","srcs":"","tip":"","title":"复选","type":"2"},{"answer":"","answerStr":"","selectStr":"","srcs":"","tip":"","title":"图片问题","type":"3"}]',
+  'sheet_id' => '22',
+)
+[ info ] [ RUN ] app\home\controller\Sheet->addSheet[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sheet.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.089946s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sheet` [ RunTime:0.060051s ]
+[ sql ] [ SQL ] SELECT `list` FROM `jd_sheet` WHERE  (  sheet_id = 22 AND is_display = 1 ) LIMIT 1 [ RunTime:0.060582s ]
+---------------------------------------------------------------
+[ 2018-06-01T10:39:43+08:00 ] 0.0.0.0 POST /sheet/addSheet
+[ info ] localhost:7037/sheet/addSheet [运行时间：0.470613s][吞吐率：2.12req/s] [内存消耗：3,745.25kb] [文件加载：57]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'sheet',
+    2 => 'addSheet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryvxAWZ1herrQHwS8B',
+  'content-length' => '1062',
+  'x-original-url' => '/sheet/addSheet',
+  'postman-token' => '7a63c82a-91e0-88e9-3278-d5ded261671d',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '2',
+  'type_id' => '2',
+  'title' => '这里是标题1',
+  'list' => '[{"answer":"","answerStr":"","selectStr":"","srcs":"","tip":"让人","title":"方便","type":"0"},{"answer":"","answerStr":"红包,vb","selectStr":"","srcs":"","tip":"","title":"vn","type":"1"},{"answer":"","answerStr":"答案q,我哪哈","selectStr":"","srcs":"","tip":"","title":"单选","type":"1"},{"answer":"","answerStr":"的,符合,先解决,许久,是否健康","selectStr":"","srcs":"","tip":"","title":"复选","type":"2"},{"answer":"","answerStr":"","selectStr":"","srcs":"","tip":"","title":"图片问题","type":"3"}]',
+  'sheet_id' => '22',
+)
+[ info ] [ RUN ] app\home\controller\Sheet->addSheet[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sheet.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.097469s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sheet` [ RunTime:0.067179s ]
+[ sql ] [ SQL ] SELECT `list` FROM `jd_sheet` WHERE  (  sheet_id = 22 AND is_display = 1 ) LIMIT 1 [ RunTime:0.065170s ]
+[ sql ] [ SQL ] UPDATE `jd_sheet`  SET `member_id`=2,`type_id`=2,`title`='这里是标题1',`list`='[{\"answer\":\"\",\"answerStr\":\"\",\"selectStr\":\"\",\"srcs\":\"\",\"tip\":\"让人\",\"title\":\"方便\",\"type\":\"0\"},{\"answer\":\"\",\"answerStr\":\"红包,vb\",\"selectStr\":\"\",\"srcs\":\"\",\"tip\":\"\",\"title\":\"vn\",\"type\":\"1\"},{\"answer\":\"\",\"answerStr\":\"答案q,我哪哈\",\"selectStr\":\"\",\"srcs\":\"\",\"tip\":\"\",\"title\":\"单选\",\"type\":\"1\"},{\"answer\":\"\",\"answerStr\":\"的,符合,先解决,许久,是否健康\",\"selectStr\":\"\",\"srcs\":\"\",\"tip\":\"\",\"title\":\"复选\",\"type\":\"2\"},{\"answer\":\"\",\"answerStr\":\"\",\"selectStr\":\"\",\"srcs\":\"\",\"tip\":\"\",\"title\":\"图片问题\",\"type\":\"3\"}]',`release_date`=1527820783  WHERE  `sheet_id` = 22 [ RunTime:0.068980s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-01T10:40:10+08:00 ] 0.0.0.0 POST /sheet/addSheet
+[ info ] localhost:7037/sheet/addSheet [运行时间：0.781846s][吞吐率：1.28req/s] [内存消耗：3,758.55kb] [文件加载：57]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'sheet',
+    2 => 'addSheet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary7lxu5ayEGgsp7Acg',
+  'content-length' => '1063',
+  'x-original-url' => '/sheet/addSheet',
+  'postman-token' => '56b49c4c-c990-dd1a-0c06-0e678a74b9bf',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '2',
+  'type_id' => '2',
+  'title' => '这里是标题1',
+  'list' => '[{"answer":"","answerStr":"","selectStr":"","srcs":"","tip":"让2人","title":"方便","type":"0"},{"answer":"","answerStr":"红包,vb","selectStr":"","srcs":"","tip":"","title":"vn","type":"1"},{"answer":"","answerStr":"答案q,我哪哈","selectStr":"","srcs":"","tip":"","title":"单选","type":"1"},{"answer":"","answerStr":"的,符合,先解决,许久,是否健康","selectStr":"","srcs":"","tip":"","title":"复选","type":"2"},{"answer":"","answerStr":"","selectStr":"","srcs":"","tip":"","title":"图片问题","type":"3"}]',
+  'sheet_id' => '22',
+)
+[ info ] [ RUN ] app\home\controller\Sheet->addSheet[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sheet.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.088174s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sheet` [ RunTime:0.058879s ]
+[ sql ] [ SQL ] SELECT `list` FROM `jd_sheet` WHERE  (  sheet_id = 22 AND is_display = 1 ) LIMIT 1 [ RunTime:0.057936s ]
+[ sql ] [ SQL ] UPDATE `jd_sheet`  SET `member_id`=2,`type_id`=2,`title`='这里是标题1',`list`='[{\"answer\":\"\",\"answerStr\":\"\",\"selectStr\":\"\",\"srcs\":\"\",\"tip\":\"让2人\",\"title\":\"方便\",\"type\":\"0\"},{\"answer\":\"\",\"answerStr\":\"红包,vb\",\"selectStr\":\"\",\"srcs\":\"\",\"tip\":\"\",\"title\":\"vn\",\"type\":\"1\"},{\"answer\":\"\",\"answerStr\":\"答案q,我哪哈\",\"selectStr\":\"\",\"srcs\":\"\",\"tip\":\"\",\"title\":\"单选\",\"type\":\"1\"},{\"answer\":\"\",\"answerStr\":\"的,符合,先解决,许久,是否健康\",\"selectStr\":\"\",\"srcs\":\"\",\"tip\":\"\",\"title\":\"复选\",\"type\":\"2\"},{\"answer\":\"\",\"answerStr\":\"\",\"selectStr\":\"\",\"srcs\":\"\",\"tip\":\"\",\"title\":\"图片问题\",\"type\":\"3\"}]',`release_date`=1527820809  WHERE  `sheet_id` = 22 [ RunTime:0.062284s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sheet_question` [ RunTime:0.060334s ]
+[ sql ] [ SQL ] DELETE FROM `jd_sheet_question`    WHERE  (  sheet_id = 22 ) [ RunTime:0.062140s ]
+[ sql ] [ SQL ] INSERT INTO `jd_sheet_question` (`question_json` , `sheet_id` , `add_date` , `release_date`) VALUES ('{\"answer\":\"\",\"answerStr\":\"\",\"selectStr\":\"\",\"srcs\":\"\",\"tip\":\"\\u8ba92\\u4eba\",\"title\":\"\\u65b9\\u4fbf\",\"type\":\"0\"}' , 22 , 1527820810 , 1527820810) [ RunTime:0.060647s ]
+[ sql ] [ SQL ] INSERT INTO `jd_sheet_question` (`question_json` , `sheet_id` , `add_date` , `release_date`) VALUES ('{\"answer\":\"\",\"answerStr\":\"\\u7ea2\\u5305,vb\",\"selectStr\":\"\",\"srcs\":\"\",\"tip\":\"\",\"title\":\"vn\",\"type\":\"1\"}' , 22 , 1527820810 , 1527820810) [ RunTime:0.031683s ]
+[ sql ] [ SQL ] INSERT INTO `jd_sheet_question` (`question_json` , `sheet_id` , `add_date` , `release_date`) VALUES ('{\"answer\":\"\",\"answerStr\":\"\\u7b54\\u6848q,\\u6211\\u54ea\\u54c8\",\"selectStr\":\"\",\"srcs\":\"\",\"tip\":\"\",\"title\":\"\\u5355\\u9009\",\"type\":\"1\"}' , 22 , 1527820810 , 1527820810) [ RunTime:0.030826s ]
+[ sql ] [ SQL ] INSERT INTO `jd_sheet_question` (`question_json` , `sheet_id` , `add_date` , `release_date`) VALUES ('{\"answer\":\"\",\"answerStr\":\"\\u7684,\\u7b26\\u5408,\\u5148\\u89e3\\u51b3,\\u8bb8\\u4e45,\\u662f\\u5426\\u5065\\u5eb7\",\"selectStr\":\"\",\"srcs\":\"\",\"tip\":\"\",\"title\":\"\\u590d\\u9009\",\"type\":\"2\"}' , 22 , 1527820810 , 1527820810) [ RunTime:0.030883s ]
+[ sql ] [ SQL ] INSERT INTO `jd_sheet_question` (`question_json` , `sheet_id` , `add_date` , `release_date`) VALUES ('{\"answer\":\"\",\"answerStr\":\"\",\"selectStr\":\"\",\"srcs\":\"\",\"tip\":\"\",\"title\":\"\\u56fe\\u7247\\u95ee\\u9898\",\"type\":\"3\"}' , 22 , 1527820810 , 1527820810) [ RunTime:0.032441s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-01T10:46:37+08:00 ] 0.0.0.0 POST /inherit/applyInherit
+[ info ] localhost:7037/inherit/applyInherit [运行时间：0.407342s][吞吐率：2.45req/s] [内存消耗：3,774.70kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'applyInherit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary6Xr9OBP3NvbjAvLr',
+  'content-length' => '239',
+  'x-original-url' => '/inherit/applyInherit',
+  'postman-token' => 'a2243e9e-90cb-7925-896c-f96ab3825a00',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '2',
+  'inherit_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->applyInherit[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.087144s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.060652s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit_doctor` WHERE  (  member_id = 2 AND inherit_id = 2 AND is_checked IN(0, 1) ) LIMIT 1 [ RunTime:0.060238s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-01T10:47:04+08:00 ] 0.0.0.0 POST /inherit/applyInherit
+[ info ] localhost:7037/inherit/applyInherit [运行时间：0.446107s][吞吐率：2.24req/s] [内存消耗：3,791.02kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'applyInherit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryOcICNp2W3MTBqTCI',
+  'content-length' => '239',
+  'x-original-url' => '/inherit/applyInherit',
+  'postman-token' => 'ab6d48e9-b734-e485-b51d-0498cefa4127',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '4',
+  'inherit_id' => '6',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->applyInherit[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.094360s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.063995s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit_doctor` WHERE  (  member_id = 4 AND inherit_id = 6 AND is_checked IN(0, 1) ) LIMIT 1 [ RunTime:0.064054s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.063856s ]
+[ sql ] [ SQL ] SELECT `member_id` FROM `jd_inherit` WHERE  (  inherit_id = 6 AND is_display = 1 ) LIMIT 1 [ RunTime:0.062464s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-01T10:48:32+08:00 ] 0.0.0.0 POST /inherit/applyInherit
+[ info ] localhost:7037/inherit/applyInherit [运行时间：2.458827s][吞吐率：0.41req/s] [内存消耗：4,686.84kb] [文件加载：66]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'applyInherit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryqOkSJxuCS8r4ezuR',
+  'content-length' => '239',
+  'x-original-url' => '/inherit/applyInherit',
+  'postman-token' => '056110eb-daba-4cab-aff7-663f723d292d',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '3',
+  'inherit_id' => '4',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->applyInherit[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.092314s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.062168s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit_doctor` WHERE  (  member_id = 3 AND inherit_id = 4 AND is_checked IN(0, 1) ) LIMIT 1 [ RunTime:0.062131s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.063135s ]
+[ sql ] [ SQL ] SELECT `member_id` FROM `jd_inherit` WHERE  (  inherit_id = 4 AND is_display = 1 ) LIMIT 1 [ RunTime:0.064600s ]
+[ error ] [8]未定义数组索引: reason[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php:612]
+---------------------------------------------------------------
+[ 2018-06-01T10:50:44+08:00 ] 0.0.0.0 POST /inherit/applyInherit
+[ info ] localhost:7037/inherit/applyInherit [运行时间：3.394076s][吞吐率：0.29req/s] [内存消耗：4,733.81kb] [文件加载：66]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'applyInherit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryC3akqEKVrQPhai5D',
+  'content-length' => '239',
+  'x-original-url' => '/inherit/applyInherit',
+  'postman-token' => 'fb2880c3-3177-a823-e697-8f34449c6edc',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '3',
+  'inherit_id' => '4',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->applyInherit[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.090633s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.063920s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit_doctor` WHERE  (  member_id = 3 AND inherit_id = 4 AND is_checked IN(0, 1) ) LIMIT 1 [ RunTime:0.062409s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.064992s ]
+[ sql ] [ SQL ] SELECT `member_id` FROM `jd_inherit` WHERE  (  inherit_id = 4 AND is_display = 1 ) LIMIT 1 [ RunTime:0.061625s ]
+[ sql ] [ SQL ] SELECT `id`.`inherit_doctor_id`,`id`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`school_id`,`i`.`intro`,`d`.`member_id`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  (id.member_id = 3) AND id.is_checked = 1 ) ORDER BY id.add_date DESC [ RunTime:0.062428s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_special` [ RunTime:0.062985s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.061791s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_school` [ RunTime:0.063135s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.062883s ]
+[ sql ] [ SQL ] SELECT `id`.`inherit_doctor_id`,`id`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`intro`,`i`.`school_id`,`d`.`member_id`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `i`.`member_id`=`d`.`member_id` WHERE  (  (id.member_id != 3 AND id.parent_id != 3) AND id.is_checked = 1 ) ORDER BY id.add_date DESC [ RunTime:0.063958s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 4 ) ORDER BY sort DESC [ RunTime:0.062850s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 0 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.062027s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.062225s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.061910s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.063876s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.066926s ]
+[ error ] [8]未定义数组索引: reason[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php:612]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-01T10:50:58+08:00 ] 0.0.0.0 POST /inherit/applyInherit
+[ info ] localhost:7037/inherit/applyInherit [运行时间：2.451313s][吞吐率：0.41req/s] [内存消耗：4,687.41kb] [文件加载：66]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'applyInherit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary9ZaL7VjrwSiJ7I92',
+  'content-length' => '239',
+  'x-original-url' => '/inherit/applyInherit',
+  'postman-token' => '0a1f2aa1-5eb8-1955-fec7-28119bff2585',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '3',
+  'inherit_id' => '4',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->applyInherit[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.092318s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.063391s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit_doctor` WHERE  (  member_id = 3 AND inherit_id = 4 AND is_checked IN(0, 1) ) LIMIT 1 [ RunTime:0.061389s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.062728s ]
+[ sql ] [ SQL ] SELECT `member_id` FROM `jd_inherit` WHERE  (  inherit_id = 4 AND is_display = 1 ) LIMIT 1 [ RunTime:0.061769s ]
+[ error ] [8]未定义数组索引: reason[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php:612]
+---------------------------------------------------------------
+[ 2018-06-01T11:40:08+08:00 ] 0.0.0.0 POST /sale/walletLog
+[ info ] localhost:7037/sale/walletLog [运行时间：0.327047s][吞吐率：3.06req/s] [内存消耗：3,656.48kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'sale',
+    2 => 'walletLog',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary8OLYweUmNCYWiagl',
+  'content-length' => '141',
+  'x-original-url' => '/sale/walletLog',
+  'postman-token' => 'b60a2974-16b2-40f2-dcd5-06ba8789d120',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Sale->walletLog[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sale.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.092975s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wallet_log` [ RunTime:0.061839s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wallet_log` WHERE  (  (member_id = 2) ) ORDER BY add_date DESC [ RunTime:0.062999s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-01T13:59:43+08:00 ] 0.0.0.0 POST /inherit/applyInherit
+[ info ] localhost:7037/inherit/applyInherit [运行时间：2.592941s][吞吐率：0.39req/s] [内存消耗：4,674.89kb] [文件加载：66]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'applyInherit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary3htE9fOEBcc6fpQS',
+  'content-length' => '356',
+  'x-original-url' => '/inherit/applyInherit',
+  'postman-token' => 'eab25e76-21cf-e3bc-e889-82f6bd774c41',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '3',
+  'inherit_id' => '4',
+  'reason' => '这是我的申请理由',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->applyInherit[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084006s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.057644s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit_doctor` WHERE  (  member_id = 3 AND inherit_id = 4 AND is_checked IN(0, 1) ) LIMIT 1 [ RunTime:0.055317s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.056372s ]
+[ sql ] [ SQL ] SELECT `member_id` FROM `jd_inherit` WHERE  (  inherit_id = 4 AND is_display = 1 ) LIMIT 1 [ RunTime:0.055771s ]
+[ sql ] [ SQL ] INSERT INTO `jd_inherit_doctor` (`parent_id` , `inherit_id` , `member_id` , `reason` , `add_date` , `img_url`) VALUES (2 , 4 , 3 , '这是我的申请理由' , 1527832780 , 'http://39.105.19.169:88/uploads/code/1527832780code.png') [ RunTime:0.058033s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-01T15:29:53+08:00 ] 0.0.0.0 POST /sale/inviteInherit
+[ info ] localhost:7037/sale/inviteInherit [运行时间：0.434004s][吞吐率：2.30req/s] [内存消耗：3,660.45kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'sale',
+    2 => 'inviteInherit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryjfT4QlBTSWVxVbaT',
+  'content-length' => '239',
+  'x-original-url' => '/sale/inviteInherit',
+  'postman-token' => '58def8c4-93f5-ea62-8a3a-ceced64bdf53',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '2',
+  'inherit_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Sale->inviteInherit[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sale.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.100241s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.067965s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `i`.`inherit_id`=`id`.`inherit_id` WHERE  (  id.member_id = 2 AND id.is_checked = 1 AND i.is_display = 1 ) LIMIT 1 [ RunTime:0.068825s ]
+[ sql ] [ SQL ] SELECT `img_url` FROM `jd_inherit_doctor` WHERE  (  is_checked = 1 AND member_id = 2 AND inherit_id = 2 ) LIMIT 1 [ RunTime:0.079097s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]

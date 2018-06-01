@@ -18,7 +18,7 @@ class Order extends Common
             {
                 ajaxReturn($res);
             }
-            if($data['doctor_id']=='' || $data['patient_id']=='' || $data['area_id']=='')
+            if($data['doctor_id']=='' || $data['patient_id']=='' || $data['area_id']=='' || $data['mobile']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
@@ -52,7 +52,6 @@ class Order extends Common
                     ->field("d.`relation_id`, d.`prescription_id`, d.`state_id`, d.`describe`, p.`prescription_name`, p.`prescription_id`, p.`area_name`, ds.`state_name`, ds.`make`, ds.`taking`, ds.`instructions`, ds.`weight`, ds.`pic`")
                     ->order('d.`relation_id` DESC')
                     ->find();
-
             } else {
                 //没有历史开方
                 $houseMap['d.`is_display`'] = 1;
@@ -91,11 +90,25 @@ class Order extends Common
 
             if ($data['patient_id']==0) {
                 //手机号开方, 新建时创建患者信息
-                $mainInfo['patient_id'] = 0;
-                $mainInfo['patient_name'] = '';
-                $mainInfo['mobile'] = '';
-                $mainInfo['sex'] = 0;
-                $mainInfo['age'] = 0;
+                //查询该手机号是否已经注册患者, 拉取信息
+                $mobPatientInfo = db('member')
+                    ->where("mobile = {$data['mobile']}")
+                    ->field("*")
+                    ->find();
+
+                if (empty($mobPatientInfo)) {
+                    $mainInfo['patient_id'] = 0;
+                    $mainInfo['patient_name'] = '';
+                    $mainInfo['mobile'] = '';
+                    $mainInfo['sex'] = 0;
+                    $mainInfo['age'] = 0;
+                } else {
+                    $mainInfo['patient_id'] = $mobPatientInfo['member_id'];
+                    $mainInfo['patient_name'] = $mobPatientInfo['member_name'];
+                    $mainInfo['mobile'] = $data['mobile'];
+                    $mainInfo['sex'] = $mobPatientInfo['sex'];
+                    $mainInfo['age'] = $mobPatientInfo['age'];
+                }
             } else {
                 //在线开方, 先查询患者信息
                 $patientMap['member_id'] = $data['patient_id'];
@@ -135,6 +148,7 @@ class Order extends Common
 
                 if($data['doctor_id']=='' || $data['patient_id']=='' || $data['type']=='' || $data['prescription_id']=='')
                 {
+                    Db::rollback();
                     ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
                 }
 
@@ -150,6 +164,7 @@ class Order extends Common
                 //只有在线开方能计算价格
                 if ($data['type'] == 0) {
                     if (json_decode(base64_decode($data['drug_str'])) == null) {
+                        Db::rollback();
                         ajaxReturn(array('code'=>0,'info'=>'药品参数不符合规范!','data'=>[]));
                     }
                     //计算价格
@@ -168,21 +183,29 @@ class Order extends Common
                         array_push($otherNameArr, $list['other_name']);
                         if (!$list) {
                             array_push($alertArr, $val[1]);
+                        } else {
+                            //药材扣减库存
+                            $_drugUpdate['num'] = $list['num'] - $val[2];
+                            $_drugUpdate['release_date'] = time();
+                            db('drug')->where($drugDetailMap)->update($_drugUpdate);
                         }
                         $list['total_price'] = $val[2]*$list['price'];
                         $drugSumPrice += $list['total_price'];
                         if ($val[2] > $list['num'] - config('lessCount') ) {
                             array_push($lessCountArr, $val[1]);
                         }
+
                     }
 
                     if (count($alertArr) > 0) {
+                        Db::rollback();
                         ajaxReturn(array('code'=>0,'info'=>'药材['.implode(',', $alertArr).']在该药房已下架!','data'=>[]));
                     }
 
                     $orderPrescriptionInsert['price'] = $drugSumPrice;
                     //计算库存
                     if (count($lessCountArr) > 0) {
+                        Db::rollback();
                         ajaxReturn(array('code'=>0,'info'=>'药材['.implode(',', $lessCountArr).']在该药房库存不足!','data'=>[]));
                     }
                     //查询配药禁忌
@@ -190,7 +213,7 @@ class Order extends Common
                     foreach ($otherNameArr as $val) {
                         $tabooArr2 = array();
                         $temp['name'] = $val;
-                        $temp['type'] = 1;//可以防止反复添加
+                        $temp['type'] = 1;//可以防止反复添
                         $target = db('drug_record')->where($temp)->field("*")->find();
                         if ($target) {
                             array_push($tabooArr2, $val);
@@ -198,11 +221,12 @@ class Order extends Common
                             $contrastTemp['type'] = abs($target['type']-1);
                             $contrastList = db('drug_record')->where($contrastTemp)->field("*")->select();
                             foreach ($contrastList as $val2) {
+                                $tempArr = $tabooArr2;
                                 if (in_array($val2['name'], $otherNameArr)) {
-                                    array_push($tabooArr2, $val2['name']);
+                                    array_push($tempArr, $val2['name']);
+                                    array_push($tabooArr, $tempArr);
                                 }
                             }
-                            array_push($tabooArr, $tabooArr2);
                         }
                     }
                     if (count($tabooArr) > 0 && count($tabooArr[0]) > 1) {
@@ -220,13 +244,6 @@ class Order extends Common
                     $orderPrescriptionInsert['is_taboo'] = 0;
                     $orderPrescriptionInsert['price'] = 0;
                     $orderPrescriptionInsert['taboo_content'] = '';
-                    //保存图片数据流
-//                    foreach ($_FILES as $key => $val) {
-//                        $file = request()->file($key);
-//                        $path = ROOT_PATH . 'uploads/prescription/';
-//                        $result = $file->move($path);
-//                        $orderPrescriptionInsert[$key] = '/uploads/prescription/' . $result->getSaveName();
-//                    }
 
                     //保存图片数据流 - OSS
                     if ($_FILES) {
@@ -371,13 +388,14 @@ class Order extends Common
                     $orderPrescriptionInsert['prescription_type'] = 1;
                     $_identify = 1;
                 } else {
+                    Db::rollback();
                     ajaxReturn(array('code'=>0,'info'=>'开方类型不正确!','data'=>[]));
                 }
                 $_identityPrescription = db('order_prescription')->insertGetId($orderPrescriptionInsert);
 
                 if ($_identityPrescription && $orderPrescriptionInsert['order_id'] && $updateOrderPrice && $_identify) {
                     Db::commit();
-                    ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>[]));
+                    ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>[['order_id'=>$orderPrescriptionInsert['order_id'], 'type'=>$data['type']]]));
                 } else {
                     Db::rollback();
                     ajaxReturn(array('code'=>0, 'info'=>'系统繁忙, 稍后再试!','data'=>[]));
@@ -399,6 +417,11 @@ class Order extends Common
      * @date
      */
     public function checkDrugNum() {
+//        var_dump(json_decode(base64_decode('WyJcdTVkZGRcdTRlNGMiLCJcdTVkZGRcdTRlNGMiLCJcdTk2NDRcdTViNTAiLCJcdTUzNGFcdTU5MGYiXQ==')));die;
+
+//        $arr = array(array(383, '芒硝', 2, 'g'),array(117, '三棱', 2, '袋'),array(496, '桂枝', 2, '袋'));
+//        'W1szODMsIlx1ODI5Mlx1Nzg1ZCIsMiwiZyJdLFsxMTcsIlx1NGUwOVx1NjhmMSIsMiwiXHU4ODhiIl0sWzQ5NiwiXHU2ODQyXHU2NzlkIiwyLCJcdTg4OGIiXV0=';
+//        var_dump(base64_encode(json_encode($arr)));die;
         if($this->request->isPost())
         {
             try{
@@ -416,12 +439,12 @@ class Order extends Common
                 }
 
                 //只有在线开方能计算价格
-                if ($data['type'] == 0) {
                     //计算价格
                     $drugSumPrice = 0;//价格
                     $lessCountArr = array();//超量
                     $otherNameArr = array();//别名
                     $alertArr = array();//是否下架
+//                    var_dump(json_decode(base64_decode($data['drug_str'])));die;
                     foreach (json_decode(base64_decode($data['drug_str'])) as $key => $val) {
                         $drugDetailMap['Is_user'] = 1;
 
@@ -441,12 +464,14 @@ class Order extends Common
                         }
                     }
 
+//                $otherNameArr = array('芒硝', '三棱', '桂枝');
+//                $otherNameArr = array('川乌', '附子', '半夏');
                     //查询配药禁忌
                     $tabooArr = array();
                     foreach ($otherNameArr as $val) {
                         $tabooArr2 = array();
                         $temp['name'] = $val;
-                        $temp['type'] = 1;//可以防止反复添加
+                        $temp['type'] = 1;//可以防止反复添
                         $target = db('drug_record')->where($temp)->field("*")->find();
 
                         if ($target) {
@@ -455,13 +480,17 @@ class Order extends Common
                             $contrastTemp['type'] = abs($target['type']-1);
                             $contrastList = db('drug_record')->where($contrastTemp)->field("*")->select();
                             foreach ($contrastList as $val2) {
+                                $tempArr = $tabooArr2;
                                 if (in_array($val2['name'], $otherNameArr)) {
-                                    array_push($tabooArr2, $val2['name']);
+                                    array_push($tempArr, $val2['name']);
+                                    array_push($tabooArr, $tempArr);
                                 }
                             }
-                            array_push($tabooArr, $tabooArr2);
                         }
                     }
+
+
+
                     if (count($tabooArr) > 0 && count($tabooArr[0]) > 1) {
                         $orderPrescriptionInsert['is_taboo'] = 1;
                         $orderPrescriptionInsert['taboo_content'] = ($tabooArr);
@@ -469,7 +498,6 @@ class Order extends Common
                         $orderPrescriptionInsert['is_taboo'] = 0;
                         $orderPrescriptionInsert['taboo_content'] = '';
                     }
-                }
 
                 Db::commit();
                 ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>[['is_taboo'=>$orderPrescriptionInsert['is_taboo'], 'taboo_content'=>$orderPrescriptionInsert['taboo_content'], 'lessCountArr'=>$lessCountArr, 'alertArr'=>$alertArr, 'price'=>$drugSumPrice]]));
@@ -481,6 +509,11 @@ class Order extends Common
 
         }
     }
+
+
+
+
+
 
 
 }

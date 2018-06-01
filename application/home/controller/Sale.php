@@ -74,7 +74,7 @@ class Sale extends Common
                 ->join(['jd_order_product'=>'op'], 'op.order_id = o.order_id' , 'inner')
                 ->join(['jd_doctor'=>'d'], 'o.doctor_id = d.member_id' , 'inner')
                 ->where("o.`doctor_id` = {$data['member_id']} AND o.pay_status = 2 AND o.order_type = 4")
-                ->field("o.order_date, o.order_id, o.pay_amount, op.commission, op.base_commission, op.product_name, d.true_name, d.portrait")
+                ->field("o.order_date, o.order_id, o.pay_amount, op.commission, op.base_commission, op.product_name, d.true_name, d.face_photo")
                 ->order('o.order_date DESC')
                 ->select();
 
@@ -93,7 +93,146 @@ class Sale extends Common
                 $lastArr[$key1]['key'] = $keyArr[$key1];
                 $lastArr[$key1]['value'] = $valArr[$key1];
             }
-            ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[$lastArr]));
+            ajaxReturn(array('code'=>1,'info'=>'ok','data'=>$lastArr));
+        }
+    }
+
+
+    /**
+     * @Title: inviteInherit
+     * @Description: TODO 邀请医生加入传承
+     */
+    public function inviteInherit() {
+        if($this->request->isPost())
+        {
+            $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
+            if($data['member_id']=='' || $data['inherit_id']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+            }
+
+            //查询成功邀请加入传承的医生总数
+            $successDoc = db('inherit_doctor')->alias('id')
+                ->join(['jd_inherit'=>'i'], 'i.inherit_id = id.inherit_id' , 'inner')
+                ->where("id.member_id = {$data['member_id']} AND id.is_checked = 1 AND i.is_display = 1")
+                ->field("i.inherit_name, i.inherit_id")
+                ->count();
+            //读取该医生的二维码
+            $img = db('inherit_doctor')
+                ->where("is_checked = 1 AND member_id = {$data['member_id']} AND inherit_id = {$data['inherit_id']}")
+                ->field('img_url')
+                ->find();
+            ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[['successDoc'=>$successDoc, 'img'=>$img['img_url']]]));
+        }
+    }
+
+    /**
+     * @Title: myInheritList
+     * @Description: TODO 查询医生成功加入的传承列表
+     */
+    public function myInheritList() {
+        if($this->request->isPost())
+        {
+            $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
+            if($data['member_id']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+            }
+            //查询成功加入的传承列表
+            $successDoc = db('inherit_doctor')->alias('id')
+                ->join(['jd_inherit'=>'i'], 'i.inherit_id = id.inherit_id' , 'inner')
+                ->where("id.member_id = {$data['member_id']} AND id.is_checked = 1 AND i.is_display = 1")
+                ->field("i.inherit_name, i.inherit_id")
+                ->order('i.sort DESC')
+                ->select();
+            ajaxReturn(array('code'=>1,'info'=>'ok','data'=>$successDoc));
+        }
+    }
+
+
+    /**
+     * @Title: myInheritTeam
+     * @Description: TODO 我的传承销售团队
+     */
+    public function myInheritTeam() {
+        if($this->request->isPost())
+        {
+            $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
+
+            if($data['member_id']=='' || $data['inherit_id']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+            }
+
+            //找到我的所有下线
+            if ($data['inherit_id'] > 0) {
+                $where = "id.parent_id = {$data['member_id']} AND id.is_checked = 1 AND i.is_display = 1 AND id.inherit_id = {$data['inherit_id']} AND id.member_id != {$data['member_id']}";
+            } else {
+                $where = "id.parent_id = {$data['member_id']} AND id.is_checked = 1 AND i.is_display = 1 AND id.member_id != {$data['member_id']}";
+            }
+
+            $successDoc = db('inherit_doctor')->alias('id')
+                ->join(['jd_inherit'=>'i'], 'i.inherit_id = id.inherit_id' , 'inner')
+                ->where($where)
+                ->field("id.member_id, id.inherit_id, i.inherit_name")
+                ->order('i.sort DESC')
+                ->select();
+
+            foreach ($successDoc as $key=>$val) {
+                //查找医生信息
+                $docInfo = db('doctor')
+                    ->where("member_id = {$val['member_id']}")
+                    ->field("school_str, member_id, true_name, face_photo, is_clinic, recom")
+                    ->find();
+
+                //查询流派信息
+                $docInfo['school_arr'] = db('school')
+                    ->where("school_id IN({$docInfo['school_str']})")
+                    ->field("school_name")
+                    ->order('sort DESC')
+                    ->select();
+
+                //是否有自建特色方剂 -- 特色标识
+                $existGoods = db('self_goods')
+                    ->where("member_id = {$val['member_id']} AND content != '' AND is_checked = 2 AND end_date > ".time())
+                    ->field('self_goods_id')
+                    ->count();
+                $existGoods > 0 ? $docInfo['has_self_goods'] = 1 : $docInfo['has_self_goods'] = 0;
+                //累计销售次数
+                $saleInfo = db('order')->alias('o')
+                    ->join(['jd_order_product'=>'op'], 'op.order_id = o.order_id' , 'inner')
+                    ->join(['jd_doctor'=>'d'], 'o.doctor_id = d.member_id' , 'inner')
+                    ->where("(o.`doctor_id` = {$val['member_id']} AND op.`inherit_id` = {$val['inherit_id']}) AND o.pay_status = 2 AND o.order_type = 4")
+                    ->field("o.order_id, o.pay_amount, op.commission, op.base_commission")
+                    ->select();
+
+                $docInfo['sale_num'] = count($saleInfo);
+
+                //计算返佣
+                $docInfo['earn'] = 0;
+                foreach ($saleInfo as $val1) {
+                    $docInfo['earn'] += $val1['pay_amount']*($val1['commission']/100);
+                }
+
+                $successDoc[$key]['content'] = $docInfo;
+
+            }
+            ajaxReturn(array('code'=>1,'info'=>'ok','data'=>$successDoc));
         }
     }
 

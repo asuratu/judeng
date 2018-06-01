@@ -83,11 +83,12 @@ class Selfdrug extends Common
                     $contrastTemp['type'] = abs($target['type']-1);
                     $contrastList = db('drug_record')->where($contrastTemp)->field("*")->select();
                     foreach ($contrastList as $val2) {
+                        $tempArr = $tabooArr2;
                         if (in_array($val2['name'], $otherNameArr)) {
-                            array_push($tabooArr2, $val2['name']);
+                            array_push($tempArr, $val2['name']);
+                            array_push($tabooArr, $tempArr);
                         }
                     }
-                    array_push($tabooArr, $tabooArr2);
                 }
             }
             if (count($tabooArr) > 0 && count($tabooArr[0]) > 1) {

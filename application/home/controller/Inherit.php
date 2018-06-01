@@ -392,13 +392,13 @@ class Inherit extends Common
                 //第一科室
                 $keshiArr = db('hospital_repart')->alias('hr')
                     ->join(['jd_department'=>'d'], 'd.department_id = hr.department_id' , 'inner')
-                    ->where("hr.hospital_repart_id IN({$doctorInfo['hospital_repart_str']})")
+                    ->where("hr.hospital_repart_id IN({$doctorInfo['hospital_repart_str']}) AND hr.is_show = 1")
                     ->field("d.department_name")
                     ->select();
                 $doctorInfo['department_name'] = $keshiArr[0];
                 //是否有自建特色方剂
                 $existGoods = db('self_goods')
-                    ->where("member_id = {$doctorInfo['member_id']} AND content != '' AND is_checked = 2 AND end_date > ".time())
+                    ->where("member_id = {$doctorInfo['member_id']} AND content != '' AND is_checked = 2 ")
                     ->field('self_goods_id')
                     ->count();
                 $existGoods > 0 ? $doctorInfo['has_self_goods'] = 1 : $doctorInfo['has_self_goods'] = 0;
@@ -414,7 +414,7 @@ class Inherit extends Common
                 $doctorInfo['use_drug'] = $inheritDocInfo['use_drug'];
                 //查找该医生的方剂
                 $doctorInfo['selfGoodsList'] = db('self_goods')
-                    ->where("member_id = {$doctorInfo['member_id']} AND is_checked = 2 AND end_date > " . time())
+                    ->where("member_id = {$doctorInfo['member_id']} AND is_checked = 2 ")
                     ->field("self_goods_name")
                     ->select();
                 $studioList[$key]['content'] = $doctorInfo;
@@ -454,7 +454,7 @@ class Inherit extends Common
                     //第一科室
                     $keshiArr = db('hospital_repart')->alias('hr')
                         ->join(['jd_department'=>'d'], 'd.department_id = hr.department_id' , 'inner')
-                        ->where("hr.hospital_repart_id IN({$doctorInfo['hospital_repart_str']})")
+                        ->where("hr.hospital_repart_id IN({$doctorInfo['hospital_repart_str']}) AND hr.is_show = 1")
                         ->field("d.department_name")
                         ->select();
                     $doctorInfo['department_name'] = $keshiArr[0];
@@ -462,7 +462,7 @@ class Inherit extends Common
                     $doctorInfo['goodat_id'] = Controller('Doctor')->goodsId($doctorInfo['goodat_id']);
                     //是否有自建特色方剂
                     $existGoods = db('self_goods')
-                        ->where("member_id = {$doctorInfo['member_id']} AND content != '' AND is_checked = 2 AND end_date > ".time())
+                        ->where("member_id = {$doctorInfo['member_id']} AND content != '' AND is_checked = 2")
                         ->field('self_goods_id')
                         ->count();
                     $existGoods > 0 ? $doctorInfo['has_self_goods'] = 1 : $doctorInfo['has_self_goods'] = 0;
@@ -478,7 +478,7 @@ class Inherit extends Common
                     $doctorInfo['use_drug'] = $inheritDocInfo['use_drug'];
                     //查找该医生的方剂
                     $doctorInfo['selfGoodsList'] = db('self_goods')
-                        ->where("member_id = {$doctorInfo['member_id']} AND is_checked = 2 AND end_date > " . time())
+                        ->where("member_id = {$doctorInfo['member_id']} AND is_checked = 2")
                         ->field("self_goods_name")
                         ->select();
                     $studioList[$key]['content'] = $doctorInfo;
@@ -567,6 +567,57 @@ class Inherit extends Common
             }
 
             ajaxReturn(array('code'=>1, 'info'=>'ok!','data'=>['yes'=>$existDetail, 'no'=>array_values($listArr)]));
+        }
+    }
+
+
+    public function applyInherit() {
+        if($this->request->isPost())
+        {
+            $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
+
+            if($data['member_id']=='' || $data['inherit_id']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+            }
+
+            //检查是否已加入该传承
+            $existDetail = db('inherit_doctor')
+                ->where("member_id = {$data['member_id']} AND inherit_id = {$data['inherit_id']} AND is_checked IN(0, 1)")
+                ->field('inherit_doctor_id')
+                ->count();
+            if ($existDetail) {
+                ajaxReturn(array('code'=>0, 'info'=>'您已申请过该传承!','data'=>[]));
+            }
+
+            //查询传承信息
+            $inheritInfo = db('inherit')
+                ->where("inherit_id = {$data['inherit_id']} AND is_display = 1")
+                ->field('member_id')
+                ->find();
+
+            if (empty($inheritInfo)) {
+                ajaxReturn(array('code'=>0, 'info'=>'该传承已下架!','data'=>[]));
+            }
+
+            //提交申请
+            $insertData['parent_id'] = $inheritInfo['member_id'];
+            $insertData['inherit_id'] = $data['inherit_id'];
+            $insertData['member_id'] = $data['member_id'];
+            $insertData['reason'] = $data['reason'] ?: '';
+            $insertData['add_date'] = time();
+
+            //生成邀请加入传承的二维码
+            $insertData['img_url'] =  config('url') . createPic(config('url').'/member/inviteInherit?memberId='.$data['member_id'].'&inheritId='.$data['inherit_id']);
+
+            $identify = db('inherit_doctor')->insertGetId($insertData);
+
+            ajaxReturn(array('code'=>1, 'info'=>'ok!','data'=>[]));
         }
     }
 

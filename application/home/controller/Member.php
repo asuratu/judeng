@@ -91,9 +91,11 @@ class Member extends Common
     public function doSmsLogin()
     {
         if($this->request->isPost()) {
+
+
+            $data=input('post.');
             session_start();
             $ticket=session_id();
-            $data=input('post.');
             if($data['mobile']==''||$data['smscode']==''|| $data['device_tokens']=='' || $data['is_system']=='')
             {
                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -114,6 +116,8 @@ class Member extends Common
             $mobile=$data['mobile'];
             session_id(md5($mobile));
             session_start();
+
+
             $token = $_SESSION['tokencode'];
 
             if(empty($token))
@@ -450,6 +454,25 @@ class Member extends Common
         return  $this->fetch('/doctor/regist');
     }
 
+    public function inviteInherit()
+    {
+        //查询医生信息
+        $docInfo=db('doctor')
+            ->where("member_id = {$_GET['memberId']}")
+            ->field("`face_photo`,`true_name`, `member_id`, `invite`")
+            ->find();
+
+        //查询传承信息
+        $inheritInfo=db('inherit')
+            ->where("inherit_id = {$_GET['inheritId']}")
+            ->field("`inherit_name`,`inherit_id`")
+            ->find();
+
+        $this->assign("info", $docInfo);
+        $this->assign("inherit", $inheritInfo);
+        return  $this->fetch('/doctor/doctorLogin');
+    }
+
 
 
     /**
@@ -544,6 +567,20 @@ class Member extends Common
                 $order[$key]['add_date'] = date('Y-m-d H:i', $val['add_date']);
             }
             $uinfo['ad'] = $order;
+
+            //是否有特色方剂 -- 特色标识
+            $existGoods = db('self_goods')
+                ->where("member_id = {$data['member_id']} AND content != '' AND is_checked = 2 AND end_date > ".time())
+                ->field('self_goods_id')
+                ->count();
+            $existGoods > 0 ? $uinfo['has_self_goods'] = 1 : $uinfo['has_self_goods'] = 0;
+
+            //查询科室
+            $uinfo['department_arr'] = db('hospital_repart')->alias('hr')
+                ->join(['jd_department'=>'d'], 'd.department_id = hr.department_id' , 'inner')
+                ->where("hr.hospital_repart_id IN({$uinfo['hospital_repart_str']}) AND d.is_show = 1")
+                ->field("d.department_name")
+                ->select();
 
 
             if (!empty($uinfo)) {

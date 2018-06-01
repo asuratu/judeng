@@ -129,11 +129,12 @@ class Other extends Common
             }
 
             //获取科室数组
-            $map['hospital_id'] = $data['hospital_id'];
-            $list = db('hospital_repart')->where($map)->alias('hr')
+            $list = db('hospital_repart')->alias('hr')
                 ->join(['jd_department'=>'d'], 'hr.department_id = d.department_id' , 'left')
+                ->where("hr.hospital_id = {$data['hospital_id']} AND hr.is_show = 1")
                 ->field("hr.hospital_repart_id, d.department_name")
                 ->select();
+
             $hospitalRepartArr = explode(',', $data['hospital_repart_str']);
 
             foreach ($list as $key => $val) {

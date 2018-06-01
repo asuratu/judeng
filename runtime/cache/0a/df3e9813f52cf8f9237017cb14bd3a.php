@@ -1,0 +1,4 @@
+<?php
+//000000000000
+ exit();?>
+a:18:{s:2:"id";i:1;s:6:"wxname";s:16:"小橘灯中医 ";s:6:"aeskey";s:43:"F7jlifYmAQsfMuOezF4SXSnoYGHCTrz3C9lXebVrpBn";s:6:"encode";i:0;s:5:"appid";s:18:"wx15fd1420bf788a27";s:9:"appsecret";s:32:"3438b06cb74c93ef6b2928c06401cef8";s:4:"wxid";s:15:"gh_b20d202cafc1";s:6:"weixin";s:19:"xjdzhongyi@sina.com";s:5:"token";s:0:"";s:7:"w_token";s:32:"710979423486a577cac5c6e940fc2524";s:11:"create_time";i:1524548261;s:10:"updatetime";i:0;s:12:"access_token";s:157:"10_R0VcGZIPt-Pcq2FST8HMIke4Qg4SkIiNkpd6P3yc84eGDSlCjQSqb-npp8bj0Z8uM-vKddrGn3AOnMzSpJQuVKPTNlUlcfhvwhqK2SQnM5Oz7owP5QK_nzsTV6BdCoNA8a_f4ZH1mhBtpvNeYREjACAUNA";s:13:"refresh_token";s:0:"";s:7:"expires";s:10:"1527443560";s:4:"type";i:0;s:2:"qr";s:0:"";s:11:"menu_config";N;}

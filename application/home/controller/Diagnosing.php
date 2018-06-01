@@ -78,8 +78,9 @@ class Diagnosing extends Common
             $list = db('hospital')->where($map)->field("`hospital_id`,`hospital_name`, area_id, address")->order("`sort` DESC")->select();
             foreach ($list as $key => $val) {
                 //查询当前医院的所有科室
-                $keshiMap['hospital_id'] = $val['hospital_id'];
-                $keshiList = db('hospital_repart')->where($keshiMap)->alias('hr')
+                $keshiList = db('hospital_repart')
+                    ->where("hr.hospital_id = {$val['hospital_id']} AND hr.is_show = 1")
+                    ->alias('hr')
                     ->join(['jd_department' => 'd'], 'hr.department_id = d.department_id', 'left')
                     ->field("hr.hospital_repart_id, d.department_name")
                     ->select();
@@ -129,6 +130,7 @@ class Diagnosing extends Common
             foreach ($departArr as $key => $val) {
                 //查当前科室信息
                 $departMap['hr.`hospital_repart_id`'] = $val;
+                $departMap['hr.`is_show`'] = 1;
                 $departInfo = db('hospital_repart')->where($departMap)->alias('hr')
                     ->join(['jd_department' => 'd'], 'hr.department_id = d.department_id', 'left')
                     ->field("hr.hospital_repart_id, hr.hospital_id, d.department_name")
@@ -244,12 +246,13 @@ class Diagnosing extends Common
             }
             //查询排班列表
             $paibanMap['dl.`member_id`'] = $data['member_id'];
+            $paibanMap['hr.`is_show`'] = 1;
             $paibanList = db('hospital_repart')->alias('hr')
                 ->join(['jd_department' => 'd'], 'hr.department_id = d.department_id', 'inner')
                 ->join(['jd_hospital' => 'h'], 'hr.hospital_id = h.hospital_id', 'inner')
                 ->join(['jd_diagnosis_list' => 'dl'], 'hr.hospital_repart_id = dl.hospital_repart_id', 'inner')
                 ->where($paibanMap)
-                ->field("dl.diagnosis_id, dl.start_time, dl.end_time, h.hospital_name, d.department_name")
+                ->field("dl.diagnosis_id, dl.start_time, dl.end_time, h.hospital_name, d.department_name, hr.hospital_repart_id")
                 ->order('dl.start_time DESC')
                 ->select();
             foreach ($paibanList as $key => $val) {
