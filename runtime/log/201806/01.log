@@ -900,3 +900,61 @@
 [ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `i`.`inherit_id`=`id`.`inherit_id` WHERE  (  id.member_id = 2 AND id.is_checked = 1 AND i.is_display = 1 ) LIMIT 1 [ RunTime:0.068825s ]
 [ sql ] [ SQL ] SELECT `img_url` FROM `jd_inherit_doctor` WHERE  (  is_checked = 1 AND member_id = 2 AND inherit_id = 2 ) LIMIT 1 [ RunTime:0.079097s ]
 [ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-01T19:34:41+08:00 ] 0.0.0.0 GET /oss/upPicAdmin?dir=uploads%2Fimages&files=C%3A%5CWindows%5CTemp%5CphpAE60.tmp&name=554597251398364297.png
+[ info ] localhost:8020/oss/upPicAdmin?dir=uploads%2Fimages&files=C%3A%5CWindows%5CTemp%5CphpAE60.tmp&name=554597251398364297.png [运行时间：0.344020s][吞吐率：2.91req/s] [内存消耗：3,951.68kb] [文件加载：61]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'oss',
+    2 => 'upPicAdmin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/oss/upPicAdmin?dir=uploads%2Fimages&files=C%3A%5CWindows%5CTemp%5CphpAE60.tmp&name=554597251398364297.png',
+  'host' => 'localhost:8020',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+  'dir' => 'uploads/images',
+  'files' => 'C:\\Windows\\Temp\\phpAE60.tmp',
+  'name' => '554597251398364297.png',
+)
+[ info ] [ RUN ] app\home\controller\Oss->upPicAdmin[ E:\wook\201804\judeng\application\home\controller\Oss.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-01T19:35:51+08:00 ] 0.0.0.0 GET /oss/upPicAdmin?dir=uploads%2Fimages&files=C%3A%5CWindows%5CTemp%5CphpBFCE.tmp&name=%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%E6%B5%8B%E8%AF%95+-+%E5%89%AF%E6%9C%AC.png
+[ info ] localhost:8020/oss/upPicAdmin?dir=uploads%2Fimages&files=C%3A%5CWindows%5CTemp%5CphpBFCE.tmp&name=%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%E6%B5%8B%E8%AF%95+-+%E5%89%AF%E6%9C%AC.png [运行时间：0.115006s][吞吐率：8.70req/s] [内存消耗：3,952.10kb] [文件加载：61]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'oss',
+    2 => 'upPicAdmin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/oss/upPicAdmin?dir=uploads%2Fimages&files=C%3A%5CWindows%5CTemp%5CphpBFCE.tmp&name=%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%E6%B5%8B%E8%AF%95+-+%E5%89%AF%E6%9C%AC.png',
+  'host' => 'localhost:8020',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+  'dir' => 'uploads/images',
+  'files' => 'C:\\Windows\\Temp\\phpBFCE.tmp',
+  'name' => '删除文件测试 - 副本.png',
+)
+[ info ] [ RUN ] app\home\controller\Oss->upPicAdmin[ E:\wook\201804\judeng\application\home\controller\Oss.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
