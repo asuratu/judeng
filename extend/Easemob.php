@@ -853,7 +853,6 @@ class Easemob {
 
         $result=$this->postCurl($url,'',$header,"GET");
 
-		var_dump($result);die;
 		$cursor=isset ( $result["cursor"] ) ? $result["cursor"] : '-1';
 		$this->writeCursor("chatfile.txt",$cursor);
 		//var_dump($GLOBALS['cursor'].'00000000000000');

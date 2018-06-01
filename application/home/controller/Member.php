@@ -676,7 +676,6 @@ class Member extends Common
 
         $h=new \Easemob($options);
         $result = $h->isOnline("tkt5af1b51289f9b");
-        var_dump($result);die;
     }
 
 

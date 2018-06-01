@@ -309,7 +309,6 @@ class Other extends Common
             $_i = 1;
             foreach ($prescription as $key => $val) {
                 $_i++;
-                var_dump($val['drug_id']);
                 $drug_name = explode('(', $val['drug_name']);
                 $keywords = str_replace(' ', '', Spell::getChineseChar($drug_name[0], true, true));
                 $keywords = isset($keywords) ? $keywords : '';

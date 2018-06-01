@@ -47,7 +47,6 @@ function describe_type($input)
             return 'array(' . count($input) . ')';
         default:
             ob_start();
-            var_dump($input);
             // normalize float vs double
             return str_replace('double(', 'float(', rtrim(ob_get_clean()));
     }

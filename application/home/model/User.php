@@ -30,9 +30,7 @@ class User extends Model
                     'Expires' => '2015-01-01 08:00:00',
                 ),
             );
-            var_dump($upload_file_options);die;
             $response = $oss_sdk_service->upload_file_by_content(ALI_BUCKET, $object, $upload_file_options);
-            var_dump($response);die;
 
         } else {  // 通过本地路径上传
             $file_path = $filePath . $fileName;  // 本地的文件路径名称

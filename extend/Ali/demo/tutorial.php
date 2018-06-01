@@ -384,7 +384,6 @@ function upload_by_dir($obj){
 	$recursive = false;
 	
 	$response = $obj->create_mtu_object_by_dir($bucket,$dir,$recursive);
-	var_dump($response);	
 }
 
 //通过multi-part上传整个目录(新版)
@@ -409,7 +408,6 @@ function get_sign_url($obj){
 	$timeout = 3600;
 
 	$response = $obj->get_sign_url($bucket,$object,$timeout);
-	var_dump($response);
 }
 
 /*%**************************************************************************************************************%*/

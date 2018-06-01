@@ -48,7 +48,6 @@ class Oss extends Model
             'msg'=>'',
         );
         if(!in_array($fType, config('oss_exts'))){
-            var_dump($fFiles);
             $back['msg']='文件格式不正确';
             return $back;
             exit;

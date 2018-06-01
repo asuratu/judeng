@@ -46,7 +46,6 @@ class Remind extends Common
                 $data['prescription'] = '门诊复诊';
                 $data['remark'] = '点击详情，跳转到聊天页面~';
             }
-            var_dump($data);die;
 
             // 增加一条发送记录
             $this->addMedicine($data['doctor_id'], $data['order_id']);
@@ -95,7 +94,4 @@ class Remind extends Common
         }
         return $number;
     }
-
-
-
 }

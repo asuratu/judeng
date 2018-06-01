@@ -75,7 +75,6 @@ class Chat extends Common
 //                    var_dump($str);die;
 //                }
             }
-            var_dump(2);die;
         }
     }
 
