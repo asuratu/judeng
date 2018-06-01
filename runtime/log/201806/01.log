@@ -900,3 +900,933 @@
 [ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `i`.`inherit_id`=`id`.`inherit_id` WHERE  (  id.member_id = 2 AND id.is_checked = 1 AND i.is_display = 1 ) LIMIT 1 [ RunTime:0.068825s ]
 [ sql ] [ SQL ] SELECT `img_url` FROM `jd_inherit_doctor` WHERE  (  is_checked = 1 AND member_id = 2 AND inherit_id = 2 ) LIMIT 1 [ RunTime:0.079097s ]
 [ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-01T16:02:19+08:00 ] 0.0.0.0 POST /selfdrug/addSelfDrug
+[ info ] localhost:7037/selfdrug/addSelfDrug [运行时间：1.073338s][吞吐率：0.93req/s] [内存消耗：3,742.79kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'selfdrug',
+    2 => 'addSelfDrug',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary2IruIIDr3B4tRQOO',
+  'content-length' => '2281',
+  'x-original-url' => '/selfdrug/addSelfDrug',
+  'postman-token' => 'c808c93b-1194-722c-5f0e-3f7675afa802',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'self_goods_name' => '感冒服务包2',
+  'member_id' => '2',
+  'special_id' => '1',
+  'inherit_id' => '2',
+  'referral' => '5',
+  'on_line' => '5',
+  'love' => '5',
+  'content' => 'W1sxNywiXHU1MjM2XHU1ZGRkXHU0ZTRjIiw0LCJnIl0sWzMxNSwiXHU3MTlmXHU5NjQ0XHU3MjQ3IiwzMCwiZyJdLFs0ODUsIlx1NmNkNVx1NTM0YVx1NTkwZiIsOTQsImciXV0=',
+  'scope' => '妇科病4,妇科病3',
+  'advantage' => '优势优势优势优势优势优势',
+  'description' => '药效说明药效说明药效说明药效说明',
+  'precautions' => '注意事项注意事项注意事项注意事项',
+  'service_price' => '10',
+  'prescription_status' => '1',
+  'dose' => '10',
+  'see_price' => '5',
+  'taking' => '共#10#剂，每日#1#剂，1剂分#1#次使用  ',
+  'inherit_drug' => 'W1sxNywiXHU1MjM2XHU1ZGRkXHU0ZTRjIiw0LCJnIl0sWzMxNSwiXHU3MTlmXHU5NjQ0XHU3MjQ3IiwzMCwiZyJdLFs0ODUsIlx1NmNkNVx1NTM0YVx1NTkwZiIsOTQsImciXV0=',
+)
+[ info ] [ RUN ] app\home\controller\Selfdrug->addSelfDrug[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Selfdrug.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: self_goods_id[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Selfdrug.php:27]
+[ error ] [8]未定义数组索引: self_goods_id[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Selfdrug.php:130]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.089277s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug` [ RunTime:0.062183s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '制川乌' LIMIT 1 [ RunTime:0.060784s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '熟附片' LIMIT 1 [ RunTime:0.061776s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '法半夏' LIMIT 1 [ RunTime:0.062830s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_record` [ RunTime:0.061241s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = '川乌'  AND `type` = 1 LIMIT 1 [ RunTime:0.059295s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `key` = 2  AND `type` = 0 [ RunTime:0.072126s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = '附子'  AND `type` = 1 LIMIT 1 [ RunTime:0.060403s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `key` = 2  AND `type` = 0 [ RunTime:0.059678s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = '半夏'  AND `type` = 1 LIMIT 1 [ RunTime:0.058827s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_self_goods` [ RunTime:0.060323s ]
+[ sql ] [ SQL ] INSERT INTO `jd_self_goods` (`one_price` , `is_taboo` , `taboo_content` , `content` , `inherit_drug` , `self_goods_name` , `member_id` , `self_goods_sn` , `special_id` , `inherit_id` , `on_line` , `referral` , `love` , `add_date` , `release_date` , `is_checked` , `end_date` , `price` , `scope` , `advantage` , `description` , `precautions` , `service_price` , `see_price` , `prescription_status` , `dose` , `taking`) VALUES (496.539 , 1 , '[[\"\\u5ddd\\u4e4c\",\"\\u534a\\u590f\"],[\"\\u9644\\u5b50\",\"\\u534a\\u590f\"]]' , '[[17,\"\\u5236\\u5ddd\\u4e4c\",4,\"g\"],[315,\"\\u719f\\u9644\\u7247\",30,\"g\"],[485,\"\\u6cd5\\u534a\\u590f\",94,\"g\"]]' , 'W1sxNywiXHU1MjM2XHU1ZGRkXHU0ZTRjIiw0LCJnIl0sWzMxNSwiXHU3MTlmXHU5NjQ0XHU3MjQ3IiwzMCwiZyJdLFs0ODUsIlx1NmNkNVx1NTM0YVx1NTkwZiIsOTQsImciXV0=' , '感冒服务包2' , 2 , '20180601412403' , 1 , 2 , 5 , 5 , 5 , 1527840139 , 1527840139 , 1 , 1559376139 , 4980.39 , '妇科病4,妇科病3' , '优势优势优势优势优势优势' , '药效说明药效说明药效说明药效说明' , '注意事项注意事项注意事项注意事项' , 10 , 5 , 1 , 10 , '共#10#剂，每日#1#剂，1剂分#1#次使用  ') [ RunTime:0.065172s ]
+---------------------------------------------------------------
+[ 2018-06-01T16:13:24+08:00 ] 0.0.0.0 POST /selfdrug/addSelfDrug
+[ info ] localhost:7037/selfdrug/addSelfDrug [运行时间：0.124706s][吞吐率：8.02req/s] [内存消耗：2,507.59kb] [文件加载：47]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'selfdrug',
+    2 => 'addSelfDrug',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary23ZqtoUXdArT15eY',
+  'content-length' => '234',
+  'x-original-url' => '/selfdrug/addSelfDrug',
+  'postman-token' => '29dd61d5-0921-db38-9a1b-2df797c4dba1',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'special_id' => '2',
+  'love' => '5',
+)
+[ info ] [ RUN ] app\home\controller\Selfdrug->addSelfDrug[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Selfdrug.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: self_goods_name[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Selfdrug.php:21]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-01T16:43:59+08:00 ] 0.0.0.0 POST /certified/addCertifie
+[ info ] localhost:7037/certified/addCertifie [运行时间：0.417821s][吞吐率：2.39req/s] [内存消耗：3,691.61kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'certified',
+    2 => 'addCertifie',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryIL9pxfymOQMMY8iA',
+  'content-length' => '1970',
+  'x-original-url' => '/certified/addCertifie',
+  'postman-token' => '5dadc5bb-2783-954e-19e1-9ef61b3da45a',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '2',
+  'face_photo' => '',
+  'job_pic1' => '',
+  'job_pic2' => '',
+  'tech_pic1' => '',
+  'tech_pic2' => '',
+  'true_name' => '涂革',
+  'sex' => '1',
+  'birthday' => '1112225553',
+  'idcode' => '421124199209286019',
+  'hospital_id' => '6',
+  'title_id' => '15',
+  'hospital_repart_str' => '12',
+  'goodat_id' => '25,26,27',
+  'introduction' => '你好, 我叫涂革',
+  'bank_id' => '4',
+  'deposit_name' => '涂革',
+  'deposit_number' => '777888999',
+  'mobile' => '15021039435',
+)
+[ info ] [ RUN ] app\home\controller\Certified->addCertifie[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Certified.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.095136s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.068795s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.063506s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-01T17:03:13+08:00 ] 0.0.0.0 POST /certified/addCertifie
+[ info ] localhost:7037/certified/addCertifie [运行时间：0.204597s][吞吐率：4.89req/s] [内存消耗：2,623.16kb] [文件加载：47]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'certified',
+    2 => 'addCertifie',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=Boundary+7B4267E26E32FADC',
+  'content-length' => '710981',
+  'x-original-url' => '/certified/addCertifie',
+  'user-agent' => 'YiSong/1.0 (iPhone; iOS 11.3.1; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=6bb9356b0b93e707156ddea7a252a12b',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'bank_id' => '1',
+  'birthday' => '2018-06-01',
+  'deposit_name' => '刘',
+  'deposit_number' => '5566',
+  'goodat_id' => '74,64,80',
+  'hospital_id' => '18',
+  'hospital_repart_str' => '119',
+  'idcode' => '421224199209160016',
+  'introduction' => '无',
+  'member_id' => '36',
+  'mobile' => '13262215137',
+  'sex' => '1',
+  'title_id' => '14',
+  'true_name' => '刘测试2',
+)
+[ info ] [ RUN ] app\home\controller\Certified->addCertifie[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Certified.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.092714s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+---------------------------------------------------------------
+[ 2018-06-01T17:03:17+08:00 ] 0.0.0.0 POST /certified/addCertifie
+[ info ] localhost:7037/certified/addCertifie [运行时间：0.180901s][吞吐率：5.53req/s] [内存消耗：2,623.16kb] [文件加载：47]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'certified',
+    2 => 'addCertifie',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=Boundary+7B4267E26E32FADC',
+  'content-length' => '710981',
+  'x-original-url' => '/certified/addCertifie',
+  'user-agent' => 'YiSong/1.0 (iPhone; iOS 11.3.1; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=6bb9356b0b93e707156ddea7a252a12b',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'bank_id' => '1',
+  'birthday' => '2018-06-01',
+  'deposit_name' => '刘',
+  'deposit_number' => '5566',
+  'goodat_id' => '74,64,80',
+  'hospital_id' => '18',
+  'hospital_repart_str' => '119',
+  'idcode' => '421224199209160016',
+  'introduction' => '无',
+  'member_id' => '36',
+  'mobile' => '13262215137',
+  'sex' => '1',
+  'title_id' => '14',
+  'true_name' => '刘测试2',
+)
+[ info ] [ RUN ] app\home\controller\Certified->addCertifie[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Certified.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084868s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+---------------------------------------------------------------
+[ 2018-06-01T17:07:29+08:00 ] 0.0.0.0 POST /certified/addCertifie
+[ info ] localhost:7037/certified/addCertifie [运行时间：0.499087s][吞吐率：2.00req/s] [内存消耗：3,891.29kb] [文件加载：62]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'certified',
+    2 => 'addCertifie',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=Boundary+7B4267E26E32FADC',
+  'content-length' => '710981',
+  'x-original-url' => '/certified/addCertifie',
+  'user-agent' => 'YiSong/1.0 (iPhone; iOS 11.3.1; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=6bb9356b0b93e707156ddea7a252a12b',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'bank_id' => '1',
+  'birthday' => '2018-06-01',
+  'deposit_name' => '刘',
+  'deposit_number' => '5566',
+  'goodat_id' => '74,64,80',
+  'hospital_id' => '18',
+  'hospital_repart_str' => '119',
+  'idcode' => '421224199209160016',
+  'introduction' => '无',
+  'member_id' => '36',
+  'mobile' => '13262215137',
+  'sex' => '1',
+  'title_id' => '14',
+  'true_name' => '刘测试2',
+)
+[ info ] [ RUN ] app\home\controller\Certified->addCertifie[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Certified.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084308s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.061505s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  `member_id` = 36 LIMIT 1 [ RunTime:0.059106s ]
+[ error ] [8]未定义数组索引: face_photo[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Certified.php:97]
+[ error ] [8]未定义数组索引: title_str[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Certified.php:105]
+[ error ] [0]variable type error： boolean[D:\workLP\20180502\judeng\wwwroot\thinkphp\library\think\Response.php:318]
+---------------------------------------------------------------
+[ 2018-06-01T17:13:35+08:00 ] 0.0.0.0 POST /certified/addCertifie
+[ info ] localhost:7037/certified/addCertifie [运行时间：0.488255s][吞吐率：2.05req/s] [内存消耗：3,891.14kb] [文件加载：62]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'certified',
+    2 => 'addCertifie',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=Boundary+7B4267E26E32FADC',
+  'content-length' => '710981',
+  'x-original-url' => '/certified/addCertifie',
+  'user-agent' => 'YiSong/1.0 (iPhone; iOS 11.3.1; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=6bb9356b0b93e707156ddea7a252a12b',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'bank_id' => '1',
+  'birthday' => '2018-06-01',
+  'deposit_name' => '刘',
+  'deposit_number' => '5566',
+  'goodat_id' => '74,64,80',
+  'hospital_id' => '18',
+  'hospital_repart_str' => '119',
+  'idcode' => '421224199209160016',
+  'introduction' => '无',
+  'member_id' => '36',
+  'mobile' => '13262215137',
+  'sex' => '1',
+  'title_id' => '14',
+  'true_name' => '刘测试2',
+)
+[ info ] [ RUN ] app\home\controller\Certified->addCertifie[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Certified.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.085009s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.059970s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  `member_id` = 36 LIMIT 1 [ RunTime:0.063406s ]
+[ error ] [8]未定义数组索引: face_photo[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Certified.php:97]
+[ error ] [8]未定义数组索引: title_str[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Certified.php:105]
+[ error ] [0]variable type error： boolean[D:\workLP\20180502\judeng\wwwroot\thinkphp\library\think\Response.php:318]
+---------------------------------------------------------------
+[ 2018-06-01T17:14:49+08:00 ] 0.0.0.0 POST /certified/addCertifie
+[ info ] localhost:7037/certified/addCertifie [运行时间：0.384219s][吞吐率：2.60req/s] [内存消耗：3,690.65kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'certified',
+    2 => 'addCertifie',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarybYWjAZLvvP0RBRBv',
+  'content-length' => '1970',
+  'x-original-url' => '/certified/addCertifie',
+  'postman-token' => 'cf43b62f-4474-164d-cde3-6aea1589bc88',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '2',
+  'face_photo' => '',
+  'job_pic1' => '',
+  'job_pic2' => '',
+  'tech_pic1' => '',
+  'tech_pic2' => '',
+  'true_name' => '涂革',
+  'sex' => '1',
+  'birthday' => '1112225553',
+  'idcode' => '421124199209286019',
+  'hospital_id' => '6',
+  'title_id' => '15',
+  'hospital_repart_str' => '12',
+  'goodat_id' => '25,26,27',
+  'introduction' => '你好, 我叫涂革',
+  'bank_id' => '4',
+  'deposit_name' => '涂革',
+  'deposit_number' => '777888999',
+  'mobile' => '15021039435',
+)
+[ info ] [ RUN ] app\home\controller\Certified->addCertifie[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Certified.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.095460s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.062048s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.063468s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-01T17:15:02+08:00 ] 0.0.0.0 POST /certified/addCertifie
+[ info ] localhost:7037/certified/addCertifie [运行时间：0.809763s][吞吐率：1.23req/s] [内存消耗：3,783.05kb] [文件加载：57]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'certified',
+    2 => 'addCertifie',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryMwYTBM0husbiXxQW',
+  'content-length' => '1970',
+  'x-original-url' => '/certified/addCertifie',
+  'postman-token' => 'ab8e908c-1c4d-5ab8-435b-5e626067e13e',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '5',
+  'face_photo' => '',
+  'job_pic1' => '',
+  'job_pic2' => '',
+  'tech_pic1' => '',
+  'tech_pic2' => '',
+  'true_name' => '涂革',
+  'sex' => '1',
+  'birthday' => '1112225553',
+  'idcode' => '421124199209286019',
+  'hospital_id' => '6',
+  'title_id' => '15',
+  'hospital_repart_str' => '12',
+  'goodat_id' => '25,26,27',
+  'introduction' => '你好, 我叫涂革',
+  'bank_id' => '4',
+  'deposit_name' => '涂革',
+  'deposit_number' => '777888999',
+  'mobile' => '15021039435',
+)
+[ info ] [ RUN ] app\home\controller\Certified->addCertifie[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Certified.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084088s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.058397s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  `member_id` = 5 LIMIT 1 [ RunTime:0.059827s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `face_photo`=NULL,`true_name`='涂革',`sex`=1,`birthday`=0,`idcode`='421124199209286019',`hospital_id`='6',`title_id`='15',`title_str`=NULL,`hospital_repart_str`='12',`goodat_id`='25,26,27',`introduction`='你好, 我叫涂革',`release_date`=1527844502,`is_certified`=1  WHERE  `member_id` = 5 [ RunTime:0.055115s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_deposit` [ RunTime:0.061872s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_deposit` WHERE  `member_id` = 5  AND `bank_id` = 4 LIMIT 1 [ RunTime:0.058819s ]
+[ sql ] [ SQL ] INSERT INTO `jd_deposit` (`bank_id` , `deposit_name` , `deposit_number` , `mobile` , `add_date` , `member_id`) VALUES (4 , '涂革' , '777888999' , '15021039435' , 1527844502 , 5) [ RunTime:0.056903s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_info` [ RunTime:0.055042s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor_info` WHERE  `member_id` = 5 LIMIT 1 [ RunTime:0.054789s ]
+[ sql ] [ SQL ] INSERT INTO `jd_doctor_info` (`release_date` , `add_date` , `member_id`) VALUES (1527844502 , 1527844502 , 5) [ RunTime:0.054427s ]
+[ error ] [8]未定义数组索引: face_photo[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Certified.php:97]
+[ error ] [8]未定义数组索引: title_str[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Certified.php:105]
+---------------------------------------------------------------
+[ 2018-06-01T18:30:25+08:00 ] 0.0.0.0 POST /certified/addCertifie
+[ info ] localhost:7037/certified/addCertifie [运行时间：1.285493s][吞吐率：0.78req/s] [内存消耗：5,180.21kb] [文件加载：71]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'certified',
+    2 => 'addCertifie',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=Boundary+7B4267E26E32FADC',
+  'content-length' => '710981',
+  'x-original-url' => '/certified/addCertifie',
+  'user-agent' => 'YiSong/1.0 (iPhone; iOS 11.3.1; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=6bb9356b0b93e707156ddea7a252a12b',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'bank_id' => '1',
+  'birthday' => '2018-06-01',
+  'deposit_name' => '刘',
+  'deposit_number' => '5566',
+  'goodat_id' => '74,64,80',
+  'hospital_id' => '18',
+  'hospital_repart_str' => '119',
+  'idcode' => '421224199209160016',
+  'introduction' => '无',
+  'member_id' => '36',
+  'mobile' => '13262215137',
+  'sex' => '1',
+  'title_id' => '14',
+  'true_name' => '刘测试2',
+)
+[ info ] [ RUN ] app\home\controller\Certified->addCertifie[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Certified.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.087505s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.112087s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  `member_id` = 36 LIMIT 1 [ RunTime:0.064557s ]
+[ error ] [8]未定义数组索引: thumb[D:\workLP\20180502\judeng\wwwroot\application\home\model\Oss.php:26]
+[ error ] [8]未定义数组索引: thumb[D:\workLP\20180502\judeng\wwwroot\application\home\model\Oss.php:26]
+[ error ] [8]未定义数组索引: thumb[D:\workLP\20180502\judeng\wwwroot\application\home\model\Oss.php:26]
+[ error ] [8]未定义数组索引: thumb[D:\workLP\20180502\judeng\wwwroot\application\home\model\Oss.php:26]
+[ error ] [8]未定义数组索引: thumb[D:\workLP\20180502\judeng\wwwroot\application\home\model\Oss.php:26]
+[ error ] [8]未定义数组索引: title_str[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Certified.php:106]
+[ error ] [0]variable type error： boolean[D:\workLP\20180502\judeng\wwwroot\thinkphp\library\think\Response.php:318]
+---------------------------------------------------------------
+[ 2018-06-01T18:37:24+08:00 ] 0.0.0.0 POST /member/doregist
+[ info ] localhost:7037/member/doregist [运行时间：0.074722s][吞吐率：13.38req/s] [内存消耗：2,606.52kb] [文件加载：47]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'doregist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryRG5Ycl1UEiBhh4hf',
+  'content-length' => '747',
+  'x-original-url' => '/member/doregist',
+  'postman-token' => '5a505cab-6efc-7c30-df84-b9ae4821b508',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15196459791',
+  'password' => '343255',
+  'true_name' => '王硕',
+  'hospital_id' => '4',
+  'area_id' => '3',
+  'smscode' => '924015',
+  'invite_code' => '1002',
+)
+[ info ] [ RUN ] app\home\controller\Member->doregist[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: tokencode[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:362]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-01T20:36:53+08:00 ] 0.0.0.0 POST /order/addPrescriptionOrder
+[ info ] localhost:7037/order/addPrescriptionOrder [运行时间：1.837039s][吞吐率：0.54req/s] [内存消耗：3,777.76kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'addPrescriptionOrder',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryt92twS8LnBsOKEkL',
+  'content-length' => '2641',
+  'x-original-url' => '/order/addPrescriptionOrder',
+  'postman-token' => 'f677ab12-d295-f42b-d6e6-b11096743a6b',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'type' => '0',
+  'patient_id' => '4',
+  'mobile' => '15021039430',
+  'age' => '25',
+  'patient_name' => '张三',
+  'sex' => '1',
+  'doctor_id' => '2',
+  'drug_str' => 'W1sxNywiXHU1MjM2XHU1ZGRkXHU0ZTRjIiw0LCJnIl0sWzMxNSwiXHU3MTlmXHU5NjQ0XHU3MjQ3IiwzMCwiZyJdLFs0ODUsIlx1NmNkNVx1NTM0YVx1NTkwZiIsOTQsImciXV0=',
+  'see_price' => '8',
+  'service_price' => '10',
+  'dialectical' => '体质虚弱, 风寒',
+  'prescription_status' => '0',
+  'dose' => '10',
+  'state_id' => '7',
+  'relation_id' => '32',
+  'make' => '*水丸需整体制作，请按照总量选#克数#，#1000g#起做',
+  'weight' => '#0-0ｇ#，(制丸会减少药材总重10%-30%)',
+  'taking' => '共#7#剂，每日#1#剂，1剂分#1#次使用  ',
+  'instructions' => '煎服, 饭后服用',
+  'prescription_src' => '',
+  'to_temp' => '0',
+  'temp_name' => '开方药方模板1',
+  'prescription_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Order->addPrescriptionOrder[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.278351s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.213991s ]
+[ sql ] [ SQL ] SELECT `member_name` FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.127494s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.115080s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  `mobile` = '15021039430' LIMIT 1 [ RunTime:0.115224s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug` [ RunTime:0.098395s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `prescription_id` = 2  AND `nick_name` = '制川乌' LIMIT 1 [ RunTime:0.109404s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `prescription_id` = 2  AND `nick_name` = '熟附片' LIMIT 1 [ RunTime:0.122109s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `prescription_id` = 2  AND `nick_name` = '法半夏' LIMIT 1 [ RunTime:0.109750s ]
+[ error ] [8]未定义数组索引: num[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php:194]
+[ error ] [8]未定义数组索引: num[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php:194]
+[ error ] [8]未定义数组索引: num[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php:194]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-01T21:28:13+08:00 ] 0.0.0.0 POST /Inherit/allInheritList
+[ info ] localhost:7037/Inherit/allInheritList [运行时间：2.396799s][吞吐率：0.42req/s] [内存消耗：3,804.82kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'Inherit',
+    2 => 'allInheritList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '245',
+  'x-original-url' => '/Inherit/allInheritList',
+  'user-agent' => 'YiSong/1.0 (iPhone; iOS 11.3.1; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=2ns88o93mvsurmecpa8tlo9cr1',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'sign' => 'a9524736b37ab48c7704d4ee13e57f8c',
+  'member_id' => 2,
+  '_time' => '1527859511',
+  'only_token' => 'Authorization:Bearer YWMt0UeJNGWYEei8i4ErSg7R2QAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFju1waYABPGgBvElzoWrNGOijy350Jtf21is5gpy6q0ingfaC809fHqA',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->allInheritList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.301089s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.119641s ]
+[ sql ] [ SQL ] SELECT `id`.`inherit_doctor_id`,`id`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`school_id`,`i`.`intro`,`d`.`member_id`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  (id.member_id = 2) AND id.is_checked = 1 ) ORDER BY id.add_date DESC [ RunTime:0.167666s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_special` [ RunTime:0.131293s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 4 ) ORDER BY sort DESC [ RunTime:0.122386s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_school` [ RunTime:0.107810s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 0 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.107958s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.114116s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.111105s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.111953s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.110239s ]
+[ sql ] [ SQL ] SELECT `id`.`inherit_doctor_id`,`id`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`intro`,`i`.`school_id`,`d`.`member_id`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `i`.`member_id`=`d`.`member_id` WHERE  (  (id.member_id != 2 AND id.parent_id != 2) AND id.is_checked = 1 ) ORDER BY id.add_date DESC [ RunTime:0.113057s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.111914s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.108305s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.117332s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.114308s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-01T21:28:17+08:00 ] 0.0.0.0 POST /Inherit/allInheritList
+[ info ] localhost:7037/Inherit/allInheritList [运行时间：2.377271s][吞吐率：0.42req/s] [内存消耗：3,804.82kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'Inherit',
+    2 => 'allInheritList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '245',
+  'x-original-url' => '/Inherit/allInheritList',
+  'user-agent' => 'YiSong/1.0 (iPhone; iOS 11.3.1; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=2ns88o93mvsurmecpa8tlo9cr1',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'sign' => 'a9524736b37ab48c7704d4ee13e57f8c',
+  'member_id' => 2,
+  '_time' => '1527859511',
+  'only_token' => 'Authorization:Bearer YWMt0UeJNGWYEei8i4ErSg7R2QAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFju1waYABPGgBvElzoWrNGOijy350Jtf21is5gpy6q0ingfaC809fHqA',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->allInheritList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.307382s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.144154s ]
+[ sql ] [ SQL ] SELECT `id`.`inherit_doctor_id`,`id`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`school_id`,`i`.`intro`,`d`.`member_id`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  (id.member_id = 2) AND id.is_checked = 1 ) ORDER BY id.add_date DESC [ RunTime:0.128064s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_special` [ RunTime:0.122417s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 4 ) ORDER BY sort DESC [ RunTime:0.079753s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_school` [ RunTime:0.098895s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 0 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.131530s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.111662s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.115507s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.113862s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.110827s ]
+[ sql ] [ SQL ] SELECT `id`.`inherit_doctor_id`,`id`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`intro`,`i`.`school_id`,`d`.`member_id`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `i`.`member_id`=`d`.`member_id` WHERE  (  (id.member_id != 2 AND id.parent_id != 2) AND id.is_checked = 1 ) ORDER BY id.add_date DESC [ RunTime:0.119918s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.107800s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.112518s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.113596s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.113368s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-01T21:33:24+08:00 ] 0.0.0.0 POST /order/toOnlineorder
+[ info ] localhost:7037/order/toOnlineorder [运行时间：0.075428s][吞吐率：13.26req/s] [内存消耗：2,551.23kb] [文件加载：47]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'toOnlineorder',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '274',
+  'x-original-url' => '/order/toOnlineorder',
+  'user-agent' => 'YiSong/1.0 (iPhone; iOS 11.3.1; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=2ns88o93mvsurmecpa8tlo9cr1',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'only_token' => 'Authorization:Bearer YWMt0UeJNGWYEei8i4ErSg7R2QAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFju1waYABPGgBvElzoWrNGOijy350Jtf21is5gpy6q0ingfaC809fHqA',
+  'sign' => '1fb34e347cedd14146427d5ea46ad707',
+  'doctor_id' => 2,
+  'patient_id' => '0',
+  '_time' => '1527859949',
+  'area_id' => 2,
+)
+[ info ] [ RUN ] app\home\controller\Order->toOnlineorder[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: mobile[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php:21]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-01T21:34:29+08:00 ] 0.0.0.0 POST /order/toOnlineorder
+[ info ] localhost:7037/order/toOnlineorder [运行时间：0.063118s][吞吐率：15.84req/s] [内存消耗：2,459.22kb] [文件加载：44]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'toOnlineorder',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '274',
+  'x-original-url' => '/order/toOnlineorder',
+  'user-agent' => 'YiSong/1.0 (iPhone; iOS 11.3.1; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=2ns88o93mvsurmecpa8tlo9cr1',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'only_token' => 'Authorization:Bearer YWMt0UeJNGWYEei8i4ErSg7R2QAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFju1waYABPGgBvElzoWrNGOijy350Jtf21is5gpy6q0ingfaC809fHqA',
+  'sign' => '1fb34e347cedd14146427d5ea46ad707',
+  'doctor_id' => 2,
+  'patient_id' => '0',
+  '_time' => '1527859949',
+  'area_id' => 2,
+)
+[ info ] [ RUN ] app\home\controller\Order->toOnlineorder[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-01T21:34:35+08:00 ] 0.0.0.0 POST /order/toOnlineorder
+[ info ] localhost:7037/order/toOnlineorder [运行时间：0.060853s][吞吐率：16.43req/s] [内存消耗：2,459.22kb] [文件加载：44]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'toOnlineorder',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '274',
+  'x-original-url' => '/order/toOnlineorder',
+  'user-agent' => 'YiSong/1.0 (iPhone; iOS 11.3.1; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=2ns88o93mvsurmecpa8tlo9cr1',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'only_token' => 'Authorization:Bearer YWMt0UeJNGWYEei8i4ErSg7R2QAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFju1waYABPGgBvElzoWrNGOijy350Jtf21is5gpy6q0ingfaC809fHqA',
+  'sign' => '1fb34e347cedd14146427d5ea46ad707',
+  'doctor_id' => 2,
+  'patient_id' => '0',
+  '_time' => '1527859949',
+  'area_id' => 2,
+)
+[ info ] [ RUN ] app\home\controller\Order->toOnlineorder[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-01T21:35:46+08:00 ] 0.0.0.0 POST /order/toOnlineorder
+[ info ] localhost:7037/order/toOnlineorder [运行时间：0.175159s][吞吐率：5.71req/s] [内存消耗：2,551.71kb] [文件加载：47]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'toOnlineorder',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '274',
+  'x-original-url' => '/order/toOnlineorder',
+  'user-agent' => 'YiSong/1.0 (iPhone; iOS 11.3.1; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=2ns88o93mvsurmecpa8tlo9cr1',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'only_token' => 'Authorization:Bearer YWMt0UeJNGWYEei8i4ErSg7R2QAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFju1waYABPGgBvElzoWrNGOijy350Jtf21is5gpy6q0ingfaC809fHqA',
+  'sign' => '1fb34e347cedd14146427d5ea46ad707',
+  'doctor_id' => 2,
+  'patient_id' => '0',
+  '_time' => '1527859949',
+  'area_id' => 2,
+)
+[ info ] [ RUN ] app\home\controller\Order->toOnlineorder[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: mobile[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php:22]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-01T21:36:05+08:00 ] 0.0.0.0 POST /order/toOnlineorder
+[ info ] localhost:7037/order/toOnlineorder [运行时间：0.176311s][吞吐率：5.67req/s] [内存消耗：2,459.59kb] [文件加载：44]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'toOnlineorder',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '274',
+  'x-original-url' => '/order/toOnlineorder',
+  'user-agent' => 'YiSong/1.0 (iPhone; iOS 11.3.1; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=2ns88o93mvsurmecpa8tlo9cr1',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'only_token' => 'Authorization:Bearer YWMt0UeJNGWYEei8i4ErSg7R2QAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFju1waYABPGgBvElzoWrNGOijy350Jtf21is5gpy6q0ingfaC809fHqA',
+  'sign' => '1fb34e347cedd14146427d5ea46ad707',
+  'doctor_id' => 2,
+  'patient_id' => '0',
+  '_time' => '1527859949',
+  'area_id' => 2,
+)
+[ info ] [ RUN ] app\home\controller\Order->toOnlineorder[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ LOG ] INIT File

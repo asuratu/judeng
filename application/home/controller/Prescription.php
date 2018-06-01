@@ -644,11 +644,12 @@ class Prescription extends Common
                 ->select();
             $specialArr = array();
             foreach ($specialList as $key=>$val) {
-                $contentArr = json_decode($val['content']);
-                foreach ($contentArr as $key1=>$val1) {
-                    $contentArr[$key1][2] = 0;
-                }
-                $specialArr[$key]['drug_str'] = base64_encode(json_encode($contentArr));
+                //将特色方剂的克数转为0
+//                $contentArr = json_decode($val['content']);
+//                foreach ($contentArr as $key1=>$val1) {
+//                    $contentArr[$key1][2] = 0;
+//                }
+                $specialArr[$key]['drug_str'] = base64_encode(json_encode($val['content']));
                 $specialArr[$key]['type'] = 1;
                 $specialArr[$key]['temp_id'] = $val['special_id'];
                 $specialArr[$key]['temp_name'] = $val['special_name'];

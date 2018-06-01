@@ -109,7 +109,7 @@ class Selfdrug extends Common
             $orderPrescriptionInsert['inherit_id'] = $data['inherit_id'];
             $orderPrescriptionInsert['on_line'] = $data['on_line'];
             $orderPrescriptionInsert['referral'] = $data['referral'];
-            $orderPrescriptionInsert['love'] = $data['love'];
+//            $orderPrescriptionInsert['love'] = $data['love'];
             $orderPrescriptionInsert['add_date'] = time();
             $orderPrescriptionInsert['release_date'] = time();
             $orderPrescriptionInsert['is_checked'] = 1;

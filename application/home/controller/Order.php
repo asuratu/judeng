@@ -18,10 +18,17 @@ class Order extends Common
             {
                 ajaxReturn($res);
             }
+
+            var_dump($data);
+
             if($data['doctor_id']=='' || $data['patient_id']=='' || $data['area_id']=='' || $data['mobile']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
+
+
+            var_dump($data);die;
+
             //查询医生的上次开方的药房药态
             $lastMap['o.`doctor_id`'] = $data['doctor_id'];
             $lastMap['o.`order_type`'] = 3;

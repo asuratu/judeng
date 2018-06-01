@@ -661,6 +661,7 @@ class Member extends Common
             $token = $_SESSION['tokencode'];
             if (!empty($token)&&$token['expired_at']>time() )
             {
+//                var_dump($token);die;
                 ajaxReturn(array('code'=>0, 'info'=>$timer.'秒内仅能获取一次验证码,请稍后重试','data'=>[]));
             }
             $randcode = randCode(6, 1);
