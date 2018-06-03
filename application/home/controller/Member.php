@@ -556,7 +556,7 @@ class Member extends Common
 
             // 开方数
             $uinfo['prescriptions'] = Db::table('jd_order o, jd_order_prescription op')
-                ->where("o.`order_id` = op.`order_id` and o.order_type = 3 and o.doctor_id = {$data['member_id']}")
+                ->where("o.`order_id` = op.`order_id` and op.`prescription_type` = 0 and o.order_type = 3 and o.doctor_id = {$data['member_id']}")
                 ->count();
             // 患者数
             $uinfo['patient'] = Db::table('jd_doctor_member s, jd_member m')
