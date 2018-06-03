@@ -47,7 +47,7 @@ class Number extends Common
                 $order[$key]['order_date'] = date('Y-m-d H:i', $val['order_date']);
             }
             $total = Db::table('jd_order o, jd_order_prescription op')
-                ->where("o.`order_id` = op.`order_id` and op.`prescription_type` = 1 and o.order_type = 3 and o.doctor_id = {$data['doctor_id']} {$where}")
+                ->where("o.`order_id` = op.`order_id` and op.`prescription_type` = 0 and o.order_type = 3 and o.doctor_id = {$data['doctor_id']} {$where}")
                 ->count();
             ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>$order,'total'=>$total));
 
@@ -153,7 +153,7 @@ class Number extends Common
             }
             $data['pageCount'] = ($data['page'] - 1) * $data['pageSize'];
 
-            $comment = Db::field('s.`member_id`, s.`synopsis`, s.`end_date`, m.`member_name`, m.`mobile`, m.`portrait`, m.`sex`, m.`age`')
+            $comment = Db::field('s.`member_id`, s.`synopsis`, s.`end_date`, m.`member_name`, m.`mobile`, m.`portrait`, m.`openid`, m.`sex`, m.`age`')
                 ->table('jd_doctor_member s, jd_member m')
                 ->where("s.doctor_id = {$data['doctor_id']} and s.`is_show` = 1 and s.`member_id` = m.`member_id` and (m.`member_name` like '%{$data['title']}%' or m.`mobile` like '%{$data['title']}%' or s.`grouping` like '%{$data['title']}%')")
                 ->order('s.end_date', 'DESC')
@@ -165,8 +165,6 @@ class Number extends Common
                 $order[$key]['portrait'] = $val['portrait'];
                 $order[$key]['end_date'] = date('m-d', $val['end_date']);
 
-                // 获取患者和医生环信token (用不到)
-//                $order[$key]['token'] = Model('Setting')->huanxin();
             }
             $total = Db::table('jd_doctor_member s, jd_member m')
                 ->where("s.doctor_id = {$data['doctor_id']} and s.`is_show` = 1 and s.`member_id` = m.`member_id` and (m.`member_name` like '%{$data['title']}%' or m.`mobile` like '%{$data['title']}%' or s.`grouping` like '%{$data['title']}%')")
