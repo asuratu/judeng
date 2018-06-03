@@ -382,7 +382,7 @@ class Inherit extends Common
                 } else {
                     $doctorInfo['school_str'] = array();
                 }
-// 查询擅长
+                // 查询擅长
                 $doctorInfo['goodat_id'] = Controller('Doctor')->goodsId($doctorInfo['goodat_id']);
                 //第一医疗机构
                 $hospital = db('hospital')->where("hospital_id = {$doctorInfo['hospital_id']}")

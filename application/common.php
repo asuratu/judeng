@@ -86,6 +86,7 @@ function ajaxReturn($data,$type = 'json')
     } else {
         $num = 1;
     }
+    $num = ($num == 1) ? 1:2;
     $data['token_flag'] = $num;
     exit(json_encode($data));
 }

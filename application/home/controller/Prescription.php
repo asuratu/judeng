@@ -165,7 +165,7 @@ class Prescription extends Common
                 ajaxReturn($res);
             }
             //temp_id 0为新建 1修改
-            if($data['temp_id']=='' || $data['state_id']=='' || $data['area_id']=='')
+            if($data['temp_id']=='' || $data['state_id']=='' || $data['area_id']=='' || $data['type']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
@@ -175,6 +175,100 @@ class Prescription extends Common
             $stateMap['`is_display`'] = 1;
             $tempInfo = db('drug_state')->where($stateMap)->field("`state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic`")->find();
             $tempInfo['pic'] = config('url').$tempInfo['pic'];
+
+            //优先判断是不是选特色方剂
+            if ($data['type'] == 1) {
+                $tempInfo['head_title'] = '查看特色方剂-'.$tempInfo['state_name'].'模板';
+                $tempInfo['temp_name'] = '';
+                //查询该药态该地区下的第一个药房
+                $houseMap['d.`is_display`'] = 1;
+                $houseMap['p.`area_id`'] = $data['area_id'];
+                $houseMap['p.`is_display`'] = 1;
+                $houseMap['d.`state_id`'] = $data['state_id'];
+                $houseArr = db('drug_relation')->alias('d')
+                    ->join(['jd_prescription'=>'p'], 'd.prescription_id = p.prescription_id' , 'inner')
+                    ->join(['jd_drug_state'=>'ds'], 'd.state_id = ds.state_id' , 'inner')
+                    ->where($houseMap)
+                    ->field("d.`relation_id`, d.`prescription_id`, d.`state_id`, d.`describe`, p.`prescription_name`, p.`prescription_id`, p.`area_name`")
+                    ->order("d.`sort` DESC")
+                    ->select();
+
+                if (count($houseArr) > 0) {
+                    $tempInfo['state_house_name'] = $tempInfo['state_name'].'.'.$houseArr[0]['area_name'].'-'.$houseArr[0]['prescription_name'];
+                    $tempInfo['relation_id'] = $houseArr[0]['relation_id'];
+                    $tempInfo['prescription_id'] = $houseArr[0]['prescription_id'];
+                    $tempInfo['left_num'] = count($houseArr)-1;
+                    //查询药材明细
+                    $specialInfo = db('special')
+                        ->where("special_id = {$data['temp_id']} AND is_display = 1")
+                        ->field("special_id, special_name, content")
+                        ->find();
+                    if (empty($specialInfo)) {
+                        ajaxReturn(array('code'=>0,'info'=>'该特色方剂不存在~!','data'=>[]));
+                    }
+                    $tempInfo['drug_str'] = base64_encode($specialInfo['content']);
+
+                    //计算价格
+                    $drugSumPrice = 0;//价格
+                    $lessCountArr = array();//超量
+                    $otherNameArr = array();//别名
+                    $alertArr = array();//是否下架
+                    foreach (json_decode($specialInfo['content']) as $key => $val) {
+                        $drugDetailMap['Is_user'] = 1;
+
+                        //TODO 此处不能用drug_id来定位药材, 应该用药房id和药品统一名(别名)
+                        $drugDetailMap['prescription_id'] = $tempInfo['prescription_id'];
+                        $drugDetailMap['nick_name'] = $val[1];
+
+                        $list=db('drug')->where($drugDetailMap)->field("`drug_id`,`nick_name`,`Drug_unit`,`price`,`num`, `other_name`")->find();
+                        array_push($otherNameArr, $list['other_name']);
+                        if (!$list) {
+                            array_push($alertArr, $val[1]);
+                        }
+                        $list['total_price'] = $val[2]*$list['price'];
+                        $drugSumPrice += $list['total_price'];
+                        if ($val[2] > $list['num'] - config('lessCount') ) {
+                            array_push($lessCountArr, $val[1]);
+                        }
+
+                    }
+                    $tempInfo['price'] = $drugSumPrice;
+                    $tempInfo['dose'] = 0;
+
+                    //查询配药禁忌
+                    $tabooArr = array();
+                    foreach ($otherNameArr as $val) {
+                        $tabooArr2 = array();
+                        $temp['name'] = $val;
+                        $temp['type'] = 1;//可以防止反复添
+                        $target = db('drug_record')->where($temp)->field("*")->find();
+                        if ($target) {
+                            array_push($tabooArr2, $val);
+                            $contrastTemp['key'] = $target['key'];
+                            $contrastTemp['type'] = abs($target['type']-1);
+                            $contrastList = db('drug_record')->where($contrastTemp)->field("*")->select();
+                            foreach ($contrastList as $val2) {
+                                $tempArr = $tabooArr2;
+                                if (in_array($val2['name'], $otherNameArr)) {
+                                    array_push($tempArr, $val2['name']);
+                                    array_push($tabooArr, $tempArr);
+                                }
+                            }
+                        }
+                    }
+                    if (count($tabooArr) > 0 && count($tabooArr[0]) > 1) {
+                        $tempInfo['is_taboo'] = 1;
+                        $tempInfo['taboo_content'] = json_encode($tabooArr);
+                    } else {
+                        $tempInfo['is_taboo'] = 0;
+                        $tempInfo['taboo_content'] = '';
+                    }
+                    ajaxReturn(array('code'=>1,'info'=>'ok~!','data'=>[$tempInfo]));
+                } else {
+                    ajaxReturn(array('code'=>0,'info'=>'该药态该地区暂无药房~!','data'=>[]));
+                }
+            }
+
             if ($data['temp_id'] == 0) {
                 //新建模板
                 $tempInfo['head_title'] = '新建'.$tempInfo['state_name'].'模板';
@@ -192,7 +286,6 @@ class Prescription extends Common
                     ->order("d.`sort` DESC")
                     ->select();
 
-
                 if (count($houseArr) > 0) {
                     $tempInfo['state_house_name'] = $tempInfo['state_name'].'.'.$houseArr[0]['area_name'].'-'.$houseArr[0]['prescription_name'];
                     $tempInfo['relation_id'] = $houseArr[0]['relation_id'];
@@ -201,7 +294,6 @@ class Prescription extends Common
                     $tempInfo['price'] = 0;
                     $tempInfo['drug_str'] = '';
                     $tempInfo['is_taboo'] = 0;
-                    $tempInfo['prescription_id'] = $houseArr[0]['prescription_id'];
                     $tempInfo['dose'] = 0;
                     $tempInfo['taboo_content'] = '';
 
@@ -210,43 +302,43 @@ class Prescription extends Common
                     ajaxReturn(array('code'=>0,'info'=>'该药态该地区暂无药房~!','data'=>[]));
                 }
             } else {
-                //修改模板
-                //查询模板信息
-                $tempMap['temp_id'] = $data['temp_id'];
-                $drugtempInfo = db('temp')->where($tempMap)->field("make,weight,taking,instructions,temp_name,relation_id,price,drug_str,is_taboo,taboo_content,dose")->find();
-                //敏感数据处理
-                $drugtempInfo['drug_str'] = base64_encode($drugtempInfo['drug_str']);
-                $drugtempInfo['taboo_content'] = $drugtempInfo['taboo_content'] ? base64_encode($drugtempInfo['taboo_content']) : '';
-                $drugtempInfo['head_title'] = '修改'.$tempInfo['state_name'].'模板';
-                $drugtempInfo['pic'] = $tempInfo['pic'];
-                $drugtempInfo['state_name'] = $tempInfo['state_name'];
-                $drugtempInfo['state_id'] = $tempInfo['state_id'];
+                    //修改模板
+                    //查询模板信息
+                    $tempMap['temp_id'] = $data['temp_id'];
+                    $drugtempInfo = db('temp')->where($tempMap)->field("make,weight,taking,instructions,temp_name,relation_id,price,drug_str,is_taboo,taboo_content,dose")->find();
+                    //敏感数据处理
+                    $drugtempInfo['drug_str'] = base64_encode($drugtempInfo['drug_str']);
+                    $drugtempInfo['taboo_content'] = $drugtempInfo['taboo_content'] ? base64_encode($drugtempInfo['taboo_content']) : '';
+                    $drugtempInfo['head_title'] = '修改'.$tempInfo['state_name'].'模板';
+                    $drugtempInfo['pic'] = $tempInfo['pic'];
+                    $drugtempInfo['state_name'] = $tempInfo['state_name'];
+                    $drugtempInfo['state_id'] = $tempInfo['state_id'];
 
-                //药房信息
-                $houseMap['d.`is_display`'] = 1;
-                $houseMap['p.`area_id`'] = $data['area_id'];
-                $houseMap['p.`is_display`'] = 1;
-                $houseMap['d.`state_id`'] = $data['state_id'];
-                $houseAllArr = db('drug_relation')->alias('d')
-                    ->join(['jd_prescription'=>'p'], 'd.prescription_id = p.prescription_id' , 'inner')
-                    ->join(['jd_drug_state'=>'ds'], 'd.state_id = ds.state_id' , 'inner')
-                    ->where($houseMap)
-                    ->field("d.`relation_id`, d.`prescription_id`, d.`state_id`, d.`describe`, p.`prescription_name`, p.`prescription_id`, p.`area_name`")
-                    ->count();
-                $houseMap['d.`relation_id`'] = $drugtempInfo['relation_id'];
-                $houseArr = db('drug_relation')->alias('d')
-                    ->join(['jd_prescription'=>'p'], 'd.prescription_id = p.prescription_id' , 'inner')
-                    ->join(['jd_drug_state'=>'ds'], 'd.state_id = ds.state_id' , 'inner')
-                    ->where($houseMap)
-                    ->field("d.`relation_id`, d.`prescription_id`, d.`state_id`, d.`describe`, p.`prescription_name`, p.`prescription_id`, p.`area_name`")
-                    ->order("d.`sort` DESC")
-                    ->find();
-                if (!$houseArr) {
-                    ajaxReturn(array('code'=>0,'info'=>'该药态该药房暂不可用~!','data'=>[]));
-                }
-                $drugtempInfo['state_house_name'] = $tempInfo['state_name'].'.'.$houseArr['area_name'].'-'.$houseArr['prescription_name'];
-                $drugtempInfo['left_num'] = $houseAllArr - 1;
-                $drugtempInfo['prescription_id'] = $houseArr['prescription_id'];
+                    //药房信息
+                    $houseMap['d.`is_display`'] = 1;
+                    $houseMap['p.`area_id`'] = $data['area_id'];
+                    $houseMap['p.`is_display`'] = 1;
+                    $houseMap['d.`state_id`'] = $data['state_id'];
+                    $houseAllArr = db('drug_relation')->alias('d')
+                        ->join(['jd_prescription'=>'p'], 'd.prescription_id = p.prescription_id' , 'inner')
+                        ->join(['jd_drug_state'=>'ds'], 'd.state_id = ds.state_id' , 'inner')
+                        ->where($houseMap)
+                        ->field("d.`relation_id`, d.`prescription_id`, d.`state_id`, d.`describe`, p.`prescription_name`, p.`prescription_id`, p.`area_name`")
+                        ->count();
+                    $houseMap['d.`relation_id`'] = $drugtempInfo['relation_id'];
+                    $houseArr = db('drug_relation')->alias('d')
+                        ->join(['jd_prescription'=>'p'], 'd.prescription_id = p.prescription_id' , 'inner')
+                        ->join(['jd_drug_state'=>'ds'], 'd.state_id = ds.state_id' , 'inner')
+                        ->where($houseMap)
+                        ->field("d.`relation_id`, d.`prescription_id`, d.`state_id`, d.`describe`, p.`prescription_name`, p.`prescription_id`, p.`area_name`")
+                        ->order("d.`sort` DESC")
+                        ->find();
+                    if (!$houseArr) {
+                        ajaxReturn(array('code'=>0,'info'=>'该药态该药房暂不可用~!','data'=>[]));
+                    }
+                    $drugtempInfo['state_house_name'] = $tempInfo['state_name'].'.'.$houseArr['area_name'].'-'.$houseArr['prescription_name'];
+                    $drugtempInfo['left_num'] = $houseAllArr - 1;
+                    $drugtempInfo['prescription_id'] = $houseArr['prescription_id'];
 
                 ajaxReturn(array('code'=>1,'info'=>'ok~!','data'=>[$drugtempInfo]));
             }
@@ -654,7 +746,7 @@ class Prescription extends Common
                 $specialArr[$key]['temp_id'] = $val['special_id'];
                 $specialArr[$key]['temp_name'] = $val['special_name'];
                 $specialArr[$key]['release_date'] = $val['release_date'];
-                $specialArr[$key]['state_id'] = 0;
+                $specialArr[$key]['state_id'] = $data['state_id'];
                 $specialArr[$key]['relation_id'] = 0;
             }
 

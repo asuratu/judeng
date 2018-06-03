@@ -958,3 +958,1745 @@
 [ info ] [ RUN ] app\home\controller\Oss->upPicAdmin[ E:\wook\201804\judeng\application\home\controller\Oss.php ]
 [ info ] [ DB ] INIT mysql
 [ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-01T21:46:58+08:00 ] 0.0.0.0 POST /order/addPrescriptionOrder
+[ info ] localhost:7037/order/addPrescriptionOrder [运行时间：2.142689s][吞吐率：0.47req/s] [内存消耗：3,778.47kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'addPrescriptionOrder',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryiLVUPqh6ii2bP0qv',
+  'content-length' => '2641',
+  'x-original-url' => '/order/addPrescriptionOrder',
+  'postman-token' => '1b094bc3-0c47-b551-2d69-888609082d27',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'type' => '0',
+  'patient_id' => '4',
+  'mobile' => '15021039430',
+  'age' => '25',
+  'patient_name' => '张三',
+  'sex' => '1',
+  'doctor_id' => '2',
+  'drug_str' => 'W1sxNywiXHU1MjM2XHU1ZGRkXHU0ZTRjIiw0LCJnIl0sWzMxNSwiXHU3MTlmXHU5NjQ0XHU3MjQ3IiwzMCwiZyJdLFs0ODUsIlx1NmNkNVx1NTM0YVx1NTkwZiIsOTQsImciXV0=',
+  'see_price' => '8',
+  'service_price' => '10',
+  'dialectical' => '体质虚弱, 风寒',
+  'prescription_status' => '0',
+  'dose' => '10',
+  'state_id' => '7',
+  'relation_id' => '32',
+  'make' => '*水丸需整体制作，请按照总量选#克数#，#1000g#起做',
+  'weight' => '#0-0ｇ#，(制丸会减少药材总重10%-30%)',
+  'taking' => '共#7#剂，每日#1#剂，1剂分#1#次使用  ',
+  'instructions' => '煎服, 饭后服用',
+  'prescription_src' => '',
+  'to_temp' => '0',
+  'temp_name' => '开方药方模板1',
+  'prescription_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Order->addPrescriptionOrder[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.226783s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.128438s ]
+[ sql ] [ SQL ] SELECT `member_name` FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.108882s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.123372s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  `mobile` = '15021039430' LIMIT 1 [ RunTime:0.158704s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug` [ RunTime:0.125631s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `prescription_id` = 2  AND `nick_name` = '制川乌' LIMIT 1 [ RunTime:0.124408s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `prescription_id` = 2  AND `nick_name` = '熟附片' LIMIT 1 [ RunTime:0.112007s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `prescription_id` = 2  AND `nick_name` = '法半夏' LIMIT 1 [ RunTime:0.514574s ]
+[ error ] [8]未定义数组索引: num[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php:201]
+[ error ] [8]未定义数组索引: num[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php:201]
+[ error ] [8]未定义数组索引: num[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php:201]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-01T21:55:27+08:00 ] 0.0.0.0 POST /order/addPrescriptionOrder
+[ info ] localhost:7037/order/addPrescriptionOrder [运行时间：5.671252s][吞吐率：0.18req/s] [内存消耗：4,589.30kb] [文件加载：60]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'addPrescriptionOrder',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryAHrdbQda3bYIdgDT',
+  'content-length' => '2538',
+  'x-original-url' => '/order/addPrescriptionOrder',
+  'postman-token' => '6609e9be-4cc3-a6a4-1121-022d047628af',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'type' => '0',
+  'patient_id' => '0',
+  'mobile' => '13077847205',
+  'age' => '8\\U5c81',
+  'patient_name' => '222',
+  'sex' => '1',
+  'doctor_id' => '2',
+  'drug_str' => 'W1sxMiwi54us5rS7IiwyMiwiZyJdXQ==',
+  'see_price' => '5',
+  'service_price' => '5',
+  'dialectical' => 'Dsadas',
+  'prescription_status' => '0',
+  'dose' => '10',
+  'state_id' => '8',
+  'relation_id' => '54',
+  'make' => '* \\U9897\\U7c92\\U5242\\U8bf7\\U6309\\U7167\\U996e\\U7247\\U91cf\\U5f00\\U51fa\\Uff0c\\U836f\\U623f\\U5c06\\U81ea\\U52a8\\U8f6c\\U6362',
+  'weight' => '',
+  'taking' => '\\U6b21\\U670d\\U7528#10#\\U5242,\\U6bcf\\U65e5#0#\\U5242,\\U4e00\\U5242\\U5206#0#\\U6b21\\U670d\\U7528',
+  'instructions' => 'Dsadas',
+  'to_temp' => '0',
+  'temp_name' => 'ddd',
+  'prescription_id' => '1',
+  'prescription_str' => '',
+)
+[ info ] [ RUN ] app\home\controller\Order->addPrescriptionOrder[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.235362s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.112794s ]
+[ sql ] [ SQL ] SELECT `member_name` FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.148486s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.127822s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  `mobile` = '13077847205' LIMIT 1 [ RunTime:0.135528s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug` [ RunTime:0.158408s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '独活' LIMIT 1 [ RunTime:0.171008s ]
+[ sql ] [ SQL ] UPDATE `jd_drug`  SET `num`=35122,`release_date`=1527861323  WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '独活' [ RunTime:0.119790s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_record` [ RunTime:0.158241s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = ''  AND `type` = 1 LIMIT 1 [ RunTime:0.110216s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.122072s ]
+[ sql ] [ SQL ] INSERT INTO `jd_order` (`order_sn` , `order_status` , `order_type` , `doctor_id` , `patient_id` , `product_amount` , `product_number` , `pay_amount` , `see_date` , `order_date` , `end_date`) VALUES ('20180601827900' , 0 , 3 , 2 , 25 , 0 , 1 , 0 , 1527861323 , 1527861323 , 1527947723) [ RunTime:0.112107s ]
+[ sql ] [ SQL ] UPDATE `jd_order`  SET `product_amount`=1.265,`product_number`=10,`pay_amount`=22.65  WHERE  `order_id` = 15 [ RunTime:0.118527s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.124138s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wx_user` LIMIT 1 [ RunTime:0.107317s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.113590s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` WHERE  (  member_id = 25 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.091000s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_member`  SET `inquisition_name`='在线开方',`inquisition`=1527861327  WHERE  (  member_id = 25 and doctor_id = 2 ) [ RunTime:0.109272s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_prescription` [ RunTime:0.109818s ]
+[ sql ] [ SQL ] INSERT INTO `jd_order_prescription` (`price` , `is_taboo` , `taboo_content` , `prescription_src` , `order_id` , `patient_name` , `patient_mobile` , `patient_sex` , `patient_age` , `dialectical` , `prescription_status` , `drug_str` , `dose` , `state_id` , `relation_id` , `make` , `weight` , `taking` , `instructions` , `service_price` , `see_price` , `total_price` , `add_date` , `is_checked` , `prescription_type`) VALUES (1.265 , 0 , '' , '' , 15 , '222' , '13077847205' , 1 , '8\\U5c81' , 'Dsadas' , 0 , '[[12,\"独活\",22,\"g\"]]' , '10' , 8 , 54 , '* \\U9897\\U7c92\\U5242\\U8bf7\\U6309\\U7167\\U996e\\U7247\\U91cf\\U5f00\\U51fa\\Uff0c\\U836f\\U623f\\U5c06\\U81ea\\U52a8\\U8f6c\\U6362' , '' , '\\U6b21\\U670d\\U7528#10#\\U5242,\\U6bcf\\U65e5#0#\\U5242,\\U4e00\\U5242\\U5206#0#\\U6b21\\U670d\\U7528' , 'Dsadas' , 5 , 5 , 22.65 , 1527861326 , 1 , 0) [ RunTime:0.119618s ]
+[ error ] [8]unserialize(): Error at offset 0 of 734 bytes[D:\workLP\20180502\judeng\wwwroot\thinkphp\library\think\cache\driver\File.php:120]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-01T21:57:38+08:00 ] 0.0.0.0 POST /order/addPrescriptionOrder
+[ info ] localhost:7037/order/addPrescriptionOrder [运行时间：9.270675s][吞吐率：0.11req/s] [内存消耗：4,499.15kb] [文件加载：57]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'addPrescriptionOrder',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryStLt4rAR6vavdqfI',
+  'content-length' => '2538',
+  'x-original-url' => '/order/addPrescriptionOrder',
+  'postman-token' => 'ea9de373-7f1d-79cf-3eff-24d797619908',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'type' => '0',
+  'patient_id' => '0',
+  'mobile' => '13077847205',
+  'age' => '8\\U5c81',
+  'patient_name' => '222',
+  'sex' => '1',
+  'doctor_id' => '2',
+  'drug_str' => 'W1sxMiwi54us5rS7IiwyMiwiZyJdXQ==',
+  'see_price' => '5',
+  'service_price' => '5',
+  'dialectical' => 'Dsadas',
+  'prescription_status' => '0',
+  'dose' => '10',
+  'state_id' => '8',
+  'relation_id' => '54',
+  'make' => '* \\U9897\\U7c92\\U5242\\U8bf7\\U6309\\U7167\\U996e\\U7247\\U91cf\\U5f00\\U51fa\\Uff0c\\U836f\\U623f\\U5c06\\U81ea\\U52a8\\U8f6c\\U6362',
+  'weight' => '',
+  'taking' => '\\U6b21\\U670d\\U7528#10#\\U5242,\\U6bcf\\U65e5#0#\\U5242,\\U4e00\\U5242\\U5206#0#\\U6b21\\U670d\\U7528',
+  'instructions' => 'Dsadas',
+  'to_temp' => '0',
+  'temp_name' => 'ddd',
+  'prescription_id' => '1',
+  'prescription_str' => '',
+)
+[ info ] [ RUN ] app\home\controller\Order->addPrescriptionOrder[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.748222s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.400102s ]
+[ sql ] [ SQL ] SELECT `member_name` FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:2.116207s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.162640s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  `mobile` = '13077847205' LIMIT 1 [ RunTime:0.179958s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug` [ RunTime:0.431844s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '独活' LIMIT 1 [ RunTime:0.176182s ]
+[ sql ] [ SQL ] UPDATE `jd_drug`  SET `num`=35122,`release_date`=1527861453  WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '独活' [ RunTime:0.362840s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_record` [ RunTime:0.242611s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = ''  AND `type` = 1 LIMIT 1 [ RunTime:0.217723s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.211277s ]
+[ sql ] [ SQL ] INSERT INTO `jd_order` (`order_sn` , `order_status` , `order_type` , `doctor_id` , `patient_id` , `product_amount` , `product_number` , `pay_amount` , `see_date` , `order_date` , `end_date`) VALUES ('20180601552751' , 0 , 3 , 2 , 25 , 0 , 1 , 0 , 1527861454 , 1527861454 , 1527947854) [ RunTime:0.253029s ]
+[ sql ] [ SQL ] UPDATE `jd_order`  SET `product_amount`=1.265,`product_number`=10,`pay_amount`=22.65  WHERE  `order_id` = 16 [ RunTime:0.375955s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.234111s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.114033s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` WHERE  (  member_id = 25 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.207935s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_member`  SET `inquisition_name`='在线开方',`inquisition`=1527861457  WHERE  (  member_id = 25 and doctor_id = 2 ) [ RunTime:0.152622s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_prescription` [ RunTime:0.177035s ]
+[ sql ] [ SQL ] INSERT INTO `jd_order_prescription` (`price` , `is_taboo` , `taboo_content` , `prescription_src` , `order_id` , `patient_name` , `patient_mobile` , `patient_sex` , `patient_age` , `dialectical` , `prescription_status` , `drug_str` , `dose` , `state_id` , `relation_id` , `make` , `weight` , `taking` , `instructions` , `service_price` , `see_price` , `total_price` , `add_date` , `is_checked` , `prescription_type`) VALUES (1.265 , 0 , '' , '' , 16 , '222' , '13077847205' , 1 , '8\\U5c81' , 'Dsadas' , 0 , '[[12,\"独活\",22,\"g\"]]' , '10' , 8 , 54 , '* \\U9897\\U7c92\\U5242\\U8bf7\\U6309\\U7167\\U996e\\U7247\\U91cf\\U5f00\\U51fa\\Uff0c\\U836f\\U623f\\U5c06\\U81ea\\U52a8\\U8f6c\\U6362' , '' , '\\U6b21\\U670d\\U7528#10#\\U5242,\\U6bcf\\U65e5#0#\\U5242,\\U4e00\\U5242\\U5206#0#\\U6b21\\U670d\\U7528' , 'Dsadas' , 5 , 5 , 22.65 , 1527861457 , 1 , 0) [ RunTime:0.223101s ]
+---------------------------------------------------------------
+[ 2018-06-01T21:58:29+08:00 ] 0.0.0.0 POST /order/addPrescriptionOrder
+[ info ] localhost:7037/order/addPrescriptionOrder [运行时间：6.781170s][吞吐率：0.15req/s] [内存消耗：4,500.78kb] [文件加载：57]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'addPrescriptionOrder',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryBaVoj6lZpNnu0s9g',
+  'content-length' => '2538',
+  'x-original-url' => '/order/addPrescriptionOrder',
+  'postman-token' => '3702eb0f-db54-e01c-79cd-922df6eb019c',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'type' => '0',
+  'patient_id' => '0',
+  'mobile' => '13077847205',
+  'age' => '8\\U5c81',
+  'patient_name' => '222',
+  'sex' => '1',
+  'doctor_id' => '2',
+  'drug_str' => 'W1sxMiwi54us5rS7IiwyMiwiZyJdXQ==',
+  'see_price' => '5',
+  'service_price' => '5',
+  'dialectical' => 'Dsadas',
+  'prescription_status' => '0',
+  'dose' => '10',
+  'state_id' => '8',
+  'relation_id' => '54',
+  'make' => '* \\U9897\\U7c92\\U5242\\U8bf7\\U6309\\U7167\\U996e\\U7247\\U91cf\\U5f00\\U51fa\\Uff0c\\U836f\\U623f\\U5c06\\U81ea\\U52a8\\U8f6c\\U6362',
+  'weight' => '',
+  'taking' => '\\U6b21\\U670d\\U7528#10#\\U5242,\\U6bcf\\U65e5#0#\\U5242,\\U4e00\\U5242\\U5206#0#\\U6b21\\U670d\\U7528',
+  'instructions' => 'Dsadas',
+  'to_temp' => '0',
+  'temp_name' => 'ddd',
+  'prescription_id' => '1',
+  'prescription_str' => '',
+)
+[ info ] [ RUN ] app\home\controller\Order->addPrescriptionOrder[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.378846s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.474488s ]
+[ sql ] [ SQL ] SELECT `member_name` FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.710388s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.234146s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  `mobile` = '13077847205' LIMIT 1 [ RunTime:0.193990s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug` [ RunTime:0.271847s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '独活' LIMIT 1 [ RunTime:0.172987s ]
+[ sql ] [ SQL ] UPDATE `jd_drug`  SET `num`=35122,`release_date`=1527861505  WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '独活' [ RunTime:0.254817s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_record` [ RunTime:0.111204s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = ''  AND `type` = 1 LIMIT 1 [ RunTime:0.144165s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.181841s ]
+[ sql ] [ SQL ] INSERT INTO `jd_order` (`order_sn` , `order_status` , `order_type` , `doctor_id` , `patient_id` , `product_amount` , `product_number` , `pay_amount` , `see_date` , `order_date` , `end_date`) VALUES ('20180601470944' , 0 , 3 , 2 , 25 , 0 , 1 , 0 , 1527861506 , 1527861506 , 1527947906) [ RunTime:0.189512s ]
+[ sql ] [ SQL ] UPDATE `jd_order`  SET `product_amount`=1.265,`product_number`=10,`pay_amount`=22.65  WHERE  `order_id` = 17 [ RunTime:0.194530s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.148302s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.626341s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` WHERE  (  member_id = 25 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.432314s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_member`  SET `inquisition_name`='在线开方',`inquisition`=1527861508  WHERE  (  member_id = 25 and doctor_id = 2 ) [ RunTime:0.392484s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_prescription` [ RunTime:0.317145s ]
+[ sql ] [ SQL ] INSERT INTO `jd_order_prescription` (`price` , `is_taboo` , `taboo_content` , `prescription_src` , `order_id` , `patient_name` , `patient_mobile` , `patient_sex` , `patient_age` , `dialectical` , `prescription_status` , `drug_str` , `dose` , `state_id` , `relation_id` , `make` , `weight` , `taking` , `instructions` , `service_price` , `see_price` , `total_price` , `add_date` , `is_checked` , `prescription_type`) VALUES (1.265 , 0 , '' , '' , 17 , '222' , '13077847205' , 1 , '8\\U5c81' , 'Dsadas' , 0 , '[[12,\"独活\",22,\"g\"]]' , '10' , 8 , 54 , '* \\U9897\\U7c92\\U5242\\U8bf7\\U6309\\U7167\\U996e\\U7247\\U91cf\\U5f00\\U51fa\\Uff0c\\U836f\\U623f\\U5c06\\U81ea\\U52a8\\U8f6c\\U6362' , '' , '\\U6b21\\U670d\\U7528#10#\\U5242,\\U6bcf\\U65e5#0#\\U5242,\\U4e00\\U5242\\U5206#0#\\U6b21\\U670d\\U7528' , 'Dsadas' , 5 , 5 , 22.65 , 1527861507 , 1 , 0) [ RunTime:0.240969s ]
+---------------------------------------------------------------
+[ 2018-06-01T22:01:24+08:00 ] 0.0.0.0 POST /order/addPrescriptionOrder
+[ info ] localhost:7037/order/addPrescriptionOrder [运行时间：4.296301s][吞吐率：0.23req/s] [内存消耗：4,502.70kb] [文件加载：57]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'addPrescriptionOrder',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryCPLhqYTLuCYSGbch',
+  'content-length' => '2538',
+  'x-original-url' => '/order/addPrescriptionOrder',
+  'postman-token' => '6dd96030-cd12-6e1c-2c22-7971107c87df',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'type' => '0',
+  'patient_id' => '0',
+  'mobile' => '13077847205',
+  'age' => '8\\U5c81',
+  'patient_name' => '222',
+  'sex' => '1',
+  'doctor_id' => '2',
+  'drug_str' => 'W1sxMiwi54us5rS7IiwyMiwiZyJdXQ==',
+  'see_price' => '5',
+  'service_price' => '5',
+  'dialectical' => 'Dsadas',
+  'prescription_status' => '0',
+  'dose' => '10',
+  'state_id' => '8',
+  'relation_id' => '54',
+  'make' => '* \\U9897\\U7c92\\U5242\\U8bf7\\U6309\\U7167\\U996e\\U7247\\U91cf\\U5f00\\U51fa\\Uff0c\\U836f\\U623f\\U5c06\\U81ea\\U52a8\\U8f6c\\U6362',
+  'weight' => '',
+  'taking' => '\\U6b21\\U670d\\U7528#10#\\U5242,\\U6bcf\\U65e5#0#\\U5242,\\U4e00\\U5242\\U5206#0#\\U6b21\\U670d\\U7528',
+  'instructions' => 'Dsadas',
+  'to_temp' => '0',
+  'temp_name' => 'ddd',
+  'prescription_id' => '1',
+  'prescription_str' => '',
+)
+[ info ] [ RUN ] app\home\controller\Order->addPrescriptionOrder[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.284438s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.100008s ]
+[ sql ] [ SQL ] SELECT `member_name` FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.149824s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.123265s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  `mobile` = '13077847205' LIMIT 1 [ RunTime:0.134369s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug` [ RunTime:0.116181s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '独活' LIMIT 1 [ RunTime:0.120458s ]
+[ sql ] [ SQL ] UPDATE `jd_drug`  SET `num`=35122,`release_date`=1527861681  WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '独活' [ RunTime:0.110132s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_record` [ RunTime:0.169822s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = ''  AND `type` = 1 LIMIT 1 [ RunTime:0.099263s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.127268s ]
+[ sql ] [ SQL ] INSERT INTO `jd_order` (`order_sn` , `order_status` , `order_type` , `doctor_id` , `patient_id` , `product_amount` , `product_number` , `pay_amount` , `see_date` , `order_date` , `end_date`) VALUES ('20180601899211' , 0 , 3 , 2 , 25 , 0 , 1 , 0 , 1527861681 , 1527861681 , 1527948081) [ RunTime:0.150079s ]
+[ sql ] [ SQL ] UPDATE `jd_order`  SET `product_amount`=1.265,`product_number`=10,`pay_amount`=22.65  WHERE  `order_id` = 18 [ RunTime:0.131957s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.125040s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.125087s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` WHERE  (  member_id = 25 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.109646s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_member`  SET `inquisition_name`='在线开方',`inquisition`=1527861683  WHERE  (  member_id = 25 and doctor_id = 2 ) [ RunTime:0.149036s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_prescription` [ RunTime:0.464040s ]
+[ sql ] [ SQL ] INSERT INTO `jd_order_prescription` (`price` , `is_taboo` , `taboo_content` , `prescription_src` , `order_id` , `patient_name` , `patient_mobile` , `patient_sex` , `patient_age` , `dialectical` , `prescription_status` , `drug_str` , `dose` , `state_id` , `relation_id` , `make` , `weight` , `taking` , `instructions` , `service_price` , `see_price` , `total_price` , `add_date` , `is_checked` , `prescription_type`) VALUES (1.265 , 0 , '' , '' , 18 , '222' , '13077847205' , 1 , '8\\U5c81' , 'Dsadas' , 0 , '[[12,\"独活\",22,\"g\"]]' , '10' , 8 , 54 , '* \\U9897\\U7c92\\U5242\\U8bf7\\U6309\\U7167\\U996e\\U7247\\U91cf\\U5f00\\U51fa\\Uff0c\\U836f\\U623f\\U5c06\\U81ea\\U52a8\\U8f6c\\U6362' , '' , '\\U6b21\\U670d\\U7528#10#\\U5242,\\U6bcf\\U65e5#0#\\U5242,\\U4e00\\U5242\\U5206#0#\\U6b21\\U670d\\U7528' , 'Dsadas' , 5 , 5 , 22.65 , 1527861683 , 1 , 0) [ RunTime:0.152987s ]
+---------------------------------------------------------------
+[ 2018-06-01T22:32:32+08:00 ] 0.0.0.0 POST /order/addPrescriptionOrder
+[ info ] localhost:7037/order/addPrescriptionOrder [运行时间：4.766555s][吞吐率：0.21req/s] [内存消耗：4,501.70kb] [文件加载：57]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'addPrescriptionOrder',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryBZMHAul7auGLdlUH',
+  'content-length' => '2350',
+  'x-original-url' => '/order/addPrescriptionOrder',
+  'postman-token' => 'e5cb540b-c4c3-ae8c-cbfc-90f63f333c9a',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'type' => '0',
+  'patient_id' => '0',
+  'mobile' => '13077847205',
+  'age' => '8\\U5c81',
+  'patient_name' => '222',
+  'sex' => '1',
+  'doctor_id' => '2',
+  'drug_str' => 'W1sxMiwi54us5rS7IiwyMiwiZyJdXQ==',
+  'see_price' => '5',
+  'service_price' => '5',
+  'dialectical' => 'Dsadas',
+  'prescription_status' => '0',
+  'dose' => '10',
+  'state_id' => '8',
+  'relation_id' => '54',
+  'make' => '22231313',
+  'weight' => '',
+  'taking' => '1232131313',
+  'instructions' => 'Dsadas',
+  'to_temp' => '0',
+  'temp_name' => 'ddd',
+  'prescription_id' => '1',
+  'prescription_str' => '',
+)
+[ info ] [ RUN ] app\home\controller\Order->addPrescriptionOrder[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.303507s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.133573s ]
+[ sql ] [ SQL ] SELECT `member_name` FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.232167s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.121277s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  `mobile` = '13077847205' LIMIT 1 [ RunTime:0.120805s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug` [ RunTime:0.121642s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '独活' LIMIT 1 [ RunTime:0.118747s ]
+[ sql ] [ SQL ] UPDATE `jd_drug`  SET `num`=35122,`release_date`=1527863549  WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '独活' [ RunTime:0.122925s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_record` [ RunTime:0.112440s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = ''  AND `type` = 1 LIMIT 1 [ RunTime:0.112608s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.111939s ]
+[ sql ] [ SQL ] INSERT INTO `jd_order` (`order_sn` , `order_status` , `order_type` , `doctor_id` , `patient_id` , `product_amount` , `product_number` , `pay_amount` , `see_date` , `order_date` , `end_date`) VALUES ('20180601419759' , 0 , 3 , 2 , 25 , 0 , 1 , 0 , 1527863549 , 1527863549 , 1527949949) [ RunTime:0.132077s ]
+[ sql ] [ SQL ] UPDATE `jd_order`  SET `product_amount`=1.265,`product_number`=10,`pay_amount`=22.65  WHERE  `order_id` = 19 [ RunTime:0.192233s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.138905s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.137406s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` WHERE  (  member_id = 25 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.130801s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_member`  SET `inquisition_name`='在线开方',`inquisition`=1527863551  WHERE  (  member_id = 25 and doctor_id = 2 ) [ RunTime:0.129227s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_prescription` [ RunTime:0.126243s ]
+[ sql ] [ SQL ] INSERT INTO `jd_order_prescription` (`price` , `is_taboo` , `taboo_content` , `prescription_src` , `order_id` , `patient_name` , `patient_mobile` , `patient_sex` , `patient_age` , `dialectical` , `prescription_status` , `drug_str` , `dose` , `state_id` , `relation_id` , `make` , `weight` , `taking` , `instructions` , `service_price` , `see_price` , `total_price` , `add_date` , `is_checked` , `prescription_type`) VALUES (1.265 , 0 , '' , '' , 19 , '222' , '13077847205' , 1 , '8\\U5c81' , 'Dsadas' , 0 , '[[12,\"独活\",22,\"g\"]]' , '10' , 8 , 54 , '22231313' , '' , '1232131313' , 'Dsadas' , 5 , 5 , 22.65 , 1527863551 , 1 , 0) [ RunTime:0.133119s ]
+---------------------------------------------------------------
+[ 2018-06-01T22:32:57+08:00 ] 0.0.0.0 POST /order/addPrescriptionOrder
+[ info ] localhost:7037/order/addPrescriptionOrder [运行时间：3.656464s][吞吐率：0.27req/s] [内存消耗：4,498.18kb] [文件加载：57]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'addPrescriptionOrder',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryPup2QRaewQZGJJtI',
+  'content-length' => '2350',
+  'x-original-url' => '/order/addPrescriptionOrder',
+  'postman-token' => 'b758f83c-dace-be32-3b3d-b926eb1800ab',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'type' => '0',
+  'patient_id' => '0',
+  'mobile' => '13077847205',
+  'age' => '8\\U5c81',
+  'patient_name' => '222',
+  'sex' => '1',
+  'doctor_id' => '2',
+  'drug_str' => 'W1sxMiwi54us5rS7IiwyMiwiZyJdXQ==',
+  'see_price' => '5',
+  'service_price' => '5',
+  'dialectical' => 'Dsadas',
+  'prescription_status' => '0',
+  'dose' => '10',
+  'state_id' => '8',
+  'relation_id' => '54',
+  'make' => '22231313',
+  'weight' => '',
+  'taking' => '1232131313',
+  'instructions' => 'Dsadas',
+  'to_temp' => '0',
+  'temp_name' => 'ddd',
+  'prescription_id' => '1',
+  'prescription_str' => '',
+)
+[ info ] [ RUN ] app\home\controller\Order->addPrescriptionOrder[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.349471s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.120517s ]
+[ sql ] [ SQL ] SELECT `member_name` FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.147570s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.129788s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  `mobile` = '13077847205' LIMIT 1 [ RunTime:0.112029s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug` [ RunTime:0.126067s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '独活' LIMIT 1 [ RunTime:0.151931s ]
+[ sql ] [ SQL ] UPDATE `jd_drug`  SET `num`=35122,`release_date`=1527863575  WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '独活' [ RunTime:0.124954s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_record` [ RunTime:0.133661s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = ''  AND `type` = 1 LIMIT 1 [ RunTime:0.141844s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.130391s ]
+[ sql ] [ SQL ] INSERT INTO `jd_order` (`order_sn` , `order_status` , `order_type` , `doctor_id` , `patient_id` , `product_amount` , `product_number` , `pay_amount` , `see_date` , `order_date` , `end_date`) VALUES ('20180601210668' , 0 , 3 , 2 , 25 , 0 , 1 , 0 , 1527863576 , 1527863576 , 1527949976) [ RunTime:0.120331s ]
+[ sql ] [ SQL ] UPDATE `jd_order`  SET `product_amount`=1.265,`product_number`=10,`pay_amount`=22.65  WHERE  `order_id` = 20 [ RunTime:0.120441s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.155039s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.115703s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` WHERE  (  member_id = 25 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.120011s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_member`  SET `inquisition_name`='在线开方',`inquisition`=1527863577  WHERE  (  member_id = 25 and doctor_id = 2 ) [ RunTime:0.146622s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_prescription` [ RunTime:0.112696s ]
+[ sql ] [ SQL ] INSERT INTO `jd_order_prescription` (`price` , `is_taboo` , `taboo_content` , `prescription_src` , `order_id` , `patient_name` , `patient_mobile` , `patient_sex` , `patient_age` , `dialectical` , `prescription_status` , `drug_str` , `dose` , `state_id` , `relation_id` , `make` , `weight` , `taking` , `instructions` , `service_price` , `see_price` , `total_price` , `add_date` , `is_checked` , `prescription_type`) VALUES (1.265 , 0 , '' , '' , 20 , '222' , '13077847205' , 1 , '8\\U5c81' , 'Dsadas' , 0 , '[[12,\"独活\",22,\"g\"]]' , '10' , 8 , 54 , '22231313' , '' , '1232131313' , 'Dsadas' , 5 , 5 , 22.65 , 1527863577 , 1 , 0) [ RunTime:0.135834s ]
+---------------------------------------------------------------
+[ 2018-06-01T22:34:59+08:00 ] 0.0.0.0 POST /order/addPrescriptionOrder
+[ info ] localhost:7037/order/addPrescriptionOrder [运行时间：3.710227s][吞吐率：0.27req/s] [内存消耗：4,499.77kb] [文件加载：57]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'addPrescriptionOrder',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryFkSL0JBVMAgnlaOB',
+  'content-length' => '2350',
+  'x-original-url' => '/order/addPrescriptionOrder',
+  'postman-token' => '1a77f5c3-0f4e-1987-1ba0-f2f48bb430bf',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'type' => '0',
+  'patient_id' => '0',
+  'mobile' => '13077847205',
+  'age' => '8\\U5c81',
+  'patient_name' => '222',
+  'sex' => '1',
+  'doctor_id' => '2',
+  'drug_str' => 'W1sxMiwi54us5rS7IiwyMiwiZyJdXQ==',
+  'see_price' => '5',
+  'service_price' => '5',
+  'dialectical' => 'Dsadas',
+  'prescription_status' => '0',
+  'dose' => '10',
+  'state_id' => '8',
+  'relation_id' => '54',
+  'make' => '22231313',
+  'weight' => '',
+  'taking' => '1232131313',
+  'instructions' => 'Dsadas',
+  'to_temp' => '0',
+  'temp_name' => 'ddd',
+  'prescription_id' => '1',
+  'prescription_str' => '',
+)
+[ info ] [ RUN ] app\home\controller\Order->addPrescriptionOrder[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.188861s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.116016s ]
+[ sql ] [ SQL ] SELECT `member_name` FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.104520s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.118044s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  `mobile` = '13077847205' LIMIT 1 [ RunTime:0.124195s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug` [ RunTime:0.119281s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '独活' LIMIT 1 [ RunTime:0.115514s ]
+[ sql ] [ SQL ] UPDATE `jd_drug`  SET `num`=35122,`release_date`=1527863697  WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '独活' [ RunTime:0.125033s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_record` [ RunTime:0.329738s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = ''  AND `type` = 1 LIMIT 1 [ RunTime:0.170603s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.133497s ]
+[ sql ] [ SQL ] INSERT INTO `jd_order` (`order_sn` , `order_status` , `order_type` , `doctor_id` , `patient_id` , `product_amount` , `product_number` , `pay_amount` , `see_date` , `order_date` , `end_date`) VALUES ('20180601722616' , 0 , 3 , 2 , 25 , 0 , 1 , 0 , 1527863697 , 1527863697 , 1527950097) [ RunTime:0.140039s ]
+[ sql ] [ SQL ] UPDATE `jd_order`  SET `product_amount`=1.265,`product_number`=10,`pay_amount`=22.65  WHERE  `order_id` = 21 [ RunTime:0.132578s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.140318s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.167060s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` WHERE  (  member_id = 25 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.120476s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_member`  SET `inquisition_name`='在线开方',`inquisition`=1527863698  WHERE  (  member_id = 25 and doctor_id = 2 ) [ RunTime:0.135132s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_prescription` [ RunTime:0.149954s ]
+[ sql ] [ SQL ] INSERT INTO `jd_order_prescription` (`price` , `is_taboo` , `taboo_content` , `prescription_src` , `order_id` , `patient_name` , `patient_mobile` , `patient_sex` , `patient_age` , `dialectical` , `prescription_status` , `drug_str` , `dose` , `state_id` , `relation_id` , `make` , `weight` , `taking` , `instructions` , `service_price` , `see_price` , `total_price` , `add_date` , `is_checked` , `prescription_type`) VALUES (1.265 , 0 , '' , '' , 21 , '222' , '13077847205' , 1 , '8\\U5c81' , 'Dsadas' , 0 , '[[12,\"独活\",22,\"g\"]]' , '10' , 8 , 54 , '22231313' , '' , '1232131313' , 'Dsadas' , 5 , 5 , 22.65 , 1527863698 , 1 , 0) [ RunTime:0.119519s ]
+---------------------------------------------------------------
+[ 2018-06-01T22:36:21+08:00 ] 0.0.0.0 POST /order/toOnlineorder
+[ info ] localhost:7037/order/toOnlineorder [运行时间：0.064384s][吞吐率：15.53req/s] [内存消耗：2,461.07kb] [文件加载：44]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'toOnlineorder',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary1sK4VPeAYd8gMzXO',
+  'content-length' => '428',
+  'x-original-url' => '/order/toOnlineorder',
+  'postman-token' => '2b19b6dc-8e4b-ea0b-60f7-0a146e30234f',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'patient_id' => '0',
+  'area_id' => '2',
+  'mobile' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Order->toOnlineorder[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-01T22:40:20+08:00 ] 0.0.0.0 POST /order/addPrescriptionOrder
+[ info ] localhost:7037/order/addPrescriptionOrder [运行时间：7.704243s][吞吐率：0.13req/s] [内存消耗：3,748.71kb] [文件加载：57]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'addPrescriptionOrder',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryjWqxlJCVgviIY0Lx',
+  'content-length' => '2350',
+  'x-original-url' => '/order/addPrescriptionOrder',
+  'postman-token' => '4ad62706-e676-d968-7aa2-854b76a8a075',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'type' => '0',
+  'patient_id' => '0',
+  'mobile' => '13077847205',
+  'age' => '8\\U5c81',
+  'patient_name' => '222',
+  'sex' => '1',
+  'doctor_id' => '2',
+  'drug_str' => 'W1sxMiwi54us5rS7IiwyMiwiZyJdXQ==',
+  'see_price' => '5',
+  'service_price' => '5',
+  'dialectical' => 'Dsadas',
+  'prescription_status' => '0',
+  'dose' => '10',
+  'state_id' => '8',
+  'relation_id' => '54',
+  'make' => '22231313',
+  'weight' => '',
+  'taking' => '1232131313',
+  'instructions' => 'Dsadas',
+  'to_temp' => '0',
+  'temp_name' => 'ddd',
+  'prescription_id' => '1',
+  'prescription_str' => '',
+)
+[ info ] [ RUN ] app\home\controller\Order->addPrescriptionOrder[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.442261s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.244248s ]
+[ sql ] [ SQL ] SELECT `member_name` FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.750445s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.603174s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  `mobile` = '13077847205' LIMIT 1 [ RunTime:0.110001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug` [ RunTime:1.124653s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '独活' LIMIT 1 [ RunTime:0.629891s ]
+[ sql ] [ SQL ] UPDATE `jd_drug`  SET `num`=35122,`release_date`=1527864016  WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '独活' [ RunTime:0.147969s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_record` [ RunTime:0.078378s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = ''  AND `type` = 1 LIMIT 1 [ RunTime:0.103988s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.102106s ]
+[ sql ] [ SQL ] INSERT INTO `jd_order` (`order_sn` , `order_status` , `order_type` , `doctor_id` , `patient_id` , `product_amount` , `product_number` , `pay_amount` , `see_date` , `order_date` , `end_date`) VALUES ('20180601892290' , 0 , 3 , 2 , 25 , 0 , 1 , 0 , 1527864016 , 1527864016 , 1527950416) [ RunTime:0.111805s ]
+[ sql ] [ SQL ] UPDATE `jd_order`  SET `product_amount`=1.265,`product_number`=10,`pay_amount`=22.65  WHERE  `order_id` = 22 [ RunTime:0.131734s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.137175s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.177357s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` WHERE  (  member_id = 25 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.484497s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_member`  SET `inquisition_name`='在线开方',`inquisition`=1527864019  WHERE  (  member_id = 25 and doctor_id = 2 ) [ RunTime:0.086130s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_prescription` [ RunTime:0.121359s ]
+[ sql ] [ SQL ] INSERT INTO `jd_order_prescription` (`price` , `is_taboo` , `taboo_content` , `prescription_src` , `order_id` , `patient_name` , `patient_mobile` , `patient_sex` , `patient_age` , `dialectical` , `prescription_status` , `drug_str` , `dose` , `state_id` , `relation_id` , `make` , `weight` , `taking` , `instructions` , `service_price` , `see_price` , `total_price` , `add_date` , `is_checked` , `prescription_type`) VALUES (1.265 , 0 , '' , '' , 22 , '222' , '13077847205' , 1 , '8\\U5c81' , 'Dsadas' , 0 , '[[12,\"独活\",22,\"g\"]]' , '10' , 8 , 54 , '22231313' , '' , '1232131313' , 'Dsadas' , 5 , 5 , 22.65 , 1527864019 , 1 , 0) [ RunTime:0.113211s ]
+---------------------------------------------------------------
+[ 2018-06-01T22:42:21+08:00 ] 0.0.0.0 POST /order/addPrescriptionOrder
+[ info ] localhost:7037/order/addPrescriptionOrder [运行时间：4.053396s][吞吐率：0.25req/s] [内存消耗：3,748.71kb] [文件加载：57]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'addPrescriptionOrder',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary8XeullsPb7vw4Ted',
+  'content-length' => '2350',
+  'x-original-url' => '/order/addPrescriptionOrder',
+  'postman-token' => 'e9460f0f-4411-f83e-0e78-439d8b2dce2a',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'type' => '0',
+  'patient_id' => '0',
+  'mobile' => '13077847205',
+  'age' => '8\\U5c81',
+  'patient_name' => '222',
+  'sex' => '1',
+  'doctor_id' => '2',
+  'drug_str' => 'W1sxMiwi54us5rS7IiwyMiwiZyJdXQ==',
+  'see_price' => '5',
+  'service_price' => '5',
+  'dialectical' => 'Dsadas',
+  'prescription_status' => '0',
+  'dose' => '10',
+  'state_id' => '8',
+  'relation_id' => '54',
+  'make' => '22231313',
+  'weight' => '',
+  'taking' => '1232131313',
+  'instructions' => 'Dsadas',
+  'to_temp' => '0',
+  'temp_name' => 'ddd',
+  'prescription_id' => '1',
+  'prescription_str' => '',
+)
+[ info ] [ RUN ] app\home\controller\Order->addPrescriptionOrder[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.277820s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.147157s ]
+[ sql ] [ SQL ] SELECT `member_name` FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.128194s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.320537s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  `mobile` = '13077847205' LIMIT 1 [ RunTime:0.501274s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug` [ RunTime:0.219321s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '独活' LIMIT 1 [ RunTime:0.155669s ]
+[ sql ] [ SQL ] UPDATE `jd_drug`  SET `num`=35122,`release_date`=1527864139  WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '独活' [ RunTime:0.127004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_record` [ RunTime:0.138082s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = ''  AND `type` = 1 LIMIT 1 [ RunTime:0.107904s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.158558s ]
+[ sql ] [ SQL ] INSERT INTO `jd_order` (`order_sn` , `order_status` , `order_type` , `doctor_id` , `patient_id` , `product_amount` , `product_number` , `pay_amount` , `see_date` , `order_date` , `end_date`) VALUES ('20180601916638' , 0 , 3 , 2 , 25 , 0 , 1 , 0 , 1527864139 , 1527864139 , 1527950539) [ RunTime:0.163049s ]
+[ sql ] [ SQL ] UPDATE `jd_order`  SET `product_amount`=1.265,`product_number`=10,`pay_amount`=22.65  WHERE  `order_id` = 23 [ RunTime:0.131697s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.165110s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.228509s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` WHERE  (  member_id = 25 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.160272s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_member`  SET `inquisition_name`='在线开方',`inquisition`=1527864141  WHERE  (  member_id = 25 and doctor_id = 2 ) [ RunTime:0.133726s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_prescription` [ RunTime:0.186796s ]
+[ sql ] [ SQL ] INSERT INTO `jd_order_prescription` (`price` , `is_taboo` , `taboo_content` , `prescription_src` , `order_id` , `patient_name` , `patient_mobile` , `patient_sex` , `patient_age` , `dialectical` , `prescription_status` , `drug_str` , `dose` , `state_id` , `relation_id` , `make` , `weight` , `taking` , `instructions` , `service_price` , `see_price` , `total_price` , `add_date` , `is_checked` , `prescription_type`) VALUES (1.265 , 0 , '' , '' , 23 , '222' , '13077847205' , 1 , '8\\U5c81' , 'Dsadas' , 0 , '[[12,\"独活\",22,\"g\"]]' , '10' , 8 , 54 , '22231313' , '' , '1232131313' , 'Dsadas' , 5 , 5 , 22.65 , 1527864140 , 1 , 0) [ RunTime:0.117493s ]
+---------------------------------------------------------------
+[ 2018-06-01T22:42:45+08:00 ] 0.0.0.0 POST /order/addPrescriptionOrder
+[ info ] localhost:7037/order/addPrescriptionOrder [运行时间：4.393392s][吞吐率：0.23req/s] [内存消耗：3,824.96kb] [文件加载：60]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'addPrescriptionOrder',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarynSP5A7YhYAC84bLW',
+  'content-length' => '2350',
+  'x-original-url' => '/order/addPrescriptionOrder',
+  'postman-token' => 'c708fe07-32f9-54cd-fd29-6eb5e17dc53f',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'type' => '0',
+  'patient_id' => '0',
+  'mobile' => '13077847205',
+  'age' => '8\\U5c81',
+  'patient_name' => '222',
+  'sex' => '1',
+  'doctor_id' => '2',
+  'drug_str' => 'W1sxMiwi54us5rS7IiwyMiwiZyJdXQ==',
+  'see_price' => '5',
+  'service_price' => '5',
+  'dialectical' => 'Dsadas',
+  'prescription_status' => '0',
+  'dose' => '10',
+  'state_id' => '8',
+  'relation_id' => '54',
+  'make' => '22231313',
+  'weight' => '',
+  'taking' => '1232131313',
+  'instructions' => 'Dsadas',
+  'to_temp' => '0',
+  'temp_name' => 'ddd',
+  'prescription_id' => '1',
+  'prescription_str' => '',
+)
+[ info ] [ RUN ] app\home\controller\Order->addPrescriptionOrder[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.841176s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.181248s ]
+[ sql ] [ SQL ] SELECT `member_name` FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.104962s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.100244s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  `mobile` = '13077847205' LIMIT 1 [ RunTime:0.100298s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug` [ RunTime:0.089292s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '独活' LIMIT 1 [ RunTime:0.090085s ]
+[ sql ] [ SQL ] UPDATE `jd_drug`  SET `num`=35122,`release_date`=1527864163  WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '独活' [ RunTime:0.128410s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_record` [ RunTime:0.086136s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = ''  AND `type` = 1 LIMIT 1 [ RunTime:0.103899s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.364343s ]
+[ sql ] [ SQL ] INSERT INTO `jd_order` (`order_sn` , `order_status` , `order_type` , `doctor_id` , `patient_id` , `product_amount` , `product_number` , `pay_amount` , `see_date` , `order_date` , `end_date`) VALUES ('20180601420003' , 0 , 3 , 2 , 25 , 0 , 1 , 0 , 1527864163 , 1527864163 , 1527950563) [ RunTime:0.180314s ]
+[ sql ] [ SQL ] UPDATE `jd_order`  SET `product_amount`=1.265,`product_number`=10,`pay_amount`=22.65  WHERE  `order_id` = 24 [ RunTime:0.480309s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.072890s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.443548s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` WHERE  (  member_id = 25 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.079519s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_member`  SET `inquisition_name`='在线开方',`inquisition`=1527864165  WHERE  (  member_id = 25 and doctor_id = 2 ) [ RunTime:0.294463s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_prescription` [ RunTime:0.073745s ]
+[ sql ] [ SQL ] INSERT INTO `jd_order_prescription` (`price` , `is_taboo` , `taboo_content` , `prescription_src` , `order_id` , `patient_name` , `patient_mobile` , `patient_sex` , `patient_age` , `dialectical` , `prescription_status` , `drug_str` , `dose` , `state_id` , `relation_id` , `make` , `weight` , `taking` , `instructions` , `service_price` , `see_price` , `total_price` , `add_date` , `is_checked` , `prescription_type`) VALUES (1.265 , 0 , '' , '' , 24 , '222' , '13077847205' , 1 , '8\\U5c81' , 'Dsadas' , 0 , '[[12,\"独活\",22,\"g\"]]' , '10' , 8 , 54 , '22231313' , '' , '1232131313' , 'Dsadas' , 5 , 5 , 22.65 , 1527864164 , 1 , 0) [ RunTime:0.215510s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-01T22:44:00+08:00 ] 0.0.0.0 POST /order/addPrescriptionOrder
+[ info ] localhost:7037/order/addPrescriptionOrder [运行时间：5.175014s][吞吐率：0.19req/s] [内存消耗：3,824.96kb] [文件加载：60]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'addPrescriptionOrder',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryfbqJHxmiBqECgniD',
+  'content-length' => '2350',
+  'x-original-url' => '/order/addPrescriptionOrder',
+  'postman-token' => '4a74a900-210f-287d-bce9-db5f72c76ee8',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'type' => '0',
+  'patient_id' => '0',
+  'mobile' => '13077847205',
+  'age' => '8\\U5c81',
+  'patient_name' => '222',
+  'sex' => '1',
+  'doctor_id' => '2',
+  'drug_str' => 'W1sxMiwi54us5rS7IiwyMiwiZyJdXQ==',
+  'see_price' => '5',
+  'service_price' => '5',
+  'dialectical' => 'Dsadas',
+  'prescription_status' => '0',
+  'dose' => '10',
+  'state_id' => '8',
+  'relation_id' => '54',
+  'make' => '22231313',
+  'weight' => '',
+  'taking' => '1232131313',
+  'instructions' => 'Dsadas',
+  'to_temp' => '0',
+  'temp_name' => 'ddd',
+  'prescription_id' => '1',
+  'prescription_str' => '',
+)
+[ info ] [ RUN ] app\home\controller\Order->addPrescriptionOrder[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.565269s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.731355s ]
+[ sql ] [ SQL ] SELECT `member_name` FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.166451s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:1.021208s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  `mobile` = '13077847205' LIMIT 1 [ RunTime:0.279473s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug` [ RunTime:0.160698s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '独活' LIMIT 1 [ RunTime:0.092807s ]
+[ sql ] [ SQL ] UPDATE `jd_drug`  SET `num`=35100,`release_date`=1527864238  WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '独活' [ RunTime:0.164745s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_record` [ RunTime:0.087740s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = ''  AND `type` = 1 LIMIT 1 [ RunTime:0.073634s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.121394s ]
+[ sql ] [ SQL ] INSERT INTO `jd_order` (`order_sn` , `order_status` , `order_type` , `doctor_id` , `patient_id` , `product_amount` , `product_number` , `pay_amount` , `see_date` , `order_date` , `end_date`) VALUES ('20180601035948' , 0 , 3 , 2 , 25 , 0 , 1 , 0 , 1527864239 , 1527864239 , 1527950639) [ RunTime:0.106571s ]
+[ sql ] [ SQL ] UPDATE `jd_order`  SET `product_amount`=1.265,`product_number`=10,`pay_amount`=22.65  WHERE  `order_id` = 25 [ RunTime:0.119804s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.095373s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.122243s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` WHERE  (  member_id = 25 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.078578s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_member`  SET `inquisition_name`='在线开方',`inquisition`=1527864240  WHERE  (  member_id = 25 and doctor_id = 2 ) [ RunTime:0.100701s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_prescription` [ RunTime:0.090888s ]
+[ sql ] [ SQL ] INSERT INTO `jd_order_prescription` (`price` , `is_taboo` , `taboo_content` , `prescription_src` , `order_id` , `patient_name` , `patient_mobile` , `patient_sex` , `patient_age` , `dialectical` , `prescription_status` , `drug_str` , `dose` , `state_id` , `relation_id` , `make` , `weight` , `taking` , `instructions` , `service_price` , `see_price` , `total_price` , `add_date` , `is_checked` , `prescription_type`) VALUES (1.265 , 0 , '' , '' , 25 , '222' , '13077847205' , 1 , '8\\U5c81' , 'Dsadas' , 0 , '[[12,\"独活\",22,\"g\"]]' , '10' , 8 , 54 , '22231313' , '' , '1232131313' , 'Dsadas' , 5 , 5 , 22.65 , 1527864239 , 1 , 0) [ RunTime:0.138419s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-01T22:46:41+08:00 ] 0.0.0.0 POST /order/addPrescriptionOrder
+[ info ] localhost:7037/order/addPrescriptionOrder [运行时间：2.389529s][吞吐率：0.42req/s] [内存消耗：3,746.35kb] [文件加载：57]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'addPrescriptionOrder',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarytBxMF8aDql2YCbzD',
+  'content-length' => '2350',
+  'x-original-url' => '/order/addPrescriptionOrder',
+  'postman-token' => '9062acef-5588-adf7-146d-6887adc6f27a',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'type' => '0',
+  'patient_id' => '0',
+  'mobile' => '13077847205',
+  'age' => '8\\U5c81',
+  'patient_name' => '222',
+  'sex' => '1',
+  'doctor_id' => '2',
+  'drug_str' => 'W1sxMiwi54us5rS7IiwyMiwiZyJdXQ==',
+  'see_price' => '5',
+  'service_price' => '5',
+  'dialectical' => 'Dsadas',
+  'prescription_status' => '0',
+  'dose' => '10',
+  'state_id' => '8',
+  'relation_id' => '54',
+  'make' => '22231313',
+  'weight' => '',
+  'taking' => '1232131313',
+  'instructions' => 'Dsadas',
+  'to_temp' => '0',
+  'temp_name' => 'ddd',
+  'prescription_id' => '1',
+  'prescription_str' => '',
+)
+[ info ] [ RUN ] app\home\controller\Order->addPrescriptionOrder[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.283460s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.150515s ]
+[ sql ] [ SQL ] SELECT `member_name` FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.178250s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.119798s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  `mobile` = '13077847205' LIMIT 1 [ RunTime:0.120372s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug` [ RunTime:0.082759s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '独活' LIMIT 1 [ RunTime:0.076457s ]
+[ sql ] [ SQL ] UPDATE `jd_drug`  SET `num`=35078,`release_date`=1527864400  WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '独活' [ RunTime:0.077532s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_record` [ RunTime:0.078411s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = ''  AND `type` = 1 LIMIT 1 [ RunTime:0.070279s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.117214s ]
+[ sql ] [ SQL ] INSERT INTO `jd_order` (`order_sn` , `order_status` , `order_type` , `doctor_id` , `patient_id` , `product_amount` , `product_number` , `pay_amount` , `see_date` , `order_date` , `end_date`) VALUES ('20180601940976' , 0 , 3 , 2 , 25 , 0 , 1 , 0 , 1527864400 , 1527864400 , 1527950800) [ RunTime:0.069509s ]
+[ sql ] [ SQL ] UPDATE `jd_order`  SET `product_amount`=1.265,`product_number`=10,`pay_amount`=22.65  WHERE  `order_id` = 26 [ RunTime:0.087416s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.092918s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.072648s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` WHERE  (  member_id = 25 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.069000s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_member`  SET `inquisition_name`='在线开方',`inquisition`=1527864401  WHERE  (  member_id = 25 and doctor_id = 2 ) [ RunTime:0.076794s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_prescription` [ RunTime:0.078086s ]
+[ sql ] [ SQL ] INSERT INTO `jd_order_prescription` (`price` , `is_taboo` , `taboo_content` , `prescription_src` , `order_id` , `patient_name` , `patient_mobile` , `patient_sex` , `patient_age` , `dialectical` , `prescription_status` , `drug_str` , `dose` , `state_id` , `relation_id` , `make` , `weight` , `taking` , `instructions` , `service_price` , `see_price` , `total_price` , `add_date` , `is_checked` , `prescription_type`) VALUES (1.265 , 0 , '' , '' , 26 , '222' , '13077847205' , 1 , '8\\U5c81' , 'Dsadas' , 0 , '[[12,\"独活\",22,\"g\"]]' , '10' , 8 , 54 , '22231313' , '' , '1232131313' , 'Dsadas' , 5 , 5 , 22.65 , 1527864401 , 1 , 0) [ RunTime:0.105482s ]
+---------------------------------------------------------------
+[ 2018-06-01T22:46:58+08:00 ] 0.0.0.0 POST /order/addPrescriptionOrder
+[ info ] localhost:7037/order/addPrescriptionOrder [运行时间：3.129878s][吞吐率：0.32req/s] [内存消耗：3,746.27kb] [文件加载：57]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'addPrescriptionOrder',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryr0ghnylTFccWJYQN',
+  'content-length' => '2350',
+  'x-original-url' => '/order/addPrescriptionOrder',
+  'postman-token' => 'e50746a1-b9bd-f8c9-7994-9a5b97291c49',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'type' => '0',
+  'patient_id' => '0',
+  'mobile' => '13077847205',
+  'age' => '8\\U5c81',
+  'patient_name' => '222',
+  'sex' => '1',
+  'doctor_id' => '2',
+  'drug_str' => 'W1sxMiwi54us5rS7IiwyMiwiZyJdXQ==',
+  'see_price' => '5',
+  'service_price' => '5',
+  'dialectical' => 'Dsadas',
+  'prescription_status' => '0',
+  'dose' => '10',
+  'state_id' => '8',
+  'relation_id' => '54',
+  'make' => '22231313',
+  'weight' => '',
+  'taking' => '1232131313',
+  'instructions' => 'Dsadas',
+  'to_temp' => '0',
+  'temp_name' => 'ddd',
+  'prescription_id' => '1',
+  'prescription_str' => '',
+)
+[ info ] [ RUN ] app\home\controller\Order->addPrescriptionOrder[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.213533s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.116250s ]
+[ sql ] [ SQL ] SELECT `member_name` FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.135030s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.265433s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  `mobile` = '13077847205' LIMIT 1 [ RunTime:0.159369s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug` [ RunTime:0.134045s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '独活' LIMIT 1 [ RunTime:0.107376s ]
+[ sql ] [ SQL ] UPDATE `jd_drug`  SET `num`=35078,`release_date`=1527864416  WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '独活' [ RunTime:0.116997s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_record` [ RunTime:0.135851s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = ''  AND `type` = 1 LIMIT 1 [ RunTime:0.117781s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.141163s ]
+[ sql ] [ SQL ] INSERT INTO `jd_order` (`order_sn` , `order_status` , `order_type` , `doctor_id` , `patient_id` , `product_amount` , `product_number` , `pay_amount` , `see_date` , `order_date` , `end_date`) VALUES ('20180601643647' , 0 , 3 , 2 , 25 , 0 , 1 , 0 , 1527864416 , 1527864416 , 1527950816) [ RunTime:0.149741s ]
+[ sql ] [ SQL ] UPDATE `jd_order`  SET `product_amount`=1.265,`product_number`=10,`pay_amount`=22.65  WHERE  `order_id` = 27 [ RunTime:0.111698s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.127921s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.113088s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` WHERE  (  member_id = 25 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.123924s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_member`  SET `inquisition_name`='在线开方',`inquisition`=1527864417  WHERE  (  member_id = 25 and doctor_id = 2 ) [ RunTime:0.138669s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_prescription` [ RunTime:0.110348s ]
+[ sql ] [ SQL ] INSERT INTO `jd_order_prescription` (`price` , `is_taboo` , `taboo_content` , `prescription_src` , `order_id` , `patient_name` , `patient_mobile` , `patient_sex` , `patient_age` , `dialectical` , `prescription_status` , `drug_str` , `dose` , `state_id` , `relation_id` , `make` , `weight` , `taking` , `instructions` , `service_price` , `see_price` , `total_price` , `add_date` , `is_checked` , `prescription_type`) VALUES (1.265 , 0 , '' , '' , 27 , '222' , '13077847205' , 1 , '8\\U5c81' , 'Dsadas' , 0 , '[[12,\"独活\",22,\"g\"]]' , '10' , 8 , 54 , '22231313' , '' , '1232131313' , 'Dsadas' , 5 , 5 , 22.65 , 1527864417 , 1 , 0) [ RunTime:0.118329s ]
+---------------------------------------------------------------
+[ 2018-06-01T22:47:33+08:00 ] 0.0.0.0 POST /order/addPrescriptionOrder
+[ info ] localhost:7037/order/addPrescriptionOrder [运行时间：2.983020s][吞吐率：0.34req/s] [内存消耗：3,824.89kb] [文件加载：60]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'addPrescriptionOrder',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryaAoJ6WpixrJ8vUUv',
+  'content-length' => '2350',
+  'x-original-url' => '/order/addPrescriptionOrder',
+  'postman-token' => '217f5e8f-2b3f-5f31-86a6-abcb9ee74d97',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'type' => '0',
+  'patient_id' => '0',
+  'mobile' => '13077847205',
+  'age' => '8\\U5c81',
+  'patient_name' => '222',
+  'sex' => '1',
+  'doctor_id' => '2',
+  'drug_str' => 'W1sxMiwi54us5rS7IiwyMiwiZyJdXQ==',
+  'see_price' => '5',
+  'service_price' => '5',
+  'dialectical' => 'Dsadas',
+  'prescription_status' => '0',
+  'dose' => '10',
+  'state_id' => '8',
+  'relation_id' => '54',
+  'make' => '22231313',
+  'weight' => '',
+  'taking' => '1232131313',
+  'instructions' => 'Dsadas',
+  'to_temp' => '0',
+  'temp_name' => 'ddd',
+  'prescription_id' => '1',
+  'prescription_str' => '',
+)
+[ info ] [ RUN ] app\home\controller\Order->addPrescriptionOrder[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.188969s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.115635s ]
+[ sql ] [ SQL ] SELECT `member_name` FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.107593s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.181061s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  `mobile` = '13077847205' LIMIT 1 [ RunTime:0.138728s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug` [ RunTime:0.136321s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '独活' LIMIT 1 [ RunTime:0.143834s ]
+[ sql ] [ SQL ] UPDATE `jd_drug`  SET `num`=35078,`release_date`=1527864451  WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '独活' [ RunTime:0.114344s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_record` [ RunTime:0.141877s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = ''  AND `type` = 1 LIMIT 1 [ RunTime:0.131034s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.130941s ]
+[ sql ] [ SQL ] INSERT INTO `jd_order` (`order_sn` , `order_status` , `order_type` , `doctor_id` , `patient_id` , `product_amount` , `product_number` , `pay_amount` , `see_date` , `order_date` , `end_date`) VALUES ('20180601985645' , 0 , 3 , 2 , 25 , 0 , 1 , 0 , 1527864451 , 1527864451 , 1527950851) [ RunTime:0.143223s ]
+[ sql ] [ SQL ] UPDATE `jd_order`  SET `product_amount`=1.265,`product_number`=10,`pay_amount`=22.65  WHERE  `order_id` = 28 [ RunTime:0.098957s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.124835s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.195861s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` WHERE  (  member_id = 25 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.119200s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_member`  SET `inquisition_name`='在线开方',`inquisition`=1527864453  WHERE  (  member_id = 25 and doctor_id = 2 ) [ RunTime:0.121240s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_prescription` [ RunTime:0.113243s ]
+[ sql ] [ SQL ] INSERT INTO `jd_order_prescription` (`price` , `is_taboo` , `taboo_content` , `prescription_src` , `order_id` , `patient_name` , `patient_mobile` , `patient_sex` , `patient_age` , `dialectical` , `prescription_status` , `drug_str` , `dose` , `state_id` , `relation_id` , `make` , `weight` , `taking` , `instructions` , `service_price` , `see_price` , `total_price` , `add_date` , `is_checked` , `prescription_type`) VALUES (1.265 , 0 , '' , '' , 28 , '222' , '13077847205' , 1 , '8\\U5c81' , 'Dsadas' , 0 , '[[12,\"独活\",22,\"g\"]]' , '10' , 8 , 54 , '22231313' , '' , '1232131313' , 'Dsadas' , 5 , 5 , 22.65 , 1527864452 , 1 , 0) [ RunTime:0.098104s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-01T22:53:54+08:00 ] 0.0.0.0 POST /prescription/getTempDetail
+[ info ] localhost:7037/prescription/getTempDetail [运行时间：1.190706s][吞吐率：0.84req/s] [内存消耗：3,131.54kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryY7wbFlqFlTHrtVvQ',
+  'content-length' => '330',
+  'x-original-url' => '/prescription/getTempDetail',
+  'postman-token' => '77f10f76-da25-0f55-1468-ea012dd99c75',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'temp_id' => '2',
+  'state_id' => '0',
+  'area_id' => '3',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.319156s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.106376s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `state_id` = '0'  AND `is_display` = 1 LIMIT 1 [ RunTime:0.099464s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_temp` [ RunTime:0.107396s ]
+[ sql ] [ SQL ] SELECT `make`,`weight`,`taking`,`instructions`,`temp_name`,`relation_id`,`price`,`drug_str`,`is_taboo`,`taboo_content`,`dose` FROM `jd_temp` WHERE  `temp_id` = 2 LIMIT 1 [ RunTime:0.116072s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.103718s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = '3'  AND p.`is_display` = 1  AND d.`state_id` = '0' LIMIT 1 [ RunTime:0.103877s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`prescription_id`,p.`area_name` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = '3'  AND p.`is_display` = 1  AND d.`state_id` = '0'  AND d.`relation_id` IS NULL ORDER BY d.`sort` DESC LIMIT 1 [ RunTime:0.155609s ]
+[ error ] [8]未定义数组索引: taboo_content[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php:219]
+[ error ] [8]未定义数组索引: state_name[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php:220]
+[ error ] [8]未定义数组索引: state_name[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php:222]
+[ error ] [8]未定义数组索引: state_id[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php:223]
+[ error ] [8]未定义数组索引: relation_id[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php:236]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-01T22:55:36+08:00 ] 0.0.0.0 POST /prescription/getTempDetail
+[ info ] localhost:7037/prescription/getTempDetail [运行时间：0.804496s][吞吐率：1.24req/s] [内存消耗：3,037.77kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary0LbOiL5pGuMoBoxp',
+  'content-length' => '330',
+  'x-original-url' => '/prescription/getTempDetail',
+  'postman-token' => '58f6976c-c948-8729-c7e6-f7f08ab2bf26',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'temp_id' => '2',
+  'state_id' => '0',
+  'area_id' => '3',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.267667s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.110259s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `state_id` = '0'  AND `is_display` = 1 LIMIT 1 [ RunTime:0.113181s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_temp` [ RunTime:0.139647s ]
+[ sql ] [ SQL ] SELECT `make`,`weight`,`taking`,`instructions`,`temp_name`,`relation_id`,`price`,`drug_str`,`is_taboo`,`taboo_content`,`dose` FROM `jd_temp` WHERE  `temp_id` = 2 LIMIT 1 [ RunTime:0.112091s ]
+---------------------------------------------------------------
+[ 2018-06-01T22:56:29+08:00 ] 0.0.0.0 POST /prescription/getTempDetail
+[ info ] localhost:7037/prescription/getTempDetail [运行时间：0.859537s][吞吐率：1.16req/s] [内存消耗：3,037.77kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryZOWM3lMgyrLKbQS4',
+  'content-length' => '330',
+  'x-original-url' => '/prescription/getTempDetail',
+  'postman-token' => '8c400ac9-92b8-042f-8110-6f51c1974973',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'temp_id' => '2',
+  'state_id' => '0',
+  'area_id' => '3',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.247861s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.148027s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `state_id` = '0'  AND `is_display` = 1 LIMIT 1 [ RunTime:0.138231s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_temp` [ RunTime:0.123944s ]
+[ sql ] [ SQL ] SELECT `make`,`weight`,`taking`,`instructions`,`temp_name`,`relation_id`,`price`,`drug_str`,`is_taboo`,`taboo_content`,`dose` FROM `jd_temp` WHERE  `temp_id` = 2 LIMIT 1 [ RunTime:0.135024s ]
+---------------------------------------------------------------
+[ 2018-06-01T22:59:41+08:00 ] 0.0.0.0 POST /prescription/getAllTempList
+[ info ] localhost:7037/prescription/getAllTempList [运行时间：0.912545s][吞吐率：1.10req/s] [内存消耗：3,130.44kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getAllTempList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryjDh7ntGUACXhvt9W',
+  'content-length' => '237',
+  'x-original-url' => '/prescription/getAllTempList',
+  'postman-token' => '9ca4c6dd-ca21-f500-4a22-efc0fff9a945',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '2',
+  'state_id' => '8',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getAllTempList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.241397s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_temp` [ RunTime:0.137215s ]
+[ sql ] [ SQL ] SELECT `temp_id`,`temp_name`,`type`,`relation_id`,`drug_str`,`state_id`,`release_date` FROM `jd_temp` WHERE  `member_id` = 2  AND `state_id` = 8  AND `type` = 0 ORDER BY `release_date` DESC [ RunTime:0.123684s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.120090s ]
+[ sql ] [ SQL ] SELECT `s`.`special_id`,`s`.`inherit_id`,`s`.`special_name`,`s`.`content`,`s`.`release_date` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_special` `s` ON `s`.`inherit_id`=`id`.`inherit_id` INNER JOIN `jd_inherit` `i` ON `i`.`inherit_id`=`id`.`inherit_id` WHERE  (  id.`member_id` = 2 AND i.is_display = 1 AND s.is_display = 1 ) ORDER BY s.sort DESC [ RunTime:0.084423s ]
+[ sql ] [ SQL ] SELECT `temp_id`,`temp_name`,`type`,`relation_id`,`drug_str`,`state_id`,`release_date` FROM `jd_temp` WHERE  `state_id` = 8  AND `type` = 1 ORDER BY `release_date` DESC [ RunTime:0.129087s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-01T23:14:29+08:00 ] 0.0.0.0 POST /prescription/getTempDetail
+[ info ] localhost:7037/prescription/getTempDetail [运行时间：0.055670s][吞吐率：17.96req/s] [内存消耗：2,157.09kb] [文件加载：47]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryh6LQxt0EDVqXe1GC',
+  'content-length' => '330',
+  'x-original-url' => '/prescription/getTempDetail',
+  'postman-token' => 'fb972d80-198e-928c-5d58-2e0fdb47150e',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'temp_id' => '4',
+  'state_id' => '7',
+  'area_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: type[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php:168]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-01T23:28:09+08:00 ] 0.0.0.0 POST /prescription/getAllTempList
+[ info ] localhost:7037/prescription/getAllTempList [运行时间：0.738580s][吞吐率：1.35req/s] [内存消耗：3,130.59kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getAllTempList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarykr1VwBZjUslVBRvB',
+  'content-length' => '237',
+  'x-original-url' => '/prescription/getAllTempList',
+  'postman-token' => '9d263f33-588a-2ef0-e711-c6b0f1ca69c3',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '2',
+  'state_id' => '8',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getAllTempList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.245191s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_temp` [ RunTime:0.085547s ]
+[ sql ] [ SQL ] SELECT `temp_id`,`temp_name`,`type`,`relation_id`,`drug_str`,`state_id`,`release_date` FROM `jd_temp` WHERE  `member_id` = 2  AND `state_id` = 8  AND `type` = 0 ORDER BY `release_date` DESC [ RunTime:0.072538s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.083454s ]
+[ sql ] [ SQL ] SELECT `s`.`special_id`,`s`.`inherit_id`,`s`.`special_name`,`s`.`content`,`s`.`release_date` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_special` `s` ON `s`.`inherit_id`=`id`.`inherit_id` INNER JOIN `jd_inherit` `i` ON `i`.`inherit_id`=`id`.`inherit_id` WHERE  (  id.`member_id` = 2 AND i.is_display = 1 AND s.is_display = 1 ) ORDER BY s.sort DESC [ RunTime:0.087524s ]
+[ sql ] [ SQL ] SELECT `temp_id`,`temp_name`,`type`,`relation_id`,`drug_str`,`state_id`,`release_date` FROM `jd_temp` WHERE  `state_id` = 8  AND `type` = 1 ORDER BY `release_date` DESC [ RunTime:0.088339s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-01T23:31:49+08:00 ] 0.0.0.0 POST /prescription/getTempDetail
+[ info ] localhost:7037/prescription/getTempDetail [运行时间：0.940322s][吞吐率：1.06req/s] [内存消耗：3,023.31kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryR3nKyEfiZMaAMRYk',
+  'content-length' => '422',
+  'x-original-url' => '/prescription/getTempDetail',
+  'postman-token' => 'd979fbfb-f96b-f630-6d91-429bf811ef42',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'temp_id' => '3',
+  'state_id' => '7',
+  'area_id' => '2',
+  'type' => '1',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.437905s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.134410s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `state_id` = '7'  AND `is_display` = 1 LIMIT 1 [ RunTime:0.305253s ]
+---------------------------------------------------------------
+[ 2018-06-01T23:47:00+08:00 ] 0.0.0.0 POST /prescription/getTempDetail
+[ info ] localhost:7037/prescription/getTempDetail [运行时间：0.768920s][吞吐率：1.30req/s] [内存消耗：3,046.91kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryEvuaEdaBQObb6rd8',
+  'content-length' => '422',
+  'x-original-url' => '/prescription/getTempDetail',
+  'postman-token' => '9c6d9f24-568b-6f4b-a203-a88db22b5dce',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'temp_id' => '3',
+  'state_id' => '7',
+  'area_id' => '2',
+  'type' => '1',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.280788s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.098315s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `state_id` = '7'  AND `is_display` = 1 LIMIT 1 [ RunTime:0.109327s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.106276s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`prescription_id`,p.`area_name` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = '2'  AND p.`is_display` = 1  AND d.`state_id` = '7' ORDER BY d.`sort` DESC [ RunTime:0.113416s ]
+---------------------------------------------------------------
+[ 2018-06-01T23:48:05+08:00 ] 0.0.0.0 POST /prescription/getTempDetail
+[ info ] localhost:7037/prescription/getTempDetail [运行时间：0.863698s][吞吐率：1.16req/s] [内存消耗：3,054.70kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryRFabttqnDwCmgn8N',
+  'content-length' => '422',
+  'x-original-url' => '/prescription/getTempDetail',
+  'postman-token' => '04c92aed-88c1-aae8-6d25-692d1feaf3d0',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'temp_id' => '3',
+  'state_id' => '7',
+  'area_id' => '2',
+  'type' => '1',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.133593s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.114982s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `state_id` = '7'  AND `is_display` = 1 LIMIT 1 [ RunTime:0.113173s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.113631s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`prescription_id`,p.`area_name` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = '2'  AND p.`is_display` = 1  AND d.`state_id` = '7' ORDER BY d.`sort` DESC [ RunTime:0.111693s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_special` [ RunTime:0.101787s ]
+[ sql ] [ SQL ] SELECT `special_id`,`special_name`,`content` FROM `jd_special` WHERE  (  special_id = 3 ) LIMIT 1 [ RunTime:0.100626s ]
+---------------------------------------------------------------
+[ 2018-06-01T23:49:52+08:00 ] 0.0.0.0 POST /prescription/getTempDetail
+[ info ] localhost:7037/prescription/getTempDetail [运行时间：0.944122s][吞吐率：1.06req/s] [内存消耗：3,055.40kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryLqHHSVMciZnpiNs7',
+  'content-length' => '422',
+  'x-original-url' => '/prescription/getTempDetail',
+  'postman-token' => '1369063f-a08e-0066-c7b8-4560503f29da',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'temp_id' => '3',
+  'state_id' => '7',
+  'area_id' => '2',
+  'type' => '1',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.223859s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.098970s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `state_id` = '7'  AND `is_display` = 1 LIMIT 1 [ RunTime:0.110527s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.113542s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`prescription_id`,p.`area_name` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = '2'  AND p.`is_display` = 1  AND d.`state_id` = '7' ORDER BY d.`sort` DESC [ RunTime:0.109362s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_special` [ RunTime:0.109833s ]
+[ sql ] [ SQL ] SELECT `special_id`,`special_name`,`content` FROM `jd_special` WHERE  (  special_id = 3 AND is_display = 1 ) LIMIT 1 [ RunTime:0.111482s ]
+---------------------------------------------------------------
+[ 2018-06-01T23:50:23+08:00 ] 0.0.0.0 POST /prescription/getTempDetail
+[ info ] localhost:7037/prescription/getTempDetail [运行时间：0.893263s][吞吐率：1.12req/s] [内存消耗：3,055.73kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryhxQWytBh268BvXoJ',
+  'content-length' => '422',
+  'x-original-url' => '/prescription/getTempDetail',
+  'postman-token' => 'e7a637e0-5c20-a57c-7836-62bbaff58fb7',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'temp_id' => '3',
+  'state_id' => '7',
+  'area_id' => '2',
+  'type' => '1',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.163619s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.109374s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `state_id` = '7'  AND `is_display` = 1 LIMIT 1 [ RunTime:0.103181s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.126937s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`prescription_id`,p.`area_name` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = '2'  AND p.`is_display` = 1  AND d.`state_id` = '7' ORDER BY d.`sort` DESC [ RunTime:0.112413s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_special` [ RunTime:0.113088s ]
+[ sql ] [ SQL ] SELECT `special_id`,`special_name`,`content` FROM `jd_special` WHERE  (  special_id = 3 AND is_display = 1 ) LIMIT 1 [ RunTime:0.107930s ]
+---------------------------------------------------------------
+[ 2018-06-01T23:53:55+08:00 ] 0.0.0.0 POST /prescription/getTempDetail
+[ info ] localhost:7037/prescription/getTempDetail [运行时间：0.893761s][吞吐率：1.12req/s] [内存消耗：3,210.09kb] [文件加载：57]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryfVEL8YATrvXAFtYa',
+  'content-length' => '422',
+  'x-original-url' => '/prescription/getTempDetail',
+  'postman-token' => '42c2d347-d476-fa07-d6f7-580f494030a4',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'temp_id' => '3',
+  'state_id' => '7',
+  'area_id' => '2',
+  'type' => '1',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.170145s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.127308s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `state_id` = '7'  AND `is_display` = 1 LIMIT 1 [ RunTime:0.092025s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.128808s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`prescription_id`,p.`area_name` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = '2'  AND p.`is_display` = 1  AND d.`state_id` = '7' ORDER BY d.`sort` DESC [ RunTime:0.107762s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_special` [ RunTime:0.099545s ]
+[ sql ] [ SQL ] SELECT `special_id`,`special_name`,`content` FROM `jd_special` WHERE  (  special_id = 3 AND is_display = 1 ) LIMIT 1 [ RunTime:0.104399s ]
+[ error ] [2]Invalid argument supplied for foreach()[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php:217]
+---------------------------------------------------------------
+[ 2018-06-01T23:54:17+08:00 ] 0.0.0.0 POST /prescription/getTempDetail
+[ info ] localhost:7037/prescription/getTempDetail [运行时间：1.338067s][吞吐率：0.75req/s] [内存消耗：3,172.59kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarylI7ZyNYXAOkqedAs',
+  'content-length' => '422',
+  'x-original-url' => '/prescription/getTempDetail',
+  'postman-token' => '58b87cfc-6bf9-f232-9503-8d02e47d91ff',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'temp_id' => '3',
+  'state_id' => '7',
+  'area_id' => '2',
+  'type' => '1',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.165932s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.106804s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `state_id` = '7'  AND `is_display` = 1 LIMIT 1 [ RunTime:0.097947s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.122951s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`prescription_id`,p.`area_name` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = '2'  AND p.`is_display` = 1  AND d.`state_id` = '7' ORDER BY d.`sort` DESC [ RunTime:0.106689s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_special` [ RunTime:0.111014s ]
+[ sql ] [ SQL ] SELECT `special_id`,`special_name`,`content` FROM `jd_special` WHERE  (  special_id = 3 AND is_display = 1 ) LIMIT 1 [ RunTime:0.106502s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug` [ RunTime:0.112955s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `prescription_id` IS NULL  AND `nick_name` = '制川乌' LIMIT 1 [ RunTime:0.111419s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `prescription_id` IS NULL  AND `nick_name` = '熟附片' LIMIT 1 [ RunTime:0.111217s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `prescription_id` IS NULL  AND `nick_name` = '法半夏' LIMIT 1 [ RunTime:0.110417s ]
+[ error ] [8]未定义数组索引: prescription_id[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php:221]
+[ error ] [8]未定义数组索引: num[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php:236]
+[ error ] [8]未定义数组索引: prescription_id[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php:221]
+[ error ] [8]未定义数组索引: num[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php:236]
+[ error ] [8]未定义数组索引: prescription_id[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php:221]
+[ error ] [8]未定义数组索引: num[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php:236]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]

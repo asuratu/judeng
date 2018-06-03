@@ -18,16 +18,11 @@ class Order extends Common
             {
                 ajaxReturn($res);
             }
-
-            var_dump($data);
-
             if($data['doctor_id']=='' || $data['patient_id']=='' || $data['area_id']=='' || $data['mobile']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
 
-
-            var_dump($data);die;
 
             //查询医生的上次开方的药房药态
             $lastMap['o.`doctor_id`'] = $data['doctor_id'];
@@ -128,7 +123,8 @@ class Order extends Common
                 $mainInfo['mobile'] = $patientInfo['mobile'];
                 $mainInfo['sex'] = $patientInfo['sex'];
                 //计算年龄
-                $mainInfo['age'] = getAge($patientInfo['birthday']);
+//                $mainInfo['age'] = getAge($patientInfo['birthday']);
+                $mainInfo['age'] = $patientInfo['age'] ?: 0;
             }
             ajaxReturn(array('code'=>1,'info'=>'ok~!','data'=>[$mainInfo]));
         }
@@ -398,7 +394,7 @@ class Order extends Common
                     Db::rollback();
                     ajaxReturn(array('code'=>0,'info'=>'开方类型不正确!','data'=>[]));
                 }
-                $_identityPrescription = db('order_prescription')->insertGetId($orderPrescriptionInsert);
+                $_identityPrescription = db('order_prescription')->insert($orderPrescriptionInsert);
 
                 if ($_identityPrescription && $orderPrescriptionInsert['order_id'] && $updateOrderPrice && $_identify) {
                     Db::commit();

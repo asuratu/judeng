@@ -1,0 +1,2322 @@
+---------------------------------------------------------------
+[ 2018-06-03T11:05:57+08:00 ] 0.0.0.0 POST /member/doregist
+[ info ] localhost:7037/member/doregist [运行时间：0.079106s][吞吐率：12.64req/s] [内存消耗：2,070.50kb] [文件加载：44]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'doregist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary95Ox9ezSSF7D4fpR',
+  'content-length' => '747',
+  'x-original-url' => '/member/doregist',
+  'postman-token' => 'e46cea87-919a-9c48-397e-42ba36de518a',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039436',
+  'password' => '123456',
+  'true_name' => '王硕',
+  'hospital_id' => '4',
+  'area_id' => '3',
+  'smscode' => '924015',
+  'invite_code' => '1002',
+)
+[ info ] [ RUN ] app\home\controller\Member->doregist[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-03T11:06:11+08:00 ] 0.0.0.0 POST /member/doregist
+[ info ] localhost:7037/member/doregist [运行时间：0.040178s][吞吐率：24.89req/s] [内存消耗：2,071.01kb] [文件加载：44]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'doregist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryHRD2WCxq32sp7JoQ',
+  'content-length' => '747',
+  'x-original-url' => '/member/doregist',
+  'postman-token' => '6f3cdb4a-54cb-9737-75ac-e302d852bcc2',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039436',
+  'password' => '123456',
+  'true_name' => '王硕',
+  'hospital_id' => '4',
+  'area_id' => '3',
+  'smscode' => '924015',
+  'invite_code' => '1002',
+)
+[ info ] [ RUN ] app\home\controller\Member->doregist[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-03T11:06:18+08:00 ] 0.0.0.0 POST /member/doregist
+[ info ] localhost:7037/member/doregist [运行时间：0.041754s][吞吐率：23.95req/s] [内存消耗：2,071.01kb] [文件加载：44]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'doregist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryza7SefByqNXK4RsX',
+  'content-length' => '747',
+  'x-original-url' => '/member/doregist',
+  'postman-token' => '0f7bd4f5-3364-bf46-b420-2448c6dd0564',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039436',
+  'password' => '123456',
+  'true_name' => '王硕',
+  'hospital_id' => '4',
+  'area_id' => '3',
+  'smscode' => '924015',
+  'invite_code' => '1002',
+)
+[ info ] [ RUN ] app\home\controller\Member->doregist[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-03T11:06:25+08:00 ] 0.0.0.0 POST /member/doregist
+[ info ] localhost:7037/member/doregist [运行时间：0.648187s][吞吐率：1.54req/s] [内存消耗：2,072.52kb] [文件加载：44]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'doregist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarygnESrVb3q2imyKhi',
+  'content-length' => '747',
+  'x-original-url' => '/member/doregist',
+  'postman-token' => 'caeafc72-f732-0f1f-a807-fa8eddd42463',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039436',
+  'password' => '123456',
+  'true_name' => '王硕',
+  'hospital_id' => '4',
+  'area_id' => '3',
+  'smscode' => '924015',
+  'invite_code' => '1002',
+)
+[ info ] [ RUN ] app\home\controller\Member->doregist[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-03T11:18:29+08:00 ] 0.0.0.0 POST /member/doregist
+[ info ] localhost:7037/member/doregist [运行时间：0.053543s][吞吐率：18.68req/s] [内存消耗：2,154.58kb] [文件加载：47]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'doregist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryaEige0NjbLI48B1q',
+  'content-length' => '754',
+  'x-original-url' => '/member/doregist',
+  'postman-token' => 'e43506b6-2077-41c2-cb23-4192503e0ed1',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039477',
+  'password' => '757943',
+  'true_name' => '测试数据1',
+  'hospital_id' => '4',
+  'area_id' => '3',
+  'smscode' => '924015',
+  'invite_code' => '1002',
+)
+[ info ] [ RUN ] app\home\controller\Member->doregist[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: tokencode[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:364]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-03T11:18:50+08:00 ] 0.0.0.0 POST /member/doregist
+[ info ] localhost:7037/member/doregist [运行时间：0.041006s][吞吐率：24.39req/s] [内存消耗：2,154.85kb] [文件加载：47]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'doregist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryLZPxyiUB3zkDUPKz',
+  'content-length' => '754',
+  'x-original-url' => '/member/doregist',
+  'postman-token' => '1c2f7c5c-d18e-28a0-7875-d5121c861db4',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c91b159b8938caba14267fc9d606948',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039477',
+  'password' => '757943',
+  'true_name' => '测试数据1',
+  'hospital_id' => '4',
+  'area_id' => '3',
+  'smscode' => '924015',
+  'invite_code' => '1002',
+)
+[ info ] [ RUN ] app\home\controller\Member->doregist[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: tokencode[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:364]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-03T11:21:25+08:00 ] 0.0.0.0 POST /member/doregist
+[ info ] localhost:7037/member/doregist [运行时间：0.052000s][吞吐率：19.23req/s] [内存消耗：2,228.92kb] [文件加载：50]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'doregist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary0BIHlUAv16zh2Pp4',
+  'content-length' => '754',
+  'x-original-url' => '/member/doregist',
+  'postman-token' => '1f0a896b-e1f3-7997-1aa4-8b7c8b2ea722',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c91b159b8938caba14267fc9d606948',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039477',
+  'password' => '757943',
+  'true_name' => '测试数据1',
+  'hospital_id' => '4',
+  'area_id' => '3',
+  'smscode' => '924015',
+  'invite_code' => '1002',
+)
+[ info ] [ RUN ] app\home\controller\Member->doregist[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: tokencode[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:364]
+[ error ] [8]A session had already been started - ignoring session_start()[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:367]
+[ error ] [8]未定义数组索引: tokencode[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:368]
+[ error ] [2]var_dump() expects at least 1 parameter, 0 given[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:371]
+---------------------------------------------------------------
+[ 2018-06-03T11:21:43+08:00 ] 0.0.0.0 POST /member/doregist
+[ info ] localhost:7037/member/doregist [运行时间：0.037184s][吞吐率：26.89req/s] [内存消耗：2,073.77kb] [文件加载：44]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'doregist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryCyCct09QNFCXcog3',
+  'content-length' => '754',
+  'x-original-url' => '/member/doregist',
+  'postman-token' => 'f955b864-4673-a67c-d4d6-0ac7cf23f3a0',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c91b159b8938caba14267fc9d606948',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039477',
+  'password' => '757943',
+  'true_name' => '测试数据1',
+  'hospital_id' => '4',
+  'area_id' => '3',
+  'smscode' => '924015',
+  'invite_code' => '1002',
+)
+[ info ] [ RUN ] app\home\controller\Member->doregist[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-03T11:23:01+08:00 ] 0.0.0.0 POST /member/doregist
+[ info ] localhost:7037/member/doregist [运行时间：0.051332s][吞吐率：19.48req/s] [内存消耗：2,074.05kb] [文件加载：44]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'doregist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarySAIHaZAj9UKte6So',
+  'content-length' => '754',
+  'x-original-url' => '/member/doregist',
+  'postman-token' => 'da8f047d-2632-305a-9787-606ac29d4a1a',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c91b159b8938caba14267fc9d606948',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039477',
+  'password' => '757943',
+  'true_name' => '测试数据1',
+  'hospital_id' => '4',
+  'area_id' => '3',
+  'smscode' => '924015',
+  'invite_code' => '1002',
+)
+[ info ] [ RUN ] app\home\controller\Member->doregist[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-03T11:23:14+08:00 ] 0.0.0.0 POST /member/getsms
+[ info ] localhost:7037/member/getsms [运行时间：0.042766s][吞吐率：23.38req/s] [内存消耗：2,152.01kb] [文件加载：47]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary4Y2vq0jqExKGXf6Y',
+  'content-length' => '337',
+  'x-original-url' => '/member/getsms',
+  'postman-token' => 'fc841416-bb13-f0e8-adc2-ccedf54e8bd0',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c91b159b8938caba14267fc9d606948',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039477',
+  'type' => '1',
+  'only_token' => '',
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: tokencode[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:686]
+---------------------------------------------------------------
+[ 2018-06-03T11:23:27+08:00 ] 0.0.0.0 POST /member/getsms
+[ info ] localhost:7037/member/getsms [运行时间：0.731002s][吞吐率：1.37req/s] [内存消耗：4,216.13kb] [文件加载：78]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarysyiuJ7YoZ1oWJN1x',
+  'content-length' => '337',
+  'x-original-url' => '/member/getsms',
+  'postman-token' => 'f5a728e8-8915-b5ea-9eb3-3d60cc15f6b9',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c91b159b8938caba14267fc9d606948',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039477',
+  'type' => '1',
+  'only_token' => '',
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: tokencode[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:686]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.096647s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.065644s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `mobile` = '15021039477' LIMIT 1 [ RunTime:0.062924s ]
+---------------------------------------------------------------
+[ 2018-06-03T11:23:41+08:00 ] 0.0.0.0 POST /member/doregist
+[ info ] localhost:7037/member/doregist [运行时间：0.040232s][吞吐率：24.86req/s] [内存消耗：2,073.77kb] [文件加载：44]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'doregist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryLW9Dl4QBsprHA4BK',
+  'content-length' => '754',
+  'x-original-url' => '/member/doregist',
+  'postman-token' => '9ab66fdf-2d63-e58b-76a0-5103af1c0e0c',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c91b159b8938caba14267fc9d606948',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039477',
+  'password' => '711096',
+  'true_name' => '测试数据1',
+  'hospital_id' => '4',
+  'area_id' => '3',
+  'smscode' => '924015',
+  'invite_code' => '1002',
+)
+[ info ] [ RUN ] app\home\controller\Member->doregist[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-03T11:24:13+08:00 ] 0.0.0.0 POST /member/doregist
+[ info ] localhost:7037/member/doregist [运行时间：0.054395s][吞吐率：18.38req/s] [内存消耗：2,154.87kb] [文件加载：47]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'doregist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarysEoIrkBG6QLiXTJ8',
+  'content-length' => '754',
+  'x-original-url' => '/member/doregist',
+  'postman-token' => '9560a816-f28c-8e16-860d-f6dbcdc77e98',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c91b159b8938caba14267fc9d606948',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039477',
+  'password' => '711096',
+  'true_name' => '测试数据1',
+  'hospital_id' => '4',
+  'area_id' => '3',
+  'smscode' => '924015',
+  'invite_code' => '1002',
+)
+[ info ] [ RUN ] app\home\controller\Member->doregist[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-03T11:24:23+08:00 ] 0.0.0.0 POST /member/doregist
+[ info ] localhost:7037/member/doregist [运行时间：0.040137s][吞吐率：24.91req/s] [内存消耗：2,154.87kb] [文件加载：47]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'doregist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryo4BBSkOyc0eKU5b8',
+  'content-length' => '754',
+  'x-original-url' => '/member/doregist',
+  'postman-token' => 'a46dda2b-ae50-d366-70aa-58084c97284a',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c91b159b8938caba14267fc9d606948',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039477',
+  'password' => '711096',
+  'true_name' => '测试数据1',
+  'hospital_id' => '4',
+  'area_id' => '3',
+  'smscode' => '924015',
+  'invite_code' => '1002',
+)
+[ info ] [ RUN ] app\home\controller\Member->doregist[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-03T11:24:48+08:00 ] 0.0.0.0 POST /member/doregist
+[ info ] localhost:7037/member/doregist [运行时间：0.052165s][吞吐率：19.17req/s] [内存消耗：2,075.40kb] [文件加载：44]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'doregist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryUk9XRiVygBkbtV8B',
+  'content-length' => '754',
+  'x-original-url' => '/member/doregist',
+  'postman-token' => '39bd6c1d-c53e-04ee-c80b-8db93d1fae57',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c91b159b8938caba14267fc9d606948',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039477',
+  'password' => '711096',
+  'true_name' => '测试数据1',
+  'hospital_id' => '4',
+  'area_id' => '3',
+  'smscode' => '924015',
+  'invite_code' => '1002',
+)
+[ info ] [ RUN ] app\home\controller\Member->doregist[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-03T11:25:09+08:00 ] 0.0.0.0 POST /member/doregist
+[ info ] localhost:7037/member/doregist [运行时间：0.039973s][吞吐率：25.02req/s] [内存消耗：2,075.73kb] [文件加载：44]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'doregist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryXa5LVyAI0lNVO9f8',
+  'content-length' => '754',
+  'x-original-url' => '/member/doregist',
+  'postman-token' => '26e879d1-b28e-9178-44e9-52342e6be6ef',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c91b159b8938caba14267fc9d606948',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039477',
+  'password' => '711096',
+  'true_name' => '测试数据1',
+  'hospital_id' => '4',
+  'area_id' => '3',
+  'smscode' => '924015',
+  'invite_code' => '1002',
+)
+[ info ] [ RUN ] app\home\controller\Member->doregist[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-03T11:25:09+08:00 ] 0.0.0.0 POST /member/doregist
+[ info ] localhost:7037/member/doregist [运行时间：0.038712s][吞吐率：25.83req/s] [内存消耗：2,075.73kb] [文件加载：44]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'doregist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryYo5qZX2uyM8Nr2bB',
+  'content-length' => '754',
+  'x-original-url' => '/member/doregist',
+  'postman-token' => '5c10da2f-8e7e-2066-132c-baf9b00856cb',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c91b159b8938caba14267fc9d606948',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039477',
+  'password' => '711096',
+  'true_name' => '测试数据1',
+  'hospital_id' => '4',
+  'area_id' => '3',
+  'smscode' => '924015',
+  'invite_code' => '1002',
+)
+[ info ] [ RUN ] app\home\controller\Member->doregist[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-03T11:25:22+08:00 ] 0.0.0.0 POST /member/doregist
+[ info ] localhost:7037/member/doregist [运行时间：0.049069s][吞吐率：20.38req/s] [内存消耗：2,075.77kb] [文件加载：44]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'doregist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryqryEBBwoYcR6JDm1',
+  'content-length' => '754',
+  'x-original-url' => '/member/doregist',
+  'postman-token' => '8b02efbd-a0b2-5802-63d0-07c549dc8653',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c91b159b8938caba14267fc9d606948',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039477',
+  'password' => '711096',
+  'true_name' => '测试数据1',
+  'hospital_id' => '4',
+  'area_id' => '3',
+  'smscode' => '924015',
+  'invite_code' => '1002',
+)
+[ info ] [ RUN ] app\home\controller\Member->doregist[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-03T11:25:41+08:00 ] 0.0.0.0 POST /member/getsms
+[ info ] localhost:7037/member/getsms [运行时间：0.044051s][吞吐率：22.70req/s] [内存消耗：2,076.14kb] [文件加载：44]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryye9kIANf3dhXh29e',
+  'content-length' => '337',
+  'x-original-url' => '/member/getsms',
+  'postman-token' => '19843014-90f8-277b-0430-cec1f5cb1a7b',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c91b159b8938caba14267fc9d606948',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039477',
+  'type' => '1',
+  'only_token' => '',
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-03T11:25:52+08:00 ] 0.0.0.0 POST /member/getsms
+[ info ] localhost:7037/member/getsms [运行时间：0.533928s][吞吐率：1.87req/s] [内存消耗：4,216.20kb] [文件加载：78]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryFYQPZvBubZd6XQAj',
+  'content-length' => '337',
+  'x-original-url' => '/member/getsms',
+  'postman-token' => '7c3fbe3f-1431-997f-77ff-8c95c244140c',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c91b159b8938caba14267fc9d606948',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039488',
+  'type' => '1',
+  'only_token' => '',
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: tokencode[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:681]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.092046s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.063037s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `mobile` = '15021039488' LIMIT 1 [ RunTime:0.061219s ]
+---------------------------------------------------------------
+[ 2018-06-03T11:25:58+08:00 ] 0.0.0.0 POST /member/doregist
+[ info ] localhost:7037/member/doregist [运行时间：0.037948s][吞吐率：26.35req/s] [内存消耗：2,075.77kb] [文件加载：44]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'doregist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarySsjSNVhzCIJiCw6M',
+  'content-length' => '754',
+  'x-original-url' => '/member/doregist',
+  'postman-token' => 'b3aeaa4f-6a3f-a9df-18e9-2459844c9773',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=f0b7dad4999dd503ff7ac56a54bde7d6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039488',
+  'password' => '750424',
+  'true_name' => '测试数据1',
+  'hospital_id' => '4',
+  'area_id' => '3',
+  'smscode' => '924015',
+  'invite_code' => '1002',
+)
+[ info ] [ RUN ] app\home\controller\Member->doregist[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-03T11:27:06+08:00 ] 0.0.0.0 POST /member/doregist
+[ info ] localhost:7037/member/doregist [运行时间：0.046962s][吞吐率：21.29req/s] [内存消耗：2,075.77kb] [文件加载：44]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'doregist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary2F1iVzPjUnfZUWAj',
+  'content-length' => '754',
+  'x-original-url' => '/member/doregist',
+  'postman-token' => 'b3c74766-14e3-ab43-7930-96d051880dd6',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=f0b7dad4999dd503ff7ac56a54bde7d6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039488',
+  'password' => '123456',
+  'true_name' => '测试数据1',
+  'hospital_id' => '4',
+  'area_id' => '3',
+  'smscode' => '750424',
+  'invite_code' => '1002',
+)
+[ info ] [ RUN ] app\home\controller\Member->doregist[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-03T11:27:14+08:00 ] 0.0.0.0 POST /member/doregist
+[ info ] localhost:7037/member/doregist [运行时间：1.543946s][吞吐率：0.65req/s] [内存消耗：4,155.86kb] [文件加载：70]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'doregist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary3frDW1M9qhRpwWR5',
+  'content-length' => '754',
+  'x-original-url' => '/member/doregist',
+  'postman-token' => '061eec69-15f5-ad03-d3eb-2446c293c925',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=f0b7dad4999dd503ff7ac56a54bde7d6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039488',
+  'password' => '123456',
+  'true_name' => '测试数据1',
+  'hospital_id' => '4',
+  'area_id' => '3',
+  'smscode' => '750424',
+  'invite_code' => '1002',
+)
+[ info ] [ RUN ] app\home\controller\Member->doregist[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.087300s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.058928s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `mobile` = '15021039488' LIMIT 1 [ RunTime:0.060250s ]
+[ sql ] [ SQL ] SELECT MAX(invite) AS tp_max FROM `jd_doctor` LIMIT 1 [ RunTime:0.058558s ]
+[ sql ] [ SQL ] INSERT INTO `jd_doctor` (`mobile` , `password` , `true_name` , `hospital_id` , `area_id` , `invite` , `member_sn` , `reg_date` , `reg_ip` , `guid` , `to_doctor_url`) VALUES ('15021039488' , 'f1647e9ac9c05a9abbe4670177f44118' , '测试数据1' , '4' , '3' , 1026 , 'tkt5b1360113c7d7' , 1527996433 , '0.0.0.0' , 'knmmdnpn' , '/uploads/code/1527996433code.png') [ RunTime:0.061448s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_diagnosis_set` [ RunTime:0.059857s ]
+[ sql ] [ SQL ] INSERT INTO `jd_diagnosis_set` (`member_id` , `add_date` , `operate_date` , `release_date`) VALUES (39 , 1527996433 , 1527996433 , 1527996433) [ RunTime:0.058009s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_invite_record` [ RunTime:0.056979s ]
+[ sql ] [ SQL ] INSERT INTO `jd_invite_record` (`member_id` , `invite` , `add_date`) VALUES (39 , '1002' , 1527996433) [ RunTime:0.059210s ]
+[ error ] [2]Illegal string offset 'password'[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:439]
+---------------------------------------------------------------
+[ 2018-06-03T11:27:48+08:00 ] 0.0.0.0 POST /member/doregist
+[ info ] localhost:7037/member/doregist [运行时间：0.051403s][吞吐率：19.45req/s] [内存消耗：2,154.91kb] [文件加载：47]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'doregist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryHpphFGcUUSRquqf0',
+  'content-length' => '754',
+  'x-original-url' => '/member/doregist',
+  'postman-token' => 'dfff4154-85fb-d7c3-c307-2cfbb3366375',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=f0b7dad4999dd503ff7ac56a54bde7d6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039488',
+  'password' => '123456',
+  'true_name' => '测试数据1',
+  'hospital_id' => '4',
+  'area_id' => '3',
+  'smscode' => '750424',
+  'invite_code' => '1002',
+)
+[ info ] [ RUN ] app\home\controller\Member->doregist[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: tokencode[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:364]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-03T11:27:57+08:00 ] 0.0.0.0 POST /member/getsms
+[ info ] localhost:7037/member/getsms [运行时间：0.266559s][吞吐率：3.75req/s] [内存消耗：3,124.95kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryHVZS1HkHLl8BftBT',
+  'content-length' => '337',
+  'x-original-url' => '/member/getsms',
+  'postman-token' => '6dec3d52-a397-296b-8b8c-d00eaa2e73e5',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=f0b7dad4999dd503ff7ac56a54bde7d6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039488',
+  'type' => '1',
+  'only_token' => '',
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: tokencode[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:678]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.089552s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.061500s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `mobile` = '15021039488' LIMIT 1 [ RunTime:0.059089s ]
+---------------------------------------------------------------
+[ 2018-06-03T11:28:32+08:00 ] 0.0.0.0 POST /member/doregist
+[ info ] localhost:7037/member/doregist [运行时间：0.050222s][吞吐率：19.91req/s] [内存消耗：2,154.91kb] [文件加载：47]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'doregist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarynjwrgsNrjAxBNmYV',
+  'content-length' => '754',
+  'x-original-url' => '/member/doregist',
+  'postman-token' => 'fc79ca74-8681-e2c0-9cc3-7085a762a45e',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=f0b7dad4999dd503ff7ac56a54bde7d6',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039499',
+  'password' => '123456',
+  'true_name' => '测试数据1',
+  'hospital_id' => '4',
+  'area_id' => '3',
+  'smscode' => '750424',
+  'invite_code' => '1002',
+)
+[ info ] [ RUN ] app\home\controller\Member->doregist[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: tokencode[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:364]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-03T11:28:35+08:00 ] 0.0.0.0 POST /member/getsms
+[ info ] localhost:7037/member/getsms [运行时间：0.464728s][吞吐率：2.15req/s] [内存消耗：4,215.55kb] [文件加载：78]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary7A5tBd5AjGnYmAfM',
+  'content-length' => '337',
+  'x-original-url' => '/member/getsms',
+  'postman-token' => '8a9b1dfc-338a-5369-ecc3-a619da300cb7',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=88d12bb5a60919c45e96d96255f5f1b3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039499',
+  'type' => '1',
+  'only_token' => '',
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: tokencode[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:678]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.094645s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.064355s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `mobile` = '15021039499' LIMIT 1 [ RunTime:0.063153s ]
+---------------------------------------------------------------
+[ 2018-06-03T11:28:41+08:00 ] 0.0.0.0 POST /member/doregist
+[ info ] localhost:7037/member/doregist [运行时间：1.079227s][吞吐率：0.93req/s] [内存消耗：4,158.02kb] [文件加载：69]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'doregist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryfbuhc3RtZuGbpVlq',
+  'content-length' => '754',
+  'x-original-url' => '/member/doregist',
+  'postman-token' => '2f8698a6-2a11-3188-676b-18b53a004c0e',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=88d12bb5a60919c45e96d96255f5f1b3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039499',
+  'password' => '123456',
+  'true_name' => '测试数据1',
+  'hospital_id' => '4',
+  'area_id' => '3',
+  'smscode' => '282528',
+  'invite_code' => '1002',
+)
+[ info ] [ RUN ] app\home\controller\Member->doregist[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.088784s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.058888s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `mobile` = '15021039499' LIMIT 1 [ RunTime:0.056993s ]
+[ sql ] [ SQL ] SELECT MAX(invite) AS tp_max FROM `jd_doctor` LIMIT 1 [ RunTime:0.056600s ]
+[ sql ] [ SQL ] INSERT INTO `jd_doctor` (`mobile` , `password` , `true_name` , `hospital_id` , `area_id` , `invite` , `member_sn` , `reg_date` , `reg_ip` , `guid` , `to_doctor_url`) VALUES ('15021039499' , 'ff4f3eb3e56e40e75178b60cf0e95b0b' , '测试数据1' , '4' , '3' , 1027 , 'tkt5b136069082a7' , 1527996521 , '0.0.0.0' , 'duwupkns' , '/uploads/code/1527996521code.png') [ RunTime:0.060093s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_diagnosis_set` [ RunTime:0.058006s ]
+[ sql ] [ SQL ] INSERT INTO `jd_diagnosis_set` (`member_id` , `add_date` , `operate_date` , `release_date`) VALUES (40 , 1527996521 , 1527996521 , 1527996521) [ RunTime:0.058094s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_invite_record` [ RunTime:0.056600s ]
+[ sql ] [ SQL ] INSERT INTO `jd_invite_record` (`member_id` , `invite` , `add_date`) VALUES (40 , '1002' , 1527996521) [ RunTime:0.058753s ]
+[ error ] [8]未定义数组索引: device_tokens[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:440]
+[ error ] [8]未定义数组索引: is_system[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:441]
+---------------------------------------------------------------
+[ 2018-06-03T11:29:03+08:00 ] 0.0.0.0 POST /member/doregist
+[ info ] localhost:7037/member/doregist [运行时间：0.050094s][吞吐率：19.96req/s] [内存消耗：2,154.91kb] [文件加载：47]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'doregist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary7um3kMChJwdk3CVe',
+  'content-length' => '754',
+  'x-original-url' => '/member/doregist',
+  'postman-token' => '20b42262-e3b9-27ba-5bb7-1d5c4d30b95e',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=88d12bb5a60919c45e96d96255f5f1b3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039499',
+  'password' => '123456',
+  'true_name' => '测试数据1',
+  'hospital_id' => '4',
+  'area_id' => '3',
+  'smscode' => '282528',
+  'invite_code' => '1002',
+)
+[ info ] [ RUN ] app\home\controller\Member->doregist[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: tokencode[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:364]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-03T11:29:12+08:00 ] 0.0.0.0 POST /member/getsms
+[ info ] localhost:7037/member/getsms [运行时间：0.271979s][吞吐率：3.68req/s] [内存消耗：3,124.95kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryvJAmsFn7NCU7YY8A',
+  'content-length' => '337',
+  'x-original-url' => '/member/getsms',
+  'postman-token' => 'e3ce07ad-9860-b8b5-2e0a-60a371470bcc',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=88d12bb5a60919c45e96d96255f5f1b3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039499',
+  'type' => '1',
+  'only_token' => '',
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: tokencode[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:678]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.089911s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.062319s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `mobile` = '15021039499' LIMIT 1 [ RunTime:0.059921s ]
+---------------------------------------------------------------
+[ 2018-06-03T11:30:16+08:00 ] 0.0.0.0 POST /member/getsms
+[ info ] localhost:7037/member/getsms [运行时间：0.387308s][吞吐率：2.58req/s] [内存消耗：4,215.46kb] [文件加载：78]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryhflYIvRH8dB5IkQG',
+  'content-length' => '337',
+  'x-original-url' => '/member/getsms',
+  'postman-token' => 'a90b3d82-4715-b90e-b3b0-b6c48c384965',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=88d12bb5a60919c45e96d96255f5f1b3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039455',
+  'type' => '1',
+  'only_token' => '',
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: tokencode[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:680]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.088578s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.060448s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `mobile` = '15021039455' LIMIT 1 [ RunTime:0.059153s ]
+---------------------------------------------------------------
+[ 2018-06-03T11:30:23+08:00 ] 0.0.0.0 POST /member/doregist
+[ info ] localhost:7037/member/doregist [运行时间：1.259454s][吞吐率：0.79req/s] [内存消耗：4,158.54kb] [文件加载：69]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'doregist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary6cUMtQ6oFBVbzEZH',
+  'content-length' => '754',
+  'x-original-url' => '/member/doregist',
+  'postman-token' => 'e95ea135-97f1-617e-affe-bdc5b0ac061b',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=74693c7b245a84abc99c6f91efa4ec69',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039455',
+  'password' => '123456',
+  'true_name' => '测试数据1',
+  'hospital_id' => '4',
+  'area_id' => '3',
+  'smscode' => '597732',
+  'invite_code' => '1002',
+)
+[ info ] [ RUN ] app\home\controller\Member->doregist[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.090425s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.062839s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `mobile` = '15021039455' LIMIT 1 [ RunTime:0.059953s ]
+[ sql ] [ SQL ] SELECT MAX(invite) AS tp_max FROM `jd_doctor` LIMIT 1 [ RunTime:0.059690s ]
+[ sql ] [ SQL ] INSERT INTO `jd_doctor` (`mobile` , `password` , `true_name` , `hospital_id` , `area_id` , `invite` , `member_sn` , `reg_date` , `reg_ip` , `guid` , `to_doctor_url`) VALUES ('15021039455' , '9f01cbe249bd7a2ab592b5c596c1f664' , '测试数据1' , '4' , '3' , 1028 , 'tkt5b1360ce84131' , 1527996622 , '0.0.0.0' , 'gjezbwzk' , '/uploads/code/1527996622code.png') [ RunTime:0.061414s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_diagnosis_set` [ RunTime:0.060483s ]
+[ sql ] [ SQL ] INSERT INTO `jd_diagnosis_set` (`member_id` , `add_date` , `operate_date` , `release_date`) VALUES (41 , 1527996622 , 1527996622 , 1527996622) [ RunTime:0.061598s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_invite_record` [ RunTime:0.060378s ]
+[ sql ] [ SQL ] INSERT INTO `jd_invite_record` (`member_id` , `invite` , `add_date`) VALUES (41 , '1002' , 1527996622) [ RunTime:0.061763s ]
+[ error ] [8]未定义数组索引: device_tokens[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:440]
+[ error ] [8]未定义数组索引: is_system[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:441]
+---------------------------------------------------------------
+[ 2018-06-03T11:32:21+08:00 ] 0.0.0.0 POST /member/getsms
+[ info ] localhost:7037/member/getsms [运行时间：0.620610s][吞吐率：1.61req/s] [内存消耗：4,215.46kb] [文件加载：78]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryyZTt0UcgG9j1hGvi',
+  'content-length' => '424',
+  'x-original-url' => '/member/getsms',
+  'postman-token' => '1b9e1962-144c-90ab-d822-9401b532d7eb',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=74693c7b245a84abc99c6f91efa4ec69',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039455',
+  'type' => '1',
+  'only_token' => '',
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: tokencode[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:680]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.089068s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.061597s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `mobile` = '15021039455' LIMIT 1 [ RunTime:0.059190s ]
+---------------------------------------------------------------
+[ 2018-06-03T11:32:29+08:00 ] 0.0.0.0 POST /member/doregist
+[ info ] localhost:7037/member/doregist [运行时间：1.181904s][吞吐率：0.85req/s] [内存消耗：4,096.80kb] [文件加载：66]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'doregist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary9ngctQlM9HlOXGh5',
+  'content-length' => '963',
+  'x-original-url' => '/member/doregist',
+  'postman-token' => 'd3011665-b796-9a4f-49ef-4cb022b48117',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=74693c7b245a84abc99c6f91efa4ec69',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039455',
+  'password' => '123456',
+  'true_name' => '测试数据1',
+  'hospital_id' => '4',
+  'area_id' => '3',
+  'smscode' => '531198',
+  'invite_code' => '1002',
+  'device_tokens' => '213213123123',
+  'is_system' => '1',
+)
+[ info ] [ RUN ] app\home\controller\Member->doregist[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.080821s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.057138s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `mobile` = '15021039455' LIMIT 1 [ RunTime:0.054109s ]
+[ sql ] [ SQL ] SELECT MAX(invite) AS tp_max FROM `jd_doctor` LIMIT 1 [ RunTime:0.055964s ]
+[ sql ] [ SQL ] INSERT INTO `jd_doctor` (`mobile` , `password` , `true_name` , `hospital_id` , `area_id` , `device_tokens` , `is_system` , `invite` , `member_sn` , `reg_date` , `reg_ip` , `guid` , `to_doctor_url`) VALUES ('15021039455' , '2bcb37b3d78ddc0b15552f7156746c0d' , '测试数据1' , '4' , '3' , '213213123123' , 1 , 1026 , 'tkt5b13614c4a70b' , 1527996748 , '0.0.0.0' , 'hhravshl' , '/uploads/code/1527996748code.png') [ RunTime:0.056445s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_diagnosis_set` [ RunTime:0.054328s ]
+[ sql ] [ SQL ] INSERT INTO `jd_diagnosis_set` (`member_id` , `add_date` , `operate_date` , `release_date`) VALUES (42 , 1527996748 , 1527996748 , 1527996748) [ RunTime:0.056462s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_invite_record` [ RunTime:0.054861s ]
+[ sql ] [ SQL ] INSERT INTO `jd_invite_record` (`member_id` , `invite` , `add_date`) VALUES (42 , '1002' , 1527996748) [ RunTime:0.062119s ]
+---------------------------------------------------------------
+[ 2018-06-03T11:41:29+08:00 ] 0.0.0.0 POST /member/dologin
+[ info ] localhost:7037/member/dologin [运行时间：0.264189s][吞吐率：3.79req/s] [内存消耗：3,132.27kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'dologin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '194',
+  'x-original-url' => '/member/dologin',
+  'user-agent' => 'YiSong/1.0 (iPhone; iOS 11.3.1; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=hp8de01vvr8dlss3o3qsibprh5',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021049435',
+  'password' => '123456',
+  'only_token' => '',
+  'is_system' => '1',
+  '_time' => '1527997232',
+  'device_tokens' => '1DAE8E70-B0EE-44C7-922B-620E38E63E5F',
+  'sign' => '8a1877c1bf8cd43445fad6de24067cf9',
+)
+[ info ] [ RUN ] app\home\controller\Member->dologin[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086679s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.065598s ]
+[ sql ] [ SQL ] SELECT `member_id`,`member_sn`,`member_name`,`mobile`,`password`,`guid`,`true_name`,`is_clinic`,`is_certified`,`login_state`,`device_tokens`,`is_status` FROM `jd_doctor` WHERE  `mobile` = '15021049435' LIMIT 1 [ RunTime:0.058404s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-03T11:41:34+08:00 ] 0.0.0.0 POST /member/dologin
+[ info ] localhost:7037/member/dologin [运行时间：0.250973s][吞吐率：3.98req/s] [内存消耗：3,132.27kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'dologin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '194',
+  'x-original-url' => '/member/dologin',
+  'user-agent' => 'YiSong/1.0 (iPhone; iOS 11.3.1; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=hp8de01vvr8dlss3o3qsibprh5',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021049435',
+  'password' => '123456',
+  'only_token' => '',
+  'is_system' => '1',
+  '_time' => '1527997232',
+  'device_tokens' => '1DAE8E70-B0EE-44C7-922B-620E38E63E5F',
+  'sign' => '8a1877c1bf8cd43445fad6de24067cf9',
+)
+[ info ] [ RUN ] app\home\controller\Member->dologin[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.087615s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.059956s ]
+[ sql ] [ SQL ] SELECT `member_id`,`member_sn`,`member_name`,`mobile`,`password`,`guid`,`true_name`,`is_clinic`,`is_certified`,`login_state`,`device_tokens`,`is_status` FROM `jd_doctor` WHERE  `mobile` = '15021049435' LIMIT 1 [ RunTime:0.058544s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-03T11:42:16+08:00 ] 0.0.0.0 POST /member/doregist
+[ info ] localhost:7037/member/doregist [运行时间：0.035472s][吞吐率：28.19req/s] [内存消耗：2,156.18kb] [文件加载：47]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'doregist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryoZBG9OwzRx77iiAK',
+  'content-length' => '963',
+  'x-original-url' => '/member/doregist',
+  'postman-token' => 'a7241522-f992-3546-ce7b-36f00cd33ebd',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=74693c7b245a84abc99c6f91efa4ec69',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039455',
+  'password' => '123456',
+  'true_name' => '测试数据1',
+  'hospital_id' => '4',
+  'area_id' => '3',
+  'smscode' => '531198',
+  'invite_code' => '1002',
+  'device_tokens' => '213213123123',
+  'is_system' => '1',
+)
+[ info ] [ RUN ] app\home\controller\Member->doregist[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: tokencode[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:366]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-03T11:42:39+08:00 ] 0.0.0.0 POST /member/dologin
+[ info ] localhost:7037/member/dologin [运行时间：0.031138s][吞吐率：32.11req/s] [内存消耗：2,074.45kb] [文件加载：44]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'dologin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '194',
+  'x-original-url' => '/member/dologin',
+  'user-agent' => 'YiSong/1.0 (iPhone; iOS 11.3.1; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=hp8de01vvr8dlss3o3qsibprh5',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021049435',
+  'password' => '123456',
+  'only_token' => '',
+  'is_system' => '1',
+  '_time' => '1527997232',
+  'device_tokens' => '1DAE8E70-B0EE-44C7-922B-620E38E63E5F',
+  'sign' => '8a1877c1bf8cd43445fad6de24067cf9',
+)
+[ info ] [ RUN ] app\home\controller\Member->dologin[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-03T11:43:32+08:00 ] 0.0.0.0 POST /member/dologin
+[ info ] localhost:7037/member/dologin [运行时间：0.251221s][吞吐率：3.98req/s] [内存消耗：3,052.08kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'dologin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '194',
+  'x-original-url' => '/member/dologin',
+  'user-agent' => 'YiSong/1.0 (iPhone; iOS 11.3.1; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=hp8de01vvr8dlss3o3qsibprh5',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021049435',
+  'password' => '123456',
+  'only_token' => '',
+  'is_system' => '1',
+  '_time' => '1527997232',
+  'device_tokens' => '1DAE8E70-B0EE-44C7-922B-620E38E63E5F',
+  'sign' => '8a1877c1bf8cd43445fad6de24067cf9',
+)
+[ info ] [ RUN ] app\home\controller\Member->dologin[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086231s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.058403s ]
+[ sql ] [ SQL ] SELECT `member_id`,`member_sn`,`member_name`,`mobile`,`password`,`guid`,`true_name`,`is_clinic`,`is_certified`,`login_state`,`device_tokens`,`is_status` FROM `jd_doctor` WHERE  `mobile` = '15021049435' LIMIT 1 [ RunTime:0.057802s ]
+---------------------------------------------------------------
+[ 2018-06-03T11:43:55+08:00 ] 0.0.0.0 POST /member/dologin
+[ info ] localhost:7037/member/dologin [运行时间：0.255130s][吞吐率：3.92req/s] [内存消耗：3,052.94kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'dologin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '194',
+  'x-original-url' => '/member/dologin',
+  'user-agent' => 'YiSong/1.0 (iPhone; iOS 11.3.1; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=hp8de01vvr8dlss3o3qsibprh5',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021049435',
+  'password' => '123456',
+  'only_token' => '',
+  'is_system' => '1',
+  '_time' => '1527997232',
+  'device_tokens' => '1DAE8E70-B0EE-44C7-922B-620E38E63E5F',
+  'sign' => '8a1877c1bf8cd43445fad6de24067cf9',
+)
+[ info ] [ RUN ] app\home\controller\Member->dologin[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.091946s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.063295s ]
+[ sql ] [ SQL ] SELECT `member_id`,`member_sn`,`member_name`,`mobile`,`password`,`guid`,`true_name`,`is_clinic`,`is_certified`,`login_state`,`device_tokens`,`is_status` FROM `jd_doctor` WHERE  `mobile` = '15021049435' LIMIT 1 [ RunTime:0.059442s ]
+---------------------------------------------------------------
+[ 2018-06-03T11:51:25+08:00 ] 0.0.0.0 POST /diagnosing/addHospital
+[ info ] localhost:7037/diagnosing/addHospital [运行时间：0.330080s][吞吐率：3.03req/s] [内存消耗：3,167.91kb] [文件加载：57]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'diagnosing',
+    2 => 'addHospital',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '281',
+  'x-original-url' => '/diagnosing/addHospital',
+  'user-agent' => 'YiSong/1.0 (iPhone; iOS 11.3.1; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=hp8de01vvr8dlss3o3qsibprh5',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'only_token' => 'Authorization:Bearer YWMtt_skzmbgEeiJrvE4JNT5RgAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFjw8EJQwBPGgCWxfOf_MU-_wIogvQz9Kqlcws2hdtfERPEDfEgMVLRWg',
+  'hospital_repart_id' => 58,
+  'member_id' => 2,
+  'sign' => 'c0c26b07513b2abc4dff884a91a87a84',
+  '_time' => '1527997644',
+  'area_id' => 2,
+)
+[ info ] [ RUN ] app\home\controller\Diagnosing->addHospital[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Diagnosing.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.083574s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.058506s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.058189s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `hospital_repart_str`='5,58,58,58,58,58',`release_date`=1527997884  WHERE  `member_id` = 2 [ RunTime:0.058269s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-03T11:52:42+08:00 ] 0.0.0.0 POST /diagnosing/addHospital
+[ info ] localhost:7037/diagnosing/addHospital [运行时间：0.257024s][吞吐率：3.89req/s] [内存消耗：3,102.13kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'diagnosing',
+    2 => 'addHospital',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '281',
+  'x-original-url' => '/diagnosing/addHospital',
+  'user-agent' => 'YiSong/1.0 (iPhone; iOS 11.3.1; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=hp8de01vvr8dlss3o3qsibprh5',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'only_token' => 'Authorization:Bearer YWMtt_skzmbgEeiJrvE4JNT5RgAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFjw8EJQwBPGgCWxfOf_MU-_wIogvQz9Kqlcws2hdtfERPEDfEgMVLRWg',
+  'hospital_repart_id' => 58,
+  'member_id' => 2,
+  'sign' => 'c0c26b07513b2abc4dff884a91a87a84',
+  '_time' => '1527997644',
+  'area_id' => 2,
+)
+[ info ] [ RUN ] app\home\controller\Diagnosing->addHospital[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Diagnosing.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.089573s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.061658s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.062725s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-03T11:52:47+08:00 ] 0.0.0.0 POST /diagnosing/addHospital
+[ info ] localhost:7037/diagnosing/addHospital [运行时间：0.254451s][吞吐率：3.93req/s] [内存消耗：3,102.13kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'diagnosing',
+    2 => 'addHospital',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '281',
+  'x-original-url' => '/diagnosing/addHospital',
+  'user-agent' => 'YiSong/1.0 (iPhone; iOS 11.3.1; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=hp8de01vvr8dlss3o3qsibprh5',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'only_token' => 'Authorization:Bearer YWMtt_skzmbgEeiJrvE4JNT5RgAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFjw8EJQwBPGgCWxfOf_MU-_wIogvQz9Kqlcws2hdtfERPEDfEgMVLRWg',
+  'hospital_repart_id' => 58,
+  'member_id' => 2,
+  'sign' => 'c0c26b07513b2abc4dff884a91a87a84',
+  '_time' => '1527997644',
+  'area_id' => 2,
+)
+[ info ] [ RUN ] app\home\controller\Diagnosing->addHospital[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Diagnosing.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.089682s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.059662s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.060811s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-03T11:54:40+08:00 ] 0.0.0.0 POST /diagnosing/addHospital
+[ info ] localhost:7037/diagnosing/addHospital [运行时间：0.260555s][吞吐率：3.84req/s] [内存消耗：3,021.67kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'diagnosing',
+    2 => 'addHospital',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '281',
+  'x-original-url' => '/diagnosing/addHospital',
+  'user-agent' => 'YiSong/1.0 (iPhone; iOS 11.3.1; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=hp8de01vvr8dlss3o3qsibprh5',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'only_token' => 'Authorization:Bearer YWMtt_skzmbgEeiJrvE4JNT5RgAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFjw8EJQwBPGgCWxfOf_MU-_wIogvQz9Kqlcws2hdtfERPEDfEgMVLRWg',
+  'hospital_repart_id' => 58,
+  'member_id' => 2,
+  'sign' => 'c0c26b07513b2abc4dff884a91a87a84',
+  '_time' => '1527997644',
+  'area_id' => 2,
+)
+[ info ] [ RUN ] app\home\controller\Diagnosing->addHospital[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Diagnosing.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.090476s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.061100s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.061944s ]
+---------------------------------------------------------------
+[ 2018-06-03T11:54:45+08:00 ] 0.0.0.0 POST /diagnosing/addHospital
+[ info ] localhost:7037/diagnosing/addHospital [运行时间：0.254608s][吞吐率：3.93req/s] [内存消耗：3,021.67kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'diagnosing',
+    2 => 'addHospital',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '281',
+  'x-original-url' => '/diagnosing/addHospital',
+  'user-agent' => 'YiSong/1.0 (iPhone; iOS 11.3.1; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=hp8de01vvr8dlss3o3qsibprh5',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'only_token' => 'Authorization:Bearer YWMtt_skzmbgEeiJrvE4JNT5RgAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFjw8EJQwBPGgCWxfOf_MU-_wIogvQz9Kqlcws2hdtfERPEDfEgMVLRWg',
+  'hospital_repart_id' => 58,
+  'member_id' => 2,
+  'sign' => 'c0c26b07513b2abc4dff884a91a87a84',
+  '_time' => '1527997644',
+  'area_id' => 2,
+)
+[ info ] [ RUN ] app\home\controller\Diagnosing->addHospital[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Diagnosing.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.085533s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.059192s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.066667s ]
+---------------------------------------------------------------
+[ 2018-06-03T11:56:04+08:00 ] 0.0.0.0 POST /diagnosing/addHospital
+[ info ] localhost:7037/diagnosing/addHospital [运行时间：0.251153s][吞吐率：3.98req/s] [内存消耗：3,021.57kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'diagnosing',
+    2 => 'addHospital',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '281',
+  'x-original-url' => '/diagnosing/addHospital',
+  'user-agent' => 'YiSong/1.0 (iPhone; iOS 11.3.1; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=hp8de01vvr8dlss3o3qsibprh5',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'only_token' => 'Authorization:Bearer YWMtt_skzmbgEeiJrvE4JNT5RgAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFjw8EJQwBPGgCWxfOf_MU-_wIogvQz9Kqlcws2hdtfERPEDfEgMVLRWg',
+  'hospital_repart_id' => 58,
+  'member_id' => 2,
+  'sign' => 'c0c26b07513b2abc4dff884a91a87a84',
+  '_time' => '1527997644',
+  'area_id' => 2,
+)
+[ info ] [ RUN ] app\home\controller\Diagnosing->addHospital[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Diagnosing.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086444s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.060745s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.061886s ]
+---------------------------------------------------------------
+[ 2018-06-03T11:56:06+08:00 ] 0.0.0.0 POST /diagnosing/addHospital
+[ info ] localhost:7037/diagnosing/addHospital [运行时间：0.257576s][吞吐率：3.88req/s] [内存消耗：3,021.57kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'diagnosing',
+    2 => 'addHospital',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '281',
+  'x-original-url' => '/diagnosing/addHospital',
+  'user-agent' => 'YiSong/1.0 (iPhone; iOS 11.3.1; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=hp8de01vvr8dlss3o3qsibprh5',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'only_token' => 'Authorization:Bearer YWMtt_skzmbgEeiJrvE4JNT5RgAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFjw8EJQwBPGgCWxfOf_MU-_wIogvQz9Kqlcws2hdtfERPEDfEgMVLRWg',
+  'hospital_repart_id' => 58,
+  'member_id' => 2,
+  'sign' => 'c0c26b07513b2abc4dff884a91a87a84',
+  '_time' => '1527997644',
+  'area_id' => 2,
+)
+[ info ] [ RUN ] app\home\controller\Diagnosing->addHospital[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Diagnosing.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.085318s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.058157s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.059088s ]
+---------------------------------------------------------------
+[ 2018-06-03T11:56:29+08:00 ] 0.0.0.0 POST /diagnosing/addHospital
+[ info ] localhost:7037/diagnosing/addHospital [运行时间：0.264002s][吞吐率：3.79req/s] [内存消耗：3,021.57kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'diagnosing',
+    2 => 'addHospital',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '281',
+  'x-original-url' => '/diagnosing/addHospital',
+  'user-agent' => 'YiSong/1.0 (iPhone; iOS 11.3.1; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=hp8de01vvr8dlss3o3qsibprh5',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'only_token' => 'Authorization:Bearer YWMtt_skzmbgEeiJrvE4JNT5RgAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFjw8EJQwBPGgCWxfOf_MU-_wIogvQz9Kqlcws2hdtfERPEDfEgMVLRWg',
+  'hospital_repart_id' => 58,
+  'member_id' => 2,
+  'sign' => 'c0c26b07513b2abc4dff884a91a87a84',
+  '_time' => '1527997644',
+  'area_id' => 2,
+)
+[ info ] [ RUN ] app\home\controller\Diagnosing->addHospital[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Diagnosing.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.089719s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.062221s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.070659s ]
+---------------------------------------------------------------
+[ 2018-06-03T11:57:00+08:00 ] 0.0.0.0 POST /diagnosing/addHospital
+[ info ] localhost:7037/diagnosing/addHospital [运行时间：0.242245s][吞吐率：4.13req/s] [内存消耗：3,021.57kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'diagnosing',
+    2 => 'addHospital',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '281',
+  'x-original-url' => '/diagnosing/addHospital',
+  'user-agent' => 'YiSong/1.0 (iPhone; iOS 11.3.1; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=hp8de01vvr8dlss3o3qsibprh5',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'only_token' => 'Authorization:Bearer YWMtt_skzmbgEeiJrvE4JNT5RgAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFjw8EJQwBPGgCWxfOf_MU-_wIogvQz9Kqlcws2hdtfERPEDfEgMVLRWg',
+  'hospital_repart_id' => 58,
+  'member_id' => 2,
+  'sign' => 'c0c26b07513b2abc4dff884a91a87a84',
+  '_time' => '1527997644',
+  'area_id' => 2,
+)
+[ info ] [ RUN ] app\home\controller\Diagnosing->addHospital[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Diagnosing.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.082146s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.056113s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.057648s ]
+---------------------------------------------------------------
+[ 2018-06-03T11:57:40+08:00 ] 0.0.0.0 POST /diagnosing/addHospital
+[ info ] localhost:7037/diagnosing/addHospital [运行时间：0.262998s][吞吐率：3.80req/s] [内存消耗：3,102.63kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'diagnosing',
+    2 => 'addHospital',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '281',
+  'x-original-url' => '/diagnosing/addHospital',
+  'user-agent' => 'YiSong/1.0 (iPhone; iOS 11.3.1; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=hp8de01vvr8dlss3o3qsibprh5',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'only_token' => 'Authorization:Bearer YWMtt_skzmbgEeiJrvE4JNT5RgAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFjw8EJQwBPGgCWxfOf_MU-_wIogvQz9Kqlcws2hdtfERPEDfEgMVLRWg',
+  'hospital_repart_id' => 58,
+  'member_id' => 2,
+  'sign' => 'c0c26b07513b2abc4dff884a91a87a84',
+  '_time' => '1527997644',
+  'area_id' => 2,
+)
+[ info ] [ RUN ] app\home\controller\Diagnosing->addHospital[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Diagnosing.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.091843s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.060580s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.064695s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-03T11:57:57+08:00 ] 0.0.0.0 POST /diagnosing/addHospital
+[ info ] localhost:7037/diagnosing/addHospital [运行时间：0.297173s][吞吐率：3.37req/s] [内存消耗：3,102.15kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'diagnosing',
+    2 => 'addHospital',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '281',
+  'x-original-url' => '/diagnosing/addHospital',
+  'user-agent' => 'YiSong/1.0 (iPhone; iOS 11.3.1; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=hp8de01vvr8dlss3o3qsibprh5',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'only_token' => 'Authorization:Bearer YWMtt_skzmbgEeiJrvE4JNT5RgAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFjw8EJQwBPGgCWxfOf_MU-_wIogvQz9Kqlcws2hdtfERPEDfEgMVLRWg',
+  'hospital_repart_id' => 58,
+  'member_id' => 2,
+  'sign' => 'c0c26b07513b2abc4dff884a91a87a84',
+  '_time' => '1527997644',
+  'area_id' => 2,
+)
+[ info ] [ RUN ] app\home\controller\Diagnosing->addHospital[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Diagnosing.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.095682s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.071151s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.067243s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-03T11:58:01+08:00 ] 0.0.0.0 POST /diagnosing/addHospital
+[ info ] localhost:7037/diagnosing/addHospital [运行时间：0.247071s][吞吐率：4.05req/s] [内存消耗：3,102.15kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'diagnosing',
+    2 => 'addHospital',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '281',
+  'x-original-url' => '/diagnosing/addHospital',
+  'user-agent' => 'YiSong/1.0 (iPhone; iOS 11.3.1; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=hp8de01vvr8dlss3o3qsibprh5',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'only_token' => 'Authorization:Bearer YWMtt_skzmbgEeiJrvE4JNT5RgAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFjw8EJQwBPGgCWxfOf_MU-_wIogvQz9Kqlcws2hdtfERPEDfEgMVLRWg',
+  'hospital_repart_id' => 58,
+  'member_id' => 2,
+  'sign' => 'c0c26b07513b2abc4dff884a91a87a84',
+  '_time' => '1527997644',
+  'area_id' => 2,
+)
+[ info ] [ RUN ] app\home\controller\Diagnosing->addHospital[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Diagnosing.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086946s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.058350s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.057663s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-03T11:59:00+08:00 ] 0.0.0.0 POST /diagnosing/addHospital
+[ info ] localhost:7037/diagnosing/addHospital [运行时间：0.245512s][吞吐率：4.07req/s] [内存消耗：3,021.85kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'diagnosing',
+    2 => 'addHospital',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '281',
+  'x-original-url' => '/diagnosing/addHospital',
+  'user-agent' => 'YiSong/1.0 (iPhone; iOS 11.3.1; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=hp8de01vvr8dlss3o3qsibprh5',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'only_token' => 'Authorization:Bearer YWMtt_skzmbgEeiJrvE4JNT5RgAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFjw8EJQwBPGgCWxfOf_MU-_wIogvQz9Kqlcws2hdtfERPEDfEgMVLRWg',
+  'hospital_repart_id' => 58,
+  'member_id' => 2,
+  'sign' => 'c0c26b07513b2abc4dff884a91a87a84',
+  '_time' => '1527997644',
+  'area_id' => 2,
+)
+[ info ] [ RUN ] app\home\controller\Diagnosing->addHospital[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Diagnosing.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.085496s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.058586s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.059223s ]
+---------------------------------------------------------------
+[ 2018-06-03T11:59:28+08:00 ] 0.0.0.0 POST /diagnosing/addHospital
+[ info ] localhost:7037/diagnosing/addHospital [运行时间：0.315202s][吞吐率：3.17req/s] [内存消耗：3,168.10kb] [文件加载：57]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'diagnosing',
+    2 => 'addHospital',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '281',
+  'x-original-url' => '/diagnosing/addHospital',
+  'user-agent' => 'YiSong/1.0 (iPhone; iOS 11.3.1; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=hp8de01vvr8dlss3o3qsibprh5',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'only_token' => 'Authorization:Bearer YWMtt_skzmbgEeiJrvE4JNT5RgAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFjw8EJQwBPGgCWxfOf_MU-_wIogvQz9Kqlcws2hdtfERPEDfEgMVLRWg',
+  'hospital_repart_id' => 58,
+  'member_id' => 2,
+  'sign' => 'c0c26b07513b2abc4dff884a91a87a84',
+  '_time' => '1527997644',
+  'area_id' => 2,
+)
+[ info ] [ RUN ] app\home\controller\Diagnosing->addHospital[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Diagnosing.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084250s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.061635s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.059675s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `hospital_repart_str`='5,58',`release_date`=1527998368  WHERE  `member_id` = 2 [ RunTime:0.058227s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-03T12:06:25+08:00 ] 0.0.0.0 POST /diagnosing/addHospital
+[ info ] localhost:7037/diagnosing/addHospital [运行时间：0.322177s][吞吐率：3.10req/s] [内存消耗：3,168.08kb] [文件加载：57]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'diagnosing',
+    2 => 'addHospital',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '281',
+  'x-original-url' => '/diagnosing/addHospital',
+  'user-agent' => 'YiSong/1.0 (iPhone; iOS 11.3.1; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=hp8de01vvr8dlss3o3qsibprh5',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'only_token' => 'Authorization:Bearer YWMtt_skzmbgEeiJrvE4JNT5RgAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFjw8EJQwBPGgCWxfOf_MU-_wIogvQz9Kqlcws2hdtfERPEDfEgMVLRWg',
+  'hospital_repart_id' => 57,
+  'member_id' => 2,
+  'sign' => 'c0c26b07513b2abc4dff884a91a87a84',
+  '_time' => '1527997644',
+  'area_id' => 2,
+)
+[ info ] [ RUN ] app\home\controller\Diagnosing->addHospital[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Diagnosing.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.087790s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.058615s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.060832s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `hospital_repart_str`='5,58,57',`release_date`=1527998785  WHERE  `member_id` = 2 [ RunTime:0.060207s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-03T12:06:48+08:00 ] 0.0.0.0 POST /diagnosing/addHospital
+[ info ] localhost:7037/diagnosing/addHospital [运行时间：0.312006s][吞吐率：3.21req/s] [内存消耗：3,168.10kb] [文件加载：57]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'diagnosing',
+    2 => 'addHospital',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '281',
+  'x-original-url' => '/diagnosing/addHospital',
+  'user-agent' => 'YiSong/1.0 (iPhone; iOS 11.3.1; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=hp8de01vvr8dlss3o3qsibprh5',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'only_token' => 'Authorization:Bearer YWMtt_skzmbgEeiJrvE4JNT5RgAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFjw8EJQwBPGgCWxfOf_MU-_wIogvQz9Kqlcws2hdtfERPEDfEgMVLRWg',
+  'hospital_repart_id' => 57,
+  'member_id' => 2,
+  'sign' => 'c0c26b07513b2abc4dff884a91a87a84',
+  '_time' => '1527997644',
+  'area_id' => 2,
+)
+[ info ] [ RUN ] app\home\controller\Diagnosing->addHospital[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Diagnosing.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084897s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.061418s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.059449s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `hospital_repart_str`='5,57',`release_date`=1527998808  WHERE  `member_id` = 2 [ RunTime:0.058733s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]

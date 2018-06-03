@@ -201,8 +201,10 @@ class Selfdrug extends Common
                 ->field("sg.*, d.true_name, d.title_str")
                 ->find();
 
+
             //是否显示方剂标识
             if ($goodsInfo['content'] != '') {
+                $goodsInfo['content'] = base64_encode($goodsInfo['content']);
                 $goodsInfo['has_self_drug'] = 1;
             } else {
                 $goodsInfo['has_self_drug'] = 0;

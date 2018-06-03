@@ -29,6 +29,7 @@ class Member extends Common
                 ajaxReturn($res);
             }
             $map['mobile']=$data['mobile'];
+
             $info=db('doctor')->where($map)->field("member_id,member_sn,member_name,mobile,password,guid, true_name, is_clinic, is_certified, login_state, device_tokens, is_status")->find();
             if(!empty($info))
             {
@@ -339,6 +340,8 @@ class Member extends Common
      */
     public function doregist()
     {
+
+
         if($this->request->isPost())
         {
 
@@ -385,6 +388,7 @@ class Member extends Common
             //查询当前最大邀请码
             $maxInvite = db('doctor')->max('invite');
 
+
             unset($data['smscode'],$data['_time'],$data['sign']);
             $data['invite'] = $maxInvite + 1;
             $data['member_sn']=uniqid("tkt");
@@ -393,6 +397,7 @@ class Member extends Common
             //localhost访问ip为0.0.0.0
             $data['reg_ip'] = Request::instance()->ip();
             $data['guid']=randCode(8,2);
+            $_oldPwd['password'] = $data['password'];
             $data['password']=md5(md5($data['password']).$data['guid']);
 
             //生成医生邀请医生的二维码图片路径
@@ -402,8 +407,7 @@ class Member extends Common
             unset($data['invite_code']);
             $_identify = db('doctor')->insertGetId($data);
 
-            if($_identify)
-            {
+            if($_identify) {
                 $diagnosis_set = array();
                 $diagnosis_set['member_id'] = $_identify;
                 $diagnosis_set['add_date'] = time();
@@ -431,7 +435,17 @@ class Member extends Common
                 $h=new \Easemob($options);
                 $h->createUser($data['member_sn'],"123456");
 
-                ajaxReturn(array('code' => 1, 'info' => '注册成功','data'=>[]));
+                //注册即可登录
+                $loginData['mobile'] = $data['mobile'];
+                $loginData['password'] = $_oldPwd['password'];
+                $loginData['device_tokens'] = $data['device_tokens'];
+                $loginData['is_system'] = $data['is_system'];
+                $result = curlPost(config('url').'/member/dologin', $loginData);
+                if ($result == false) {
+                    ajaxReturn(array('code' => 0, 'info' => '注册成功, 由于系统繁忙登录失败, 请重新登录!','data'=>[]));
+                } else {
+                    return $result;
+                }
             }else
             {
                 ajaxReturn(array('code' => 1, 'info' => '注册失败','data'=>[]));
@@ -439,6 +453,8 @@ class Member extends Common
 
         }
     }
+
+
 
     public function webRegist()
     {
@@ -576,11 +592,16 @@ class Member extends Common
             $existGoods > 0 ? $uinfo['has_self_goods'] = 1 : $uinfo['has_self_goods'] = 0;
 
             //查询科室
-            $uinfo['department_arr'] = db('hospital_repart')->alias('hr')
-                ->join(['jd_department'=>'d'], 'd.department_id = hr.department_id' , 'inner')
-                ->where("hr.hospital_repart_id IN({$uinfo['hospital_repart_str']}) AND d.is_show = 1")
-                ->field("d.department_name")
-                ->select();
+            if ($uinfo['hospital_repart_str']) {
+                $uinfo['department_arr'] = db('hospital_repart')->alias('hr')
+                    ->join(['jd_department'=>'d'], 'd.department_id = hr.department_id' , 'inner')
+                    ->where("hr.hospital_repart_id IN({$uinfo['hospital_repart_str']}) AND d.is_show = 1")
+                    ->field("d.department_name")
+                    ->select();
+            } else {
+                $uinfo['department_arr'] = array();
+            }
+
 
 
             if (!empty($uinfo)) {
@@ -635,7 +656,6 @@ class Member extends Common
      */
     public function getsms()
     {
-        $status = sendAliSMS('1', '1');
         if($this->request->isPost())
         {
             $data=input('post.');
@@ -659,9 +679,9 @@ class Member extends Common
             session_id(md5($mobile));
             session_start();
             $token = $_SESSION['tokencode'];
+
             if (!empty($token)&&$token['expired_at']>time() )
             {
-//                var_dump($token);die;
                 ajaxReturn(array('code'=>0, 'info'=>$timer.'秒内仅能获取一次验证码,请稍后重试','data'=>[]));
             }
             $randcode = randCode(6, 1);
@@ -673,7 +693,7 @@ class Member extends Common
                     $count=db('doctor')->where($map)->count();
                     if($count>0)
                     {
-                        ajaxReturn(array('code' =>0, 'info' => '手机号码已绑定！','data'=>[]));
+                        ajaxReturn(array('code' =>0, 'info' => '该手机号已注册过账号请直接登录！','data'=>[]));
                     }
                     break;
                 //快速登录发送验证码

@@ -28,9 +28,10 @@ class Diagnosing extends Common
             if (empty($doctorInfo)) {
                 ajaxReturn(array('code' => 0, 'info' => '用户不存在!', 'data' => []));
             }
-            if (strpos($doctorInfo['hospital_repart_str'], $data['hospital_repart_id']) !== false) {
+            if (strpos($doctorInfo['hospital_repart_str'], $data['hospital_repart_id'].'') !== false) {
                 ajaxReturn(array('code' => 0, 'info' => '您已添加过该科室!', 'data' => []));
             }
+
             //绑定科室的上限是6个
             $maxNum = config('maxDepartNum');
             if (count(explode(',', $doctorInfo['hospital_repart_str'])) >= $maxNum) {
@@ -39,6 +40,7 @@ class Diagnosing extends Common
             //更新用户的科室信息
             $userMap['hospital_repart_str'] = $doctorInfo['hospital_repart_str'] ? $doctorInfo['hospital_repart_str'] . ',' . $data['hospital_repart_id'] : $data['hospital_repart_id'];
             $userMap['release_date'] = time();
+
             $_identity = db('doctor')->where($map)->update($userMap);
             if ($_identity) {
                 ajaxReturn(array('code' => 1, 'info' => 'ok', 'data' => []));
