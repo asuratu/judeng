@@ -188,7 +188,7 @@ class Diagnosing extends Common
                 //查询医生信息
                 $doctorMap['member_id'] = $data['member_id'];
                 $memberInfo = db('doctor')->where($doctorMap)->field("*")->find();
-                if (strstr($memberInfo['hospital_repart_str'], $data['hospital_repart_id']) === false) {
+                if (strstr($memberInfo['hospital_repart_str'], $data['hospital_repart_id'].'') === false) {
                     ajaxReturn(array('code' => 0, 'info' => '您还未添加该科室!', 'data' => []));
                 }
                 //查询已有排班
@@ -257,6 +257,7 @@ class Diagnosing extends Common
                 ->field("dl.diagnosis_id, dl.start_time, dl.end_time, h.hospital_name, d.department_name, hr.hospital_repart_id")
                 ->order('dl.start_time DESC')
                 ->select();
+
             foreach ($paibanList as $key => $val) {
                 $paibanList[$key]['content'] = date('Y年m月d日 H:i', $val['start_time']) . '-' . date('Y年m月d日 H:i', $val['end_time']);
                 if (time() >= $val['start_time']) {
