@@ -20,7 +20,7 @@ class Home extends Common
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
 
-            $doctor = db('doctor')->where("member_id = {$data['doctor_id']}")->field("member_name, portrait, is_certified")->find();
+            $doctor = db('doctor')->where("member_id = {$data['doctor_id']}")->field("member_name, face_photo as portrait, is_certified")->find();
 
             $doctor['certified'] = $this->view->setting['aryCertified'][$doctor['is_certified']];
 

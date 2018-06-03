@@ -58,4 +58,32 @@ class Setting extends Model
         return $h->getToken();
     }
 
+    // 往黑名单中加人
+    public function addUserForBlacklist($username,$usernames) {
+        //获取环信token
+        import('Easemob', EXTEND_PATH);
+
+        $options['client_id'] = config('client_id');
+        $options['client_secret'] = config('client_secret');
+        $options['org_name'] = config('org_name');
+        $options['app_name'] = config('app_name');
+
+        $h=new \Easemob($options);
+        return $h->addUserForBlacklist($username,$usernames);
+    }
+
+    // 从黑名单中减人
+    public function deleteUserFromBlacklist($username,$usernames) {
+        //获取环信token
+        import('Easemob', EXTEND_PATH);
+
+        $options['client_id'] = config('client_id');
+        $options['client_secret'] = config('client_secret');
+        $options['org_name'] = config('org_name');
+        $options['app_name'] = config('app_name');
+
+        $h=new \Easemob($options);
+        return $h->deleteUserFromBlacklist($username,$usernames);
+    }
+
 }

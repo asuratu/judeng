@@ -5,6 +5,29 @@ use think\Db;
 
 class Image extends Common
 {
+
+    public function find()
+    {
+        $data=input('uid/');
+        $data = base64_decode($data);
+        //查询问题详情页面
+        $hair = db('hair')->where("hair_id = '{$data}'")->find();
+        if ($hair) {
+            $hairattach = db('hair_attach')->where("hair_id = {$hair['hair_id']}")->select();
+            $doctor = db('doctor')->where("member_id = {$hair['doctor_id']}")->find();
+            $title = db('title')->where("title_id", "in", "{$doctor['title_id']}")->select();
+            $doctor['member_name'] = !empty($doctor['member_name']) ? $doctor['member_name'] : $doctor['mobile'];
+        } else {
+            return 404;
+        }
+        $this->assign("hair", $hair);
+        $this->assign("hairattach", $hairattach);
+        $this->assign("doctor", $doctor);
+        $this->assign("title", $title);
+        return  $this->fetch('/hair/template');
+    }
+
+
     /**
      * 群发图文
      */
@@ -45,7 +68,8 @@ class Image extends Common
             $data['member_id'] = trim($data['member_id'], ',');
             $public_number = array();
             $mobile_number = array();
-            // 增加一条发送记录
+
+            // 查询患者信息
             $member = db('member')->field('member_name, mobile, openid, is_type')->where("member_id", "in", "{$data['member_id']}")->select();
             foreach ($member as $val) {
                 if ($val['is_type'] == 0) {
@@ -60,6 +84,31 @@ class Image extends Common
             }
 //            // 短信推送
             if ($data['is_type'] == 1) {
+                // 如果短信推送且为图文推送的话，那么就生成一条图文消息记录
+                if ($data['is_hair'] == 0) {                  // 0 为图文 1 链接
+                    $hairname = array();
+                    $hairname['doctor_id'] = $data['doctor_id'];
+                    $hairname['member_id'] = 0;
+                    $hairname['content'] = $data['content'];
+                    $hairname['add_date'] = time();
+                    $hairname['release_date'] = $hairname['add_date'];
+                    $hairId = db('hair')->insertGetId($hairname);
+                    if ($hairId) {
+                        $upPaperInfo = json_decode(Model('Oss')->upPic('uploads/notice'), true);
+                        foreach ($upPaperInfo as $key1=>$val1) {
+                            $hair_attach = array(
+                                'hair_id' => $hairId,
+                                'src' => $val1,
+                            );
+                            db('hair_attach')->insert($hair_attach);
+                        }
+                    }
+                    $hairId = base64_encode($hairId);
+                    $url = 'http://wechat.bohetanglao.com/image/find/uid/' . $hairId . '.html';
+                } else {
+                    $url = $data['url'];
+                }
+
                 // 后期再次测试
                 foreach ($mobile_number as $val) {
                     sendSMS($val, '测试图文短信群发');
