@@ -2320,3 +2320,176 @@
 [ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  `member_id` = 2 LIMIT 1 [ RunTime:0.059449s ]
 [ sql ] [ SQL ] UPDATE `jd_doctor`  SET `hospital_repart_str`='5,57',`release_date`=1527998808  WHERE  `member_id` = 2 [ RunTime:0.058733s ]
 [ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-03T13:38:23+08:00 ] 0.0.0.0 POST /doctor/dataPreview
+[ info ] localhost:7037/doctor/dataPreview [运行时间：1.195955s][吞吐率：0.84req/s] [内存消耗：3,187.84kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'doctor',
+    2 => 'dataPreview',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryN1dQ6dx2HqCKFACT',
+  'content-length' => '141',
+  'x-original-url' => '/doctor/dataPreview',
+  'postman-token' => '902b2860-0547-52d1-92e0-ddd05e9c2a59',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=74693c7b245a84abc99c6f91efa4ec69',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Doctor->dataPreview[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Doctor.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.082266s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.057073s ]
+[ sql ] [ SQL ] SELECT `member_id`,`inherit`,`true_name`,`face_photo`,`goodat_id`,`introduction`,`recom`,`is_clinic`,`hospital_id`,`hospital_repart_str`,`school_str`,`title_str`,`graphic_speech`,`concealment_number`,`online_inquiry`,`first_price`,`consultation_price` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.055963s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_school` [ RunTime:0.054686s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  school_id IN(1,2) AND is_display = 1 ) [ RunTime:0.053330s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital` [ RunTime:0.053947s ]
+[ sql ] [ SQL ] SELECT `hospital_name` FROM `jd_hospital` WHERE  (  hospital_id = 6 ) LIMIT 1 [ RunTime:0.054133s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital_repart` [ RunTime:0.054204s ]
+[ sql ] [ SQL ] SELECT `d`.`department_name` FROM `jd_hospital_repart` `hr` INNER JOIN `jd_department` `d` ON `d`.`department_id`=`hr`.`department_id` WHERE  (  hr.hospital_repart_id IN(58) AND hr.is_show = 1 ) [ RunTime:0.054210s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_self_goods` [ RunTime:0.055309s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 2 AND content != '' AND is_checked = 2  ) LIMIT 1 [ RunTime:0.054194s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.060255s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_order` WHERE  (  pay_status = 2 AND doctor_id = 2 ) LIMIT 1 [ RunTime:0.053191s ]
+[ sql ] [ SQL ] SELECT `self_goods_id`,`inherit_id`,`content`,`self_goods_name`,`advantage`,`price` FROM `jd_self_goods` WHERE  (  member_id = 2 AND is_checked = 2  ) [ RunTime:0.054070s ]
+[ sql ] [ SQL ] SELECT `dl`.`diagnosis_id`,`dl`.`start_time`,`dl`.`end_time`,`h`.`hospital_name`,`d`.`department_name` FROM `jd_hospital_repart` `hr` INNER JOIN `jd_department` `d` ON `hr`.`department_id`=`d`.`department_id` INNER JOIN `jd_hospital` `h` ON `hr`.`hospital_id`=`h`.`hospital_id` INNER JOIN `jd_diagnosis_list` `dl` ON `hr`.`hospital_repart_id`=`dl`.`hospital_repart_id` WHERE  (  dl.`member_id` = 2 AND hr.is_show = 1 AND dl.start_time > 1528004302 ) ORDER BY dl.start_time DESC [ RunTime:0.054628s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_goodat` [ RunTime:0.054237s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_goodat` WHERE  `goodat_id` IN (25,26,27,83,84)  AND (  is_show = 1 and level = 2 ) ORDER BY `sort`  DESC [ RunTime:0.053605s ]
+[ sql ] [ SQL ] SELECT `s`.`symptom`,`s`.`evaluate`,`s`.`evaluate_name`,`s`.`synopsis`,`s`.`add_date`,`m`.`member_name`,`m`.`portrait` FROM jd_service_evaluation s, jd_member m WHERE  (  s.doctor_id = 2 and s.`is_show` = 1 and s.`member_id` = m.`member_id` ) [ RunTime:0.053259s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_notice` [ RunTime:0.055188s ]
+[ sql ] [ SQL ] SELECT `notice_id`,`notice_name`,`add_date` FROM `jd_notice` WHERE  (  doctor_id = 2 ) [ RunTime:0.054991s ]
+[ error ] [8]未定义数组索引: content[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Doctor.php:146]
+[ error ] [8]未定义数组索引: inherit_id[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Doctor.php:147]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-03T14:51:59+08:00 ] 0.0.0.0 POST /doctor/dataPreview
+[ info ] localhost:7037/doctor/dataPreview [运行时间：1.266243s][吞吐率：0.79req/s] [内存消耗：3,191.26kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'doctor',
+    2 => 'dataPreview',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '245',
+  'x-original-url' => '/doctor/dataPreview',
+  'user-agent' => 'YiSong/1.0 (iPhone; iOS 11.3.1; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=hp8de01vvr8dlss3o3qsibprh5',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'sign' => 'c3b487c2dd42e4f5046e41b7f5f4f198',
+  'doctor_id' => 2,
+  '_time' => '1528008680',
+  'only_token' => 'Authorization:Bearer YWMtt_skzmbgEeiJrvE4JNT5RgAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFjw8EJQwBPGgCWxfOf_MU-_wIogvQz9Kqlcws2hdtfERPEDfEgMVLRWg',
+)
+[ info ] [ RUN ] app\home\controller\Doctor->dataPreview[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Doctor.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.088923s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.060226s ]
+[ sql ] [ SQL ] SELECT `member_id`,`inherit`,`true_name`,`face_photo`,`goodat_id`,`introduction`,`recom`,`is_clinic`,`hospital_id`,`hospital_repart_str`,`school_str`,`title_str`,`graphic_speech`,`concealment_number`,`online_inquiry`,`first_price`,`consultation_price` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.060129s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_school` [ RunTime:0.059161s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  school_id IN(1,2) AND is_display = 1 ) [ RunTime:0.058082s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital` [ RunTime:0.057858s ]
+[ sql ] [ SQL ] SELECT `hospital_name` FROM `jd_hospital` WHERE  (  hospital_id = 6 ) LIMIT 1 [ RunTime:0.057329s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital_repart` [ RunTime:0.058382s ]
+[ sql ] [ SQL ] SELECT `d`.`department_name` FROM `jd_hospital_repart` `hr` INNER JOIN `jd_department` `d` ON `d`.`department_id`=`hr`.`department_id` WHERE  (  hr.hospital_repart_id IN(58) AND hr.is_show = 1 ) [ RunTime:0.057140s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_self_goods` [ RunTime:0.059015s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 2 AND content != '' AND is_checked = 2  ) LIMIT 1 [ RunTime:0.058270s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.060017s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_order` WHERE  (  pay_status = 2 AND doctor_id = 2 ) LIMIT 1 [ RunTime:0.057753s ]
+[ sql ] [ SQL ] SELECT `self_goods_id`,`inherit_id`,`content`,`self_goods_name`,`advantage`,`price` FROM `jd_self_goods` WHERE  (  member_id = 2 AND is_checked = 2  ) [ RunTime:0.058921s ]
+[ sql ] [ SQL ] SELECT `dl`.`diagnosis_id`,`dl`.`start_time`,`dl`.`end_time`,`h`.`hospital_name`,`d`.`department_name` FROM `jd_hospital_repart` `hr` INNER JOIN `jd_department` `d` ON `hr`.`department_id`=`d`.`department_id` INNER JOIN `jd_hospital` `h` ON `hr`.`hospital_id`=`h`.`hospital_id` INNER JOIN `jd_diagnosis_list` `dl` ON `hr`.`hospital_repart_id`=`dl`.`hospital_repart_id` WHERE  (  dl.`member_id` = 2 AND hr.is_show = 1 AND dl.start_time > 1528008719 ) ORDER BY dl.start_time DESC [ RunTime:0.058769s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_goodat` [ RunTime:0.059260s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_goodat` WHERE  `goodat_id` IN (25,26,27,83,84)  AND (  is_show = 1 and level = 2 ) ORDER BY `sort`  DESC [ RunTime:0.057796s ]
+[ sql ] [ SQL ] SELECT `s`.`symptom`,`s`.`evaluate`,`s`.`evaluate_name`,`s`.`synopsis`,`s`.`add_date`,`m`.`member_name`,`m`.`portrait` FROM jd_service_evaluation s, jd_member m WHERE  (  s.doctor_id = 2 and s.`is_show` = 1 and s.`member_id` = m.`member_id` ) [ RunTime:0.058907s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_notice` [ RunTime:0.059460s ]
+[ sql ] [ SQL ] SELECT `notice_id`,`notice_name`,`add_date` FROM `jd_notice` WHERE  (  doctor_id = 2 ) [ RunTime:0.063539s ]
+[ error ] [8]未定义数组索引: content[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Doctor.php:150]
+[ error ] [8]未定义数组索引: inherit_id[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Doctor.php:151]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-03T18:24:30+08:00 ] 0.0.0.0 POST /doctor/dataPreview
+[ info ] localhost:7037/doctor/dataPreview [运行时间：2.513533s][吞吐率：0.40req/s] [内存消耗：3,189.42kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'doctor',
+    2 => 'dataPreview',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarySAZ66aBRF9eml4Yi',
+  'content-length' => '141',
+  'x-original-url' => '/doctor/dataPreview',
+  'postman-token' => 'ffbf8f33-9fa0-1b71-d618-87eede3b15c9',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Doctor->dataPreview[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Doctor.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.255561s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.109660s ]
+[ sql ] [ SQL ] SELECT `member_id`,`inherit`,`true_name`,`face_photo`,`goodat_id`,`introduction`,`recom`,`is_clinic`,`hospital_id`,`hospital_repart_str`,`school_str`,`title_str`,`graphic_speech`,`concealment_number`,`online_inquiry`,`first_price`,`consultation_price` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.111840s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_school` [ RunTime:0.125066s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  school_id IN(1,2) AND is_display = 1 ) [ RunTime:0.112197s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital` [ RunTime:0.124157s ]
+[ sql ] [ SQL ] SELECT `hospital_name` FROM `jd_hospital` WHERE  (  hospital_id = 6 ) LIMIT 1 [ RunTime:0.112978s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital_repart` [ RunTime:0.096500s ]
+[ sql ] [ SQL ] SELECT `d`.`department_name` FROM `jd_hospital_repart` `hr` INNER JOIN `jd_department` `d` ON `d`.`department_id`=`hr`.`department_id` WHERE  (  hr.hospital_repart_id IN(58) AND hr.is_show = 1 ) [ RunTime:0.097291s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_self_goods` [ RunTime:0.102037s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 2 AND content != '' AND is_checked = 2  ) LIMIT 1 [ RunTime:0.157170s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.128943s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_order` WHERE  (  pay_status = 2 AND doctor_id = 2 ) LIMIT 1 [ RunTime:0.104942s ]
+[ sql ] [ SQL ] SELECT `self_goods_id`,`inherit_id`,`content`,`self_goods_name`,`advantage`,`price` FROM `jd_self_goods` WHERE  (  member_id = 2 AND is_checked = 2  ) [ RunTime:0.102443s ]
+[ sql ] [ SQL ] SELECT `dl`.`diagnosis_id`,`dl`.`start_time`,`dl`.`end_time`,`h`.`hospital_name`,`d`.`department_name` FROM `jd_hospital_repart` `hr` INNER JOIN `jd_department` `d` ON `hr`.`department_id`=`d`.`department_id` INNER JOIN `jd_hospital` `h` ON `hr`.`hospital_id`=`h`.`hospital_id` INNER JOIN `jd_diagnosis_list` `dl` ON `hr`.`hospital_repart_id`=`dl`.`hospital_repart_id` WHERE  (  dl.`member_id` = 2 AND hr.is_show = 1 AND dl.start_time > 1528021470 ) ORDER BY dl.start_time DESC [ RunTime:0.099862s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_goodat` [ RunTime:0.098064s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_goodat` WHERE  `goodat_id` IN (25,26,27,83,84)  AND (  is_show = 1 and level = 2 ) ORDER BY `sort`  DESC [ RunTime:0.100360s ]
+[ sql ] [ SQL ] SELECT `s`.`symptom`,`s`.`evaluate`,`s`.`evaluate_name`,`s`.`synopsis`,`s`.`add_date`,`m`.`member_name`,`m`.`portrait` FROM jd_service_evaluation s, jd_member m WHERE  (  s.doctor_id = 2 and s.`is_show` = 1 and s.`member_id` = m.`member_id` ) [ RunTime:0.101198s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_notice` [ RunTime:0.114469s ]
+[ sql ] [ SQL ] SELECT `notice_id`,`notice_name`,`add_date` FROM `jd_notice` WHERE  (  doctor_id = 2 ) [ RunTime:0.131231s ]
+[ error ] [8]未定义数组索引: content[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Doctor.php:150]
+[ error ] [8]未定义数组索引: inherit_id[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Doctor.php:151]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]

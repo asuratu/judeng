@@ -143,6 +143,10 @@ class Doctor extends Common
             ->where("member_id = {$data['doctor_id']} AND is_checked = 2 ")
             ->field('self_goods_id, inherit_id, content, self_goods_name, advantage, price')
             ->select();
+
+        foreach ($doctor['selfGoodsList'] as $key => $value) {
+            $doctor['selfGoodsList'][$key]['content'] = base64_encode($value['content']);
+        }
         $doctor['is_self_drug'] = $doctor['content'] != '' ? 1 : 0;
         $doctor['is_inherit'] = $doctor['inherit_id'] != 0 ? 1 : 0;
 
