@@ -32,6 +32,9 @@ class Umeng extends Common
             // 医生咨询消息加一（有择自增，没有则添加）
             Model('Number')->doctorCounsell($data['member_id'], $data['doctor_id']);
 
+            // 医生患者列表，有则修改，没有择添加
+            Model('Number')->doctorMember($data['member_id'], $data['doctor_id'], '咨询');
+
             if ($doctor['device_tokens'] == '') {           // 如果设备唯一号不存在，直接退出
                 ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[]));
             }
