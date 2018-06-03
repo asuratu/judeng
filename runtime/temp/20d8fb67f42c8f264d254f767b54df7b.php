@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"E:\wook\201804\judeng/application/home\view\hair\template.html";i:1528018392;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"E:\wook\201804\judeng/application/home\view\hair\template.html";i:1528018657;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
