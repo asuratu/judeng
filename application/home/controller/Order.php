@@ -386,8 +386,6 @@ class Order extends Common
                 } elseif ($data['type'] == 1) {
                     //拍照开方
                     //新增一条医生与患者的关联记录
-                    // 第一个参数用户ID， 第二个参数医生ID， 第三个是具体服务类型名称
-                    Model('Number')->doctorMember($data['patient_id'], $data['doctor_id'], '拍照开方');
                     $orderPrescriptionInsert['prescription_type'] = 1;
                     $_identify = 1;
                 } else {
