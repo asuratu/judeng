@@ -17,7 +17,7 @@
 <div class="attention">
     <div class="wrapper">
         <div class="doctors clearfix">
-            <div class="toux"><img src="<?php echo $doctor['portrait']; ?>"></div>
+            <div class="toux"><img src="<?php echo $doctor['face_photo']; ?>"></div>
             <div class="wenz">
                 <h3><?php echo $doctor['member_name']; ?></h3>
                 <div class="sign-div">

@@ -2467,3 +2467,152 @@
 [ info ] [ PARAM ] array (
 )
 [ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-03T17:54:44+08:00 ] 0.0.0.0 GET /image/find/uid/NA==11.html
+[ info ] localhost:8020/image/find/uid/NA==11.html [运行时间：0.564032s][吞吐率：1.77req/s] [内存消耗：3,077.70kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'image',
+    2 => 'find',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/image/find/uid/NA==11.html',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 5.1.1; Nexus 6 Build/LYZ28E) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.119 Mobile Safari/537.36',
+  'host' => 'localhost:8020',
+  'cookie' => 'pgv_pvid=4446966272; UM_distinctid=16300e666aa99-03bc5a7eb441f3-4545092c-1fa400-16300e666ab621; _ga=GA1.1.2140194652.1524728490; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1524791001,1525221928,1525740768; CNZZDATA1262804032=1090891437-1524726210-%7C1526972336; PHPSESSID=e0sdlueoe11p843v0s7flpnhm5; PXAPP=99f9e281fdc9a75f20f7784503522a37; loginTime=1528019435',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'uid' => 'NA==11',
+)
+[ info ] [ RUN ] app\home\controller\Image->find[ E:\wook\201804\judeng\application\home\controller\Image.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wook\201804\judeng/application/home\view\hair\template.html [ array (
+  0 => 'setting',
+  1 => 'hair',
+  2 => 'hairattach',
+  3 => 'doctor',
+  4 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.082005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hair` WHERE  (  hair_id = '4u' ) LIMIT 1 [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair_attach` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hair_attach` WHERE  (  hair_id = 4 ) [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.056004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_title` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_title` WHERE  `title_id` IN (15,16) [ RunTime:0.054003s ]
+---------------------------------------------------------------
+[ 2018-06-03T17:54:44+08:00 ] 0.0.0.0 GET /uploads/image/images/20180416/20180416145952_86852.jpg
+[ info ] localhost:8020/uploads/image/images/20180416/20180416145952_86852.jpg [运行时间：0.026002s][吞吐率：38.46req/s] [内存消耗：1,712.65kb] [文件加载：41]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'uploads',
+    2 => 'image',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/uploads/image/images/20180416/20180416145952_86852.jpg',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 5.1.1; Nexus 6 Build/LYZ28E) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.119 Mobile Safari/537.36',
+  'referer' => 'http://localhost:8020/image/find/uid/NA==11.html',
+  'host' => 'localhost:8020',
+  'cookie' => 'pgv_pvid=4446966272; UM_distinctid=16300e666aa99-03bc5a7eb441f3-4545092c-1fa400-16300e666ab621; _ga=GA1.1.2140194652.1524728490; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1524791001,1525221928,1525740768; CNZZDATA1262804032=1090891437-1524726210-%7C1526972336; PHPSESSID=e0sdlueoe11p843v0s7flpnhm5; PXAPP=99f9e281fdc9a75f20f7784503522a37; loginTime=1528019435',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'images' => '20180416',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-03T17:54:44+08:00 ] 0.0.0.0 GET /image/find/uid/1000
+[ info ] localhost:8020/image/find/uid/1000 [运行时间：0.232013s][吞吐率：4.31req/s] [内存消耗：2,996.95kb] [文件加载：53]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'image',
+    2 => 'find',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/image/find/uid/1000',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 5.1.1; Nexus 6 Build/LYZ28E) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.119 Mobile Safari/537.36',
+  'referer' => 'http://localhost:8020/image/find/uid/NA==11.html',
+  'host' => 'localhost:8020',
+  'cookie' => 'pgv_pvid=4446966272; UM_distinctid=16300e666aa99-03bc5a7eb441f3-4545092c-1fa400-16300e666ab621; _ga=GA1.1.2140194652.1524728490; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1524791001,1525221928,1525740768; CNZZDATA1262804032=1090891437-1524726210-%7C1526972336; PHPSESSID=e0sdlueoe11p843v0s7flpnhm5; PXAPP=99f9e281fdc9a75f20f7784503522a37; loginTime=1528019435',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '1000',
+)
+[ info ] [ RUN ] app\home\controller\Image->find[ E:\wook\201804\judeng\application\home\controller\Image.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.078004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hair` WHERE  (  hair_id = '�M4' ) LIMIT 1 [ RunTime:0.052003s ]
+---------------------------------------------------------------
+[ 2018-06-03T17:54:44+08:00 ] 0.0.0.0 GET /favicon.ico
+[ info ] localhost:8020/favicon.ico [运行时间：0.022001s][吞吐率：45.45req/s] [内存消耗：1,712.16kb] [文件加载：41]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'favicon.ico',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/favicon.ico',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 5.1.1; Nexus 6 Build/LYZ28E) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.119 Mobile Safari/537.36',
+  'referer' => 'http://localhost:8020/image/find/uid/NA==11.html',
+  'host' => 'localhost:8020',
+  'cookie' => 'pgv_pvid=4446966272; UM_distinctid=16300e666aa99-03bc5a7eb441f3-4545092c-1fa400-16300e666ab621; _ga=GA1.1.2140194652.1524728490; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1524791001,1525221928,1525740768; CNZZDATA1262804032=1090891437-1524726210-%7C1526972336; PHPSESSID=e0sdlueoe11p843v0s7flpnhm5; PXAPP=99f9e281fdc9a75f20f7784503522a37; loginTime=1528019435',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
