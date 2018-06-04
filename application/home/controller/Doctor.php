@@ -96,8 +96,15 @@ class Doctor extends Common
             ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
         }
         $doctor = db('doctor')->where("member_id = {$data['doctor_id']}")
-            ->field('member_id, inherit, true_name, face_photo, goodat_id, introduction, recom, is_clinic, hospital_id, hospital_repart_str, school_str, inherit, title_str, graphic_speech, concealment_number, online_inquiry,first_price,consultation_price')
+            ->field('member_id, true_name, face_photo, goodat_id, introduction, recom, is_clinic, hospital_id, hospital_repart_str, school_str, inherit, title_str, graphic_speech, concealment_number, online_inquiry,first_price,consultation_price')
             ->find();
+
+        $diagnosis_set = db('diagnosis_set')->where("member_id = {$data['doctor_id']}")
+            ->find();
+        $doctor['graphic_speech'] = $diagnosis_set['graphic_speech'];
+        $doctor['online_inquiry'] = $diagnosis_set['all_open'];
+        $doctor['first_price'] = $diagnosis_set['image_price'];
+        $doctor['consultation_price'] = $diagnosis_set['reimage_price'];
 
         //是否显示流派
         if ($doctor['inherit']) {
