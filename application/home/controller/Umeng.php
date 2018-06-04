@@ -24,7 +24,7 @@ class Umeng extends Common
             // 查询医生消息
             $doctor = db('doctor')->where("member_id = {$data['doctor_id']}")->field("is_system, device_tokens, disturb_start, disturb_end")->find();
             if (!$doctor) {         // 验证医生信息是否存在，不存在直接退出
-                ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[]));
+                ajaxReturn(array('code'=>0,'info'=>'ok','data'=>[]));
             }
 
             $data['comment'] = Html::getTextToHtml($data['comment'], 20);
@@ -33,7 +33,7 @@ class Umeng extends Common
             Model('Number')->doctorCounsell($data['member_id'], $data['doctor_id']);
 
             if ($doctor['device_tokens'] == '') {           // 如果设备唯一号不存在，直接退出
-                ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[]));
+                ajaxReturn(array('code'=>0,'info'=>'ok','data'=>[]));
             }
 
             // 判断是否推送友盟消息  判断方法(医生是否把这个患者设成黑名单，是否在这个时间段设置成免打扰)
@@ -89,8 +89,18 @@ class Umeng extends Common
         header("Access-Control-Allow-Methods:GET,POST");
         if($this->request->isPost()) {
             $data = input('post.');
+
+            $counsell = db('doctor_member')->where("doctor_id = {$data['doctor_id']} and member_id = {$data['member_id']}")->field("is_chat, is_show")->find();
+            if (!$counsell) { // 如果不存在 则直接退出
+                ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[]));
+            }
+            if ($counsell['is_chat'] == 1 || $counsell['is_show'] == 0) {       // 如果这个患者是不显示的（黑名单患者）或者医生正在聊天状态，不推送消息
+                db('doctor_member')->where("doctor_id = {$data['doctor_id']} and member_id = {$data['member_id']}")->update(array('counsell_number' => 0));
+                ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[]));
+            }
             // 医生患者列表，有则修改，没有择添加
             Model('Number')->doctorCounsell($data['member_id'], $data['doctor_id'], '咨询');
+            ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[]));
         }
     }
 
