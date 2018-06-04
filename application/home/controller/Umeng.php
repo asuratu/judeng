@@ -83,11 +83,14 @@ class Umeng extends Common
         return true;
     }
 
-    public function addPatient() {
+    public function addPatient(){
+        header("Access-Control-Allow-Origin:*");
+        /*星号表示所有的域都可以接受，*/
+        header("Access-Control-Allow-Methods:GET,POST");
         if($this->request->isPost()) {
             $data = input('post.');
             // 医生患者列表，有则修改，没有择添加
-            Model('Number')->doctorMember($data['member_id'], $data['doctor_id'], '咨询');
+            Model('Number')->doctorCounsell($data['member_id'], $data['doctor_id'], '咨询');
         }
     }
 
