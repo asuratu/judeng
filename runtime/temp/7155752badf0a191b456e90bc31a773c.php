@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:79:"D:\workLP\20180502\judeng\wwwroot/application/home\view\doctor\doctorLogin.html";i:1528080650;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:79:"D:\workLP\20180502\judeng\wwwroot/application/home\view\doctor\doctorLogin.html";i:1528082854;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,7 +22,7 @@
                     <?php echo $info['true_name']; ?>医生<br>
                     诚邀您加入<?php echo $inherit['inherit_name']; ?>
                 </h3>
-                <input type="text" id="inherit-id" value="<?php echo $inherit['inherit_id']; ?>">
+                <input type="hidden" id="inherit-id" value="<?php echo $inherit['inherit_id']; ?>">
                 <p>
                     申请通过，即可获得使用方剂权限
                 </p>

@@ -2630,3 +2630,2204 @@
 [ sql ] [ SQL ] SELECT `member_id` FROM `jd_inherit` WHERE  (  inherit_id = 3 AND is_display = 1 ) LIMIT 1 [ RunTime:0.060070s ]
 [ sql ] [ SQL ] INSERT INTO `jd_inherit_doctor` (`parent_id` , `inherit_id` , `member_id` , `reason` , `add_date` , `img_url`) VALUES (3 , 3 , 8 , '医生邀请加入传承' , 1528082834 , 'http://39.105.19.169:88/uploads/code/1528082834code.png') [ RunTime:0.066394s ]
 [ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-04T13:48:42+08:00 ] 0.0.0.0 POST /wx/getQrcode
+[ info ] localhost:7037/wx/getQrcode [运行时间：0.820970s][吞吐率：1.22req/s] [内存消耗：2,951.09kb] [文件加载：52]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'wx',
+    2 => 'getQrcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '245',
+  'x-original-url' => '/wx/getQrcode',
+  'user-agent' => 'YiSong/1.0 (iPhone; iOS 11.3.1; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'sign' => 'ac2e69bc67aca2b4c258103ff16222bc',
+  'doctor_id' => 8,
+  '_time' => '1528091283',
+  'only_token' => 'Authorization:Bearer YWMts1IWgme6EeiQsfepwe3n-wAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFjyVWaBwBPGgCYHxFj-amxFNAFprbWEIVPQch5Tvpi2ZjeJZsl8Vxucg',
+)
+[ info ] [ RUN ] app\home\controller\Wx->getQrcode[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.090361s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.057887s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wx_user` LIMIT 1 [ RunTime:0.060206s ]
+[ error ] [8]未定义数组索引: ticket[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php:29]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-04T13:49:10+08:00 ] 0.0.0.0 POST /wx/getQrcode
+[ info ] localhost:7037/wx/getQrcode [运行时间：0.329087s][吞吐率：3.04req/s] [内存消耗：2,869.39kb] [文件加载：49]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'wx',
+    2 => 'getQrcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '245',
+  'x-original-url' => '/wx/getQrcode',
+  'user-agent' => 'YiSong/1.0 (iPhone; iOS 11.3.1; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'sign' => 'ac2e69bc67aca2b4c258103ff16222bc',
+  'doctor_id' => 8,
+  '_time' => '1528091283',
+  'only_token' => 'Authorization:Bearer YWMts1IWgme6EeiQsfepwe3n-wAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFjyVWaBwBPGgCYHxFj-amxFNAFprbWEIVPQch5Tvpi2ZjeJZsl8Vxucg',
+)
+[ info ] [ RUN ] app\home\controller\Wx->getQrcode[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.085435s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.057071s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wx_user` LIMIT 1 [ RunTime:0.058110s ]
+---------------------------------------------------------------
+[ 2018-06-04T13:50:32+08:00 ] 0.0.0.0 POST /wx/getQrcode
+[ info ] localhost:7037/wx/getQrcode [运行时间：0.455508s][吞吐率：2.20req/s] [内存消耗：2,950.57kb] [文件加载：52]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'wx',
+    2 => 'getQrcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '245',
+  'x-original-url' => '/wx/getQrcode',
+  'user-agent' => 'YiSong/1.0 (iPhone; iOS 11.3.1; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'sign' => 'ac2e69bc67aca2b4c258103ff16222bc',
+  'doctor_id' => 8,
+  '_time' => '1528091283',
+  'only_token' => 'Authorization:Bearer YWMts1IWgme6EeiQsfepwe3n-wAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFjyVWaBwBPGgCYHxFj-amxFNAFprbWEIVPQch5Tvpi2ZjeJZsl8Vxucg',
+)
+[ info ] [ RUN ] app\home\controller\Wx->getQrcode[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.091245s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.062767s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wx_user` LIMIT 1 [ RunTime:0.064097s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-04T14:32:22+08:00 ] 0.0.0.0 GET /member/inviteInherit?memberId=46&inheritId=3
+[ info ] localhost:7037/member/inviteInherit?memberId=46&inheritId=3 [运行时间：0.390862s][吞吐率：2.56req/s] [内存消耗：3,368.46kb] [文件加载：56]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'inviteInherit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/member/inviteInherit?memberId=46&inheritId=3',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; lang=zh-cn; device=desktop; theme=default; keepLogin=on; za=admin; zp=0537c5bc8c477d690858dc3b13d03cbc9de46966; PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'memberId' => '46',
+  'inheritId' => '3',
+)
+[ info ] [ RUN ] app\home\controller\Member->inviteInherit[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\workLP\20180502\judeng\wwwroot/application/home\view\doctor\doctorLogin.html [ array (
+  0 => 'setting',
+  1 => 'info',
+  2 => 'inherit',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.090796s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.062680s ]
+[ sql ] [ SQL ] SELECT `face_photo`,`true_name`,`member_id`,`invite` FROM `jd_doctor` WHERE  (  member_id = 46 ) LIMIT 1 [ RunTime:0.059005s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.060260s ]
+[ sql ] [ SQL ] SELECT `inherit_name`,`inherit_id` FROM `jd_inherit` WHERE  (  inherit_id = 3 ) LIMIT 1 [ RunTime:0.058112s ]
+---------------------------------------------------------------
+[ 2018-06-04T14:32:23+08:00 ] 0.0.0.0 GET /favicon.ico
+[ info ] localhost:7037/favicon.ico [运行时间：0.057669s][吞吐率：17.34req/s] [内存消耗：1,712.59kb] [文件加载：41]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'favicon.ico',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/favicon.ico',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'referer' => 'http://localhost:7037/member/inviteInherit?memberId=46&inheritId=3',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; lang=zh-cn; device=desktop; theme=default; keepLogin=on; za=admin; zp=0537c5bc8c477d690858dc3b13d03cbc9de46966; PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-04T15:21:07+08:00 ] 0.0.0.0 POST /inherit/allInheritList
+[ info ] localhost:7037/inherit/allInheritList [运行时间：1.098231s][吞吐率：0.91req/s] [内存消耗：3,150.92kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'allInheritList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary6895gaatB3msoHcV',
+  'content-length' => '141',
+  'x-original-url' => '/inherit/allInheritList',
+  'postman-token' => '28f32afe-ca8b-f71a-265c-17d4680fa041',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->allInheritList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.093016s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.061450s ]
+[ sql ] [ SQL ] SELECT `id`.`inherit_doctor_id`,`id`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`school_id`,`i`.`intro`,`d`.`member_id`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  (id.member_id = 2) AND id.is_checked = 1 ) ORDER BY id.add_date DESC [ RunTime:0.062327s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_special` [ RunTime:0.061116s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 4 ) ORDER BY sort DESC [ RunTime:0.061841s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_school` [ RunTime:0.065785s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 0 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.059857s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.061718s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.061445s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.061705s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.062670s ]
+[ sql ] [ SQL ] SELECT `id`.`inherit_doctor_id`,`id`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`intro`,`i`.`school_id`,`d`.`member_id`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `i`.`member_id`=`d`.`member_id` WHERE  (  (id.member_id != 2 AND id.parent_id != 2) AND id.is_checked = 1 ) ORDER BY id.add_date DESC [ RunTime:0.063410s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.065734s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.060237s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.062560s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.060898s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-04T15:34:17+08:00 ] 0.0.0.0 POST /inherit/allInheritList
+[ info ] localhost:7037/inherit/allInheritList [运行时间：1.188325s][吞吐率：0.84req/s] [内存消耗：3,155.48kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'allInheritList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryKSSUI4zsch0BCKSJ',
+  'content-length' => '141',
+  'x-original-url' => '/inherit/allInheritList',
+  'postman-token' => '394d4e97-aabe-ace2-9c24-20da77444c3a',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->allInheritList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.083162s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.055110s ]
+[ sql ] [ SQL ] SELECT `id`.`inherit_doctor_id`,`id`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`school_id`,`i`.`intro`,`d`.`member_id`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  (id.member_id = 2) AND id.is_checked = 1 ) ORDER BY id.add_date DESC [ RunTime:0.057216s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_special` [ RunTime:0.055588s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 4 ) ORDER BY sort DESC [ RunTime:0.055723s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_school` [ RunTime:0.054456s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 0 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.070383s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.062816s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.077507s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.056490s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.063471s ]
+[ sql ] [ SQL ] SELECT `id`.`inherit_doctor_id`,`id`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`intro`,`i`.`school_id`,`d`.`member_id`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `i`.`member_id`=`d`.`member_id` WHERE  (  (id.member_id != 2 AND id.parent_id != 2) AND id.is_checked != 1 ) ORDER BY id.add_date DESC [ RunTime:0.064199s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.064649s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.057552s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.072018s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.055060s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.055327s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.054626s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-04T15:37:16+08:00 ] 0.0.0.0 POST /inherit/allInheritList
+[ info ] localhost:7037/inherit/allInheritList [运行时间：1.443649s][吞吐率：0.69req/s] [内存消耗：3,164.27kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'allInheritList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryhc5AL8yN1yBU2RrN',
+  'content-length' => '141',
+  'x-original-url' => '/inherit/allInheritList',
+  'postman-token' => '3048b658-a6b8-5611-379b-d8456a4ac938',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->allInheritList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.088982s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.060310s ]
+[ sql ] [ SQL ] SELECT `id`.`inherit_doctor_id`,`id`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`school_id`,`i`.`intro`,`d`.`member_id`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  (id.member_id = 2) AND id.is_checked = 1 ) ORDER BY id.add_date DESC [ RunTime:0.060530s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_special` [ RunTime:0.060481s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 4 ) ORDER BY sort DESC [ RunTime:0.060013s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_school` [ RunTime:0.060555s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 0 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.060933s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.059346s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.059216s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.058600s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.059718s ]
+[ sql ] [ SQL ] SELECT `id`.`inherit_doctor_id`,`id`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`intro`,`i`.`school_id`,`d`.`member_id`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `i`.`member_id`=`d`.`member_id` WHERE  (  (id.member_id != 2 AND id.parent_id != 2) ) ORDER BY id.add_date DESC [ RunTime:0.062979s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.060855s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.060415s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.060139s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.059388s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.060003s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.059069s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.060037s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.059388s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.059012s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.060963s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-04T15:46:48+08:00 ] 0.0.0.0 POST /inherit/allInheritList
+[ info ] localhost:7037/inherit/allInheritList [运行时间：1.375239s][吞吐率：0.73req/s] [内存消耗：3,164.61kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'allInheritList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryj9XevOeprxSuggXZ',
+  'content-length' => '141',
+  'x-original-url' => '/inherit/allInheritList',
+  'postman-token' => '397f9e01-b5eb-a918-578e-131fab74528d',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->allInheritList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.091175s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.058769s ]
+[ sql ] [ SQL ] SELECT `id`.`inherit_doctor_id`,`id`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`school_id`,`i`.`intro`,`d`.`member_id`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  (id.member_id = 2) AND id.is_checked = 1 ) ORDER BY id.add_date DESC [ RunTime:0.059189s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_special` [ RunTime:0.058571s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 4 ) ORDER BY sort DESC [ RunTime:0.057439s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_school` [ RunTime:0.057747s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 0 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.058353s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.056837s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.057230s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.057053s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.057208s ]
+[ sql ] [ SQL ] SELECT `id`.`inherit_doctor_id`,`id`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`intro`,`i`.`school_id`,`d`.`member_id`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `i`.`member_id`=`d`.`member_id` WHERE  (  (id.member_id != 2 AND id.parent_id != 2) ) ORDER BY id.add_date DESC [ RunTime:0.058351s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.056239s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.057767s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.058448s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.058007s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.058200s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.057991s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.057339s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.057754s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.057205s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.057053s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-04T16:03:48+08:00 ] 0.0.0.0 POST /inherit/allInheritList
+[ info ] localhost:7037/inherit/allInheritList [运行时间：1.539308s][吞吐率：0.65req/s] [内存消耗：3,173.21kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'allInheritList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryhvaG9lmlOV7cz53q',
+  'content-length' => '141',
+  'x-original-url' => '/inherit/allInheritList',
+  'postman-token' => '0bd8f1fe-517c-8f3c-74ae-4cc3ee6c8248',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->allInheritList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.085391s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.059772s ]
+[ sql ] [ SQL ] SELECT `id`.`inherit_doctor_id`,`id`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`school_id`,`i`.`intro`,`d`.`member_id`,`id`.`is_checked`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  (id.member_id = 2) AND id.is_checked = 1 ) ORDER BY id.add_date DESC [ RunTime:0.057111s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_special` [ RunTime:0.056610s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 4 ) ORDER BY sort DESC [ RunTime:0.056807s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_school` [ RunTime:0.058494s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 0 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.055546s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.056403s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.055405s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.080487s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.055885s ]
+[ sql ] [ SQL ] SELECT `id`.`inherit_doctor_id`,`id`.`inherit_id`,`id`.`is_checked`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`intro`,`i`.`school_id`,`d`.`member_id`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `i`.`member_id`=`d`.`member_id` WHERE  (  (id.member_id != 2 AND id.parent_id != 2) OR ((id.member_id = 2 OR id.parent_id = 2) AND id.is_checked != 1) ) ORDER BY id.add_date DESC [ RunTime:0.083174s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.060172s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.063919s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.056782s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.056903s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 4 ) ORDER BY sort DESC [ RunTime:0.056884s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 0 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.056450s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.055779s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.055635s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.056403s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.057120s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.056011s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.056407s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-04T16:08:59+08:00 ] 0.0.0.0 POST /inherit/allInheritList
+[ info ] localhost:7037/inherit/allInheritList [运行时间：1.980021s][吞吐率：0.51req/s] [内存消耗：3,183.61kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'allInheritList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryX3mmW520ZBSUdXta',
+  'content-length' => '142',
+  'x-original-url' => '/inherit/allInheritList',
+  'postman-token' => 'd6fe9f5a-4545-5f2d-843d-278a21c26621',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '52',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->allInheritList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.101370s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.061100s ]
+[ sql ] [ SQL ] SELECT `id`.`inherit_doctor_id`,`id`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`school_id`,`i`.`intro`,`d`.`member_id`,`id`.`is_checked`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  (id.member_id = 52) AND id.is_checked = 1 ) ORDER BY id.add_date DESC [ RunTime:0.060314s ]
+[ sql ] [ SQL ] SELECT `id`.`inherit_doctor_id`,`id`.`inherit_id`,`id`.`is_checked`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`intro`,`i`.`school_id`,`d`.`member_id`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `i`.`member_id`=`d`.`member_id` WHERE  (  (id.member_id != 52 AND id.parent_id != 52) OR ((id.member_id = 52 OR id.parent_id = 52) AND id.is_checked != 1) ) ORDER BY id.add_date DESC [ RunTime:0.062094s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_special` [ RunTime:0.059833s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.059423s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_school` [ RunTime:0.060542s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.059609s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.059566s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.060027s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.061163s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.061900s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.061558s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.059707s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 4 ) ORDER BY sort DESC [ RunTime:0.060305s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 0 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.060474s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 4 ) ORDER BY sort DESC [ RunTime:0.064006s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 0 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.059999s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.060845s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.060532s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.063811s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.076539s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.069719s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.059261s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.060194s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.060128s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.059373s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.062208s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.060592s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.060027s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-04T16:10:23+08:00 ] 0.0.0.0 POST /inherit/applyInherit
+[ info ] localhost:7037/inherit/applyInherit [运行时间：0.576374s][吞吐率：1.73req/s] [内存消耗：3,900.76kb] [文件加载：66]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'applyInherit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryZg0d1BCEJfgohwh2',
+  'content-length' => '357',
+  'x-original-url' => '/inherit/applyInherit',
+  'postman-token' => 'd31e4422-49c6-2126-1a24-5fdd651fcfe4',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '52',
+  'inherit_id' => '2',
+  'reason' => '这是我的申请理由',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->applyInherit[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.127865s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.061340s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit_doctor` WHERE  (  member_id = 52 AND inherit_id = 2 AND is_checked IN(0, 1) ) LIMIT 1 [ RunTime:0.061391s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.062425s ]
+[ sql ] [ SQL ] SELECT `member_id` FROM `jd_inherit` WHERE  (  inherit_id = 2 AND is_display = 1 ) LIMIT 1 [ RunTime:0.060098s ]
+[ sql ] [ SQL ] INSERT INTO `jd_inherit_doctor` (`parent_id` , `inherit_id` , `member_id` , `reason` , `add_date` , `img_url`) VALUES (2 , 2 , 52 , '这是我的申请理由' , 1528099822 , 'http://39.105.19.169:88/uploads/code/1528099823code.png') [ RunTime:0.058867s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-04T16:10:29+08:00 ] 0.0.0.0 POST /inherit/allInheritList
+[ info ] localhost:7037/inherit/allInheritList [运行时间：2.617629s][吞吐率：0.38req/s] [内存消耗：3,188.23kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'allInheritList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryTKnk8wu6BxTlznAG',
+  'content-length' => '142',
+  'x-original-url' => '/inherit/allInheritList',
+  'postman-token' => 'c6346a8f-2638-dee6-d28a-8b2ff23e50d1',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '52',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->allInheritList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.087717s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.058167s ]
+[ sql ] [ SQL ] SELECT `id`.`inherit_doctor_id`,`id`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`school_id`,`i`.`intro`,`d`.`member_id`,`id`.`is_checked`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  (id.member_id = 52) AND id.is_checked = 1 ) ORDER BY id.add_date DESC [ RunTime:0.058694s ]
+[ sql ] [ SQL ] SELECT `id`.`inherit_doctor_id`,`id`.`inherit_id`,`id`.`is_checked`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`intro`,`i`.`school_id`,`d`.`member_id`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `i`.`member_id`=`d`.`member_id` WHERE  (  (id.member_id != 52 AND id.parent_id != 52) OR ((id.member_id = 52 OR id.parent_id = 52) AND id.is_checked != 1) ) ORDER BY id.add_date DESC [ RunTime:0.061538s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_special` [ RunTime:0.058480s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.058686s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_school` [ RunTime:0.059425s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.057305s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.056672s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.057752s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.056836s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.059337s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.058988s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.060625s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.078138s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.074790s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 4 ) ORDER BY sort DESC [ RunTime:0.080840s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 0 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.079888s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 4 ) ORDER BY sort DESC [ RunTime:0.083857s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 0 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.073436s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.122364s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.077252s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.127132s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.087341s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.102085s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.077495s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.083238s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.087003s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.130680s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.103458s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.091219s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.116422s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-04T16:10:55+08:00 ] 0.0.0.0 POST /inherit/allInheritList
+[ info ] localhost:7037/inherit/allInheritList [运行时间：1.944764s][吞吐率：0.51req/s] [内存消耗：3,190.23kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'allInheritList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryLCyAz1vIYXhvMA50',
+  'content-length' => '142',
+  'x-original-url' => '/inherit/allInheritList',
+  'postman-token' => '4f26ae0b-389f-8b35-e400-a2ce8383a183',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '52',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->allInheritList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086174s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.057000s ]
+[ sql ] [ SQL ] SELECT `id`.`inherit_doctor_id`,`id`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`school_id`,`i`.`intro`,`d`.`member_id`,`id`.`is_checked`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  (id.member_id = 52) AND id.is_checked = 1 ) ORDER BY id.add_date DESC [ RunTime:0.059166s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_special` [ RunTime:0.057654s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.056514s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_school` [ RunTime:0.057171s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.056119s ]
+[ sql ] [ SQL ] SELECT `id`.`inherit_doctor_id`,`id`.`inherit_id`,`id`.`is_checked`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`intro`,`i`.`school_id`,`d`.`member_id`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `i`.`member_id`=`d`.`member_id` WHERE  (  (id.member_id != 52 AND id.parent_id != 52) OR ((id.member_id = 52 OR id.parent_id = 52) AND id.is_checked != 1) ) ORDER BY id.add_date DESC [ RunTime:0.057099s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.056165s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.058908s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.068736s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.056344s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.057451s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.057136s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.057842s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.055279s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 4 ) ORDER BY sort DESC [ RunTime:0.056262s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 0 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.056720s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 4 ) ORDER BY sort DESC [ RunTime:0.055385s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 0 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.056683s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.056504s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.056512s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.056944s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.056925s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.055526s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.057055s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.057380s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.057800s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.058069s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.056878s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.056765s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.057051s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-04T16:11:39+08:00 ] 0.0.0.0 POST /inherit/allInheritList
+[ info ] localhost:7037/inherit/allInheritList [运行时间：2.021556s][吞吐率：0.49req/s] [内存消耗：3,189.47kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'allInheritList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarybVZU1cjF4fdwRmTM',
+  'content-length' => '142',
+  'x-original-url' => '/inherit/allInheritList',
+  'postman-token' => '685cbf29-50e8-7fb0-cdd3-b72eb4e9da53',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '52',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->allInheritList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.085327s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.058963s ]
+[ sql ] [ SQL ] SELECT `id`.`inherit_doctor_id`,`id`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`school_id`,`i`.`intro`,`d`.`member_id`,`id`.`is_checked`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  (id.member_id = 52) AND id.is_checked = 1 ) ORDER BY id.add_date DESC [ RunTime:0.059201s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_special` [ RunTime:0.059879s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.058281s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_school` [ RunTime:0.057759s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.057273s ]
+[ sql ] [ SQL ] SELECT `id`.`inherit_doctor_id`,`id`.`inherit_id`,`id`.`is_checked`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`intro`,`i`.`school_id`,`d`.`member_id`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `i`.`member_id`=`d`.`member_id` WHERE  (  (id.member_id != 52 AND id.parent_id != 52) ) ORDER BY id.add_date DESC [ RunTime:0.058998s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.056353s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.057444s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.057999s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.057666s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.057828s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.064696s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.061123s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.058428s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 4 ) ORDER BY sort DESC [ RunTime:0.059057s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 0 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.061808s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 4 ) ORDER BY sort DESC [ RunTime:0.064723s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 0 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.078090s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.057413s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.057397s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.058731s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.059071s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.059235s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.057882s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.058585s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.057406s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.057286s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.057773s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.057705s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.058019s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-04T16:11:57+08:00 ] 0.0.0.0 POST /inherit/allInheritList
+[ info ] localhost:7037/inherit/allInheritList [运行时间：2.242390s][吞吐率：0.45req/s] [内存消耗：3,189.47kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'allInheritList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarybAPZzxEBdoGgCPxq',
+  'content-length' => '142',
+  'x-original-url' => '/inherit/allInheritList',
+  'postman-token' => '03aa0396-ae8d-8dc0-137b-8889a0f29c6e',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '52',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->allInheritList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.089430s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.059928s ]
+[ sql ] [ SQL ] SELECT `id`.`inherit_doctor_id`,`id`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`school_id`,`i`.`intro`,`d`.`member_id`,`id`.`is_checked`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  (id.member_id = 52) AND id.is_checked = 1 ) ORDER BY id.add_date DESC [ RunTime:0.058218s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_special` [ RunTime:0.056334s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.055984s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_school` [ RunTime:0.056971s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.057207s ]
+[ sql ] [ SQL ] SELECT `id`.`inherit_doctor_id`,`id`.`inherit_id`,`id`.`is_checked`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`intro`,`i`.`school_id`,`d`.`member_id`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `i`.`member_id`=`d`.`member_id` WHERE  (  (id.member_id != 52 AND id.parent_id != 52) ) ORDER BY id.add_date DESC [ RunTime:0.060898s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.056992s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.056662s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.058074s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.056674s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.057135s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.058320s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.058152s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.057182s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 4 ) ORDER BY sort DESC [ RunTime:0.357466s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 0 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.057190s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 4 ) ORDER BY sort DESC [ RunTime:0.055671s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 0 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.055908s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.057308s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.057546s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.056877s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.056827s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.057317s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.057435s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.055672s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.055519s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.056518s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.055649s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.055541s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.055383s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-04T16:20:13+08:00 ] 0.0.0.0 POST /inherit/allInheritList
+[ info ] localhost:7037/inherit/allInheritList [运行时间：0.571433s][吞吐率：1.75req/s] [内存消耗：3,046.38kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'allInheritList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary9nmUpMPx71GcO2bv',
+  'content-length' => '142',
+  'x-original-url' => '/inherit/allInheritList',
+  'postman-token' => '8ccde7c1-ff0d-4e5c-4610-9421060375d1',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '52',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->allInheritList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.099147s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.083576s ]
+[ sql ] [ SQL ] SELECT `id`.`inherit_doctor_id`,`id`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`school_id`,`i`.`intro`,`d`.`member_id`,`id`.`is_checked`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  (id.member_id = 52) AND id.is_checked = 1 ) ORDER BY id.add_date DESC [ RunTime:0.059997s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_special` [ RunTime:0.064614s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.065405s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_school` [ RunTime:0.058508s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.066541s ]
+---------------------------------------------------------------
+[ 2018-06-04T16:20:54+08:00 ] 0.0.0.0 POST /inherit/allInheritList
+[ info ] localhost:7037/inherit/allInheritList [运行时间：2.005282s][吞吐率：0.50req/s] [内存消耗：3,190.51kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'allInheritList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryyyFiKGTb1xvyTtbq',
+  'content-length' => '142',
+  'x-original-url' => '/inherit/allInheritList',
+  'postman-token' => '8bc39007-9fc3-c4fe-33fb-c0e79b60f1b0',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '52',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->allInheritList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.087954s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.059273s ]
+[ sql ] [ SQL ] SELECT `id`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`school_id`,`i`.`intro`,`d`.`member_id`,`id`.`is_checked`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  (id.member_id = 52) AND id.is_checked = 1 ) ORDER BY id.add_date DESC [ RunTime:0.060077s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_special` [ RunTime:0.059691s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.059445s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_school` [ RunTime:0.059298s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.058527s ]
+[ sql ] [ SQL ] SELECT `id`.`inherit_doctor_id`,`id`.`inherit_id`,`id`.`is_checked`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`intro`,`i`.`school_id`,`d`.`member_id`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `i`.`member_id`=`d`.`member_id` WHERE  (  (id.member_id != 52 AND id.parent_id != 52) ) ORDER BY id.add_date DESC [ RunTime:0.059625s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.059334s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.057533s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.058113s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.060245s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.057388s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.058364s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.058021s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.058229s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 4 ) ORDER BY sort DESC [ RunTime:0.057064s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 0 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.058226s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 4 ) ORDER BY sort DESC [ RunTime:0.058259s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 0 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.058105s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.059462s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.058456s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.058158s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.058494s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.058260s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.058906s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.058108s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.073027s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.057453s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.059573s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.057620s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.058385s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-04T16:21:08+08:00 ] 0.0.0.0 POST /inherit/allInheritList
+[ info ] localhost:7037/inherit/allInheritList [运行时间：0.559778s][吞吐率：1.79req/s] [内存消耗：3,046.05kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'allInheritList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryq3AO6FF40pWxQOLH',
+  'content-length' => '142',
+  'x-original-url' => '/inherit/allInheritList',
+  'postman-token' => '75932423-6fee-fbec-38d6-11576ac42316',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '52',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->allInheritList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086833s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.059620s ]
+[ sql ] [ SQL ] SELECT `id`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`school_id`,`i`.`intro`,`d`.`member_id`,`id`.`is_checked`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  (id.member_id = 52) AND id.is_checked = 1 ) ORDER BY id.add_date DESC [ RunTime:0.058671s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_special` [ RunTime:0.058324s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.056860s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_school` [ RunTime:0.057767s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.062082s ]
+---------------------------------------------------------------
+[ 2018-06-04T16:21:26+08:00 ] 0.0.0.0 POST /inherit/allInheritList
+[ info ] localhost:7037/inherit/allInheritList [运行时间：2.073866s][吞吐率：0.48req/s] [内存消耗：3,190.51kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'allInheritList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary4kqCFIAzVSqK8ryw',
+  'content-length' => '142',
+  'x-original-url' => '/inherit/allInheritList',
+  'postman-token' => 'a9a7a484-d952-871f-e65b-f9d4b331c3f6',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '52',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->allInheritList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.091478s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.061410s ]
+[ sql ] [ SQL ] SELECT `id`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`school_id`,`i`.`intro`,`d`.`member_id`,`id`.`is_checked`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  (id.member_id = 52) AND id.is_checked = 1 ) ORDER BY id.add_date DESC [ RunTime:0.058919s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_special` [ RunTime:0.059571s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.059202s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_school` [ RunTime:0.059617s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.059262s ]
+[ sql ] [ SQL ] SELECT `id`.`inherit_doctor_id`,`id`.`inherit_id`,`id`.`is_checked`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`intro`,`i`.`school_id`,`d`.`member_id`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `i`.`member_id`=`d`.`member_id` WHERE  (  (id.member_id != 52 AND id.parent_id != 52) ) ORDER BY id.add_date DESC [ RunTime:0.060170s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.070449s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.059077s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.085705s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.059960s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.058024s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.061806s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.059896s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.057948s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 4 ) ORDER BY sort DESC [ RunTime:0.062929s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 0 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.059953s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 4 ) ORDER BY sort DESC [ RunTime:0.060390s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 0 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.059811s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.059073s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.058703s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.059263s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.059894s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.059616s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.070233s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.059572s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.059704s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.058862s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.059795s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.058203s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.059793s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-04T16:26:30+08:00 ] 0.0.0.0 POST /inherit/allInheritList
+[ info ] localhost:7037/inherit/allInheritList [运行时间：0.501396s][吞吐率：1.99req/s] [内存消耗：3,046.73kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'allInheritList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryEN7QBZg4c7lOEx9V',
+  'content-length' => '142',
+  'x-original-url' => '/inherit/allInheritList',
+  'postman-token' => 'a2c77781-983b-5f74-931c-25ce7a1c7d9e',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '52',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->allInheritList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.085684s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.058409s ]
+[ sql ] [ SQL ] SELECT `id`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`school_id`,`i`.`intro`,`d`.`member_id`,`id`.`is_checked`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  (id.member_id = 52) AND id.is_checked = 1 ) ORDER BY id.add_date DESC [ RunTime:0.060108s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_special` [ RunTime:0.059524s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.058753s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_school` [ RunTime:0.056767s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.057582s ]
+---------------------------------------------------------------
+[ 2018-06-04T16:29:36+08:00 ] 0.0.0.0 GET /uploads/code/1528091780code.png
+[ info ] localhost:7037/uploads/code/1528091780code.png [运行时间：0.039535s][吞吐率：25.29req/s] [内存消耗：1,712.18kb] [文件加载：41]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'uploads',
+    2 => 'code',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/uploads/code/1528091780code.png',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; lang=zh-cn; device=desktop; theme=default; keepLogin=on; za=admin; zp=0537c5bc8c477d690858dc3b13d03cbc9de46966; PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-04T16:30:31+08:00 ] 0.0.0.0 GET /uploads/code/1528091780code.png
+[ info ] localhost:7037/uploads/code/1528091780code.png [运行时间：0.039888s][吞吐率：25.07req/s] [内存消耗：1,712.36kb] [文件加载：41]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'uploads',
+    2 => 'code',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/uploads/code/1528091780code.png',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; lang=zh-cn; device=desktop; theme=default; keepLogin=on; za=admin; zp=0537c5bc8c477d690858dc3b13d03cbc9de46966; PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-04T16:45:23+08:00 ] 0.0.0.0 POST /inherit/allInheritList
+[ info ] localhost:7037/inherit/allInheritList [运行时间：0.250708s][吞吐率：3.99req/s] [内存消耗：3,033.34kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'allInheritList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryuuTlbztHl5vSNvFV',
+  'content-length' => '142',
+  'x-original-url' => '/inherit/allInheritList',
+  'postman-token' => '846df207-2ec8-3408-213f-2487b0c7f95e',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '52',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->allInheritList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.087881s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.058486s ]
+[ sql ] [ SQL ] SELECT `id`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`school_id`,`i`.`intro`,`d`.`member_id`,`id`.`is_checked`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`parent_id`=`d`.`member_id` WHERE  (  (id.member_id = 52) AND id.is_checked = 1 ) ORDER BY id.add_date DESC [ RunTime:0.059069s ]
+---------------------------------------------------------------
+[ 2018-06-04T16:46:07+08:00 ] 0.0.0.0 POST /inherit/allInheritList
+[ info ] localhost:7037/inherit/allInheritList [运行时间：0.623818s][吞吐率：1.60req/s] [内存消耗：3,209.05kb] [文件加载：58]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'allInheritList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryv6rDX1mIKeW8Cgkk',
+  'content-length' => '142',
+  'x-original-url' => '/inherit/allInheritList',
+  'postman-token' => '3c20b645-20d8-81cf-06f3-9428fc4d1a0c',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '52',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->allInheritList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.087833s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.065952s ]
+[ sql ] [ SQL ] SELECT `i`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`school_id`,`i`.`intro`,`d`.`member_id`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`parent_id`=`d`.`member_id` WHERE  (  (id.member_id = 52) AND id.is_checked = 1 ) ORDER BY id.add_date DESC [ RunTime:0.060414s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_special` [ RunTime:0.058758s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.058311s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_school` [ RunTime:0.058696s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.057635s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.058519s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id.inherit_doctor_id' in 'field list'[D:\workLP\20180502\judeng\wwwroot\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-06-04T16:46:44+08:00 ] 0.0.0.0 POST /inherit/allInheritList
+[ info ] localhost:7037/inherit/allInheritList [运行时间：0.272520s][吞吐率：3.67req/s] [内存消耗：3,032.44kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'allInheritList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryATQEgmubvFnRZ0wA',
+  'content-length' => '142',
+  'x-original-url' => '/inherit/allInheritList',
+  'postman-token' => 'b9dff327-8ab5-ccb7-37af-1fd4b3c0c7de',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '52',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->allInheritList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.090659s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.060477s ]
+[ sql ] [ SQL ] SELECT `i`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`school_id`,`i`.`intro`,`d`.`member_id`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`parent_id`=`d`.`member_id` WHERE  (  (id.member_id = 52) AND id.is_checked = 1 ) ORDER BY id.add_date DESC [ RunTime:0.060676s ]
+---------------------------------------------------------------
+[ 2018-06-04T16:47:02+08:00 ] 0.0.0.0 POST /inherit/allInheritList
+[ info ] localhost:7037/inherit/allInheritList [运行时间：0.519088s][吞吐率：1.93req/s] [内存消耗：3,045.96kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'allInheritList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryyY10hoCS9rrp81Jc',
+  'content-length' => '142',
+  'x-original-url' => '/inherit/allInheritList',
+  'postman-token' => '70dfc8e7-6a84-9b83-5b2a-bc5223149710',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '52',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->allInheritList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.092001s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.062546s ]
+[ sql ] [ SQL ] SELECT `i`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`school_id`,`i`.`intro`,`d`.`member_id`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`parent_id`=`d`.`member_id` WHERE  (  (id.member_id = 52) AND id.is_checked = 1 ) ORDER BY id.add_date DESC [ RunTime:0.061502s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_special` [ RunTime:0.062933s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.060416s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_school` [ RunTime:0.060880s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.060887s ]
+---------------------------------------------------------------
+[ 2018-06-04T16:50:54+08:00 ] 0.0.0.0 POST /inherit/allInheritList
+[ info ] localhost:7037/inherit/allInheritList [运行时间：0.484323s][吞吐率：2.06req/s] [内存消耗：3,048.55kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'allInheritList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryHvBqBwFU5Y7soHpY',
+  'content-length' => '142',
+  'x-original-url' => '/inherit/allInheritList',
+  'postman-token' => '79195bcb-ddec-c606-71a2-f226938c5377',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '52',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->allInheritList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084131s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.056268s ]
+[ sql ] [ SQL ] SELECT `i`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`school_id`,`i`.`intro`,`d`.`member_id`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`parent_id`=`d`.`member_id` WHERE  (  (id.member_id = 52) AND id.is_checked = 1 ) ORDER BY id.add_date DESC [ RunTime:0.056788s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_special` [ RunTime:0.057104s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.055796s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_school` [ RunTime:0.056864s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.058014s ]
+---------------------------------------------------------------
+[ 2018-06-04T16:51:40+08:00 ] 0.0.0.0 POST /inherit/allInheritList
+[ info ] localhost:7037/inherit/allInheritList [运行时间：0.489488s][吞吐率：2.04req/s] [内存消耗：3,049.36kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'allInheritList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryoR70YVEt9kjBQ5sW',
+  'content-length' => '142',
+  'x-original-url' => '/inherit/allInheritList',
+  'postman-token' => '3ae29d10-1ad5-0475-f102-5e686fc301e9',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '52',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->allInheritList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084638s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.057479s ]
+[ sql ] [ SQL ] SELECT `i`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`school_id`,`i`.`intro`,`d`.`member_id`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`parent_id`=`d`.`member_id` WHERE  (  (id.member_id = 52) AND id.is_checked = 1 ) ORDER BY id.add_date DESC [ RunTime:0.056873s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_special` [ RunTime:0.059960s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.056343s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_school` [ RunTime:0.057479s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.056737s ]
+---------------------------------------------------------------
+[ 2018-06-04T16:52:05+08:00 ] 0.0.0.0 POST /inherit/allInheritList
+[ info ] localhost:7037/inherit/allInheritList [运行时间：0.625099s][吞吐率：1.60req/s] [内存消耗：3,211.96kb] [文件加载：58]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'allInheritList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryS9Qq4weseusCJPwL',
+  'content-length' => '142',
+  'x-original-url' => '/inherit/allInheritList',
+  'postman-token' => '14a966b9-72d4-db98-df56-6dadae275dc0',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '52',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->allInheritList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.088146s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.059787s ]
+[ sql ] [ SQL ] SELECT `i`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`school_id`,`i`.`intro`,`d`.`member_id`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`parent_id`=`d`.`member_id` WHERE  (  (id.member_id = 52) AND id.is_checked = 1 ) ORDER BY id.add_date DESC [ RunTime:0.058623s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_special` [ RunTime:0.059422s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.061223s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_school` [ RunTime:0.059640s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.059241s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.059596s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id.is_checked' in 'field list'[D:\workLP\20180502\judeng\wwwroot\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-06-04T16:52:20+08:00 ] 0.0.0.0 POST /inherit/allInheritList
+[ info ] localhost:7037/inherit/allInheritList [运行时间：0.624978s][吞吐率：1.60req/s] [内存消耗：3,211.79kb] [文件加载：58]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'allInheritList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary9NPEAewxw1oRBBQu',
+  'content-length' => '142',
+  'x-original-url' => '/inherit/allInheritList',
+  'postman-token' => '1d23bc4f-6576-3472-a84b-f387cfa26f92',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '52',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->allInheritList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.090618s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.061359s ]
+[ sql ] [ SQL ] SELECT `i`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`school_id`,`i`.`intro`,`d`.`member_id`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`parent_id`=`d`.`member_id` WHERE  (  (id.member_id = 52) AND id.is_checked = 1 ) ORDER BY id.add_date DESC [ RunTime:0.063079s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_special` [ RunTime:0.061411s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.059859s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_school` [ RunTime:0.060627s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.059063s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.060502s ]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1305 FUNCTION judeng.1IN does not exist[D:\workLP\20180502\judeng\wwwroot\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-06-04T16:52:55+08:00 ] 0.0.0.0 POST /inherit/allInheritList
+[ info ] localhost:7037/inherit/allInheritList [运行时间：0.593932s][吞吐率：1.68req/s] [内存消耗：3,212.27kb] [文件加载：58]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'allInheritList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarykEhXH5GB7ACVTpFj',
+  'content-length' => '142',
+  'x-original-url' => '/inherit/allInheritList',
+  'postman-token' => '58b26151-1c8f-7560-f9cd-5c4bf6d6cb4e',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '52',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->allInheritList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.089225s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.062936s ]
+[ sql ] [ SQL ] SELECT `i`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`school_id`,`i`.`intro`,`d`.`member_id`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`parent_id`=`d`.`member_id` WHERE  (  (id.member_id = 52) AND id.is_checked = 1 ) ORDER BY id.add_date DESC [ RunTime:0.058288s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_special` [ RunTime:0.057503s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.058422s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_school` [ RunTime:0.059157s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.056861s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.058100s ]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IN(2) ) ORDER BY id.add_date DESC' at line 1[D:\workLP\20180502\judeng\wwwroot\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-06-04T16:53:24+08:00 ] 0.0.0.0 POST /inherit/allInheritList
+[ info ] localhost:7037/inherit/allInheritList [运行时间：0.627521s][吞吐率：1.59req/s] [内存消耗：3,211.87kb] [文件加载：58]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'allInheritList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary5yFzaFu60HstGfIl',
+  'content-length' => '142',
+  'x-original-url' => '/inherit/allInheritList',
+  'postman-token' => 'da3f7493-3925-4b39-86f1-4948ad0b3b08',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '52',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->allInheritList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.085665s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.058275s ]
+[ sql ] [ SQL ] SELECT `i`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`school_id`,`i`.`intro`,`d`.`member_id`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`parent_id`=`d`.`member_id` WHERE  (  (id.member_id = 52) AND id.is_checked = 1 ) ORDER BY id.add_date DESC [ RunTime:0.062957s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_special` [ RunTime:0.059516s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.059618s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_school` [ RunTime:0.067335s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.057383s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.058311s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id.add_date' in 'order clause'[D:\workLP\20180502\judeng\wwwroot\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-06-04T16:53:48+08:00 ] 0.0.0.0 POST /inherit/allInheritList
+[ info ] localhost:7037/inherit/allInheritList [运行时间：0.636428s][吞吐率：1.57req/s] [内存消耗：3,077.13kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'allInheritList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryiSkDnjPQTMhN6xCo',
+  'content-length' => '142',
+  'x-original-url' => '/inherit/allInheritList',
+  'postman-token' => 'e08860a7-0eef-68a4-cf03-10b9d966b10e',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '52',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->allInheritList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.090044s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.061069s ]
+[ sql ] [ SQL ] SELECT `i`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`school_id`,`i`.`intro`,`d`.`member_id`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`parent_id`=`d`.`member_id` WHERE  (  (id.member_id = 52) AND id.is_checked = 1 ) ORDER BY id.add_date DESC [ RunTime:0.060292s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_special` [ RunTime:0.060082s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.060413s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_school` [ RunTime:0.060464s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.060118s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.061804s ]
+[ sql ] [ SQL ] SELECT `i`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`intro`,`i`.`school_id`,`d`.`member_id`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit` `i` INNER JOIN `jd_doctor` `d` ON `i`.`member_id`=`d`.`member_id` WHERE  (  i.is_display = 1 AND i.inherit_id NOT IN(2) ) ORDER BY i.sort DESC [ RunTime:0.061168s ]
+---------------------------------------------------------------
+[ 2018-06-04T16:54:30+08:00 ] 0.0.0.0 POST /inherit/allInheritList
+[ info ] localhost:7037/inherit/allInheritList [运行时间：0.849411s][吞吐率：1.18req/s] [内存消耗：3,154.18kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'allInheritList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryG5bPN12vheO6BghY',
+  'content-length' => '142',
+  'x-original-url' => '/inherit/allInheritList',
+  'postman-token' => 'b1d82d7e-22af-b218-eb97-49e037ddef89',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '52',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->allInheritList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086581s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.058015s ]
+[ sql ] [ SQL ] SELECT `i`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`school_id`,`i`.`intro`,`d`.`member_id`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`parent_id`=`d`.`member_id` WHERE  (  (id.member_id = 52) AND id.is_checked = 1 ) ORDER BY id.add_date DESC [ RunTime:0.059099s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_special` [ RunTime:0.059008s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.058090s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_school` [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.057319s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.058978s ]
+[ sql ] [ SQL ] SELECT `i`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`intro`,`i`.`school_id`,`d`.`member_id`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit` `i` INNER JOIN `jd_doctor` `d` ON `i`.`member_id`=`d`.`member_id` WHERE  (  i.is_display = 1 AND i.inherit_id NOT IN(2) ) ORDER BY i.sort DESC [ RunTime:0.058858s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 4 ) ORDER BY sort DESC [ RunTime:0.057918s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 0 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.058484s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.057873s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.058468s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-04T16:54:50+08:00 ] 0.0.0.0 POST /inherit/applyInherit
+[ info ] localhost:7037/inherit/applyInherit [运行时间：0.483783s][吞吐率：2.07req/s] [内存消耗：3,900.77kb] [文件加载：66]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'applyInherit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryyoeqEbZQFKnTzasJ',
+  'content-length' => '357',
+  'x-original-url' => '/inherit/applyInherit',
+  'postman-token' => 'f88e8026-16cf-9cc5-4e3e-5d3ade632166',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '52',
+  'inherit_id' => '4',
+  'reason' => '这是我的申请理由',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->applyInherit[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.085805s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.057843s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit_doctor` WHERE  (  member_id = 52 AND inherit_id = 4 AND is_checked IN(0, 1) ) LIMIT 1 [ RunTime:0.057386s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.057797s ]
+[ sql ] [ SQL ] SELECT `member_id` FROM `jd_inherit` WHERE  (  inherit_id = 4 AND is_display = 1 ) LIMIT 1 [ RunTime:0.057452s ]
+[ sql ] [ SQL ] INSERT INTO `jd_inherit_doctor` (`parent_id` , `inherit_id` , `member_id` , `reason` , `add_date` , `img_url`) VALUES (2 , 4 , 52 , '这是我的申请理由' , 1528102490 , 'http://39.105.19.169:88/uploads/code/1528102490code.png') [ RunTime:0.058519s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-04T16:54:53+08:00 ] 0.0.0.0 POST /inherit/allInheritList
+[ info ] localhost:7037/inherit/allInheritList [运行时间：0.844948s][吞吐率：1.18req/s] [内存消耗：3,154.18kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'allInheritList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarylGffIuTGWqi6HhlO',
+  'content-length' => '142',
+  'x-original-url' => '/inherit/allInheritList',
+  'postman-token' => 'db28f67a-b974-b3f7-f9c4-57c65e95980c',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '52',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->allInheritList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084669s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.057661s ]
+[ sql ] [ SQL ] SELECT `i`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`school_id`,`i`.`intro`,`d`.`member_id`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`parent_id`=`d`.`member_id` WHERE  (  (id.member_id = 52) AND id.is_checked = 1 ) ORDER BY id.add_date DESC [ RunTime:0.058836s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_special` [ RunTime:0.057354s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.057298s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_school` [ RunTime:0.057293s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.056596s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.058417s ]
+[ sql ] [ SQL ] SELECT `i`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`intro`,`i`.`school_id`,`d`.`member_id`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit` `i` INNER JOIN `jd_doctor` `d` ON `i`.`member_id`=`d`.`member_id` WHERE  (  i.is_display = 1 AND i.inherit_id NOT IN(2) ) ORDER BY i.sort DESC [ RunTime:0.056948s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 4 ) ORDER BY sort DESC [ RunTime:0.064049s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 0 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.056314s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.057632s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.056300s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-04T17:12:31+08:00 ] 0.0.0.0 POST /inherit/allInheritList
+[ info ] localhost:7037/inherit/allInheritList [运行时间：0.760659s][吞吐率：1.31req/s] [内存消耗：3,215.97kb] [文件加载：58]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'allInheritList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryQ24oUP0Y4bBuc6bJ',
+  'content-length' => '142',
+  'x-original-url' => '/inherit/allInheritList',
+  'postman-token' => '263d0739-01ee-46d1-629e-30e528974f07',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '52',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->allInheritList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084528s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.057947s ]
+[ sql ] [ SQL ] SELECT `i`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`school_id`,`i`.`intro`,`d`.`member_id`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`parent_id`=`d`.`member_id` WHERE  (  (id.member_id = 52) AND id.is_checked = 1 ) ORDER BY id.add_date DESC [ RunTime:0.059119s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_special` [ RunTime:0.057257s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.057039s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_school` [ RunTime:0.057022s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.054947s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.057463s ]
+[ sql ] [ SQL ] SELECT `i`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`intro`,`i`.`school_id`,`d`.`member_id`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit` `i` INNER JOIN `jd_doctor` `d` ON `i`.`member_id`=`d`.`member_id` WHERE  (  i.is_display = 1 AND i.inherit_id NOT IN(2) ) ORDER BY i.sort DESC [ RunTime:0.056873s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 4 ) ORDER BY sort DESC [ RunTime:0.056969s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 0 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.056052s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'sort' in 'order clause'[D:\workLP\20180502\judeng\wwwroot\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-06-04T17:13:02+08:00 ] 0.0.0.0 POST /inherit/allInheritList
+[ info ] localhost:7037/inherit/allInheritList [运行时间：0.914813s][吞吐率：1.09req/s] [内存消耗：3,160.16kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'allInheritList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryJAq50dImjYO7oqV2',
+  'content-length' => '142',
+  'x-original-url' => '/inherit/allInheritList',
+  'postman-token' => 'a5edc5d8-db58-cec0-3a2a-9e0ac85a3972',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '52',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->allInheritList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.080493s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.054616s ]
+[ sql ] [ SQL ] SELECT `i`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`school_id`,`i`.`intro`,`d`.`member_id`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`parent_id`=`d`.`member_id` WHERE  (  (id.member_id = 52) AND id.is_checked = 1 ) ORDER BY id.add_date DESC [ RunTime:0.054035s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_special` [ RunTime:0.055098s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 2 ) ORDER BY sort DESC [ RunTime:0.054265s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_school` [ RunTime:0.053914s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 2 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.052518s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.053049s ]
+[ sql ] [ SQL ] SELECT `i`.`inherit_id`,`i`.`inherit_name`,`i`.`service_str`,`i`.`banner`,`i`.`is_recommend`,`i`.`intro`,`i`.`school_id`,`d`.`member_id`,`d`.`member_name`,`d`.`title_str` FROM `jd_inherit` `i` INNER JOIN `jd_doctor` `d` ON `i`.`member_id`=`d`.`member_id` WHERE  (  i.is_display = 1 AND i.inherit_id NOT IN(2) ) ORDER BY i.sort DESC [ RunTime:0.053802s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 4 ) ORDER BY sort DESC [ RunTime:0.054444s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 0 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.053669s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit_doctor` WHERE  (  is_checked != 1 AND member_id = 52 AND inherit_id = 4 ) LIMIT 1 [ RunTime:0.054763s ]
+[ sql ] [ SQL ] SELECT `special_name` FROM `jd_special` WHERE  (  is_display = 1 AND inherit_id = 3 ) ORDER BY sort DESC [ RunTime:0.054985s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  is_display = 1 AND school_id = 3 ) ORDER BY sort DESC LIMIT 1 [ RunTime:0.054256s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit_doctor` WHERE  (  is_checked != 1 AND member_id = 52 AND inherit_id = 3 ) LIMIT 1 [ RunTime:0.054355s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-04T17:51:54+08:00 ] 0.0.0.0 POST /member/doSmsLogin?_time=1528105824&sign=9b3d5065157bcd3561e463847bc1765a&only_token=
+[ info ] localhost:7037/member/doSmsLogin?_time=1528105824&sign=9b3d5065157bcd3561e463847bc1765a&only_token= [运行时间：0.037873s][吞吐率：26.40req/s] [内存消耗：2,176.66kb] [文件加载：47]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'doSmsLogin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '92',
+  'x-original-url' => '/member/doSmsLogin?_time=1528105824&sign=9b3d5065157bcd3561e463847bc1765a&only_token=',
+  'user-agent' => 'okhttp/3.8.0',
+  'host' => 'localhost:7037',
+  'accept-encoding' => 'gzip',
+  'connection' => 'Keep-Alive',
+)
+[ info ] [ PARAM ] array (
+  '_time' => '1528105824',
+  'sign' => '9b3d5065157bcd3561e463847bc1765a',
+  'only_token' => '',
+  'device_tokens' => '089bd564b4a0a438202c0be3bfdcfd37',
+  'smscode' => '357762',
+  'mobile' => '15021039435',
+  'is_system' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Member->doSmsLogin[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]A session had already been started - ignoring session_start()[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:119]
+[ error ] [8]未定义数组索引: tokencode[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:122]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-04T17:53:50+08:00 ] 0.0.0.0 POST /member/getsms
+[ info ] localhost:7037/member/getsms [运行时间：1.006251s][吞吐率：0.99req/s] [内存消耗：4,157.54kb] [文件加载：75]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary1GuJTJE92m7i61cA',
+  'content-length' => '424',
+  'x-original-url' => '/member/getsms',
+  'postman-token' => 'e2c88402-f618-0656-3251-7c9c0cc7703f',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039435',
+  'type' => '2',
+  'only_token' => '',
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086898s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.058884s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `mobile` = '15021039435' LIMIT 1 [ RunTime:0.058315s ]
+---------------------------------------------------------------
+[ 2018-06-04T17:54:04+08:00 ] 0.0.0.0 POST /member/getsms
+[ info ] localhost:7037/member/getsms [运行时间：0.403278s][吞吐率：2.48req/s] [内存消耗：4,157.54kb] [文件加载：75]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarykyfqhjohrUSEdMBI',
+  'content-length' => '424',
+  'x-original-url' => '/member/getsms',
+  'postman-token' => 'f98090d7-39a9-ec07-2ae9-f67b68a74f32',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039435',
+  'type' => '2',
+  'only_token' => '',
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.090263s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.063945s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `mobile` = '15021039435' LIMIT 1 [ RunTime:0.060737s ]
+---------------------------------------------------------------
+[ 2018-06-04T18:01:32+08:00 ] 0.0.0.0 POST /member/getsms
+[ info ] localhost:7037/member/getsms [运行时间：0.501404s][吞吐率：1.99req/s] [内存消耗：4,157.54kb] [文件加载：75]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryHRKUqLuLeVjjl3xG',
+  'content-length' => '424',
+  'x-original-url' => '/member/getsms',
+  'postman-token' => 'cf4e3169-406a-d8d4-66c6-e8b18cf8c974',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039435',
+  'type' => '2',
+  'only_token' => '',
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086233s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.058603s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `mobile` = '15021039435' LIMIT 1 [ RunTime:0.056588s ]
+---------------------------------------------------------------
+[ 2018-06-04T18:02:19+08:00 ] 0.0.0.0 POST /member/getsms
+[ info ] localhost:7037/member/getsms [运行时间：0.368743s][吞吐率：2.71req/s] [内存消耗：4,237.87kb] [文件加载：78]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarym3ZjEfdm2mFsu1nh',
+  'content-length' => '424',
+  'x-original-url' => '/member/getsms',
+  'postman-token' => '5fb56877-77d2-82a0-eb11-81c82f701009',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '13310028293',
+  'type' => '2',
+  'only_token' => '',
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: tokencode[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:788]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.087879s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.060313s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `mobile` = '13310028293' LIMIT 1 [ RunTime:0.058385s ]
+---------------------------------------------------------------
+[ 2018-06-04T18:02:50+08:00 ] 0.0.0.0 POST /member/doSmsLogin?_time=1528105824&sign=9b3d5065157bcd3561e463847bc1765a&only_token=
+[ info ] localhost:7037/member/doSmsLogin?_time=1528105824&sign=9b3d5065157bcd3561e463847bc1765a&only_token= [运行时间：0.038833s][吞吐率：25.75req/s] [内存消耗：2,175.49kb] [文件加载：47]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'doSmsLogin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '92',
+  'x-original-url' => '/member/doSmsLogin?_time=1528105824&sign=9b3d5065157bcd3561e463847bc1765a&only_token=',
+  'user-agent' => 'okhttp/3.8.0',
+  'host' => 'localhost:7037',
+  'accept-encoding' => 'gzip',
+  'connection' => 'Keep-Alive',
+)
+[ info ] [ PARAM ] array (
+  '_time' => '1528105824',
+  'sign' => '9b3d5065157bcd3561e463847bc1765a',
+  'only_token' => '',
+  'device_tokens' => '089bd564b4a0a438202c0be3bfdcfd37',
+  'smscode' => '050537',
+  'mobile' => '13310028293',
+  'is_system' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Member->doSmsLogin[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]A session had already been started - ignoring session_start()[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:114]
+[ error ] [8]未定义数组索引: tokencode[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:117]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-04T18:03:47+08:00 ] 0.0.0.0 POST /member/doSmsLogin?_time=1528105824&sign=9b3d5065157bcd3561e463847bc1765a&only_token=
+[ info ] localhost:7037/member/doSmsLogin?_time=1528105824&sign=9b3d5065157bcd3561e463847bc1765a&only_token= [运行时间：0.061945s][吞吐率：16.14req/s] [内存消耗：2,173.28kb] [文件加载：47]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'doSmsLogin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '92',
+  'x-original-url' => '/member/doSmsLogin?_time=1528105824&sign=9b3d5065157bcd3561e463847bc1765a&only_token=',
+  'user-agent' => 'okhttp/3.8.0',
+  'host' => 'localhost:7037',
+  'accept-encoding' => 'gzip',
+  'connection' => 'Keep-Alive',
+)
+[ info ] [ PARAM ] array (
+  '_time' => '1528105824',
+  'sign' => '9b3d5065157bcd3561e463847bc1765a',
+  'only_token' => '',
+  'device_tokens' => '089bd564b4a0a438202c0be3bfdcfd37',
+  'smscode' => '050537',
+  'mobile' => '13310028293',
+  'is_system' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Member->doSmsLogin[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]A session had already been started - ignoring session_start()[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:114]
+[ error ] [8]未定义数组索引: tokencode[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:117]
+---------------------------------------------------------------
+[ 2018-06-04T18:04:25+08:00 ] 0.0.0.0 POST /member/doSmsLogin?_time=1528105824&sign=9b3d5065157bcd3561e463847bc1765a&only_token=
+[ info ] localhost:7037/member/doSmsLogin?_time=1528105824&sign=9b3d5065157bcd3561e463847bc1765a&only_token= [运行时间：1.183845s][吞吐率：0.84req/s] [内存消耗：3,763.34kb] [文件加载：57]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'doSmsLogin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '92',
+  'x-original-url' => '/member/doSmsLogin?_time=1528105824&sign=9b3d5065157bcd3561e463847bc1765a&only_token=',
+  'user-agent' => 'okhttp/3.8.0',
+  'host' => 'localhost:7037',
+  'accept-encoding' => 'gzip',
+  'connection' => 'Keep-Alive',
+)
+[ info ] [ PARAM ] array (
+  '_time' => '1528105824',
+  'sign' => '9b3d5065157bcd3561e463847bc1765a',
+  'only_token' => '',
+  'device_tokens' => '089bd564b4a0a438202c0be3bfdcfd37',
+  'smscode' => '050537',
+  'mobile' => '13310028293',
+  'is_system' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Member->doSmsLogin[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086083s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.060246s ]
+[ sql ] [ SQL ] SELECT `member_id`,`member_sn`,`member_name`,`mobile`,`password`,`guid`,`true_name`,`is_clinic`,`is_certified`,`login_state`,`device_tokens`,`is_status` FROM `jd_doctor` WHERE  `mobile` = '13310028293' LIMIT 1 [ RunTime:0.060733s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `login_ip`='0.0.0.0',`login_time`=1528106664,`is_system`=0,`device_tokens`='089bd564b4a0a438202c0be3bfdcfd37',`login_state`=1,`only_token`='1528106664f@pDWy'  WHERE  `mobile` = '13310028293' [ RunTime:0.060302s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.057562s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.057714s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]

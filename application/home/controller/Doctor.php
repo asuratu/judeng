@@ -113,14 +113,19 @@ class Doctor extends Common
             ->field('hospital_name')
             ->find();
         $doctor['hospital_name'] = $hospital['hospital_name'];
-        //第一科室 TODO 医生ID 46的报错
-//        $keshiArr = db('hospital_repart')->alias('hr')
-//            ->join(['jd_department'=>'d'], 'd.department_id = hr.department_id' , 'inner')
-//            ->where("hr.hospital_repart_id IN({$doctor['hospital_repart_str']}) AND hr.is_show = 1")
-//            ->field("d.department_name")
-//            ->select();
-//        var_dump($keshiArr);die;
-//        $doctor['department_name'] = $keshiArr[0];
+
+        //第一科室
+        if ($doctor['hospital_repart_str']) {
+            $keshiArr = db('hospital_repart')->alias('hr')
+                ->join(['jd_department'=>'d'], 'd.department_id = hr.department_id' , 'inner')
+                ->where("hr.hospital_repart_id IN({$doctor['hospital_repart_str']}) AND hr.is_show = 1")
+                ->field("d.department_name")
+                ->select();
+            $doctor['department_name'] = $keshiArr[0];
+        } else {
+            $doctor['department_name'] = '';
+        }
+
         //是否有自建特色方剂
         $existGoods = db('self_goods')
             ->where("member_id = {$data['doctor_id']} AND content != '' AND is_checked = 2 ")
