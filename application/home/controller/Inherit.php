@@ -29,10 +29,11 @@ class Inherit extends Common
             $inheritDetail = db('inherit')->alias('i')
                 ->join(['jd_doctor'=>'d'], 'i.member_id = d.member_id' , 'inner')
                 ->where($map)
-                ->field("i.*, d.title_id, d.member_name")
+                ->field("i.*, d.title_id, d.member_name, d.true_name, d.mobile")
                 ->find();
             //处理图片路径
             $inheritDetail['banner'] = $inheritDetail['banner'];
+            $inheritDetail['banner'] = !empty($inheritDetail['true_name']) ? $inheritDetail['true_name'] : (!empty($inheritDetail['member_name']) ? $inheritDetail['member_name'] : $inheritDetail['mobile']);
             //处理简介的H5
             $inheritDetail['culture'] = config('url').'/inherit/detail?id='.$data['inherit_id'];
             //判断是否加入过该传承

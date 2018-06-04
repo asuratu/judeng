@@ -197,13 +197,14 @@ class Doctor extends Common
     public function evaluationList($doctorId) {
         $doctorEvaluation = db('service_evaluation s, jd_member m')
             ->where("s.doctor_id = {$doctorId} and s.`is_show` = 1 and s.`member_id` = m.`member_id`")
-            ->field('s.symptom, s.evaluate, s.evaluate_name, s.synopsis, s.add_date, m.member_name, m.portrait')
+            ->field('s.symptom, s.evaluate, s.evaluate_name, s.synopsis, s.add_date, m.member_name, m.true_name, m.mobile, m.portrait')
             ->select();
         $evaluation = array();
         foreach ($doctorEvaluation as $key => $val) {
             array_push($evaluation, $val);
             $evaluation[$key]['evaluate_name'] = explode('#@#', $val['evaluate_name']);
             $evaluation[$key]['portrait'] = $val['portrait'];
+            $evaluation[$key]['member_name'] = !empty($val['true_name']) ? $val['true_name'] : (!empty($val['member_name']) ? $val['member_name'] : $val['mobile']);
             $evaluation[$key]['add_date'] = date('Y-m-d', $val['add_date']);
         }
         return $evaluation;
@@ -236,7 +237,7 @@ class Doctor extends Common
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
 
-            $doctor = db('doctor')->where("member_id = {$data['doctor_id']}")->field("member_name, mobile, is_system, device_tokens")->find();
+            $doctor = db('doctor')->where("member_id = {$data['doctor_id']}")->field("member_name, true_name, mobile, is_system, device_tokens")->find();
             if (!$doctor) {         // 验证医生信息是否存在，不存在直接退出
                 ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[]));
             }
@@ -248,7 +249,7 @@ class Doctor extends Common
             // 查询免打扰这个期间是否有患者咨询过一生
             $umeng = db('doctor_disturbcount')->where("doctor_id = {$data['doctor_id']}")->count();
             if ($umeng) {
-                $doctor['member_name'] = $doctor['member_name'] ? $doctor['member_name'] : $doctor['mobile'];
+                $doctor['member_name'] = $doctor['true_name'] ? $doctor['true_name'] : ($doctor['member_name'] ? $doctor['member_name'] : $doctor['mobile']);
                 $data['comment'] = $doctor['member_name'] . '医生，有患者咨询了您，请及时处理。';
                 if ($doctor['is_system'] == 0) {     // is_system == 0 为安卓系统
                     Model('Umeng')->PtoAndroid(array($doctor['device_tokens']), $data['comment'], '免打扰期间患者咨询', $data['comment']);
@@ -350,7 +351,7 @@ class Doctor extends Common
                 $data['pageSize'] = 10;
             }
             $data['pageCount'] = ($data['page'] - 1) * $data['pageSize'];
-            $member = Db::field('op.`dialectical`,op.`drug_str`,op.`add_date`,d.`member_name`,d.`title_str`')
+            $member = Db::field('op.`dialectical`,op.`drug_str`,op.`add_date`,d.`member_name`,d.`true_name`,d.`mobile`,d.`title_str`')
                 ->table('jd_order o, jd_order_prescription op, jd_doctor d')
                 ->where("o.patient_id = {$data['member_id']} and o.`order_id` = op.`order_id` and o.order_type = 3 and o.`doctor_id` = d.`member_id` and op.`prescription_type` != 1")
                 ->order('op.add_date', 'DESC')
@@ -360,6 +361,7 @@ class Doctor extends Common
             foreach ($member as $key => $val) {
                 array_push($order, $val);
                 $order[$key]['drug_str'] = base64_encode($val['drug_str']);
+                $order[$key]['member_name'] = !empty($val['true_name']) ? $val['true_name'] : (!empty($val['member_name']) ? $val['member_name'] : $val['mobile']);
                 $order[$key]['add_date'] = date('Y-m-d H:i', $val['add_date']);
             }
             $total = Db::table('jd_order o, jd_order_prescription op, jd_doctor d')

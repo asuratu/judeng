@@ -16,7 +16,7 @@ class Image extends Common
             $hairattach = db('hair_attach')->where("hair_id = {$hair['hair_id']}")->select();
             $doctor = db('doctor')->where("member_id = {$hair['doctor_id']}")->find();
             $title = db('title')->where("title_id", "in", "{$doctor['title_id']}")->select();
-            $doctor['member_name'] = !empty($doctor['member_name']) ? $doctor['member_name'] : $doctor['mobile'];
+            $doctor['member_name'] = !empty($doctor['true_name']) ? $doctor['true_name'] : (!empty($doctor['member_name']) ? $doctor['member_name'] : $doctor['mobile']);
         } else {
             return 404;
         }

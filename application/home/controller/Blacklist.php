@@ -97,7 +97,7 @@ class Blacklist extends Common
                 $data['pageSize'] = 10;
             }
             $data['pageCount'] = ($data['page'] - 1) * $data['pageSize'];
-            $comment = Db::field('m.`member_id`, m.`member_name`, m.`portrait`, m.`sex`, m.`age`')
+            $comment = Db::field('m.`member_id`, m.`member_name`, m.`true_name`, m.`mobile`, m.`portrait`, m.`sex`, m.`age`')
                 ->table('jd_blacklist b, jd_member m')
                 ->where("b.doctor_id = {$data['doctor_id']} and b.is_show = 0 and b.`member_id` = m.`member_id`")
                 ->order('b.release_date', 'DESC')
@@ -107,6 +107,7 @@ class Blacklist extends Common
             foreach ($comment as $key => $val) {
                 array_push($order, $val);
                 $order[$key]['portrait'] = $val['portrait'];
+                $order[$key]['member_name'] = !empty($val['true_name']) ? $val['true_name'] : (!empty($val['member_name']) ? $val['member_name'] : $val['mobile']);
             }
             $total = Db::table('jd_blacklist b, jd_member m')
                 ->where("b.doctor_id = {$data['doctor_id']} and b.is_show = 0 and b.`member_id` = m.`member_id`")
