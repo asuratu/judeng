@@ -24,10 +24,13 @@ class Wx extends Controller {
                 "action_info" => array("scene" => array("scene_str" => $key),)
             );
             $res = postJson($url, $postArr);
+
             $res = json_decode($res, true);
             if ($res['ticket']) {
                 $uri = 'https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=' . urlencode($res['ticket']);
                 ajaxReturn(array('code' => 1, 'info' => 'ok', 'data' => [$uri]));
+            } else {
+                ajaxReturn(array('code' => 0, 'info' => '服务器繁忙, 请稍后再试!', 'data' => []));
             }
         }
     }

@@ -3456,3 +3456,261 @@
 [ error ] [8]未定义数组索引: content[E:\wook\201804\judeng\application\home\controller\Doctor.php:146]
 [ error ] [8]未定义数组索引: inherit_id[E:\wook\201804\judeng\application\home\controller\Doctor.php:147]
 [ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-03T22:36:39+08:00 ] 0.0.0.0 POST /umeng/send
+[ info ] localhost:8020/umeng/send [运行时间：16.199507s][吞吐率：0.06req/s] [内存消耗：3,576.66kb] [文件加载：58]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'umeng',
+    2 => 'send',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------091298898311906143002798',
+  'content-length' => '382',
+  'x-original-url' => '/umeng/send',
+  'postman-token' => '12014ddd-c3e2-443b-872c-1608505314b7',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'member_id' => '2',
+  'comment' => 'aa',
+)
+[ info ] [ RUN ] app\home\controller\Umeng->send[ D:\works\201805\judeng\application\home\controller\Umeng.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:2.716331s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:1.535348s ]
+[ sql ] [ SQL ] SELECT `is_system`,`device_tokens`,`disturb_start`,`disturb_end` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:1.015087s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.721232s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` WHERE  (  member_id = 2 and doctor_id = 2 ) LIMIT 1 [ RunTime:2.435720s ]
+[ sql ] [ SQL ] INSERT INTO `jd_doctor_member` (`member_id` , `doctor_id` , `inquisition_name` , `inquisition` , `grouping` , `is_status` , `is_chat` , `counsell_number` , `add_date`) VALUES (2 , 2 , '咨询' , 1528036592 , '' , 1 , 0 , 1 , 1528036592) [ RunTime:0.541101s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` WHERE  (  member_id = 2 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.989016s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_member`  SET `inquisition_name`='初诊',`inquisition`=1528036593  WHERE  (  member_id = 2 and doctor_id = 2 ) [ RunTime:1.110016s ]
+[ sql ] [ SQL ] SELECT `is_chat`,`is_show` FROM `jd_doctor_member` WHERE  (  doctor_id = 2 and member_id = 2 ) LIMIT 1 [ RunTime:2.572364s ]
+[ error ] [8]未定义数组索引: only_token[D:\works\201805\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-03T22:36:53+08:00 ] 0.0.0.0 POST /umeng/send
+[ info ] localhost:8020/umeng/send [运行时间：4.623531s][吞吐率：0.22req/s] [内存消耗：3,576.19kb] [文件加载：58]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'umeng',
+    2 => 'send',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------967169446058233982115363',
+  'content-length' => '382',
+  'x-original-url' => '/umeng/send',
+  'postman-token' => 'a11a7aa7-38c1-44b9-84da-0b5068bbf091',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'member_id' => '2',
+  'comment' => 'aa',
+)
+[ info ] [ RUN ] app\home\controller\Umeng->send[ D:\works\201805\judeng\application\home\controller\Umeng.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.288846s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.814127s ]
+[ sql ] [ SQL ] SELECT `is_system`,`device_tokens`,`disturb_start`,`disturb_end` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.284971s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.728799s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` WHERE  (  member_id = 2 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.291323s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_member`  SET `counsell_number`=`counsell_number`+1  WHERE  (  member_id = 2 and doctor_id = 2 ) [ RunTime:0.195049s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` WHERE  (  member_id = 2 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.212124s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_member`  SET `inquisition_name`='初诊',`inquisition`=1528036611  WHERE  (  member_id = 2 and doctor_id = 2 ) [ RunTime:0.194765s ]
+[ sql ] [ SQL ] SELECT `is_chat`,`is_show` FROM `jd_doctor_member` WHERE  (  doctor_id = 2 and member_id = 2 ) LIMIT 1 [ RunTime:0.377502s ]
+[ error ] [8]未定义数组索引: only_token[D:\works\201805\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-03T22:38:04+08:00 ] 0.0.0.0 POST /umeng/send
+[ info ] localhost:8020/umeng/send [运行时间：8.008062s][吞吐率：0.12req/s] [内存消耗：3,576.84kb] [文件加载：58]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'umeng',
+    2 => 'send',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------271707575978539072102968',
+  'content-length' => '382',
+  'x-original-url' => '/umeng/send',
+  'postman-token' => '66447727-de4e-47d9-a9d1-34dec467c2fe',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'member_id' => '6',
+  'comment' => 'aa',
+)
+[ info ] [ RUN ] app\home\controller\Umeng->send[ D:\works\201805\judeng\application\home\controller\Umeng.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.883265s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.330059s ]
+[ sql ] [ SQL ] SELECT `is_system`,`device_tokens`,`disturb_start`,`disturb_end` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.953955s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:3.014203s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` WHERE  (  member_id = 6 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.795219s ]
+[ sql ] [ SQL ] INSERT INTO `jd_doctor_member` (`member_id` , `doctor_id` , `inquisition_name` , `inquisition` , `grouping` , `is_status` , `is_chat` , `counsell_number` , `add_date`) VALUES (6 , 2 , '咨询' , 1528036682 , '' , 1 , 0 , 1 , 1528036682) [ RunTime:0.518586s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` WHERE  (  member_id = 6 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.536478s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_member`  SET `inquisition_name`='咨询',`inquisition`=1528036683  WHERE  (  member_id = 6 and doctor_id = 2 ) [ RunTime:0.390323s ]
+[ sql ] [ SQL ] SELECT `is_chat`,`is_show` FROM `jd_doctor_member` WHERE  (  doctor_id = 2 and member_id = 6 ) LIMIT 1 [ RunTime:0.314015s ]
+[ error ] [8]未定义数组索引: only_token[D:\works\201805\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-03T22:38:14+08:00 ] 0.0.0.0 POST /umeng/send
+[ info ] localhost:8020/umeng/send [运行时间：3.392563s][吞吐率：0.29req/s] [内存消耗：3,576.38kb] [文件加载：58]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'umeng',
+    2 => 'send',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------838619377263711064126186',
+  'content-length' => '382',
+  'x-original-url' => '/umeng/send',
+  'postman-token' => '9cb69ad7-6af5-414c-ab1a-4171173b0adf',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'member_id' => '6',
+  'comment' => 'aa',
+)
+[ info ] [ RUN ] app\home\controller\Umeng->send[ D:\works\201805\judeng\application\home\controller\Umeng.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.499302s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.530797s ]
+[ sql ] [ SQL ] SELECT `is_system`,`device_tokens`,`disturb_start`,`disturb_end` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.285020s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.208612s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` WHERE  (  member_id = 6 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.186048s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_member`  SET `counsell_number`=`counsell_number`+1  WHERE  (  member_id = 6 and doctor_id = 2 ) [ RunTime:0.197621s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` WHERE  (  member_id = 6 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.227713s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_member`  SET `inquisition_name`='咨询',`inquisition`=1528036693  WHERE  (  member_id = 6 and doctor_id = 2 ) [ RunTime:0.176284s ]
+[ sql ] [ SQL ] SELECT `is_chat`,`is_show` FROM `jd_doctor_member` WHERE  (  doctor_id = 2 and member_id = 6 ) LIMIT 1 [ RunTime:0.388494s ]
+[ error ] [8]未定义数组索引: only_token[D:\works\201805\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-03T22:38:26+08:00 ] 0.0.0.0 POST /umeng/send
+[ info ] localhost:8020/umeng/send [运行时间：3.734996s][吞吐率：0.27req/s] [内存消耗：3,576.38kb] [文件加载：58]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'umeng',
+    2 => 'send',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------214209252558030318089260',
+  'content-length' => '382',
+  'x-original-url' => '/umeng/send',
+  'postman-token' => '34bcbca0-288d-45fb-9141-6642ca75fdbf',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'member_id' => '6',
+  'comment' => 'aa',
+)
+[ info ] [ RUN ] app\home\controller\Umeng->send[ D:\works\201805\judeng\application\home\controller\Umeng.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.017233s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.161434s ]
+[ sql ] [ SQL ] SELECT `is_system`,`device_tokens`,`disturb_start`,`disturb_end` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.322632s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.213150s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` WHERE  (  member_id = 6 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.290653s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_member`  SET `counsell_number`=`counsell_number`+1  WHERE  (  member_id = 6 and doctor_id = 2 ) [ RunTime:0.310294s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` WHERE  (  member_id = 6 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.518576s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_member`  SET `inquisition_name`='咨询',`inquisition`=1528036705  WHERE  (  member_id = 6 and doctor_id = 2 ) [ RunTime:0.414183s ]
+[ sql ] [ SQL ] SELECT `is_chat`,`is_show` FROM `jd_doctor_member` WHERE  (  doctor_id = 2 and member_id = 6 ) LIMIT 1 [ RunTime:0.275273s ]
+[ error ] [8]未定义数组索引: only_token[D:\works\201805\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-03T23:49:40+08:00 ] 0.0.0.0 POST /umeng/addPatient
+[ info ] localhost:8020/umeng/addPatient [运行时间：0.375685s][吞吐率：2.66req/s] [内存消耗：3,390.26kb] [文件加载：55]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'umeng',
+    2 => 'addPatient',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------178499667379091314443264',
+  'content-length' => '382',
+  'x-original-url' => '/umeng/addPatient',
+  'postman-token' => '97c71008-5292-474d-a5df-4c2840d2e53b',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'member_id' => '6',
+  'comment' => 'aa',
+)
+[ info ] [ RUN ] app\home\controller\Umeng->addPatient[ D:\works\201805\judeng\application\home\controller\Umeng.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.103343s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.067849s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` WHERE  (  member_id = 6 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.070523s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_member`  SET `inquisition_name`='咨询',`inquisition`=1528040980  WHERE  (  member_id = 6 and doctor_id = 2 ) [ RunTime:0.074960s ]

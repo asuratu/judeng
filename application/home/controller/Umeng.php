@@ -83,4 +83,12 @@ class Umeng extends Common
         return true;
     }
 
+    public function addPatient() {
+        if($this->request->isPost()) {
+            $data = input('post.');
+            // 医生患者列表，有则修改，没有择添加
+            Model('Number')->doctorMember($data['member_id'], $data['doctor_id'], '咨询');
+        }
+    }
+
 }
