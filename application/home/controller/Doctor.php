@@ -154,6 +154,7 @@ class Doctor extends Common
         foreach ($doctor['selfGoodsList'] as $key => $value) {
             $doctor['selfGoodsList'][$key]['content'] = base64_encode($value['content']);
         }
+
         $doctor['is_self_drug'] = $doctor['content'] != '' ? 1 : 0;
         $doctor['is_inherit'] = $doctor['inherit_id'] != 0 ? 1 : 0;
 
