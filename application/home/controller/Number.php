@@ -87,7 +87,7 @@ class Number extends Common
 //                $_where .= " and (o.order_status=1 or o.order_status=2 or o.order_status=3)";
                 $type_name = '复诊时间：';
             }
-            $prescription = Db::field('o.`pay_status`, o.`order_id`, o.`order_sn`, o.`order_status`, o.`patient_id`, o.`order_date`, m.`mobile`, m.`portrait`, m.`member_name`, m.`sex`, m.`age`')
+            $prescription = Db::field('o.`pay_status`, o.`order_id`, o.`order_sn`, o.`order_status`, o.`patient_id`, o.`order_date`, m.`mobile`, m.`portrait`, m.`member_name`, m.`true_name`, m.`mobile`, m.`sex`, m.`age`')
                 ->table('jd_order o, jd_order_prescription op, jd_member m')
                 ->where($_where)
                 ->order('o.order_date', 'DESC')
@@ -99,6 +99,7 @@ class Number extends Common
                 $order[$key]['portrait'] = $val['portrait'];
                 $order[$key]['pay_status_name'] = $this->view->setting['aryOrderPayStatus'][$val['pay_status']];
                 $order[$key]['order_status'] = $this->view->setting['aryOrderStatus'][$val['order_status']];
+                $order[$key]['member_name'] = !empty($val['true_name']) ? $val['true_name'] : (!empty($val['member_name']) ? $val['member_name'] : $val['mobile']);
                 $order[$key]['add_date'] = $val['order_date'];
                 $order[$key]['order_date'] = $type_name . date('Y-m-d', $val['order_date']);
             }
@@ -153,9 +154,9 @@ class Number extends Common
             }
             $data['pageCount'] = ($data['page'] - 1) * $data['pageSize'];
 
-            $comment = Db::field('s.`member_id`, s.`synopsis`, s.`end_date`, m.`member_name`, m.`mobile`, m.`portrait`, m.`openid`, m.`sex`, m.`age`')
+            $comment = Db::field('s.`member_id`, s.`synopsis`, s.`end_date`, m.`member_name`, m.`true_name`, m.`mobile`, m.`portrait`, m.`openid`, m.`sex`, m.`age`')
                 ->table('jd_doctor_member s, jd_member m')
-                ->where("s.doctor_id = {$data['doctor_id']} and s.`is_show` = 1 and s.`member_id` = m.`member_id` and (m.`member_name` like '%{$data['title']}%' or m.`mobile` like '%{$data['title']}%' or s.`grouping` like '%{$data['title']}%')")
+                ->where("s.doctor_id = {$data['doctor_id']} and s.`is_show` = 1 and s.`member_id` = m.`member_id` and (m.`member_name` like '%{$data['title']}%' or m.`true_name` like '%{$data['title']}%' or m.`mobile` like '%{$data['title']}%' or s.`grouping` like '%{$data['title']}%')")
                 ->order('s.end_date', 'DESC')
                 ->limit($data['pageCount'],$data['pageSize'])
                 ->select();
@@ -163,11 +164,12 @@ class Number extends Common
             foreach ($comment as $key => $val) {
                 array_push($order, $val);
                 $order[$key]['portrait'] = $val['portrait'];
+                $order[$key]['member_name'] = !empty($val['true_name']) ? $val['true_name'] : (!empty($val['member_name']) ? $val['member_name'] : $val['mobile']);
                 $order[$key]['end_date'] = date('m-d', $val['end_date']);
 
             }
             $total = Db::table('jd_doctor_member s, jd_member m')
-                ->where("s.doctor_id = {$data['doctor_id']} and s.`is_show` = 1 and s.`member_id` = m.`member_id` and (m.`member_name` like '%{$data['title']}%' or m.`mobile` like '%{$data['title']}%' or s.`grouping` like '%{$data['title']}%')")
+                ->where("s.doctor_id = {$data['doctor_id']} and s.`is_show` = 1 and s.`member_id` = m.`member_id` and (m.`member_name` like '%{$data['title']}%' or m.`true_name` like '%{$data['title']}%' or m.`mobile` like '%{$data['title']}%' or s.`grouping` like '%{$data['title']}%')")
                 ->count();
 //            $order['tatal'] = $total;
             ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>$order,'total'=>$total));
@@ -240,7 +242,7 @@ class Number extends Common
                 $data['pageSize'] = 10;
             }
             $data['pageCount'] = ($data['page'] - 1) * $data['pageSize'];
-            $comment = Db::field('s.`member_id`, s.`order_id`, s.`symptom`, s.`evaluate`, s.`evaluate_name`, s.`synopsis`, s.`add_date`, m.`member_name`, m.`mobile`, m.`portrait`')
+            $comment = Db::field('s.`member_id`, s.`order_id`, s.`symptom`, s.`evaluate`, s.`evaluate_name`, s.`synopsis`, s.`add_date`, m.`member_name`, m.`true_name`, m.`mobile`, m.`portrait`')
                 ->table('jd_service_evaluation s, jd_member m')
                 ->where("s.is_show = 1 and s.doctor_id = {$data['doctor_id']} and s.`member_id` = m.`member_id`")
                 ->order('s.add_date', 'DESC')
@@ -250,6 +252,7 @@ class Number extends Common
             foreach ($comment as $key => $val) {
                 array_push($order, $val);
                 $order[$key]['evaluate_name'] = explode('#@#', $val['evaluate_name']);
+                $order[$key]['member_name'] = !empty($val['true_name']) ? $val['true_name'] : (!empty($val['member_name']) ? $val['member_name'] : $val['mobile']);
                 $order[$key]['evaluate'] = $this->view->setting['aryServiceEvaluation'][$val['evaluate']];
                 $order[$key]['add_date'] = date('Y-m-d H:i', $val['add_date']);
             }
@@ -292,9 +295,9 @@ class Number extends Common
             }
             $group_member = explode(',', $group['group_member_id']);
 
-            $comment = Db::field('s.`member_id`, s.`inquisition_name`, s.`inquisition`, m.`member_name`, m.`mobile`, m.`portrait`, m.`sex`, m.`age`, m.`openid`, m.`is_type`')
+            $comment = Db::field('s.`member_id`, s.`inquisition_name`, s.`inquisition`, m.`member_name`, m.`true_name`, m.`mobile`, m.`portrait`, m.`sex`, m.`age`, m.`openid`, m.`is_type`')
                 ->table('jd_doctor_member s, jd_member m')
-                ->where("s.doctor_id = {$data['doctor_id']} and s.`is_show` = 1 and s.`member_id` = m.`member_id` and (m.`member_name` like '%{$data['title']}%' or m.`mobile` like '%{$data['title']}%' or s.`grouping` like '%{$data['title']}%')")
+                ->where("s.doctor_id = {$data['doctor_id']} and s.`is_show` = 1 and s.`member_id` = m.`member_id` and (m.`member_name` like '%{$data['title']}%' or m.`true_name` like '%{$data['title']}%' or m.`mobile` like '%{$data['title']}%' or s.`grouping` like '%{$data['title']}%')")
                 ->order('s.inquisition', 'DESC')
                 ->limit($data['pageCount'],$data['pageSize'])
                 ->select();
@@ -303,13 +306,14 @@ class Number extends Common
                 array_push($order, $val);
                 $order[$key]['is_type'] = $this->view->setting['aryMemberType'][$val['is_type']];
                 $order[$key]['portrait'] = $val['portrait'];
+                $order[$key]['member_name'] = !empty($val['true_name']) ? $val['true_name'] : (!empty($val['member_name']) ? $val['member_name'] : $val['mobile']);
                 $order[$key]['mobile'] = isset($val['mobile']) ? $val['mobile'] : '未填写手机号码';
                 $order[$key]['inquisition'] = date('Y-m-d H:i', $val['inquisition']);
 
                 $order[$key]['group_type'] = (string)(intval(in_array($val['member_id'], $group_member)));
             }
             $total = Db::table('jd_doctor_member s, jd_member m')
-                ->where("s.doctor_id = {$data['doctor_id']} and s.`is_show` = 1 and s.`member_id` = m.`member_id` and (m.`member_name` like '%{$data['title']}%' or m.`mobile` like '%{$data['title']}%' or s.`grouping` like '%{$data['title']}%')")
+                ->where("s.doctor_id = {$data['doctor_id']} and s.`is_show` = 1 and s.`member_id` = m.`member_id` and (m.`member_name` like '%{$data['title']}%' or m.`true_name` like '%{$data['title']}%' or m.`mobile` like '%{$data['title']}%' or s.`grouping` like '%{$data['title']}%')")
                 ->count();
 
             ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>$order,'total'=>$total,'group_member_name'=>$group['group_member_name']));
@@ -442,7 +446,7 @@ class Number extends Common
                 $data['pageSize'] = 10;
             }
             $data['pageCount'] = ($data['page'] - 1) * $data['pageSize'];
-            $comment = Db::field('s.`group_id`, s.`member_id`, m.`member_name`, m.`mobile`, m.`portrait`, m.`sex`, m.`age`, m.`openid`, m.`is_type`')
+            $comment = Db::field('s.`group_id`, s.`member_id`, m.`member_name`, m.`true_name`, m.`mobile`, m.`portrait`, m.`sex`, m.`age`, m.`openid`, m.`is_type`')
                 ->table('jd_group_patient s, jd_member m')
                 ->where("s.doctor_id = {$data['doctor_id']} and s.`is_show` = 1 and s.group_id = {$data['group_id']} and s.`member_id` = m.`member_id`")
                 ->order('s.add_date', 'ASC')
@@ -453,6 +457,7 @@ class Number extends Common
                 array_push($order, $val);
                 $order[$key]['is_type'] = $this->view->setting['aryMemberType'][$val['is_type']];
                 $order[$key]['portrait'] = $val['portrait'];
+                $order[$key]['member_name'] = !empty($val['true_name']) ? $val['true_name'] : (!empty($val['member_name']) ? $val['member_name'] : $val['mobile']);
                 $order[$key]['mobile'] = isset($val['mobile']) ? $val['mobile'] : '未填写手机号码';
             }
             $total = Db::table('jd_group_patient s, jd_member m')

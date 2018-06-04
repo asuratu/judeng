@@ -3676,3 +3676,41 @@
 [ sql ] [ SQL ] UPDATE `jd_doctor_member`  SET `inquisition_name`='咨询',`inquisition`=1528036705  WHERE  (  member_id = 6 and doctor_id = 2 ) [ RunTime:0.414183s ]
 [ sql ] [ SQL ] SELECT `is_chat`,`is_show` FROM `jd_doctor_member` WHERE  (  doctor_id = 2 and member_id = 6 ) LIMIT 1 [ RunTime:0.275273s ]
 [ error ] [8]未定义数组索引: only_token[D:\works\201805\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-03T23:49:40+08:00 ] 0.0.0.0 POST /umeng/addPatient
+[ info ] localhost:8020/umeng/addPatient [运行时间：0.375685s][吞吐率：2.66req/s] [内存消耗：3,390.26kb] [文件加载：55]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'umeng',
+    2 => 'addPatient',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------178499667379091314443264',
+  'content-length' => '382',
+  'x-original-url' => '/umeng/addPatient',
+  'postman-token' => '97c71008-5292-474d-a5df-4c2840d2e53b',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'member_id' => '6',
+  'comment' => 'aa',
+)
+[ info ] [ RUN ] app\home\controller\Umeng->addPatient[ D:\works\201805\judeng\application\home\controller\Umeng.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.103343s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.067849s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` WHERE  (  member_id = 6 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.070523s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_member`  SET `inquisition_name`='咨询',`inquisition`=1528040980  WHERE  (  member_id = 6 and doctor_id = 2 ) [ RunTime:0.074960s ]

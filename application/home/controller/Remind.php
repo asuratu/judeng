@@ -31,9 +31,9 @@ class Remind extends Common
                 ->alias('o')
                 ->join('member m', 'o.`patient_id` = m.`member_id`', 'LEFT')
                 ->where("o.order_id = {$data['order_id']}")
-                ->field("m.`member_name`, m.`openid`, m.`mobile`, o.`order_type`, o.`order_status`, o.`order_sn`, o.`doctor_id`")
+                ->field("m.`member_name`, m.`true_name`, m.`openid`, m.`mobile`, o.`order_type`, o.`order_status`, o.`order_sn`, o.`doctor_id`")
                 ->find();
-            $member['member_name'] = $member['member_name'] ? $member['member_name'] : $member['mobile'];
+            $member['member_name'] = !empty($member['true_name']) ? $member['true_name'] : (!empty($member['member_name']) ? $member['member_name'] : $member['mobile']);
 
             if ($member['order_status'] == 0) {         // 0待购药 其他待复诊
                 $data['url'] = 'http://wechat.bohetanglao.com/home/center/detail/ordersn/'.$member['order_sn'].'.html';
