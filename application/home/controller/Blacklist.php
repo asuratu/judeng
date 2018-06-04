@@ -26,17 +26,6 @@ class Blacklist extends Common
     }
 
     public function addBlacklist($doctor_id, $member_id, $type) {
-        $member = db('member')->where("member_id={$member_id}")->find();
-        $doctor = db('doctor')->where("member_id={$doctor_id}")->find();
-
-        // TODO 未测试
-        if ($type == 0) {                        // 0     添加            1 删除
-            $a = Model('Setting')->addUserForBlacklist($doctor['member_sn'], array($member['openid']));
-            var_dump($a);die;
-        } else {
-            Model('Setting')->deleteUserFromBlacklist($doctor['member_sn'], $member['openid']);
-        }
-        ajaxReturn(array('code'=>0,'info'=>'返回','data'=>[]));
         $blacklistcount = db('blacklist')->where("doctor_id = {$doctor_id} and member_id = {$member_id} and is_show = {$type}")->count();
         if ($blacklistcount) {
             ajaxReturn(array('code' =>0, 'info' => '请勿重复操作增删黑名单操作'));
@@ -67,7 +56,15 @@ class Blacklist extends Common
         if ($_return == 0) {
             ajaxReturn(array('code' =>0, 'info' => '增删黑名单操作失败'));
         } else {
+            $member = db('member')->where("member_id={$member_id}")->find();
+            $doctor = db('doctor')->where("member_id={$doctor_id}")->find();
 
+            // TODO 未测试
+            if ($type == 0) {                        // 0     添加            1 删除
+                Model('Setting')->addUserForBlacklist($doctor['member_sn'], array($member['openid']));
+            } else {
+                Model('Setting')->deleteUserFromBlacklist($doctor['member_sn'], $member['openid']);
+            }
             $update = array(
                 'is_show' => $type,
                 'release_date' => $time,
