@@ -182,7 +182,6 @@ class Member extends Common
         }
     }
 
-
     /**
      * @Title: loginJoinInherit
      * @Description: TODO 登录申请加入传承

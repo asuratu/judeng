@@ -511,6 +511,98 @@ class Order extends Common
         }
     }
 
+    /**
+     * @Title: addWenZhen
+     * @Description: TODO 患者发起图文问诊或复诊
+     * @return bool
+     * @author TUGE
+     * @date
+     */
+    public function addWenZhen() {
+        if($this->request->isPost())
+        {
+            try{
+                Db::startTrans();
+                $data=input('post.');
+                $res=checkSign($data);
+                if($res['code']==0)
+                {
+                    ajaxReturn($res);
+                }
+
+                if($data['type']=='' || $data['order_id']=='' || $data['patient_id']=='' || $data['doctor_id']=='')
+                {
+                    ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+                }
+
+                //查询订单信息
+                $orderDetail = db('order')
+                    ->where("order_id = {$data['order_id']} AND pay_status = 1 AND order_status = 1 AND patient_id = {$data['patient_id']}")
+                    ->field("*")
+                    ->find();
+                if (!$orderDetail) {
+                    ajaxReturn(array('code'=>0,'info'=>'请先购买图文问诊或复诊!','data'=>[]));
+                }
+
+                switch ($orderDetail['order_type']) {
+                    case 0:
+                        //图文问诊(24小时失效)
+                        $tuwen = db('wenzhen')
+                            ->where("order_id = {$data['order_id']} AND patient_id = {$data['patient_id']}")
+                            ->field("*")
+                            ->find();
+                        if ($tuwen) {
+                            if ($tuwen['end_time'] < time()) {
+                                //定时任务改变图文问诊状态
+                                ajaxReturn(array('code'=>0,'info'=>'本次图文问诊已结束!','data'=>[]));
+                            }
+                        } else {
+                            //新增记录
+                            $insertData['type'] = 0;
+                            $insertData['order_id'] = $data['order_id'];
+                            $insertData['start_time'] = time();
+                            $insertData['end_time'] = $insertData['start_time'] + 86400;
+                            $insertData['add_date'] = $insertData['start_time'];
+                            $insertData['release_date'] = $insertData['start_time'];
+                            $insertData['patient_id'] = $data['patient_id'];
+                            $insertData['doctor_id'] = $data['doctor_id'];
+
+
+                        }
+
+                        break;
+                    case 1:
+
+                        break;
+                    case 4:
+
+                        break;
+                    default:
+                        ajaxReturn(array('code'=>0,'info'=>'订单类型不正确!','data'=>[]));
+                        break;
+                }
+
+
+
+                var_dump($orderDetail);die;
+
+                //判断是不是服务包id
+                if (1) {
+
+                } elseif ("不是调制服务包") {
+
+                }
+
+                Db::commit();
+                ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>[]));
+            } catch (Exception $e) {
+                Db::rollback();
+                return false;
+            }
+
+        }
+    }
+
 
 
 
