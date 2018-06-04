@@ -515,11 +515,12 @@ class Inherit extends Common
             //查询已加入的传承
             $existDetail = db('inherit_doctor')->alias('id')
                 ->join(['jd_inherit'=>'i'], 'id.inherit_id = i.inherit_id' , 'inner')
-                ->join(['jd_doctor'=>'d'], 'id.member_id = d.member_id' , 'inner')
+                ->join(['jd_doctor'=>'d'], 'id.parent_id = d.member_id' , 'inner')
                 ->where("(id.member_id = {$data['member_id']}) AND id.is_checked = 1")
-                ->field("id.inherit_doctor_id, id.inherit_id, i.inherit_name, i.service_str, i.banner, i.is_recommend, i.school_id, i.intro, d.member_id, d.member_name, d.title_str")
+                ->field("i.inherit_id, i.inherit_name, i.service_str, i.banner, i.is_recommend, i.school_id, i.intro, d.member_id, d.member_name, d.title_str")
                 ->order('id.add_date DESC')
                 ->select();
+
             //查询特色方剂
             foreach ($existDetail as $key => $val) {
                 $existDetail[$key]['drugList']= db('special')->where("is_display = 1 AND inherit_id = {$val['inherit_id']}")
@@ -530,22 +531,31 @@ class Inherit extends Common
                     ->field("school_name")
                     ->order('sort DESC')
                     ->find();
-                $existDetail[$key]['school_name'] = $existDetail[$key]['school_name']['school_name'];
+                $existDetail[$key]['school_name'] = $existDetail[$key]['school_name']['school_name'] ?: '';
                 if (count($existDetail[$key]['drugList']) > 0) {
                     $existDetail[$key]['has_drugList'] = 1;
                 } else {
                     $existDetail[$key]['has_drugList'] = 0;
                 }
+                $existDetail[$key]['is_applied'] = 1;
             }
 
+            //未加入的传承(所有的传承减去已加入的传承)
+            $arr2 = array_map('reset',$existDetail);
+            $indexStr = implode(',', $arr2);
 
-            $unExistDetail = db('inherit_doctor')->alias('id')
-                ->join(['jd_inherit'=>'i'], 'id.inherit_id = i.inherit_id' , 'inner')
+            if ($indexStr) {
+                $where = "i.inherit_id NOT IN({$indexStr})";
+            } else {
+                $where = "1 = 1";
+            }
+            $unExistDetail = db('inherit')->alias('i')
                 ->join(['jd_doctor'=>'d'], 'i.member_id = d.member_id' , 'inner')
-                ->where("(id.member_id != {$data['member_id']} AND id.parent_id != {$data['member_id']}) AND id.is_checked = 1")
-                ->field("id.inherit_doctor_id, id.inherit_id, i.inherit_name, i.service_str, i.banner, i.is_recommend, i.intro, i.school_id, d.member_id, d.member_name, d.title_str")
-                ->order('id.add_date DESC')
+                ->where("i.is_display = 1 AND ".$where)
+                ->field("i.inherit_id, i.inherit_name, i.service_str, i.banner, i.is_recommend, i.intro, i.school_id, d.member_id, d.member_name, d.title_str")
+                ->order('i.sort DESC')
                 ->select();
+
             $listArr = array();
             foreach ($unExistDetail as $key=>$val) {
                 if (!isset($listArr[$val['inherit_id']])) {
@@ -559,12 +569,17 @@ class Inherit extends Common
                     ->field("school_name")
                     ->order('sort DESC')
                     ->find();
-                $listArr[$val['inherit_id']]['school_name'] = $listArr[$val['inherit_id']]['school_name']['school_name'];
+                $listArr[$val['inherit_id']]['school_name'] = $listArr[$val['inherit_id']]['school_name']['school_name'] ?: '';
                 if (count($listArr[$val['inherit_id']]['drugList']) > 0) {
                     $listArr[$val['inherit_id']]['has_drugList'] = 1;
                 } else {
                     $listArr[$val['inherit_id']]['has_drugList'] = 0;
                 }
+                //检查是否提交过申请
+                $listArr[$val['inherit_id']]['is_applied']= db('inherit_doctor')->where("is_checked != 1 AND member_id = {$data['member_id']} AND inherit_id = {$val['inherit_id']}")
+                    ->field("inherit_doctor_id")
+                    ->count();
+                $listArr[$val['inherit_id']]['is_applied'] = $listArr[$val['inherit_id']]['is_applied'] > 0 ? $listArr[$val['inherit_id']]['is_applied'] : 0;
             }
 
             ajaxReturn(array('code'=>1, 'info'=>'ok!','data'=>['yes'=>$existDetail, 'no'=>array_values($listArr)]));

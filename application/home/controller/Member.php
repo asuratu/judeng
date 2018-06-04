@@ -92,11 +92,7 @@ class Member extends Common
     public function doSmsLogin()
     {
         if($this->request->isPost()) {
-
-
             $data=input('post.');
-            session_start();
-            $ticket=session_id();
             if($data['mobile']==''||$data['smscode']==''|| $data['device_tokens']=='' || $data['is_system']=='')
             {
                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -110,9 +106,6 @@ class Member extends Common
             {
                 ajaxReturn($res);
             }
-            tglog('验证短信');
-            tglog(json_encode($data));
-            tglog('验证短信');
             //验证短信
             $mobile=$data['mobile'];
             session_id(md5($mobile));
@@ -133,6 +126,12 @@ class Member extends Common
             {
                 ajaxReturn(array('code'=>0, 'info'=>'短信验证码超时！','data'=>[]));
             }
+            if (!empty($token)&&$token['expired_at']<time() )
+            {
+                ajaxReturn(array('code'=>0, 'info'=>'短信验证码超时！','data'=>[]));
+            }
+            //清除验证码
+            $_SESSION['tokencode']= null;
 
 
             $map['mobile']=$data['mobile'];
@@ -143,17 +142,7 @@ class Member extends Common
                 if ($info['is_status'] == 1) {
                     ajaxReturn(array('code'=>0,'info'=>'该账号被冻结！','data'=>[]));
                 }
-                    //若当前账号已有其他设备在线, 则前者会被挤掉
-//                    if ($info['login_state'] == 1) {
-//                        if ($info['device_tokens'] != $data['device_tokens']) {
-//                            // TODO 如何让该设备下线??   友盟推送??
-//
-//                            var_dump(333);die;
-//
-//
-//                        }
-//                    }
-                    $info['ticket']=$ticket;
+
                     unset($info['password'],$info['guid']);
                     $temp['login_ip']=Request::instance()->ip();
                     $temp['login_time']=time();
@@ -192,7 +181,6 @@ class Member extends Common
 
         }
     }
-
 
     /**
      * @Title: loginJoinInherit
@@ -238,6 +226,8 @@ class Member extends Common
             {
                 ajaxReturn(array('code'=>0, 'info'=>'短信验证码超时！','data'=>[]));
             }
+            //清除验证码
+            $_SESSION['tokencode']= null;
 
             $map['mobile']=$data['mobile'];
             $info=db('doctor')->where($map)->field("member_id,member_sn,member_name,mobile,password,guid, true_name, is_clinic, is_certified, login_state, device_tokens, is_status")->find();
@@ -296,8 +286,6 @@ class Member extends Common
     public function forgetPsd()
     {
         if($this->request->isPost()) {
-            session_start();
-            $ticket=session_id();
             $data=input('post.');
             if($data['mobile']==''||$data['smscode']==''|| $data['password']=='' || $data['newPassword']=='')
             {
@@ -335,6 +323,8 @@ class Member extends Common
             {
                 ajaxReturn(array('code'=>0, 'info'=>'短信验证码超时！','data'=>[]));
             }
+            //清除验证码
+            $_SESSION['tokencode']= null;
 
 
             $map['mobile']=$data['mobile'];
@@ -345,7 +335,6 @@ class Member extends Common
                 if ($info['is_status'] == 1) {
                     ajaxReturn(array('code'=>0,'info'=>'该账号被冻结！','data'=>[]));
                 }
-                    $info['ticket']=$ticket;
                     unset($info['password']);
 
                     //更新密码
@@ -369,8 +358,6 @@ class Member extends Common
     public function updatePsd()
     {
         if($this->request->isPost()) {
-            session_start();
-            $ticket=session_id();
             $data=input('post.');
             if($data['mobile']==''||$data['smscode']==''|| $data['newPassword']=='')
             {
@@ -404,6 +391,9 @@ class Member extends Common
             {
                 ajaxReturn(array('code'=>0, 'info'=>'短信验证码超时！','data'=>[]));
             }
+            //清除验证码
+            $_SESSION['tokencode']= null;
+
 
             $map['mobile']=$data['mobile'];
             $info=db('doctor')->where($map)->field("member_id,member_sn,member_name,mobile,password,guid, true_name, is_clinic, is_certified, login_state, device_tokens, is_status")->find();
@@ -413,7 +403,6 @@ class Member extends Common
                 if ($info['is_status'] == 1) {
                     ajaxReturn(array('code'=>0,'info'=>'该账号被冻结！','data'=>[]));
                 }
-                    $info['ticket']=$ticket;
                     unset($info['password']);
 
                     //更新密码
@@ -472,6 +461,8 @@ class Member extends Common
             {
                 ajaxReturn(array('code'=>0, 'info'=>'短信验证码超时！','data'=>[]));
             }
+            //清除验证码
+            $_SESSION['tokencode']= null;
 
             $map['mobile']=$mobile;
             $countMobile = db('doctor')->where($map)->count();
@@ -537,6 +528,7 @@ class Member extends Common
                 $loginData['device_tokens'] = $data['device_tokens'];
                 $loginData['is_system'] = $data['is_system'];
                 $result = curlPost(config('url').'/member/dologin', $loginData);
+
                 if ($result == false) {
                     ajaxReturn(array('code' => 0, 'info' => '注册成功, 由于系统繁忙登录失败, 请重新登录!','data'=>[]));
                 } else {
