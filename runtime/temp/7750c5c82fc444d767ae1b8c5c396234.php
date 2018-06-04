@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:74:"D:\workLP\20180502\judeng\wwwroot/application/home\view\doctor\regist.html";i:1528079337;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,9 +41,9 @@
                     <!--<input type="text" id="addselect" placeholder="" readonly="">-->
                     <select id="area">
                         <option value="0">请选择所在地区</option>
-                        {volist name="area" id="v"}
-                        <option value="{$v['area_id']}">{$v['name']}</option>
-                        {/volist}
+                        <?php if(is_array($area) || $area instanceof \think\Collection || $area instanceof \think\Paginator): $i = 0; $__LIST__ = $area;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?>
+                        <option value="<?php echo $v['area_id']; ?>"><?php echo $v['name']; ?></option>
+                        <?php endforeach; endif; else: echo "" ;endif; ?>
                     </select>
                 </div>
             </div>
@@ -51,9 +52,9 @@
                 <div class="text">
                     <select id="hospital">
                         <option value="0">请选择医疗机构</option>
-                        {volist name="hospital" id="v"}
-                        <option value="{$v['hospital_id']}">{$v['hospital_name']}</option>
-                        {/volist}
+                        <?php if(is_array($hospital) || $hospital instanceof \think\Collection || $hospital instanceof \think\Paginator): $i = 0; $__LIST__ = $hospital;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?>
+                        <option value="<?php echo $v['hospital_id']; ?>"><?php echo $v['hospital_name']; ?></option>
+                        <?php endforeach; endif; else: echo "" ;endif; ?>
                     </select>
                 </div>
             </div>
@@ -66,7 +67,7 @@
             <div class="input clearfix">
                 <div class="wz">输入邀请码（可选填）</div>
                 <div class="text">
-                    <input type="text" id="code" name="code" value="{$code}">
+                    <input type="text" id="code" name="code" value="<?php echo $code; ?>">
                 </div>
             </div>
             <div class="input ts">

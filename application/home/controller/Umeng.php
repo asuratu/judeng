@@ -10,7 +10,7 @@ use think\Db;
 class Umeng extends Common
 {
     /**
-     * umeng 推送
+     * umeng 推
      */
     public function send()
     {

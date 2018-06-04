@@ -193,6 +193,102 @@ class Member extends Common
         }
     }
 
+
+    /**
+     * @Title: loginJoinInherit
+     * @Description: TODO 登录申请加入传承
+     */
+    public function loginJoinInherit()
+    {
+        if($this->request->isPost()) {
+
+            $data=input('post.');
+            if($data['mobile']==''||$data['smscode']==''|| $data['inherit_id']=='')
+            {
+               ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+            }
+            if(!preg_match("/^1\d{10}$/",$data['mobile']))
+            {
+                ajaxReturn(array('code' =>0, 'info' => '手机号码格式不正确！','data'=>[]));
+            }
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
+
+            tglog('验证短信');
+            tglog(json_encode($data));
+            tglog('验证短信');
+            //验证短信
+            $mobile=$data['mobile'];
+            session_id(md5($mobile));
+            session_start();
+            $token = $_SESSION['tokencode'];
+
+            if(empty($token))
+            {
+                ajaxReturn(array('code'=>0,'info'=>'请先获取短信验证码！','data'=>[]));
+            }
+            if($token['code']!=$data['smscode'])
+            {
+                ajaxReturn(array('code'=>0, 'info'=>'短信验证码不正确！','data'=>[]));
+            }
+            if (!empty($token)&&$token['expired_at']<time() )
+            {
+                ajaxReturn(array('code'=>0, 'info'=>'短信验证码超时！','data'=>[]));
+            }
+
+            $map['mobile']=$data['mobile'];
+            $info=db('doctor')->where($map)->field("member_id,member_sn,member_name,mobile,password,guid, true_name, is_clinic, is_certified, login_state, device_tokens, is_status")->find();
+            if(!empty($info))
+            {
+                //是否被冻结
+                if ($info['is_status'] == 1) {
+                    ajaxReturn(array('code'=>0,'info'=>'该账号被冻结！','data'=>[]));
+                }
+
+                //检查是否已加入该传承
+                $existDetail = db('inherit_doctor')
+                    ->where("member_id = {$info['member_id']} AND inherit_id = {$data['inherit_id']} AND is_checked IN(0, 1)")
+                    ->field('inherit_doctor_id')
+                    ->count();
+                if ($existDetail) {
+                    ajaxReturn(array('code'=>0, 'info'=>'您已申请过该传承!','data'=>[]));
+                }
+
+                //查询传承信息
+                $inheritInfo = db('inherit')
+                    ->where("inherit_id = {$data['inherit_id']} AND is_display = 1")
+                    ->field('member_id')
+                    ->find();
+
+                if (empty($inheritInfo)) {
+                    ajaxReturn(array('code'=>0, 'info'=>'该传承已下架!','data'=>[]));
+                }
+
+                //提交申请
+                $insertData['parent_id'] = $inheritInfo['member_id'];
+                $insertData['inherit_id'] = $data['inherit_id'];
+                $insertData['member_id'] = $info['member_id'];
+                $insertData['reason'] = '医生邀请加入传承';
+                $insertData['add_date'] = time();
+
+                //生成邀请加入传承的二维码
+                $insertData['img_url'] =  config('url') . createPic(config('url').'/member/inviteInherit?memberId='.$info['member_id'].'&inheritId='.$data['inherit_id']);
+
+                $identify = db('inherit_doctor')->insertGetId($insertData);
+
+                ajaxReturn(array('code' =>1, 'info' => '提交成功','data'=>[$identify]));
+
+            }else
+            {
+                ajaxReturn(array('code'=>0,'info'=>'手机号码不存在！','data'=>[]));
+            }
+
+        }
+    }
+
     /**
      * @Title: forgetPsd
      * @Description: TODO 忘记密码
