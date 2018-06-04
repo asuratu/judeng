@@ -2754,3 +2754,2748 @@
 [ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` WHERE  (  member_id = 2 and doctor_id = 2 ) LIMIT 1 [ RunTime:0.055004s ]
 [ sql ] [ SQL ] UPDATE `jd_doctor_member`  SET `counsell_number`=`counsell_number`+1  WHERE  (  member_id = 2 and doctor_id = 2 ) [ RunTime:0.059003s ]
 [ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-04T22:05:01+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：1.668095s][吞吐率：0.60req/s] [内存消耗：3,666.20kb] [文件加载：57]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------207784605755635577691749',
+  'content-length' => '381',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => '11c4bbf8-7165-4d16-822e-cbe90bb06243',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'member_id' => '1',
+  'is_type' => '1',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.080004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=1 ) LIMIT 1 [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.054003s ]
+[ error ] [8]Array to string conversion[E:\wook\201804\judeng\extend\Easemob.php:260]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-04T22:05:54+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.621036s][吞吐率：1.61req/s] [内存消耗：3,668.55kb] [文件加载：57]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------791065150670166674475691',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => '7f553e06-a6ff-4eae-9d75-198adb0f9775',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '1',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.083005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.058004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.057003s ]
+[ error ] [8]Array to string conversion[E:\wook\201804\judeng\extend\Easemob.php:260]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-04T22:07:20+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.722041s][吞吐率：1.38req/s] [内存消耗：3,668.96kb] [文件加载：57]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------420383760119994534638360',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => '22dd3b7f-f865-4705-ba76-ed27de20f95c',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '1',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.078004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.054003s ]
+[ error ] [8]Array to string conversion[E:\wook\201804\judeng\extend\Easemob.php:260]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-04T22:07:33+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.601034s][吞吐率：1.66req/s] [内存消耗：3,588.52kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------701430737330030206693733',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => '0e3121f5-eca3-42af-835e-4727c6039995',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.077004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.054004s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.054003s ]
+---------------------------------------------------------------
+[ 2018-06-04T22:11:38+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.844048s][吞吐率：1.18req/s] [内存消耗：3,588.52kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------003985689277476498527466',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => '0107a6b7-a0bf-4167-9a25-13f2586e69cf',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.077004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.054003s ]
+---------------------------------------------------------------
+[ 2018-06-04T22:19:00+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.337020s][吞吐率：2.97req/s] [内存消耗：3,001.02kb] [文件加载：51]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------233515500330556644089384',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => 'acecbc5b-71d0-45e8-99af-6bc371f832dd',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.081005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.054003s ]
+---------------------------------------------------------------
+[ 2018-06-04T22:21:16+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.343019s][吞吐率：2.92req/s] [内存消耗：3,001.02kb] [文件加载：51]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------904324731134226742302312',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => '257e7eef-9fe1-4c66-99a6-7cef505c68be',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.082005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.056004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.056003s ]
+---------------------------------------------------------------
+[ 2018-06-04T22:21:27+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.356021s][吞吐率：2.81req/s] [内存消耗：3,420.80kb] [文件加载：53]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------628807646837304410636073',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => 'e83a1990-7b8c-4a99-a3a7-d49a984db1cf',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.059003s ]
+---------------------------------------------------------------
+[ 2018-06-04T22:21:42+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.344020s][吞吐率：2.91req/s] [内存消耗：3,420.48kb] [文件加载：53]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------454374890383395501808231',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => '14a2614c-311c-45a7-bda3-e87c519d0b4c',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.080004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.056003s ]
+---------------------------------------------------------------
+[ 2018-06-04T22:21:54+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：1.573090s][吞吐率：0.64req/s] [内存消耗：3,588.42kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------787857187453137271756921',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => '635bb841-e389-4f2d-81e1-0cb9a693c5fe',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.083004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.057004s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.057004s ]
+---------------------------------------------------------------
+[ 2018-06-04T22:24:55+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.501029s][吞吐率：2.00req/s] [内存消耗：3,589.36kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------173782809126374829007317',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => '6ae0cf8f-03ee-41e0-a0e5-b360bf848206',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.080004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.054004s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.055003s ]
+---------------------------------------------------------------
+[ 2018-06-04T22:25:43+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.604035s][吞吐率：1.66req/s] [内存消耗：3,590.12kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------178350721530057357359525',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => '9989b8d1-dad5-4cec-ba07-f87a0f0f5a8e',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.082005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.057003s ]
+---------------------------------------------------------------
+[ 2018-06-04T22:26:04+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.656038s][吞吐率：1.52req/s] [内存消耗：3,590.51kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------050320312244004314262892',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => 'ffe3894f-81e7-4ad7-9a51-da1ef77fdbab',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.078004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.054003s ]
+---------------------------------------------------------------
+[ 2018-06-04T22:28:37+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.684039s][吞吐率：1.46req/s] [内存消耗：3,588.42kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------683447088429865349851683',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => '047eec94-5399-480c-9ed6-81805946c087',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.082005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.056004s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.057003s ]
+---------------------------------------------------------------
+[ 2018-06-04T22:28:48+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.628036s][吞吐率：1.59req/s] [内存消耗：3,668.55kb] [文件加载：57]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------514001311692883179757116',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => '6bb1faaa-b7d8-49aa-98a8-7312b7037625',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '1',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.081005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.057004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.056003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-04T22:28:53+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.641037s][吞吐率：1.56req/s] [内存消耗：3,668.55kb] [文件加载：57]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------939960509501572415679879',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => 'd35dd837-bdba-46d6-8bbd-ce83f86e8ec4',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '1',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.076004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.053003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-04T22:29:36+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.608035s][吞吐率：1.64req/s] [内存消耗：3,588.46kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------045712453836877918510235',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => '0ca0fc68-ec64-454e-bdf9-b8202b193216',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.080004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.055004s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.055003s ]
+---------------------------------------------------------------
+[ 2018-06-04T22:30:16+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.614035s][吞吐率：1.63req/s] [内存消耗：3,588.46kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------864656599910688971861678',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => '6dc3b86e-b3e9-4b7e-8021-fcead3c92e19',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.083004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.057004s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.057003s ]
+---------------------------------------------------------------
+[ 2018-06-04T22:30:30+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.601034s][吞吐率：1.66req/s] [内存消耗：3,588.68kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------958941338872336378224597',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => '2c23eb4b-92f1-46e9-bfa7-ae3418c4e185',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.080004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.055003s ]
+---------------------------------------------------------------
+[ 2018-06-04T22:30:37+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.672039s][吞吐率：1.49req/s] [内存消耗：3,590.88kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------215006854113083355208202',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => 'af22a137-db5b-4d93-89cd-d50d2ed65f8e',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '1',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.060003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.059003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.059004s ]
+---------------------------------------------------------------
+[ 2018-06-04T22:31:05+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.610035s][吞吐率：1.64req/s] [内存消耗：3,588.68kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------049867199108527020521581',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => '95a08cdf-4c57-4801-8915-b6748890d7bb',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.077005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.074004s ]
+---------------------------------------------------------------
+[ 2018-06-04T22:38:26+08:00 ] 0.0.0.0 POST /doctor/patientFile
+[ info ] localhost:8020/doctor/patientFile [运行时间：1.590091s][吞吐率：0.63req/s] [内存消耗：3,666.63kb] [文件加载：57]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'doctor',
+    2 => 'patientFile',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------472225919626611500670352',
+  'content-length' => '275',
+  'x-original-url' => '/doctor/patientFile',
+  'postman-token' => '61840765-d578-495b-8958-a69995953c37',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '6',
+)
+[ info ] [ RUN ] app\home\controller\Doctor->patientFile[ E:\wook\201804\judeng\application\home\controller\Doctor.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.082005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT `portrait`,`mobile`,`true_name`,`sex`,`birthday` FROM `jd_member` WHERE  (  member_id = 6 ) LIMIT 1 [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member_info` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT `allergy`,`medical`,`habit`,`other_habit` FROM `jd_member_info` WHERE  (  member_id = 6 ) LIMIT 1 [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT `grouping` FROM `jd_doctor_member` WHERE  (  doctor_id = 46 and member_id = 6 ) LIMIT 1 [ RunTime:0.053003s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_member`  SET `is_status`=0,`release_date`=1528123106  WHERE  (  doctor_id = 46 and member_id = 6 ) [ RunTime:0.055003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-04T22:44:10+08:00 ] 0.0.0.0 POST /doctor/patientFile
+[ info ] localhost:8020/doctor/patientFile [运行时间：1.635094s][吞吐率：0.61req/s] [内存消耗：3,667.07kb] [文件加载：57]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'doctor',
+    2 => 'patientFile',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------254146897118818859531401',
+  'content-length' => '275',
+  'x-original-url' => '/doctor/patientFile',
+  'postman-token' => 'd2f97bbc-fcf3-4e4f-b160-63e7815586b0',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '6',
+)
+[ info ] [ RUN ] app\home\controller\Doctor->patientFile[ E:\wook\201804\judeng\application\home\controller\Doctor.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT `portrait`,`mobile`,`true_name`,`sex`,`birthday` FROM `jd_member` WHERE  (  member_id = 6 ) LIMIT 1 [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member_info` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT `allergy`,`medical`,`habit`,`other_habit` FROM `jd_member_info` WHERE  (  member_id = 6 ) LIMIT 1 [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT `grouping` FROM `jd_doctor_member` WHERE  (  doctor_id = 46 and member_id = 6 ) LIMIT 1 [ RunTime:0.054003s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_member`  SET `is_status`=0,`release_date`=1528123450  WHERE  (  doctor_id = 46 and member_id = 6 ) [ RunTime:0.056004s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-04T22:44:57+08:00 ] 0.0.0.0 POST /doctor/patientFile
+[ info ] localhost:8020/doctor/patientFile [运行时间：0.622035s][吞吐率：1.61req/s] [内存消耗：3,667.23kb] [文件加载：57]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'doctor',
+    2 => 'patientFile',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------594421252608728431652620',
+  'content-length' => '275',
+  'x-original-url' => '/doctor/patientFile',
+  'postman-token' => 'f70cf3dd-2ae2-4b5b-8fa2-2943250a5a32',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '6',
+)
+[ info ] [ RUN ] app\home\controller\Doctor->patientFile[ E:\wook\201804\judeng\application\home\controller\Doctor.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.077005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT `portrait`,`mobile`,`true_name`,`sex`,`birthday` FROM `jd_member` WHERE  (  member_id = 6 ) LIMIT 1 [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member_info` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT `allergy`,`medical`,`habit`,`other_habit` FROM `jd_member_info` WHERE  (  member_id = 6 ) LIMIT 1 [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT `grouping` FROM `jd_doctor_member` WHERE  (  doctor_id = 46 and member_id = 6 ) LIMIT 1 [ RunTime:0.053003s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_member`  SET `is_status`=0,`release_date`=1528123497  WHERE  (  doctor_id = 46 and member_id = 6 ) [ RunTime:0.055003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-04T22:50:46+08:00 ] 0.0.0.0 POST /doctor/patientFile
+[ info ] localhost:8020/doctor/patientFile [运行时间：1.603092s][吞吐率：0.62req/s] [内存消耗：3,667.83kb] [文件加载：57]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'doctor',
+    2 => 'patientFile',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------876473685131854850475041',
+  'content-length' => '275',
+  'x-original-url' => '/doctor/patientFile',
+  'postman-token' => 'e73c3866-2272-4408-91a0-cb7842b73070',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '6',
+)
+[ info ] [ RUN ] app\home\controller\Doctor->patientFile[ E:\wook\201804\judeng\application\home\controller\Doctor.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.083005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT `portrait`,`mobile`,`true_name`,`sex`,`birthday` FROM `jd_member` WHERE  (  member_id = 6 ) LIMIT 1 [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member_info` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT `allergy`,`medical`,`habit`,`other_habit` FROM `jd_member_info` WHERE  (  member_id = 6 ) LIMIT 1 [ RunTime:0.055004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT `grouping` FROM `jd_doctor_member` WHERE  (  doctor_id = 46 and member_id = 6 ) LIMIT 1 [ RunTime:0.054003s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_member`  SET `is_status`=0,`release_date`=1528123846  WHERE  (  doctor_id = 46 and member_id = 6 ) [ RunTime:0.056003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-04T22:51:05+08:00 ] 0.0.0.0 POST /doctor/patientFile
+[ info ] localhost:8020/doctor/patientFile [运行时间：0.509029s][吞吐率：1.96req/s] [内存消耗：3,079.67kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'doctor',
+    2 => 'patientFile',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------293448840269023286897302',
+  'content-length' => '275',
+  'x-original-url' => '/doctor/patientFile',
+  'postman-token' => '51232cad-fc2b-44bf-af89-9894bc5e9ae9',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '6',
+)
+[ info ] [ RUN ] app\home\controller\Doctor->patientFile[ E:\wook\201804\judeng\application\home\controller\Doctor.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.081005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT `portrait`,`mobile`,`true_name`,`sex`,`birthday` FROM `jd_member` WHERE  (  member_id = 6 ) LIMIT 1 [ RunTime:0.054004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member_info` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT `allergy`,`medical`,`habit`,`other_habit` FROM `jd_member_info` WHERE  (  member_id = 6 ) LIMIT 1 [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT `grouping` FROM `jd_doctor_member` WHERE  (  doctor_id = 46 and member_id = 6 ) LIMIT 1 [ RunTime:0.055003s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_member`  SET `is_status`=0,`release_date`=1528123865  WHERE  (  doctor_id = 46 and member_id = 6 ) [ RunTime:0.057003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-04T22:56:39+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：1.456083s][吞吐率：0.69req/s] [内存消耗：3,596.08kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------205311227488090707178278',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => '8aff9ebc-b6b9-41d5-8061-f664b14f49b6',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.057004s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.057004s ]
+---------------------------------------------------------------
+[ 2018-06-04T22:57:22+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.463026s][吞吐率：2.16req/s] [内存消耗：3,595.42kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------270322499711365282073600',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => '354c1eb8-7dd3-4458-9b18-67ed3ae112f1',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.079004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.053004s ]
+---------------------------------------------------------------
+[ 2018-06-04T22:58:01+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.628036s][吞吐率：1.59req/s] [内存消耗：3,588.46kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------948102634775347415967311',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => 'a888351e-6489-4a4f-91ea-b84cb9556557',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.060004s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.058004s ]
+---------------------------------------------------------------
+[ 2018-06-04T22:58:38+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.360020s][吞吐率：2.78req/s] [内存消耗：3,591.04kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------725576736773779443421921',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => '15bed48e-39d7-48e0-8578-4d3433df2abb',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.058004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.058004s ]
+---------------------------------------------------------------
+[ 2018-06-04T22:58:53+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.339019s][吞吐率：2.95req/s] [内存消耗：3,591.30kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------517231896199977569909257',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => 'ac17f3ee-36fd-4c3b-9971-5369d20fe5d0',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.078004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.055004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.054003s ]
+---------------------------------------------------------------
+[ 2018-06-04T22:59:09+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.598034s][吞吐率：1.67req/s] [内存消耗：3,596.34kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------121408073502716957312113',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => '34e95a17-1de2-4b85-bd7c-066bd00ca143',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.079005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.055003s ]
+---------------------------------------------------------------
+[ 2018-06-04T22:59:23+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.614035s][吞吐率：1.63req/s] [内存消耗：3,588.48kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------206037794012248711671221',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => 'c8fce615-0359-451e-8795-f3fef59a667a',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.083005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.057004s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.057003s ]
+---------------------------------------------------------------
+[ 2018-06-04T22:59:33+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.612035s][吞吐率：1.63req/s] [内存消耗：3,588.48kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------585363747060350224035628',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => '23390ee7-2ebc-4728-90b3-09c2ef676d9e',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.079004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.055004s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.060003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.055004s ]
+---------------------------------------------------------------
+[ 2018-06-04T23:02:19+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.735042s][吞吐率：1.36req/s] [内存消耗：3,588.48kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------076385882487591479994950',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => '1c8aba22-856a-4c05-b4cb-bfef797f0aab',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.081005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.056004s ]
+---------------------------------------------------------------
+[ 2018-06-04T23:03:03+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.352020s][吞吐率：2.84req/s] [内存消耗：3,588.60kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------173597953605503949389600',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => 'a8e44bf0-3e6c-43ec-91a9-2e2b26189aa3',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.082005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.057004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.057003s ]
+---------------------------------------------------------------
+[ 2018-06-04T23:05:22+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.746043s][吞吐率：1.34req/s] [内存消耗：3,588.43kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------571288249083466555876027',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => 'ff1a0eb2-ad58-4d46-87a8-887f3ba5a8f5',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.085005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.064004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.058004s ]
+---------------------------------------------------------------
+[ 2018-06-04T23:05:52+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.332019s][吞吐率：3.01req/s] [内存消耗：3,588.50kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------392522556375520938163895',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => '61041ed5-312b-4a96-8e2f-68a2d8ec6878',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.077005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.053003s ]
+---------------------------------------------------------------
+[ 2018-06-04T23:06:14+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.609035s][吞吐率：1.64req/s] [内存消耗：3,588.48kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------166090141501749677977474',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => '58439d60-5d02-46c5-82c5-12a2134b71b9',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.078004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.055003s ]
+---------------------------------------------------------------
+[ 2018-06-04T23:10:05+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.670038s][吞吐率：1.49req/s] [内存消耗：3,588.73kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------457256122475744971601346',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => '57e54ec6-478a-4155-a906-618582fe19c5',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.083005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.057004s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.057003s ]
+---------------------------------------------------------------
+[ 2018-06-04T23:10:21+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.604034s][吞吐率：1.66req/s] [内存消耗：3,588.46kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------028243368218423267806051',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => 'b729202c-f5b3-44d7-8181-94397cec2107',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.082005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.057004s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.059003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.056003s ]
+---------------------------------------------------------------
+[ 2018-06-04T23:11:44+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.366021s][吞吐率：2.73req/s] [内存消耗：3,591.02kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------419074028914818804369439',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => '6b71aefb-8e8b-449f-8e56-cf5a82d4e889',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.059003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.059003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.059003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.059004s ]
+---------------------------------------------------------------
+[ 2018-06-04T23:11:54+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.338020s][吞吐率：2.96req/s] [内存消耗：3,590.99kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------120225615100562360512061',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => 'd63cce2b-5ae9-4e8c-9e6e-68d0790a65fe',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.080005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.055004s ]
+---------------------------------------------------------------
+[ 2018-06-04T23:12:18+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.571033s][吞吐率：1.75req/s] [内存消耗：3,723.05kb] [文件加载：60]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------998176904095996415445805',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => '69b3e65c-f82c-4063-8ef9-5cdf617ef160',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.081005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.056004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.056003s ]
+[ error ] [2]Illegal string offset 'access_token'[E:\wook\201804\judeng\extend\Easemob.php:54]
+---------------------------------------------------------------
+[ 2018-06-04T23:13:19+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.613035s][吞吐率：1.63req/s] [内存消耗：3,588.48kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------361501654102270986618877',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => '01d8d3bb-cb65-4793-8f41-2a68e6ee6d37',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.081005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.057004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.057003s ]
+---------------------------------------------------------------
+[ 2018-06-04T23:14:40+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.638036s][吞吐率：1.57req/s] [内存消耗：3,588.48kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------691019332489260724386790',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => 'ec728182-23b1-4e41-962c-fcd9cce2aa49',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.083004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.058004s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.057003s ]
+---------------------------------------------------------------
+[ 2018-06-04T23:14:54+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.609035s][吞吐率：1.64req/s] [内存消耗：3,588.46kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------334537840077802972815137',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => '87d9713d-1ab8-47fc-8bb0-b309b9214ec7',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.077005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.054003s ]
+---------------------------------------------------------------
+[ 2018-06-04T23:15:05+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.605034s][吞吐率：1.65req/s] [内存消耗：3,588.46kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------078743215322895535599936',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => '73fe365c-dcfa-4c14-8f7d-084a6b1ef288',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.078004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.054003s ]
+---------------------------------------------------------------
+[ 2018-06-04T23:15:13+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.595034s][吞吐率：1.68req/s] [内存消耗：3,588.46kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------460605554324708360085903',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => 'fc34d193-2857-46dd-b316-800113e86d8d',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.078004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.053003s ]
+---------------------------------------------------------------
+[ 2018-06-04T23:17:19+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.349020s][吞吐率：2.87req/s] [内存消耗：3,588.37kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------210156236923307610087082',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => '68ebb4b1-85a8-4968-af5b-9223ecc03f5c',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.082005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.056004s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.057003s ]
+---------------------------------------------------------------
+[ 2018-06-04T23:17:36+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.613035s][吞吐率：1.63req/s] [内存消耗：3,588.52kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------501718151332842253835376',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => '477e9039-148e-4e68-a1bb-143935c14f63',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.078004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.053003s ]
+---------------------------------------------------------------
+[ 2018-06-04T23:17:55+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.592034s][吞吐率：1.69req/s] [内存消耗：3,588.52kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------408298048418780302558695',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => 'a5f22f27-3520-4b6c-943a-38a7bc72dbc3',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.077004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.055003s ]
+---------------------------------------------------------------
+[ 2018-06-04T23:18:09+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.604034s][吞吐率：1.66req/s] [内存消耗：3,588.52kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------443463359788315122458046',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => '4337f5e0-cff1-49ef-849c-2810047971ff',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.081005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.055004s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.056003s ]
+---------------------------------------------------------------
+[ 2018-06-04T23:20:03+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.716041s][吞吐率：1.40req/s] [内存消耗：3,588.52kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------415542537905581743446310',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => 'e3125bf2-0dae-4224-b200-d3ef23beb904',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.080004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.056003s ]
+---------------------------------------------------------------
+[ 2018-06-04T23:20:33+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.593034s][吞吐率：1.69req/s] [内存消耗：3,588.35kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------565126265646567844015555',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => 'fa65657b-c6f5-457c-b55e-0f7d606be4de',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.077005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.054004s ]
+---------------------------------------------------------------
+[ 2018-06-04T23:27:51+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：1.605092s][吞吐率：0.62req/s] [内存消耗：3,668.38kb] [文件加载：57]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------184839491200769594490348',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => '8dae2e7c-e4e2-48d3-a2f8-489c5e82912b',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '1',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.057004s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.057003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-04T23:29:22+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.616035s][吞吐率：1.62req/s] [内存消耗：3,588.55kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------993710870467078582447900',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => '82da4856-7afd-4b8a-8a3d-70ab4d3fb4ff',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.083005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.058004s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.058004s ]
+---------------------------------------------------------------
+[ 2018-06-04T23:29:39+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.603035s][吞吐率：1.66req/s] [内存消耗：3,588.63kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------993708308163257438603589',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => '37dc36f4-d5cf-4a38-ba67-7020b876f026',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.080005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.055004s ]
+---------------------------------------------------------------
+[ 2018-06-04T23:29:54+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.636036s][吞吐率：1.57req/s] [内存消耗：3,588.46kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------427939935946934977666722',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => 'fc8df5df-af60-4d7b-a0c5-c88bae2ca4cc',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.080004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.056003s ]
+---------------------------------------------------------------
+[ 2018-06-04T23:31:16+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.614036s][吞吐率：1.63req/s] [内存消耗：3,588.63kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------455523402989127624485359',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => '1218b4ff-6470-4d74-a605-aed7a609e4f8',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.079005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.055003s ]
+---------------------------------------------------------------
+[ 2018-06-04T23:31:26+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.594034s][吞吐率：1.68req/s] [内存消耗：3,588.63kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------162869711075815637534290',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => '485ab9ce-0adc-4857-8096-166afb393e87',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '6',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.079005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=6 ) LIMIT 1 [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.055003s ]
+---------------------------------------------------------------
+[ 2018-06-04T23:31:55+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.607035s][吞吐率：1.65req/s] [内存消耗：3,588.55kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------773766079229573946650852',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => 'eaa7ba03-586b-4d62-80c8-6129e0553ab2',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.077004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.054003s ]
+---------------------------------------------------------------
+[ 2018-06-04T23:33:59+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.349020s][吞吐率：2.87req/s] [内存消耗：3,588.58kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------731650797854955761548336',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => 'f4f14d45-b3e0-4435-add9-1e68fb66f7d3',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.081005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.055004s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.057003s ]
+---------------------------------------------------------------
+[ 2018-06-04T23:35:14+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.736042s][吞吐率：1.36req/s] [内存消耗：3,588.30kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------977872607128938137030967',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => 'ddf91c8c-f690-472d-afcc-05a1941d9159',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.083005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.057004s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.059003s ]
+---------------------------------------------------------------
+[ 2018-06-04T23:35:57+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.583034s][吞吐率：1.72req/s] [内存消耗：3,588.55kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------609196886414554621913380',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => 'e7b633e7-5cd5-404e-bd5b-d7ca83f443ac',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.080005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.055003s ]
+---------------------------------------------------------------
+[ 2018-06-04T23:36:00+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.611035s][吞吐率：1.64req/s] [内存消耗：3,588.55kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------139077938567243969346490',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => 'fe03b21b-9171-4593-a01f-268d4c0306f6',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.080004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.054004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.055003s ]
+---------------------------------------------------------------
+[ 2018-06-04T23:40:40+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.625035s][吞吐率：1.60req/s] [内存消耗：3,588.55kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------343460952516422457602807',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => '44de3912-f444-42f8-aecc-cc1e499975b2',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.080004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.055004s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.055003s ]
+---------------------------------------------------------------
+[ 2018-06-04T23:40:59+08:00 ] 0.0.0.0 POST /blacklist/black
+[ info ] localhost:8020/blacklist/black [运行时间：0.591034s][吞吐率：1.69req/s] [内存消耗：3,588.55kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'blacklist',
+    2 => 'black',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------087323582657926818174343',
+  'content-length' => '382',
+  'x-original-url' => '/blacklist/black',
+  'postman-token' => '4f7f688b-28be-46c3-bbf3-9b1ab33fc1f8',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '46',
+  'member_id' => '2',
+  'is_type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Blacklist->black[ E:\wook\201804\judeng\application\home\controller\Blacklist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.080004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.055004s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=46 ) LIMIT 1 [ RunTime:0.055003s ]

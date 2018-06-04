@@ -96,7 +96,7 @@ class Doctor extends Common
             ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
         }
         $doctor = db('doctor')->where("member_id = {$data['doctor_id']}")
-            ->field('member_id, true_name, face_photo, goodat_id, introduction, recom, is_clinic, hospital_id, hospital_repart_str, school_str, inherit, title_str, graphic_speech, concealment_number, online_inquiry,first_price,consultation_price')
+            ->field('member_id, true_name, face_photo, goodat_id, introduction, recom, is_clinic, hospital_id, hospital_repart_str, school_str, inherit, title_str, graphic_speech, love_inquiry, concealment_number, online_inquiry,first_price,consultation_price')
             ->find();
 
         $diagnosis_set = db('diagnosis_set')->where("member_id = {$data['doctor_id']}")
@@ -105,6 +105,7 @@ class Doctor extends Common
         $doctor['online_inquiry'] = $diagnosis_set['all_open'];
         $doctor['first_price'] = $diagnosis_set['image_price'];
         $doctor['consultation_price'] = $diagnosis_set['reimage_price'];
+        $doctor['love_inquiry'] = $diagnosis_set['love_num'];
 
         //是否显示流派
         if ($doctor['inherit']) {
@@ -215,7 +216,7 @@ class Doctor extends Common
         foreach ($doctorEvaluation as $key => $val) {
             array_push($evaluation, $val);
             $evaluation[$key]['evaluate_name'] = explode('#@#', $val['evaluate_name']);
-            $evaluation[$key]['portrait'] = $val['portrait'];
+            $evaluation[$key]['portrait'] = 'http://wechat.bohetanglao.com/uploads/avatar/' . $val['portrait'];
             $evaluation[$key]['member_name'] = !empty($val['true_name']) ? $val['true_name'] : (!empty($val['member_name']) ? $val['member_name'] : $val['mobile']);
             $evaluation[$key]['add_date'] = date('Y-m-d', $val['add_date']);
         }
@@ -330,7 +331,7 @@ class Doctor extends Common
                 $member['habit'] = array();
                 $member['other_habit'] = '无';
             }
-            $member['token'] = Model('Setting')->huanxin();
+//            $member['token'] = Model('Setting')->huanxin();
 
             // 查询患者所在分组
             $group = db('doctor_member')->where("doctor_id = {$data['doctor_id']} and member_id = {$data['member_id']}")->field("grouping")->find();
