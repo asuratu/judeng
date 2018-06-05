@@ -484,12 +484,11 @@ class Order extends Common
                 $_identityPrescription = db('order_prescription')->insert($orderPrescriptionInsert);
 
                 if ($_identityPrescription && $orderPrescriptionInsert['order_id'] && $updateOrderPrice && $_identify) {
-//                    if ($data['type'] == 1) {
-//                        //推送短信通知到患者手机号
-//                        $comment = "来自" . $doctorInfo['member_name'] . "医生的消息，内容为：""，" . $url . "，请点击查看！如有疑问可联系客服400-700-5120";
-//
-                        sendSMS($val, '测试图文短信群发');
-//                    }
+                    if ($flag && $data['mobile']) {
+                        //推送短信通知到患者手机号
+                        $body = array('name'=>$doctorInfo);
+                        sendAliSMS($data['mobile'], $body, 1);
+                    }
 
                     Db::commit();
                     ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>[['order_id'=>$orderPrescriptionInsert['order_id'], 'type'=>$data['type']]]));
