@@ -203,12 +203,12 @@ function sendSMS($mobile,$body)
  * @author TUGE
  * @date
  */
-function sendAliSMS($mobile, $body)
+function sendAliSMS($mobile, $body, $type)
 {
     require_once(ROOT_PATH . 'extend\Alisms\api_demo\SmsDemo.php');
     $h = new SmsDemo();
     header("Content-Type:text/html;charset=utf-8");
-    $response = $h->sendSms($mobile, $body);
+    $response = $h->sendSms($mobile, $body, $type);
     if($response->Code == 'OK')
     {
         return true;

@@ -68,7 +68,7 @@ class SmsDemo
      * @return stdClass
      */
 
-    public static function sendSms($mobile, $code) {
+    public static function sendSms($mobile, $body, $type) {
         // 初始化SendSmsRequest实例用于设置发送短信的参数
         $request = new SendSmsRequest();
         //可选-启用https协议
@@ -81,12 +81,25 @@ class SmsDemo
         $request->setSignName("小橘灯");
 
         // 必填，设置模板CODE，应严格按"模板CODE"填写, 请参考: https://dysms.console.aliyun.com/dysms.htm#/develop/template
-        $request->setTemplateCode("SMS_135807928");
+        switch ($type) {
+            case 0: //通用模板
+                //您的验证码${code}，该验证码6分钟内有效，请勿泄漏于他人！
+                $tempCode = "SMS_135807928";
+                break;
+            case 1: //手机号开方短信通知
+                //来自${name}医生的消息，内容为：${content}，http://api.judeng.net:88/${orderId}，请点击查看！如有疑问可联系客服400-700-512
+                $tempCode = "SMS_136382712";
+                break;
+            default:
+                $tempCode = "SMS_135807928";
+                break;
+        }
+        $request->setTemplateCode($tempCode);
+
 
         // 可选，设置模板参数, 假如模板中存在变量需要替换则为必填项
-        $request->setTemplateParam(json_encode(array(  // 短信模板中字段的值
-            "code"=>$code.''
-        ), JSON_UNESCAPED_UNICODE));
+        //// 短信模板中字段的值
+        $request->setTemplateParam(json_encode($body, JSON_UNESCAPED_UNICODE));
 
         // 可选，设置流水号
         $request->setOutId("yourOutId");

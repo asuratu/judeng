@@ -12,6 +12,16 @@ class Wx extends Controller {
             if ($data['doctor_id'] == '') {
                 ajaxReturn(array('code' => 0, 'info' => '参数不完整', 'data' => []));
             }
+            //查询是否已经获取过
+            $doctorInfo = db('doctor')
+                ->where("member_id = {$data['doctor_id']}")
+                ->field("`to_user_img`")
+                ->find();
+
+            if ($doctorInfo->to_user_img) {
+                ajaxReturn(array('code' => 1, 'info' => 'ok', 'data' => [$doctorInfo->to_user_img]));
+            }
+
             $access_token = $this->get_access_token();
             $key = 'doctor_'.$data['doctor_id'];
             if (!$access_token) {
@@ -28,6 +38,9 @@ class Wx extends Controller {
             $res = json_decode($res, true);
             if ($res['ticket']) {
                 $uri = 'https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=' . urlencode($res['ticket']);
+                $updateInfo['to_user_img'] = $uri;
+                $updateInfo['release_date'] = time();
+                db('doctor')->where("member_id = {$data['doctor_id']}")->update($updateInfo);
                 ajaxReturn(array('code' => 1, 'info' => 'ok', 'data' => [$uri]));
             } else {
                 ajaxReturn(array('code' => 0, 'info' => '服务器繁忙, 请稍后再试!', 'data' => []));

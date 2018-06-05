@@ -6,6 +6,38 @@ class Order extends Common
 {
 
     /**
+     * @Title: getSelfList
+     * @Description: TODO 查询患者购买当前医生的调制服务包列表(购买过的不显示)
+     */
+    public function getSelfList() {
+        if($this->request->isPost())
+        {
+            $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
+            if($data['doctor_id']=='' || $data['patient_id']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+            }
+
+            //购买过的未开方的服务包订单
+            $orderInfo = db('order_product')->alias('op')
+                ->join(['jd_order'=>'o'], 'op.order_id = o.order_id' , 'inner')
+                ->join(['jd_self_goods'=>'s'], 's.self_goods_id = op.self_goods_id' , 'left')
+                ->where("o.patient_id = {$data['patient_id']} AND o.doctor_id = {$data['doctor_id']} AND o.pay_status = 1 AND o.order_type = 4 AND o.order_status = 1 AND op.is_kaifang = 0")
+                ->field("o.order_id, s.self_goods_name")
+                ->select();
+            ajaxReturn(array('code'=>1,'info'=>'ok~!','data'=>$orderInfo));
+        }
+    }
+
+
+
+
+    /**
      * @Title: getTempDetail
      * @Description: TODO 进入在线开方
      */
@@ -22,7 +54,6 @@ class Order extends Common
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
-
 
             //查询医生的上次开方的药房药态
             $lastMap['o.`doctor_id`'] = $data['doctor_id'];
@@ -111,6 +142,11 @@ class Order extends Common
                     $mainInfo['sex'] = $mobPatientInfo['sex'];
                     $mainInfo['age'] = $mobPatientInfo['age'];
                 }
+                $mainInfo['content'] = '';
+                $mainInfo['inherit_drug'] = '';
+                $mainInfo['one_price'] = '';
+                $mainInfo['self_dose'] = 0;
+                $mainInfo['order_id'] = 0;
             } else {
                 //在线开方, 先查询患者信息
                 $patientMap['member_id'] = $data['patient_id'];
@@ -125,6 +161,28 @@ class Order extends Common
                 //计算年龄
 //                $mainInfo['age'] = getAge($patientInfo['birthday']);
                 $mainInfo['age'] = $patientInfo['age'] ?: 0;
+               if ($data['order_id']) {
+                //由调制服务包进入在线开方
+                   $orderInfo = db('order_product')->alias('op')
+                       ->join(['jd_order'=>'o'], 'op.order_id = o.order_id' , 'inner')
+                       ->join(['jd_self_goods'=>'s'], 's.self_goods_id = op.self_goods_id' , 'left')
+                       ->where("o.order_id = {$data['order_id']} AND o.pay_status = 1 AND o.order_type = 4 AND o.order_status = 1")
+                       ->field("o.*, op.*, s.content, s.inherit_drug, s.one_price, s.dose as self_dose")
+                       ->find();
+
+                   $mainInfo['content'] = $orderInfo['content'] ? base64_encode($orderInfo['content']): '';
+                   $mainInfo['inherit_drug'] = $orderInfo['inherit_drug'] ?: '';
+                   $mainInfo['one_price'] = $orderInfo['one_price'] ?: '';
+                   $mainInfo['self_dose'] = $orderInfo['self_dose'] ?: 0;
+                   $mainInfo['order_id'] = $data['order_id'];
+
+               } else {
+                   $mainInfo['content'] = '';
+                   $mainInfo['inherit_drug'] = '';
+                   $mainInfo['one_price'] = '';
+                   $mainInfo['self_dose'] = 0;
+                   $mainInfo['order_id'] = 0;
+               }
             }
             ajaxReturn(array('code'=>1,'info'=>'ok~!','data'=>[$mainInfo]));
         }
@@ -240,8 +298,8 @@ class Order extends Common
                         $orderPrescriptionInsert['taboo_content'] = '';
                     }
 
-
                     $orderPrescriptionInsert['prescription_src'] = '';
+
                 } else{
                     //拍照开方
                     $orderPrescriptionInsert['is_taboo'] = 0;
@@ -254,8 +312,9 @@ class Order extends Common
                         $orderPrescriptionInsert['prescription_src'] = $upOss['prescription_src'];
                     }
                 }
-
+                $flag = false;
                 if ($data['patient_id'] == 0 && $data['type'] == 0) {
+                    $flag = true;
                     //手机号开方
                     //手机号匹配患者
                     //若未注册则注册新的患者账号
@@ -278,6 +337,13 @@ class Order extends Common
                     } else {
                         $data['patient_id'] = $patientInfo['member_id'];
                     }
+
+
+
+
+
+
+
                 }
                 //生成新订单
                 $newOrder['order_sn'] = createOrderCode();
@@ -316,6 +382,30 @@ class Order extends Common
                 $orderPrescriptionInsert['see_price'] = $data['see_price'] ?: 0;
                 if ($data['type'] == 0) {
                     $orderPrescriptionInsert['total_price'] = $orderPrescriptionInsert['see_price']+$orderPrescriptionInsert['service_price']+$orderPrescriptionInsert['price']*$orderPrescriptionInsert['dose'];
+
+
+                    if ($data['order_id']) {
+                        //由调制服务包进入在线开方
+                        $orderInfo = db('order_product')->alias('op')
+                            ->join(['jd_order'=>'o'], 'op.order_id = o.order_id' , 'inner')
+                            ->join(['jd_self_goods'=>'s'], 's.self_goods_id = op.self_goods_id' , 'left')
+                            ->where("o.order_id = {$data['order_id']} AND o.pay_status = 1 AND o.order_type = 4 AND o.order_status = 1")
+                            ->field("o.*, op.*, s.content, s.inherit_drug, s.one_price, s.dose as self_dose")
+                            ->find();
+
+                        $mainInfo['one_price'] = $orderInfo['one_price'] ?: '';
+                        $mainInfo['self_dose'] = $orderInfo['self_dose'] ?: 0;
+                        $lastPrice = $orderPrescriptionInsert['total_price'] - $mainInfo['self_dose']*$mainInfo['one_price'];
+                        $orderPrescriptionInsert['total_price'] = $lastPrice > 0 ? $lastPrice : 0;
+                        //修改调制包订单开方状态
+                        if ($orderInfo) {
+                            $updateProductInfo['is_kaifang'] = 1;
+                            $updateProductInfo['release_date'] = time();
+                            $updateProduct = db('order_product')->where("order_id = {$data['order_id']}")->update($updateProductInfo);
+                        }
+
+                    }
+
                     //在线开方则会更新订单价格
                     $updateOrderTemp['product_amount'] = $orderPrescriptionInsert['price'];
                     $updateOrderTemp['product_number'] = $orderPrescriptionInsert['dose'];
@@ -325,7 +415,6 @@ class Order extends Common
                    //推送消息模板到服务号,提醒支付
 
                     $sendHair = array();
-//                    var_dump($doctorInfo);die;
                     $sendHair['doctor_name'] = $doctorInfo['member_name'];
                     $sendHair['hospital'] = '小橘灯中医';
                     $sendHair['member_name'] = $orderPrescriptionInsert['patient_name'];
@@ -395,6 +484,13 @@ class Order extends Common
                 $_identityPrescription = db('order_prescription')->insert($orderPrescriptionInsert);
 
                 if ($_identityPrescription && $orderPrescriptionInsert['order_id'] && $updateOrderPrice && $_identify) {
+//                    if ($data['type'] == 1) {
+//                        //推送短信通知到患者手机号
+//                        $comment = "来自" . $doctorInfo['member_name'] . "医生的消息，内容为：""，" . $url . "，请点击查看！如有疑问可联系客服400-700-5120";
+//
+                        sendSMS($val, '测试图文短信群发');
+//                    }
+
                     Db::commit();
                     ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>[['order_id'=>$orderPrescriptionInsert['order_id'], 'type'=>$data['type']]]));
                 } else {

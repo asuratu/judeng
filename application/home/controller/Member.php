@@ -558,6 +558,20 @@ class Member extends Common
         return  $this->fetch('/doctor/regist');
     }
 
+    public function plan()
+    {
+        //查询地区
+        $map['is_display'] = 1;
+        $areaList=db('area')->where($map)->field("`area_id`,`name`")->order("`sort` DESC")->select();
+        //查询医院
+        $hospitalList=db('hospital')->where($map)->field("`hospital_id`,`hospital_name`, area_id")->order("`sort` DESC")->select();
+
+        $this->assign("area", $areaList);
+        $this->assign("hospital", $hospitalList);
+        $this->assign("code", $_GET['id']);
+        return  $this->fetch('/doctor/plan');
+    }
+
     public function inviteInherit()
     {
         //查询医生信息
@@ -794,7 +808,8 @@ class Member extends Common
                     break;
             }
 //            $body = sprintf(config('body'), $randcode);
-            $status = sendAliSMS($mobile, $randcode);
+
+            $status = sendAliSMS($mobile, array('code'=>$randcode.''), 0);
             if ($status) {
                 $_SESSION['tokencode']= ['code' => $randcode, 'expired_at' => time() + $expiredTimer,'mobile'=>$mobile];
                 ajaxReturn(array('code' => 1, 'info' => '短信发送成功','data'=>array($randcode)));
