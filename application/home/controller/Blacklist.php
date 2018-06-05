@@ -63,9 +63,8 @@ class Blacklist extends Common
             if ($type == 0) {                        // 0     添加            1 删除
                 Model('Setting')->addUserForBlacklist($doctor['member_sn'], array($member['openid']));
             } else {
-                Model('Setting')->deleteUserFromBlacklist($doctor['member_sn'], array($member['openid']));
+                Model('Setting')->deleteUserFromBlacklist($doctor['member_sn'], $member['openid']);
             }
-
             $update = array(
                 'is_show' => $type,
                 'release_date' => $time,
@@ -106,7 +105,7 @@ class Blacklist extends Common
             $order = array();
             foreach ($comment as $key => $val) {
                 array_push($order, $val);
-                $order[$key]['portrait'] = $val['portrait'];
+                $order[$key]['portrait'] = 'http://wechat.bohetanglao.com/uploads/avatar/' . $val['portrait'];
                 $order[$key]['member_name'] = !empty($val['true_name']) ? $val['true_name'] : (!empty($val['member_name']) ? $val['member_name'] : $val['mobile']);
             }
             $total = Db::table('jd_blacklist b, jd_member m')

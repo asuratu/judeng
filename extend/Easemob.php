@@ -246,9 +246,9 @@ class Easemob {
 		往黑名单中加人
 	*/
 	function addUserForBlacklist($username,$usernames){
-		$url=$this->url.'users/'.$username.'/blocks/users';
+		$url=$this->url.'users/'.$username.'/blocks/users/';
 		$body=json_encode($usernames);
-		$header=array($this->getToken());
+		$header=array($this->getToken(),'Content-Type:application/json');
 		$result=$this->postCurl($url,$body,$header,'POST');
 		return $result;	
 		
@@ -925,6 +925,7 @@ class Easemob {
 		$res=curl_exec($ch);
 
 		$result=json_decode($res,true);
+
 		//4.关闭curl资源，并且释放系统资源
 		curl_close($ch);
 		if(empty($result))

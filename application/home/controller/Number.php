@@ -96,7 +96,7 @@ class Number extends Common
             $order = array();
             foreach ($prescription as $key => $val) {
                 array_push($order, $val);
-                $order[$key]['portrait'] = $val['portrait'];
+                $order[$key]['portrait'] = 'http://wechat.bohetanglao.com/uploads/avatar/' . $val['portrait'];
                 $order[$key]['pay_status_name'] = $this->view->setting['aryOrderPayStatus'][$val['pay_status']];
                 $order[$key]['order_status'] = $this->view->setting['aryOrderStatus'][$val['order_status']];
                 $order[$key]['member_name'] = !empty($val['true_name']) ? $val['true_name'] : (!empty($val['member_name']) ? $val['member_name'] : $val['mobile']);
@@ -163,7 +163,7 @@ class Number extends Common
             $order = array();
             foreach ($comment as $key => $val) {
                 array_push($order, $val);
-                $order[$key]['portrait'] = $val['portrait'];
+                $order[$key]['portrait'] = 'http://wechat.bohetanglao.com/uploads/avatar/' . $val['portrait'];
                 $order[$key]['member_name'] = !empty($val['true_name']) ? $val['true_name'] : (!empty($val['member_name']) ? $val['member_name'] : $val['mobile']);
                 $order[$key]['end_date'] = date('m-d', $val['end_date']);
 
@@ -253,6 +253,7 @@ class Number extends Common
                 array_push($order, $val);
                 $order[$key]['evaluate_name'] = explode('#@#', $val['evaluate_name']);
                 $order[$key]['member_name'] = !empty($val['true_name']) ? $val['true_name'] : (!empty($val['member_name']) ? $val['member_name'] : $val['mobile']);
+                $order[$key]['portrait'] = 'http://wechat.bohetanglao.com/uploads/avatar/' . $val['portrait'];
                 $order[$key]['evaluate'] = $this->view->setting['aryServiceEvaluation'][$val['evaluate']];
                 $order[$key]['add_date'] = date('Y-m-d H:i', $val['add_date']);
             }
@@ -305,7 +306,7 @@ class Number extends Common
             foreach ($comment as $key => $val) {
                 array_push($order, $val);
                 $order[$key]['is_type'] = $this->view->setting['aryMemberType'][$val['is_type']];
-                $order[$key]['portrait'] = $val['portrait'];
+                $order[$key]['portrait'] = 'http://wechat.bohetanglao.com/uploads/avatar/' . $val['portrait'];
                 $order[$key]['member_name'] = !empty($val['true_name']) ? $val['true_name'] : (!empty($val['member_name']) ? $val['member_name'] : $val['mobile']);
                 $order[$key]['mobile'] = isset($val['mobile']) ? $val['mobile'] : '未填写手机号码';
                 $order[$key]['inquisition'] = date('Y-m-d H:i', $val['inquisition']);
@@ -456,7 +457,7 @@ class Number extends Common
             foreach ($comment as $key => $val) {
                 array_push($order, $val);
                 $order[$key]['is_type'] = $this->view->setting['aryMemberType'][$val['is_type']];
-                $order[$key]['portrait'] = $val['portrait'];
+                $order[$key]['portrait'] = 'http://wechat.bohetanglao.com/uploads/avatar/' . $val['portrait'];
                 $order[$key]['member_name'] = !empty($val['true_name']) ? $val['true_name'] : (!empty($val['member_name']) ? $val['member_name'] : $val['mobile']);
                 $order[$key]['mobile'] = isset($val['mobile']) ? $val['mobile'] : '未填写手机号码';
             }
