@@ -27,7 +27,7 @@ class Doctor extends Common
                 $this->countGood($data['content']);
                 $doctor['goodat_id'] = $data['content'];
             } else {
-                $doctor['introduction'] = Html::getTextToHtml($data['content'], 500);
+                $doctor['introduction'] = Html::getTextToHtml($data['content'], 450);
             }
 
             $return = db('doctor')->update($doctor);
