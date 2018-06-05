@@ -115,7 +115,7 @@ class Image extends Common
                     // 来自XX医生的消息，内容为：XX标题，www.baidu.com，请点击查看！如有疑问可联系客服400-700-5120
                     $comment = "来自" . $data['doctor_member'] . "医生的消息，内容为：" . Html::getTextToHtml($data['content'], 10) . "，http://api.judeng.net:88/" . $url . "，请点击查看！如有疑问可联系客服400-700-5120";
 //                    $a = "来自" . $data['doctor_member'] . "医生的消息，内容为：" . Html::getTextToHtml($data['content'], 10) . "，" . $url . "，请点击查看！如有疑问可联系客服400-700-5120";
-                    sendSMS($val, '测试图文短信群发');
+                    sendAliSMS($val, $comment);
                 }
             }
 
