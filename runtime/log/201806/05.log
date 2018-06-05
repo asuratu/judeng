@@ -2312,3 +2312,393 @@
 [ sql ] [ DB ] CONNECT:[ UseTime:0.085580s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
 [ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.059792s ]
 [ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `mobile` = '13476665555' LIMIT 1 [ RunTime:0.057597s ]
+---------------------------------------------------------------
+[ 2018-06-05T11:21:28+08:00 ] 0.0.0.0 POST /home/refund/wxnotify
+[ info ] localhost:8020/home/refund/wxnotify [运行时间：0.093005s][吞吐率：10.75req/s] [内存消耗：2,072.59kb] [文件加载：49]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'home',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/home/refund/wxnotify',
+  'postman-token' => '892513db-7047-4b44-9dea-7233c5771801',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-05T11:21:51+08:00 ] 0.0.0.0 POST /home/refund/wxnotify
+[ info ] localhost:8020/home/refund/wxnotify [运行时间：0.028002s][吞吐率：35.71req/s] [内存消耗：2,072.66kb] [文件加载：49]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'home',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/home/refund/wxnotify',
+  'postman-token' => 'ef74debe-ddd6-428f-b396-ff73ae238fe5',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-05T11:22:20+08:00 ] 0.0.0.0 POST /home/refund/wxnotify
+[ info ] localhost:8020/home/refund/wxnotify [运行时间：0.028001s][吞吐率：35.71req/s] [内存消耗：2,072.66kb] [文件加载：49]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'home',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/home/refund/wxnotify',
+  'postman-token' => '9c834481-fe02-41b6-b3e5-244c16d2fabb',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-05T11:22:46+08:00 ] 0.0.0.0 POST /home/refund/wxnotify
+[ info ] localhost:8020/home/refund/wxnotify [运行时间：0.028002s][吞吐率：35.71req/s] [内存消耗：2,072.66kb] [文件加载：49]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'home',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/home/refund/wxnotify',
+  'postman-token' => 'df4f9037-cfdc-401e-a05f-662b51a64b34',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-05T11:22:48+08:00 ] 0.0.0.0 POST /home/refund/wxnotify
+[ info ] localhost:8020/home/refund/wxnotify [运行时间：0.037002s][吞吐率：27.03req/s] [内存消耗：2,072.66kb] [文件加载：49]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'home',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/home/refund/wxnotify',
+  'postman-token' => '624737b1-ac4d-4d3f-a442-be969dc3e679',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-05T11:23:01+08:00 ] 0.0.0.0 POST /home/refund/wxnotify
+[ info ] localhost:8020/home/refund/wxnotify [运行时间：0.029002s][吞吐率：34.48req/s] [内存消耗：2,072.66kb] [文件加载：49]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'home',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/home/refund/wxnotify',
+  'postman-token' => 'c49c5e74-c2bf-4fb7-8b95-83427d848f15',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-05T11:23:03+08:00 ] 0.0.0.0 POST /home/refund/wxnotify
+[ info ] localhost:8020/home/refund/wxnotify [运行时间：0.039002s][吞吐率：25.64req/s] [内存消耗：2,072.66kb] [文件加载：49]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'home',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/home/refund/wxnotify',
+  'postman-token' => '84b9b1d6-2443-483d-af27-874813f92680',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-05T11:23:20+08:00 ] 0.0.0.0 POST /home/refund/wxnotify
+[ info ] localhost:8020/home/refund/wxnotify [运行时间：0.030001s][吞吐率：33.33req/s] [内存消耗：2,072.66kb] [文件加载：49]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'home',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/home/refund/wxnotify',
+  'postman-token' => '20cd385c-d240-4839-be2c-c4fb15320967',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-05T11:23:23+08:00 ] 0.0.0.0 POST /home/refund/wxnotify
+[ info ] localhost:8020/home/refund/wxnotify [运行时间：0.038002s][吞吐率：26.31req/s] [内存消耗：2,072.66kb] [文件加载：49]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'home',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/home/refund/wxnotify',
+  'postman-token' => 'e789ec1e-8b78-43e6-ad07-c542ad8a2cf3',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-05T11:23:39+08:00 ] 0.0.0.0 POST /home/refund/wxnotify.html
+[ info ] localhost:8020/home/refund/wxnotify.html [运行时间：0.031001s][吞吐率：32.26req/s] [内存消耗：2,072.71kb] [文件加载：49]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'home',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/home/refund/wxnotify.html',
+  'postman-token' => '1a39d4c7-4757-41fb-bf90-e8fb275872c3',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-05T11:23:41+08:00 ] 0.0.0.0 POST /home/refund/wxnotify.html
+[ info ] localhost:8020/home/refund/wxnotify.html [运行时间：0.040002s][吞吐率：25.00req/s] [内存消耗：2,072.71kb] [文件加载：49]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'home',
+    2 => 'refund',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/home/refund/wxnotify.html',
+  'postman-token' => '1ee27bef-0e84-4e97-ad7a-f03e038c96fd',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-05T11:24:43+08:00 ] 0.0.0.0 POST /home/payment/wxnotify.html
+[ info ] localhost:8020/home/payment/wxnotify.html [运行时间：0.027001s][吞吐率：37.04req/s] [内存消耗：2,072.73kb] [文件加载：49]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'home',
+    2 => 'payment',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/home/payment/wxnotify.html',
+  'postman-token' => '73b69b69-8354-412c-8993-24c579f385a9',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-05T11:24:47+08:00 ] 0.0.0.0 POST /home/payment/wxnotify.html
+[ info ] localhost:8020/home/payment/wxnotify.html [运行时间：0.029001s][吞吐率：34.48req/s] [内存消耗：2,072.73kb] [文件加载：49]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'home',
+    2 => 'payment',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/home/payment/wxnotify.html',
+  'postman-token' => '789cdca1-c16b-43e5-980c-e56bca69dd40',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
