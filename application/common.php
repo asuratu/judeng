@@ -229,24 +229,23 @@ function sendAliSMS($mobile, $body, $type)
  */
 function sendAliMass($mobileArr, $codeArr, $type)
 {
-    $mobileArr = array(
-        "15021039435",
-        "13310028293",
-    );
-
-    $codeArr = array(
-        array(
-            "code" => "123",
-        ),
-        array(
-            "code" => "456",
-        ),
-    );
-
+//    $mobileArr = array(
+//        "15021039435",
+//        "13310028293",
+//    );
+//
+//    $codeArr = array(
+//        array(
+//            "code" => "123",
+//        ),
+//        array(
+//            "code" => "456",
+//        ),
+//    );
     require_once(ROOT_PATH . 'extend\Alisms\api_demo\SmsDemo.php');
     $h = new SmsDemo();
     header("Content-Type:text/html;charset=utf-8");
-    $response = $h->sendBatchSms($mobileArr, $codeArr, 0);
+    $response = $h->sendBatchSms($mobileArr, $codeArr, $type);
     if($response->Code == 'OK')
     {
         return true;
