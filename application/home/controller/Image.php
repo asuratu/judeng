@@ -111,7 +111,7 @@ class Image extends Common
                 }
 
                 $comment = "来自" . $data['doctor_member'] . "医生的消息，内容为：" . Html::getTextToHtml($data['content'], 10) . "，http://api.judeng.net:88/" . $url . "，请点击查看！如有疑问可联系客服400-700-5120";
-                // 后期再次测试
+                // 后期再次测试 TODO 测试返回true但是短信没有收到
                 $title = array();
                 foreach ($mobile_number as $key=>$val) {
                     $title[$key] = $comment;
