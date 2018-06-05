@@ -323,6 +323,7 @@ class Doctor extends Common
             }
 
             $member['sex'] = $this->view->setting['arySex'][$member['sex']];
+            $member['portrait'] = 'http://wechat.bohetanglao.com/uploads/avatar/' . $member['portrait'];
 
             $member_info = db('member_info')->where("member_id = {$data['member_id']}")->field("allergy, medical, habit, other_habit")->find();
             if ($member_info) {
