@@ -31,6 +31,7 @@ class Member extends Common
             $map['mobile']=$data['mobile'];
 
             $info=db('doctor')->where($map)->field("member_id,member_sn,member_name,mobile,password,guid, true_name, is_clinic, is_certified, login_state, device_tokens, is_status")->find();
+
             if(!empty($info))
             {
                 //是否被冻结
@@ -542,8 +543,6 @@ class Member extends Common
         }
     }
 
-
-
     public function webRegist()
     {
         //查询地区
@@ -560,15 +559,33 @@ class Member extends Common
 
     public function plan()
     {
-        //查询地区
-        $map['is_display'] = 1;
-        $areaList=db('area')->where($map)->field("`area_id`,`name`")->order("`sort` DESC")->select();
-        //查询医院
-        $hospitalList=db('hospital')->where($map)->field("`hospital_id`,`hospital_name`, area_id")->order("`sort` DESC")->select();
+       $orderId = intval($_GET['id']);
+       //订单信息,判断是否是待支付
+        $orderDetail = db('order')
+            ->where("order_id = {$orderId} AND pay_status = 0 AND order_status = 0")
+            ->field("`order_id`, `doctor_id`")
+            ->find();
+        if (empty($orderDetail)) {
+            return 404;
+        }
 
-        $this->assign("area", $areaList);
-        $this->assign("hospital", $hospitalList);
-        $this->assign("code", $_GET['id']);
+        //生成二维码
+        $urlData['order_id'] = $orderDetail['order_id'];
+        $url = curlPost(config('url').'/wx/getDrugQrcode', $urlData);
+
+        if (json_decode($url, true)['code'] != 1) {
+            return 404;
+        }
+        $result = json_decode($url, true)['data'][0];
+
+        //医生信息
+        $doctorInfo = db('doctor')
+            ->where("member_id = {$orderDetail['doctor_id']}")
+            ->field("`member_name`")
+            ->find();
+
+        $this->assign("imgUrl", $result);
+        $this->assign("doctorName", $doctorInfo['member_name']);
         return  $this->fetch('/doctor/plan');
     }
 

@@ -114,6 +114,8 @@ class Selfdrug extends Common
             $orderPrescriptionInsert['release_date'] = time();
             $orderPrescriptionInsert['is_checked'] = 1;
             $orderPrescriptionInsert['end_date'] = time()+31536000;
+
+            $data['service_price'] = 0;
             //计算总价
             $orderPrescriptionInsert['price'] = $orderPrescriptionInsert['one_price']*$data['dose'] + $data['service_price']+$data['see_price'];
             $orderPrescriptionInsert['scope'] = $data['scope'];

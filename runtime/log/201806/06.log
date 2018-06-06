@@ -1,0 +1,386 @@
+---------------------------------------------------------------
+[ 2018-06-06T17:02:06+08:00 ] 0.0.0.0 POST /inherit/getInheritDetail
+[ info ] localhost:7037/inherit/getInheritDetail [运行时间：0.638042s][吞吐率：1.57req/s] [内存消耗：3,152.04kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'getInheritDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarysIcGEYzzvgO2sMIO',
+  'content-length' => '241',
+  'x-original-url' => '/inherit/getInheritDetail',
+  'postman-token' => '8e1ff5bb-1613-c5d4-1432-430660bd766c',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=jnofthgufn7m1mnu5kuopoe9o1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'inherit_id' => '18',
+  'member_id' => '69',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->getInheritDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.096877s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.060196s ]
+[ sql ] [ SQL ] SELECT `i`.*,`d`.`title_id`,`d`.`member_name`,`d`.`true_name`,`d`.`mobile` FROM `jd_inherit` `i` INNER JOIN `jd_doctor` `d` ON `i`.`member_id`=`d`.`member_id` WHERE  i.`is_display` = 1  AND i.`inherit_id` = '18' LIMIT 1 [ RunTime:0.061855s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.069249s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit_doctor` WHERE  (  (`member_id` = 69 OR `parent_id` = 69) AND `is_checked` = 1 AND `inherit_id` = 18 ) LIMIT 1 [ RunTime:0.056384s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_special` [ RunTime:0.056255s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_special` WHERE  (  `is_display` = 1 AND `inherit_id` = 18 ) LIMIT 1 [ RunTime:0.055818s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_title` [ RunTime:0.057268s ]
+[ sql ] [ SQL ] SELECT `title_name` FROM `jd_title` WHERE  `title_id` IN (19) [ RunTime:0.057722s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-06T17:03:09+08:00 ] 0.0.0.0 GET /inherit/detail?id=18
+[ info ] localhost:7037/inherit/detail?id=18 [运行时间：0.276972s][吞吐率：3.61req/s] [内存消耗：3,313.19kb] [文件加载：56]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/inherit/detail?id=18',
+  'postman-token' => '4c789a47-a6d1-f36c-a94f-e1b8df8b0c92',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=jnofthgufn7m1mnu5kuopoe9o1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'id' => '18',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->detail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\workLP\20180502\judeng\wwwroot/application/home\view\inherit\detail.html [ array (
+  0 => 'setting',
+  1 => 'info',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.088194s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.059298s ]
+[ sql ] [ SQL ] SELECT `culture` FROM `jd_inherit` WHERE  `is_display` = 1  AND `inherit_id` = '18' LIMIT 1 [ RunTime:0.058722s ]
+---------------------------------------------------------------
+[ 2018-06-06T17:04:16+08:00 ] 0.0.0.0 GET /inherit/detail?id=18
+[ info ] localhost:7037/inherit/detail?id=18 [运行时间：0.399580s][吞吐率：2.50req/s] [内存消耗：3,310.25kb] [文件加载：56]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/inherit/detail?id=18',
+  'postman-token' => 'afc7b56b-38d1-e62f-9b7b-1e84b9dbbfa8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=jnofthgufn7m1mnu5kuopoe9o1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'id' => '18',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->detail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\workLP\20180502\judeng\wwwroot/application/home\view\inherit\detail.html [ array (
+  0 => 'setting',
+  1 => 'info',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.181544s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.064524s ]
+[ sql ] [ SQL ] SELECT `culture` FROM `jd_inherit` WHERE  `is_display` = 1  AND `inherit_id` = '18' LIMIT 1 [ RunTime:0.064646s ]
+---------------------------------------------------------------
+[ 2018-06-06T17:04:23+08:00 ] 0.0.0.0 GET /inherit/detail?id=18
+[ info ] localhost:7037/inherit/detail?id=18 [运行时间：0.266502s][吞吐率：3.75req/s] [内存消耗：3,313.36kb] [文件加载：56]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/inherit/detail?id=18',
+  'postman-token' => 'a6e60771-c683-4b6b-a539-5672a9537c2f',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=jnofthgufn7m1mnu5kuopoe9o1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'id' => '18',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->detail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\workLP\20180502\judeng\wwwroot/application/home\view\inherit\detail.html [ array (
+  0 => 'setting',
+  1 => 'info',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.083591s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.059180s ]
+[ sql ] [ SQL ] SELECT `culture` FROM `jd_inherit` WHERE  `is_display` = 1  AND `inherit_id` = '18' LIMIT 1 [ RunTime:0.056536s ]
+---------------------------------------------------------------
+[ 2018-06-06T17:07:02+08:00 ] 0.0.0.0 GET /inherit/detail?id=18
+[ info ] localhost:7037/inherit/detail?id=18 [运行时间：0.334668s][吞吐率：2.99req/s] [内存消耗：3,313.68kb] [文件加载：56]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/inherit/detail?id=18',
+  'postman-token' => 'cf6f186b-8229-1870-79bd-f0bee1a4c0eb',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=jnofthgufn7m1mnu5kuopoe9o1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'id' => '18',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->detail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\workLP\20180502\judeng\wwwroot/application/home\view\inherit\detail.html [ array (
+  0 => 'setting',
+  1 => 'info',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.110854s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.061001s ]
+[ sql ] [ SQL ] SELECT `culture` FROM `jd_inherit` WHERE  `is_display` = 1  AND `inherit_id` = '18' LIMIT 1 [ RunTime:0.093075s ]
+---------------------------------------------------------------
+[ 2018-06-06T17:10:25+08:00 ] 0.0.0.0 GET /inherit/article?id=2
+[ info ] localhost:7037/inherit/article?id=2 [运行时间：0.276369s][吞吐率：3.62req/s] [内存消耗：3,364.36kb] [文件加载：59]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'article',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/inherit/article?id=2',
+  'postman-token' => '1126745c-9b50-e84a-9312-655d1379a08a',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=jnofthgufn7m1mnu5kuopoe9o1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->article[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\workLP\20180502\judeng\wwwroot/application/home\view\inherit\article.html [ array (
+  0 => 'setting',
+  1 => 'info',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.088551s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_article` [ RunTime:0.058525s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_article` WHERE  `is_display` = 1  AND `article_id` = '2' LIMIT 1 [ RunTime:0.059248s ]
+[ error ] [8]未定义数组索引: title[D:\workLP\20180502\judeng\wwwroot\runtime\temp\944824ae242dd9ae3c903ba63ef04329.php:18]
+[ error ] [8]未定义数组索引: substance[D:\workLP\20180502\judeng\wwwroot\runtime\temp\944824ae242dd9ae3c903ba63ef04329.php:20]
+---------------------------------------------------------------
+[ 2018-06-06T17:40:29+08:00 ] 0.0.0.0 POST /inherit/getInheritDetail
+[ info ] localhost:7037/inherit/getInheritDetail [运行时间：0.638896s][吞吐率：1.57req/s] [内存消耗：3,153.20kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'getInheritDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryQ0vkcOQlpR6M6MqO',
+  'content-length' => '241',
+  'x-original-url' => '/inherit/getInheritDetail',
+  'postman-token' => '023196a2-3f76-298b-45e4-4a4fc2694c54',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=jnofthgufn7m1mnu5kuopoe9o1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'inherit_id' => '18',
+  'member_id' => '69',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->getInheritDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.095180s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.060847s ]
+[ sql ] [ SQL ] SELECT `i`.*,`d`.`title_id`,`d`.`member_name`,`d`.`true_name`,`d`.`mobile` FROM `jd_inherit` `i` INNER JOIN `jd_doctor` `d` ON `i`.`member_id`=`d`.`member_id` WHERE  i.`is_display` = 1  AND i.`inherit_id` = '18' LIMIT 1 [ RunTime:0.062197s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.060041s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit_doctor` WHERE  (  (`member_id` = 69 OR `parent_id` = 69) AND `is_checked` = 1 AND `inherit_id` = 18 ) LIMIT 1 [ RunTime:0.059583s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_special` [ RunTime:0.060864s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_special` WHERE  (  `is_display` = 1 AND `inherit_id` = 18 ) LIMIT 1 [ RunTime:0.059456s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_title` [ RunTime:0.060675s ]
+[ sql ] [ SQL ] SELECT `title_name` FROM `jd_title` WHERE  `title_id` IN (19) [ RunTime:0.059386s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-06T17:41:24+08:00 ] 0.0.0.0 GET /inherit/effect?id=2
+[ info ] localhost:7037/inherit/effect?id=2 [运行时间：0.260152s][吞吐率：3.84req/s] [内存消耗：3,298.30kb] [文件加载：56]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'effect',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/inherit/effect?id=2',
+  'postman-token' => '09ad8297-4700-92a4-f2c3-18a835fa22a8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=jnofthgufn7m1mnu5kuopoe9o1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'id' => '2',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->effect[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\workLP\20180502\judeng\wwwroot/application/home\view\inherit\effect.html [ array (
+  0 => 'setting',
+  1 => 'info',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.083817s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_special` [ RunTime:0.055900s ]
+[ sql ] [ SQL ] SELECT `effect` FROM `jd_special` WHERE  `is_display` = 1  AND `special_id` = '2' LIMIT 1 [ RunTime:0.054513s ]
+---------------------------------------------------------------
+[ 2018-06-06T17:49:56+08:00 ] 0.0.0.0 POST /inherit/getInheritDetail
+[ info ] localhost:7037/inherit/getInheritDetail [运行时间：0.624492s][吞吐率：1.60req/s] [内存消耗：3,154.22kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'getInheritDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary9f4bpTGz7K4tVZSB',
+  'content-length' => '241',
+  'x-original-url' => '/inherit/getInheritDetail',
+  'postman-token' => 'fc5899e5-caed-0f7f-122c-aed7c99871c9',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=jnofthgufn7m1mnu5kuopoe9o1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'inherit_id' => '18',
+  'member_id' => '69',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->getInheritDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.088201s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.059259s ]
+[ sql ] [ SQL ] SELECT `i`.*,`d`.`title_id`,`d`.`member_name`,`d`.`true_name`,`d`.`mobile` FROM `jd_inherit` `i` INNER JOIN `jd_doctor` `d` ON `i`.`member_id`=`d`.`member_id` WHERE  i.`is_display` = 1  AND i.`inherit_id` = '18' LIMIT 1 [ RunTime:0.059891s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.058697s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit_doctor` WHERE  (  (`member_id` = 69 OR `parent_id` = 69) AND `is_checked` = 1 AND `inherit_id` = 18 ) LIMIT 1 [ RunTime:0.057743s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_special` [ RunTime:0.057956s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_special` WHERE  (  `is_display` = 1 AND `inherit_id` = 18 ) LIMIT 1 [ RunTime:0.058896s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_title` [ RunTime:0.057717s ]
+[ sql ] [ SQL ] SELECT `title_name` FROM `jd_title` WHERE  `title_id` IN (19) [ RunTime:0.057617s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]

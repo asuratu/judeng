@@ -221,6 +221,7 @@ class Other extends Common
             //获取职称数组
             $map['is_show'] = 1;
             $list=db('title')->where($map)->field("`title_id`,`title_name`")->order("`sort` DESC")->select();
+
             foreach ($list as $key => $val) {
                 if (in_array($val['title_id'], $titleArr)) {
                     $list[$key]['selected'] = 1;

@@ -156,6 +156,7 @@ class Inherit extends Common
         $map['`is_display`'] = 1;
         $map['`video_id`'] = $_GET['id'];
         $videoDetail = db('video')->where($map)->field("*")->find();
+        $videoDetail['substance'] = htmlspecialchars_decode($videoDetail['substance']);
         $videoDetail['release_date'] = date('Y-m-d H:i', $videoDetail['release_date']);
         $this->assign('info',$videoDetail);
         return $this->fetch();
@@ -172,7 +173,8 @@ class Inherit extends Common
         $map['`is_display`'] = 1;
         $map['`inherit_id`'] = $_GET['id'];
         $inheritDetail = db('inherit')->where($map)->field("culture")->find();
-        $this->assign('info',$inheritDetail);
+        $culture = htmlspecialchars_decode($inheritDetail['culture']);
+        $this->assign('info',$culture);
         return $this->fetch();
     }
 
@@ -200,6 +202,7 @@ class Inherit extends Common
         $map['`is_display`'] = 1;
         $map['`article_id`'] = $_GET['id'];
         $articleDetail = db('article')->where($map)->field("*")->find();
+        $articleDetail['substance'] = htmlspecialchars_decode($articleDetail['substance']);
         $articleDetail['release_date'] = date('Y-m-d H:i', $articleDetail['release_date']);
         $this->assign('info',$articleDetail);
         return $this->fetch();
