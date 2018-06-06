@@ -295,7 +295,6 @@ class Other extends Common
     public function jianpin() {
         if($this->request->isPost())
         {
-            return true;
             $data=input('post.');
             if (!isset($data['page'])) {
                 $data['page'] = 1;
@@ -307,15 +306,28 @@ class Other extends Common
 
             $prescription = db('drug')
                 ->where("keywords = ''")
+                ->limit($data['pageCount'], $data['pageSize'])
                 ->select();
+
             $_i = 1;
             foreach ($prescription as $key => $val) {
                 $_i++;
                 $drug_name = explode('(', $val['drug_name']);
+                $drug_name = explode('（', $drug_name[0]);
                 $keywords = str_replace(' ', '', Spell::getChineseChar($drug_name[0], true, true));
+                if ($drug_name[1]) {
+                    $b = explode(')', $drug_name[1])[0];
+                    $b = explode('(', $b)[0];
+                    $b = explode('）', $b)[0];
+                    $b = explode('（', $b)[0];
+                    $b = str_replace(' ', '', Spell::getChineseChar($b, true, true));
+                } else {
+                    $b = '';
+                }
                 $keywords = isset($keywords) ? $keywords : '';
+                $keywords .= $keywords . ',' . $b;
+                $keywords = trim($keywords, ',');
                 $update = array(
-                    'other_name' => $drug_name[0],
                     'nick_name' => $drug_name[0],
                     'keywords' => $keywords,
                     'drug_id' => $val['drug_id'],
