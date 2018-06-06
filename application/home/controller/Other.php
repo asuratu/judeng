@@ -333,4 +333,13 @@ class Other extends Common
         }
     }
 
+    public function areaName() {
+        $drug_record = db('area')->select();
+        $arr = array();
+        foreach ($drug_record as $val) {
+            $arr[$val['name']] = db('hospital')->where("area_name like '%{$val['name']}%'")->update(array('area_id' => $val['area_id']));
+        }
+        ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>$arr));
+    }
+
 }

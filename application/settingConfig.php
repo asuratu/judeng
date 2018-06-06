@@ -23,5 +23,6 @@ return array(
     'arySex' => array('男', '女'),
     'aryServiceEvaluation' => array('很满意', '满意', '还可以'),
     'aryMemberType' => array('公众号患者', '手机号患者'),
+    'aryMemberType1' => array('已关注公众号', '未关注公众号'),
     'aryCertified' => array('未认证', '审核中', '认证通过', '认证失败'),
 );

@@ -305,7 +305,7 @@ class Number extends Common
             $order = array();
             foreach ($comment as $key => $val) {
                 array_push($order, $val);
-                $order[$key]['is_type'] = $this->view->setting['aryMemberType'][$val['is_type']];
+                $order[$key]['is_type'] = $this->view->setting['aryMemberType1'][$val['is_type']];
                 $order[$key]['portrait'] = 'http://wechat.bohetanglao.com/uploads/avatar/' . $val['portrait'];
                 $order[$key]['member_name'] = !empty($val['true_name']) ? $val['true_name'] : (!empty($val['member_name']) ? $val['member_name'] : $val['mobile']);
                 $order[$key]['mobile'] = isset($val['mobile']) ? $val['mobile'] : '未填写手机号码';
@@ -456,7 +456,7 @@ class Number extends Common
             $order = array();
             foreach ($comment as $key => $val) {
                 array_push($order, $val);
-                $order[$key]['is_type'] = $this->view->setting['aryMemberType'][$val['is_type']];
+                $order[$key]['is_type'] = $this->view->setting['aryMemberType1'][$val['is_type']];
                 $order[$key]['portrait'] = 'http://wechat.bohetanglao.com/uploads/avatar/' . $val['portrait'];
                 $order[$key]['member_name'] = !empty($val['true_name']) ? $val['true_name'] : (!empty($val['member_name']) ? $val['member_name'] : $val['mobile']);
                 $order[$key]['mobile'] = isset($val['mobile']) ? $val['mobile'] : '未填写手机号码';
