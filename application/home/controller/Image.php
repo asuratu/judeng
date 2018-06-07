@@ -18,6 +18,16 @@ class Image extends Common
             $doctor = db('doctor')->where("member_id = {$hair['doctor_id']}")->find();
             $title = db('title')->where("title_id", "in", "{$doctor['title_id']}")->select();
             $doctor['member_name'] = !empty($doctor['true_name']) ? $doctor['true_name'] : (!empty($doctor['member_name']) ? $doctor['member_name'] : $doctor['mobile']);
+            if (!$doctor['to_user_img']) {
+                $postArr['doctor_id'] = $hair['doctor_id'];
+                $to_user_img = postJson('http://39.105.19.169:88/wx/getQrcode', $postArr);
+                if (!$to_user_img) {
+                    $to_user_img = json_decode($to_user_img, true);
+                    if ($to_user_img['code'] == 1) {
+                        $doctor['to_user_img'] = $to_user_img['data'][0];
+                    }
+                }
+            }
         } else {
             return 404;
         }

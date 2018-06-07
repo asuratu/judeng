@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"E:\wook\201804\judeng/application/home\view\hair\template.html";i:1528018657;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"E:\wook\201804\judeng/application/home\view\hair\template.html";i:1528382605;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -65,7 +65,7 @@
                     随时<font color="#ea5520"> 问诊 调方</font>
                 </p>
             </div>
-            <div class="fr"><img src="<?php echo $doctor['invite']; ?>"></div>
+            <div class="fr"><img src="<?php echo $doctor['to_user_img']; ?>"></div>
 
         </div>
     </div>
