@@ -2610,3 +2610,1620 @@
 [ sql ] [ SQL ] UPDATE `jd_doctor_haircount`  SET `hair_count`=`hair_count`+1  WHERE  (  doctor_id = 2 and moon_date = 1527782400 ) [ RunTime:0.054003s ]
 [ sql ] [ SQL ] UPDATE `jd_doctor_haircount`  SET `message_count`=`message_count`+1  WHERE  (  doctor_id = 2 and moon_date = 1527782400 ) [ RunTime:0.055003s ]
 [ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-07T22:05:03+08:00 ] 0.0.0.0 GET /member/plan?id=234
+[ info ] localhost:7037/member/plan?id=234 [运行时间：1.012121s][吞吐率：0.99req/s] [内存消耗：3,150.50kb] [文件加载：53]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'plan',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/member/plan?id=234',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; lang=zh-cn; device=desktop; theme=default; keepLogin=on; za=admin; zp=0537c5bc8c477d690858dc3b13d03cbc9de46966; PHPSESSID=kt17a1ifmi5dpi2t78p4sgo883; loginTime=1528378053',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'id' => '234',
+)
+[ info ] [ RUN ] app\home\controller\Member->plan[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084969s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.057074s ]
+[ sql ] [ SQL ] SELECT `order_id`,`doctor_id` FROM `jd_order` WHERE  (  order_id = 234 AND pay_status = 0 AND order_status = 0 ) LIMIT 1 [ RunTime:0.055491s ]
+---------------------------------------------------------------
+[ 2018-06-07T22:07:14+08:00 ] 0.0.0.0 GET /member/plan?id=234
+[ info ] localhost:7037/member/plan?id=234 [运行时间：0.653879s][吞吐率：1.53req/s] [内存消耗：3,150.45kb] [文件加载：53]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'plan',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/member/plan?id=234',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; lang=zh-cn; device=desktop; theme=default; keepLogin=on; za=admin; zp=0537c5bc8c477d690858dc3b13d03cbc9de46966; PHPSESSID=kt17a1ifmi5dpi2t78p4sgo883; loginTime=1528378053',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'id' => '234',
+)
+[ info ] [ RUN ] app\home\controller\Member->plan[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.088773s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.060635s ]
+[ sql ] [ SQL ] SELECT `order_id`,`doctor_id` FROM `jd_order` WHERE  (  order_id = 234 AND pay_status = 0 AND order_status = 0 ) LIMIT 1 [ RunTime:0.061358s ]
+---------------------------------------------------------------
+[ 2018-06-07T22:08:34+08:00 ] 0.0.0.0 GET /member/plan?id=234
+[ info ] localhost:7037/member/plan?id=234 [运行时间：0.251016s][吞吐率：3.98req/s] [内存消耗：3,058.18kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'plan',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/member/plan?id=234',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; lang=zh-cn; device=desktop; theme=default; keepLogin=on; za=admin; zp=0537c5bc8c477d690858dc3b13d03cbc9de46966; PHPSESSID=kt17a1ifmi5dpi2t78p4sgo883; loginTime=1528378053',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'id' => '234',
+)
+[ info ] [ RUN ] app\home\controller\Member->plan[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084414s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.058887s ]
+[ sql ] [ SQL ] SELECT `order_id`,`doctor_id` FROM `jd_order` WHERE  (  order_id = 234 AND pay_status = 0 AND order_status = 0 ) LIMIT 1 [ RunTime:0.057279s ]
+---------------------------------------------------------------
+[ 2018-06-07T22:09:11+08:00 ] 0.0.0.0 GET /member/plan?id=234
+[ info ] localhost:7037/member/plan?id=234 [运行时间：0.261417s][吞吐率：3.83req/s] [内存消耗：3,057.13kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'plan',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/member/plan?id=234',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; lang=zh-cn; device=desktop; theme=default; keepLogin=on; za=admin; zp=0537c5bc8c477d690858dc3b13d03cbc9de46966; PHPSESSID=kt17a1ifmi5dpi2t78p4sgo883; loginTime=1528378053',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'id' => '234',
+)
+[ info ] [ RUN ] app\home\controller\Member->plan[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.087269s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.059277s ]
+[ sql ] [ SQL ] SELECT `order_id`,`doctor_id` FROM `jd_order` WHERE  (  order_id = 234 AND pay_status = 0 AND order_status = 0 ) LIMIT 1 [ RunTime:0.059370s ]
+---------------------------------------------------------------
+[ 2018-06-07T22:09:36+08:00 ] 0.0.0.0 GET /member/plan?id=234
+[ info ] localhost:7037/member/plan?id=234 [运行时间：0.614268s][吞吐率：1.63req/s] [内存消耗：3,057.89kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'plan',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/member/plan?id=234',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; lang=zh-cn; device=desktop; theme=default; keepLogin=on; za=admin; zp=0537c5bc8c477d690858dc3b13d03cbc9de46966; PHPSESSID=kt17a1ifmi5dpi2t78p4sgo883; loginTime=1528378053',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'id' => '234',
+)
+[ info ] [ RUN ] app\home\controller\Member->plan[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.083800s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.057181s ]
+[ sql ] [ SQL ] SELECT `order_id`,`doctor_id` FROM `jd_order` WHERE  (  order_id = 234 AND pay_status = 0 AND order_status = 0 ) LIMIT 1 [ RunTime:0.055693s ]
+---------------------------------------------------------------
+[ 2018-06-07T22:09:53+08:00 ] 0.0.0.0 GET /member/plan?id=234
+[ info ] localhost:7037/member/plan?id=234 [运行时间：0.600027s][吞吐率：1.67req/s] [内存消耗：3,058.35kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'plan',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/member/plan?id=234',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; lang=zh-cn; device=desktop; theme=default; keepLogin=on; za=admin; zp=0537c5bc8c477d690858dc3b13d03cbc9de46966; PHPSESSID=kt17a1ifmi5dpi2t78p4sgo883; loginTime=1528378053',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'id' => '234',
+)
+[ info ] [ RUN ] app\home\controller\Member->plan[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084313s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.058100s ]
+[ sql ] [ SQL ] SELECT `order_id`,`doctor_id` FROM `jd_order` WHERE  (  order_id = 234 AND pay_status = 0 AND order_status = 0 ) LIMIT 1 [ RunTime:0.056131s ]
+---------------------------------------------------------------
+[ 2018-06-07T22:10:27+08:00 ] 0.0.0.0 GET /member/plan?id=234
+[ info ] localhost:7037/member/plan?id=234 [运行时间：0.258505s][吞吐率：3.87req/s] [内存消耗：3,057.41kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'plan',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/member/plan?id=234',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; lang=zh-cn; device=desktop; theme=default; keepLogin=on; za=admin; zp=0537c5bc8c477d690858dc3b13d03cbc9de46966; PHPSESSID=kt17a1ifmi5dpi2t78p4sgo883; loginTime=1528378053',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'id' => '234',
+)
+[ info ] [ RUN ] app\home\controller\Member->plan[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.087830s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.057571s ]
+[ sql ] [ SQL ] SELECT `order_id`,`doctor_id` FROM `jd_order` WHERE  (  order_id = 234 AND pay_status = 0 AND order_status = 0 ) LIMIT 1 [ RunTime:0.055997s ]
+---------------------------------------------------------------
+[ 2018-06-07T22:13:13+08:00 ] 0.0.0.0 POST /wx/getQrcode
+[ info ] localhost:7037/wx/getQrcode [运行时间：0.756168s][吞吐率：1.32req/s] [内存消耗：2,999.82kb] [文件加载：52]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'wx',
+    2 => 'getQrcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarypk5JxAxHi21ABOTl',
+  'content-length' => '143',
+  'x-original-url' => '/wx/getQrcode',
+  'postman-token' => '11802756-a458-5794-8688-40812b7945a6',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '105',
+)
+[ info ] [ RUN ] app\home\controller\Wx->getQrcode[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.090694s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.062737s ]
+[ sql ] [ SQL ] SELECT `to_user_img` FROM `jd_doctor` WHERE  (  member_id = 105 ) LIMIT 1 [ RunTime:0.062464s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.064927s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wx_user` LIMIT 1 [ RunTime:0.061954s ]
+[ error ] [8]Trying to get property of non-object[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php:25]
+[ error ] [8]未定义数组索引: ticket[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php:43]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-07T22:14:33+08:00 ] 0.0.0.0 POST /wx/getQrcode
+[ info ] localhost:7037/wx/getQrcode [运行时间：0.404468s][吞吐率：2.47req/s] [内存消耗：2,994.76kb] [文件加载：52]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'wx',
+    2 => 'getQrcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary06jZwPUE9BgPgOMG',
+  'content-length' => '143',
+  'x-original-url' => '/wx/getQrcode',
+  'postman-token' => 'ac4902a3-de66-0127-1f29-288203fcbde6',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '105',
+)
+[ info ] [ RUN ] app\home\controller\Wx->getQrcode[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.093195s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.062074s ]
+[ sql ] [ SQL ] SELECT `to_user_img` FROM `jd_doctor` WHERE  (  member_id = 105 ) LIMIT 1 [ RunTime:0.062093s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.061813s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wx_user` LIMIT 1 [ RunTime:0.062192s ]
+[ error ] [8]Trying to get property of non-object[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php:25]
+---------------------------------------------------------------
+[ 2018-06-07T22:16:02+08:00 ] 0.0.0.0 POST /wx/getQrcode
+[ info ] localhost:7037/wx/getQrcode [运行时间：0.926747s][吞吐率：1.08req/s] [内存消耗：3,100.55kb] [文件加载：55]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'wx',
+    2 => 'getQrcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryzfwGdiJmBrY6qauQ',
+  'content-length' => '143',
+  'x-original-url' => '/wx/getQrcode',
+  'postman-token' => 'eabf8581-a472-99fd-4726-ecf6565b82fa',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '105',
+)
+[ info ] [ RUN ] app\home\controller\Wx->getQrcode[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.085496s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.058629s ]
+[ sql ] [ SQL ] SELECT `to_user_img` FROM `jd_doctor` WHERE  (  member_id = 105 ) LIMIT 1 [ RunTime:0.056586s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.058618s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wx_user` LIMIT 1 [ RunTime:0.058198s ]
+[ sql ] [ SQL ] UPDATE `jd_wx_user`  SET `access_token`='10_ceSnNF9vrhJNpA7dMA1lTjfuIJPK7mUgN8Xd6_TL5RMNkiw8UoIX3N2ZUYrJe2nwu-2ws34JqJZLNAh5uA9Mqm48VNh189SOYwNW6iDY5R64pP3J02FaVrGgVNY5SeV7IkJ-Masc7dP1yXijAARjAJADDU',`expires`='1528387962'  WHERE  `id` = 1 [ RunTime:0.056595s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `to_user_img`='https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQG68DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyZjNSQlJaaHJmWmsxMDAwMDAwNzQAAgQjPhlbAwQAAAAA',`release_date`=1528380962  WHERE  (  member_id = 105 ) [ RunTime:0.060208s ]
+[ error ] [8]Trying to get property of non-object[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php:25]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-07T22:18:41+08:00 ] 0.0.0.0 POST /wx/getQrcode
+[ info ] localhost:7037/wx/getQrcode [运行时间：0.563899s][吞吐率：1.77req/s] [内存消耗：2,992.57kb] [文件加载：52]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'wx',
+    2 => 'getQrcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryuT017jsdaEHooFg9',
+  'content-length' => '143',
+  'x-original-url' => '/wx/getQrcode',
+  'postman-token' => '9350ad7c-e585-7bfd-b338-781cf8fcc8c3',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '105',
+)
+[ info ] [ RUN ] app\home\controller\Wx->getQrcode[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.089096s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.060320s ]
+[ sql ] [ SQL ] SELECT `to_user_img` FROM `jd_doctor` WHERE  (  member_id = 105 ) LIMIT 1 [ RunTime:0.058915s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.059929s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wx_user` LIMIT 1 [ RunTime:0.060147s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `to_user_img`='https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQFO8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyb1ZDMFJNaHJmWmsxMDAwMGcwN2sAAgQjPhlbAwQAAAAA',`release_date`=1528381121  WHERE  (  member_id = 105 ) [ RunTime:0.060285s ]
+[ error ] [8]Trying to get property of non-object[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php:25]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-07T22:18:43+08:00 ] 0.0.0.0 POST /wx/getQrcode
+[ info ] localhost:7037/wx/getQrcode [运行时间：0.677609s][吞吐率：1.48req/s] [内存消耗：2,992.57kb] [文件加载：52]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'wx',
+    2 => 'getQrcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary5oWiMXkmyN8jiuHr',
+  'content-length' => '143',
+  'x-original-url' => '/wx/getQrcode',
+  'postman-token' => '6e0537b0-d39c-f023-975e-051a57ca2175',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '105',
+)
+[ info ] [ RUN ] app\home\controller\Wx->getQrcode[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.095049s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.074886s ]
+[ sql ] [ SQL ] SELECT `to_user_img` FROM `jd_doctor` WHERE  (  member_id = 105 ) LIMIT 1 [ RunTime:0.072799s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.071170s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wx_user` LIMIT 1 [ RunTime:0.104462s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `to_user_img`='https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQFO8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyb1ZDMFJNaHJmWmsxMDAwMGcwN2sAAgQjPhlbAwQAAAAA',`release_date`=1528381123  WHERE  (  member_id = 105 ) [ RunTime:0.076409s ]
+[ error ] [8]Trying to get property of non-object[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php:25]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-07T22:25:17+08:00 ] 0.0.0.0 POST /wx/getQrcode
+[ info ] localhost:7037/wx/getQrcode [运行时间：0.666999s][吞吐率：1.50req/s] [内存消耗：2,992.57kb] [文件加载：52]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'wx',
+    2 => 'getQrcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary82Dl5yPkGipeGNFM',
+  'content-length' => '143',
+  'x-original-url' => '/wx/getQrcode',
+  'postman-token' => 'a36af3af-f621-1d56-14eb-9a474907747f',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '105',
+)
+[ info ] [ RUN ] app\home\controller\Wx->getQrcode[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084106s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.057667s ]
+[ sql ] [ SQL ] SELECT `to_user_img` FROM `jd_doctor` WHERE  (  member_id = 105 ) LIMIT 1 [ RunTime:0.056086s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.059953s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wx_user` LIMIT 1 [ RunTime:0.060256s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `to_user_img`='https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQFO8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyb1ZDMFJNaHJmWmsxMDAwMGcwN2sAAgQjPhlbAwQAAAAA',`release_date`=1528381517  WHERE  (  member_id = 105 ) [ RunTime:0.057679s ]
+[ error ] [8]Trying to get property of non-object[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php:25]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-07T22:25:32+08:00 ] 0.0.0.0 POST /wx/getQrcode
+[ info ] localhost:7037/wx/getQrcode [运行时间：0.535157s][吞吐率：1.87req/s] [内存消耗：2,990.64kb] [文件加载：52]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'wx',
+    2 => 'getQrcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryaPRAPdwUNcIWWxKf',
+  'content-length' => '143',
+  'x-original-url' => '/wx/getQrcode',
+  'postman-token' => '99f9d974-49c5-9197-0e89-1e2bfa1f1156',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '105',
+)
+[ info ] [ RUN ] app\home\controller\Wx->getQrcode[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084177s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.057121s ]
+[ sql ] [ SQL ] SELECT `to_user_img` FROM `jd_doctor` WHERE  (  member_id = 105 ) LIMIT 1 [ RunTime:0.055808s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.056819s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wx_user` LIMIT 1 [ RunTime:0.059101s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `to_user_img`='https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQFO8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyb1ZDMFJNaHJmWmsxMDAwMGcwN2sAAgQjPhlbAwQAAAAA',`release_date`=1528381532  WHERE  (  member_id = 105 ) [ RunTime:0.056852s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-07T22:25:34+08:00 ] 0.0.0.0 POST /wx/getQrcode
+[ info ] localhost:7037/wx/getQrcode [运行时间：0.553744s][吞吐率：1.81req/s] [内存消耗：2,990.64kb] [文件加载：52]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'wx',
+    2 => 'getQrcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryJyGLBigYQEwBsAwo',
+  'content-length' => '143',
+  'x-original-url' => '/wx/getQrcode',
+  'postman-token' => 'dc5c27fd-d651-0a51-05ed-f704f05d5592',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '105',
+)
+[ info ] [ RUN ] app\home\controller\Wx->getQrcode[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.088354s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.058857s ]
+[ sql ] [ SQL ] SELECT `to_user_img` FROM `jd_doctor` WHERE  (  member_id = 105 ) LIMIT 1 [ RunTime:0.057008s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.058428s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wx_user` LIMIT 1 [ RunTime:0.058652s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `to_user_img`='https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQFO8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyb1ZDMFJNaHJmWmsxMDAwMGcwN2sAAgQjPhlbAwQAAAAA',`release_date`=1528381534  WHERE  (  member_id = 105 ) [ RunTime:0.065160s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-07T22:25:36+08:00 ] 0.0.0.0 POST /wx/getQrcode
+[ info ] localhost:7037/wx/getQrcode [运行时间：0.548492s][吞吐率：1.82req/s] [内存消耗：2,990.64kb] [文件加载：52]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'wx',
+    2 => 'getQrcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryDGFy1R0Tyo25wVCg',
+  'content-length' => '143',
+  'x-original-url' => '/wx/getQrcode',
+  'postman-token' => '7376fcfe-a7e6-5f58-2fa3-36c9ea0bed50',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '105',
+)
+[ info ] [ RUN ] app\home\controller\Wx->getQrcode[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.087709s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.061637s ]
+[ sql ] [ SQL ] SELECT `to_user_img` FROM `jd_doctor` WHERE  (  member_id = 105 ) LIMIT 1 [ RunTime:0.058935s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.059764s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wx_user` LIMIT 1 [ RunTime:0.061429s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `to_user_img`='https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQFO8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyb1ZDMFJNaHJmWmsxMDAwMGcwN2sAAgQjPhlbAwQAAAAA',`release_date`=1528381535  WHERE  (  member_id = 105 ) [ RunTime:0.072237s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-07T22:25:37+08:00 ] 0.0.0.0 POST /wx/getQrcode
+[ info ] localhost:7037/wx/getQrcode [运行时间：0.565687s][吞吐率：1.77req/s] [内存消耗：2,990.64kb] [文件加载：52]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'wx',
+    2 => 'getQrcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary3fZgZ7CaGkkBqXdq',
+  'content-length' => '143',
+  'x-original-url' => '/wx/getQrcode',
+  'postman-token' => '4610e048-e3a1-772a-b2ed-c3d4e2b1d837',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '105',
+)
+[ info ] [ RUN ] app\home\controller\Wx->getQrcode[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.093113s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.064557s ]
+[ sql ] [ SQL ] SELECT `to_user_img` FROM `jd_doctor` WHERE  (  member_id = 105 ) LIMIT 1 [ RunTime:0.061669s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.063533s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wx_user` LIMIT 1 [ RunTime:0.062993s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `to_user_img`='https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQFO8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyb1ZDMFJNaHJmWmsxMDAwMGcwN2sAAgQjPhlbAwQAAAAA',`release_date`=1528381537  WHERE  (  member_id = 105 ) [ RunTime:0.062045s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-07T22:25:38+08:00 ] 0.0.0.0 POST /wx/getQrcode
+[ info ] localhost:7037/wx/getQrcode [运行时间：0.521117s][吞吐率：1.92req/s] [内存消耗：2,990.64kb] [文件加载：52]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'wx',
+    2 => 'getQrcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryAFb9CVrMaoIJe1wf',
+  'content-length' => '143',
+  'x-original-url' => '/wx/getQrcode',
+  'postman-token' => '43a01eeb-71f7-5e8d-3d7c-ed0668786edb',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '105',
+)
+[ info ] [ RUN ] app\home\controller\Wx->getQrcode[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.090234s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.060821s ]
+[ sql ] [ SQL ] SELECT `to_user_img` FROM `jd_doctor` WHERE  (  member_id = 105 ) LIMIT 1 [ RunTime:0.062044s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.059910s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wx_user` LIMIT 1 [ RunTime:0.060195s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `to_user_img`='https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQFO8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyb1ZDMFJNaHJmWmsxMDAwMGcwN2sAAgQjPhlbAwQAAAAA',`release_date`=1528381538  WHERE  (  member_id = 105 ) [ RunTime:0.062168s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-07T22:25:40+08:00 ] 0.0.0.0 POST /wx/getQrcode
+[ info ] localhost:7037/wx/getQrcode [运行时间：0.534147s][吞吐率：1.87req/s] [内存消耗：2,990.64kb] [文件加载：52]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'wx',
+    2 => 'getQrcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary2uYtMGjo04rYrQMn',
+  'content-length' => '143',
+  'x-original-url' => '/wx/getQrcode',
+  'postman-token' => '5add5c04-29e0-ba4f-9f3d-3ba30be21188',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '105',
+)
+[ info ] [ RUN ] app\home\controller\Wx->getQrcode[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084269s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.057705s ]
+[ sql ] [ SQL ] SELECT `to_user_img` FROM `jd_doctor` WHERE  (  member_id = 105 ) LIMIT 1 [ RunTime:0.055123s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.056852s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wx_user` LIMIT 1 [ RunTime:0.057517s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `to_user_img`='https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQFO8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyb1ZDMFJNaHJmWmsxMDAwMGcwN2sAAgQjPhlbAwQAAAAA',`release_date`=1528381540  WHERE  (  member_id = 105 ) [ RunTime:0.057799s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-07T22:25:46+08:00 ] 0.0.0.0 POST /wx/getQrcode
+[ info ] localhost:7037/wx/getQrcode [运行时间：0.543499s][吞吐率：1.84req/s] [内存消耗：2,990.64kb] [文件加载：52]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'wx',
+    2 => 'getQrcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary35yy79WF6QyjLXu4',
+  'content-length' => '143',
+  'x-original-url' => '/wx/getQrcode',
+  'postman-token' => '590b9327-1a1d-69b8-8ed0-a35b964250d4',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '105',
+)
+[ info ] [ RUN ] app\home\controller\Wx->getQrcode[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086033s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.062078s ]
+[ sql ] [ SQL ] SELECT `to_user_img` FROM `jd_doctor` WHERE  (  member_id = 105 ) LIMIT 1 [ RunTime:0.055896s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.057994s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wx_user` LIMIT 1 [ RunTime:0.058726s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `to_user_img`='https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQFO8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyb1ZDMFJNaHJmWmsxMDAwMGcwN2sAAgQjPhlbAwQAAAAA',`release_date`=1528381546  WHERE  (  member_id = 105 ) [ RunTime:0.058554s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-07T22:25:49+08:00 ] 0.0.0.0 POST /wx/getQrcode
+[ info ] localhost:7037/wx/getQrcode [运行时间：0.580148s][吞吐率：1.72req/s] [内存消耗：2,990.64kb] [文件加载：52]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'wx',
+    2 => 'getQrcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarytLXyJM7lAb6QkFeJ',
+  'content-length' => '143',
+  'x-original-url' => '/wx/getQrcode',
+  'postman-token' => 'c00c1d8a-e6fb-818d-6e07-9d1b554d98b9',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '105',
+)
+[ info ] [ RUN ] app\home\controller\Wx->getQrcode[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.089451s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.063671s ]
+[ sql ] [ SQL ] SELECT `to_user_img` FROM `jd_doctor` WHERE  (  member_id = 105 ) LIMIT 1 [ RunTime:0.059651s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.061220s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wx_user` LIMIT 1 [ RunTime:0.070971s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `to_user_img`='https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQFO8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyb1ZDMFJNaHJmWmsxMDAwMGcwN2sAAgQjPhlbAwQAAAAA',`release_date`=1528381549  WHERE  (  member_id = 105 ) [ RunTime:0.062383s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-07T22:25:51+08:00 ] 0.0.0.0 POST /wx/getQrcode
+[ info ] localhost:7037/wx/getQrcode [运行时间：0.580717s][吞吐率：1.72req/s] [内存消耗：2,990.64kb] [文件加载：52]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'wx',
+    2 => 'getQrcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryLfbyVNpo2CaSPQOS',
+  'content-length' => '143',
+  'x-original-url' => '/wx/getQrcode',
+  'postman-token' => '961a666e-8a58-7f4c-4cf1-0109fdb573c0',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '105',
+)
+[ info ] [ RUN ] app\home\controller\Wx->getQrcode[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086706s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.060916s ]
+[ sql ] [ SQL ] SELECT `to_user_img` FROM `jd_doctor` WHERE  (  member_id = 105 ) LIMIT 1 [ RunTime:0.058626s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.058268s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wx_user` LIMIT 1 [ RunTime:0.065553s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `to_user_img`='https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQFO8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyb1ZDMFJNaHJmWmsxMDAwMGcwN2sAAgQjPhlbAwQAAAAA',`release_date`=1528381551  WHERE  (  member_id = 105 ) [ RunTime:0.062387s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-07T22:25:52+08:00 ] 0.0.0.0 POST /wx/getQrcode
+[ info ] localhost:7037/wx/getQrcode [运行时间：0.515933s][吞吐率：1.94req/s] [内存消耗：2,990.64kb] [文件加载：52]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'wx',
+    2 => 'getQrcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarynNidYA2FxG6IAg4C',
+  'content-length' => '143',
+  'x-original-url' => '/wx/getQrcode',
+  'postman-token' => 'b75f8902-86a1-5a8f-7e77-dff9b264e897',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '105',
+)
+[ info ] [ RUN ] app\home\controller\Wx->getQrcode[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086193s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.059588s ]
+[ sql ] [ SQL ] SELECT `to_user_img` FROM `jd_doctor` WHERE  (  member_id = 105 ) LIMIT 1 [ RunTime:0.057508s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.058556s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wx_user` LIMIT 1 [ RunTime:0.059278s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `to_user_img`='https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQFO8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyb1ZDMFJNaHJmWmsxMDAwMGcwN2sAAgQjPhlbAwQAAAAA',`release_date`=1528381552  WHERE  (  member_id = 105 ) [ RunTime:0.058450s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-07T22:25:53+08:00 ] 0.0.0.0 POST /wx/getQrcode
+[ info ] localhost:7037/wx/getQrcode [运行时间：0.555022s][吞吐率：1.80req/s] [内存消耗：2,990.64kb] [文件加载：52]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'wx',
+    2 => 'getQrcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryM3Dl1b7aNt7lXEfq',
+  'content-length' => '143',
+  'x-original-url' => '/wx/getQrcode',
+  'postman-token' => '278f0045-ac9b-9374-eb63-bb0731f22dd4',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '105',
+)
+[ info ] [ RUN ] app\home\controller\Wx->getQrcode[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086844s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.059156s ]
+[ sql ] [ SQL ] SELECT `to_user_img` FROM `jd_doctor` WHERE  (  member_id = 105 ) LIMIT 1 [ RunTime:0.057503s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.058728s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wx_user` LIMIT 1 [ RunTime:0.059291s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `to_user_img`='https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQFO8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyb1ZDMFJNaHJmWmsxMDAwMGcwN2sAAgQjPhlbAwQAAAAA',`release_date`=1528381553  WHERE  (  member_id = 105 ) [ RunTime:0.060786s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-07T22:26:47+08:00 ] 0.0.0.0 POST /wx/getQrcode
+[ info ] localhost:7037/wx/getQrcode [运行时间：0.549082s][吞吐率：1.82req/s] [内存消耗：2,992.57kb] [文件加载：52]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'wx',
+    2 => 'getQrcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary6qNmzl8dcXJajx61',
+  'content-length' => '143',
+  'x-original-url' => '/wx/getQrcode',
+  'postman-token' => 'a9dbf76c-e707-34bf-1a88-b1c1addd043e',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '105',
+)
+[ info ] [ RUN ] app\home\controller\Wx->getQrcode[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086185s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.058469s ]
+[ sql ] [ SQL ] SELECT `to_user_img` FROM `jd_doctor` WHERE  (  member_id = 105 ) LIMIT 1 [ RunTime:0.055514s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.056562s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wx_user` LIMIT 1 [ RunTime:0.056393s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `to_user_img`='https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQFO8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyb1ZDMFJNaHJmWmsxMDAwMGcwN2sAAgQjPhlbAwQAAAAA',`release_date`=1528381607  WHERE  (  member_id = 105 ) [ RunTime:0.059552s ]
+[ error ] [8]Trying to get property of non-object[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php:25]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-07T22:26:49+08:00 ] 0.0.0.0 POST /wx/getQrcode
+[ info ] localhost:7037/wx/getQrcode [运行时间：0.564646s][吞吐率：1.77req/s] [内存消耗：2,992.57kb] [文件加载：52]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'wx',
+    2 => 'getQrcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryT4hVwD83JSQvfGdL',
+  'content-length' => '143',
+  'x-original-url' => '/wx/getQrcode',
+  'postman-token' => '3e58f117-fb99-b6bf-fad3-b932cacff590',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '105',
+)
+[ info ] [ RUN ] app\home\controller\Wx->getQrcode[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.091502s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.063443s ]
+[ sql ] [ SQL ] SELECT `to_user_img` FROM `jd_doctor` WHERE  (  member_id = 105 ) LIMIT 1 [ RunTime:0.061929s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.063526s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wx_user` LIMIT 1 [ RunTime:0.064643s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `to_user_img`='https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQFO8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyb1ZDMFJNaHJmWmsxMDAwMGcwN2sAAgQjPhlbAwQAAAAA',`release_date`=1528381609  WHERE  (  member_id = 105 ) [ RunTime:0.062582s ]
+[ error ] [8]Trying to get property of non-object[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php:25]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-07T22:26:50+08:00 ] 0.0.0.0 POST /wx/getQrcode
+[ info ] localhost:7037/wx/getQrcode [运行时间：0.506605s][吞吐率：1.97req/s] [内存消耗：2,992.57kb] [文件加载：52]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'wx',
+    2 => 'getQrcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarypBA6BgGGqTL1aYvp',
+  'content-length' => '143',
+  'x-original-url' => '/wx/getQrcode',
+  'postman-token' => 'b5658b8a-5238-2116-21f5-cdd53461029a',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '105',
+)
+[ info ] [ RUN ] app\home\controller\Wx->getQrcode[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084773s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.057077s ]
+[ sql ] [ SQL ] SELECT `to_user_img` FROM `jd_doctor` WHERE  (  member_id = 105 ) LIMIT 1 [ RunTime:0.055844s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.058139s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wx_user` LIMIT 1 [ RunTime:0.057501s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `to_user_img`='https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQFO8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyb1ZDMFJNaHJmWmsxMDAwMGcwN2sAAgQjPhlbAwQAAAAA',`release_date`=1528381610  WHERE  (  member_id = 105 ) [ RunTime:0.058420s ]
+[ error ] [8]Trying to get property of non-object[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php:25]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-07T22:27:09+08:00 ] 0.0.0.0 GET /member/plan?id=234
+[ info ] localhost:7037/member/plan?id=234 [运行时间：0.729712s][吞吐率：1.37req/s] [内存消耗：3,193.25kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'plan',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/member/plan?id=234',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; lang=zh-cn; device=desktop; theme=default; keepLogin=on; za=admin; zp=0537c5bc8c477d690858dc3b13d03cbc9de46966; PHPSESSID=kt17a1ifmi5dpi2t78p4sgo883; loginTime=1528378053',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'id' => '234',
+)
+[ info ] [ RUN ] app\home\controller\Member->plan[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\workLP\20180502\judeng\wwwroot/application/home\view\doctor\plan.html [ array (
+  0 => 'setting',
+  1 => 'imgUrl',
+  2 => 'doctorName',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.089982s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.059092s ]
+[ sql ] [ SQL ] SELECT `order_id`,`doctor_id` FROM `jd_order` WHERE  (  order_id = 234 AND pay_status = 0 AND order_status = 0 ) LIMIT 1 [ RunTime:0.057561s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.059633s ]
+[ sql ] [ SQL ] SELECT `member_name` FROM `jd_doctor` WHERE  (  member_id = 79 ) LIMIT 1 [ RunTime:0.057997s ]
+---------------------------------------------------------------
+[ 2018-06-07T22:27:10+08:00 ] 0.0.0.0 GET /public/home/image/bg01.jpg
+[ info ] localhost:7037/public/home/image/bg01.jpg [运行时间：0.051992s][吞吐率：19.23req/s] [内存消耗：1,712.41kb] [文件加载：41]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'public',
+    2 => 'home',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/public/home/image/bg01.jpg',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://localhost:7037/member/plan?id=234',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; lang=zh-cn; device=desktop; theme=default; keepLogin=on; za=admin; zp=0537c5bc8c477d690858dc3b13d03cbc9de46966; PHPSESSID=kt17a1ifmi5dpi2t78p4sgo883; loginTime=1528378053',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'image' => 'bg01.jpg',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-07T22:27:10+08:00 ] 0.0.0.0 GET /public/home/image/bg02.jpg
+[ info ] localhost:7037/public/home/image/bg02.jpg [运行时间：0.050525s][吞吐率：19.79req/s] [内存消耗：1,712.41kb] [文件加载：41]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'public',
+    2 => 'home',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/public/home/image/bg02.jpg',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://localhost:7037/member/plan?id=234',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; lang=zh-cn; device=desktop; theme=default; keepLogin=on; za=admin; zp=0537c5bc8c477d690858dc3b13d03cbc9de46966; PHPSESSID=kt17a1ifmi5dpi2t78p4sgo883; loginTime=1528378053',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'image' => 'bg02.jpg',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-07T22:27:48+08:00 ] 0.0.0.0 GET /member/plan?id=234
+[ info ] localhost:7037/member/plan?id=234 [运行时间：1.112588s][吞吐率：0.90req/s] [内存消耗：3,193.25kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'plan',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/member/plan?id=234',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; lang=zh-cn; device=desktop; theme=default; keepLogin=on; za=admin; zp=0537c5bc8c477d690858dc3b13d03cbc9de46966; PHPSESSID=kt17a1ifmi5dpi2t78p4sgo883; loginTime=1528378053',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'id' => '234',
+)
+[ info ] [ RUN ] app\home\controller\Member->plan[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\workLP\20180502\judeng\wwwroot/application/home\view\doctor\plan.html [ array (
+  0 => 'setting',
+  1 => 'imgUrl',
+  2 => 'doctorName',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.087921s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.059815s ]
+[ sql ] [ SQL ] SELECT `order_id`,`doctor_id` FROM `jd_order` WHERE  (  order_id = 234 AND pay_status = 0 AND order_status = 0 ) LIMIT 1 [ RunTime:0.055716s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.059035s ]
+[ sql ] [ SQL ] SELECT `member_name` FROM `jd_doctor` WHERE  (  member_id = 79 ) LIMIT 1 [ RunTime:0.057845s ]
+---------------------------------------------------------------
+[ 2018-06-07T22:27:48+08:00 ] 0.0.0.0 GET /public/home/image/bg01.jpg
+[ info ] localhost:7037/public/home/image/bg01.jpg [运行时间：0.054867s][吞吐率：18.23req/s] [内存消耗：1,712.41kb] [文件加载：41]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'public',
+    2 => 'home',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/public/home/image/bg01.jpg',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://localhost:7037/member/plan?id=234',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; lang=zh-cn; device=desktop; theme=default; keepLogin=on; za=admin; zp=0537c5bc8c477d690858dc3b13d03cbc9de46966; PHPSESSID=kt17a1ifmi5dpi2t78p4sgo883; loginTime=1528378053',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'image' => 'bg01.jpg',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-07T22:27:48+08:00 ] 0.0.0.0 GET /public/home/image/bg02.jpg
+[ info ] localhost:7037/public/home/image/bg02.jpg [运行时间：0.137190s][吞吐率：7.29req/s] [内存消耗：1,712.41kb] [文件加载：41]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'public',
+    2 => 'home',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/public/home/image/bg02.jpg',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://localhost:7037/member/plan?id=234',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; lang=zh-cn; device=desktop; theme=default; keepLogin=on; za=admin; zp=0537c5bc8c477d690858dc3b13d03cbc9de46966; PHPSESSID=kt17a1ifmi5dpi2t78p4sgo883; loginTime=1528378053',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'image' => 'bg02.jpg',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-07T22:27:49+08:00 ] 0.0.0.0 GET /member/plan?id=234
+[ info ] localhost:7037/member/plan?id=234 [运行时间：0.744920s][吞吐率：1.34req/s] [内存消耗：3,193.25kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'plan',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/member/plan?id=234',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; lang=zh-cn; device=desktop; theme=default; keepLogin=on; za=admin; zp=0537c5bc8c477d690858dc3b13d03cbc9de46966; PHPSESSID=kt17a1ifmi5dpi2t78p4sgo883; loginTime=1528378053',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'id' => '234',
+)
+[ info ] [ RUN ] app\home\controller\Member->plan[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\workLP\20180502\judeng\wwwroot/application/home\view\doctor\plan.html [ array (
+  0 => 'setting',
+  1 => 'imgUrl',
+  2 => 'doctorName',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.089586s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.061011s ]
+[ sql ] [ SQL ] SELECT `order_id`,`doctor_id` FROM `jd_order` WHERE  (  order_id = 234 AND pay_status = 0 AND order_status = 0 ) LIMIT 1 [ RunTime:0.063774s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.061902s ]
+[ sql ] [ SQL ] SELECT `member_name` FROM `jd_doctor` WHERE  (  member_id = 79 ) LIMIT 1 [ RunTime:0.059658s ]
+---------------------------------------------------------------
+[ 2018-06-07T22:27:49+08:00 ] 0.0.0.0 GET /public/home/image/bg02.jpg
+[ info ] localhost:7037/public/home/image/bg02.jpg [运行时间：0.055367s][吞吐率：18.06req/s] [内存消耗：1,712.41kb] [文件加载：41]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'public',
+    2 => 'home',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/public/home/image/bg02.jpg',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://localhost:7037/member/plan?id=234',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; lang=zh-cn; device=desktop; theme=default; keepLogin=on; za=admin; zp=0537c5bc8c477d690858dc3b13d03cbc9de46966; PHPSESSID=kt17a1ifmi5dpi2t78p4sgo883; loginTime=1528378053',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'image' => 'bg02.jpg',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-07T22:27:49+08:00 ] 0.0.0.0 GET /public/home/image/bg01.jpg
+[ info ] localhost:7037/public/home/image/bg01.jpg [运行时间：0.084272s][吞吐率：11.87req/s] [内存消耗：1,712.41kb] [文件加载：41]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'public',
+    2 => 'home',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/public/home/image/bg01.jpg',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://localhost:7037/member/plan?id=234',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; lang=zh-cn; device=desktop; theme=default; keepLogin=on; za=admin; zp=0537c5bc8c477d690858dc3b13d03cbc9de46966; PHPSESSID=kt17a1ifmi5dpi2t78p4sgo883; loginTime=1528378053',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'image' => 'bg01.jpg',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-07T22:27:51+08:00 ] 0.0.0.0 GET /member/plan?id=234
+[ info ] localhost:7037/member/plan?id=234 [运行时间：0.702314s][吞吐率：1.42req/s] [内存消耗：3,193.25kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'plan',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/member/plan?id=234',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; lang=zh-cn; device=desktop; theme=default; keepLogin=on; za=admin; zp=0537c5bc8c477d690858dc3b13d03cbc9de46966; PHPSESSID=kt17a1ifmi5dpi2t78p4sgo883; loginTime=1528378053',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'id' => '234',
+)
+[ info ] [ RUN ] app\home\controller\Member->plan[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\workLP\20180502\judeng\wwwroot/application/home\view\doctor\plan.html [ array (
+  0 => 'setting',
+  1 => 'imgUrl',
+  2 => 'doctorName',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.085863s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.059709s ]
+[ sql ] [ SQL ] SELECT `order_id`,`doctor_id` FROM `jd_order` WHERE  (  order_id = 234 AND pay_status = 0 AND order_status = 0 ) LIMIT 1 [ RunTime:0.056976s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.058620s ]
+[ sql ] [ SQL ] SELECT `member_name` FROM `jd_doctor` WHERE  (  member_id = 79 ) LIMIT 1 [ RunTime:0.056436s ]
+---------------------------------------------------------------
+[ 2018-06-07T22:27:51+08:00 ] 0.0.0.0 GET /public/home/image/bg02.jpg
+[ info ] localhost:7037/public/home/image/bg02.jpg [运行时间：0.083190s][吞吐率：12.02req/s] [内存消耗：1,712.41kb] [文件加载：41]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'public',
+    2 => 'home',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/public/home/image/bg02.jpg',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://localhost:7037/member/plan?id=234',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; lang=zh-cn; device=desktop; theme=default; keepLogin=on; za=admin; zp=0537c5bc8c477d690858dc3b13d03cbc9de46966; PHPSESSID=kt17a1ifmi5dpi2t78p4sgo883; loginTime=1528378053',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'image' => 'bg02.jpg',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-07T22:27:51+08:00 ] 0.0.0.0 GET /public/home/image/bg01.jpg
+[ info ] localhost:7037/public/home/image/bg01.jpg [运行时间：0.087214s][吞吐率：11.47req/s] [内存消耗：1,712.41kb] [文件加载：41]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'public',
+    2 => 'home',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/public/home/image/bg01.jpg',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://localhost:7037/member/plan?id=234',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; lang=zh-cn; device=desktop; theme=default; keepLogin=on; za=admin; zp=0537c5bc8c477d690858dc3b13d03cbc9de46966; PHPSESSID=kt17a1ifmi5dpi2t78p4sgo883; loginTime=1528378053',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'image' => 'bg01.jpg',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-07T22:27:54+08:00 ] 0.0.0.0 GET /member/plan?id=234
+[ info ] localhost:7037/member/plan?id=234 [运行时间：0.713752s][吞吐率：1.40req/s] [内存消耗：3,193.25kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'plan',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/member/plan?id=234',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; lang=zh-cn; device=desktop; theme=default; keepLogin=on; za=admin; zp=0537c5bc8c477d690858dc3b13d03cbc9de46966; PHPSESSID=kt17a1ifmi5dpi2t78p4sgo883; loginTime=1528378053',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'id' => '234',
+)
+[ info ] [ RUN ] app\home\controller\Member->plan[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\workLP\20180502\judeng\wwwroot/application/home\view\doctor\plan.html [ array (
+  0 => 'setting',
+  1 => 'imgUrl',
+  2 => 'doctorName',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084297s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.058923s ]
+[ sql ] [ SQL ] SELECT `order_id`,`doctor_id` FROM `jd_order` WHERE  (  order_id = 234 AND pay_status = 0 AND order_status = 0 ) LIMIT 1 [ RunTime:0.058209s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.058412s ]
+[ sql ] [ SQL ] SELECT `member_name` FROM `jd_doctor` WHERE  (  member_id = 79 ) LIMIT 1 [ RunTime:0.056286s ]
+---------------------------------------------------------------
+[ 2018-06-07T22:27:54+08:00 ] 0.0.0.0 GET /public/home/image/bg01.jpg
+[ info ] localhost:7037/public/home/image/bg01.jpg [运行时间：0.067259s][吞吐率：14.87req/s] [内存消耗：1,712.41kb] [文件加载：41]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'public',
+    2 => 'home',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/public/home/image/bg01.jpg',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://localhost:7037/member/plan?id=234',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; lang=zh-cn; device=desktop; theme=default; keepLogin=on; za=admin; zp=0537c5bc8c477d690858dc3b13d03cbc9de46966; PHPSESSID=kt17a1ifmi5dpi2t78p4sgo883; loginTime=1528378053',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'image' => 'bg01.jpg',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-07T22:27:54+08:00 ] 0.0.0.0 GET /public/home/image/bg02.jpg
+[ info ] localhost:7037/public/home/image/bg02.jpg [运行时间：0.068635s][吞吐率：14.57req/s] [内存消耗：1,712.41kb] [文件加载：41]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'public',
+    2 => 'home',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/public/home/image/bg02.jpg',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://localhost:7037/member/plan?id=234',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; lang=zh-cn; device=desktop; theme=default; keepLogin=on; za=admin; zp=0537c5bc8c477d690858dc3b13d03cbc9de46966; PHPSESSID=kt17a1ifmi5dpi2t78p4sgo883; loginTime=1528378053',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'image' => 'bg02.jpg',
+)
+[ info ] [ LOG ] INIT File

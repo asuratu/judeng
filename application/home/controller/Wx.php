@@ -106,7 +106,7 @@ class Wx extends Controller {
         $url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid={$appid}&secret={$appsecret}";
         $res = curlGet($url);
 		$return=json_decode($res,true);
-        $web_expires = time() + 7000; // 提前200秒过期
+        $web_expires = time() + 3500; // 提前200秒过期
         db('wx_user')->where(array('id'=>$wechat['id']))->update(array('access_token'=>$return['access_token'],'expires'=>$web_expires));
         return $return['access_token'];
     }
