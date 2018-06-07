@@ -90,6 +90,9 @@ class Umeng extends Common
         if($this->request->isPost()) {
             $data = input('post.');
 
+            // 医生患者列表，有则修改，没有择添加
+            Model('Number')->doctorCounsell($data['member_id'], $data['doctor_id'], '咨询');
+
             $counsell = db('doctor_member')->where("doctor_id = {$data['doctor_id']} and member_id = {$data['member_id']}")->field("is_chat, is_show")->find();
             if (!$counsell) { // 如果不存在 则直接退出
                 ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[]));
@@ -98,8 +101,6 @@ class Umeng extends Common
                 db('doctor_member')->where("doctor_id = {$data['doctor_id']} and member_id = {$data['member_id']}")->update(array('counsell_number' => 0));
                 ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[]));
             }
-            // 医生患者列表，有则修改，没有择添加
-            Model('Number')->doctorCounsell($data['member_id'], $data['doctor_id'], '咨询');
             ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[]));
         }
     }
