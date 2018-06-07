@@ -118,7 +118,7 @@ class Image extends Common
                     $title[$key]['content'] = Html::getTextToHtml($data['content'], 10);
                     $title[$key]['orderId'] = $url;
                 }
-                
+
                 if ($data['is_hair'] == 0) {
                     sendAliMass($mobile_number, $title, 1);
                 }
