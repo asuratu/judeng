@@ -110,13 +110,18 @@ class Image extends Common
                     $url = $data['url'];
                 }
 
-                $comment = "来自" . $data['doctor_member'] . "医生的消息，内容为：" . Html::getTextToHtml($data['content'], 10) . "，http://api.judeng.net:88/" . $url . "，请点击查看！如有疑问可联系客服400-700-5120";
+//                $comment = "来自" . $data['doctor_member'] . "医生的消息，内容为：" . Html::getTextToHtml($data['content'], 10) . "，http://api.judeng.net:88/" . $url . "，请点击查看！如有疑问可联系客服400-700-5120";
                 // 后期再次测试 TODO 测试返回true但是短信没有收到
                 $title = array();
                 foreach ($mobile_number as $key=>$val) {
-                    $title[$key] = $comment;
+                    $title[$key]['name'] = $data['doctor_member'];
+                    $title[$key]['content'] = Html::getTextToHtml($data['content'], 10);
+                    $title[$key]['order'] = $url;
                 }
-                sendAliMass($mobile_number, $title, 1);
+
+                if ($data['is_hair'] == 0) {
+                    sendAliMass($mobile_number, $title, 1);
+                }
             }
 
             // 增加一条发送记录

@@ -1463,3 +1463,1042 @@
 [ sql ] [ SQL ] SHOW COLUMNS FROM `jd_notice` [ RunTime:0.058003s ]
 [ sql ] [ SQL ] SELECT `notice_id`,`notice_name`,`add_date` FROM `jd_notice` WHERE  (  doctor_id = 89 ) [ RunTime:0.053003s ]
 [ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-07T21:33:27+08:00 ] 0.0.0.0 POST /image/sendHair
+[ info ] localhost:8020/image/sendHair [运行时间：0.809047s][吞吐率：1.24req/s] [内存消耗：4,603.85kb] [文件加载：81]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'image',
+    2 => 'sendHair',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------629645132943021680742329',
+  'content-length' => '1056',
+  'x-original-url' => '/image/sendHair',
+  'postman-token' => '2b698224-c6ff-44ba-894c-238ad0dc209f',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '1',
+  'doctor_member' => '医生名',
+  'member_id' => '1,2,3,4',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+)
+[ info ] [ RUN ] app\home\controller\Image->sendHair[ E:\wook\201804\judeng\application\home\controller\Image.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.081005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_haircount` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor_haircount` WHERE  (  doctor_id = 2 and moon_date = 1527782400 ) LIMIT 1 [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT `member_name`,`mobile`,`openid`,`is_type` FROM `jd_member` WHERE  `member_id` IN (1,2,3,4) [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_haircount` WHERE  (  doctor_id = 2 and moon_date = 1527782400 ) LIMIT 1 [ RunTime:0.052003s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_haircount`  SET `hair_count`=`hair_count`+1  WHERE  (  doctor_id = 2 and moon_date = 1527782400 ) [ RunTime:0.057003s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_haircount`  SET `message_count`=`message_count`+0  WHERE  (  doctor_id = 2 and moon_date = 1527782400 ) [ RunTime:0.052003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-07T21:34:21+08:00 ] 0.0.0.0 POST /image/sendHair
+[ info ] localhost:8020/image/sendHair [运行时间：0.702040s][吞吐率：1.42req/s] [内存消耗：4,603.85kb] [文件加载：81]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'image',
+    2 => 'sendHair',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------327052890090148495594057',
+  'content-length' => '1056',
+  'x-original-url' => '/image/sendHair',
+  'postman-token' => '2ff56828-f3fd-44ef-b189-67831d52aeb5',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '1',
+  'doctor_member' => '医生名',
+  'member_id' => '1,2,3,4',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+)
+[ info ] [ RUN ] app\home\controller\Image->sendHair[ E:\wook\201804\judeng\application\home\controller\Image.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_haircount` [ RunTime:0.058004s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor_haircount` WHERE  (  doctor_id = 2 and moon_date = 1527782400 ) LIMIT 1 [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SELECT `member_name`,`mobile`,`openid`,`is_type` FROM `jd_member` WHERE  `member_id` IN (1,2,3,4) [ RunTime:0.057004s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_haircount` WHERE  (  doctor_id = 2 and moon_date = 1527782400 ) LIMIT 1 [ RunTime:0.058003s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_haircount`  SET `hair_count`=`hair_count`+1  WHERE  (  doctor_id = 2 and moon_date = 1527782400 ) [ RunTime:0.059003s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_haircount`  SET `message_count`=`message_count`+0  WHERE  (  doctor_id = 2 and moon_date = 1527782400 ) [ RunTime:0.057003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-07T21:35:05+08:00 ] 0.0.0.0 POST /image/sendHair
+[ info ] localhost:8020/image/sendHair [运行时间：0.471026s][吞吐率：2.12req/s] [内存消耗：3,441.16kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'image',
+    2 => 'sendHair',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------076517761005941483372929',
+  'content-length' => '1056',
+  'x-original-url' => '/image/sendHair',
+  'postman-token' => 'c42d79e4-f158-4b20-a7f0-f62bb589ea8d',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '1',
+  'doctor_member' => '医生名',
+  'member_id' => '1,2,3,4',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+)
+[ info ] [ RUN ] app\home\controller\Image->sendHair[ E:\wook\201804\judeng\application\home\controller\Image.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.079005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_haircount` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor_haircount` WHERE  (  doctor_id = 2 and moon_date = 1527782400 ) LIMIT 1 [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT `member_name`,`mobile`,`openid`,`is_type` FROM `jd_member` WHERE  `member_id` IN (1,2,3,4) [ RunTime:0.054003s ]
+---------------------------------------------------------------
+[ 2018-06-07T21:35:13+08:00 ] 0.0.0.0 POST /image/sendHair
+[ info ] localhost:8020/image/sendHair [运行时间：0.623036s][吞吐率：1.61req/s] [内存消耗：3,439.84kb] [文件加载：56]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'image',
+    2 => 'sendHair',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------948034849666721757494570',
+  'content-length' => '1056',
+  'x-original-url' => '/image/sendHair',
+  'postman-token' => 'fdaaba2e-dffd-4e75-96c0-957915f4cb65',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '1',
+  'doctor_member' => '医生名',
+  'member_id' => '1,2,3,4',
+  'is_type' => '0',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+)
+[ info ] [ RUN ] app\home\controller\Image->sendHair[ E:\wook\201804\judeng\application\home\controller\Image.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.082005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_haircount` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor_haircount` WHERE  (  doctor_id = 2 and moon_date = 1527782400 ) LIMIT 1 [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT `member_name`,`mobile`,`openid`,`is_type` FROM `jd_member` WHERE  `member_id` IN (1,2,3,4) [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_haircount` WHERE  (  doctor_id = 2 and moon_date = 1527782400 ) LIMIT 1 [ RunTime:0.054003s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_haircount`  SET `hair_count`=`hair_count`+1  WHERE  (  doctor_id = 2 and moon_date = 1527782400 ) [ RunTime:0.056004s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_haircount`  SET `message_count`=`message_count`+0  WHERE  (  doctor_id = 2 and moon_date = 1527782400 ) [ RunTime:0.054003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-07T21:35:46+08:00 ] 0.0.0.0 POST /image/sendHair
+[ info ] localhost:8020/image/sendHair [运行时间：0.458026s][吞吐率：2.18req/s] [内存消耗：3,360.39kb] [文件加载：53]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'image',
+    2 => 'sendHair',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------033578648173676375613291',
+  'content-length' => '1056',
+  'x-original-url' => '/image/sendHair',
+  'postman-token' => '97f5cb67-f4bd-4d71-bd6e-5fd4222b85c3',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '1',
+  'doctor_member' => '医生名',
+  'member_id' => '1,2,3,4',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+)
+[ info ] [ RUN ] app\home\controller\Image->sendHair[ E:\wook\201804\judeng\application\home\controller\Image.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.082005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_haircount` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor_haircount` WHERE  (  doctor_id = 2 and moon_date = 1527782400 ) LIMIT 1 [ RunTime:0.055004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT `member_name`,`mobile`,`openid`,`is_type` FROM `jd_member` WHERE  `member_id` IN (1,2,3,4) [ RunTime:0.055003s ]
+---------------------------------------------------------------
+[ 2018-06-07T21:36:55+08:00 ] 0.0.0.0 POST /image/sendHair
+[ info ] localhost:8020/image/sendHair [运行时间：0.472027s][吞吐率：2.12req/s] [内存消耗：3,360.85kb] [文件加载：53]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'image',
+    2 => 'sendHair',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------696999584553239072570788',
+  'content-length' => '1056',
+  'x-original-url' => '/image/sendHair',
+  'postman-token' => 'f418bb46-a0cd-41bf-8f20-8a16ec91f86c',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '1',
+  'doctor_member' => '医生名',
+  'member_id' => '1,2,3,4',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+)
+[ info ] [ RUN ] app\home\controller\Image->sendHair[ E:\wook\201804\judeng\application\home\controller\Image.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.083005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.056004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_haircount` [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor_haircount` WHERE  (  doctor_id = 2 and moon_date = 1527782400 ) LIMIT 1 [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT `member_name`,`mobile`,`openid`,`is_type` FROM `jd_member` WHERE  `member_id` IN (1,2,3,4) [ RunTime:0.055004s ]
+---------------------------------------------------------------
+[ 2018-06-07T21:37:00+08:00 ] 0.0.0.0 POST /image/sendHair
+[ info ] localhost:8020/image/sendHair [运行时间：0.028002s][吞吐率：35.71req/s] [内存消耗：2,046.25kb] [文件加载：47]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'image',
+    2 => 'sendHair',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------410422607173085253710650',
+  'content-length' => '1049',
+  'x-original-url' => '/image/sendHair',
+  'postman-token' => '21c1f828-58bc-4443-9779-45e8234ac0a6',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '1',
+  'doctor_member' => '医生名',
+  'member_id' => '',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+)
+[ info ] [ RUN ] app\home\controller\Image->sendHair[ E:\wook\201804\judeng\application\home\controller\Image.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-07T21:37:25+08:00 ] 0.0.0.0 POST /image/sendHair
+[ info ] localhost:8020/image/sendHair [运行时间：0.450026s][吞吐率：2.22req/s] [内存消耗：3,360.05kb] [文件加载：53]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'image',
+    2 => 'sendHair',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------925639068042681737465215',
+  'content-length' => '1054',
+  'x-original-url' => '/image/sendHair',
+  'postman-token' => '4f413da6-ad91-46f8-8760-79f3d0c5184d',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '1',
+  'doctor_member' => '医生名',
+  'member_id' => '34,33',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+)
+[ info ] [ RUN ] app\home\controller\Image->sendHair[ E:\wook\201804\judeng\application\home\controller\Image.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.081005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_haircount` [ RunTime:0.055004s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor_haircount` WHERE  (  doctor_id = 2 and moon_date = 1527782400 ) LIMIT 1 [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT `member_name`,`mobile`,`openid`,`is_type` FROM `jd_member` WHERE  `member_id` IN (34,33) [ RunTime:0.054003s ]
+---------------------------------------------------------------
+[ 2018-06-07T21:37:42+08:00 ] 0.0.0.0 POST /image/sendHair
+[ info ] localhost:8020/image/sendHair [运行时间：0.447026s][吞吐率：2.24req/s] [内存消耗：3,361.33kb] [文件加载：53]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'image',
+    2 => 'sendHair',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------428484984531196149070003',
+  'content-length' => '1054',
+  'x-original-url' => '/image/sendHair',
+  'postman-token' => 'f783a343-66cf-4c2c-988c-5ffe946c2951',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '1',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+)
+[ info ] [ RUN ] app\home\controller\Image->sendHair[ E:\wook\201804\judeng\application\home\controller\Image.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.080005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_haircount` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor_haircount` WHERE  (  doctor_id = 2 and moon_date = 1527782400 ) LIMIT 1 [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT `member_name`,`mobile`,`openid`,`is_type` FROM `jd_member` WHERE  `member_id` IN (34,31) [ RunTime:0.053003s ]
+---------------------------------------------------------------
+[ 2018-06-07T21:37:53+08:00 ] 0.0.0.0 POST /image/sendHair
+[ info ] localhost:8020/image/sendHair [运行时间：0.455026s][吞吐率：2.20req/s] [内存消耗：3,361.20kb] [文件加载：53]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'image',
+    2 => 'sendHair',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------020096120587081914468363',
+  'content-length' => '1054',
+  'x-original-url' => '/image/sendHair',
+  'postman-token' => '27673af0-e230-462e-b978-647ea600ab66',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '1',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+)
+[ info ] [ RUN ] app\home\controller\Image->sendHair[ E:\wook\201804\judeng\application\home\controller\Image.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.077004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_haircount` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor_haircount` WHERE  (  doctor_id = 2 and moon_date = 1527782400 ) LIMIT 1 [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT `member_name`,`mobile`,`openid`,`is_type` FROM `jd_member` WHERE  `member_id` IN (34,31) [ RunTime:0.053003s ]
+---------------------------------------------------------------
+[ 2018-06-07T21:38:11+08:00 ] 0.0.0.0 POST /image/sendHair
+[ info ] localhost:8020/image/sendHair [运行时间：0.469026s][吞吐率：2.13req/s] [内存消耗：3,361.20kb] [文件加载：53]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'image',
+    2 => 'sendHair',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------874557913792468848660413',
+  'content-length' => '1054',
+  'x-original-url' => '/image/sendHair',
+  'postman-token' => '74c15658-8b46-4633-b7b3-bb902183cb5a',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '1',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+)
+[ info ] [ RUN ] app\home\controller\Image->sendHair[ E:\wook\201804\judeng\application\home\controller\Image.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.087005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.059003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_haircount` [ RunTime:0.056004s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor_haircount` WHERE  (  doctor_id = 2 and moon_date = 1527782400 ) LIMIT 1 [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SELECT `member_name`,`mobile`,`openid`,`is_type` FROM `jd_member` WHERE  `member_id` IN (34,31) [ RunTime:0.055003s ]
+---------------------------------------------------------------
+[ 2018-06-07T21:38:24+08:00 ] 0.0.0.0 POST /image/sendHair
+[ info ] localhost:8020/image/sendHair [运行时间：0.437025s][吞吐率：2.29req/s] [内存消耗：3,442.34kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'image',
+    2 => 'sendHair',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------177353982839628043754233',
+  'content-length' => '1054',
+  'x-original-url' => '/image/sendHair',
+  'postman-token' => '8835c088-d09d-47f3-9e28-5e0b49def91a',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '1',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+)
+[ info ] [ RUN ] app\home\controller\Image->sendHair[ E:\wook\201804\judeng\application\home\controller\Image.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.078004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_haircount` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor_haircount` WHERE  (  doctor_id = 2 and moon_date = 1527782400 ) LIMIT 1 [ RunTime:0.052002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.053004s ]
+[ sql ] [ SQL ] SELECT `member_name`,`mobile`,`openid`,`is_type` FROM `jd_member` WHERE  `member_id` IN (34,31) [ RunTime:0.053003s ]
+---------------------------------------------------------------
+[ 2018-06-07T21:38:40+08:00 ] 0.0.0.0 POST /image/sendHair
+[ info ] localhost:8020/image/sendHair [运行时间：0.900052s][吞吐率：1.11req/s] [内存消耗：4,605.68kb] [文件加载：81]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'image',
+    2 => 'sendHair',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------198515855568127480751168',
+  'content-length' => '1054',
+  'x-original-url' => '/image/sendHair',
+  'postman-token' => '09e1ad6e-e4a1-4d82-83b2-456d5995213e',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '1',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+)
+[ info ] [ RUN ] app\home\controller\Image->sendHair[ E:\wook\201804\judeng\application\home\controller\Image.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.083005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_haircount` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor_haircount` WHERE  (  doctor_id = 2 and moon_date = 1527782400 ) LIMIT 1 [ RunTime:0.056004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT `member_name`,`mobile`,`openid`,`is_type` FROM `jd_member` WHERE  `member_id` IN (34,31) [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_haircount` WHERE  (  doctor_id = 2 and moon_date = 1527782400 ) LIMIT 1 [ RunTime:0.056003s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_haircount`  SET `hair_count`=`hair_count`+1  WHERE  (  doctor_id = 2 and moon_date = 1527782400 ) [ RunTime:0.057004s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_haircount`  SET `message_count`=`message_count`+1  WHERE  (  doctor_id = 2 and moon_date = 1527782400 ) [ RunTime:0.061003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-07T21:39:46+08:00 ] 0.0.0.0 POST /image/sendHair
+[ info ] localhost:8020/image/sendHair [运行时间：1.962113s][吞吐率：0.51req/s] [内存消耗：4,729.05kb] [文件加载：82]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'image',
+    2 => 'sendHair',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------440547925027749142729538',
+  'content-length' => '1054',
+  'x-original-url' => '/image/sendHair',
+  'postman-token' => '43409d8a-88b2-4b18-ac1e-666a82ed6ef8',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '1',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+)
+[ info ] [ RUN ] app\home\controller\Image->sendHair[ E:\wook\201804\judeng\application\home\controller\Image.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.076005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_haircount` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor_haircount` WHERE  (  doctor_id = 2 and moon_date = 1527782400 ) LIMIT 1 [ RunTime:0.050003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT `member_name`,`mobile`,`openid`,`is_type` FROM `jd_member` WHERE  `member_id` IN (34,31) [ RunTime:0.050003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.052003s ]
+---------------------------------------------------------------
+[ 2018-06-07T21:40:58+08:00 ] 0.0.0.0 POST /image/sendHair
+[ info ] localhost:8020/image/sendHair [运行时间：0.849049s][吞吐率：1.18req/s] [内存消耗：4,728.80kb] [文件加载：82]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'image',
+    2 => 'sendHair',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------249121534882818570562614',
+  'content-length' => '1054',
+  'x-original-url' => '/image/sendHair',
+  'postman-token' => '472246a5-604f-42eb-b8aa-e9057c551fb6',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '1',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+)
+[ info ] [ RUN ] app\home\controller\Image->sendHair[ E:\wook\201804\judeng\application\home\controller\Image.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.076004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_haircount` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor_haircount` WHERE  (  doctor_id = 2 and moon_date = 1527782400 ) LIMIT 1 [ RunTime:0.051003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT `member_name`,`mobile`,`openid`,`is_type` FROM `jd_member` WHERE  `member_id` IN (34,31) [ RunTime:0.051003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.051003s ]
+---------------------------------------------------------------
+[ 2018-06-07T21:41:18+08:00 ] 0.0.0.0 POST /image/sendHair
+[ info ] localhost:8020/image/sendHair [运行时间：0.808046s][吞吐率：1.24req/s] [内存消耗：4,728.98kb] [文件加载：82]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'image',
+    2 => 'sendHair',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------434977314276472617779907',
+  'content-length' => '1054',
+  'x-original-url' => '/image/sendHair',
+  'postman-token' => '5c754c63-2581-4d49-a4d9-a8f69fcfe0e8',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '1',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+)
+[ info ] [ RUN ] app\home\controller\Image->sendHair[ E:\wook\201804\judeng\application\home\controller\Image.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.080005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_haircount` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor_haircount` WHERE  (  doctor_id = 2 and moon_date = 1527782400 ) LIMIT 1 [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT `member_name`,`mobile`,`openid`,`is_type` FROM `jd_member` WHERE  `member_id` IN (34,31) [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.053003s ]
+---------------------------------------------------------------
+[ 2018-06-07T21:41:36+08:00 ] 0.0.0.0 POST /image/sendHair
+[ info ] localhost:8020/image/sendHair [运行时间：0.870050s][吞吐率：1.15req/s] [内存消耗：4,729.38kb] [文件加载：82]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'image',
+    2 => 'sendHair',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------303778822466911534987554',
+  'content-length' => '1054',
+  'x-original-url' => '/image/sendHair',
+  'postman-token' => 'b8ae15a0-9f87-4873-8127-b7a6932bdfa2',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '1',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+)
+[ info ] [ RUN ] app\home\controller\Image->sendHair[ E:\wook\201804\judeng\application\home\controller\Image.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.082004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_haircount` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor_haircount` WHERE  (  doctor_id = 2 and moon_date = 1527782400 ) LIMIT 1 [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT `member_name`,`mobile`,`openid`,`is_type` FROM `jd_member` WHERE  `member_id` IN (34,31) [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.055003s ]
+---------------------------------------------------------------
+[ 2018-06-07T21:43:24+08:00 ] 0.0.0.0 POST /image/sendHair
+[ info ] localhost:8020/image/sendHair [运行时间：0.891051s][吞吐率：1.12req/s] [内存消耗：4,729.60kb] [文件加载：82]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'image',
+    2 => 'sendHair',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------480040838919049528168679',
+  'content-length' => '1054',
+  'x-original-url' => '/image/sendHair',
+  'postman-token' => 'ec0ad98b-2f7f-47f6-8c33-9b9017600896',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '1',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+)
+[ info ] [ RUN ] app\home\controller\Image->sendHair[ E:\wook\201804\judeng\application\home\controller\Image.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_haircount` [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor_haircount` WHERE  (  doctor_id = 2 and moon_date = 1527782400 ) LIMIT 1 [ RunTime:0.057004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SELECT `member_name`,`mobile`,`openid`,`is_type` FROM `jd_member` WHERE  `member_id` IN (34,31) [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.056003s ]
+---------------------------------------------------------------
+[ 2018-06-07T21:46:28+08:00 ] 0.0.0.0 POST /image/sendHair
+[ info ] localhost:8020/image/sendHair [运行时间：1.221070s][吞吐率：0.82req/s] [内存消耗：5,225.23kb] [文件加载：85]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'image',
+    2 => 'sendHair',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------781466000758310903858958',
+  'content-length' => '1054',
+  'x-original-url' => '/image/sendHair',
+  'postman-token' => '1111237b-ffca-4a8d-a930-b6d5d3b693b1',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '0',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+)
+[ info ] [ RUN ] app\home\controller\Image->sendHair[ E:\wook\201804\judeng\application\home\controller\Image.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.085005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.058004s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_haircount` [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor_haircount` WHERE  (  doctor_id = 2 and moon_date = 1527782400 ) LIMIT 1 [ RunTime:0.057004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SELECT `member_name`,`mobile`,`openid`,`is_type` FROM `jd_member` WHERE  `member_id` IN (34,31) [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.058004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair` [ RunTime:0.058004s ]
+[ sql ] [ SQL ] INSERT INTO `jd_hair` (`doctor_id` , `member_id` , `content` , `add_date` , `release_date`) VALUES (2 , 0 , '测试' , 1528379187 , 1528379187) [ RunTime:0.060003s ]
+---------------------------------------------------------------
+[ 2018-06-07T21:47:47+08:00 ] 0.0.0.0 POST /image/sendHair
+[ info ] localhost:8020/image/sendHair [运行时间：0.872049s][吞吐率：1.15req/s] [内存消耗：5,226.75kb] [文件加载：85]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'image',
+    2 => 'sendHair',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------780654575982518425368522',
+  'content-length' => '1054',
+  'x-original-url' => '/image/sendHair',
+  'postman-token' => '27ae10e7-8f9f-4d38-8ae0-527945a8d685',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '0',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+)
+[ info ] [ RUN ] app\home\controller\Image->sendHair[ E:\wook\201804\judeng\application\home\controller\Image.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.077005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_haircount` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor_haircount` WHERE  (  doctor_id = 2 and moon_date = 1527782400 ) LIMIT 1 [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT `member_name`,`mobile`,`openid`,`is_type` FROM `jd_member` WHERE  `member_id` IN (34,31) [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] INSERT INTO `jd_hair` (`doctor_id` , `member_id` , `content` , `add_date` , `release_date`) VALUES (2 , 0 , '测试' , 1528379267 , 1528379267) [ RunTime:0.054003s ]
+---------------------------------------------------------------
+[ 2018-06-07T21:49:04+08:00 ] 0.0.0.0 POST /image/sendHair
+[ info ] localhost:8020/image/sendHair [运行时间：4.470256s][吞吐率：0.22req/s] [内存消耗：5,225.23kb] [文件加载：85]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'image',
+    2 => 'sendHair',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------598672938418929866848787',
+  'content-length' => '1054',
+  'x-original-url' => '/image/sendHair',
+  'postman-token' => '50e698c7-0c99-4eef-8bce-553025c24438',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '0',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+)
+[ info ] [ RUN ] app\home\controller\Image->sendHair[ E:\wook\201804\judeng\application\home\controller\Image.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.079005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_haircount` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor_haircount` WHERE  (  doctor_id = 2 and moon_date = 1527782400 ) LIMIT 1 [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.055004s ]
+[ sql ] [ SQL ] SELECT `member_name`,`mobile`,`openid`,`is_type` FROM `jd_member` WHERE  `member_id` IN (34,31) [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair` [ RunTime:0.069004s ]
+[ sql ] [ SQL ] INSERT INTO `jd_hair` (`doctor_id` , `member_id` , `content` , `add_date` , `release_date`) VALUES (2 , 0 , '测试' , 1528379340 , 1528379340) [ RunTime:0.378022s ]
