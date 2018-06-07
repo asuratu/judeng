@@ -1106,3 +1106,360 @@
 [ info ] [ RUN ] app\home\controller\Blacklist->black[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Blacklist.php ]
 [ info ] [ DB ] INIT mysql
 [ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-07T17:45:11+08:00 ] 0.0.0.0 POST /certified/addCertifie
+[ info ] localhost:8020/certified/addCertifie [运行时间：0.145008s][吞吐率：6.90req/s] [内存消耗：2,196.69kb] [文件加载：47]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'certified',
+    2 => 'addCertifie',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=Boundary+BFE30B25F26404F3',
+  'content-length' => '698656',
+  'x-original-url' => '/certified/addCertifie',
+  'user-agent' => 'YiSong/1.2.2 (iPhone; iOS 11.1.2; Scale/2.00)',
+  'host' => 'localhost:8020',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'bank_id' => '4',
+  'birthday' => '请选择',
+  'deposit_name' => '后来',
+  'deposit_number' => '6564',
+  'goodat_id' => '85,84,77,79,80,83',
+  'hospital_id' => '1',
+  'hospital_repart_str' => '331',
+  'idcode' => '320324199503176239',
+  'introduction' => '测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼',
+  'member_id' => '89',
+  'mobile' => '17316392477',
+  'sex' => '1',
+  'title_id' => '16',
+  'title_str' => '主治医师',
+  'true_name' => '测试',
+)
+[ info ] [ RUN ] app\home\controller\Certified->addCertifie[ E:\wook\201804\judeng\application\home\controller\Certified.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.079005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+---------------------------------------------------------------
+[ 2018-06-07T17:46:07+08:00 ] 0.0.0.0 POST /certified/addCertifie
+[ info ] localhost:8020/certified/addCertifie [运行时间：0.140008s][吞吐率：7.14req/s] [内存消耗：2,196.69kb] [文件加载：47]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'certified',
+    2 => 'addCertifie',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=Boundary+BFE30B25F26404F3',
+  'content-length' => '698656',
+  'x-original-url' => '/certified/addCertifie',
+  'user-agent' => 'YiSong/1.2.2 (iPhone; iOS 11.1.2; Scale/2.00)',
+  'host' => 'localhost:8020',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'bank_id' => '4',
+  'birthday' => '请选择',
+  'deposit_name' => '后来',
+  'deposit_number' => '6564',
+  'goodat_id' => '85,84,77,79,80,83',
+  'hospital_id' => '1',
+  'hospital_repart_str' => '331',
+  'idcode' => '320324199503176239',
+  'introduction' => '测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼测试测试数据包计划中有很多人在关注着自己不可以私信哦……好了……好好了就行了……嗯……嗯哼',
+  'member_id' => '89',
+  'mobile' => '17316392477',
+  'sex' => '1',
+  'title_id' => '16',
+  'title_str' => '主治医师',
+  'true_name' => '测试',
+)
+[ info ] [ RUN ] app\home\controller\Certified->addCertifie[ E:\wook\201804\judeng\application\home\controller\Certified.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.083005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+---------------------------------------------------------------
+[ 2018-06-07T18:09:53+08:00 ] 0.0.0.0 POST /doctor/findData
+[ info ] localhost:8020/doctor/findData [运行时间：0.029001s][吞吐率：34.48req/s] [内存消耗：2,029.78kb] [文件加载：44]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'doctor',
+    2 => 'findData',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '246',
+  'x-original-url' => '/doctor/findData',
+  'user-agent' => 'YiSong/1.2.2 (iPhone; iOS 11.1.2; Scale/2.00)',
+  'host' => 'localhost:8020',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'sign' => '62fab337ee20567892e8f223bb90273d',
+  'doctor_id' => 89,
+  '_time' => '1528366069',
+  'only_token' => 'Authorization:Bearer YWMtcr5qEmo1EeiPnGucWKPSJQAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFj2ZV8CQBPGgBCIdumlRJcdFYj3g1_imVYH6sYbJFGjKfApE7kMEz_ZQ',
+)
+[ info ] [ RUN ] app\home\controller\Doctor->findData[ E:\wook\201804\judeng\application\home\controller\Doctor.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-07T18:10:04+08:00 ] 0.0.0.0 POST /other/jianpin
+[ info ] localhost:8020/other/jianpin [运行时间：0.257015s][吞吐率：3.89req/s] [内存消耗：3,029.88kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'other',
+    2 => 'jianpin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------305802465702521726774985',
+  'content-length' => '0',
+  'x-original-url' => '/other/jianpin',
+  'postman-token' => 'ebac7114-3d28-472f-ae91-44189a7648e6',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Other->jianpin[ E:\wook\201804\judeng\application\home\controller\Other.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug` [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug` WHERE  (  keywords = '' ) LIMIT 0,50 [ RunTime:0.060004s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-07T18:10:08+08:00 ] 0.0.0.0 POST /doctor/findData
+[ info ] localhost:8020/doctor/findData [运行时间：0.332019s][吞吐率：3.01req/s] [内存消耗：3,160.16kb] [文件加载：58]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'doctor',
+    2 => 'findData',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '246',
+  'x-original-url' => '/doctor/findData',
+  'user-agent' => 'YiSong/1.2.2 (iPhone; iOS 11.1.2; Scale/2.00)',
+  'host' => 'localhost:8020',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'sign' => '62fab337ee20567892e8f223bb90273d',
+  'doctor_id' => 89,
+  '_time' => '1528366069',
+  'only_token' => 'Authorization:Bearer YWMtcr5qEmo1EeiPnGucWKPSJQAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFj2ZV8CQBPGgBCIdumlRJcdFYj3g1_imVYH6sYbJFGjKfApE7kMEz_ZQ',
+)
+[ info ] [ RUN ] app\home\controller\Doctor->findData[ E:\wook\201804\judeng\application\home\controller\Doctor.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.059003s ]
+[ sql ] [ SQL ] SELECT `member_id`,`true_name`,`title_str`,`inherit`,`school_str`,`face_photo`,`goodat_id`,`introduction`,`hospital_id` FROM `jd_doctor` WHERE  (  member_id = 89 ) LIMIT 1 [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_school` [ RunTime:0.058004s ]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') AND is_display = 1 )' at line 1[E:\wook\201804\judeng\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-06-07T18:10:18+08:00 ] 0.0.0.0 POST /doctor/findData
+[ info ] localhost:8020/doctor/findData [运行时间：0.235014s][吞吐率：4.26req/s] [内存消耗：3,007.50kb] [文件加载：51]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'doctor',
+    2 => 'findData',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '246',
+  'x-original-url' => '/doctor/findData',
+  'user-agent' => 'YiSong/1.2.2 (iPhone; iOS 11.1.2; Scale/2.00)',
+  'host' => 'localhost:8020',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'sign' => '62fab337ee20567892e8f223bb90273d',
+  'doctor_id' => 89,
+  '_time' => '1528366069',
+  'only_token' => 'Authorization:Bearer YWMtcr5qEmo1EeiPnGucWKPSJQAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFj2ZV8CQBPGgBCIdumlRJcdFYj3g1_imVYH6sYbJFGjKfApE7kMEz_ZQ',
+)
+[ info ] [ RUN ] app\home\controller\Doctor->findData[ E:\wook\201804\judeng\application\home\controller\Doctor.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.081004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT `member_id`,`true_name`,`title_str`,`inherit`,`school_str`,`face_photo`,`goodat_id`,`introduction`,`hospital_id` FROM `jd_doctor` WHERE  (  member_id = 89 ) LIMIT 1 [ RunTime:0.055004s ]
+---------------------------------------------------------------
+[ 2018-06-07T18:10:36+08:00 ] 0.0.0.0 POST /doctor/findData
+[ info ] localhost:8020/doctor/findData [运行时间：0.343019s][吞吐率：2.92req/s] [内存消耗：3,160.42kb] [文件加载：58]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'doctor',
+    2 => 'findData',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '246',
+  'x-original-url' => '/doctor/findData',
+  'user-agent' => 'YiSong/1.2.2 (iPhone; iOS 11.1.2; Scale/2.00)',
+  'host' => 'localhost:8020',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'sign' => '62fab337ee20567892e8f223bb90273d',
+  'doctor_id' => 89,
+  '_time' => '1528366069',
+  'only_token' => 'Authorization:Bearer YWMtcr5qEmo1EeiPnGucWKPSJQAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFj2ZV8CQBPGgBCIdumlRJcdFYj3g1_imVYH6sYbJFGjKfApE7kMEz_ZQ',
+)
+[ info ] [ RUN ] app\home\controller\Doctor->findData[ E:\wook\201804\judeng\application\home\controller\Doctor.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SELECT `member_id`,`true_name`,`title_str`,`inherit`,`school_str`,`face_photo`,`goodat_id`,`introduction`,`hospital_id` FROM `jd_doctor` WHERE  (  member_id = 89 ) LIMIT 1 [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_school` [ RunTime:0.057004s ]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') AND is_display = 1 )' at line 1[E:\wook\201804\judeng\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-06-07T18:11:38+08:00 ] 0.0.0.0 POST /doctor/findData
+[ info ] localhost:8020/doctor/findData [运行时间：0.264016s][吞吐率：3.79req/s] [内存消耗：3,007.75kb] [文件加载：51]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'doctor',
+    2 => 'findData',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '246',
+  'x-original-url' => '/doctor/findData',
+  'user-agent' => 'YiSong/1.2.2 (iPhone; iOS 11.1.2; Scale/2.00)',
+  'host' => 'localhost:8020',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'sign' => '62fab337ee20567892e8f223bb90273d',
+  'doctor_id' => 89,
+  '_time' => '1528366069',
+  'only_token' => 'Authorization:Bearer YWMtcr5qEmo1EeiPnGucWKPSJQAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFj2ZV8CQBPGgBCIdumlRJcdFYj3g1_imVYH6sYbJFGjKfApE7kMEz_ZQ',
+)
+[ info ] [ RUN ] app\home\controller\Doctor->findData[ E:\wook\201804\judeng\application\home\controller\Doctor.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.079004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT `member_id`,`true_name`,`title_str`,`inherit`,`school_str`,`face_photo`,`goodat_id`,`introduction`,`hospital_id` FROM `jd_doctor` WHERE  (  member_id = 89 ) LIMIT 1 [ RunTime:0.054003s ]
+---------------------------------------------------------------
+[ 2018-06-07T18:11:47+08:00 ] 0.0.0.0 POST /doctor/findData
+[ info ] localhost:8020/doctor/findData [运行时间：0.589034s][吞吐率：1.70req/s] [内存消耗：3,113.83kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'doctor',
+    2 => 'findData',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '246',
+  'x-original-url' => '/doctor/findData',
+  'user-agent' => 'YiSong/1.2.2 (iPhone; iOS 11.1.2; Scale/2.00)',
+  'host' => 'localhost:8020',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'sign' => '62fab337ee20567892e8f223bb90273d',
+  'doctor_id' => 89,
+  '_time' => '1528366069',
+  'only_token' => 'Authorization:Bearer YWMtcr5qEmo1EeiPnGucWKPSJQAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFj2ZV8CQBPGgBCIdumlRJcdFYj3g1_imVYH6sYbJFGjKfApE7kMEz_ZQ',
+)
+[ info ] [ RUN ] app\home\controller\Doctor->findData[ E:\wook\201804\judeng\application\home\controller\Doctor.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.058004s ]
+[ sql ] [ SQL ] SELECT `member_id`,`true_name`,`title_str`,`inherit`,`school_str`,`face_photo`,`goodat_id`,`introduction`,`hospital_id` FROM `jd_doctor` WHERE  (  member_id = 89 ) LIMIT 1 [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT `hospital_name` FROM `jd_hospital` WHERE  (  hospital_id = 1 ) LIMIT 1 [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_goodat` [ RunTime:0.058004s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_goodat` WHERE  `goodat_id` IN (61,74,77,79,80,83,84,85)  AND (  is_show = 1 and level = 2 ) ORDER BY `sort`  DESC [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_notice` [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SELECT `notice_id`,`notice_name`,`add_date` FROM `jd_notice` WHERE  (  doctor_id = 89 ) [ RunTime:0.053003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
