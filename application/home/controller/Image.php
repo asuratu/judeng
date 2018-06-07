@@ -116,9 +116,9 @@ class Image extends Common
                 foreach ($mobile_number as $key=>$val) {
                     $title[$key]['name'] = $data['doctor_member'];
                     $title[$key]['content'] = Html::getTextToHtml($data['content'], 10);
-                    $title[$key]['order'] = $url;
+                    $title[$key]['orderId'] = $url;
                 }
-
+                
                 if ($data['is_hair'] == 0) {
                     sendAliMass($mobile_number, $title, 1);
                 }
