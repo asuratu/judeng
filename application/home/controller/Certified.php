@@ -96,8 +96,10 @@ class Certified extends Common
                 $upPaperInfo['release_date'] = time();
 
                 $upInfo['face_photo'] = $upPaperInfo['face_photo'];
+                $upInfo['portrait'] = $upPaperInfo['face_photo'];
                 unset($upPaperInfo['face_photo']);
                 $upInfo['true_name'] = $data['true_name'];
+                $upInfo['member_name'] = $data['true_name'];
                 $upInfo['sex'] = $data['sex'];
                 $upInfo['birthday'] = strtotime($data['birthday']);
                 $upInfo['idcode'] = $data['idcode'];
@@ -105,8 +107,8 @@ class Certified extends Common
                 $upInfo['title_id'] = $data['title_id'];//id字符串
                 $upInfo['title_str'] = $data['title_str'];//名称字符串
                 $upInfo['hospital_repart_str'] = $data['hospital_repart_str'];
-                $upInfo['goodat_id'] = $data['goodat_id'];
-                $upInfo['introduction'] = $data['introduction'];
+                $upInfo['goodat_id'] = $data['goodat_id'] ?: '';
+                $upInfo['introduction'] = $data['introduction'] ? (substr($data['introduction'],0,300)) : '';
                 $upInfo['release_date'] = time();
                 $upInfo['is_certified'] = 1;//状态改为审核中
 

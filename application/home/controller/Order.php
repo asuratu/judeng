@@ -449,6 +449,15 @@ class Order extends Common
                             ajaxReturn(array('code'=>0,'info'=>'您已创建过该名称的模板!','data'=>[]));
                         }
 
+
+                        if ($data['special_id'] > 0) {
+                            //查询特色方剂
+                            $specialInfo = db('special')->where("special_id = {$data['special_id']}")->field("`content`")->find();
+                            $tempMap['special_content'] = $specialInfo['content'] ?: '';
+                        } else {
+                            $tempMap['special_content'] = '';
+                        }
+
                         $tempMap['relation_id'] = $data['relation_id'];
                         $tempMap['state_id'] = $data['state_id'];
                         $tempMap['dose'] = intval($data['dose']);

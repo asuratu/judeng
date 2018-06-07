@@ -51,10 +51,10 @@ class Sheet extends Common
             $start = ($data['page']-1)*$data['pageSize'];
 
             $typeList = db('sheet')
-                ->where("is_display = 1 AND type_id = {$data['type_id']} AND member_id = {$data['member_id']}")
-                ->field("sheet_id, title, release_date, list")
+                ->where("is_display = 1 AND type_id = {$data['type_id']} AND (member_id = {$data['member_id']} OR is_classic = 1)")
+                ->field("sheet_id, title, release_date, list, is_classic")
                 ->limit($start,$data['pageSize'])
-                ->order('sort DESC')
+                ->order('is_classic DESC, sort DESC')
                 ->select();
             $totalNum = db('sheet')
                 ->where("is_display = 1 AND type_id = {$data['type_id']} AND member_id = {$data['member_id']}")

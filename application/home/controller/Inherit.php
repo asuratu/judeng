@@ -32,8 +32,7 @@ class Inherit extends Common
                 ->field("i.*, d.title_id, d.member_name, d.true_name, d.mobile")
                 ->find();
             //处理图片路径
-            $inheritDetail['banner'] = $inheritDetail['banner'];
-            $inheritDetail['banner'] = !empty($inheritDetail['true_name']) ? $inheritDetail['true_name'] : (!empty($inheritDetail['member_name']) ? $inheritDetail['member_name'] : $inheritDetail['mobile']);
+            $inheritDetail['true_name'] = !empty($inheritDetail['true_name']) ? $inheritDetail['true_name'] : (!empty($inheritDetail['member_name']) ? $inheritDetail['member_name'] : $inheritDetail['mobile']);
             //处理简介的H5
             $inheritDetail['culture'] = config('url').'/inherit/detail?id='.$data['inherit_id'];
             //判断是否加入过该传承
@@ -209,6 +208,29 @@ class Inherit extends Common
     }
 
     /**
+     * @Title: ad
+     * @Description: TODO 首页公告
+     * @return mixed
+     * @author TUGE
+     * @date
+     */
+    public function ad() {
+        $map['`article_id`'] = $_GET['id'];
+        switch ($_GET['id']) {
+            case 1:
+                $temp = 'inherit/ad1';
+                break;
+            case 2:
+                $temp = 'inherit/ad2';
+                break;
+            default:
+                $temp = 'inherit/ad3';
+                break;
+        }
+        return $this->fetch($temp);
+    }
+
+    /**
      * @Title: getInheritDrugDetail
      * @Description: TODO 查看特色方剂详情
      */
@@ -231,6 +253,9 @@ class Inherit extends Common
             $specialMap['`is_display`'] = 1;
             $specialMap['`special_id`'] = $data['special_id'];
             $specialArr = db('special')->where($specialMap)->field("*")->find();
+            if (empty($specialArr)) {
+                ajaxReturn(array('code'=>0,'info'=>'该特色方剂不存在!','data'=>[]));
+            }
             //处理简介的H5
             $specialArr['effect'] = config('url').'/inherit/effect?id='.$data['special_id'];
             //处理药方
