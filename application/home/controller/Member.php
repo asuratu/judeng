@@ -426,8 +426,6 @@ class Member extends Common
      */
     public function doregist()
     {
-
-
         if($this->request->isPost())
         {
 
@@ -440,6 +438,129 @@ class Member extends Common
             if($data['mobile']==''||$data['password']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'手机号或密码为空','data'=>[]));
+            }
+            if($data['area_id']=='' || $data['hospital_id']=='' || $data['true_name']=='' || $data['smscode']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+            }
+            $mobile=$data['mobile'];
+            session_id(md5($mobile));
+            session_start();
+            $token = $_SESSION['tokencode'];
+
+            if(empty($token))
+            {
+                ajaxReturn(array('code'=>0,'info'=>'请先获取短信验证码！','data'=>[]));
+            }
+            if($token['code']!=$data['smscode'])
+            {
+                ajaxReturn(array('code'=>0, 'info'=>'短信验证码不正确！','data'=>[]));
+            }
+            if (!empty($token)&&$token['expired_at']<time() )
+            {
+                ajaxReturn(array('code'=>0, 'info'=>'短信验证码超时！','data'=>[]));
+            }
+            //清除验证码
+            $_SESSION['tokencode']= null;
+
+            $map['mobile']=$mobile;
+            $countMobile = db('doctor')->where($map)->count();
+
+            if($countMobile>0)
+            {
+                ajaxReturn(array('code' =>0, 'info' => '手机号码已绑定！','data'=>[]));
+            }
+
+            //查询当前最大邀请码
+            $maxInvite = db('doctor')->max('invite');
+
+
+            unset($data['smscode'],$data['_time'],$data['sign']);
+            $data['invite'] = $maxInvite + 1;
+            $data['member_sn']=uniqid("tkt");
+            $data['reg_date']=time();
+
+            //localhost访问ip为0.0.0.0
+            $data['reg_ip'] = Request::instance()->ip();
+            $data['guid']=randCode(8,2);
+            $_oldPwd['password'] = $data['password'];
+            $data['password']=md5(md5($data['password']).$data['guid']);
+
+            //生成医生邀请医生的二维码图片路径
+            $registUrl = config('url').'/member/webRegist?id='.$data['invite'];
+            $data['to_doctor_url'] = createPic($registUrl);
+            $invite_code = $data['invite_code'];
+            unset($data['invite_code']);
+            $_identify = db('doctor')->insertGetId($data);
+
+            if($_identify) {
+                $diagnosis_set = array();
+                $diagnosis_set['member_id'] = $_identify;
+                $diagnosis_set['add_date'] = time();
+                $diagnosis_set['operate_date'] = $diagnosis_set['add_date'];
+                $diagnosis_set['release_date'] = $diagnosis_set['add_date'];
+                db('diagnosis_set')->insert($diagnosis_set);
+                unset($_SESSION['tokencode']);
+
+                //填写了邀请码
+                if ($invite_code) {
+                    $temp['member_id'] = $_identify;
+                    $temp['invite'] = $invite_code;
+                    $temp['add_date'] = time();
+                    db('invite_record')->insert($temp);
+                }
+
+                //注册环信用户
+                import('Easemob', EXTEND_PATH);
+
+                $options['client_id'] = config('client_id');
+                $options['client_secret'] = config('client_secret');
+                $options['org_name'] = config('org_name');
+                $options['app_name'] = config('app_name');
+
+                $h=new \Easemob($options);
+                $h->createUser($data['member_sn'],"123456");
+
+                //注册即可登录
+                $loginData['mobile'] = $data['mobile'];
+                $loginData['password'] = $_oldPwd['password'];
+                $loginData['device_tokens'] = $data['device_tokens'];
+                $loginData['is_system'] = $data['is_system'];
+                $result = curlPost(config('url').'/member/dologin', $loginData);
+
+                if ($result == false) {
+                    ajaxReturn(array('code' => 0, 'info' => '注册成功, 由于系统繁忙登录失败, 请重新登录!','data'=>[]));
+                } else {
+                    return $result;
+                }
+            }else
+            {
+                ajaxReturn(array('code' => 1, 'info' => '注册失败','data'=>[]));
+            }
+
+        }
+    }
+
+    /**
+     * @Title: delteHxUser
+     * @Description: TODO 删除环信用户
+     * @return bool|mixed
+     * @author TUGE
+     * @date
+     */
+    public function delteHxUser()
+    {
+        if($this->request->isPost())
+        {
+            $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
+            if($data['username']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'请输入环信用户名','data'=>[]));
             }
             if($data['area_id']=='' || $data['hospital_id']=='' || $data['true_name']=='' || $data['smscode']=='')
             {
