@@ -112,7 +112,7 @@ class Certified extends Common
                 $upInfo['release_date'] = time();
                 $upInfo['is_certified'] = 1;//状态改为审核中
 
-                $bankId = $data['bank_id'];
+                $bankId = $data['bank_id'] ?: 0;
                 unset($data['bank_id']);
 
                 $_identity1 = db('doctor')->where($temp)->update($upInfo);
@@ -121,18 +121,20 @@ class Certified extends Common
                 //更新或插入银行信息
                 $temp['bank_id'] = $bankId;
                 $bankDetail['bank_id'] = $bankId;
-                $bankDetail['deposit_name'] = $data['deposit_name'];
-                $bankDetail['deposit_number'] = $data['deposit_number'];
-                $bankDetail['mobile'] = $data['mobile'];
+                $bankDetail['deposit_name'] = $data['deposit_name'] ?: '';
+                $bankDetail['deposit_number'] = $data['deposit_number'] ?: '';
+                $bankDetail['mobile'] = $data['mobile'] ?: '';
                 $bankDetail['add_date'] = time();
 
-
-                if (db('deposit')->where($temp)->find()) {
-                    $_identity2 = db('deposit')->where($temp)->update($bankDetail);
-                } else {
-                    $bankDetail['member_id'] = $data['member_id'];
-                    $_identity2 = db('deposit')->insert($bankDetail);
+                if ($bankId) {
+                    if (db('deposit')->where($temp)->find()) {
+                        $_identity2 = db('deposit')->where($temp)->update($bankDetail);
+                    } else {
+                        $bankDetail['member_id'] = $data['member_id'];
+                        $_identity2 = db('deposit')->insert($bankDetail);
+                    }
                 }
+
 
                 //更新或插入证书信息
                 unset($temp['bank_id']);
