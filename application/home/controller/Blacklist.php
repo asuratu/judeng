@@ -15,9 +15,6 @@ class Blacklist extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
-
-//            Model('Setting')->addUserForBlacklist($doctor['member_sn'], array($member['openid']));
-
             if($data['doctor_id']==''||$data['member_id']==''||$data['is_type']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));

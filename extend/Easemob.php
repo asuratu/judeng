@@ -247,11 +247,10 @@ class Easemob {
 	*/
 	function addUserForBlacklist($username,$usernames){
 		$url=$this->url.'users/'.$username.'/blocks/users/';
-		$body=json_encode($usernames);
-		$header=array($this->getToken(),'Content-Type:application/json');
+		$body=json_encode(array('usernames'=>$usernames));
+        $header=array($this->getToken(),'Content-Type:application/json');
 		$result=$this->postCurl($url,$body,$header,'POST');
 		return $result;	
-		
 	}
 	/*
 		从黑名单中减人
