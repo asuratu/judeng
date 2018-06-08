@@ -2985,6 +2985,26 @@
 [ info ] [ DB ] INIT mysql
 [ info ] [ CACHE ] INIT File
 [ info ] [ LOG ] INIT File
+<<<<<<< HEAD
+[ sql ] [ DB ] CONNECT:[ UseTime:0.081005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_haircount` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor_haircount` WHERE  (  doctor_id = 2 and moon_date = 1527782400 ) LIMIT 1 [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT `member_name`,`mobile`,`openid`,`is_type` FROM `jd_member` WHERE  `member_id` IN (34,31) [ RunTime:0.053004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] INSERT INTO `jd_hair` (`doctor_id` , `member_id` , `content` , `add_date` , `release_date`) VALUES (2 , 0 , '测试' , 1528379915 , 1528379915) [ RunTime:0.059004s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_haircount` WHERE  (  doctor_id = 2 and moon_date = 1527782400 ) LIMIT 1 [ RunTime:0.054003s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_haircount`  SET `hair_count`=`hair_count`+1  WHERE  (  doctor_id = 2 and moon_date = 1527782400 ) [ RunTime:0.056003s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_haircount`  SET `message_count`=`message_count`+1  WHERE  (  doctor_id = 2 and moon_date = 1527782400 ) [ RunTime:0.057004s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-07T22:14:40+08:00 ] 0.0.0.0 POST /wx/getQrcode
+[ info ] localhost:8020/wx/getQrcode [运行时间：1.406081s][吞吐率：0.71req/s] [内存消耗：3,003.97kb] [文件加载：52]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+=======
 [ sql ] [ DB ] CONNECT:[ UseTime:0.085496s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
 [ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.058629s ]
 [ sql ] [ SQL ] SELECT `to_user_img` FROM `jd_doctor` WHERE  (  member_id = 105 ) LIMIT 1 [ RunTime:0.056586s ]
@@ -2998,6 +3018,7 @@
 [ 2018-06-07T22:18:41+08:00 ] 0.0.0.0 POST /wx/getQrcode
 [ info ] localhost:7037/wx/getQrcode [运行时间：0.563899s][吞吐率：1.77req/s] [内存消耗：2,992.57kb] [文件加载：52]
 [ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
@@ -3009,6 +3030,16 @@
   ),
 )
 [ info ] [ HEADER ] array (
+<<<<<<< HEAD
+  'content-type' => 'multipart/form-data; boundary=--------------------------594314962496725180910603',
+  'content-length' => '1054',
+  'x-original-url' => '/wx/getQrcode',
+  'postman-token' => '264ae559-c176-49e1-973b-cff0abd08490',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+=======
   'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryuT017jsdaEHooFg9',
   'content-length' => '143',
   'x-original-url' => '/wx/getQrcode',
@@ -3018,11 +3049,39 @@
   'host' => 'localhost:7037',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate, br',
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
   'accept' => '*/*',
   'connection' => 'keep-alive',
   'cache-control' => 'no-cache',
 )
 [ info ] [ PARAM ] array (
+<<<<<<< HEAD
+  'doctor_id' => '2',
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '0',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+)
+[ info ] [ RUN ] app\home\controller\Wx->getQrcode[ E:\wook\201804\judeng\application\home\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.082005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT `to_user_img` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wx_user` LIMIT 1 [ RunTime:0.054003s ]
+[ error ] [8]Trying to get property of non-object[E:\wook\201804\judeng\application\home\controller\Wx.php:25]
+[ error ] [8]未定义数组索引: ticket[E:\wook\201804\judeng\application\home\controller\Wx.php:43]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-07T22:14:50+08:00 ] 0.0.0.0 POST /wx/getQrcode
+[ info ] localhost:8020/wx/getQrcode [运行时间：0.407023s][吞吐率：2.46req/s] [内存消耗：3,003.97kb] [文件加载：52]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+=======
   'doctor_id' => '105',
 )
 [ info ] [ RUN ] app\home\controller\Wx->getQrcode[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php ]
@@ -3040,6 +3099,7 @@
 [ 2018-06-07T22:18:43+08:00 ] 0.0.0.0 POST /wx/getQrcode
 [ info ] localhost:7037/wx/getQrcode [运行时间：0.677609s][吞吐率：1.48req/s] [内存消耗：2,992.57kb] [文件加载：52]
 [ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
@@ -3051,6 +3111,16 @@
   ),
 )
 [ info ] [ HEADER ] array (
+<<<<<<< HEAD
+  'content-type' => 'multipart/form-data; boundary=--------------------------749945858663415830660422',
+  'content-length' => '1054',
+  'x-original-url' => '/wx/getQrcode',
+  'postman-token' => 'a872e11a-9336-4d60-8e9e-2bb327e63657',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+=======
   'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary5oWiMXkmyN8jiuHr',
   'content-length' => '143',
   'x-original-url' => '/wx/getQrcode',
@@ -3060,11 +3130,39 @@
   'host' => 'localhost:7037',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate, br',
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
   'accept' => '*/*',
   'connection' => 'keep-alive',
   'cache-control' => 'no-cache',
 )
 [ info ] [ PARAM ] array (
+<<<<<<< HEAD
+  'doctor_id' => '2',
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '0',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+)
+[ info ] [ RUN ] app\home\controller\Wx->getQrcode[ E:\wook\201804\judeng\application\home\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.082005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SELECT `to_user_img` FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.059004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wx_user` LIMIT 1 [ RunTime:0.056003s ]
+[ error ] [8]Trying to get property of non-object[E:\wook\201804\judeng\application\home\controller\Wx.php:25]
+[ error ] [8]未定义数组索引: ticket[E:\wook\201804\judeng\application\home\controller\Wx.php:43]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-07T22:15:06+08:00 ] 0.0.0.0 POST /wx/getQrcode
+[ info ] localhost:8020/wx/getQrcode [运行时间：0.429025s][吞吐率：2.33req/s] [内存消耗：3,003.67kb] [文件加载：52]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+=======
   'doctor_id' => '105',
 )
 [ info ] [ RUN ] app\home\controller\Wx->getQrcode[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php ]
@@ -3082,6 +3180,7 @@
 [ 2018-06-07T22:25:17+08:00 ] 0.0.0.0 POST /wx/getQrcode
 [ info ] localhost:7037/wx/getQrcode [运行时间：0.666999s][吞吐率：1.50req/s] [内存消耗：2,992.57kb] [文件加载：52]
 [ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
@@ -3093,6 +3192,16 @@
   ),
 )
 [ info ] [ HEADER ] array (
+<<<<<<< HEAD
+  'content-type' => 'multipart/form-data; boundary=--------------------------383229664294956053305503',
+  'content-length' => '1056',
+  'x-original-url' => '/wx/getQrcode',
+  'postman-token' => 'a167dccf-e97e-476e-9ff6-3377eaa28cba',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+=======
   'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary82Dl5yPkGipeGNFM',
   'content-length' => '143',
   'x-original-url' => '/wx/getQrcode',
@@ -3102,12 +3211,39 @@
   'host' => 'localhost:7037',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate, br',
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
   'accept' => '*/*',
   'connection' => 'keep-alive',
   'cache-control' => 'no-cache',
 )
 [ info ] [ PARAM ] array (
   'doctor_id' => '105',
+<<<<<<< HEAD
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '0',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+)
+[ info ] [ RUN ] app\home\controller\Wx->getQrcode[ E:\wook\201804\judeng\application\home\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.076005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SELECT `to_user_img` FROM `jd_doctor` WHERE  (  member_id = 105 ) LIMIT 1 [ RunTime:0.051003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.051003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wx_user` LIMIT 1 [ RunTime:0.052003s ]
+[ error ] [8]Trying to get property of non-object[E:\wook\201804\judeng\application\home\controller\Wx.php:25]
+[ error ] [8]未定义数组索引: ticket[E:\wook\201804\judeng\application\home\controller\Wx.php:43]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-07T22:15:09+08:00 ] 0.0.0.0 POST /wx/getQrcode
+[ info ] localhost:8020/wx/getQrcode [运行时间：0.456026s][吞吐率：2.19req/s] [内存消耗：3,003.67kb] [文件加载：52]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ RUN ] app\home\controller\Wx->getQrcode[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php ]
 [ info ] [ DB ] INIT mysql
@@ -3124,6 +3260,7 @@
 [ 2018-06-07T22:25:32+08:00 ] 0.0.0.0 POST /wx/getQrcode
 [ info ] localhost:7037/wx/getQrcode [运行时间：0.535157s][吞吐率：1.87req/s] [内存消耗：2,990.64kb] [文件加载：52]
 [ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
@@ -3135,6 +3272,16 @@
   ),
 )
 [ info ] [ HEADER ] array (
+<<<<<<< HEAD
+  'content-type' => 'multipart/form-data; boundary=--------------------------737300987066011411495077',
+  'content-length' => '1056',
+  'x-original-url' => '/wx/getQrcode',
+  'postman-token' => '8c01fa11-8a71-476b-81a6-ab320b259b26',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+=======
   'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryaPRAPdwUNcIWWxKf',
   'content-length' => '143',
   'x-original-url' => '/wx/getQrcode',
@@ -3144,12 +3291,39 @@
   'host' => 'localhost:7037',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate, br',
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
   'accept' => '*/*',
   'connection' => 'keep-alive',
   'cache-control' => 'no-cache',
 )
 [ info ] [ PARAM ] array (
   'doctor_id' => '105',
+<<<<<<< HEAD
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '0',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+)
+[ info ] [ RUN ] app\home\controller\Wx->getQrcode[ E:\wook\201804\judeng\application\home\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.085005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.060003s ]
+[ sql ] [ SQL ] SELECT `to_user_img` FROM `jd_doctor` WHERE  (  member_id = 105 ) LIMIT 1 [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wx_user` LIMIT 1 [ RunTime:0.058004s ]
+[ error ] [8]Trying to get property of non-object[E:\wook\201804\judeng\application\home\controller\Wx.php:25]
+[ error ] [8]未定义数组索引: ticket[E:\wook\201804\judeng\application\home\controller\Wx.php:43]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-07T22:15:11+08:00 ] 0.0.0.0 POST /wx/getQrcode
+[ info ] localhost:8020/wx/getQrcode [运行时间：0.450026s][吞吐率：2.22req/s] [内存消耗：3,003.67kb] [文件加载：52]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ RUN ] app\home\controller\Wx->getQrcode[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php ]
 [ info ] [ DB ] INIT mysql
@@ -3165,6 +3339,7 @@
 [ 2018-06-07T22:25:34+08:00 ] 0.0.0.0 POST /wx/getQrcode
 [ info ] localhost:7037/wx/getQrcode [运行时间：0.553744s][吞吐率：1.81req/s] [内存消耗：2,990.64kb] [文件加载：52]
 [ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
@@ -3176,6 +3351,16 @@
   ),
 )
 [ info ] [ HEADER ] array (
+<<<<<<< HEAD
+  'content-type' => 'multipart/form-data; boundary=--------------------------697355785174891808494333',
+  'content-length' => '1056',
+  'x-original-url' => '/wx/getQrcode',
+  'postman-token' => 'ad92675b-ba60-4f9f-a66c-21748699c14a',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+=======
   'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryJyGLBigYQEwBsAwo',
   'content-length' => '143',
   'x-original-url' => '/wx/getQrcode',
@@ -3185,12 +3370,39 @@
   'host' => 'localhost:7037',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate, br',
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
   'accept' => '*/*',
   'connection' => 'keep-alive',
   'cache-control' => 'no-cache',
 )
 [ info ] [ PARAM ] array (
   'doctor_id' => '105',
+<<<<<<< HEAD
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '0',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+)
+[ info ] [ RUN ] app\home\controller\Wx->getQrcode[ E:\wook\201804\judeng\application\home\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.059003s ]
+[ sql ] [ SQL ] SELECT `to_user_img` FROM `jd_doctor` WHERE  (  member_id = 105 ) LIMIT 1 [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.058004s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wx_user` LIMIT 1 [ RunTime:0.058003s ]
+[ error ] [8]Trying to get property of non-object[E:\wook\201804\judeng\application\home\controller\Wx.php:25]
+[ error ] [8]未定义数组索引: ticket[E:\wook\201804\judeng\application\home\controller\Wx.php:43]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-07T22:15:13+08:00 ] 0.0.0.0 POST /wx/getQrcode
+[ info ] localhost:8020/wx/getQrcode [运行时间：0.413024s][吞吐率：2.42req/s] [内存消耗：3,003.65kb] [文件加载：52]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ RUN ] app\home\controller\Wx->getQrcode[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php ]
 [ info ] [ DB ] INIT mysql
@@ -3206,6 +3418,7 @@
 [ 2018-06-07T22:25:36+08:00 ] 0.0.0.0 POST /wx/getQrcode
 [ info ] localhost:7037/wx/getQrcode [运行时间：0.548492s][吞吐率：1.82req/s] [内存消耗：2,990.64kb] [文件加载：52]
 [ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
@@ -3217,6 +3430,16 @@
   ),
 )
 [ info ] [ HEADER ] array (
+<<<<<<< HEAD
+  'content-type' => 'multipart/form-data; boundary=--------------------------479304991133677522163766',
+  'content-length' => '1056',
+  'x-original-url' => '/wx/getQrcode',
+  'postman-token' => 'feb555f6-f9fd-434f-a8eb-c1dd8c15b2e8',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+=======
   'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryDGFy1R0Tyo25wVCg',
   'content-length' => '143',
   'x-original-url' => '/wx/getQrcode',
@@ -3226,12 +3449,39 @@
   'host' => 'localhost:7037',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate, br',
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
   'accept' => '*/*',
   'connection' => 'keep-alive',
   'cache-control' => 'no-cache',
 )
 [ info ] [ PARAM ] array (
   'doctor_id' => '105',
+<<<<<<< HEAD
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '0',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+)
+[ info ] [ RUN ] app\home\controller\Wx->getQrcode[ E:\wook\201804\judeng\application\home\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.056004s ]
+[ sql ] [ SQL ] SELECT `to_user_img` FROM `jd_doctor` WHERE  (  member_id = 105 ) LIMIT 1 [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wx_user` LIMIT 1 [ RunTime:0.057003s ]
+[ error ] [8]Trying to get property of non-object[E:\wook\201804\judeng\application\home\controller\Wx.php:25]
+[ error ] [8]未定义数组索引: ticket[E:\wook\201804\judeng\application\home\controller\Wx.php:43]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-07T22:15:15+08:00 ] 0.0.0.0 POST /wx/getQrcode
+[ info ] localhost:8020/wx/getQrcode [运行时间：0.428025s][吞吐率：2.34req/s] [内存消耗：3,003.67kb] [文件加载：52]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ RUN ] app\home\controller\Wx->getQrcode[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php ]
 [ info ] [ DB ] INIT mysql
@@ -3247,6 +3497,7 @@
 [ 2018-06-07T22:25:37+08:00 ] 0.0.0.0 POST /wx/getQrcode
 [ info ] localhost:7037/wx/getQrcode [运行时间：0.565687s][吞吐率：1.77req/s] [内存消耗：2,990.64kb] [文件加载：52]
 [ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
@@ -3258,6 +3509,16 @@
   ),
 )
 [ info ] [ HEADER ] array (
+<<<<<<< HEAD
+  'content-type' => 'multipart/form-data; boundary=--------------------------843434138562340569118811',
+  'content-length' => '1056',
+  'x-original-url' => '/wx/getQrcode',
+  'postman-token' => '3caa6f15-2c0b-4253-bacc-9d3adf54f79b',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+=======
   'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary3fZgZ7CaGkkBqXdq',
   'content-length' => '143',
   'x-original-url' => '/wx/getQrcode',
@@ -3267,12 +3528,39 @@
   'host' => 'localhost:7037',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate, br',
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
   'accept' => '*/*',
   'connection' => 'keep-alive',
   'cache-control' => 'no-cache',
 )
 [ info ] [ PARAM ] array (
   'doctor_id' => '105',
+<<<<<<< HEAD
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '0',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+)
+[ info ] [ RUN ] app\home\controller\Wx->getQrcode[ E:\wook\201804\judeng\application\home\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.080004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.056004s ]
+[ sql ] [ SQL ] SELECT `to_user_img` FROM `jd_doctor` WHERE  (  member_id = 105 ) LIMIT 1 [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wx_user` LIMIT 1 [ RunTime:0.056003s ]
+[ error ] [8]Trying to get property of non-object[E:\wook\201804\judeng\application\home\controller\Wx.php:25]
+[ error ] [8]未定义数组索引: ticket[E:\wook\201804\judeng\application\home\controller\Wx.php:43]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-07T22:15:17+08:00 ] 0.0.0.0 POST /wx/getQrcode
+[ info ] localhost:8020/wx/getQrcode [运行时间：0.419024s][吞吐率：2.39req/s] [内存消耗：3,003.67kb] [文件加载：52]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ RUN ] app\home\controller\Wx->getQrcode[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php ]
 [ info ] [ DB ] INIT mysql
@@ -3288,6 +3576,7 @@
 [ 2018-06-07T22:25:38+08:00 ] 0.0.0.0 POST /wx/getQrcode
 [ info ] localhost:7037/wx/getQrcode [运行时间：0.521117s][吞吐率：1.92req/s] [内存消耗：2,990.64kb] [文件加载：52]
 [ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
@@ -3299,6 +3588,16 @@
   ),
 )
 [ info ] [ HEADER ] array (
+<<<<<<< HEAD
+  'content-type' => 'multipart/form-data; boundary=--------------------------997013777492998001921106',
+  'content-length' => '1056',
+  'x-original-url' => '/wx/getQrcode',
+  'postman-token' => 'c92f86eb-9e62-41ca-8f56-fc4925fe2dbf',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+=======
   'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryAFb9CVrMaoIJe1wf',
   'content-length' => '143',
   'x-original-url' => '/wx/getQrcode',
@@ -3308,12 +3607,39 @@
   'host' => 'localhost:7037',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate, br',
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
   'accept' => '*/*',
   'connection' => 'keep-alive',
   'cache-control' => 'no-cache',
 )
 [ info ] [ PARAM ] array (
   'doctor_id' => '105',
+<<<<<<< HEAD
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '0',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+)
+[ info ] [ RUN ] app\home\controller\Wx->getQrcode[ E:\wook\201804\judeng\application\home\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.083004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.057004s ]
+[ sql ] [ SQL ] SELECT `to_user_img` FROM `jd_doctor` WHERE  (  member_id = 105 ) LIMIT 1 [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wx_user` LIMIT 1 [ RunTime:0.056003s ]
+[ error ] [8]Trying to get property of non-object[E:\wook\201804\judeng\application\home\controller\Wx.php:25]
+[ error ] [8]未定义数组索引: ticket[E:\wook\201804\judeng\application\home\controller\Wx.php:43]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-07T22:15:19+08:00 ] 0.0.0.0 POST /wx/getQrcode
+[ info ] localhost:8020/wx/getQrcode [运行时间：0.400023s][吞吐率：2.50req/s] [内存消耗：3,003.67kb] [文件加载：52]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ RUN ] app\home\controller\Wx->getQrcode[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php ]
 [ info ] [ DB ] INIT mysql
@@ -3329,6 +3655,7 @@
 [ 2018-06-07T22:25:40+08:00 ] 0.0.0.0 POST /wx/getQrcode
 [ info ] localhost:7037/wx/getQrcode [运行时间：0.534147s][吞吐率：1.87req/s] [内存消耗：2,990.64kb] [文件加载：52]
 [ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
@@ -3340,6 +3667,16 @@
   ),
 )
 [ info ] [ HEADER ] array (
+<<<<<<< HEAD
+  'content-type' => 'multipart/form-data; boundary=--------------------------467761241442958627648062',
+  'content-length' => '1056',
+  'x-original-url' => '/wx/getQrcode',
+  'postman-token' => 'b108e499-95dc-48d1-9577-d3d71f8e3098',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+=======
   'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary2uYtMGjo04rYrQMn',
   'content-length' => '143',
   'x-original-url' => '/wx/getQrcode',
@@ -3349,12 +3686,39 @@
   'host' => 'localhost:7037',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate, br',
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
   'accept' => '*/*',
   'connection' => 'keep-alive',
   'cache-control' => 'no-cache',
 )
 [ info ] [ PARAM ] array (
   'doctor_id' => '105',
+<<<<<<< HEAD
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '0',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+)
+[ info ] [ RUN ] app\home\controller\Wx->getQrcode[ E:\wook\201804\judeng\application\home\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.078005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT `to_user_img` FROM `jd_doctor` WHERE  (  member_id = 105 ) LIMIT 1 [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wx_user` LIMIT 1 [ RunTime:0.053003s ]
+[ error ] [8]Trying to get property of non-object[E:\wook\201804\judeng\application\home\controller\Wx.php:25]
+[ error ] [8]未定义数组索引: ticket[E:\wook\201804\judeng\application\home\controller\Wx.php:43]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-07T22:15:21+08:00 ] 0.0.0.0 POST /wx/getQrcode
+[ info ] localhost:8020/wx/getQrcode [运行时间：0.411024s][吞吐率：2.43req/s] [内存消耗：3,003.67kb] [文件加载：52]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ RUN ] app\home\controller\Wx->getQrcode[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php ]
 [ info ] [ DB ] INIT mysql
@@ -3370,6 +3734,7 @@
 [ 2018-06-07T22:25:46+08:00 ] 0.0.0.0 POST /wx/getQrcode
 [ info ] localhost:7037/wx/getQrcode [运行时间：0.543499s][吞吐率：1.84req/s] [内存消耗：2,990.64kb] [文件加载：52]
 [ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
@@ -3381,6 +3746,16 @@
   ),
 )
 [ info ] [ HEADER ] array (
+<<<<<<< HEAD
+  'content-type' => 'multipart/form-data; boundary=--------------------------955857864826950434079393',
+  'content-length' => '1056',
+  'x-original-url' => '/wx/getQrcode',
+  'postman-token' => 'c29fbcf4-965c-4324-8300-db80d92f4a49',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+=======
   'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary35yy79WF6QyjLXu4',
   'content-length' => '143',
   'x-original-url' => '/wx/getQrcode',
@@ -3390,12 +3765,39 @@
   'host' => 'localhost:7037',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate, br',
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
   'accept' => '*/*',
   'connection' => 'keep-alive',
   'cache-control' => 'no-cache',
 )
 [ info ] [ PARAM ] array (
   'doctor_id' => '105',
+<<<<<<< HEAD
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '0',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+)
+[ info ] [ RUN ] app\home\controller\Wx->getQrcode[ E:\wook\201804\judeng\application\home\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.080004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.055004s ]
+[ sql ] [ SQL ] SELECT `to_user_img` FROM `jd_doctor` WHERE  (  member_id = 105 ) LIMIT 1 [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wx_user` LIMIT 1 [ RunTime:0.055003s ]
+[ error ] [8]Trying to get property of non-object[E:\wook\201804\judeng\application\home\controller\Wx.php:25]
+[ error ] [8]未定义数组索引: ticket[E:\wook\201804\judeng\application\home\controller\Wx.php:43]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-07T22:15:23+08:00 ] 0.0.0.0 POST /wx/getQrcode
+[ info ] localhost:8020/wx/getQrcode [运行时间：0.436025s][吞吐率：2.29req/s] [内存消耗：3,003.67kb] [文件加载：52]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ RUN ] app\home\controller\Wx->getQrcode[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php ]
 [ info ] [ DB ] INIT mysql
@@ -3411,6 +3813,7 @@
 [ 2018-06-07T22:25:49+08:00 ] 0.0.0.0 POST /wx/getQrcode
 [ info ] localhost:7037/wx/getQrcode [运行时间：0.580148s][吞吐率：1.72req/s] [内存消耗：2,990.64kb] [文件加载：52]
 [ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
@@ -3422,6 +3825,16 @@
   ),
 )
 [ info ] [ HEADER ] array (
+<<<<<<< HEAD
+  'content-type' => 'multipart/form-data; boundary=--------------------------528107449585939432166258',
+  'content-length' => '1056',
+  'x-original-url' => '/wx/getQrcode',
+  'postman-token' => 'c27952bf-db2d-4d3e-b5ab-d731fc4d4c4f',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+=======
   'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarytLXyJM7lAb6QkFeJ',
   'content-length' => '143',
   'x-original-url' => '/wx/getQrcode',
@@ -3431,12 +3844,39 @@
   'host' => 'localhost:7037',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate, br',
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
   'accept' => '*/*',
   'connection' => 'keep-alive',
   'cache-control' => 'no-cache',
 )
 [ info ] [ PARAM ] array (
   'doctor_id' => '105',
+<<<<<<< HEAD
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '0',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+)
+[ info ] [ RUN ] app\home\controller\Wx->getQrcode[ E:\wook\201804\judeng\application\home\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.085005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.059003s ]
+[ sql ] [ SQL ] SELECT `to_user_img` FROM `jd_doctor` WHERE  (  member_id = 105 ) LIMIT 1 [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wx_user` LIMIT 1 [ RunTime:0.058003s ]
+[ error ] [8]Trying to get property of non-object[E:\wook\201804\judeng\application\home\controller\Wx.php:25]
+[ error ] [8]未定义数组索引: ticket[E:\wook\201804\judeng\application\home\controller\Wx.php:43]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-07T22:16:02+08:00 ] 0.0.0.0 POST /wx/getQrcode
+[ info ] localhost:8020/wx/getQrcode [运行时间：0.549031s][吞吐率：1.82req/s] [内存消耗：2,996.59kb] [文件加载：52]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ RUN ] app\home\controller\Wx->getQrcode[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php ]
 [ info ] [ DB ] INIT mysql
@@ -3452,6 +3892,7 @@
 [ 2018-06-07T22:25:51+08:00 ] 0.0.0.0 POST /wx/getQrcode
 [ info ] localhost:7037/wx/getQrcode [运行时间：0.580717s][吞吐率：1.72req/s] [内存消耗：2,990.64kb] [文件加载：52]
 [ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
@@ -3463,6 +3904,16 @@
   ),
 )
 [ info ] [ HEADER ] array (
+<<<<<<< HEAD
+  'content-type' => 'multipart/form-data; boundary=--------------------------241740682341236976819337',
+  'content-length' => '1056',
+  'x-original-url' => '/wx/getQrcode',
+  'postman-token' => '6f1556f5-acc1-4d9a-a0aa-be37f6666998',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+=======
   'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryLfbyVNpo2CaSPQOS',
   'content-length' => '143',
   'x-original-url' => '/wx/getQrcode',
@@ -3472,12 +3923,39 @@
   'host' => 'localhost:7037',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate, br',
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
   'accept' => '*/*',
   'connection' => 'keep-alive',
   'cache-control' => 'no-cache',
 )
 [ info ] [ PARAM ] array (
   'doctor_id' => '105',
+<<<<<<< HEAD
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '0',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+)
+[ info ] [ RUN ] app\home\controller\Wx->getQrcode[ E:\wook\201804\judeng\application\home\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.087005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.061003s ]
+[ sql ] [ SQL ] SELECT `to_user_img` FROM `jd_doctor` WHERE  (  member_id = 105 ) LIMIT 1 [ RunTime:0.057004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.059003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wx_user` LIMIT 1 [ RunTime:0.060004s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `to_user_img`='https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQFO8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyb1ZDMFJNaHJmWmsxMDAwMGcwN2sAAgQjPhlbAwQAAAAA',`release_date`=1528380962  WHERE  (  member_id = 105 ) [ RunTime:0.060003s ]
+[ error ] [8]Trying to get property of non-object[E:\wook\201804\judeng\application\home\controller\Wx.php:25]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-07T22:16:13+08:00 ] 0.0.0.0 POST /wx/getQrcode
+[ info ] localhost:8020/wx/getQrcode [运行时间：0.472027s][吞吐率：2.12req/s] [内存消耗：2,996.87kb] [文件加载：52]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ RUN ] app\home\controller\Wx->getQrcode[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php ]
 [ info ] [ DB ] INIT mysql
@@ -3493,6 +3971,7 @@
 [ 2018-06-07T22:25:52+08:00 ] 0.0.0.0 POST /wx/getQrcode
 [ info ] localhost:7037/wx/getQrcode [运行时间：0.515933s][吞吐率：1.94req/s] [内存消耗：2,990.64kb] [文件加载：52]
 [ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
@@ -3504,6 +3983,16 @@
   ),
 )
 [ info ] [ HEADER ] array (
+<<<<<<< HEAD
+  'content-type' => 'multipart/form-data; boundary=--------------------------733354525890842797436045',
+  'content-length' => '1056',
+  'x-original-url' => '/wx/getQrcode',
+  'postman-token' => '1f3a9ed1-8cef-46c2-acf5-2dd2bed0f1db',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+=======
   'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarynNidYA2FxG6IAg4C',
   'content-length' => '143',
   'x-original-url' => '/wx/getQrcode',
@@ -3513,12 +4002,39 @@
   'host' => 'localhost:7037',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate, br',
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
   'accept' => '*/*',
   'connection' => 'keep-alive',
   'cache-control' => 'no-cache',
 )
 [ info ] [ PARAM ] array (
   'doctor_id' => '105',
+<<<<<<< HEAD
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '0',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+)
+[ info ] [ RUN ] app\home\controller\Wx->getQrcode[ E:\wook\201804\judeng\application\home\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.059003s ]
+[ sql ] [ SQL ] SELECT `to_user_img` FROM `jd_doctor` WHERE  (  member_id = 105 ) LIMIT 1 [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.057004s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wx_user` LIMIT 1 [ RunTime:0.056003s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `to_user_img`='https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQFO8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyb1ZDMFJNaHJmWmsxMDAwMGcwN2sAAgQjPhlbAwQAAAAA',`release_date`=1528380973  WHERE  (  member_id = 105 ) [ RunTime:0.059004s ]
+[ error ] [8]Trying to get property of non-object[E:\wook\201804\judeng\application\home\controller\Wx.php:25]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-07T22:16:17+08:00 ] 0.0.0.0 POST /wx/getQrcode
+[ info ] localhost:8020/wx/getQrcode [运行时间：0.495028s][吞吐率：2.02req/s] [内存消耗：2,996.87kb] [文件加载：52]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ RUN ] app\home\controller\Wx->getQrcode[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php ]
 [ info ] [ DB ] INIT mysql
@@ -3534,6 +4050,7 @@
 [ 2018-06-07T22:25:53+08:00 ] 0.0.0.0 POST /wx/getQrcode
 [ info ] localhost:7037/wx/getQrcode [运行时间：0.555022s][吞吐率：1.80req/s] [内存消耗：2,990.64kb] [文件加载：52]
 [ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
@@ -3545,6 +4062,16 @@
   ),
 )
 [ info ] [ HEADER ] array (
+<<<<<<< HEAD
+  'content-type' => 'multipart/form-data; boundary=--------------------------586778802422202164015189',
+  'content-length' => '1056',
+  'x-original-url' => '/wx/getQrcode',
+  'postman-token' => '362ddc61-34e1-4f2c-b4ea-8c5a61aedefa',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+=======
   'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryM3Dl1b7aNt7lXEfq',
   'content-length' => '143',
   'x-original-url' => '/wx/getQrcode',
@@ -3554,12 +4081,39 @@
   'host' => 'localhost:7037',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate, br',
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
   'accept' => '*/*',
   'connection' => 'keep-alive',
   'cache-control' => 'no-cache',
 )
 [ info ] [ PARAM ] array (
   'doctor_id' => '105',
+<<<<<<< HEAD
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '0',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+)
+[ info ] [ RUN ] app\home\controller\Wx->getQrcode[ E:\wook\201804\judeng\application\home\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.059003s ]
+[ sql ] [ SQL ] SELECT `to_user_img` FROM `jd_doctor` WHERE  (  member_id = 105 ) LIMIT 1 [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wx_user` LIMIT 1 [ RunTime:0.056003s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `to_user_img`='https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQFO8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyb1ZDMFJNaHJmWmsxMDAwMGcwN2sAAgQjPhlbAwQAAAAA',`release_date`=1528380976  WHERE  (  member_id = 105 ) [ RunTime:0.059003s ]
+[ error ] [8]Trying to get property of non-object[E:\wook\201804\judeng\application\home\controller\Wx.php:25]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-07T22:16:21+08:00 ] 0.0.0.0 POST /wx/getQrcode
+[ info ] localhost:8020/wx/getQrcode [运行时间：0.472027s][吞吐率：2.12req/s] [内存消耗：2,996.87kb] [文件加载：52]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ RUN ] app\home\controller\Wx->getQrcode[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php ]
 [ info ] [ DB ] INIT mysql
@@ -3575,6 +4129,7 @@
 [ 2018-06-07T22:26:47+08:00 ] 0.0.0.0 POST /wx/getQrcode
 [ info ] localhost:7037/wx/getQrcode [运行时间：0.549082s][吞吐率：1.82req/s] [内存消耗：2,992.57kb] [文件加载：52]
 [ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
@@ -3586,6 +4141,16 @@
   ),
 )
 [ info ] [ HEADER ] array (
+<<<<<<< HEAD
+  'content-type' => 'multipart/form-data; boundary=--------------------------518716080804525263745600',
+  'content-length' => '1056',
+  'x-original-url' => '/wx/getQrcode',
+  'postman-token' => 'c95ab450-2ce0-4d5e-947b-1741e1e0d4a6',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+=======
   'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary6qNmzl8dcXJajx61',
   'content-length' => '143',
   'x-original-url' => '/wx/getQrcode',
@@ -3595,12 +4160,39 @@
   'host' => 'localhost:7037',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate, br',
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
   'accept' => '*/*',
   'connection' => 'keep-alive',
   'cache-control' => 'no-cache',
 )
 [ info ] [ PARAM ] array (
   'doctor_id' => '105',
+<<<<<<< HEAD
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '0',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+)
+[ info ] [ RUN ] app\home\controller\Wx->getQrcode[ E:\wook\201804\judeng\application\home\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.079005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT `to_user_img` FROM `jd_doctor` WHERE  (  member_id = 105 ) LIMIT 1 [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wx_user` LIMIT 1 [ RunTime:0.055003s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `to_user_img`='https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQFO8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyb1ZDMFJNaHJmWmsxMDAwMGcwN2sAAgQjPhlbAwQAAAAA',`release_date`=1528380981  WHERE  (  member_id = 105 ) [ RunTime:0.055004s ]
+[ error ] [8]Trying to get property of non-object[E:\wook\201804\judeng\application\home\controller\Wx.php:25]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-07T22:19:20+08:00 ] 0.0.0.0 POST /wx/getQrcode
+[ info ] localhost:8020/wx/getQrcode [运行时间：0.227013s][吞吐率：4.41req/s] [内存消耗：2,975.79kb] [文件加载：52]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ RUN ] app\home\controller\Wx->getQrcode[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php ]
 [ info ] [ DB ] INIT mysql
@@ -3617,6 +4209,7 @@
 [ 2018-06-07T22:26:49+08:00 ] 0.0.0.0 POST /wx/getQrcode
 [ info ] localhost:7037/wx/getQrcode [运行时间：0.564646s][吞吐率：1.77req/s] [内存消耗：2,992.57kb] [文件加载：52]
 [ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
@@ -3628,6 +4221,16 @@
   ),
 )
 [ info ] [ HEADER ] array (
+<<<<<<< HEAD
+  'content-type' => 'multipart/form-data; boundary=--------------------------273838397593101432386444',
+  'content-length' => '1056',
+  'x-original-url' => '/wx/getQrcode',
+  'postman-token' => 'd2918930-a431-4ff8-ad4e-4c6735b1eca2',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+=======
   'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryT4hVwD83JSQvfGdL',
   'content-length' => '143',
   'x-original-url' => '/wx/getQrcode',
@@ -3637,12 +4240,79 @@
   'host' => 'localhost:7037',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate, br',
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
   'accept' => '*/*',
   'connection' => 'keep-alive',
   'cache-control' => 'no-cache',
 )
 [ info ] [ PARAM ] array (
   'doctor_id' => '105',
+<<<<<<< HEAD
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '0',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+)
+[ info ] [ RUN ] app\home\controller\Wx->getQrcode[ E:\wook\201804\judeng\application\home\controller\Wx.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.080004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SELECT `to_user_img` FROM `jd_doctor` WHERE  (  member_id = 105 ) LIMIT 1 [ RunTime:0.053003s ]
+[ error ] [8]Trying to get property of non-object[E:\wook\201804\judeng\application\home\controller\Wx.php:25]
+---------------------------------------------------------------
+[ 2018-06-07T22:34:51+08:00 ] 0.0.0.0 POST /image/find
+[ info ] localhost:8020/image/find [运行时间：0.268015s][吞吐率：3.73req/s] [内存消耗：2,999.11kb] [文件加载：53]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'image',
+    2 => 'find',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------697636046353971570090411',
+  'content-length' => '1056',
+  'x-original-url' => '/image/find',
+  'postman-token' => '3b6c0b43-b3a4-4a8a-ae7a-2a378b891a4f',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '105',
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '0',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+)
+[ info ] [ RUN ] app\home\controller\Image->find[ E:\wook\201804\judeng\application\home\controller\Image.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.080004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair` [ RunTime:0.095006s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hair` WHERE  (  hair_id = '' ) LIMIT 1 [ RunTime:0.052003s ]
+---------------------------------------------------------------
+[ 2018-06-07T22:36:10+08:00 ] 0.0.0.0 POST /image/find/uid/MTM=
+[ info ] localhost:8020/image/find/uid/MTM= [运行时间：0.550032s][吞吐率：1.82req/s] [内存消耗：2,977.16kb] [文件加载：51]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ RUN ] app\home\controller\Wx->getQrcode[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php ]
 [ info ] [ DB ] INIT mysql
@@ -3659,12 +4329,28 @@
 [ 2018-06-07T22:26:50+08:00 ] 0.0.0.0 POST /wx/getQrcode
 [ info ] localhost:7037/wx/getQrcode [运行时间：0.506605s][吞吐率：1.97req/s] [内存消耗：2,992.57kb] [文件加载：52]
 [ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'home',
+<<<<<<< HEAD
+    1 => 'image',
+    2 => 'find',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------655982952995776908232889',
+  'content-length' => '1056',
+  'x-original-url' => '/image/find/uid/MTM=',
+  'postman-token' => '7ccc2504-fb4f-4741-bdbb-524c7501c6ef',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+=======
     1 => 'wx',
     2 => 'getQrcode',
   ),
@@ -3679,12 +4365,92 @@
   'host' => 'localhost:7037',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate, br',
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
   'accept' => '*/*',
   'connection' => 'keep-alive',
   'cache-control' => 'no-cache',
 )
 [ info ] [ PARAM ] array (
   'doctor_id' => '105',
+<<<<<<< HEAD
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '0',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+  'uid' => 'MTM=',
+)
+[ info ] [ RUN ] app\home\controller\Image->find[ E:\wook\201804\judeng\application\home\controller\Image.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.080005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hair` WHERE  (  hair_id = '13' ) LIMIT 1 [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair_attach` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hair_attach` WHERE  (  hair_id = 13 ) [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.056004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_title` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_title` WHERE  `title_id` IN (15) [ RunTime:0.054003s ]
+---------------------------------------------------------------
+[ 2018-06-07T22:36:26+08:00 ] 0.0.0.0 POST /image/find/uid/MTM=
+[ info ] localhost:8020/image/find/uid/MTM= [运行时间：0.533030s][吞吐率：1.88req/s] [内存消耗：2,977.55kb] [文件加载：51]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'image',
+    2 => 'find',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------056839373197744579969184',
+  'content-length' => '1056',
+  'x-original-url' => '/image/find/uid/MTM=',
+  'postman-token' => '285abec1-0721-49b6-8fa5-c8f6dfe97188',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '105',
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '0',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+  'uid' => 'MTM=',
+)
+[ info ] [ RUN ] app\home\controller\Image->find[ E:\wook\201804\judeng\application\home\controller\Image.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.078004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hair` WHERE  (  hair_id = '13' ) LIMIT 1 [ RunTime:0.051003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair_attach` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hair_attach` WHERE  (  hair_id = 13 ) [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_title` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_title` WHERE  `title_id` IN (15) [ RunTime:0.052003s ]
+---------------------------------------------------------------
+[ 2018-06-07T22:36:29+08:00 ] 0.0.0.0 POST /image/find/uid/MTM=
+[ info ] localhost:8020/image/find/uid/MTM= [运行时间：0.540031s][吞吐率：1.85req/s] [内存消耗：2,977.55kb] [文件加载：51]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+=======
 )
 [ info ] [ RUN ] app\home\controller\Wx->getQrcode[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Wx.php ]
 [ info ] [ DB ] INIT mysql
@@ -3701,12 +4467,111 @@
 [ 2018-06-07T22:27:09+08:00 ] 0.0.0.0 GET /member/plan?id=234
 [ info ] localhost:7037/member/plan?id=234 [运行时间：0.729712s][吞吐率：1.37req/s] [内存消耗：3,193.25kb] [文件加载：54]
 [ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'home',
+<<<<<<< HEAD
+    1 => 'image',
+    2 => 'find',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------770451098545833083886731',
+  'content-length' => '1056',
+  'x-original-url' => '/image/find/uid/MTM=',
+  'postman-token' => '5f5a6498-9468-4a66-9320-0ea88d647b25',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '105',
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '0',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+  'uid' => 'MTM=',
+)
+[ info ] [ RUN ] app\home\controller\Image->find[ E:\wook\201804\judeng\application\home\controller\Image.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.077004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hair` WHERE  (  hair_id = '13' ) LIMIT 1 [ RunTime:0.051003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair_attach` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hair_attach` WHERE  (  hair_id = 13 ) [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_title` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_title` WHERE  `title_id` IN (15) [ RunTime:0.053003s ]
+---------------------------------------------------------------
+[ 2018-06-07T22:36:49+08:00 ] 0.0.0.0 POST /image/find/uid/MTM=
+[ info ] localhost:8020/image/find/uid/MTM= [运行时间：0.553032s][吞吐率：1.81req/s] [内存消耗：2,977.55kb] [文件加载：51]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'image',
+    2 => 'find',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------569962971071057015147884',
+  'content-length' => '1056',
+  'x-original-url' => '/image/find/uid/MTM=',
+  'postman-token' => 'fc50f422-0b7a-4ab0-9d4b-43dc2af3dbb0',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '105',
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '0',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+  'uid' => 'MTM=',
+)
+[ info ] [ RUN ] app\home\controller\Image->find[ E:\wook\201804\judeng\application\home\controller\Image.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.080005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hair` WHERE  (  hair_id = '13' ) LIMIT 1 [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair_attach` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hair_attach` WHERE  (  hair_id = 13 ) [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.055004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_title` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_title` WHERE  `title_id` IN (15) [ RunTime:0.053003s ]
+---------------------------------------------------------------
+[ 2018-06-07T22:37:09+08:00 ] 0.0.0.0 POST /image/find/uid/MTM=
+[ info ] localhost:8020/image/find/uid/MTM= [运行时间：0.540031s][吞吐率：1.85req/s] [内存消耗：2,977.54kb] [文件加载：51]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+=======
     1 => 'member',
     2 => 'plan',
   ),
@@ -3745,12 +4610,111 @@
 [ 2018-06-07T22:27:10+08:00 ] 0.0.0.0 GET /public/home/image/bg01.jpg
 [ info ] localhost:7037/public/home/image/bg01.jpg [运行时间：0.051992s][吞吐率：19.23req/s] [内存消耗：1,712.41kb] [文件加载：41]
 [ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'home',
+<<<<<<< HEAD
+    1 => 'image',
+    2 => 'find',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------169632248564495172794221',
+  'content-length' => '1056',
+  'x-original-url' => '/image/find/uid/MTM=',
+  'postman-token' => 'cf525a60-cee5-4610-8ef0-9a94cf2c5ec0',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '105',
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '0',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+  'uid' => 'MTM=',
+)
+[ info ] [ RUN ] app\home\controller\Image->find[ E:\wook\201804\judeng\application\home\controller\Image.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.078004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hair` WHERE  (  hair_id = '13' ) LIMIT 1 [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair_attach` [ RunTime:0.051003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hair_attach` WHERE  (  hair_id = 13 ) [ RunTime:0.051003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_title` [ RunTime:0.051003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_title` WHERE  `title_id` IN (15) [ RunTime:0.052003s ]
+---------------------------------------------------------------
+[ 2018-06-07T22:37:26+08:00 ] 0.0.0.0 POST /image/find/uid/MTM=
+[ info ] localhost:8020/image/find/uid/MTM= [运行时间：0.563032s][吞吐率：1.78req/s] [内存消耗：2,977.25kb] [文件加载：51]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'image',
+    2 => 'find',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------337395797467579180287137',
+  'content-length' => '1056',
+  'x-original-url' => '/image/find/uid/MTM=',
+  'postman-token' => 'd6c0719d-b446-46b1-89c8-1522c1248cd0',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '105',
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '0',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+  'uid' => 'MTM=',
+)
+[ info ] [ RUN ] app\home\controller\Image->find[ E:\wook\201804\judeng\application\home\controller\Image.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.081005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hair` WHERE  (  hair_id = '13' ) LIMIT 1 [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair_attach` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hair_attach` WHERE  (  hair_id = 13 ) [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.056004s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_title` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_title` WHERE  `title_id` IN (15) [ RunTime:0.055003s ]
+---------------------------------------------------------------
+[ 2018-06-07T22:37:35+08:00 ] 0.0.0.0 POST /image/find/uid/MTM=
+[ info ] localhost:8020/image/find/uid/MTM= [运行时间：0.542031s][吞吐率：1.84req/s] [内存消耗：2,977.28kb] [文件加载：51]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+=======
     1 => 'public',
     2 => 'home',
   ),
@@ -3776,12 +4740,111 @@
 [ 2018-06-07T22:27:10+08:00 ] 0.0.0.0 GET /public/home/image/bg02.jpg
 [ info ] localhost:7037/public/home/image/bg02.jpg [运行时间：0.050525s][吞吐率：19.79req/s] [内存消耗：1,712.41kb] [文件加载：41]
 [ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'home',
+<<<<<<< HEAD
+    1 => 'image',
+    2 => 'find',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------435461394166789854179921',
+  'content-length' => '1056',
+  'x-original-url' => '/image/find/uid/MTM=',
+  'postman-token' => '52794e39-f8a5-4419-a9a3-032ff1be4947',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '105',
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '0',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+  'uid' => 'MTM=',
+)
+[ info ] [ RUN ] app\home\controller\Image->find[ E:\wook\201804\judeng\application\home\controller\Image.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.079004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hair` WHERE  (  hair_id = '13' ) LIMIT 1 [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair_attach` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hair_attach` WHERE  (  hair_id = 13 ) [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_title` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_title` WHERE  `title_id` IN (15) [ RunTime:0.051003s ]
+---------------------------------------------------------------
+[ 2018-06-07T22:37:55+08:00 ] 0.0.0.0 POST /image/find/uid/MTM=
+[ info ] localhost:8020/image/find/uid/MTM= [运行时间：0.536031s][吞吐率：1.87req/s] [内存消耗：2,977.56kb] [文件加载：51]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'image',
+    2 => 'find',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------686468883962100893616951',
+  'content-length' => '1056',
+  'x-original-url' => '/image/find/uid/MTM=',
+  'postman-token' => '0686c7a6-9653-4716-bf18-6f1f4a4d9fa6',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '105',
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '0',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+  'uid' => 'MTM=',
+)
+[ info ] [ RUN ] app\home\controller\Image->find[ E:\wook\201804\judeng\application\home\controller\Image.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.078004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hair` WHERE  (  hair_id = '13' ) LIMIT 1 [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair_attach` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hair_attach` WHERE  (  hair_id = 13 ) [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_title` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_title` WHERE  `title_id` IN (15) [ RunTime:0.052003s ]
+---------------------------------------------------------------
+[ 2018-06-07T22:38:14+08:00 ] 0.0.0.0 POST /image/find/uid/MTM=
+[ info ] localhost:8020/image/find/uid/MTM= [运行时间：0.894051s][吞吐率：1.12req/s] [内存消耗：2,977.91kb] [文件加载：51]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+=======
     1 => 'public',
     2 => 'home',
   ),
@@ -3807,12 +4870,60 @@
 [ 2018-06-07T22:27:48+08:00 ] 0.0.0.0 GET /member/plan?id=234
 [ info ] localhost:7037/member/plan?id=234 [运行时间：1.112588s][吞吐率：0.90req/s] [内存消耗：3,193.25kb] [文件加载：54]
 [ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'home',
+<<<<<<< HEAD
+    1 => 'image',
+    2 => 'find',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------577300779339947988875565',
+  'content-length' => '1056',
+  'x-original-url' => '/image/find/uid/MTM=',
+  'postman-token' => '9af3835c-ccfb-418d-9230-1958f753c7a8',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '105',
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '0',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+  'uid' => 'MTM=',
+)
+[ info ] [ RUN ] app\home\controller\Image->find[ E:\wook\201804\judeng\application\home\controller\Image.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.080004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hair` WHERE  (  hair_id = '13' ) LIMIT 1 [ RunTime:0.054004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair_attach` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hair_attach` WHERE  (  hair_id = 13 ) [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_title` [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_title` WHERE  `title_id` IN (15) [ RunTime:0.054003s ]
+---------------------------------------------------------------
+[ 2018-06-07T22:38:25+08:00 ] 0.0.0.0 POST /image/find/uid/MTM=
+[ info ] localhost:8020/image/find/uid/MTM= [运行时间：0.629036s][吞吐率：1.59req/s] [内存消耗：2,977.55kb] [文件加载：51]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+=======
     1 => 'member',
     2 => 'plan',
   ),
@@ -3851,12 +4962,60 @@
 [ 2018-06-07T22:27:48+08:00 ] 0.0.0.0 GET /public/home/image/bg01.jpg
 [ info ] localhost:7037/public/home/image/bg01.jpg [运行时间：0.054867s][吞吐率：18.23req/s] [内存消耗：1,712.41kb] [文件加载：41]
 [ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'home',
+<<<<<<< HEAD
+    1 => 'image',
+    2 => 'find',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------775803054174138612504786',
+  'content-length' => '1056',
+  'x-original-url' => '/image/find/uid/MTM=',
+  'postman-token' => '984ccc6f-e449-465b-b385-c1e96e434573',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '105',
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '0',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+  'uid' => 'MTM=',
+)
+[ info ] [ RUN ] app\home\controller\Image->find[ E:\wook\201804\judeng\application\home\controller\Image.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.083005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair` [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hair` WHERE  (  hair_id = '13' ) LIMIT 1 [ RunTime:0.057004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair_attach` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hair_attach` WHERE  (  hair_id = 13 ) [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.110007s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_title` [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_title` WHERE  `title_id` IN (15) [ RunTime:0.056003s ]
+---------------------------------------------------------------
+[ 2018-06-07T22:39:04+08:00 ] 0.0.0.0 POST /image/find/uid/MTM=
+[ info ] localhost:8020/image/find/uid/MTM= [运行时间：0.857049s][吞吐率：1.17req/s] [内存消耗：2,978.52kb] [文件加载：51]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+=======
     1 => 'public',
     2 => 'home',
   ),
@@ -3882,12 +5041,60 @@
 [ 2018-06-07T22:27:48+08:00 ] 0.0.0.0 GET /public/home/image/bg02.jpg
 [ info ] localhost:7037/public/home/image/bg02.jpg [运行时间：0.137190s][吞吐率：7.29req/s] [内存消耗：1,712.41kb] [文件加载：41]
 [ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'home',
+<<<<<<< HEAD
+    1 => 'image',
+    2 => 'find',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------977285940198558623040483',
+  'content-length' => '1056',
+  'x-original-url' => '/image/find/uid/MTM=',
+  'postman-token' => '34b714f0-fd0e-4acd-bd55-044f7d49ce42',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '105',
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '0',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+  'uid' => 'MTM=',
+)
+[ info ] [ RUN ] app\home\controller\Image->find[ E:\wook\201804\judeng\application\home\controller\Image.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.078004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hair` WHERE  (  hair_id = '13' ) LIMIT 1 [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair_attach` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hair_attach` WHERE  (  hair_id = 13 ) [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.054004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_title` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_title` WHERE  `title_id` IN (15) [ RunTime:0.053003s ]
+---------------------------------------------------------------
+[ 2018-06-07T22:39:17+08:00 ] 0.0.0.0 POST /image/find/uid/MTM=
+[ info ] localhost:8020/image/find/uid/MTM= [运行时间：0.946054s][吞吐率：1.06req/s] [内存消耗：3,117.23kb] [文件加载：57]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+=======
     1 => 'public',
     2 => 'home',
   ),
@@ -3913,12 +5120,61 @@
 [ 2018-06-07T22:27:49+08:00 ] 0.0.0.0 GET /member/plan?id=234
 [ info ] localhost:7037/member/plan?id=234 [运行时间：0.744920s][吞吐率：1.34req/s] [内存消耗：3,193.25kb] [文件加载：54]
 [ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'home',
+<<<<<<< HEAD
+    1 => 'image',
+    2 => 'find',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------112464144472012550296052',
+  'content-length' => '1056',
+  'x-original-url' => '/image/find/uid/MTM=',
+  'postman-token' => '980f3234-287a-4770-b56e-f896aa52a226',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '105',
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '0',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+  'uid' => 'MTM=',
+)
+[ info ] [ RUN ] app\home\controller\Image->find[ E:\wook\201804\judeng\application\home\controller\Image.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair` [ RunTime:0.057004s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hair` WHERE  (  hair_id = '13' ) LIMIT 1 [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair_attach` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hair_attach` WHERE  (  hair_id = 13 ) [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.057004s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_title` [ RunTime:0.062003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_title` WHERE  `title_id` IN (15) [ RunTime:0.056004s ]
+[ error ] [2]Illegal string offset 'code'[E:\wook\201804\judeng\application\home\controller\Image.php:24]
+---------------------------------------------------------------
+[ 2018-06-07T22:39:57+08:00 ] 0.0.0.0 POST /image/find/uid/MTM=
+[ info ] localhost:8020/image/find/uid/MTM= [运行时间：0.913052s][吞吐率：1.10req/s] [内存消耗：2,978.64kb] [文件加载：51]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+=======
     1 => 'member',
     2 => 'plan',
   ),
@@ -3957,12 +5213,60 @@
 [ 2018-06-07T22:27:49+08:00 ] 0.0.0.0 GET /public/home/image/bg02.jpg
 [ info ] localhost:7037/public/home/image/bg02.jpg [运行时间：0.055367s][吞吐率：18.06req/s] [内存消耗：1,712.41kb] [文件加载：41]
 [ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'home',
+<<<<<<< HEAD
+    1 => 'image',
+    2 => 'find',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------649094994687516525662176',
+  'content-length' => '1056',
+  'x-original-url' => '/image/find/uid/MTM=',
+  'postman-token' => 'd2800a71-8e4d-4b81-8807-e9cf972fda30',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '105',
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '0',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+  'uid' => 'MTM=',
+)
+[ info ] [ RUN ] app\home\controller\Image->find[ E:\wook\201804\judeng\application\home\controller\Image.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair` [ RunTime:0.059003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hair` WHERE  (  hair_id = '13' ) LIMIT 1 [ RunTime:0.058004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair_attach` [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hair_attach` WHERE  (  hair_id = 13 ) [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.060003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.060004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_title` [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_title` WHERE  `title_id` IN (15) [ RunTime:0.059003s ]
+---------------------------------------------------------------
+[ 2018-06-07T22:40:43+08:00 ] 0.0.0.0 POST /image/find/uid/MTM=
+[ info ] localhost:8020/image/find/uid/MTM= [运行时间：0.882051s][吞吐率：1.13req/s] [内存消耗：3,146.72kb] [文件加载：57]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+=======
     1 => 'public',
     2 => 'home',
   ),
@@ -3988,12 +5292,61 @@
 [ 2018-06-07T22:27:49+08:00 ] 0.0.0.0 GET /public/home/image/bg01.jpg
 [ info ] localhost:7037/public/home/image/bg01.jpg [运行时间：0.084272s][吞吐率：11.87req/s] [内存消耗：1,712.41kb] [文件加载：41]
 [ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'home',
+<<<<<<< HEAD
+    1 => 'image',
+    2 => 'find',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------759559591972215832133179',
+  'content-length' => '1056',
+  'x-original-url' => '/image/find/uid/MTM=',
+  'postman-token' => '33685156-da89-4dbf-876a-1665442d3797',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '105',
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '0',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+  'uid' => 'MTM=',
+)
+[ info ] [ RUN ] app\home\controller\Image->find[ E:\wook\201804\judeng\application\home\controller\Image.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.077004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hair` WHERE  (  hair_id = '13' ) LIMIT 1 [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair_attach` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hair_attach` WHERE  (  hair_id = 13 ) [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_title` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_title` WHERE  `title_id` IN (15) [ RunTime:0.052003s ]
+[ error ] [1]Cannot use object of type stdClass as array[E:\wook\201804\judeng\application\home\controller\Image.php:26]
+---------------------------------------------------------------
+[ 2018-06-07T22:40:53+08:00 ] 0.0.0.0 POST /image/find/uid/MTM=
+[ info ] localhost:8020/image/find/uid/MTM= [运行时间：0.855049s][吞吐率：1.17req/s] [内存消耗：2,979.99kb] [文件加载：51]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+=======
     1 => 'public',
     2 => 'home',
   ),
@@ -4019,12 +5372,60 @@
 [ 2018-06-07T22:27:51+08:00 ] 0.0.0.0 GET /member/plan?id=234
 [ info ] localhost:7037/member/plan?id=234 [运行时间：0.702314s][吞吐率：1.42req/s] [内存消耗：3,193.25kb] [文件加载：54]
 [ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'home',
+<<<<<<< HEAD
+    1 => 'image',
+    2 => 'find',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------785640917913308276610714',
+  'content-length' => '1056',
+  'x-original-url' => '/image/find/uid/MTM=',
+  'postman-token' => '2ed17285-c576-4e3f-aa2c-50bcad42b73c',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '105',
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '0',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+  'uid' => 'MTM=',
+)
+[ info ] [ RUN ] app\home\controller\Image->find[ E:\wook\201804\judeng\application\home\controller\Image.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.078004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hair` WHERE  (  hair_id = '13' ) LIMIT 1 [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair_attach` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hair_attach` WHERE  (  hair_id = 13 ) [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.055004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_title` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_title` WHERE  `title_id` IN (15) [ RunTime:0.052003s ]
+---------------------------------------------------------------
+[ 2018-06-07T22:41:49+08:00 ] 0.0.0.0 POST /image/find/uid/MTM=
+[ info ] localhost:8020/image/find/uid/MTM= [运行时间：0.909052s][吞吐率：1.10req/s] [内存消耗：2,980.23kb] [文件加载：51]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+=======
     1 => 'member',
     2 => 'plan',
   ),
@@ -4063,12 +5464,60 @@
 [ 2018-06-07T22:27:51+08:00 ] 0.0.0.0 GET /public/home/image/bg02.jpg
 [ info ] localhost:7037/public/home/image/bg02.jpg [运行时间：0.083190s][吞吐率：12.02req/s] [内存消耗：1,712.41kb] [文件加载：41]
 [ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'home',
+<<<<<<< HEAD
+    1 => 'image',
+    2 => 'find',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------499999917299232319607225',
+  'content-length' => '1056',
+  'x-original-url' => '/image/find/uid/MTM=',
+  'postman-token' => 'a59d9686-5255-48d7-906d-90dfd9db68f9',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '105',
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '0',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+  'uid' => 'MTM=',
+)
+[ info ] [ RUN ] app\home\controller\Image->find[ E:\wook\201804\judeng\application\home\controller\Image.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.080005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hair` WHERE  (  hair_id = '13' ) LIMIT 1 [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair_attach` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hair_attach` WHERE  (  hair_id = 13 ) [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_title` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_title` WHERE  `title_id` IN (15) [ RunTime:0.053003s ]
+---------------------------------------------------------------
+[ 2018-06-07T22:41:57+08:00 ] 0.0.0.0 POST /image/find/uid/MTM=
+[ info ] localhost:8020/image/find/uid/MTM= [运行时间：0.941054s][吞吐率：1.06req/s] [内存消耗：2,980.23kb] [文件加载：51]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+=======
     1 => 'public',
     2 => 'home',
   ),
@@ -4094,12 +5543,60 @@
 [ 2018-06-07T22:27:51+08:00 ] 0.0.0.0 GET /public/home/image/bg01.jpg
 [ info ] localhost:7037/public/home/image/bg01.jpg [运行时间：0.087214s][吞吐率：11.47req/s] [内存消耗：1,712.41kb] [文件加载：41]
 [ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'home',
+<<<<<<< HEAD
+    1 => 'image',
+    2 => 'find',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------250812861408622852954242',
+  'content-length' => '1056',
+  'x-original-url' => '/image/find/uid/MTM=',
+  'postman-token' => 'bf587410-a582-432b-8f03-eca8c1910971',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '105',
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '0',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+  'uid' => 'MTM=',
+)
+[ info ] [ RUN ] app\home\controller\Image->find[ E:\wook\201804\judeng\application\home\controller\Image.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.083005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair` [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hair` WHERE  (  hair_id = '13' ) LIMIT 1 [ RunTime:0.109006s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair_attach` [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hair_attach` WHERE  (  hair_id = 13 ) [ RunTime:0.056004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_title` [ RunTime:0.056004s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_title` WHERE  `title_id` IN (15) [ RunTime:0.057003s ]
+---------------------------------------------------------------
+[ 2018-06-07T22:42:12+08:00 ] 0.0.0.0 POST /image/find/uid/MTM=
+[ info ] localhost:8020/image/find/uid/MTM= [运行时间：0.867049s][吞吐率：1.15req/s] [内存消耗：2,980.45kb] [文件加载：51]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+=======
     1 => 'public',
     2 => 'home',
   ),
@@ -4125,12 +5622,60 @@
 [ 2018-06-07T22:27:54+08:00 ] 0.0.0.0 GET /member/plan?id=234
 [ info ] localhost:7037/member/plan?id=234 [运行时间：0.713752s][吞吐率：1.40req/s] [内存消耗：3,193.25kb] [文件加载：54]
 [ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'home',
+<<<<<<< HEAD
+    1 => 'image',
+    2 => 'find',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------799187967786210790028757',
+  'content-length' => '1056',
+  'x-original-url' => '/image/find/uid/MTM=',
+  'postman-token' => '6c305884-3323-454e-8d12-b0b6fdc227af',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '105',
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '0',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+  'uid' => 'MTM=',
+)
+[ info ] [ RUN ] app\home\controller\Image->find[ E:\wook\201804\judeng\application\home\controller\Image.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.079004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hair` WHERE  (  hair_id = '13' ) LIMIT 1 [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair_attach` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hair_attach` WHERE  (  hair_id = 13 ) [ RunTime:0.054004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_title` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_title` WHERE  `title_id` IN (15) [ RunTime:0.053003s ]
+---------------------------------------------------------------
+[ 2018-06-07T22:42:21+08:00 ] 0.0.0.0 POST /image/find/uid/MTM=
+[ info ] localhost:8020/image/find/uid/MTM= [运行时间：0.885051s][吞吐率：1.13req/s] [内存消耗：2,979.75kb] [文件加载：51]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+=======
     1 => 'member',
     2 => 'plan',
   ),
@@ -4169,12 +5714,60 @@
 [ 2018-06-07T22:27:54+08:00 ] 0.0.0.0 GET /public/home/image/bg01.jpg
 [ info ] localhost:7037/public/home/image/bg01.jpg [运行时间：0.067259s][吞吐率：14.87req/s] [内存消耗：1,712.41kb] [文件加载：41]
 [ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'home',
+<<<<<<< HEAD
+    1 => 'image',
+    2 => 'find',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------021873751936393988650431',
+  'content-length' => '1056',
+  'x-original-url' => '/image/find/uid/MTM=',
+  'postman-token' => '9e48d871-a731-4a57-b5e3-0447f8409b41',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '105',
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '0',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+  'uid' => 'MTM=',
+)
+[ info ] [ RUN ] app\home\controller\Image->find[ E:\wook\201804\judeng\application\home\controller\Image.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair` [ RunTime:0.059003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hair` WHERE  (  hair_id = '13' ) LIMIT 1 [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair_attach` [ RunTime:0.059004s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hair_attach` WHERE  (  hair_id = 13 ) [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.059003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_title` [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_title` WHERE  `title_id` IN (15) [ RunTime:0.058004s ]
+---------------------------------------------------------------
+[ 2018-06-07T22:46:59+08:00 ] 0.0.0.0 POST /image/find/uid/MTM=
+[ info ] localhost:8020/image/find/uid/MTM= [运行时间：0.672038s][吞吐率：1.49req/s] [内存消耗：3,260.01kb] [文件加载：56]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+=======
     1 => 'public',
     2 => 'home',
   ),
@@ -4200,12 +5793,63 @@
 [ 2018-06-07T22:27:54+08:00 ] 0.0.0.0 GET /public/home/image/bg02.jpg
 [ info ] localhost:7037/public/home/image/bg02.jpg [运行时间：0.068635s][吞吐率：14.57req/s] [内存消耗：1,712.41kb] [文件加载：41]
 [ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'home',
+<<<<<<< HEAD
+    1 => 'image',
+    2 => 'find',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------031758962703251106836666',
+  'content-length' => '1056',
+  'x-original-url' => '/image/find/uid/MTM=',
+  'postman-token' => '41ea8c7b-dd21-4775-a755-f4c405c598a0',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '105',
+  'type' => '1',
+  'order_id' => '168',
+  'is_hair' => '0',
+  'doctor_member' => '医生名',
+  'member_id' => '34,31',
+  'is_type' => '1',
+  'content' => '测试',
+  'url' => 'www.baidu.com',
+  'uid' => 'MTM=',
+)
+[ info ] [ RUN ] app\home\controller\Image->find[ E:\wook\201804\judeng\application\home\controller\Image.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\wook\201804\judeng/application/home\view\hair\template.html [ array (
+  0 => 'setting',
+  1 => 'hair',
+  2 => 'hairattach',
+  3 => 'doctor',
+  4 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair` [ RunTime:0.057004s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hair` WHERE  (  hair_id = '13' ) LIMIT 1 [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hair_attach` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_hair_attach` WHERE  (  hair_id = 13 ) [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.058004s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id = 2 ) LIMIT 1 [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_title` [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_title` WHERE  `title_id` IN (15) [ RunTime:0.056003s ]
+=======
     1 => 'public',
     2 => 'home',
   ),
@@ -4227,3 +5871,4 @@
   'image' => 'bg02.jpg',
 )
 [ info ] [ LOG ] INIT File
+>>>>>>> e4f5646c0b6a22000ecc4fcc113d5100825a5ed0
