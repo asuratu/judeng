@@ -109,14 +109,14 @@ class Order extends Common
             }
             $houseAllArr['pic'] = config('url') . $houseAllArr['pic'];
 
-            $mainInfo['state_id'] = $houseAllArr['state_id'];
-            $mainInfo['prescription_id'] = $houseAllArr['prescription_id'];
-            $mainInfo['area_id'] = $data['area_id'];
-            $mainInfo['relation_id'] = $houseAllArr['relation_id'];
-            $mainInfo['make'] = $houseAllArr['make'];
-            $mainInfo['taking'] = $houseAllArr['taking'];
-            $mainInfo['weight'] = $houseAllArr['weight'];
-            $mainInfo['instructions'] = $houseAllArr['instructions'];
+            $mainInfo['state_id'] = $houseAllArr['state_id'] ?: 8;
+            $mainInfo['prescription_id'] = $houseAllArr['prescription_id'] ?: 1;
+            $mainInfo['area_id'] = $data['area_id'] ?: 2;
+            $mainInfo['relation_id'] = $houseAllArr['relation_id'] ?: 54;
+            $mainInfo['make'] = $houseAllArr['make'] ?: '*水丸需整体制作，请按照总量选#克数#，#1000g#起做';
+            $mainInfo['taking'] = $houseAllArr['taking'] ?: '共#7#剂，每日#1#剂，1剂分#1#次使用';
+            $mainInfo['weight'] = $houseAllArr['weight'] ?: '#0-0ｇ#，(制丸会减少药材总重10%-30%)';
+            $mainInfo['instructions'] = $houseAllArr['instructions'] ?: '';
             $mainInfo['pic'] = $houseAllArr['pic'];
             $mainInfo['state_house_name'] = $houseAllArr['state_name'].'.'.$houseAllArr['area_name'].'-'.$houseAllArr['prescription_name'];
             $mainInfo['left_num'] = $leftNum-1;

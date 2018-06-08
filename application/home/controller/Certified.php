@@ -133,6 +133,8 @@ class Certified extends Common
                         $bankDetail['member_id'] = $data['member_id'];
                         $_identity2 = db('deposit')->insert($bankDetail);
                     }
+                } else {
+                    $_identity2 = true;
                 }
 
 

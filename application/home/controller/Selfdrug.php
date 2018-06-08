@@ -41,24 +41,27 @@ class Selfdrug extends Common
             $alertArr = array();//是否下架
 
             $data['prescription_id'] = 1;//默认从1药房发药
-            foreach (json_decode(base64_decode($data['content'])) as $key => $val) {
-                $drugDetailMap['Is_user'] = 1;
+            if (count(json_decode(base64_decode($data['content']))) > 0) {
+                foreach (json_decode(base64_decode($data['content'])) as $key => $val) {
+                    $drugDetailMap['Is_user'] = 1;
 
-                //TODO 此处不能用drug_id来定位药材, 应该用药房id和药品统一名(别名)
-                $drugDetailMap['prescription_id'] = $data['prescription_id'];
-                $drugDetailMap['nick_name'] = $val[1];
+                    //TODO 此处不能用drug_id来定位药材, 应该用药房id和药品统一名(别名)
+                    $drugDetailMap['prescription_id'] = $data['prescription_id'];
+                    $drugDetailMap['nick_name'] = $val[1];
 
-                $list=db('drug')->where($drugDetailMap)->field("`drug_id`,`nick_name`,`Drug_unit`,`price`,`num`, `other_name`")->find();
-                array_push($otherNameArr, $list['other_name']);
-                if (!$list) {
-                    array_push($alertArr, $val[1]);
-                }
-                $list['total_price'] = $val[2]*$list['price'];
-                $drugSumPrice += $list['total_price'];
-                if ($val[2] > $list['num'] - config('lessCount') ) {
-                    array_push($lessCountArr, $val[1]);
+                    $list=db('drug')->where($drugDetailMap)->field("`drug_id`,`nick_name`,`Drug_unit`,`price`,`num`, `other_name`")->find();
+                    array_push($otherNameArr, $list['other_name']);
+                    if (!$list) {
+                        array_push($alertArr, $val[1]);
+                    }
+                    $list['total_price'] = $val[2]*$list['price'];
+                    $drugSumPrice += $list['total_price'];
+                    if ($val[2] > $list['num'] - config('lessCount') ) {
+                        array_push($lessCountArr, $val[1]);
+                    }
                 }
             }
+
 
             if (count($alertArr) > 0) {
                 ajaxReturn(array('code'=>0,'info'=>'药材['.implode(',', $alertArr).']在该药房已下架!','data'=>[]));

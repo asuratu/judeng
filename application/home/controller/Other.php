@@ -291,6 +291,25 @@ class Other extends Common
         }
     }
 
+    public function addQrCode() {
+        if($this->request->isPost())
+        {
+            $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
+            if($data['num']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+            }
+            $registUrl = config('url').'/member/webRegist?id='.$data['num'];
+
+            ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>[createPic($registUrl)]));
+        }
+    }
+
     // 药品名，简拼其他的修改
     public function jianpin() {
         if($this->request->isPost())
