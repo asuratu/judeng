@@ -542,6 +542,63 @@ class Member extends Common
     }
 
     /**
+     * @Title: invite
+     * @Description: TODO 医生邀请患者的二维码(H5)
+     * @return mixed
+     * @author TUGE
+     * @date
+     */
+    public function attention() {
+        $map['doctor_id'] = $_GET['doctorId'];
+        //获取二维码
+        $result = curlPost(config('url').'/wx/getQrcode', $map);
+//        $result = curlPost('http://localhost:7037/wx/getQrcode', $map);
+        if ($result && json_decode($result, true)['code'] == 1) {
+            $information['url'] = json_decode($result, true)['data'][0];
+        } else {
+            return 404;
+        }
+        //获取医生信息
+        $doctorInfo = json_decode(curlPost(config('url').'/member/getDoctorInfo', array('member_id'=>$_GET['doctorId'])), true);
+        if ($doctorInfo && $doctorInfo['code'] == 1) {
+            $information['face_photo'] = $doctorInfo['data'][0]['face_photo'];
+            $information['true_name'] = $doctorInfo['data'][0]['true_name'];
+            $information['has_self_goods'] = $doctorInfo['data'][0]['has_self_goods'];
+            $information['is_clinic'] = $doctorInfo['data'][0]['is_clinic'];
+            $information['recom'] = $doctorInfo['data'][0]['recom'];
+            $information['title_str'] = explode(',',$doctorInfo['data'][0]['title_str']);
+        } else {
+            return 404;
+        }
+        $this->assign('info',$information);
+        return $this->fetch('doctor/attention');
+    }
+
+    /**
+     * @Title: inviteDoctors
+     * @Description: TODO 医生邀请医生入驻的二维码(H5)
+     * @return int|mixed
+     * @author TUGE
+     * @date
+     */
+    public function inviteDoctors() {
+        $map['doctor_id'] = $_GET['doctorId'];
+        //获取医生信息
+        $doctorInfo = json_decode(curlPost(config('url').'/member/getDoctorInfo', array('member_id'=>$_GET['doctorId'])), true);
+        if ($doctorInfo && $doctorInfo['code'] == 1) {
+            $information['to_doctor_url'] = $doctorInfo['data'][0]['to_doctor_url'];
+            $information['true_name'] = $doctorInfo['data'][0]['true_name'];
+        } else {
+            return 404;
+        }
+        $this->assign('info',$information);
+        return $this->fetch('doctor/inviteDoctors');
+    }
+
+
+
+
+    /**
      * @Title: delteHxUser
      * @Description: TODO 删除环信用户
      * @return bool|mixed
@@ -696,6 +753,11 @@ class Member extends Common
                 ->find();
             $uinfo['birthday'] = date('Y-m-d', $uinfo['birthday']);
             $uinfo['to_doctor_url'] = config('url').$uinfo['to_doctor_url'];
+
+            //微信分享的链接
+            //http://localhost:7037/member/inviteDoctors?doctorId=170
+            $uinfo['shareUrl'] = config('url').'/member/inviteDoctors?doctorId='.$data['member_id'];
+
             unset($uinfo['password']);
             unset($uinfo['guid']);
             unset($uinfo['reg_date']);

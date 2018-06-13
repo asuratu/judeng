@@ -260,14 +260,12 @@ class Inherit extends Common
             //处理简介的H5
             $specialArr['effect'] = config('url').'/inherit/effect?id='.$data['special_id'];
             //处理药方
-//            $contentArr = array();
-//            foreach (json_decode($specialArr['content']) as $key1=>$val1) {
-//                array_push($contentArr, $val1[1]);
-//            }
-            $specialArr['content'] = base64_encode($specialArr['content']);
-
+            $contentArr = array();
+            foreach (json_decode($specialArr['content']) as $key1=>$val1) {
+                array_push($contentArr, $val1[1]);
+            }
+            $specialArr['content'] = base64_encode(json_encode($contentArr));
             $data['inherit_id'] = $specialArr['inherit_id'];
-
             //判断是否加入过该传承
             $exist = db('inherit_doctor')->where("(`member_id` = {$data['member_id']} OR `parent_id` = {$data['member_id']}) AND `is_checked` = 1 AND `inherit_id` = {$data['inherit_id']}")->count();
             if ($exist <= 0) {
@@ -275,22 +273,21 @@ class Inherit extends Common
             }
 
 //            //获取传承的详细信息
-//            $map['i.`is_display`'] = 1;
-//            $map['i.`inherit_id`'] = $data['inherit_id'];
-//            $inheritDetail = db('inherit')->alias('i')
-//                ->join(['jd_doctor'=>'d'], 'i.member_id = d.member_id' , 'inner')
-//                ->where($map)
-//                ->field("i.inherit_id, i.inherit_name, d.title_id, d.member_name")
-//                ->find();
-//            //查询医生职称
-//            if ($inheritDetail['title_id']) {
-//                $inheritDetail['title_str'] = db('title')->where('title_id','in',$inheritDetail['title_id'])->field("`title_name`")->select();
-//            } else {
-//                $inheritDetail['title_str'] = array();
-//            }
+            $map['i.`is_display`'] = 1;
+            $map['i.`inherit_id`'] = $data['inherit_id'];
+            $inheritDetail = db('inherit')->alias('i')
+                ->join(['jd_doctor'=>'d'], 'i.member_id = d.member_id' , 'inner')
+                ->where($map)
+                ->field("i.inherit_id, i.inherit_name, d.title_id, d.member_name")
+                ->find();
+            //查询医生职称
+            if ($inheritDetail['title_id']) {
+                $inheritDetail['title_str'] = db('title')->where('title_id','in',$inheritDetail['title_id'])->field("`title_name`")->select();
+            } else {
+                $inheritDetail['title_str'] = array();
+            }
 
-//            ajaxReturn(array('code'=>1, 'info'=>'ok!','data'=>[array('inherit'=>$inheritDetail, 'content'=>$specialArr)]));
-            ajaxReturn(array('code'=>1, 'info'=>'ok!','data'=>[$specialArr]));
+            ajaxReturn(array('code'=>1, 'info'=>'ok!','data'=>array('inherit'=>$inheritDetail, 'content'=>$specialArr)));
         }
     }
 
