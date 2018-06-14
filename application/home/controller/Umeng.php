@@ -9,6 +9,19 @@ use think\Db;
 
 class Umeng extends Common
 {
+
+    /**
+     * umeng 添加用户的umeng 唯一设备号
+     */
+    public function add() {
+        if($this->request->isPost()) {
+            $data = input('post.');
+            if ($data['member_id'] == '' || $data['member_id'] == '' || $data['comment'] == '') {
+                ajaxReturn(array('code' => 0, 'info' => '参数不完整', 'data' => []));
+            }
+        }
+    }
+
     /**
      * umeng 推
      */
