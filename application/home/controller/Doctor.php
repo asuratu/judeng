@@ -221,7 +221,7 @@ class Doctor extends Common
         foreach ($doctorEvaluation as $key => $val) {
             array_push($evaluation, $val);
             $evaluation[$key]['evaluate_name'] = explode('#@#', $val['evaluate_name']);
-            $evaluation[$key]['portrait'] = 'http://wechat.bohetanglao.com/uploads/avatar/' . $val['portrait'];
+//            $evaluation[$key]['portrait'] = 'http://wechat.bohetanglao.com/uploads/avatar/' . $val['portrait'];
             $evaluation[$key]['member_name'] = !empty($val['true_name']) ? $val['true_name'] : (!empty($val['member_name']) ? $val['member_name'] : $val['mobile']);
             $evaluation[$key]['add_date'] = date('Y-m-d', $val['add_date']);
         }
@@ -323,7 +323,7 @@ class Doctor extends Common
             }
 
             $member['sex'] = $this->view->setting['arySex'][$member['sex']];
-            $member['portrait'] = 'http://wechat.bohetanglao.com/uploads/avatar/' . $member['portrait'];
+//            $member['portrait'] = 'http://wechat.bohetanglao.com/uploads/avatar/' . $member['portrait'];
 
             $member_info = db('member_info')->where("member_id = {$data['member_id']}")->field("allergy, medical, habit, other_habit")->find();
             if ($member_info) {

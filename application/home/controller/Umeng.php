@@ -16,7 +16,7 @@ class Umeng extends Common
     public function add() {
         if($this->request->isPost()) {
             $data = input('post.');
-            if ($data['member_id'] == '' || $data['member_id'] == '' || $data['comment'] == '') {
+            if ($data['member_id'] == '' || $data['is_system'] == '' || $data['device_tokens'] == '') {
                 ajaxReturn(array('code' => 0, 'info' => '参数不完整', 'data' => []));
             }
         }
