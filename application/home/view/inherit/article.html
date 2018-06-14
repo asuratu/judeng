@@ -8,6 +8,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
     <meta name="format-detection" content="telephone=no" />
     <link type="text/css" href="__CSS__/base.css" rel="stylesheet" />
+    <style>
+        *{
+            -webkit-touch-callout:none;  /*系统默认菜单被禁用*/
+            -webkit-user-select:none; /*webkit浏览器*/
+            -khtml-user-select:none; /*早期浏览器*/
+            -moz-user-select:none;/*火狐*/
+            -ms-user-select:none; /*IE10*/
+            user-select:none;
+        }
+    </style>
     <script type="text/javascript" src="__JS__/jquery.min.js"></script>
 </head>
 <body>
@@ -20,5 +30,8 @@
     </div>
 </div>
 </body>
+<script type="text/javascript">
+    document.body.onselectstart=document.body.oncontextmenu=function(){ return false;}
+</script>
 </html>
 <script type="text/javascript" src="__JS__/common.js"></script>

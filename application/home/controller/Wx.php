@@ -22,10 +22,12 @@ class Wx extends Controller {
                 ->field("`to_user_img`")
                 ->find();
 
-            if ($doctorInfo->to_user_img) {
-                ajaxReturn(array('code' => 1, 'info' => 'ok', 'data' => [$doctorInfo->to_user_img]));
-            }
+            //微信分享的链接
+            $shareUrl = config('url').'/member/attention?doctorId='.$data['doctor_id'];
 
+            if ($doctorInfo['to_user_img']) {
+                ajaxReturn(array('code' => 1, 'info' => 'ok', 'data' => [$doctorInfo['to_user_img'], $shareUrl]));
+            }
             $access_token = $this->get_access_token();
             $key = 'doctor_'.$data['doctor_id'];
             if (!$access_token) {
@@ -40,12 +42,15 @@ class Wx extends Controller {
             $res = postJson($url, $postArr);
 
             $res = json_decode($res, true);
+
+
+
             if ($res['ticket']) {
                 $uri = 'https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=' . urlencode($res['ticket']);
                 $updateInfo['to_user_img'] = $uri;
                 $updateInfo['release_date'] = time();
                 db('doctor')->where("member_id = {$data['doctor_id']}")->update($updateInfo);
-                ajaxReturn(array('code' => 1, 'info' => 'ok', 'data' => [$uri]));
+                ajaxReturn(array('code' => 1, 'info' => 'ok', 'data' => [$uri, $shareUrl]));
             } else {
                 ajaxReturn(array('code' => 0, 'info' => '服务器繁忙, 请稍后再试!', 'data' => []));
             }
@@ -106,7 +111,7 @@ class Wx extends Controller {
         $url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid={$appid}&secret={$appsecret}";
         $res = curlGet($url);
 		$return=json_decode($res,true);
-        $web_expires = time() + 3500; // 提前200秒过期
+        $web_expires = time() + 3000; // 提前200秒过期
         db('wx_user')->where(array('id'=>$wechat['id']))->update(array('access_token'=>$return['access_token'],'expires'=>$web_expires));
         return $return['access_token'];
     }

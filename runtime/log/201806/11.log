@@ -1,0 +1,78 @@
+---------------------------------------------------------------
+[ 2018-06-11T18:37:07+08:00 ] 0.0.0.0 POST /prescription/getSimilarDrug
+[ info ] localhost:7037/prescription/getSimilarDrug [运行时间：0.204779s][吞吐率：4.88req/s] [内存消耗：3,157.43kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getSimilarDrug',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryM6aja9dPWfVwAwJo',
+  'content-length' => '326',
+  'x-original-url' => '/prescription/getSimilarDrug',
+  'postman-token' => '6ebc77a8-3856-1bbe-a0c5-13960d5adb4b',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'prescription_id' => '1',
+  'str' => 'gc',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getSimilarDrug[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.028283s ] mysql:host=118.25.179.178;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug` [ RunTime:0.020046s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `keywords` LIKE '%GC%' ORDER BY `add_date` ASC [ RunTime:0.093477s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]
+---------------------------------------------------------------
+[ 2018-06-11T18:37:26+08:00 ] 0.0.0.0 POST /prescription/getSimilarDrug
+[ info ] localhost:7037/prescription/getSimilarDrug [运行时间：0.136651s][吞吐率：7.32req/s] [内存消耗：3,157.44kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getSimilarDrug',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryLrr4NAdYepw1o9nN',
+  'content-length' => '326',
+  'x-original-url' => '/prescription/getSimilarDrug',
+  'postman-token' => '6eb8a7cf-2630-79c6-01aa-81b0471b345b',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'prescription_id' => '1',
+  'str' => 'Gc',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getSimilarDrug[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.032358s ] mysql:host=118.25.179.178;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug` [ RunTime:0.023936s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `keywords` LIKE '%GC%' ORDER BY `add_date` ASC [ RunTime:0.022694s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:82]

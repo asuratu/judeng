@@ -109,14 +109,14 @@ class Order extends Common
             }
             $houseAllArr['pic'] = config('url') . $houseAllArr['pic'];
 
-            $mainInfo['state_id'] = $houseAllArr['state_id'];
-            $mainInfo['prescription_id'] = $houseAllArr['prescription_id'];
-            $mainInfo['area_id'] = $data['area_id'];
-            $mainInfo['relation_id'] = $houseAllArr['relation_id'];
-            $mainInfo['make'] = $houseAllArr['make'];
-            $mainInfo['taking'] = $houseAllArr['taking'];
-            $mainInfo['weight'] = $houseAllArr['weight'];
-            $mainInfo['instructions'] = $houseAllArr['instructions'];
+            $mainInfo['state_id'] = $houseAllArr['state_id'] ?: 8;
+            $mainInfo['prescription_id'] = $houseAllArr['prescription_id'] ?: 1;
+            $mainInfo['area_id'] = $data['area_id'] ?: 2;
+            $mainInfo['relation_id'] = $houseAllArr['relation_id'] ?: 54;
+            $mainInfo['make'] = $houseAllArr['make'] ?: '*水丸需整体制作，请按照总量选#克数#，#1000g#起做';
+            $mainInfo['taking'] = $houseAllArr['taking'] ?: '共#7#剂，每日#1#剂，1剂分#1#次使用';
+            $mainInfo['weight'] = $houseAllArr['weight'] ?: '#0-0ｇ#，(制丸会减少药材总重10%-30%)';
+            $mainInfo['instructions'] = $houseAllArr['instructions'] ?: '';
             $mainInfo['pic'] = $houseAllArr['pic'];
             $mainInfo['state_house_name'] = $houseAllArr['state_name'].'.'.$houseAllArr['area_name'].'-'.$houseAllArr['prescription_name'];
             $mainInfo['left_num'] = $leftNum-1;
@@ -612,7 +612,7 @@ class Order extends Common
 
     /**
      * @Title: addWenZhen
-     * @Description: TODO 患者发起图文问诊或复诊
+     * @Description: TODO 患者发起图文问诊或复诊(此接口作废, 宝哥负责)
      * @return bool
      * @author TUGE
      * @date
@@ -838,17 +838,7 @@ class Order extends Common
                         ->where("type = 2 AND patient_id = {$data['patient_id']} AND doctor_id = {$data['doctor_id']} AND is_use = 1")
                         ->field("*")
                         ->find();
-                    if (!empty($orderDetail) && $orderDetail['end_time'] == 0) {
-                        //开始记录爱心问诊时间
-                        $updateInfo['start_time'] = time();
-                        $updateInfo['end_time'] = time()+86400;
-                        $updateInfo['release_date'] = time();
-                        db('wenzhen')
-                            ->where("log_id = {$orderDetail['log_id']}")
-                            ->update($updateInfo);
-                        Db::commit();
-                        ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>[]));
-                    } elseif (!empty($orderDetail) && $orderDetail['end_time'] > 0 && $orderDetail['end_time'] < time()) {
+                    if (!empty($orderDetail) && $orderDetail['end_time'] > 0) {
                         //结束本次爱心问诊
                         $updateInfo['is_use'] = 0;
                         $updateInfo['release_date'] = time();
@@ -878,17 +868,7 @@ class Order extends Common
                         ->where("type IN(0,1) AND patient_id = {$data['patient_id']} AND doctor_id = {$data['doctor_id']} AND is_use = 1 AND order_id = {$data['order_id']}")
                         ->field("*")
                         ->find();
-                    if (!empty($wenzhenDetail) && $wenzhenDetail['end_time'] == 0) {
-                        //开始记录问诊时间
-                        $updateInfo['start_time'] = time();
-                        $updateInfo['end_time'] = time()+86400;
-                        $updateInfo['release_date'] = time();
-                        db('wenzhen')
-                            ->where("log_id = {$wenzhenDetail['log_id']}")
-                            ->update($updateInfo);
-                        Db::commit();
-                        ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>[]));
-                    } elseif (!empty($wenzhenDetail) && $wenzhenDetail['end_time'] > 0 && $wenzhenDetail['end_time'] < time()) {
+                   if (!empty($wenzhenDetail) && $wenzhenDetail['end_time'] > 0) {
                         //结束本次问诊
                         $updateInfo['is_use'] = 0;
                         $updateInfo['release_date'] = time();
@@ -910,153 +890,5 @@ class Order extends Common
             }
         }
     }
-
-
-    public function startStatus1() {
-        if($this->request->isPost())
-        {
-            try{
-                Db::startTrans();
-                $data=input('post.');
-                $res=checkSign($data);
-                if($res['code']==0)
-                {
-                    ajaxReturn($res);
-                }
-
-                if($data['doctor_id']=='' || $data['patient_id']=='' || $data['order_id']=='')
-                {
-                    ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
-                }
-
-                if ($data['order_id']=='0') {
-                    //爱心问诊
-                    //判断是否有在用的爱心问诊
-                    $orderDetail = db('wenzhen')
-                        ->where("type = 2 AND patient_id = {$data['patient_id']} AND doctor_id = {$data['doctor_id']} AND is_use = 1")
-                        ->field("*")
-                        ->find();
-                    if (!empty($orderDetail) && $orderDetail['end_time'] == 0) {
-                        //开始记录爱心问诊时间
-                        $updateInfo['start_time'] = time();
-                        $updateInfo['end_time'] = time()+86400;
-                        $updateInfo['release_date'] = time();
-                        db('wenzhen')
-                            ->where("log_id = {$orderDetail['log_id']}")
-                            ->update($updateInfo);
-                        Db::commit();
-                        ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>[]));
-                    } elseif (!empty($orderDetail) && $orderDetail['end_time'] > 0 && $orderDetail['end_time'] < time()) {
-                        //结束本次爱心问诊
-                        $updateInfo['is_use'] = 0;
-                        $updateInfo['release_date'] = time();
-                        db('wenzhen')
-                            ->where("log_id = {$orderDetail['log_id']}")
-                            ->update($updateInfo);
-                        Db::commit();
-                        ajaxReturn(array('code'=>0, 'info'=>'本次爱心问诊已结束','data'=>[]));
-                    } else {
-                        Db::commit();
-                        ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>[]));
-                    }
-                } else {
-                    //有订单信息(非爱心问诊)
-
-                    $orderDetail = db('order')
-                        ->where("order_id = {$data['order_id']} AND pay_status = 1 AND order_status = 1 AND patient_id = {$data['patient_id']}")
-                        ->field("*")
-                        ->find();
-
-                    if (!$orderDetail) {
-                        ajaxReturn(array('code'=>0,'info'=>'本次问诊已结束!','data'=>[]));
-                    }
-
-                    if ($orderDetail['order_status'] = 1 && in_array($orderDetail['order_type'], array(0,1))) {
-                        //图文咨询或复诊订单信息
-                        //查询问诊记录信息
-                        $wenzhenDetail = db('wenzhen')
-                            ->where("type IN(0,1) AND patient_id = {$data['patient_id']} AND doctor_id = {$data['doctor_id']} AND is_use = 1 AND order_id = {$data['order_id']}")
-                            ->field("*")
-                            ->find();
-
-                        if (!empty($wenzhenDetail) && $wenzhenDetail['end_time'] == 0) {
-                            //开始记录问诊时间
-                            $updateInfo['start_time'] = time();
-                            $updateInfo['end_time'] = time()+86400;
-                            $updateInfo['release_date'] = time();
-                            db('wenzhen')
-                                ->where("log_id = {$wenzhenDetail['log_id']}")
-                                ->update($updateInfo);
-                            Db::commit();
-                            ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>[]));
-                        } elseif (!empty($wenzhenDetail) && $wenzhenDetail['end_time'] > 0 && $wenzhenDetail['end_time'] < time()) {
-                            //结束本次问诊
-                            $updateInfo['is_use'] = 0;
-                            $updateInfo['release_date'] = time();
-                            db('wenzhen')
-                                ->where("log_id = {$wenzhenDetail['log_id']}")
-                                ->update($updateInfo);
-                            //若本次是咨询或者复诊的订单, 则结束订单, 完成清算
-                            if (in_array($orderDetail['order_type'], array(0,1))) {
-                                db('wenzhen')
-                                    ->where("log_id = {$wenzhenDetail['log_id']}")
-                                    ->update($updateInfo);
-                            }
-
-                            var_dump(3333);die;
-
-
-                            Db::commit();
-                            ajaxReturn(array('code'=>0, 'info'=>'本次问诊已结束','data'=>[]));
-                        } else {
-                            Db::commit();
-                            ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>[]));
-                        }
-                    } elseif ($orderDetail['order_type'] = 4) {
-                        //服务包订单(有没有药材)
-
-                        //有药材且状态为3才能完成订单4
-
-                        //无药材状态为1即可完成订单4
-
-                    } else {
-                        ajaxReturn(array('code'=>0,'info'=>'订单状态不正确!','data'=>[]));
-                    }
-
-
-                    var_dump($orderDetail);die;
-
-
-                    var_dump($orderDetail);die;
-                }
-
-                if (!$orderDetail) {
-                    ajaxReturn(array('code'=>0,'info'=>'本次问诊已结束!','data'=>[]));
-                }
-
-                var_dump($orderDetail);die;
-
-                //判断是不是服务包id
-                if (1) {
-
-                } elseif ("不是调制服务包") {
-
-                }
-
-                Db::commit();
-                ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>[]));
-            } catch (Exception $e) {
-                Db::rollback();
-                return false;
-            }
-
-        }
-    }
-
-
-
-
-
-
 
 }

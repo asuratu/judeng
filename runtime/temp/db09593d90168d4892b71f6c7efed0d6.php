@@ -1,0 +1,81 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:81:"D:\workLP\20180502\judeng\wwwroot/application/home\view\doctor\inviteDoctors.html";i:1528477817;}*/ ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta name="keywords" />
+    <meta name="description" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <link type="text/css" href="/public/home/css/base.css" rel="stylesheet" />
+    <script type="text/javascript" src="/public/home/js/jquery.min.js"></script>
+</head>
+<body>
+<div class="page-tit">邀请加入</div>
+<div class="attention">
+    <div class="wrapper">
+        <div class="doctors clearfix">
+            <div class="toux"><img src="/public/home/images/logo.png"></div>
+            <div class="wenz">
+                <h3>小橘灯APP</h3>
+                <p>
+                    名医名师传承<br>
+                    复诊患者在线开方，提高工作效率
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="invite-con">
+        <div class="wrapper">
+            <div class="invite-code clearfix">
+                <img src="/public/home/images/code2.jpg" class="fr">
+                <div class="fl">
+                    <img src="/public/home/images/icon01.png">
+                    <p>
+                        <span><?php echo $info['true_name']; ?>医生</span>
+                        邀请您入驻小橘灯<br>
+                        随时可以为患者<font>复诊调方</font><br>
+                        有大量名医名家可进行<font>病例交流</font>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        <ul>
+            <li>
+                <h3>轻松管理新老患者   提升患者依从性</h3>
+                <p>
+                    线上线下新老患者全收录可随时查看患者资料<br>
+                    通过平台直接为老患者诊后随访、复诊调药<br>
+                    为新患者线上出诊、辩证开方
+                </p>
+                <img src="$info['to_doctor_url']">
+            </li>
+            <li>
+                <img src="/public/home/images/yy.png" class="yy">
+                <h3>自定义个人医馆  合理提高收入</h3>
+                <p>
+                    接诊方式自主选择：图文问诊／电话问诊<br>
+                    快捷设置免打扰时段，合理分配工作私人时间
+                </p>
+                <img src="/public/home/images/phone02.png">
+            </li>
+            <li>
+                <img src="/public/home/images/yy.png" class="yy">
+                <h3>助力建立并传播医生品牌</h3>
+                <p>
+                    建立中医领域的传承机制和名医推荐<br>
+                    您擅长治疗的患者可通过搜索发现并找您求治
+                </p>
+                <img src="/public/home/images/phone03.png">
+            </li>
+        </ul>
+    </div>
+    <img src="/public/home/images/yy.png" class="yy">
+    <div class="fix"></div>
+    <div class="btn"><a href="">接受邀请并注册</a></div>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="/public/home/js/common.js"></script>

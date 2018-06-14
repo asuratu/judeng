@@ -41,6 +41,32 @@ function curlPost($url,$data)
     }
 }
 
+function curlPost2($url, $headers, $post){
+    $ch = curl_init();
+    curl_setopt($ch,CURLOPT_URL,$url);
+    if(!empty($headers)){
+        curl_setopt($ch,CURLOPT_HTTPHEADER,$headers);
+    }
+    curl_setopt($ch, CURLOPT_POST, 1);//设置为POST方式
+    curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($post));//POST数据
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER,1); //如果成功只将结果返回，不自动输出任何内容。
+    curl_setopt($ch, CURLOPT_HEADER,0);//如果想把一个头包含在输出中，设置这个选项为一个非零值。
+    curl_setopt($ch, CURLINFO_HEADER_OUT,1);//启用时追踪句柄的请求字符串。
+    $json = curl_exec($ch);
+    $headers = curl_getinfo($ch, CURLINFO_HEADER_OUT);
+    echo "\n\n=====请求返回=====\n";
+    echo "out headers：\t".$headers ."\n";
+    $hearLen = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
+    echo "header len：\t".$hearLen ."\n";
+    $statuscode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    echo "httpcode:\t".$statuscode."\n";
+    echo "\n===================\n";
+    return $json;
+    @curl_close($ch);
+}
+
+
+
 
 /**
 +--------------------------------------------------------------------------

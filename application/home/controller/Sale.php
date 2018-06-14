@@ -127,7 +127,8 @@ class Sale extends Common
                 ->where("is_checked = 1 AND member_id = {$data['member_id']} AND inherit_id = {$data['inherit_id']}")
                 ->field('img_url')
                 ->find();
-            ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[['successDoc'=>$successDoc, 'img'=>$img['img_url']]]));
+            $url =  config('url') . createPic(config('url').'/member/inviteInherit?memberId='.$data['member_id'].'&inheritId='.$data['inherit_id']);
+            ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[['successDoc'=>$successDoc, 'img'=>$img['img_url'], 'shareUrl'=>$url]]));
         }
     }
 

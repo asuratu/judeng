@@ -128,7 +128,8 @@ class Inherit extends Common
             $map['`is_display`'] = 1;
             $map['`inherit_id`'] = $data['inherit_id'];
 
-            $stateArr = db('article')->where($map)->field("article_id, title, list_pic, intro, release_date")->limit($start,$data['pageSize'])->order("`sort` DESC")->select();
+//            $stateArr = db('article')->where($map)->field("article_id, title, list_pic, intro, release_date")->limit($start,$data['pageSize'])->order("`sort` DESC")->select();
+            $stateArr = db('article')->where($map)->field("article_id, title, list_pic, intro, release_date")->order("`sort` DESC")->select();
             $totalNum = db('article')->where($map)->field("inherit_id")->order("`sort` DESC")->count();
 
             //判断是否加入过该传承
@@ -264,7 +265,6 @@ class Inherit extends Common
                 array_push($contentArr, $val1[1]);
             }
             $specialArr['content'] = base64_encode(json_encode($contentArr));
-
             $data['inherit_id'] = $specialArr['inherit_id'];
             //判断是否加入过该传承
             $exist = db('inherit_doctor')->where("(`member_id` = {$data['member_id']} OR `parent_id` = {$data['member_id']}) AND `is_checked` = 1 AND `inherit_id` = {$data['inherit_id']}")->count();
@@ -272,7 +272,7 @@ class Inherit extends Common
                 ajaxReturn(array('code'=>0, 'info'=>'请先加入该传承!','data'=>[]));
             }
 
-            //获取传承的详细信息
+//            //获取传承的详细信息
             $map['i.`is_display`'] = 1;
             $map['i.`inherit_id`'] = $data['inherit_id'];
             $inheritDetail = db('inherit')->alias('i')
@@ -284,9 +284,10 @@ class Inherit extends Common
             if ($inheritDetail['title_id']) {
                 $inheritDetail['title_str'] = db('title')->where('title_id','in',$inheritDetail['title_id'])->field("`title_name`")->select();
             } else {
-                $inheritDetail['title_str'] = '';
+                $inheritDetail['title_str'] = array();
             }
-            ajaxReturn(array('code'=>1, 'info'=>'ok!','data'=>['inherit'=>$inheritDetail, 'content'=>$specialArr]));
+
+            ajaxReturn(array('code'=>1, 'info'=>'ok!','data'=>array('inherit'=>$inheritDetail, 'content'=>$specialArr)));
         }
     }
 
@@ -357,7 +358,7 @@ class Inherit extends Common
 
     /**
      * @Title: getInheritDoctorList
-     * @Description: TODO 传承医生列表(未完成)
+     * @Description: TODO 传承医生列表
      */
     public function getInheritDoctorList() {
         if($this->request->isPost())
@@ -419,11 +420,16 @@ class Inherit extends Common
                     ->find();
                 $doctorInfo['hospital_name'] = $hospital['hospital_name'];
                 //第一科室
-                $keshiArr = db('hospital_repart')->alias('hr')
-                    ->join(['jd_department'=>'d'], 'd.department_id = hr.department_id' , 'inner')
-                    ->where("hr.hospital_repart_id IN({$doctorInfo['hospital_repart_str']}) AND hr.is_show = 1")
-                    ->field("d.department_name")
-                    ->select();
+                if ($doctorInfo['hospital_repart_str']) {
+                    $keshiArr = db('hospital_repart')->alias('hr')
+                        ->join(['jd_department'=>'d'], 'd.department_id = hr.department_id' , 'inner')
+                        ->where("hr.hospital_repart_id IN({$doctorInfo['hospital_repart_str']}) AND hr.is_show = 1")
+                        ->field("d.department_name")
+                        ->select();
+                } else {
+                    $keshiArr = array();
+                }
+
                 $doctorInfo['department_name'] = $keshiArr[0];
                 //是否有自建特色方剂
                 $existGoods = db('self_goods')
@@ -481,11 +487,16 @@ class Inherit extends Common
                         ->find();
                     $doctorInfo['hospital_name'] = $hospital['hospital_name'];
                     //第一科室
-                    $keshiArr = db('hospital_repart')->alias('hr')
-                        ->join(['jd_department'=>'d'], 'd.department_id = hr.department_id' , 'inner')
-                        ->where("hr.hospital_repart_id IN({$doctorInfo['hospital_repart_str']}) AND hr.is_show = 1")
-                        ->field("d.department_name")
-                        ->select();
+                    if ($doctorInfo['hospital_repart_str']) {
+                        $keshiArr = db('hospital_repart')->alias('hr')
+                            ->join(['jd_department'=>'d'], 'd.department_id = hr.department_id' , 'inner')
+                            ->where("hr.hospital_repart_id IN({$doctorInfo['hospital_repart_str']}) AND hr.is_show = 1")
+                            ->field("d.department_name")
+                            ->select();
+                    } else {
+                        $keshiArr = array();
+                    }
+
                     $doctorInfo['department_name'] = $keshiArr[0];
                     // 查询擅长
                     $doctorInfo['goodat_id'] = Controller('Doctor')->goodsId($doctorInfo['goodat_id']);

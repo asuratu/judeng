@@ -59,7 +59,7 @@ class Setup extends Common
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
-            $doctor = db('doctor')->where("member_id = {$data['doctor_id']}")->field('open_pharmacy, platform_default, inherit, concealment_number, questions_number')->find();
+            $doctor = db('doctor')->where("member_id = {$data['doctor_id']}")->field('open_pharmacy, platform_default, inherit, inherit_feature, concealment_number, questions_number')->find();
             if (!$doctor) {
                 ajaxReturn(array('code'=>0,'info'=>'医生信息不存在','data'=>[]));
             }

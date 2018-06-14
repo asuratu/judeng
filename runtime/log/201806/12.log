@@ -1,0 +1,187 @@
+---------------------------------------------------------------
+[ 2018-06-12T09:34:36+08:00 ] 0.0.0.0 POST /member/getsms
+[ info ] localhost:7037/member/getsms [运行时间：0.161897s][吞吐率：6.18req/s] [内存消耗：3,175.34kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryMUeoanylh3ALr7SF',
+  'content-length' => '440',
+  'x-original-url' => '/member/getsms',
+  'postman-token' => 'edd134c4-610b-beed-acab-ea21d32b3183',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '13476665555',
+  'type' => '2',
+  'only_token' => '1528767041wOEmHs',
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: tokencode[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:897]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.028491s ] mysql:host=118.25.179.178;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.021744s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `mobile` = '13476665555' LIMIT 1 [ RunTime:0.017358s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `only_token` = '1528767041wOEmHs'  AND `is_status` = 0 LIMIT 1 [ RunTime:0.016683s ]
+---------------------------------------------------------------
+[ 2018-06-12T09:34:44+08:00 ] 0.0.0.0 POST /member/getsms
+[ info ] localhost:7037/member/getsms [运行时间：0.627835s][吞吐率：1.59req/s] [内存消耗：4,266.35kb] [文件加载：78]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getsms',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarynMBB34ZFu7RzrEsK',
+  'content-length' => '440',
+  'x-original-url' => '/member/getsms',
+  'postman-token' => '9468d3fb-8b6c-faa4-646d-0c3b3f5f6058',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=d9567ab631ab78aab149f26b1599389d',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '15021039435',
+  'type' => '2',
+  'only_token' => '1528767041wOEmHs',
+)
+[ info ] [ RUN ] app\home\controller\Member->getsms[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: tokencode[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php:897]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.027667s ] mysql:host=118.25.179.178;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.023825s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `mobile` = '15021039435' LIMIT 1 [ RunTime:0.022132s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `only_token` = '1528767041wOEmHs'  AND `is_status` = 0 LIMIT 1 [ RunTime:0.019918s ]
+---------------------------------------------------------------
+[ 2018-06-12T09:36:00+08:00 ] 0.0.0.0 POST /member/getDoctorInfo
+[ info ] localhost:7037/member/getDoctorInfo [运行时间：0.467405s][吞吐率：2.14req/s] [内存消耗：3,612.48kb] [文件加载：53]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getDoctorInfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryTewpohdPKJxZZbrb',
+  'content-length' => '256',
+  'x-original-url' => '/member/getDoctorInfo',
+  'postman-token' => 'ac5826ab-4c19-48b7-ec53-be8c86ac3710',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '170',
+  'only_token' => '1528767041wOEmHs',
+)
+[ info ] [ RUN ] app\home\controller\Member->getDoctorInfo[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.036762s ] mysql:host=118.25.179.178;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.026677s ]
+[ sql ] [ SQL ] SELECT `d`.*,`t`.`title_name`,`a`.`name`,`h`.`hospital_name` FROM `jd_doctor` `d` LEFT JOIN `jd_title` `t` ON `d`.`title_id`=`t`.`title_id` LEFT JOIN `jd_area` `a` ON `d`.`area_id`=`a`.`area_id` LEFT JOIN `jd_hospital` `h` ON `d`.`hospital_id`=`h`.`hospital_id` WHERE  `member_id` = 170 LIMIT 1 [ RunTime:0.027203s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.026350s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_order` `o`,`jd_order_prescription` `op` WHERE  (  o.`order_id` = op.`order_id` and op.`prescription_type` = 0 and o.order_type = 3 and o.doctor_id = 170 ) LIMIT 1 [ RunTime:0.021419s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.027624s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 170 and s.`member_id` = m.`member_id` ) LIMIT 1 [ RunTime:0.021812s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_service_evaluation` [ RunTime:0.023788s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_service_evaluation` `s`,`jd_member` `m` WHERE  (  s.is_show = 1 and s.doctor_id = 170 and s.`member_id` = m.`member_id` ) LIMIT 1 [ RunTime:0.022594s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.025806s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.022678s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_ad` [ RunTime:0.024347s ]
+[ sql ] [ SQL ] SELECT `ad_title`,`ad_img`,`ad_url`,`add_date` FROM `jd_ad` WHERE  (  type_id = 0 and is_display = 1 ) ORDER BY `ad_sort` ASC [ RunTime:0.022336s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_self_goods` [ RunTime:0.026591s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 170 AND content != '' AND is_checked = 2 AND end_date > 1528767360 ) LIMIT 1 [ RunTime:0.022563s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `only_token` = '1528767041wOEmHs'  AND `is_status` = 0 LIMIT 1 [ RunTime:0.023035s ]
+---------------------------------------------------------------
+[ 2018-06-12T09:39:04+08:00 ] 0.0.0.0 POST /member/getDoctorInfo
+[ info ] localhost:7037/member/getDoctorInfo [运行时间：0.385352s][吞吐率：2.60req/s] [内存消耗：3,612.48kb] [文件加载：53]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'getDoctorInfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarywuN3D8AhhxmljxTQ',
+  'content-length' => '256',
+  'x-original-url' => '/member/getDoctorInfo',
+  'postman-token' => 'a13f22b7-18f3-3319-d73a-fd3e54541b12',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '170',
+  'only_token' => '1528767390|X^6TB',
+)
+[ info ] [ RUN ] app\home\controller\Member->getDoctorInfo[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.025725s ] mysql:host=118.25.179.178;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.022390s ]
+[ sql ] [ SQL ] SELECT `d`.*,`t`.`title_name`,`a`.`name`,`h`.`hospital_name` FROM `jd_doctor` `d` LEFT JOIN `jd_title` `t` ON `d`.`title_id`=`t`.`title_id` LEFT JOIN `jd_area` `a` ON `d`.`area_id`=`a`.`area_id` LEFT JOIN `jd_hospital` `h` ON `d`.`hospital_id`=`h`.`hospital_id` WHERE  `member_id` = 170 LIMIT 1 [ RunTime:0.022580s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.019647s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_order` `o`,`jd_order_prescription` `op` WHERE  (  o.`order_id` = op.`order_id` and op.`prescription_type` = 0 and o.order_type = 3 and o.doctor_id = 170 ) LIMIT 1 [ RunTime:0.016423s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.020852s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 170 and s.`member_id` = m.`member_id` ) LIMIT 1 [ RunTime:0.019437s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_service_evaluation` [ RunTime:0.020589s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_service_evaluation` `s`,`jd_member` `m` WHERE  (  s.is_show = 1 and s.doctor_id = 170 and s.`member_id` = m.`member_id` ) LIMIT 1 [ RunTime:0.024647s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.019270s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.017191s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_ad` [ RunTime:0.020422s ]
+[ sql ] [ SQL ] SELECT `ad_title`,`ad_img`,`ad_url`,`add_date` FROM `jd_ad` WHERE  (  type_id = 0 and is_display = 1 ) ORDER BY `ad_sort` ASC [ RunTime:0.018214s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_self_goods` [ RunTime:0.022357s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 170 AND content != '' AND is_checked = 2 AND end_date > 1528767544 ) LIMIT 1 [ RunTime:0.019965s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `only_token` = '1528767390|X^6TB'  AND `is_status` = 0 LIMIT 1 [ RunTime:0.017768s ]
