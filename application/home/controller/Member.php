@@ -12,7 +12,7 @@ class Member extends Common
     public function dologin()
     {
         if($this->request->isPost()) {
-            session_start();
+            @session_start();
             $ticket=session_id();
             $data=input('post.');
             if($data['mobile']==''||$data['password']==''|| $data['device_tokens']=='' || $data['is_system']=='')
@@ -421,6 +421,65 @@ class Member extends Common
     }
 
     /**
+     * @Title: updateBankCard
+     * @Description: TODO 医生添加/修改银行卡信息
+     */
+    public function updateBankCard()
+    {
+        if($this->request->isPost()) {
+            $data=input('post.');
+            if($data['member_id']==''|| $data['bank_id']=='' || $data['deposit_name']=='' || $data['deposit_number']=='' || $data['opening_bank']=='' || $data['bank_mobile']=='' || $data['deposit_id'] == '')
+            {
+               ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+            }
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
+            if ($data['deposit_id'] > 0) {
+                //修改
+                $info=db('deposit')
+                    ->where("deposit_id = {$data['deposit_id']} AND member_id = {$data['member_id']}")
+                    ->count();
+                if ($info <= 0) {
+                    ajaxReturn(array('code' =>0, 'info' => '该银行卡不存在','data'=>[]));
+                }
+                $updateInfo = array(
+                    'bank_id'=>$data['bank_id'],
+                    'deposit_name'=>$data['deposit_name'] ?: '',
+                    'deposit_number'=>$data['deposit_number'] ?: '',
+                    'opening_bank'=>$data['opening_bank'] ?: '',
+                    'mobile'=>$data['bank_mobile'] ?: '',
+                    'add_date'=>time(),
+                );
+                $updateTarget = array('deposit_id'=>$data['deposit_id']);
+                db('deposit')->where($updateTarget)->update($updateInfo);
+                ajaxReturn(array('code' =>1, 'info' => '修改成功','data'=>[]));
+            } else {
+                //添加
+                $info=db('deposit')
+                    ->where("member_id = {$data['member_id']}")
+                    ->count();
+                if ($info > 0) {
+                    ajaxReturn(array('code' =>0, 'info' => '你已经添加过银行卡','data'=>[]));
+                }
+                $insertInfo = array(
+                    'bank_id'=>$data['bank_id'],
+                    'deposit_name'=>$data['deposit_name'] ?: '',
+                    'member_id'=>$data['member_id'] ?: 0,
+                    'deposit_number'=>$data['deposit_number'] ?: '',
+                    'opening_bank'=>$data['opening_bank'] ?: '',
+                    'mobile'=>$data['bank_mobile'] ?: '',
+                    'add_date'=>time(),
+                );
+                db('deposit')->insert($insertInfo);
+                ajaxReturn(array('code' =>1, 'info' => '添加成功','data'=>[]));
+            }
+        }
+    }
+
+    /**
      * @Title: doregist
      * @Description: TODO 医生注册
      */
@@ -818,18 +877,34 @@ class Member extends Common
                 $uinfo['department_arr'] = array();
             }
 
-
+            //查询银行卡
+            $bankInfo = db('deposit')->alias('d')
+                ->join(['jd_bank'=>'b'], 'd.bank_id = b.bank_id' , 'inner')
+                ->where("d.member_id = {$data['member_id']}")
+                ->field("d.bank_id, d.deposit_name, d.deposit_number, d.opening_bank, d.mobile, b.bank_name, d.mobile as bank_mobile, d.deposit_id")
+                ->find();
 
             if (!empty($uinfo)) {
                 //是否被冻结
                 if ($uinfo['is_status'] == 1) {
                     ajaxReturn(array('code'=>0,'info'=>'该账号被冻结！','data'=>[]));
                 }
+                if (!$bankInfo) {
+                    $bankInfo = array(
+                        'bank_id'=>0,
+                        'deposit_id'=>0,
+                        'deposit_name'=>'',
+                        'deposit_number'=>'',
+                        'opening_bank'=>'',
+                        'bank_name'=>'',
+                        'bank_mobile'=>'',
+                    );
+                }
+                $uinfo = array_merge($uinfo, $bankInfo);
                 ajaxReturn(array('code' => 1, 'info'=>'ok', 'data'=>[$uinfo]));
             } else {
                 ajaxReturn(array('code'=>0,'info'=>'该用户不存在！','data'=>[]));
             }
-
         }
 
     }

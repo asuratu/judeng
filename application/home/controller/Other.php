@@ -110,6 +110,26 @@ class Other extends Common
     }
 
     /**
+     * @Title: getWordsList
+     * @Description: TODO 获取评论关键词列表
+     */
+    public function getWordsList() {
+        if($this->request->isPost())
+        {
+            $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
+            //获取关键词数组
+            $map['is_display'] = 1;
+            $list=db('comment_words')->where($map)->field("`word`, `word_id`")->order("`sort` DESC")->select();
+            ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>$list));
+        }
+    }
+
+    /**
      * @Title: getDepartmentList
      * @Description: TODO 根据医院获取科室列表
      */
