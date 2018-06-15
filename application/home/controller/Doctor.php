@@ -264,17 +264,6 @@ class Doctor extends Common
                 $data['is_type'] = 0;
             }
 
-            // 查询免打扰这个期间是否有患者咨询过一生
-            $umeng = db('doctor_disturbcount')->where("doctor_id = {$data['doctor_id']}")->count();
-            if ($umeng) {
-                $doctor['member_name'] = $doctor['true_name'] ? $doctor['true_name'] : ($doctor['member_name'] ? $doctor['member_name'] : $doctor['mobile']);
-                $data['comment'] = $doctor['member_name'] . '医生，有患者咨询了您，请及时处理。';
-                if ($doctor['is_system'] == 0) {     // is_system == 0 为安卓系统
-                    Model('Umeng')->PtoAndroid(array($doctor['device_tokens']), $data['comment'], '免打扰期间患者咨询', $data['comment']);
-                } else {
-                    Model('Umeng')->PtoIos(array($doctor['device_tokens']), $data['comment']);
-                }
-            }
             // 删除免打扰期间患者咨询的次数
             db('doctor_disturbcount')->where("doctor_id = {$data['doctor_id']}")->delete();
 
