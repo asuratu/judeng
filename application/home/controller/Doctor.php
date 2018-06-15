@@ -274,6 +274,9 @@ class Doctor extends Common
             $enddate = $date . $data['disturb_end'] . ':00';
             $start = strtotime($startdate) - $strdate;
             $end = strtotime($enddate) - $strdate;
+            if ($start > $end) {
+                $end = $end + 86400;
+            }
 
             if ($data['is_type'] == 1) {
                 $start = 0;
