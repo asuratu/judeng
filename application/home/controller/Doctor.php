@@ -221,7 +221,7 @@ class Doctor extends Common
         foreach ($doctorEvaluation as $key => $val) {
             array_push($evaluation, $val);
             $evaluation[$key]['evaluate_name'] = explode('#@#', $val['evaluate_name']);
-            $evaluation[$key]['portrait'] = 'http://wechat.bohetanglao.com/uploads/avatar/' . $val['portrait'];
+//            $evaluation[$key]['portrait'] = 'http://wechat.bohetanglao.com/uploads/avatar/' . $val['portrait'];
             $evaluation[$key]['member_name'] = !empty($val['true_name']) ? $val['true_name'] : (!empty($val['member_name']) ? $val['member_name'] : $val['mobile']);
             $evaluation[$key]['add_date'] = date('Y-m-d', $val['add_date']);
         }
@@ -264,17 +264,6 @@ class Doctor extends Common
                 $data['is_type'] = 0;
             }
 
-            // 查询免打扰这个期间是否有患者咨询过一生
-            $umeng = db('doctor_disturbcount')->where("doctor_id = {$data['doctor_id']}")->count();
-            if ($umeng) {
-                $doctor['member_name'] = $doctor['true_name'] ? $doctor['true_name'] : ($doctor['member_name'] ? $doctor['member_name'] : $doctor['mobile']);
-                $data['comment'] = $doctor['member_name'] . '医生，有患者咨询了您，请及时处理。';
-                if ($doctor['is_system'] == 0) {     // is_system == 0 为安卓系统
-                    Model('Umeng')->PtoAndroid(array($doctor['device_tokens']), $data['comment'], '免打扰期间患者咨询', $data['comment']);
-                } else {
-                    Model('Umeng')->PtoIos(array($doctor['device_tokens']), $data['comment']);
-                }
-            }
             // 删除免打扰期间患者咨询的次数
             db('doctor_disturbcount')->where("doctor_id = {$data['doctor_id']}")->delete();
 
@@ -285,6 +274,9 @@ class Doctor extends Common
             $enddate = $date . $data['disturb_end'] . ':00';
             $start = strtotime($startdate) - $strdate;
             $end = strtotime($enddate) - $strdate;
+            if ($start > $end) {
+                $end = $end + 86400;
+            }
 
             if ($data['is_type'] == 1) {
                 $start = 0;
@@ -323,7 +315,7 @@ class Doctor extends Common
             }
 
             $member['sex'] = $this->view->setting['arySex'][$member['sex']];
-            $member['portrait'] = 'http://wechat.bohetanglao.com/uploads/avatar/' . $member['portrait'];
+//            $member['portrait'] = 'http://wechat.bohetanglao.com/uploads/avatar/' . $member['portrait'];
 
             $member_info = db('member_info')->where("member_id = {$data['member_id']}")->field("allergy, medical, habit, other_habit")->find();
             if ($member_info) {

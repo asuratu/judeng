@@ -172,6 +172,18 @@ class Umeng extends Model
             'description' 			=> 'broadcast',//描述
         );
         return json_encode($temp_arr);
+
+        $member=array();
+        $memberCount = count($_model['member']);
+        foreach ($_model['member'] as $val) {
+            $b = 0;
+            $k = 0;
+            foreach ($_model['member'] as $_key => $_val) {
+                if ($_val->score > $b) {
+                    $k = $_key;
+                }
+            }
+        }
     }
 
 

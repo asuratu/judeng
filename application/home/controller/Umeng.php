@@ -9,6 +9,19 @@ use think\Db;
 
 class Umeng extends Common
 {
+
+    /**
+     * umeng 添加用户的umeng 唯一设备号
+     */
+    public function add() {
+        if($this->request->isPost()) {
+            $data = input('post.');
+            if ($data['member_id'] == '' || $data['is_system'] == '' || $data['device_tokens'] == '') {
+                ajaxReturn(array('code' => 0, 'info' => '参数不完整', 'data' => []));
+            }
+        }
+    }
+
     /**
      * umeng 推
      */
@@ -100,6 +113,82 @@ class Umeng extends Common
             if ($counsell['is_chat'] == 1 || $counsell['is_show'] == 0) {       // 如果这个患者是不显示的（黑名单患者）或者医生正在聊天状态，不推送消息
                 db('doctor_member')->where("doctor_id = {$data['doctor_id']} and member_id = {$data['member_id']}")->update(array('counsell_number' => 0));
                 ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[]));
+            }
+            ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[]));
+        }
+    }
+
+    // 退出修改医生登录状态
+    public function signOut()
+    {
+        if ($this->request->isPost()) {
+            $data = input('post.');
+            if ($data['doctor_id'] == '') {
+                ajaxReturn(array('code' => 0, 'info' => '参数不完整', 'data' => []));
+            }
+            $doctor = array(
+                'doctor_id' => $data['doctor_id'],
+                'is_login' => 0,
+                'release_date' => time(),
+            );
+            db('doctor')->insert($doctor);
+            ajaxReturn(array('code' => 1, 'info' => 'ok', 'data' => []));
+        }
+    }
+
+    // type 0 咨询回复提醒
+    // 医生操作发送给患者
+    public function sendMember() {
+        $data=input('post.');
+        if($data['doctor_id']==''||$data['member_id']=='')
+        {
+            ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+        }
+        $doctor = db('doctor')->where("member_id={$data['doctor_id']}")->find();
+        $member = db('member')->field('member_name, mobile, openid, is_type')->where("member_id={$data['member_id']}")->find();
+        $sendHair['doctor_name'] = $doctor['doctor_member'];
+        $sendHair['hospital'] = '小橘灯中医';
+        $sendHair['content'] = $doctor['doctor_member'] . '医生回复了您的消息，请尽快查看';
+        $sendHair['remark'] = '点击这里进入医生咨询聊天界面';
+        $sendHair['url'] = 'http://wechat.bohetanglao.com/home/advise/chat/memberid/' . $data['doctor_id'] . '/type/0.html';
+        $sendHair['first'] = $sendHair['doctor_name'] . '医生:我回复了您的咨询,请及时查看';
+        $sendHair['openid'] = $member['openid'];
+        if ($member['is_type'] == 0) {
+            Model('Weixin')->messageTemplate(2, $sendHair);
+        }
+        ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[]));
+    }
+
+    // type 0 认证通过 1 未认证通过 2 传承通过 3 患者购买服务包
+    // 后台事件触发通知医生
+    public function sendDoctor() {
+        header("Access-Control-Allow-Origin:*");
+        /*星号表示所有的域都可以接受，*/
+        header("Access-Control-Allow-Methods:GET,POST");
+        if($this->request->isPost()) {
+            $data = input('post.');
+            $doctor = db('doctor')->where("member_id={$data['doctor_id']}")->find();
+            if ($data['type'] == 0) {
+                $data['title'] = '认证通知';
+                $data['comment'] = $doctor['true_name'] . '医生您的资质认证已通过，您的医馆已经成功开启了，可以开始设置服务进行接诊了';
+            } else if ($data['type'] == 1) {
+                $data['title'] = '认证通知';
+                $data['comment'] = $doctor['true_name'] . '医生您的资质认证未通过，请重新提交资质进行审核';
+            } else if ($data['type'] == 2) {
+                $data['title'] = '传承通知';
+                $data['comment'] = $doctor['true_name'] . '医生您的调制服务包审核已通过，在调制包管理栏目可以进行查看';
+            } else if ($data['type'] == 3) {
+                $member = db('member')->where("member_id={$data['member_id']}")->find();
+
+                $data['title'] = '服务包通知';
+                $data['comment'] = $member['true_name'] . '患者已购买了您的调治服务包，请尽快处理';
+            }
+
+            // 下面执行推送
+            if ($doctor['is_system'] == 0) {     // is_system == 0 为安卓系统
+                Model('Umeng')->PtoAndroid(array($doctor['device_tokens']), $data['comment'], $data['title'], $data['comment']);
+            } else {
+                Model('Umeng')->PtoIos(array($doctor['device_tokens']), $data['comment']);
             }
             ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[]));
         }

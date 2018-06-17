@@ -2,7 +2,7 @@
 
 return array(
     'aryDoctorStar' => array('一星', '二星', '三星', '四星', '五星'),
-    'aryOrderPayStatus' => array('未付款', '付款中', '已付款', '待退款', '已退款'),
+    'aryOrderPayStatus' => array('未付款', '已付款', '待退款', '已退款'),
     'aryOrderPayType' => array('未选择', '微信', '支付宝'),
     'base_host' => 'http://39.105.19.169:88',
     'ose_host' => 'http://39.105.19.169:88',

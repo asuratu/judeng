@@ -52,6 +52,7 @@ class Member extends Common
                     $temp['is_system'] = $data['is_system'];
                     $temp['device_tokens'] = $data['device_tokens'];
                     $temp['login_state'] = 1;
+                    $temp['is_login'] = 1;
                     $temp['only_token'] = time().randCode(6,-1);
                     $info['only_token'] = $temp['only_token'];
 
@@ -152,6 +153,7 @@ class Member extends Common
                     $temp['is_system'] = $data['is_system'];
                     $temp['device_tokens'] = $data['device_tokens'];
                     $temp['login_state'] = 1;
+                    $temp['is_login'] = 1;
                     $temp['only_token'] = time().randCode(6,-1);
                     $info['only_token'] = $temp['only_token'];
 
