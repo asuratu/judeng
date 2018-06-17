@@ -128,8 +128,8 @@ class Inherit extends Common
             $map['`is_display`'] = 1;
             $map['`inherit_id`'] = $data['inherit_id'];
 
-//            $stateArr = db('article')->where($map)->field("article_id, title, list_pic, intro, release_date")->limit($start,$data['pageSize'])->order("`sort` DESC")->select();
-            $stateArr = db('article')->where($map)->field("article_id, title, list_pic, intro, release_date")->order("`sort` DESC")->select();
+            $stateArr = db('article')->where($map)->field("article_id, title, list_pic, intro, release_date")->limit($start,$data['pageSize'])->order("`sort` DESC")->select();
+//            $stateArr = db('article')->where($map)->field("article_id, title, list_pic, intro, release_date")->order("`sort` DESC")->select();
             $totalNum = db('article')->where($map)->field("inherit_id")->order("`sort` DESC")->count();
 
             //判断是否加入过该传承

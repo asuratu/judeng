@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:81:"D:\workLP\20180502\judeng\wwwroot/application/home\view\doctor\inviteDoctors.html";i:1528477817;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:81:"D:\workLP\20180502\judeng\wwwroot/application/home\view\doctor\inviteDoctors.html";i:1529061134;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,7 +31,8 @@
             <div class="invite-code clearfix">
                 <img src="/public/home/images/code2.jpg" class="fr">
                 <div class="fl">
-                    <img src="/public/home/images/icon01.png">
+                    <!--<img src="/public/home/images/icon01.png">-->
+                    <img src="<?php echo $info['to_doctor_url']; ?>">
                     <p>
                         <span><?php echo $info['true_name']; ?>医生</span>
                         邀请您入驻小橘灯<br>
@@ -50,7 +51,7 @@
                     通过平台直接为老患者诊后随访、复诊调药<br>
                     为新患者线上出诊、辩证开方
                 </p>
-                <img src="$info['to_doctor_url']">
+                <img src="/public/home/images/phone01.png">
             </li>
             <li>
                 <img src="/public/home/images/yy.png" class="yy">
@@ -74,7 +75,7 @@
     </div>
     <img src="/public/home/images/yy.png" class="yy">
     <div class="fix"></div>
-    <div class="btn"><a href="">接受邀请并注册</a></div>
+    <div class="btn"><a href="http://39.105.19.169:88/member/webRegist?id=<?php echo $info['invite']; ?>">接受邀请并注册</a></div>
 </div>
 </body>
 </html>

@@ -2096,3 +2096,923 @@
 [ error ] [8]未定义数组下标: 6[D:\workLP\20180502\judeng\wwwroot\application\home\controller\His.php:210]
 [ error ] [8]未定义数组下标: 1[D:\workLP\20180502\judeng\wwwroot\application\home\controller\His.php:210]
 [ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:108]
+---------------------------------------------------------------
+[ 2018-06-14T16:48:22+08:00 ] 0.0.0.0 POST /prescription/getTempDetail
+[ info ] localhost:7037/prescription/getTempDetail [运行时间：0.216338s][吞吐率：4.62req/s] [内存消耗：3,173.95kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '301',
+  'x-original-url' => '/prescription/getTempDetail',
+  'user-agent' => 'YiSong/1.2.4 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3bcf9asvp6dahbrr4cljcbg0h1',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'temp_id' => '12',
+  'only_token' => 'Authorization:Bearer YWMtnLKL2G-nEei606txzlFt8QAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFj_UZG5ABPGgALDGoyOOvHVgBtOWuNuLr0p5epb8epSqFddYq0ihAaJg',
+  'area_id' => 2,
+  '_time' => '1528965998',
+  'type' => '2',
+  'special_id' => '0',
+  'state_id' => '7',
+  'sign' => '83f57d1b284f6bede35b6cc9633f59cc',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.032487s ] mysql:host=118.25.179.178;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.023281s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `state_id` = '7'  AND `is_display` = 1 LIMIT 1 [ RunTime:0.015551s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_temp` [ RunTime:0.019275s ]
+[ sql ] [ SQL ] SELECT `make`,`weight`,`taking`,`instructions`,`temp_name`,`relation_id`,`type`,`price`,`drug_str`,`is_taboo`,`taboo_content`,`dose`,`special_id`,`special_content` FROM `jd_temp` WHERE  `temp_id` = 12 LIMIT 1 [ RunTime:0.016615s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.019699s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = 2  AND p.`is_display` = 1  AND d.`state_id` = '7' LIMIT 1 [ RunTime:0.018190s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`prescription_id`,p.`area_name` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = 2  AND p.`is_display` = 1  AND d.`state_id` = '7'  AND d.`relation_id` = 33 ORDER BY d.`sort` DESC LIMIT 1 [ RunTime:0.015834s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:108]
+---------------------------------------------------------------
+[ 2018-06-14T16:53:00+08:00 ] 0.0.0.0 POST /prescription/getTempDetail
+[ info ] localhost:7037/prescription/getTempDetail [运行时间：0.172472s][吞吐率：5.80req/s] [内存消耗：3,063.52kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '301',
+  'x-original-url' => '/prescription/getTempDetail',
+  'user-agent' => 'YiSong/1.2.4 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3bcf9asvp6dahbrr4cljcbg0h1',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'temp_id' => '12',
+  'only_token' => 'Authorization:Bearer YWMtnLKL2G-nEei606txzlFt8QAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFj_UZG5ABPGgALDGoyOOvHVgBtOWuNuLr0p5epb8epSqFddYq0ihAaJg',
+  'area_id' => 2,
+  '_time' => '1528965998',
+  'type' => '2',
+  'special_id' => '0',
+  'state_id' => '7',
+  'sign' => '83f57d1b284f6bede35b6cc9633f59cc',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.034789s ] mysql:host=118.25.179.178;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.044180s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `state_id` = '7'  AND `is_display` = 1 LIMIT 1 [ RunTime:0.047664s ]
+---------------------------------------------------------------
+[ 2018-06-14T16:53:25+08:00 ] 0.0.0.0 POST /prescription/getTempDetail
+[ info ] localhost:7037/prescription/getTempDetail [运行时间：1.366880s][吞吐率：0.73req/s] [内存消耗：3,087.11kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '301',
+  'x-original-url' => '/prescription/getTempDetail',
+  'user-agent' => 'YiSong/1.2.4 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3bcf9asvp6dahbrr4cljcbg0h1',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'temp_id' => '12',
+  'only_token' => 'Authorization:Bearer YWMtnLKL2G-nEei606txzlFt8QAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFj_UZG5ABPGgALDGoyOOvHVgBtOWuNuLr0p5epb8epSqFddYq0ihAaJg',
+  'area_id' => 2,
+  '_time' => '1528965998',
+  'type' => '2',
+  'special_id' => '0',
+  'state_id' => '7',
+  'sign' => '83f57d1b284f6bede35b6cc9633f59cc',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.035479s ] mysql:host=118.25.179.178;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.327259s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `state_id` = '7'  AND `is_display` = 1 LIMIT 1 [ RunTime:0.913719s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_temp` [ RunTime:0.022540s ]
+[ sql ] [ SQL ] SELECT `make`,`weight`,`taking`,`instructions`,`temp_name`,`relation_id`,`type`,`price`,`drug_str`,`is_taboo`,`taboo_content`,`dose`,`special_id`,`special_content` FROM `jd_temp` WHERE  `temp_id` = 12 LIMIT 1 [ RunTime:0.021448s ]
+---------------------------------------------------------------
+[ 2018-06-14T16:53:55+08:00 ] 0.0.0.0 POST /prescription/getTempDetail
+[ info ] localhost:7037/prescription/getTempDetail [运行时间：0.268751s][吞吐率：3.72req/s] [内存消耗：3,088.30kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '301',
+  'x-original-url' => '/prescription/getTempDetail',
+  'user-agent' => 'YiSong/1.2.4 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3bcf9asvp6dahbrr4cljcbg0h1',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'temp_id' => '12',
+  'only_token' => 'Authorization:Bearer YWMtnLKL2G-nEei606txzlFt8QAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFj_UZG5ABPGgALDGoyOOvHVgBtOWuNuLr0p5epb8epSqFddYq0ihAaJg',
+  'area_id' => 2,
+  '_time' => '1528965998',
+  'type' => '2',
+  'special_id' => '0',
+  'state_id' => '7',
+  'sign' => '83f57d1b284f6bede35b6cc9633f59cc',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.033961s ] mysql:host=118.25.179.178;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.024249s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `state_id` = '7'  AND `is_display` = 1 LIMIT 1 [ RunTime:0.025495s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_temp` [ RunTime:0.026106s ]
+[ sql ] [ SQL ] SELECT `make`,`weight`,`taking`,`instructions`,`temp_name`,`relation_id`,`type`,`price`,`drug_str`,`is_taboo`,`taboo_content`,`dose`,`special_id`,`special_content` FROM `jd_temp` WHERE  `temp_id` = 12 LIMIT 1 [ RunTime:0.024035s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.025886s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = 2  AND p.`is_display` = 1  AND d.`state_id` = '7' LIMIT 1 [ RunTime:0.022068s ]
+---------------------------------------------------------------
+[ 2018-06-14T16:54:16+08:00 ] 0.0.0.0 POST /prescription/getTempDetail
+[ info ] localhost:7037/prescription/getTempDetail [运行时间：0.281068s][吞吐率：3.56req/s] [内存消耗：3,094.80kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '301',
+  'x-original-url' => '/prescription/getTempDetail',
+  'user-agent' => 'YiSong/1.2.4 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3bcf9asvp6dahbrr4cljcbg0h1',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'temp_id' => '12',
+  'only_token' => 'Authorization:Bearer YWMtnLKL2G-nEei606txzlFt8QAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFj_UZG5ABPGgALDGoyOOvHVgBtOWuNuLr0p5epb8epSqFddYq0ihAaJg',
+  'area_id' => 2,
+  '_time' => '1528965998',
+  'type' => '2',
+  'special_id' => '0',
+  'state_id' => '7',
+  'sign' => '83f57d1b284f6bede35b6cc9633f59cc',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.032637s ] mysql:host=118.25.179.178;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.022518s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `state_id` = '7'  AND `is_display` = 1 LIMIT 1 [ RunTime:0.020043s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_temp` [ RunTime:0.023987s ]
+[ sql ] [ SQL ] SELECT `make`,`weight`,`taking`,`instructions`,`temp_name`,`relation_id`,`type`,`price`,`drug_str`,`is_taboo`,`taboo_content`,`dose`,`special_id`,`special_content` FROM `jd_temp` WHERE  `temp_id` = 12 LIMIT 1 [ RunTime:0.021660s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.022779s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = 2  AND p.`is_display` = 1  AND d.`state_id` = '7' LIMIT 1 [ RunTime:0.021559s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`prescription_id`,p.`area_name` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = 2  AND p.`is_display` = 1  AND d.`state_id` = '7'  AND d.`relation_id` = 33 ORDER BY d.`sort` DESC LIMIT 1 [ RunTime:0.019550s ]
+---------------------------------------------------------------
+[ 2018-06-14T16:55:58+08:00 ] 0.0.0.0 POST /prescription/getTempDetail
+[ info ] localhost:7037/prescription/getTempDetail [运行时间：0.324095s][吞吐率：3.09req/s] [内存消耗：3,094.92kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '301',
+  'x-original-url' => '/prescription/getTempDetail',
+  'user-agent' => 'YiSong/1.2.4 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3bcf9asvp6dahbrr4cljcbg0h1',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'temp_id' => '12',
+  'only_token' => 'Authorization:Bearer YWMtnLKL2G-nEei606txzlFt8QAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFj_UZG5ABPGgALDGoyOOvHVgBtOWuNuLr0p5epb8epSqFddYq0ihAaJg',
+  'area_id' => 2,
+  '_time' => '1528965998',
+  'type' => '2',
+  'special_id' => '0',
+  'state_id' => '7',
+  'sign' => '83f57d1b284f6bede35b6cc9633f59cc',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.034910s ] mysql:host=118.25.179.178;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.026391s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `state_id` = '7'  AND `is_display` = 1 LIMIT 1 [ RunTime:0.024732s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_temp` [ RunTime:0.028491s ]
+[ sql ] [ SQL ] SELECT `make`,`weight`,`taking`,`instructions`,`temp_name`,`relation_id`,`type`,`price`,`drug_str`,`is_taboo`,`taboo_content`,`dose`,`special_id`,`special_content` FROM `jd_temp` WHERE  `temp_id` = 12 LIMIT 1 [ RunTime:0.025167s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.025408s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = 2  AND p.`is_display` = 1  AND d.`state_id` = '7' LIMIT 1 [ RunTime:0.023382s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`prescription_id`,p.`area_name` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = 2  AND p.`is_display` = 1  AND d.`state_id` = '7'  AND d.`relation_id` = 33 ORDER BY d.`sort` DESC LIMIT 1 [ RunTime:0.023177s ]
+---------------------------------------------------------------
+[ 2018-06-14T16:57:53+08:00 ] 0.0.0.0 POST /prescription/getTempDetail
+[ info ] localhost:7037/prescription/getTempDetail [运行时间：0.184637s][吞吐率：5.42req/s] [内存消耗：3,087.11kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '301',
+  'x-original-url' => '/prescription/getTempDetail',
+  'user-agent' => 'YiSong/1.2.4 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3bcf9asvp6dahbrr4cljcbg0h1',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'temp_id' => '12',
+  'only_token' => 'Authorization:Bearer YWMtnLKL2G-nEei606txzlFt8QAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFj_UZG5ABPGgALDGoyOOvHVgBtOWuNuLr0p5epb8epSqFddYq0ihAaJg',
+  'area_id' => 2,
+  '_time' => '1528965998',
+  'type' => '2',
+  'special_id' => '0',
+  'state_id' => '7',
+  'sign' => '83f57d1b284f6bede35b6cc9633f59cc',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.026650s ] mysql:host=118.25.179.178;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.020724s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `state_id` = '7'  AND `is_display` = 1 LIMIT 1 [ RunTime:0.017145s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_temp` [ RunTime:0.020388s ]
+[ sql ] [ SQL ] SELECT `make`,`weight`,`taking`,`instructions`,`temp_name`,`relation_id`,`type`,`price`,`drug_str`,`is_taboo`,`taboo_content`,`dose`,`special_id`,`special_content` FROM `jd_temp` WHERE  `temp_id` = 12 LIMIT 1 [ RunTime:0.017909s ]
+---------------------------------------------------------------
+[ 2018-06-14T16:58:40+08:00 ] 0.0.0.0 POST /prescription/getTempDetail
+[ info ] localhost:7037/prescription/getTempDetail [运行时间：0.201126s][吞吐率：4.97req/s] [内存消耗：3,087.25kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '301',
+  'x-original-url' => '/prescription/getTempDetail',
+  'user-agent' => 'YiSong/1.2.4 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3bcf9asvp6dahbrr4cljcbg0h1',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'temp_id' => '12',
+  'only_token' => 'Authorization:Bearer YWMtnLKL2G-nEei606txzlFt8QAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFj_UZG5ABPGgALDGoyOOvHVgBtOWuNuLr0p5epb8epSqFddYq0ihAaJg',
+  'area_id' => 2,
+  '_time' => '1528965998',
+  'type' => '2',
+  'special_id' => '0',
+  'state_id' => '7',
+  'sign' => '83f57d1b284f6bede35b6cc9633f59cc',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.026113s ] mysql:host=118.25.179.178;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.019469s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `state_id` = '7'  AND `is_display` = 1 LIMIT 1 [ RunTime:0.018851s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_temp` [ RunTime:0.024730s ]
+[ sql ] [ SQL ] SELECT `make`,`weight`,`taking`,`instructions`,`temp_name`,`relation_id`,`type`,`price`,`drug_str`,`is_taboo`,`taboo_content`,`dose`,`special_id`,`special_content` FROM `jd_temp` WHERE  `temp_id` = 12 LIMIT 1 [ RunTime:0.018941s ]
+---------------------------------------------------------------
+[ 2018-06-14T17:04:40+08:00 ] 0.0.0.0 POST /prescription/getTempDetail
+[ info ] localhost:7037/prescription/getTempDetail [运行时间：0.197082s][吞吐率：5.07req/s] [内存消耗：3,087.25kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '301',
+  'x-original-url' => '/prescription/getTempDetail',
+  'user-agent' => 'YiSong/1.2.4 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3bcf9asvp6dahbrr4cljcbg0h1',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'temp_id' => '12',
+  'only_token' => 'Authorization:Bearer YWMtnLKL2G-nEei606txzlFt8QAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFj_UZG5ABPGgALDGoyOOvHVgBtOWuNuLr0p5epb8epSqFddYq0ihAaJg',
+  'area_id' => 2,
+  '_time' => '1528965998',
+  'type' => '2',
+  'special_id' => '0',
+  'state_id' => '7',
+  'sign' => '83f57d1b284f6bede35b6cc9633f59cc',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.042024s ] mysql:host=118.25.179.178;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.028771s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `state_id` = '7'  AND `is_display` = 1 LIMIT 1 [ RunTime:0.023793s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_temp` [ RunTime:0.025785s ]
+[ sql ] [ SQL ] SELECT `make`,`weight`,`taking`,`instructions`,`temp_name`,`relation_id`,`type`,`price`,`drug_str`,`is_taboo`,`taboo_content`,`dose`,`special_id`,`special_content` FROM `jd_temp` WHERE  `temp_id` = 12 LIMIT 1 [ RunTime:0.023898s ]
+---------------------------------------------------------------
+[ 2018-06-14T17:04:58+08:00 ] 0.0.0.0 POST /prescription/getTempDetail
+[ info ] localhost:7037/prescription/getTempDetail [运行时间：0.262949s][吞吐率：3.80req/s] [内存消耗：3,173.95kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '301',
+  'x-original-url' => '/prescription/getTempDetail',
+  'user-agent' => 'YiSong/1.2.4 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3bcf9asvp6dahbrr4cljcbg0h1',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'temp_id' => '12',
+  'only_token' => 'Authorization:Bearer YWMtnLKL2G-nEei606txzlFt8QAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFj_UZG5ABPGgALDGoyOOvHVgBtOWuNuLr0p5epb8epSqFddYq0ihAaJg',
+  'area_id' => 2,
+  '_time' => '1528965998',
+  'type' => '2',
+  'special_id' => '0',
+  'state_id' => '7',
+  'sign' => '83f57d1b284f6bede35b6cc9633f59cc',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.027551s ] mysql:host=118.25.179.178;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.021617s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `state_id` = '7'  AND `is_display` = 1 LIMIT 1 [ RunTime:0.017816s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_temp` [ RunTime:0.020159s ]
+[ sql ] [ SQL ] SELECT `make`,`weight`,`taking`,`instructions`,`temp_name`,`relation_id`,`type`,`price`,`drug_str`,`is_taboo`,`taboo_content`,`dose`,`special_id`,`special_content` FROM `jd_temp` WHERE  `temp_id` = 12 LIMIT 1 [ RunTime:0.017190s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.019564s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = 2  AND p.`is_display` = 1  AND d.`state_id` = '7' LIMIT 1 [ RunTime:0.016254s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`prescription_id`,p.`area_name` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = 2  AND p.`is_display` = 1  AND d.`state_id` = '7'  AND d.`relation_id` = 49 ORDER BY d.`sort` DESC LIMIT 1 [ RunTime:0.017351s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:108]
+---------------------------------------------------------------
+[ 2018-06-14T17:05:22+08:00 ] 0.0.0.0 POST /prescription/getTempDetail
+[ info ] localhost:7037/prescription/getTempDetail [运行时间：0.269906s][吞吐率：3.70req/s] [内存消耗：3,088.50kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '301',
+  'x-original-url' => '/prescription/getTempDetail',
+  'user-agent' => 'YiSong/1.2.4 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3bcf9asvp6dahbrr4cljcbg0h1',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'temp_id' => '12',
+  'only_token' => 'Authorization:Bearer YWMtnLKL2G-nEei606txzlFt8QAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFj_UZG5ABPGgALDGoyOOvHVgBtOWuNuLr0p5epb8epSqFddYq0ihAaJg',
+  'area_id' => 2,
+  '_time' => '1528965998',
+  'type' => '2',
+  'special_id' => '0',
+  'state_id' => '7',
+  'sign' => '83f57d1b284f6bede35b6cc9633f59cc',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.042296s ] mysql:host=118.25.179.178;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.025618s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `state_id` = '7'  AND `is_display` = 1 LIMIT 1 [ RunTime:0.021787s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_temp` [ RunTime:0.024939s ]
+[ sql ] [ SQL ] SELECT `make`,`weight`,`taking`,`instructions`,`temp_name`,`relation_id`,`type`,`price`,`drug_str`,`is_taboo`,`taboo_content`,`dose`,`special_id`,`special_content` FROM `jd_temp` WHERE  `temp_id` = 12 LIMIT 1 [ RunTime:0.024042s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.025389s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = 2  AND p.`is_display` = 1  AND d.`state_id` = '7' LIMIT 1 [ RunTime:0.020223s ]
+---------------------------------------------------------------
+[ 2018-06-14T17:06:50+08:00 ] 0.0.0.0 POST /prescription/getTempDetail
+[ info ] localhost:7037/prescription/getTempDetail [运行时间：0.275435s][吞吐率：3.63req/s] [内存消耗：3,094.80kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '301',
+  'x-original-url' => '/prescription/getTempDetail',
+  'user-agent' => 'YiSong/1.2.4 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3bcf9asvp6dahbrr4cljcbg0h1',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'temp_id' => '12',
+  'only_token' => 'Authorization:Bearer YWMtnLKL2G-nEei606txzlFt8QAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFj_UZG5ABPGgALDGoyOOvHVgBtOWuNuLr0p5epb8epSqFddYq0ihAaJg',
+  'area_id' => 2,
+  '_time' => '1528965998',
+  'type' => '2',
+  'special_id' => '0',
+  'state_id' => '7',
+  'sign' => '83f57d1b284f6bede35b6cc9633f59cc',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.032968s ] mysql:host=118.25.179.178;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.024323s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `state_id` = '7'  AND `is_display` = 1 LIMIT 1 [ RunTime:0.021627s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_temp` [ RunTime:0.023363s ]
+[ sql ] [ SQL ] SELECT `make`,`weight`,`taking`,`instructions`,`temp_name`,`relation_id`,`type`,`price`,`drug_str`,`is_taboo`,`taboo_content`,`dose`,`special_id`,`special_content` FROM `jd_temp` WHERE  `temp_id` = 12 LIMIT 1 [ RunTime:0.023861s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.023101s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = 2  AND p.`is_display` = 1  AND d.`state_id` = '7' LIMIT 1 [ RunTime:0.020056s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`prescription_id`,p.`area_name` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = 2  AND p.`is_display` = 1  AND d.`state_id` = '7'  AND d.`relation_id` = 49 ORDER BY d.`sort` DESC LIMIT 1 [ RunTime:0.021885s ]
+---------------------------------------------------------------
+[ 2018-06-14T17:07:01+08:00 ] 0.0.0.0 POST /prescription/getTempDetail
+[ info ] localhost:7037/prescription/getTempDetail [运行时间：0.292164s][吞吐率：3.42req/s] [内存消耗：3,095.82kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '301',
+  'x-original-url' => '/prescription/getTempDetail',
+  'user-agent' => 'YiSong/1.2.4 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3bcf9asvp6dahbrr4cljcbg0h1',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'temp_id' => '12',
+  'only_token' => 'Authorization:Bearer YWMtnLKL2G-nEei606txzlFt8QAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFj_UZG5ABPGgALDGoyOOvHVgBtOWuNuLr0p5epb8epSqFddYq0ihAaJg',
+  'area_id' => 2,
+  '_time' => '1528965998',
+  'type' => '2',
+  'special_id' => '0',
+  'state_id' => '7',
+  'sign' => '83f57d1b284f6bede35b6cc9633f59cc',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.036155s ] mysql:host=118.25.179.178;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.025434s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `state_id` = '7'  AND `is_display` = 1 LIMIT 1 [ RunTime:0.023481s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_temp` [ RunTime:0.026932s ]
+[ sql ] [ SQL ] SELECT `make`,`weight`,`taking`,`instructions`,`temp_name`,`relation_id`,`type`,`price`,`drug_str`,`is_taboo`,`taboo_content`,`dose`,`special_id`,`special_content` FROM `jd_temp` WHERE  `temp_id` = 12 LIMIT 1 [ RunTime:0.025591s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.024835s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = 2  AND p.`is_display` = 1  AND d.`state_id` = '7' LIMIT 1 [ RunTime:0.024228s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`prescription_id`,p.`area_name` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = 2  AND p.`is_display` = 1  AND d.`state_id` = '7'  AND d.`relation_id` = 49 ORDER BY d.`sort` DESC LIMIT 1 [ RunTime:0.023409s ]
+---------------------------------------------------------------
+[ 2018-06-14T17:21:36+08:00 ] 0.0.0.0 POST /prescription/getTempDetail
+[ info ] localhost:7037/prescription/getTempDetail [运行时间：0.257996s][吞吐率：3.88req/s] [内存消耗：3,173.95kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '301',
+  'x-original-url' => '/prescription/getTempDetail',
+  'user-agent' => 'YiSong/1.2.4 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3bcf9asvp6dahbrr4cljcbg0h1',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'temp_id' => '12',
+  'only_token' => 'Authorization:Bearer YWMtnLKL2G-nEei606txzlFt8QAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFj_UZG5ABPGgALDGoyOOvHVgBtOWuNuLr0p5epb8epSqFddYq0ihAaJg',
+  'area_id' => 2,
+  '_time' => '1528965998',
+  'type' => '2',
+  'special_id' => '0',
+  'state_id' => '7',
+  'sign' => '83f57d1b284f6bede35b6cc9633f59cc',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.061476s ] mysql:host=118.25.179.178;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.022652s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `state_id` = '7'  AND `is_display` = 1 LIMIT 1 [ RunTime:0.020066s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_temp` [ RunTime:0.022490s ]
+[ sql ] [ SQL ] SELECT `make`,`weight`,`taking`,`instructions`,`temp_name`,`relation_id`,`type`,`price`,`drug_str`,`is_taboo`,`taboo_content`,`dose`,`special_id`,`special_content` FROM `jd_temp` WHERE  `temp_id` = 12 LIMIT 1 [ RunTime:0.021764s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.023089s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = 2  AND p.`is_display` = 1  AND d.`state_id` = '7' LIMIT 1 [ RunTime:0.018337s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`prescription_id`,p.`area_name` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = 2  AND p.`is_display` = 1  AND d.`state_id` = '7'  AND d.`relation_id` = 49 ORDER BY d.`sort` DESC LIMIT 1 [ RunTime:0.018871s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:108]
+---------------------------------------------------------------
+[ 2018-06-14T17:22:25+08:00 ] 0.0.0.0 POST /prescription/getTempDetail
+[ info ] localhost:7037/prescription/getTempDetail [运行时间：0.251332s][吞吐率：3.98req/s] [内存消耗：3,088.50kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '301',
+  'x-original-url' => '/prescription/getTempDetail',
+  'user-agent' => 'YiSong/1.2.4 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3bcf9asvp6dahbrr4cljcbg0h1',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'temp_id' => '12',
+  'only_token' => 'Authorization:Bearer YWMtnLKL2G-nEei606txzlFt8QAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFj_UZG5ABPGgALDGoyOOvHVgBtOWuNuLr0p5epb8epSqFddYq0ihAaJg',
+  'area_id' => 2,
+  '_time' => '1528965998',
+  'type' => '2',
+  'special_id' => '0',
+  'state_id' => '7',
+  'sign' => '83f57d1b284f6bede35b6cc9633f59cc',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.063637s ] mysql:host=118.25.179.178;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.023451s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `state_id` = '7'  AND `is_display` = 1 LIMIT 1 [ RunTime:0.023474s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_temp` [ RunTime:0.025389s ]
+[ sql ] [ SQL ] SELECT `make`,`weight`,`taking`,`instructions`,`temp_name`,`relation_id`,`type`,`price`,`drug_str`,`is_taboo`,`taboo_content`,`dose`,`special_id`,`special_content` FROM `jd_temp` WHERE  `temp_id` = 12 LIMIT 1 [ RunTime:0.022082s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.024764s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = 2  AND p.`is_display` = 1  AND d.`state_id` = '7' LIMIT 1 [ RunTime:0.020364s ]
+---------------------------------------------------------------
+[ 2018-06-14T17:52:48+08:00 ] 0.0.0.0 POST /order/checkDrugNum
+[ info ] localhost:7037/order/checkDrugNum [运行时间：0.368729s][吞吐率：2.71req/s] [内存消耗：3,175.20kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'checkDrugNum',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '393',
+  'x-original-url' => '/order/checkDrugNum',
+  'user-agent' => 'YiSong/1.2.4 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3bcf9asvp6dahbrr4cljcbg0h1',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'prescription_id' => 1,
+  'sign' => '451e18c65106f07ea6f061d82f239655',
+  'drug_str' => 'W1sxNywi5Yi25bed5LmMIiw0LCJnIl0sWzMxNSwi54af6ZmE54mHIiwzMCwiZyJdLFs0ODUsIuazleWNiuWkjyIsOTQsImciXSxbMzM2LCLnmb3olociLDEsImciXV0=',
+  '_time' => '1528969919',
+  'only_token' => 'Authorization:Bearer YWMtnLKL2G-nEei606txzlFt8QAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFj_UZG5ABPGgALDGoyOOvHVgBtOWuNuLr0p5epb8epSqFddYq0ihAaJg',
+)
+[ info ] [ RUN ] app\home\controller\Order->checkDrugNum[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.033404s ] mysql:host=118.25.179.178;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug` [ RunTime:0.028000s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '制川乌' LIMIT 1 [ RunTime:0.021827s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '熟附片' LIMIT 1 [ RunTime:0.020753s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '法半夏' LIMIT 1 [ RunTime:0.023264s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '白薇' LIMIT 1 [ RunTime:0.021626s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_record` [ RunTime:0.023762s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = '川乌'  AND `type` = 1 LIMIT 1 [ RunTime:0.020290s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `key` = 2  AND `type` = 0 [ RunTime:0.022378s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = '附子'  AND `type` = 1 LIMIT 1 [ RunTime:0.020727s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `key` = 2  AND `type` = 0 [ RunTime:0.021282s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` IS NULL  AND `type` = 1 LIMIT 1 [ RunTime:0.019536s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = ''  AND `type` = 1 LIMIT 1 [ RunTime:0.020361s ]
+[ error ] [8]未定义数组索引: num[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php:562]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:108]
+---------------------------------------------------------------
+[ 2018-06-14T17:55:08+08:00 ] 0.0.0.0 POST /order/checkDrugNum
+[ info ] localhost:7037/order/checkDrugNum [运行时间：0.355380s][吞吐率：2.81req/s] [内存消耗：3,175.44kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'checkDrugNum',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '393',
+  'x-original-url' => '/order/checkDrugNum',
+  'user-agent' => 'YiSong/1.2.4 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3bcf9asvp6dahbrr4cljcbg0h1',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'prescription_id' => 1,
+  'sign' => '451e18c65106f07ea6f061d82f239655',
+  'drug_str' => 'W1sxNywi5Yi25bed5LmMIiw0LCJnIl0sWzMxNSwi54af6ZmE54mHIiwzMCwiZyJdLFs0ODUsIuazleWNiuWkjyIsOTQsImciXSxbMzM2LCLnmb3olociLDEsImciXV0=',
+  '_time' => '1528969919',
+  'only_token' => 'Authorization:Bearer YWMtnLKL2G-nEei606txzlFt8QAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFj_UZG5ABPGgALDGoyOOvHVgBtOWuNuLr0p5epb8epSqFddYq0ihAaJg',
+)
+[ info ] [ RUN ] app\home\controller\Order->checkDrugNum[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.030503s ] mysql:host=118.25.179.178;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug` [ RunTime:0.027087s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '制川乌' LIMIT 1 [ RunTime:0.022102s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '熟附片' LIMIT 1 [ RunTime:0.022983s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '法半夏' LIMIT 1 [ RunTime:0.023726s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '白薇' LIMIT 1 [ RunTime:0.020103s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_record` [ RunTime:0.022076s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = '川乌'  AND `type` = 1 LIMIT 1 [ RunTime:0.018767s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `key` = 2  AND `type` = 0 [ RunTime:0.023106s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = '附子'  AND `type` = 1 LIMIT 1 [ RunTime:0.019763s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `key` = 2  AND `type` = 0 [ RunTime:0.018907s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` IS NULL  AND `type` = 1 LIMIT 1 [ RunTime:0.020411s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = ''  AND `type` = 1 LIMIT 1 [ RunTime:0.020396s ]
+[ error ] [8]未定义数组索引: num[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php:562]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:108]
+---------------------------------------------------------------
+[ 2018-06-14T17:55:24+08:00 ] 0.0.0.0 POST /order/checkDrugNum
+[ info ] localhost:7037/order/checkDrugNum [运行时间：0.137014s][吞吐率：7.30req/s] [内存消耗：3,074.23kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'checkDrugNum',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '393',
+  'x-original-url' => '/order/checkDrugNum',
+  'user-agent' => 'YiSong/1.2.4 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3bcf9asvp6dahbrr4cljcbg0h1',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'prescription_id' => 1,
+  'sign' => '451e18c65106f07ea6f061d82f239655',
+  'drug_str' => 'W1sxNywi5Yi25bed5LmMIiw0LCJnIl0sWzMxNSwi54af6ZmE54mHIiwzMCwiZyJdLFs0ODUsIuazleWNiuWkjyIsOTQsImciXSxbMzM2LCLnmb3olociLDEsImciXV0=',
+  '_time' => '1528969919',
+  'only_token' => 'Authorization:Bearer YWMtnLKL2G-nEei606txzlFt8QAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFj_UZG5ABPGgALDGoyOOvHVgBtOWuNuLr0p5epb8epSqFddYq0ihAaJg',
+)
+[ info ] [ RUN ] app\home\controller\Order->checkDrugNum[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.031709s ] mysql:host=118.25.179.178;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug` [ RunTime:0.024836s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '制川乌' LIMIT 1 [ RunTime:0.021111s ]
+---------------------------------------------------------------
+[ 2018-06-14T17:56:20+08:00 ] 0.0.0.0 POST /order/checkDrugNum
+[ info ] localhost:7037/order/checkDrugNum [运行时间：0.228894s][吞吐率：4.37req/s] [内存消耗：3,079.73kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'checkDrugNum',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '393',
+  'x-original-url' => '/order/checkDrugNum',
+  'user-agent' => 'YiSong/1.2.4 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3bcf9asvp6dahbrr4cljcbg0h1',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'prescription_id' => 1,
+  'sign' => '451e18c65106f07ea6f061d82f239655',
+  'drug_str' => 'W1sxNywi5Yi25bed5LmMIiw0LCJnIl0sWzMxNSwi54af6ZmE54mHIiwzMCwiZyJdLFs0ODUsIuazleWNiuWkjyIsOTQsImciXSxbMzM2LCLnmb3olociLDEsImciXV0=',
+  '_time' => '1528969919',
+  'only_token' => 'Authorization:Bearer YWMtnLKL2G-nEei606txzlFt8QAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFj_UZG5ABPGgALDGoyOOvHVgBtOWuNuLr0p5epb8epSqFddYq0ihAaJg',
+)
+[ info ] [ RUN ] app\home\controller\Order->checkDrugNum[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.038981s ] mysql:host=118.25.179.178;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug` [ RunTime:0.023350s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '制川乌' LIMIT 1 [ RunTime:0.024240s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '熟附片' LIMIT 1 [ RunTime:0.021650s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '法半夏' LIMIT 1 [ RunTime:0.022786s ]
+---------------------------------------------------------------
+[ 2018-06-14T17:57:48+08:00 ] 0.0.0.0 POST /order/checkDrugNum
+[ info ] localhost:7037/order/checkDrugNum [运行时间：0.393758s][吞吐率：2.54req/s] [内存消耗：3,173.99kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'checkDrugNum',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '393',
+  'x-original-url' => '/order/checkDrugNum',
+  'user-agent' => 'YiSong/1.2.4 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3bcf9asvp6dahbrr4cljcbg0h1',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'prescription_id' => 1,
+  'sign' => '451e18c65106f07ea6f061d82f239655',
+  'drug_str' => 'W1sxNywi5Yi25bed5LmMIiw0LCJnIl0sWzMxNSwi54af6ZmE54mHIiwzMCwiZyJdLFs0ODUsIuazleWNiuWkjyIsOTQsImciXSxbMzM2LCLnmb3olociLDEsImciXV0=',
+  '_time' => '1528969919',
+  'only_token' => 'Authorization:Bearer YWMtnLKL2G-nEei606txzlFt8QAAAAAAAAAAAAAAAAAAAAFb-H4gUBQR6Iijj4cnvWykAgMAAAFj_UZG5ABPGgALDGoyOOvHVgBtOWuNuLr0p5epb8epSqFddYq0ihAaJg',
+)
+[ info ] [ RUN ] app\home\controller\Order->checkDrugNum[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.030393s ] mysql:host=118.25.179.178;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug` [ RunTime:0.021604s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '制川乌' LIMIT 1 [ RunTime:0.018751s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '熟附片' LIMIT 1 [ RunTime:0.020834s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '法半夏' LIMIT 1 [ RunTime:0.019097s ]
+[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `prescription_id` = 1  AND `nick_name` = '白薇' LIMIT 1 [ RunTime:0.021745s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_record` [ RunTime:0.021290s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = '川乌'  AND `type` = 1 LIMIT 1 [ RunTime:0.029870s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `key` = 2  AND `type` = 0 [ RunTime:0.017810s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = '附子'  AND `type` = 1 LIMIT 1 [ RunTime:0.022266s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `key` = 2  AND `type` = 0 [ RunTime:0.019774s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = '半夏'  AND `type` = 1 LIMIT 1 [ RunTime:0.019841s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_drug_record` WHERE  `name` = ''  AND `type` = 1 LIMIT 1 [ RunTime:0.017950s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:108]

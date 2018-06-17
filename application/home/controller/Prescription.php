@@ -324,6 +324,7 @@ class Prescription extends Common
                     //查询模板信息
                     $tempMap['temp_id'] = $data['temp_id'];
                     $drugtempInfo = db('temp')->where($tempMap)->field("make,weight,taking,instructions,temp_name,relation_id,type,price,drug_str,is_taboo,taboo_content,dose,special_id,special_content")->find();
+
                     //敏感数据处理
                     $drugtempInfo['drug_str'] = base64_encode($drugtempInfo['drug_str']);
                     $drugtempInfo['taboo_content'] = $drugtempInfo['taboo_content'] ? base64_encode($drugtempInfo['taboo_content']) : '';
@@ -343,6 +344,7 @@ class Prescription extends Common
                         ->where($houseMap)
                         ->field("d.`relation_id`, d.`prescription_id`, d.`state_id`, d.`describe`, p.`prescription_name`, p.`prescription_id`, p.`area_name`")
                         ->count();
+
                     $houseMap['d.`relation_id`'] = $drugtempInfo['relation_id'];
                     $houseArr = db('drug_relation')->alias('d')
                         ->join(['jd_prescription'=>'p'], 'd.prescription_id = p.prescription_id' , 'inner')
@@ -351,6 +353,7 @@ class Prescription extends Common
                         ->field("d.`relation_id`, d.`prescription_id`, d.`state_id`, d.`describe`, p.`prescription_name`, p.`prescription_id`, p.`area_name`")
                         ->order("d.`sort` DESC")
                         ->find();
+
                     if (!$houseArr) {
                         ajaxReturn(array('code'=>0,'info'=>'该药态该药房暂不可用~!','data'=>[]));
                     }

@@ -647,6 +647,7 @@ class Member extends Common
         if ($doctorInfo && $doctorInfo['code'] == 1) {
             $information['to_doctor_url'] = $doctorInfo['data'][0]['to_doctor_url'];
             $information['true_name'] = $doctorInfo['data'][0]['true_name'];
+            $information['invite'] = $doctorInfo['data'][0]['invite'];
         } else {
             return 404;
         }
