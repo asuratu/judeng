@@ -88,6 +88,75 @@ class Member extends Common
     }
 
     /**
+     * @Title: relogin
+     * @Description: TODO 注册即可登录
+     */
+    public function relogin()
+    {
+        if($this->request->isPost()) {
+            $data=input('post.');
+            if(!preg_match("/^1\d{10}$/",$data['mobile']))
+            {
+                ajaxReturn(array('code' =>0, 'info' => '手机号码格式不正确！','data'=>[]));
+            }
+            $map['mobile']=$data['mobile'];
+            $info=db('doctor')->where($map)->field("member_id,member_sn,member_name,mobile,password,guid, true_name, is_clinic, is_certified, login_state, device_tokens, is_status")->find();
+//            var_dump(db('doctor')->getLastSql());die;
+
+            if(!empty($info))
+            {
+                //是否被冻结
+                if ($info['is_status'] == 1) {
+                    ajaxReturn(array('code'=>0,'info'=>'该账号被冻结！','data'=>[]));
+                }
+
+                $pwd=md5(md5($data['password']).$info['guid']);
+                if($pwd==$info['password'])
+                {
+
+                    $temp['login_ip']=Request::instance()->ip();
+                    $temp['login_time']=time();
+
+                    //更新设备号和在线状态, 以及设备系统, only_token
+                    $temp['is_system'] = $data['is_system'];
+                    $temp['device_tokens'] = $data['device_tokens'];
+                    $temp['login_state'] = 1;
+                    $temp['is_login'] = 1;
+                    $temp['only_token'] = time().randCode(6,-1);
+                    $info['only_token'] = $temp['only_token'];
+
+                    db('doctor')->where($map)->update($temp);
+
+                    //获取环信token
+                    import('Easemob', EXTEND_PATH);
+
+                    $options['client_id'] = config('client_id');
+                    $options['client_secret'] = config('client_secret');
+                    $options['org_name'] = config('org_name');
+                    $options['app_name'] = config('app_name');
+
+                    $h=new \Easemob($options);
+                    $info['token'] = $h->getToken();
+                    $_SESSION['uinfo']=$info;
+
+                    $con = Model('Setting')->findAdmin();
+                    $info['version_number'] = $con['version_number'];
+                    $info['service_hot'] = $con['service_hot'];
+
+                    ajaxReturn(array('code' =>1, 'info' => '登录成功','data'=>[$info]));
+                }else
+                {
+                    ajaxReturn(array('code'=>0,'info'=>'密码不正确！','data'=>[]));
+                }
+            }else
+            {
+                ajaxReturn(array('code'=>0,'info'=>'手机号码不存在！','data'=>[]));
+            }
+
+        }
+    }
+
+    /**
      * @Title: doSmsLogin
      * @Description: TODO 短信登录
      */
@@ -487,9 +556,9 @@ class Member extends Common
      */
     public function doregist()
     {
-        if($this->request->isPost())
-        {
-
+        if($this->request->isPost()) {
+        try {
+            Db::startTrans();
             $data=input('post.');
             $res=checkSign($data);
             if($res['code']==0)
@@ -583,22 +652,53 @@ class Member extends Common
                 $h->createUser($data['member_sn'],"123456");
 
                 //注册即可登录
-                $loginData['mobile'] = $data['mobile'];
-                $loginData['password'] = $_oldPwd['password'];
-                $loginData['device_tokens'] = $data['device_tokens'];
-                $loginData['is_system'] = $data['is_system'];
-                $result = curlPost(config('url').'/member/dologin', $loginData);
 
-                if ($result == false) {
-                    ajaxReturn(array('code' => 0, 'info' => '注册成功, 由于系统繁忙登录失败, 请重新登录!','data'=>[]));
-                } else {
-                    return $result;
-                }
-            }else
-            {
-                ajaxReturn(array('code' => 1, 'info' => '注册失败','data'=>[]));
+                $map['mobile']=$data['mobile'];
+                $temp['login_ip']=Request::instance()->ip();
+                $temp['login_time']=time();
+
+                //更新设备号和在线状态, 以及设备系统, only_token
+                $temp['is_system'] = $data['is_system'];
+                $temp['device_tokens'] = $data['device_tokens'];
+                $temp['login_state'] = 1;
+                $temp['is_login'] = 1;
+                $temp['only_token'] = time().randCode(6,-1);
+                $info['only_token'] = $temp['only_token'];
+
+                db('doctor')->where($map)->update($temp);
+
+                //获取环信token
+                import('Easemob', EXTEND_PATH);
+
+                $options['client_id'] = config('client_id');
+                $options['client_secret'] = config('client_secret');
+                $options['org_name'] = config('org_name');
+                $options['app_name'] = config('app_name');
+
+                $h=new \Easemob($options);
+                $info['token'] = $h->getToken();
+                $_SESSION['uinfo']=$info;
+
+                $con = Model('Setting')->findAdmin();
+                $info['version_number'] = $con['version_number'];
+                $info['service_hot'] = $con['service_hot'];
+
+                //查找用户信息
+                $newInfo = db('doctor')
+                    ->where($map)
+                    ->field("member_id,member_sn,member_name,mobile,password,guid, true_name, is_clinic, is_certified, login_state, device_tokens, is_status")
+                    ->find();
+                $info = array_merge($info, $newInfo);
+                Db::commit();
+                ajaxReturn(array('code' =>1, 'info' => '注册成功','data'=>[$info]));
+            } else {
+                Db::rollback();
+                ajaxReturn(array('code' => 0, 'info' => '注册失败','data'=>[]));
             }
-
+        } catch (\Exception $e) {
+        Db::rollback();
+        return false;
+            }
         }
     }
 

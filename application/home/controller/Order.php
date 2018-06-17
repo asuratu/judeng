@@ -119,7 +119,9 @@ class Order extends Common
             $mainInfo['instructions'] = $houseAllArr['instructions'] ?: '';
             $mainInfo['pic'] = $houseAllArr['pic'];
             $mainInfo['state_house_name'] = $houseAllArr['state_name'].'.'.$houseAllArr['area_name'].'-'.$houseAllArr['prescription_name'];
-            $mainInfo['left_num'] = $leftNum-1;
+//            $mainInfo['left_num'] = $leftNum-1;
+            //因为只有一家药房, 其余四家都是虚拟的
+            $mainInfo['left_num'] = 4;
 
             if ($data['patient_id']==0) {
                 //手机号开方, 新建时创建患者信息
