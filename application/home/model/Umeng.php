@@ -20,7 +20,7 @@ class Umeng extends Model
     /*
         安卓发送
     */
-    public function PtoAndroid($device_tokens, $ticker, $title, $text)
+    public function PtoAndroid($device_tokens, $ticker, $title, $text, $extra)
     {
 
         if (count($device_tokens) > 500) {
@@ -28,7 +28,7 @@ class Umeng extends Model
         }
 
         //拼接签名
-        $post_data = $this->_android($device_tokens, $ticker, $title, $text);
+        $post_data = $this->_android($device_tokens, $ticker, $title, $text, $extra);
         $sign = $this->_makeSign($post_data, 1);
         $url = $this->_config['url'] . '?sign=' . $sign;
 
@@ -53,14 +53,14 @@ class Umeng extends Model
     /*
         iOS发送
     */
-    public function PtoIos($device_tokens, $text)
+    public function PtoIos($device_tokens, $text, $extra)
     {
         if (count($device_tokens) > 500) {
             die('设备超过500个');
         }
 
         //拼接post数据
-        $post_data = $this->_ios($device_tokens, $text);
+        $post_data = $this->_ios($device_tokens, $text, $extra);
 
         //拼接签名
         $sign = $this->_makeSign($post_data, 2);
@@ -120,7 +120,7 @@ class Umeng extends Model
                     device_tokens 	array 设备号
         @return
     */
-    private function _android($device_tokens, $ticker, $title, $text, $type = 'unicast')
+    private function _android($device_tokens, $ticker, $title, $text, $extra = array(), $type = 'unicast')
     {
 
         $temp_arr = array(
@@ -137,6 +137,7 @@ class Umeng extends Model
                     'after_open' => 'go_app',
 //                    'custom' => 'do things', //点击通知后做的事
 					),
+                'extra' => $extra,
 				),
 				'production_mode' 		=> 'false',//测试，上线为true
                 'description' 			=> 'cccc',//描述
@@ -154,7 +155,7 @@ class Umeng extends Model
                     device_tokens 	array 设备号
         @return
     */
-    private function _ios($device_tokens, $text, $type = 'unicast')
+    private function _ios($device_tokens, $text, $extra = array(), $type = 'unicast')
     {
         $temp_arr = array(
             'appkey' => $this->_config['ios_app_key'],
@@ -167,6 +168,7 @@ class Umeng extends Model
                     'after_open' => 'go_app',
 //                    'custom' => 'do things', //点击通知后做的事
                 ),
+                $extra,
             ),
             'production_mode' 		=> 'false',//测试，上线为true
             'description' 			=> 'broadcast',//描述

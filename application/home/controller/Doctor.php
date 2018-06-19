@@ -7,6 +7,48 @@ use think\Db;
 
 class Doctor extends Common
 {
+
+    // 退出修改医生登录状态
+    public function signOut()
+    {
+        if ($this->request->isPost()) {
+            $data = input('post.');
+            if ($data['doctor_id'] == '') {
+                ajaxReturn(array('code' => 0, 'info' => '参数不完整', 'data' => []));
+            }
+            $doctor = array(
+                'doctor_id' => $data['doctor_id'],
+                'is_login' => 0,
+                'release_date' => time(),
+            );
+            db('doctor')->insert($doctor);
+            ajaxReturn(array('code' => 1, 'info' => 'ok', 'data' => []));
+        }
+    }
+
+    // type 0 咨询回复提醒
+    // 医生操作发送给患者
+    public function sendMember() {
+        $data=input('post.');
+        if($data['doctor_id']==''||$data['member_id']=='')
+        {
+            ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+        }
+        $doctor = db('doctor')->where("member_id={$data['doctor_id']}")->find();
+        $member = db('member')->field('member_name, mobile, openid, is_type')->where("member_id={$data['member_id']}")->find();
+        $sendHair['doctor_name'] = $doctor['doctor_member'];
+        $sendHair['hospital'] = '小橘灯中医';
+        $sendHair['content'] = $doctor['doctor_member'] . '医生回复了您的消息，请尽快查看';
+        $sendHair['remark'] = '点击这里进入医生咨询聊天界面';
+        $sendHair['url'] = 'http://wechat.bohetanglao.com/home/advise/chat/memberid/' . $data['doctor_id'] . '/type/0.html';
+        $sendHair['first'] = $sendHair['doctor_name'] . '医生:我回复了您的咨询,请及时查看';
+        $sendHair['openid'] = $member['openid'];
+        if ($member['is_type'] == 0) {
+            Model('Weixin')->messageTemplate(2, $sendHair);
+        }
+        ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[]));
+    }
+
     /**
      * @Title:
      * @Description: TODO 医生资料修改
