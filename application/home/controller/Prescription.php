@@ -210,7 +210,8 @@ class Prescription extends Common
                     $tempInfo['state_house_name'] = $tempInfo['state_name'].'.'.$houseArr[0]['area_name'].'-'.$houseArr[0]['prescription_name'];
                     $tempInfo['relation_id'] = $houseArr[0]['relation_id'];
                     $tempInfo['prescription_id'] = $houseArr[0]['prescription_id'];
-                    $tempInfo['left_num'] = count($houseArr)-1;
+//                    $tempInfo['left_num'] = count($houseArr)-1;
+                    $tempInfo['left_num'] = 4;
                     //查询药材明细
                     $specialInfo = db('special')
                         ->where("special_id = {$data['special_id']} AND is_display = 1")
@@ -305,7 +306,8 @@ class Prescription extends Common
                         $tempInfo['state_house_name'] = $tempInfo['state_name'].'.'.$houseArr[0]['area_name'].'-'.$houseArr[0]['prescription_name'];
                         $tempInfo['relation_id'] = $houseArr[0]['relation_id'];
                         $tempInfo['prescription_id'] = $houseArr[0]['prescription_id'];
-                        $tempInfo['left_num'] = count($houseArr)-1;
+//                        $tempInfo['left_num'] = count($houseArr)-1;
+                        $tempInfo['left_num'] = 4;
                         $tempInfo['price'] = 0;
                         $tempInfo['drug_str'] = '';
                         $tempInfo['special_content'] = '';
@@ -358,7 +360,8 @@ class Prescription extends Common
                         ajaxReturn(array('code'=>0,'info'=>'该药态该药房暂不可用~!','data'=>[]));
                     }
                     $drugtempInfo['state_house_name'] = $tempInfo['state_name'].'.'.$houseArr['area_name'].'-'.$houseArr['prescription_name'];
-                    $drugtempInfo['left_num'] = $houseAllArr - 1;
+//                    $drugtempInfo['left_num'] = $houseAllArr - 1;
+                    $drugtempInfo['left_num'] = 4;
                     $drugtempInfo['prescription_id'] = $houseArr['prescription_id'];
                     $drugtempInfo['special_content'] = base64_encode($drugtempInfo['special_content']);
                     ajaxReturn(array('code'=>1,'info'=>'ok~!','data'=>[$drugtempInfo]));
@@ -770,10 +773,12 @@ class Prescription extends Common
             }
             $map['type'] = 0;
             $stateArr = db('temp')->where($map)->field("`temp_id`,`temp_name`,`type`,`relation_id`,`drug_str`, `state_id`, `release_date`")->order("`release_date` DESC")->select();
+
             foreach ($stateArr as $key=>$val) {
                 $stateArr[$key]['drug_str'] = base64_encode($val['drug_str']);
                 $stateArr[$key]['special_id'] = 0;
             }
+
 
             //加入传承的特色方剂
             $specialList = db('inherit_doctor')->alias('id')
