@@ -157,7 +157,7 @@ class Prescription extends Common
                 array_push($stateArr[$key]['content'], $arr2);
                 array_push($stateArr[$key]['content'], $arr3);
                 array_push($stateArr[$key]['content'], $arr4);
-                $stateArr[$key]['pic'] = config('url').$val['pic'];
+                $stateArr[$key]['pic'] = $val['pic'];
             }
 
             ajaxReturn(array('code'=>1, 'info'=>'ok!','data'=>$stateArr));
@@ -248,7 +248,7 @@ class Prescription extends Common
                         }
 
                     }
-                    $tempInfo['price'] = $drugSumPrice;
+                    $tempInfo['price'] = round($drugSumPrice, 2);
                     $tempInfo['dose'] = 0;
                     $tempInfo['type'] = 1;
 

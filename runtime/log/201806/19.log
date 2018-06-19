@@ -1,0 +1,372 @@
+---------------------------------------------------------------
+[ 2018-06-19T10:29:04+08:00 ] 0.0.0.0 POST /order/toOnlineorder
+[ info ] localhost:7037/order/toOnlineorder [运行时间：0.816568s][吞吐率：1.22req/s] [内存消耗：3,151.82kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'toOnlineorder',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '178',
+  'x-original-url' => '/order/toOnlineorder',
+  'user-agent' => 'YiSong/1.2.5 (iPhone; iOS 11.3.1; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'only_token' => '1529334014zx6)up',
+  'mobile' => '13262215137',
+  'order_id' => '0',
+  'area_id' => 2,
+  'doctor_id' => 70,
+  '_time' => '1529374745',
+  'patient_id' => '0',
+  'sign' => 'f2b83614add8dd75a672b1533ce4f674',
+)
+[ info ] [ RUN ] app\home\controller\Order->toOnlineorder[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.092446s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_prescription` [ RunTime:0.101761s ]
+[ sql ] [ SQL ] SELECT op.`relation_id`,op.`state_id` FROM `jd_order_prescription` `op` INNER JOIN `jd_order` `o` ON `o`.`order_id`=`op`.`order_id` WHERE  o.`doctor_id` = 70  AND o.`order_type` = 3 ORDER BY op.`add_date` DESC LIMIT 1 [ RunTime:0.057312s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.060241s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` WHERE  d.`is_display` = 1  AND p.`area_id` = 2  AND p.`is_display` = 1  AND d.`state_id` = 8 LIMIT 1 [ RunTime:0.128508s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`prescription_id`,p.`area_name`,ds.`state_name`,ds.`make`,ds.`taking`,ds.`instructions`,ds.`weight`,ds.`pic` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = 2  AND p.`is_display` = 1  AND d.`state_id` = 8  AND d.`relation_id` = 54 ORDER BY d.`relation_id` DESC LIMIT 1 [ RunTime:0.058771s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.059526s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  mobile = 13262215137 ) LIMIT 1 [ RunTime:0.061837s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.058679s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `only_token` = '1529334014zx6)up'  AND `is_status` = 0 LIMIT 1 [ RunTime:0.057812s ]
+---------------------------------------------------------------
+[ 2018-06-19T10:29:15+08:00 ] 0.0.0.0 POST /order/toOnlineorder
+[ info ] localhost:7037/order/toOnlineorder [运行时间：0.724387s][吞吐率：1.38req/s] [内存消耗：3,151.83kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'toOnlineorder',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '178',
+  'x-original-url' => '/order/toOnlineorder',
+  'user-agent' => 'YiSong/1.2.5 (iPhone; iOS 11.3.1; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'only_token' => '1529334014zx6)up',
+  'mobile' => '13262215137',
+  'order_id' => '0',
+  'area_id' => 2,
+  'doctor_id' => 70,
+  '_time' => '1529374745',
+  'patient_id' => '0',
+  'sign' => 'f2b83614add8dd75a672b1533ce4f674',
+)
+[ info ] [ RUN ] app\home\controller\Order->toOnlineorder[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.087131s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_prescription` [ RunTime:0.076554s ]
+[ sql ] [ SQL ] SELECT op.`relation_id`,op.`state_id` FROM `jd_order_prescription` `op` INNER JOIN `jd_order` `o` ON `o`.`order_id`=`op`.`order_id` WHERE  o.`doctor_id` = 70  AND o.`order_type` = 3 ORDER BY op.`add_date` DESC LIMIT 1 [ RunTime:0.058979s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.057284s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` WHERE  d.`is_display` = 1  AND p.`area_id` = 2  AND p.`is_display` = 1  AND d.`state_id` = 8 LIMIT 1 [ RunTime:0.057749s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`prescription_id`,p.`area_name`,ds.`state_name`,ds.`make`,ds.`taking`,ds.`instructions`,ds.`weight`,ds.`pic` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = 2  AND p.`is_display` = 1  AND d.`state_id` = 8  AND d.`relation_id` = 54 ORDER BY d.`relation_id` DESC LIMIT 1 [ RunTime:0.061894s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.059727s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  mobile = 13262215137 ) LIMIT 1 [ RunTime:0.094960s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.058799s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `only_token` = '1529334014zx6)up'  AND `is_status` = 0 LIMIT 1 [ RunTime:0.061337s ]
+---------------------------------------------------------------
+[ 2018-06-19T10:30:44+08:00 ] 0.0.0.0 POST /order/toOnlineorder
+[ info ] localhost:7037/order/toOnlineorder [运行时间：0.610821s][吞吐率：1.64req/s] [内存消耗：3,128.76kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'toOnlineorder',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '178',
+  'x-original-url' => '/order/toOnlineorder',
+  'user-agent' => 'YiSong/1.2.5 (iPhone; iOS 11.3.1; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'only_token' => '1529334014zx6)up',
+  'mobile' => '13262215137',
+  'order_id' => '0',
+  'area_id' => 2,
+  'doctor_id' => 70,
+  '_time' => '1529374745',
+  'patient_id' => '0',
+  'sign' => 'f2b83614add8dd75a672b1533ce4f674',
+)
+[ info ] [ RUN ] app\home\controller\Order->toOnlineorder[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.095584s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_prescription` [ RunTime:0.065820s ]
+[ sql ] [ SQL ] SELECT op.`relation_id`,op.`state_id` FROM `jd_order_prescription` `op` INNER JOIN `jd_order` `o` ON `o`.`order_id`=`op`.`order_id` WHERE  o.`doctor_id` = 70  AND o.`order_type` = 3 ORDER BY op.`add_date` DESC LIMIT 1 [ RunTime:0.060075s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.060890s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` WHERE  d.`is_display` = 1  AND p.`area_id` = 2  AND p.`is_display` = 1  AND d.`state_id` = 8 LIMIT 1 [ RunTime:0.060517s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`prescription_id`,p.`area_name`,ds.`state_name`,ds.`make`,ds.`taking`,ds.`instructions`,ds.`weight`,ds.`pic` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = 2  AND p.`is_display` = 1  AND d.`state_id` = 8  AND d.`relation_id` = 54 ORDER BY d.`relation_id` DESC LIMIT 1 [ RunTime:0.061127s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.062538s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  mobile = 13262215137 ) LIMIT 1 [ RunTime:0.062540s ]
+---------------------------------------------------------------
+[ 2018-06-19T10:34:37+08:00 ] 0.0.0.0 POST /order/toOnlineorder
+[ info ] localhost:7037/order/toOnlineorder [运行时间：0.619767s][吞吐率：1.61req/s] [内存消耗：3,128.76kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'toOnlineorder',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '178',
+  'x-original-url' => '/order/toOnlineorder',
+  'user-agent' => 'YiSong/1.2.5 (iPhone; iOS 11.3.1; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'only_token' => '1529334014zx6)up',
+  'mobile' => '13262215137',
+  'order_id' => '0',
+  'area_id' => 2,
+  'doctor_id' => 70,
+  '_time' => '1529374745',
+  'patient_id' => '0',
+  'sign' => 'f2b83614add8dd75a672b1533ce4f674',
+)
+[ info ] [ RUN ] app\home\controller\Order->toOnlineorder[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.087246s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_prescription` [ RunTime:0.064167s ]
+[ sql ] [ SQL ] SELECT op.`relation_id`,op.`state_id` FROM `jd_order_prescription` `op` INNER JOIN `jd_order` `o` ON `o`.`order_id`=`op`.`order_id` WHERE  o.`doctor_id` = 70  AND o.`order_type` = 3 ORDER BY op.`add_date` DESC LIMIT 1 [ RunTime:0.059985s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.068032s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` WHERE  d.`is_display` = 1  AND p.`area_id` = 2  AND p.`is_display` = 1  AND d.`state_id` = 8 LIMIT 1 [ RunTime:0.060289s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`prescription_id`,p.`area_name`,ds.`state_name`,ds.`make`,ds.`taking`,ds.`instructions`,ds.`weight`,ds.`pic` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = 2  AND p.`is_display` = 1  AND d.`state_id` = 8  AND d.`relation_id` = 54 ORDER BY d.`relation_id` DESC LIMIT 1 [ RunTime:0.071679s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.059400s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  mobile = 13262215137 ) LIMIT 1 [ RunTime:0.063209s ]
+---------------------------------------------------------------
+[ 2018-06-19T10:35:12+08:00 ] 0.0.0.0 POST /order/toOnlineorder
+[ info ] localhost:7037/order/toOnlineorder [运行时间：0.602605s][吞吐率：1.66req/s] [内存消耗：3,207.39kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'toOnlineorder',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '178',
+  'x-original-url' => '/order/toOnlineorder',
+  'user-agent' => 'YiSong/1.2.5 (iPhone; iOS 11.3.1; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'only_token' => '1529334014zx6)up',
+  'mobile' => '13262215137',
+  'order_id' => '0',
+  'area_id' => 2,
+  'doctor_id' => 70,
+  '_time' => '1529374745',
+  'patient_id' => '0',
+  'sign' => 'f2b83614add8dd75a672b1533ce4f674',
+)
+[ info ] [ RUN ] app\home\controller\Order->toOnlineorder[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.083990s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_prescription` [ RunTime:0.056579s ]
+[ sql ] [ SQL ] SELECT op.`relation_id`,op.`state_id` FROM `jd_order_prescription` `op` INNER JOIN `jd_order` `o` ON `o`.`order_id`=`op`.`order_id` WHERE  o.`doctor_id` = 70  AND o.`order_type` = 3 ORDER BY op.`add_date` DESC LIMIT 1 [ RunTime:0.075680s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.060839s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` WHERE  d.`is_display` = 1  AND p.`area_id` = 2  AND p.`is_display` = 1  AND d.`state_id` = 8 LIMIT 1 [ RunTime:0.064814s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`prescription_id`,p.`area_name`,ds.`state_name`,ds.`make`,ds.`taking`,ds.`instructions`,ds.`weight`,ds.`pic` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = 2  AND p.`is_display` = 1  AND d.`state_id` = 8  AND d.`relation_id` = 54 ORDER BY d.`relation_id` DESC LIMIT 1 [ RunTime:0.056353s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.059033s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  mobile = 13262215137 ) LIMIT 1 [ RunTime:0.069443s ]
+[ error ] [8]未定义数组索引: true[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php:142]
+---------------------------------------------------------------
+[ 2018-06-19T10:35:33+08:00 ] 0.0.0.0 POST /order/toOnlineorder
+[ info ] localhost:7037/order/toOnlineorder [运行时间：0.612685s][吞吐率：1.63req/s] [内存消耗：3,129.15kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'toOnlineorder',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '178',
+  'x-original-url' => '/order/toOnlineorder',
+  'user-agent' => 'YiSong/1.2.5 (iPhone; iOS 11.3.1; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'only_token' => '1529334014zx6)up',
+  'mobile' => '13262215137',
+  'order_id' => '0',
+  'area_id' => 2,
+  'doctor_id' => 70,
+  '_time' => '1529374745',
+  'patient_id' => '0',
+  'sign' => 'f2b83614add8dd75a672b1533ce4f674',
+)
+[ info ] [ RUN ] app\home\controller\Order->toOnlineorder[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.096650s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_prescription` [ RunTime:0.065989s ]
+[ sql ] [ SQL ] SELECT op.`relation_id`,op.`state_id` FROM `jd_order_prescription` `op` INNER JOIN `jd_order` `o` ON `o`.`order_id`=`op`.`order_id` WHERE  o.`doctor_id` = 70  AND o.`order_type` = 3 ORDER BY op.`add_date` DESC LIMIT 1 [ RunTime:0.063428s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.060478s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` WHERE  d.`is_display` = 1  AND p.`area_id` = 2  AND p.`is_display` = 1  AND d.`state_id` = 8 LIMIT 1 [ RunTime:0.059973s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`prescription_id`,p.`area_name`,ds.`state_name`,ds.`make`,ds.`taking`,ds.`instructions`,ds.`weight`,ds.`pic` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = 2  AND p.`is_display` = 1  AND d.`state_id` = 8  AND d.`relation_id` = 54 ORDER BY d.`relation_id` DESC LIMIT 1 [ RunTime:0.058066s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.062752s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  mobile = 13262215137 ) LIMIT 1 [ RunTime:0.072230s ]
+---------------------------------------------------------------
+[ 2018-06-19T10:52:17+08:00 ] 0.0.0.0 POST /prescription/getAllTempList
+[ info ] localhost:7037/prescription/getAllTempList [运行时间：0.985136s][吞吐率：1.02req/s] [内存消耗：3,142.73kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getAllTempList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '125',
+  'x-original-url' => '/prescription/getAllTempList',
+  'user-agent' => 'YiSong/1.2.4 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'only_token' => '1529288871Y4H)$4',
+  'sign' => '262268207678e4e6fcba3cc450c065e3',
+  'member_id' => 170,
+  '_time' => '1529376657',
+  'state_id' => 8,
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getAllTempList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.089173s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_temp` [ RunTime:0.062324s ]
+[ sql ] [ SQL ] SELECT `temp_id`,`temp_name`,`type`,`relation_id`,`drug_str`,`state_id`,`release_date` FROM `jd_temp` WHERE  `member_id` = 170  AND `state_id` = 8  AND `type` = 0 ORDER BY `release_date` DESC [ RunTime:0.060573s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.060686s ]
+[ sql ] [ SQL ] SELECT `s`.`special_id`,`s`.`inherit_id`,`s`.`special_name`,`s`.`content`,`s`.`release_date` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_special` `s` ON `s`.`inherit_id`=`id`.`inherit_id` INNER JOIN `jd_inherit` `i` ON `i`.`inherit_id`=`id`.`inherit_id` WHERE  (  id.`member_id` = 170 AND i.is_display = 1 AND s.is_display = 1 ) ORDER BY s.sort DESC [ RunTime:0.085547s ]
+[ sql ] [ SQL ] SELECT `temp_id`,`temp_name`,`type`,`relation_id`,`drug_str`,`state_id`,`release_date` FROM `jd_temp` WHERE  `state_id` = 8  AND `type` = 1 ORDER BY `release_date` DESC [ RunTime:0.060071s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.444196s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `only_token` = '1529288871Y4H)$4'  AND `is_status` = 0 LIMIT 1 [ RunTime:0.064237s ]
+---------------------------------------------------------------
+[ 2018-06-19T11:21:10+08:00 ] 0.0.0.0 POST /prescription/getTempDetail
+[ info ] localhost:7037/prescription/getTempDetail [运行时间：0.760305s][吞吐率：1.32req/s] [内存消耗：3,130.84kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getTempDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '166',
+  'x-original-url' => '/prescription/getTempDetail',
+  'user-agent' => 'YiSong/1.2.4 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'temp_id' => '59',
+  'only_token' => '1529288871Y4H)$4',
+  'area_id' => 2,
+  '_time' => '1529378408',
+  'type' => '0',
+  'special_id' => '0',
+  'state_id' => '8',
+  'sign' => 'b04b46c395d7d627d8602cac93d7726a',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getTempDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.104676s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_state` [ RunTime:0.058971s ]
+[ sql ] [ SQL ] SELECT `state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic` FROM `jd_drug_state` WHERE  `state_id` = '8'  AND `is_display` = 1 LIMIT 1 [ RunTime:0.062726s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_temp` [ RunTime:0.072517s ]
+[ sql ] [ SQL ] SELECT `make`,`weight`,`taking`,`instructions`,`temp_name`,`relation_id`,`type`,`price`,`drug_str`,`is_taboo`,`taboo_content`,`dose`,`special_id`,`special_content` FROM `jd_temp` WHERE  `temp_id` = 59 LIMIT 1 [ RunTime:0.088544s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.063159s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = 2  AND p.`is_display` = 1  AND d.`state_id` = '8' LIMIT 1 [ RunTime:0.061649s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`prescription_id`,p.`area_name` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = 2  AND p.`is_display` = 1  AND d.`state_id` = '8'  AND d.`relation_id` = 53 ORDER BY d.`sort` DESC LIMIT 1 [ RunTime:0.057234s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.059231s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `only_token` = '1529288871Y4H)$4'  AND `is_status` = 0 LIMIT 1 [ RunTime:0.070745s ]
