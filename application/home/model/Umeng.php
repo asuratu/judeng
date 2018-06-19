@@ -33,7 +33,7 @@ class Umeng extends Model
         $url = $this->_config['url'] . '?sign=' . $sign;
 
         //发送请求
-        $res = $this->_curl($url, $post_data);
+        $res = $this->_curl($url, $post_data);var_dump(11111111);var_dump($res);die;
 
         //判断
         if ($res['ret'] != 'SUCCESS') {
@@ -67,7 +67,7 @@ class Umeng extends Model
         $url = $this->_config['url'] . '?sign=' . $sign;
 
         //发送请求
-        $res = $this->_curl($url, $post_data);
+        $res = $this->_curl($url, $post_data);var_dump($res);die;
         //判断
         if ($res['ret'] != 'SUCCESS') {
             //发送失败，
@@ -120,7 +120,7 @@ class Umeng extends Model
                     device_tokens 	array 设备号
         @return
     */
-    private function _android($device_tokens, $ticker, $title, $text, $type = 'unicast')
+    private function _android($device_tokens, $ticker, $title, $text, $type = 'broadcast')
     {
 
         $temp_arr = array(
@@ -138,8 +138,8 @@ class Umeng extends Model
 //                    'custom' => 'do things', //点击通知后做的事
 					),
 				),
-				'production_mode' 		=> 'false',//测试，上线为true
-                'description' 			=> 'cccc',//描述
+				'production_mode' 		=> 'true',//测试，上线为true
+                'description' 			=> $text,//描述
 			);
 
 			return json_encode($temp_arr);
@@ -169,21 +169,9 @@ class Umeng extends Model
                 ),
             ),
             'production_mode' 		=> 'false',//测试，上线为true
-            'description' 			=> 'broadcast',//描述
+            'description' 			=> $text,//描述
         );
         return json_encode($temp_arr);
-
-        $member=array();
-        $memberCount = count($_model['member']);
-        foreach ($_model['member'] as $val) {
-            $b = 0;
-            $k = 0;
-            foreach ($_model['member'] as $_key => $_val) {
-                if ($_val->score > $b) {
-                    $k = $_key;
-                }
-            }
-        }
     }
 
 
