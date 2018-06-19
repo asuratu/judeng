@@ -33,7 +33,7 @@ class Umeng extends Model
         $url = $this->_config['url'] . '?sign=' . $sign;
 
         //发送请求
-        $res = $this->_curl($url, $post_data);
+        $res = $this->_curl($url, $post_data);var_dump(11111111);var_dump($res);die;
 
         //判断
         if ($res['ret'] != 'SUCCESS') {
@@ -67,7 +67,7 @@ class Umeng extends Model
         $url = $this->_config['url'] . '?sign=' . $sign;
 
         //发送请求
-        $res = $this->_curl($url, $post_data);
+        $res = $this->_curl($url, $post_data);var_dump($res);die;
         //判断
         if ($res['ret'] != 'SUCCESS') {
             //发送失败，
@@ -122,7 +122,7 @@ class Umeng extends Model
     */
     private function _android($device_tokens, $ticker, $title, $text, $extra = array(), $type = 'unicast')
     {
-
+//        {"policy":{"expire_time":"2018-06-22 17:51:05"},"description":"111","production_mode":true,"appkey":"5b027216f29d9847b500007d","payload":{"body":{"title":"111","ticker":"111","text":"1111","after_open":"go_app","play_vibrate":"false","play_lights":"false","play_sound":"true"},"display_type":"notification"},"device_tokens":"089bd564b4a0a438202c0be3bfdcfd37","type":"unicast","timestamp":"1529401920472"}
         $temp_arr = array(
             'appkey' => $this->_config['and_app_key'],
             'timestamp' => time(),
@@ -139,11 +139,11 @@ class Umeng extends Model
 					),
                 'extra' => $extra,
 				),
-				'production_mode' 		=> 'false',//测试，上线为true
-                'description' 			=> 'cccc',//描述
+				'production_mode' 		=> 'true',//测试，上线为true
+                'description' 			=> $text,//描述
 			);
 
-			return json_encode($temp_arr);
+			return '{"policy":{"expire_time":"2018-06-22 17:51:05"},"description":"111","production_mode":true,"appkey":"5b027216f29d9847b500007d","payload":{"body":{"title":"111","ticker":"111","text":"1111","after_open":"go_app","play_vibrate":"false","play_lights":"false","play_sound":"true"},"display_type":"notification"},"device_tokens":"089bd564b4a0a438202c0be3bfdcfd37","type":"unicast","timestamp":'.time().'}';
 		}
 
 
@@ -171,21 +171,9 @@ class Umeng extends Model
                 $extra,
             ),
             'production_mode' 		=> 'false',//测试，上线为true
-            'description' 			=> 'broadcast',//描述
+            'description' 			=> $text,//描述
         );
         return json_encode($temp_arr);
-
-        $member=array();
-        $memberCount = count($_model['member']);
-        foreach ($_model['member'] as $val) {
-            $b = 0;
-            $k = 0;
-            foreach ($_model['member'] as $_key => $_val) {
-                if ($_val->score > $b) {
-                    $k = $_key;
-                }
-            }
-        }
     }
 
 

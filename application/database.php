@@ -13,15 +13,27 @@ return [
     // 数据库类型
     'type'            => 'mysql',
     // 服务器地址
-    'hostname'        => '118.25.179.178',
-//    'hostname'        => 'localhost',
-    // 数据库名
-    'database'        => 'judeng',
-    // 用户名
-    'username'        => 'root',
-    // 密码
-    'password'        => 'root',
+//    'hostname'        => '118.25.179.178',
+//    // 数据库名
+//    'database'        => 'judeng',
+//    // 用户名
+//    'username'        => 'root',
+//    // 密码
 //    'password'        => 'root',
+
+
+//    // 服务器地址
+    'hostname'       => '39.105.19.169',
+    // 数据库名
+    'database'       => 'judeng',
+    // 用户名
+    'username'       => 'root',
+    // 密码
+    'password'       => 'qwer123..',
+
+
+
+
     // 端口
     'hostport'        => '3306',
     // 连接dsn

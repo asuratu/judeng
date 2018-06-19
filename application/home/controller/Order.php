@@ -107,7 +107,7 @@ class Order extends Common
                     ->field("d.`relation_id`")
                     ->count();
             }
-            $houseAllArr['pic'] = config('url') . $houseAllArr['pic'];
+//            $houseAllArr['pic'] = config('url') . $houseAllArr['pic'];
 
             $mainInfo['state_id'] = $houseAllArr['state_id'] ?: 8;
             $mainInfo['prescription_id'] = $houseAllArr['prescription_id'] ?: 1;
@@ -119,7 +119,9 @@ class Order extends Common
             $mainInfo['instructions'] = $houseAllArr['instructions'] ?: '';
             $mainInfo['pic'] = $houseAllArr['pic'];
             $mainInfo['state_house_name'] = $houseAllArr['state_name'].'.'.$houseAllArr['area_name'].'-'.$houseAllArr['prescription_name'];
-            $mainInfo['left_num'] = $leftNum-1;
+//            $mainInfo['left_num'] = $leftNum-1;
+            //因为只有一家药房, 其余四家都是虚拟的
+            $mainInfo['left_num'] = 4;
 
             if ($data['patient_id']==0) {
                 //手机号开方, 新建时创建患者信息
@@ -137,7 +139,7 @@ class Order extends Common
                     $mainInfo['age'] = 0;
                 } else {
                     $mainInfo['patient_id'] = $mobPatientInfo['member_id'];
-                    $mainInfo['patient_name'] = $mobPatientInfo['member_name'];
+                    $mainInfo['patient_name'] = $mobPatientInfo['true_name'];
                     $mainInfo['mobile'] = $data['mobile'];
                     $mainInfo['sex'] = $mobPatientInfo['sex'];
                     $mainInfo['age'] = $mobPatientInfo['age'];
@@ -600,7 +602,7 @@ class Order extends Common
                     }
 
                 Db::commit();
-                ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>[['is_taboo'=>$orderPrescriptionInsert['is_taboo'], 'taboo_content'=>$orderPrescriptionInsert['taboo_content'], 'lessCountArr'=>$lessCountArr, 'alertArr'=>$alertArr, 'price'=>$drugSumPrice]]));
+                ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>[['is_taboo'=>$orderPrescriptionInsert['is_taboo'], 'taboo_content'=>$orderPrescriptionInsert['taboo_content'], 'lessCountArr'=>$lessCountArr, 'alertArr'=>$alertArr, 'price'=>round($drugSumPrice, 2)]]));
 
             } catch (Exception $e) {
                 Db::rollback();

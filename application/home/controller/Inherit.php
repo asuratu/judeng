@@ -128,8 +128,8 @@ class Inherit extends Common
             $map['`is_display`'] = 1;
             $map['`inherit_id`'] = $data['inherit_id'];
 
-//            $stateArr = db('article')->where($map)->field("article_id, title, list_pic, intro, release_date")->limit($start,$data['pageSize'])->order("`sort` DESC")->select();
-            $stateArr = db('article')->where($map)->field("article_id, title, list_pic, intro, release_date")->order("`sort` DESC")->select();
+            $stateArr = db('article')->where($map)->field("article_id, title, list_pic, intro, release_date")->limit($start,$data['pageSize'])->order("`sort` DESC")->select();
+//            $stateArr = db('article')->where($map)->field("article_id, title, list_pic, intro, release_date")->order("`sort` DESC")->select();
             $totalNum = db('article')->where($map)->field("inherit_id")->order("`sort` DESC")->count();
 
             //判断是否加入过该传承
@@ -291,6 +291,61 @@ class Inherit extends Common
         }
     }
 
+    public function androidInheritDrugDetail() {
+        if($this->request->isPost())
+        {
+            $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
+
+            if($data['special_id']=='' || $data['member_id']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+            }
+
+            //查询特色方剂详情
+            $specialMap['`is_display`'] = 1;
+            $specialMap['`special_id`'] = $data['special_id'];
+            $specialArr = db('special')->where($specialMap)->field("*")->find();
+            if (empty($specialArr)) {
+                ajaxReturn(array('code'=>0,'info'=>'该特色方剂不存在!','data'=>[]));
+            }
+            //处理简介的H5
+            $specialArr['effect'] = config('url').'/inherit/effect?id='.$data['special_id'];
+            //处理药方
+            $contentArr = array();
+            foreach (json_decode($specialArr['content']) as $key1=>$val1) {
+                array_push($contentArr, $val1[1]);
+            }
+            $specialArr['content'] = base64_encode(json_encode($contentArr));
+            $data['inherit_id'] = $specialArr['inherit_id'];
+            //判断是否加入过该传承
+            $exist = db('inherit_doctor')->where("(`member_id` = {$data['member_id']} OR `parent_id` = {$data['member_id']}) AND `is_checked` = 1 AND `inherit_id` = {$data['inherit_id']}")->count();
+            if ($exist <= 0) {
+                ajaxReturn(array('code'=>0, 'info'=>'请先加入该传承!','data'=>[]));
+            }
+
+//            //获取传承的详细信息
+            $map['i.`is_display`'] = 1;
+            $map['i.`inherit_id`'] = $data['inherit_id'];
+            $inheritDetail = db('inherit')->alias('i')
+                ->join(['jd_doctor'=>'d'], 'i.member_id = d.member_id' , 'inner')
+                ->where($map)
+                ->field("i.inherit_id, i.inherit_name, d.title_id, d.member_name")
+                ->find();
+            //查询医生职称
+            if ($inheritDetail['title_id']) {
+                $inheritDetail['title_str'] = db('title')->where('title_id','in',$inheritDetail['title_id'])->field("`title_name`")->select();
+            } else {
+                $inheritDetail['title_str'] = array();
+            }
+
+            ajaxReturn(array('code'=>1, 'info'=>'ok!','data'=>[['inherit'=>$inheritDetail, 'content'=>$specialArr]]));
+        }
+    }
 
     /**
      * @Title: getInheritDrugList

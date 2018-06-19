@@ -128,6 +128,7 @@ function ajaxReturn($data,$type = 'json')
 
 function checkSign($data)
 {
+    $_POST['only_token'] = $data['only_token'];
     //为方便测试, 直接return true
     return array('code'=>1,'info'=>'签名成功！','data'=>[]);
     if($data['_time']=='')
