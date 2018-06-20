@@ -359,3 +359,163 @@
 [ error ] [8]未定义数组下标: 0[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php:488]
 [ error ] [8]未定义数组下标: 0[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php:488]
 [ error ] [8]未定义数组下标: 0[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php:488]
+---------------------------------------------------------------
+[ 2018-06-20T19:42:43+08:00 ] 0.0.0.0 POST /umeng/sendDoctor
+[ info ] localhost:8020/umeng/sendDoctor [运行时间：1.362078s][吞吐率：0.73req/s] [内存消耗：3,429.21kb] [文件加载：53]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'umeng',
+    2 => 'sendDoctor',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------885872236420084066053550',
+  'content-length' => '598',
+  'x-original-url' => '/umeng/sendDoctor',
+  'postman-token' => '28a44f43-68b3-4129-97cc-02b2cce1b773',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+  'member_id' => '2',
+  'comment' => 'aa',
+  'type' => '1',
+  'inherit_id' => '29',
+)
+[ info ] [ RUN ] app\home\controller\Umeng->sendDoctor[ E:\wook\201804\judeng\application\home\controller\Umeng.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.082005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=70 ) LIMIT 1 [ RunTime:0.056003s ]
+---------------------------------------------------------------
+[ 2018-06-20T19:43:26+08:00 ] 0.0.0.0 POST /umeng/sendDoctor
+[ info ] localhost:8020/umeng/sendDoctor [运行时间：0.252014s][吞吐率：3.97req/s] [内存消耗：3,429.21kb] [文件加载：53]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'umeng',
+    2 => 'sendDoctor',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------536849795210969721398312',
+  'content-length' => '598',
+  'x-original-url' => '/umeng/sendDoctor',
+  'postman-token' => '58bd9a02-ef0b-4cd6-8bdb-bebaf5904141',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+  'member_id' => '2',
+  'comment' => 'aa',
+  'type' => '1',
+  'inherit_id' => '29',
+)
+[ info ] [ RUN ] app\home\controller\Umeng->sendDoctor[ E:\wook\201804\judeng\application\home\controller\Umeng.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.058004s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=70 ) LIMIT 1 [ RunTime:0.058003s ]
+---------------------------------------------------------------
+[ 2018-06-20T19:43:55+08:00 ] 0.0.0.0 POST /umeng/sendDoctor
+[ info ] localhost:8020/umeng/sendDoctor [运行时间：0.259015s][吞吐率：3.86req/s] [内存消耗：3,429.41kb] [文件加载：53]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'umeng',
+    2 => 'sendDoctor',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------852790312142783911542618',
+  'content-length' => '598',
+  'x-original-url' => '/umeng/sendDoctor',
+  'postman-token' => 'df447a47-f5b4-4c55-8755-d16af19efac0',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+  'member_id' => '2',
+  'comment' => 'aa',
+  'type' => '1',
+  'inherit_id' => '29',
+)
+[ info ] [ RUN ] app\home\controller\Umeng->sendDoctor[ E:\wook\201804\judeng\application\home\controller\Umeng.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.080004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=70 ) LIMIT 1 [ RunTime:0.055003s ]
+---------------------------------------------------------------
+[ 2018-06-20T19:44:08+08:00 ] 0.0.0.0 POST /umeng/sendDoctor
+[ info ] localhost:8020/umeng/sendDoctor [运行时间：0.239013s][吞吐率：4.18req/s] [内存消耗：3,428.88kb] [文件加载：53]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'umeng',
+    2 => 'sendDoctor',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------522801743880487913323457',
+  'content-length' => '598',
+  'x-original-url' => '/umeng/sendDoctor',
+  'postman-token' => 'c4e8ab17-f02e-4a0e-b2e3-081ccf3622b1',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+  'member_id' => '2',
+  'comment' => 'aa',
+  'type' => '1',
+  'inherit_id' => '29',
+)
+[ info ] [ RUN ] app\home\controller\Umeng->sendDoctor[ E:\wook\201804\judeng\application\home\controller\Umeng.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.078005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=70 ) LIMIT 1 [ RunTime:0.054003s ]
