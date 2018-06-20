@@ -519,3 +519,160 @@
 [ sql ] [ DB ] CONNECT:[ UseTime:0.078005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
 [ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.054003s ]
 [ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=70 ) LIMIT 1 [ RunTime:0.054003s ]
+---------------------------------------------------------------
+[ 2018-06-20T19:45:10+08:00 ] 0.0.0.0 POST /number/prescriptions
+[ info ] localhost:8020/number/prescriptions [运行时间：0.306017s][吞吐率：3.27req/s] [内存消耗：3,107.43kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'prescriptions',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------336905572678447797088015',
+  'content-length' => '269',
+  'x-original-url' => '/number/prescriptions',
+  'postman-token' => '2e085c77-fac6-42c0-b053-54365ca982d1',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '2',
+  'type' => '1',
+)
+[ info ] [ RUN ] app\home\controller\Number->prescriptions[ E:\wook\201804\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.083005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SELECT o.`pay_status`,o.`order_id`,o.`order_sn`,o.`order_status`,o.`patient_id`,o.`order_date`,op.`patient_mobile`,op.`patient_name`,op.`patient_sex`,op.`patient_age`,op.`dialectical` FROM `jd_order` `o`,`jd_order_prescription` `op` WHERE  (  o.`order_id` = op.`order_id` and op.`prescription_type` = 0 and o.order_type = 3 and o.doctor_id = 2  and o.`pay_status` = 0 ) ORDER BY `o`.`order_date`  DESC LIMIT 0,10 [ RunTime:0.058004s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_order` `o`,`jd_order_prescription` `op` WHERE  (  o.`order_id` = op.`order_id` and op.`prescription_type` = 0 and o.order_type = 3 and o.doctor_id = 2  and o.`pay_status` = 0 ) LIMIT 1 [ RunTime:0.060003s ]
+---------------------------------------------------------------
+[ 2018-06-20T19:45:21+08:00 ] 0.0.0.0 POST /number/prescriptions
+[ info ] localhost:8020/number/prescriptions [运行时间：0.295017s][吞吐率：3.39req/s] [内存消耗：3,144.46kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'prescriptions',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------894738616207313296795678',
+  'content-length' => '270',
+  'x-original-url' => '/number/prescriptions',
+  'postman-token' => '0f4c8c2c-9d10-4f62-89eb-550f0ad36139',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+  'type' => '1',
+)
+[ info ] [ RUN ] app\home\controller\Number->prescriptions[ E:\wook\201804\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.059003s ]
+[ sql ] [ SQL ] SELECT o.`pay_status`,o.`order_id`,o.`order_sn`,o.`order_status`,o.`patient_id`,o.`order_date`,op.`patient_mobile`,op.`patient_name`,op.`patient_sex`,op.`patient_age`,op.`dialectical` FROM `jd_order` `o`,`jd_order_prescription` `op` WHERE  (  o.`order_id` = op.`order_id` and op.`prescription_type` = 0 and o.order_type = 3 and o.doctor_id = 70  and o.`pay_status` = 0 ) ORDER BY `o`.`order_date`  DESC LIMIT 0,10 [ RunTime:0.059004s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_order` `o`,`jd_order_prescription` `op` WHERE  (  o.`order_id` = op.`order_id` and op.`prescription_type` = 0 and o.order_type = 3 and o.doctor_id = 70  and o.`pay_status` = 0 ) LIMIT 1 [ RunTime:0.057003s ]
+---------------------------------------------------------------
+[ 2018-06-20T19:45:39+08:00 ] 0.0.0.0 POST /number/prescriptions
+[ info ] localhost:8020/number/prescriptions [运行时间：0.297017s][吞吐率：3.37req/s] [内存消耗：3,144.34kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'prescriptions',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------743258393886859787247719',
+  'content-length' => '270',
+  'x-original-url' => '/number/prescriptions',
+  'postman-token' => '429e79e9-74eb-418f-910b-a88546851dea',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+  'type' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Number->prescriptions[ E:\wook\201804\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SELECT o.`pay_status`,o.`order_id`,o.`order_sn`,o.`order_status`,o.`patient_id`,o.`order_date`,op.`patient_mobile`,op.`patient_name`,op.`patient_sex`,op.`patient_age`,op.`dialectical` FROM `jd_order` `o`,`jd_order_prescription` `op` WHERE  (  o.`order_id` = op.`order_id` and op.`prescription_type` = 0 and o.order_type = 3 and o.doctor_id = 70   ) ORDER BY `o`.`order_date`  DESC LIMIT 0,10 [ RunTime:0.057003s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_order` `o`,`jd_order_prescription` `op` WHERE  (  o.`order_id` = op.`order_id` and op.`prescription_type` = 0 and o.order_type = 3 and o.doctor_id = 70   ) LIMIT 1 [ RunTime:0.057004s ]
+---------------------------------------------------------------
+[ 2018-06-20T19:55:32+08:00 ] 0.0.0.0 POST /umeng/sendDoctor
+[ info ] localhost:8020/umeng/sendDoctor [运行时间：0.374022s][吞吐率：2.67req/s] [内存消耗：3,428.40kb] [文件加载：53]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'umeng',
+    2 => 'sendDoctor',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------640961305870240835045449',
+  'content-length' => '598',
+  'x-original-url' => '/umeng/sendDoctor',
+  'postman-token' => 'ac8f754a-6a1c-4b56-82fb-13b97e1f35bf',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+  'member_id' => '2',
+  'comment' => 'aa',
+  'type' => '1',
+  'inherit_id' => '29',
+)
+[ info ] [ RUN ] app\home\controller\Umeng->sendDoctor[ E:\wook\201804\judeng\application\home\controller\Umeng.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.082005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=70 ) LIMIT 1 [ RunTime:0.056004s ]
