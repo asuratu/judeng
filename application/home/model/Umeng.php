@@ -120,7 +120,7 @@ class Umeng extends Model
                     device_tokens 	array 设备号
         @return
     */
-    private function _android($device_tokens, $ticker, $title, $text, $extra = array(), $type = 'unicast')
+    private function _android($device_tokens, $ticker, $title, $text, $extra = array(), $type = 'broadcast')
     {
 //        {"policy":{"expire_time":"2018-06-22 17:51:05"},"description":"111","production_mode":true,"appkey":"5b027216f29d9847b500007d","payload":{"body":{"title":"111","ticker":"111","text":"1111","after_open":"go_app","play_vibrate":"false","play_lights":"false","play_sound":"true"},"display_type":"notification"},"device_tokens":"089bd564b4a0a438202c0be3bfdcfd37","type":"unicast","timestamp":"1529401920472"}
         $temp_arr = array(
@@ -134,8 +134,8 @@ class Umeng extends Model
                     'ticker' => $ticker,
                     'title' => $title,
                     'text' => $text,
-                    'after_open' => 'go_app',
-//                    'custom' => 'do things', //点击通知后做的事
+                    'after_open' => 'go_custom',
+                    'custom' => $extra, //点击通知后做的事
 					),
                 'extra' => $extra,
 				),
@@ -143,7 +143,7 @@ class Umeng extends Model
                 'description' 			=> $text,//描述
 			);
 
-			return '{"policy":{"expire_time":"2018-06-22 17:51:05"},"description":"111","production_mode":true,"appkey":"5b027216f29d9847b500007d","payload":{"body":{"title":"111","ticker":"111","text":"1111","after_open":"go_app","play_vibrate":"false","play_lights":"false","play_sound":"true"},"display_type":"notification"},"device_tokens":"089bd564b4a0a438202c0be3bfdcfd37","type":"unicast","timestamp":'.time().'}';
+			return json_encode($temp_arr);
 		}
 
 
@@ -165,8 +165,8 @@ class Umeng extends Model
             'payload' => array(
                 'aps' => array(
                     'alert' => $text,
-                    'after_open' => 'go_app',
-//                    'custom' => 'do things', //点击通知后做的事
+                    'after_open' => 'go_custom',
+                    'custom' => $extra, //点击通知后做的事
                 ),
                 $extra,
             ),
