@@ -1,0 +1,361 @@
+---------------------------------------------------------------
+[ 2018-06-20T16:16:35+08:00 ] 0.0.0.0 POST /prescription/getAllTempList
+[ info ] localhost:7037/prescription/getAllTempList [运行时间：0.568643s][吞吐率：1.76req/s] [内存消耗：3,140.13kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getAllTempList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '125',
+  'x-original-url' => '/prescription/getAllTempList',
+  'user-agent' => 'YiSong/1.2.5 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=5g0p24n2f8ibnf5ikpce7f9vm0',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'only_token' => '1529480093q1%SFz',
+  'sign' => '603177712cecf6e7097ea56d0ef8d67c',
+  'member_id' => 170,
+  '_time' => '1529480696',
+  'state_id' => 8,
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getAllTempList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.090538s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_temp` [ RunTime:0.057606s ]
+[ sql ] [ SQL ] SELECT `temp_id`,`temp_name`,`type`,`relation_id`,`drug_str`,`state_id`,`release_date` FROM `jd_temp` WHERE  `member_id` = 170  AND `state_id` = 8  AND `type` = 0 ORDER BY `release_date` DESC [ RunTime:0.060795s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.056233s ]
+[ sql ] [ SQL ] SELECT `s`.`special_id`,`s`.`inherit_id`,`s`.`special_name`,`s`.`content`,`s`.`release_date` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_special` `s` ON `s`.`inherit_id`=`id`.`inherit_id` INNER JOIN `jd_inherit` `i` ON `i`.`inherit_id`=`id`.`inherit_id` WHERE  (  id.`member_id` = 170 AND i.is_display = 1 AND s.is_display = 1 ) ORDER BY s.sort DESC [ RunTime:0.056824s ]
+[ sql ] [ SQL ] SELECT `temp_id`,`temp_name`,`type`,`relation_id`,`drug_str`,`state_id`,`release_date` FROM `jd_temp` WHERE  `state_id` = 8  AND `type` = 1 ORDER BY `release_date` DESC [ RunTime:0.054822s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.056452s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `only_token` = '1529480093q1%SFz'  AND `is_status` = 0 LIMIT 1 [ RunTime:0.055717s ]
+---------------------------------------------------------------
+[ 2018-06-20T17:01:21+08:00 ] 0.0.0.0 POST /prescription/getAllTempList
+[ info ] localhost:7037/prescription/getAllTempList [运行时间：0.389400s][吞吐率：2.57req/s] [内存消耗：3,092.67kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getAllTempList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '125',
+  'x-original-url' => '/prescription/getAllTempList',
+  'user-agent' => 'YiSong/1.2.5 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=5g0p24n2f8ibnf5ikpce7f9vm0',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'only_token' => '1529480093q1%SFz',
+  'sign' => '603177712cecf6e7097ea56d0ef8d67c',
+  'member_id' => 170,
+  '_time' => '1529480696',
+  'state_id' => 8,
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getAllTempList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.089438s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_temp` [ RunTime:0.059889s ]
+[ sql ] [ SQL ] SELECT `temp_id`,`temp_name`,`type`,`relation_id`,`drug_str`,`state_id`,`release_date` FROM `jd_temp` WHERE  `member_id` = 170  AND `state_id` = 8  AND `type` = 0 ORDER BY `release_date` DESC [ RunTime:0.064566s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.060834s ]
+[ sql ] [ SQL ] SELECT `s`.`special_id`,`s`.`inherit_id`,`s`.`special_name`,`s`.`content`,`s`.`release_date` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_special` `s` ON `s`.`inherit_id`=`id`.`inherit_id` INNER JOIN `jd_inherit` `i` ON `i`.`inherit_id`=`id`.`inherit_id` WHERE  (  id.`member_id` = 170 AND i.is_display = 1 AND s.is_display = 1 ) ORDER BY s.sort DESC [ RunTime:0.060747s ]
+---------------------------------------------------------------
+[ 2018-06-20T17:01:53+08:00 ] 0.0.0.0 POST /prescription/getAllTempList
+[ info ] localhost:7037/prescription/getAllTempList [运行时间：0.367648s][吞吐率：2.72req/s] [内存消耗：3,093.63kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getAllTempList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '125',
+  'x-original-url' => '/prescription/getAllTempList',
+  'user-agent' => 'YiSong/1.2.5 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=5g0p24n2f8ibnf5ikpce7f9vm0',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'only_token' => '1529480093q1%SFz',
+  'sign' => '603177712cecf6e7097ea56d0ef8d67c',
+  'member_id' => 170,
+  '_time' => '1529480696',
+  'state_id' => 8,
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getAllTempList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.089980s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_temp` [ RunTime:0.058408s ]
+[ sql ] [ SQL ] SELECT `temp_id`,`temp_name`,`type`,`relation_id`,`drug_str`,`state_id`,`release_date` FROM `jd_temp` WHERE  `member_id` = 170  AND `state_id` = 8  AND `type` = 0 ORDER BY `release_date` DESC [ RunTime:0.058705s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.058500s ]
+[ sql ] [ SQL ] SELECT `s`.`special_id`,`s`.`inherit_id`,`s`.`special_name`,`s`.`content`,`s`.`release_date` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_special` `s` ON `s`.`inherit_id`=`id`.`inherit_id` INNER JOIN `jd_inherit` `i` ON `i`.`inherit_id`=`id`.`inherit_id` WHERE  (  id.`member_id` = 170 AND i.is_display = 1 AND s.is_display = 1 ) ORDER BY s.sort DESC [ RunTime:0.058786s ]
+---------------------------------------------------------------
+[ 2018-06-20T17:59:45+08:00 ] 0.0.0.0 POST /Inherit/getInheritDoctorList
+[ info ] localhost:7037/Inherit/getInheritDoctorList [运行时间：3.880589s][吞吐率：0.26req/s] [内存消耗：3,476.10kb] [文件加载：60]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'Inherit',
+    2 => 'getInheritDoctorList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '128',
+  'x-original-url' => '/Inherit/getInheritDoctorList',
+  'user-agent' => 'YiSong/1.2.5 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=5g0p24n2f8ibnf5ikpce7f9vm0',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'inherit_id' => 44,
+  'member_id' => 170,
+  'sign' => '88c37ce00a04dd7678c45982d408533e',
+  '_time' => '1529488746',
+  'only_token' => '1529480093q1%SFz',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->getInheritDoctorList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.106418s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.093849s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit_doctor` WHERE  (  (`member_id` = 170 OR `parent_id` = 170) AND `is_checked` = 1 AND `inherit_id` = 44 ) LIMIT 1 [ RunTime:0.085225s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.079001s ]
+[ sql ] [ SQL ] SELECT `i`.`inherit_id`,`i`.`inherit_name`,`i`.`studio_intro`,`i`.`studio_address`,`i`.`studio_tel`,`d`.`member_id`,`d`.`member_name`,`d`.`face_photo` FROM `jd_inherit` `i` INNER JOIN `jd_doctor` `d` ON `i`.`member_id`=`d`.`member_id` WHERE  i.`is_display` = 1  AND i.`inherit_id` = 44 LIMIT 1 [ RunTime:0.078315s ]
+[ sql ] [ SQL ] SELECT `id`.`inherit_id`,`id`.`parent_id`,`d`.`member_id`,`d`.`member_name`,`d`.`face_photo` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.`is_checked` = 1 AND id.`inherit_id` = 44 AND id.parent_id = 100 ) [ RunTime:0.078316s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.070324s ]
+[ sql ] [ SQL ] SELECT `member_id`,`inherit`,`member_name`,`face_photo`,`goodat_id`,`recom`,`is_clinic`,`hospital_id`,`hospital_repart_str`,`school_str`,`title_str`,`concealment_number` FROM `jd_doctor` WHERE  (  member_id = 100 ) LIMIT 1 [ RunTime:0.074776s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_goodat` [ RunTime:0.066502s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_goodat` WHERE  `goodat_id` IN (29,30,31,32,33,34,35,86,87,88)  AND (  is_show = 1 and level = 2 ) ORDER BY `sort`  DESC [ RunTime:0.068214s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital` [ RunTime:0.075416s ]
+[ sql ] [ SQL ] SELECT `hospital_name` FROM `jd_hospital` WHERE  (  hospital_id = 17360 ) LIMIT 1 [ RunTime:0.076360s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital_repart` [ RunTime:0.067709s ]
+[ sql ] [ SQL ] SELECT `d`.`department_name` FROM `jd_hospital_repart` `hr` INNER JOIN `jd_department` `d` ON `d`.`department_id`=`hr`.`department_id` WHERE  (  hr.hospital_repart_id IN(5) AND hr.is_show = 1 ) [ RunTime:0.071600s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_self_goods` [ RunTime:0.073126s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 100 AND content != '' AND is_checked = 2  ) LIMIT 1 [ RunTime:0.098228s ]
+[ sql ] [ SQL ] SELECT `id`.`pay_num`,`id`.`proud`,`id`.`use_drug` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.`is_checked` = 1 AND id.`inherit_id` = 44 AND id.member_id = 100 ) LIMIT 1 [ RunTime:0.068149s ]
+[ sql ] [ SQL ] SELECT `self_goods_name` FROM `jd_self_goods` WHERE  (  member_id = 100 AND is_checked = 2  ) [ RunTime:0.074247s ]
+[ sql ] [ SQL ] SELECT `member_id`,`inherit`,`member_name`,`face_photo`,`goodat_id`,`recom`,`is_clinic`,`hospital_id`,`hospital_repart_str`,`school_str`,`title_str`,`concealment_number` FROM `jd_doctor` WHERE  (  member_id = 76 ) LIMIT 1 [ RunTime:0.095013s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_goodat` WHERE  `goodat_id` IN (29,30,31,32,33,34,35)  AND (  is_show = 1 and level = 2 ) ORDER BY `sort`  DESC [ RunTime:0.064765s ]
+[ sql ] [ SQL ] SELECT `hospital_name` FROM `jd_hospital` WHERE  (  hospital_id = 6 ) LIMIT 1 [ RunTime:0.089307s ]
+[ sql ] [ SQL ] SELECT `d`.`department_name` FROM `jd_hospital_repart` `hr` INNER JOIN `jd_department` `d` ON `d`.`department_id`=`hr`.`department_id` WHERE  (  hr.hospital_repart_id IN(5) AND hr.is_show = 1 ) [ RunTime:0.078451s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 76 AND content != '' AND is_checked = 2  ) LIMIT 1 [ RunTime:0.072149s ]
+[ sql ] [ SQL ] SELECT `id`.`pay_num`,`id`.`proud`,`id`.`use_drug` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.`is_checked` = 1 AND id.`inherit_id` = 44 AND id.member_id = 76 ) LIMIT 1 [ RunTime:0.071631s ]
+[ sql ] [ SQL ] SELECT `self_goods_name` FROM `jd_self_goods` WHERE  (  member_id = 76 AND is_checked = 2  ) [ RunTime:0.066157s ]
+[ sql ] [ SQL ] SELECT `member_id`,`inherit`,`member_name`,`face_photo`,`goodat_id`,`recom`,`is_clinic`,`hospital_id`,`hospital_repart_str`,`school_str`,`title_str`,`concealment_number` FROM `jd_doctor` WHERE  (  member_id = 79 ) LIMIT 1 [ RunTime:0.078233s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_goodat` WHERE  `goodat_id` IN (29,30,31,32,33,34,35)  AND (  is_show = 1 and level = 2 ) ORDER BY `sort`  DESC [ RunTime:0.071436s ]
+[ sql ] [ SQL ] SELECT `hospital_name` FROM `jd_hospital` WHERE  (  hospital_id = 6 ) LIMIT 1 [ RunTime:0.069669s ]
+[ sql ] [ SQL ] SELECT `d`.`department_name` FROM `jd_hospital_repart` `hr` INNER JOIN `jd_department` `d` ON `d`.`department_id`=`hr`.`department_id` WHERE  (  hr.hospital_repart_id IN(5) AND hr.is_show = 1 ) [ RunTime:0.068578s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 79 AND content != '' AND is_checked = 2  ) LIMIT 1 [ RunTime:0.070329s ]
+[ sql ] [ SQL ] SELECT `id`.`pay_num`,`id`.`proud`,`id`.`use_drug` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.`is_checked` = 1 AND id.`inherit_id` = 44 AND id.member_id = 79 ) LIMIT 1 [ RunTime:0.065970s ]
+[ sql ] [ SQL ] SELECT `self_goods_name` FROM `jd_self_goods` WHERE  (  member_id = 79 AND is_checked = 2  ) [ RunTime:0.069546s ]
+[ sql ] [ SQL ] SELECT `member_id`,`inherit`,`member_name`,`face_photo`,`goodat_id`,`recom`,`is_clinic`,`hospital_id`,`hospital_repart_str`,`school_str`,`title_str`,`concealment_number` FROM `jd_doctor` WHERE  (  member_id = 81 ) LIMIT 1 [ RunTime:0.082093s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_goodat` WHERE  `goodat_id` IN (29,30,31,32,33,34,35,72,73,74)  AND (  is_show = 1 and level = 2 ) ORDER BY `sort`  DESC [ RunTime:0.152630s ]
+[ sql ] [ SQL ] SELECT `hospital_name` FROM `jd_hospital` WHERE  (  hospital_id = 5 ) LIMIT 1 [ RunTime:0.069877s ]
+[ sql ] [ SQL ] SELECT `d`.`department_name` FROM `jd_hospital_repart` `hr` INNER JOIN `jd_department` `d` ON `d`.`department_id`=`hr`.`department_id` WHERE  (  hr.hospital_repart_id IN(831) AND hr.is_show = 1 ) [ RunTime:0.074647s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 81 AND content != '' AND is_checked = 2  ) LIMIT 1 [ RunTime:0.073715s ]
+[ sql ] [ SQL ] SELECT `id`.`pay_num`,`id`.`proud`,`id`.`use_drug` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.`is_checked` = 1 AND id.`inherit_id` = 44 AND id.member_id = 81 ) LIMIT 1 [ RunTime:0.066953s ]
+[ sql ] [ SQL ] SELECT `self_goods_name` FROM `jd_self_goods` WHERE  (  member_id = 81 AND is_checked = 2  ) [ RunTime:0.070359s ]
+[ sql ] [ SQL ] SELECT `member_id`,`inherit`,`member_name`,`face_photo`,`goodat_id`,`recom`,`is_clinic`,`hospital_id`,`hospital_repart_str`,`school_str`,`title_str`,`concealment_number` FROM `jd_doctor` WHERE  (  member_id = 77 ) LIMIT 1 [ RunTime:0.071663s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_goodat` WHERE  `goodat_id` IN (29,30,31,32,33,34,35)  AND (  is_show = 1 and level = 2 ) ORDER BY `sort`  DESC [ RunTime:0.064747s ]
+[ sql ] [ SQL ] SELECT `hospital_name` FROM `jd_hospital` WHERE  (  hospital_id = 7 ) LIMIT 1 [ RunTime:0.070357s ]
+[ sql ] [ SQL ] SELECT `d`.`department_name` FROM `jd_hospital_repart` `hr` INNER JOIN `jd_department` `d` ON `d`.`department_id`=`hr`.`department_id` WHERE  (  hr.hospital_repart_id IN(5) AND hr.is_show = 1 ) [ RunTime:0.074159s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 77 AND content != '' AND is_checked = 2  ) LIMIT 1 [ RunTime:0.070413s ]
+[ sql ] [ SQL ] SELECT `id`.`pay_num`,`id`.`proud`,`id`.`use_drug` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.`is_checked` = 1 AND id.`inherit_id` = 44 AND id.member_id = 77 ) LIMIT 1 [ RunTime:0.072272s ]
+[ sql ] [ SQL ] SELECT `self_goods_name` FROM `jd_self_goods` WHERE  (  member_id = 77 AND is_checked = 2  ) [ RunTime:0.081708s ]
+[ sql ] [ SQL ] SELECT `member_id`,`inherit`,`member_name`,`face_photo`,`goodat_id`,`recom`,`is_clinic`,`hospital_id`,`hospital_repart_str`,`school_str`,`title_str`,`concealment_number` FROM `jd_doctor` WHERE  (  member_id = 78 ) LIMIT 1 [ RunTime:0.070493s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_school` [ RunTime:0.071518s ]
+[ error ] [8]未定义数组下标: 0[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php:488]
+[ error ] [8]未定义数组下标: 0[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php:488]
+[ error ] [8]未定义数组下标: 0[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php:488]
+[ error ] [8]未定义数组下标: 0[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php:488]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') AND is_display = 1 )' at line 1[D:\workLP\20180502\judeng\wwwroot\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-06-20T18:04:53+08:00 ] 0.0.0.0 POST /Inherit/getInheritDoctorList
+[ info ] localhost:7037/Inherit/getInheritDoctorList [运行时间：8.240817s][吞吐率：0.12req/s] [内存消耗：3,525.78kb] [文件加载：55]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'Inherit',
+    2 => 'getInheritDoctorList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '128',
+  'x-original-url' => '/Inherit/getInheritDoctorList',
+  'user-agent' => 'YiSong/1.2.5 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=5g0p24n2f8ibnf5ikpce7f9vm0',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'inherit_id' => 44,
+  'member_id' => 170,
+  'sign' => '88c37ce00a04dd7678c45982d408533e',
+  '_time' => '1529488746',
+  'only_token' => '1529480093q1%SFz',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->getInheritDoctorList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.098128s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.064036s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit_doctor` WHERE  (  (`member_id` = 170 OR `parent_id` = 170) AND `is_checked` = 1 AND `inherit_id` = 44 ) LIMIT 1 [ RunTime:0.086113s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.067378s ]
+[ sql ] [ SQL ] SELECT `i`.`inherit_id`,`i`.`inherit_name`,`i`.`studio_intro`,`i`.`studio_address`,`i`.`studio_tel`,`d`.`member_id`,`d`.`member_name`,`d`.`face_photo` FROM `jd_inherit` `i` INNER JOIN `jd_doctor` `d` ON `i`.`member_id`=`d`.`member_id` WHERE  i.`is_display` = 1  AND i.`inherit_id` = 44 LIMIT 1 [ RunTime:0.067790s ]
+[ sql ] [ SQL ] SELECT `id`.`inherit_id`,`id`.`parent_id`,`d`.`member_id`,`d`.`member_name`,`d`.`face_photo` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.`is_checked` = 1 AND id.`inherit_id` = 44 AND id.parent_id = 100 ) [ RunTime:0.067822s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.082895s ]
+[ sql ] [ SQL ] SELECT `member_id`,`inherit`,`member_name`,`face_photo`,`goodat_id`,`recom`,`is_clinic`,`hospital_id`,`hospital_repart_str`,`school_str`,`title_str`,`concealment_number` FROM `jd_doctor` WHERE  (  member_id = 100 ) LIMIT 1 [ RunTime:0.087842s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_goodat` [ RunTime:0.076635s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_goodat` WHERE  `goodat_id` IN (29,30,31,32,33,34,35,86,87,88)  AND (  is_show = 1 and level = 2 ) ORDER BY `sort`  DESC [ RunTime:0.084852s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital` [ RunTime:0.103588s ]
+[ sql ] [ SQL ] SELECT `hospital_name` FROM `jd_hospital` WHERE  (  hospital_id = 17360 ) LIMIT 1 [ RunTime:0.069697s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital_repart` [ RunTime:0.072958s ]
+[ sql ] [ SQL ] SELECT `d`.`department_name` FROM `jd_hospital_repart` `hr` INNER JOIN `jd_department` `d` ON `d`.`department_id`=`hr`.`department_id` WHERE  (  hr.hospital_repart_id IN(5) AND hr.is_show = 1 ) [ RunTime:0.074476s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_self_goods` [ RunTime:0.070755s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 100 AND content != '' AND is_checked = 2  ) LIMIT 1 [ RunTime:0.089092s ]
+[ sql ] [ SQL ] SELECT `id`.`pay_num`,`id`.`proud`,`id`.`use_drug` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.`is_checked` = 1 AND id.`inherit_id` = 44 AND id.member_id = 100 ) LIMIT 1 [ RunTime:0.090222s ]
+[ sql ] [ SQL ] SELECT `self_goods_name` FROM `jd_self_goods` WHERE  (  member_id = 100 AND is_checked = 2  ) [ RunTime:0.101319s ]
+[ sql ] [ SQL ] SELECT `member_id`,`inherit`,`member_name`,`face_photo`,`goodat_id`,`recom`,`is_clinic`,`hospital_id`,`hospital_repart_str`,`school_str`,`title_str`,`concealment_number` FROM `jd_doctor` WHERE  (  member_id = 76 ) LIMIT 1 [ RunTime:0.070666s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_goodat` WHERE  `goodat_id` IN (29,30,31,32,33,34,35)  AND (  is_show = 1 and level = 2 ) ORDER BY `sort`  DESC [ RunTime:0.090177s ]
+[ sql ] [ SQL ] SELECT `hospital_name` FROM `jd_hospital` WHERE  (  hospital_id = 6 ) LIMIT 1 [ RunTime:0.078111s ]
+[ sql ] [ SQL ] SELECT `d`.`department_name` FROM `jd_hospital_repart` `hr` INNER JOIN `jd_department` `d` ON `d`.`department_id`=`hr`.`department_id` WHERE  (  hr.hospital_repart_id IN(5) AND hr.is_show = 1 ) [ RunTime:0.087283s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 76 AND content != '' AND is_checked = 2  ) LIMIT 1 [ RunTime:0.071448s ]
+[ sql ] [ SQL ] SELECT `id`.`pay_num`,`id`.`proud`,`id`.`use_drug` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.`is_checked` = 1 AND id.`inherit_id` = 44 AND id.member_id = 76 ) LIMIT 1 [ RunTime:0.078547s ]
+[ sql ] [ SQL ] SELECT `self_goods_name` FROM `jd_self_goods` WHERE  (  member_id = 76 AND is_checked = 2  ) [ RunTime:0.067461s ]
+[ sql ] [ SQL ] SELECT `member_id`,`inherit`,`member_name`,`face_photo`,`goodat_id`,`recom`,`is_clinic`,`hospital_id`,`hospital_repart_str`,`school_str`,`title_str`,`concealment_number` FROM `jd_doctor` WHERE  (  member_id = 79 ) LIMIT 1 [ RunTime:0.069977s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_goodat` WHERE  `goodat_id` IN (29,30,31,32,33,34,35)  AND (  is_show = 1 and level = 2 ) ORDER BY `sort`  DESC [ RunTime:0.070427s ]
+[ sql ] [ SQL ] SELECT `hospital_name` FROM `jd_hospital` WHERE  (  hospital_id = 6 ) LIMIT 1 [ RunTime:0.065528s ]
+[ sql ] [ SQL ] SELECT `d`.`department_name` FROM `jd_hospital_repart` `hr` INNER JOIN `jd_department` `d` ON `d`.`department_id`=`hr`.`department_id` WHERE  (  hr.hospital_repart_id IN(5) AND hr.is_show = 1 ) [ RunTime:0.122643s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 79 AND content != '' AND is_checked = 2  ) LIMIT 1 [ RunTime:0.071738s ]
+[ sql ] [ SQL ] SELECT `id`.`pay_num`,`id`.`proud`,`id`.`use_drug` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.`is_checked` = 1 AND id.`inherit_id` = 44 AND id.member_id = 79 ) LIMIT 1 [ RunTime:0.085621s ]
+[ sql ] [ SQL ] SELECT `self_goods_name` FROM `jd_self_goods` WHERE  (  member_id = 79 AND is_checked = 2  ) [ RunTime:0.064933s ]
+[ sql ] [ SQL ] SELECT `member_id`,`inherit`,`member_name`,`face_photo`,`goodat_id`,`recom`,`is_clinic`,`hospital_id`,`hospital_repart_str`,`school_str`,`title_str`,`concealment_number` FROM `jd_doctor` WHERE  (  member_id = 81 ) LIMIT 1 [ RunTime:0.073480s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_goodat` WHERE  `goodat_id` IN (29,30,31,32,33,34,35,72,73,74)  AND (  is_show = 1 and level = 2 ) ORDER BY `sort`  DESC [ RunTime:0.102334s ]
+[ sql ] [ SQL ] SELECT `hospital_name` FROM `jd_hospital` WHERE  (  hospital_id = 5 ) LIMIT 1 [ RunTime:0.074128s ]
+[ sql ] [ SQL ] SELECT `d`.`department_name` FROM `jd_hospital_repart` `hr` INNER JOIN `jd_department` `d` ON `d`.`department_id`=`hr`.`department_id` WHERE  (  hr.hospital_repart_id IN(831) AND hr.is_show = 1 ) [ RunTime:0.079352s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 81 AND content != '' AND is_checked = 2  ) LIMIT 1 [ RunTime:0.072629s ]
+[ sql ] [ SQL ] SELECT `id`.`pay_num`,`id`.`proud`,`id`.`use_drug` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.`is_checked` = 1 AND id.`inherit_id` = 44 AND id.member_id = 81 ) LIMIT 1 [ RunTime:0.068276s ]
+[ sql ] [ SQL ] SELECT `self_goods_name` FROM `jd_self_goods` WHERE  (  member_id = 81 AND is_checked = 2  ) [ RunTime:0.077668s ]
+[ sql ] [ SQL ] SELECT `member_id`,`inherit`,`member_name`,`face_photo`,`goodat_id`,`recom`,`is_clinic`,`hospital_id`,`hospital_repart_str`,`school_str`,`title_str`,`concealment_number` FROM `jd_doctor` WHERE  (  member_id = 77 ) LIMIT 1 [ RunTime:0.095446s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_goodat` WHERE  `goodat_id` IN (29,30,31,32,33,34,35)  AND (  is_show = 1 and level = 2 ) ORDER BY `sort`  DESC [ RunTime:0.069615s ]
+[ sql ] [ SQL ] SELECT `hospital_name` FROM `jd_hospital` WHERE  (  hospital_id = 7 ) LIMIT 1 [ RunTime:0.090754s ]
+[ sql ] [ SQL ] SELECT `d`.`department_name` FROM `jd_hospital_repart` `hr` INNER JOIN `jd_department` `d` ON `d`.`department_id`=`hr`.`department_id` WHERE  (  hr.hospital_repart_id IN(5) AND hr.is_show = 1 ) [ RunTime:0.081040s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 77 AND content != '' AND is_checked = 2  ) LIMIT 1 [ RunTime:0.074154s ]
+[ sql ] [ SQL ] SELECT `id`.`pay_num`,`id`.`proud`,`id`.`use_drug` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.`is_checked` = 1 AND id.`inherit_id` = 44 AND id.member_id = 77 ) LIMIT 1 [ RunTime:0.071237s ]
+[ sql ] [ SQL ] SELECT `self_goods_name` FROM `jd_self_goods` WHERE  (  member_id = 77 AND is_checked = 2  ) [ RunTime:0.068140s ]
+[ sql ] [ SQL ] SELECT `member_id`,`inherit`,`member_name`,`face_photo`,`goodat_id`,`recom`,`is_clinic`,`hospital_id`,`hospital_repart_str`,`school_str`,`title_str`,`concealment_number` FROM `jd_doctor` WHERE  (  member_id = 78 ) LIMIT 1 [ RunTime:0.066977s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_goodat` WHERE  `goodat_id` IN (29,30,31,32,33,34,35)  AND (  is_show = 1 and level = 2 ) ORDER BY `sort`  DESC [ RunTime:0.065017s ]
+[ sql ] [ SQL ] SELECT `hospital_name` FROM `jd_hospital` WHERE  (  hospital_id = 7 ) LIMIT 1 [ RunTime:0.066140s ]
+[ sql ] [ SQL ] SELECT `d`.`department_name` FROM `jd_hospital_repart` `hr` INNER JOIN `jd_department` `d` ON `d`.`department_id`=`hr`.`department_id` WHERE  (  hr.hospital_repart_id IN(5,660,831) AND hr.is_show = 1 ) [ RunTime:0.076248s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 78 AND content != '' AND is_checked = 2  ) LIMIT 1 [ RunTime:0.069974s ]
+[ sql ] [ SQL ] SELECT `id`.`pay_num`,`id`.`proud`,`id`.`use_drug` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.`is_checked` = 1 AND id.`inherit_id` = 44 AND id.member_id = 78 ) LIMIT 1 [ RunTime:0.072643s ]
+[ sql ] [ SQL ] SELECT `self_goods_name` FROM `jd_self_goods` WHERE  (  member_id = 78 AND is_checked = 2  ) [ RunTime:0.078089s ]
+[ sql ] [ SQL ] SELECT `member_id`,`inherit`,`member_name`,`face_photo`,`goodat_id`,`recom`,`is_clinic`,`hospital_id`,`hospital_repart_str`,`school_str`,`title_str`,`concealment_number` FROM `jd_doctor` WHERE  (  member_id = 70 ) LIMIT 1 [ RunTime:0.073086s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_goodat` WHERE  `goodat_id` IN (73,74,75)  AND (  is_show = 1 and level = 2 ) ORDER BY `sort`  DESC [ RunTime:0.073046s ]
+[ sql ] [ SQL ] SELECT `hospital_name` FROM `jd_hospital` WHERE  (  hospital_id = 17367 ) LIMIT 1 [ RunTime:0.070478s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 70 AND content != '' AND is_checked = 2  ) LIMIT 1 [ RunTime:0.092000s ]
+[ sql ] [ SQL ] SELECT `id`.`pay_num`,`id`.`proud`,`id`.`use_drug` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.`is_checked` = 1 AND id.`inherit_id` = 44 AND id.member_id = 70 ) LIMIT 1 [ RunTime:0.081846s ]
+[ sql ] [ SQL ] SELECT `self_goods_name` FROM `jd_self_goods` WHERE  (  member_id = 70 AND is_checked = 2  ) [ RunTime:0.068994s ]
+[ sql ] [ SQL ] SELECT `member_id`,`inherit`,`member_name`,`face_photo`,`goodat_id`,`recom`,`is_clinic`,`hospital_id`,`hospital_repart_str`,`school_str`,`title_str`,`concealment_number` FROM `jd_doctor` WHERE  (  member_id = 109 ) LIMIT 1 [ RunTime:0.078807s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_goodat` WHERE  `goodat_id` IN (86,87,88)  AND (  is_show = 1 and level = 2 ) ORDER BY `sort`  DESC [ RunTime:0.074996s ]
+[ sql ] [ SQL ] SELECT `hospital_name` FROM `jd_hospital` WHERE  (  hospital_id = 5 ) LIMIT 1 [ RunTime:0.069675s ]
+[ sql ] [ SQL ] SELECT `d`.`department_name` FROM `jd_hospital_repart` `hr` INNER JOIN `jd_department` `d` ON `d`.`department_id`=`hr`.`department_id` WHERE  (  hr.hospital_repart_id IN(5) AND hr.is_show = 1 ) [ RunTime:0.083316s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 109 AND content != '' AND is_checked = 2  ) LIMIT 1 [ RunTime:0.074723s ]
+[ sql ] [ SQL ] SELECT `id`.`pay_num`,`id`.`proud`,`id`.`use_drug` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.`is_checked` = 1 AND id.`inherit_id` = 44 AND id.member_id = 109 ) LIMIT 1 [ RunTime:0.121402s ]
+[ sql ] [ SQL ] SELECT `self_goods_name` FROM `jd_self_goods` WHERE  (  member_id = 109 AND is_checked = 2  ) [ RunTime:0.065173s ]
+[ sql ] [ SQL ] SELECT `member_id`,`inherit`,`member_name`,`face_photo`,`goodat_id`,`recom`,`is_clinic`,`hospital_id`,`hospital_repart_str`,`school_str`,`title_str`,`concealment_number` FROM `jd_doctor` WHERE  (  member_id = 170 ) LIMIT 1 [ RunTime:0.066785s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_goodat` WHERE  `goodat_id` IN (85,83,82,73,72,66,27,26,25,87,29,90,88,42,51)  AND (  is_show = 1 and level = 2 ) ORDER BY `sort`  DESC [ RunTime:0.076353s ]
+[ sql ] [ SQL ] SELECT `hospital_name` FROM `jd_hospital` WHERE  (  hospital_id = 17367 ) LIMIT 1 [ RunTime:0.064651s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 170 AND content != '' AND is_checked = 2  ) LIMIT 1 [ RunTime:0.070426s ]
+[ sql ] [ SQL ] SELECT `id`.`pay_num`,`id`.`proud`,`id`.`use_drug` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.`is_checked` = 1 AND id.`inherit_id` = 44 AND id.member_id = 170 ) LIMIT 1 [ RunTime:0.068336s ]
+[ sql ] [ SQL ] SELECT `self_goods_name` FROM `jd_self_goods` WHERE  (  member_id = 170 AND is_checked = 2  ) [ RunTime:0.064340s ]
+[ sql ] [ SQL ] SELECT `member_id`,`inherit`,`member_name`,`face_photo`,`goodat_id`,`recom`,`is_clinic`,`hospital_id`,`hospital_repart_str`,`school_str`,`title_str`,`concealment_number` FROM `jd_doctor` WHERE  (  member_id = 232 ) LIMIT 1 [ RunTime:0.069078s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_goodat` WHERE  `goodat_id` IN (90,89,88,35,32,31,30,82,72)  AND (  is_show = 1 and level = 2 ) ORDER BY `sort`  DESC [ RunTime:0.089028s ]
+[ sql ] [ SQL ] SELECT `hospital_name` FROM `jd_hospital` WHERE  (  hospital_id = 17365 ) LIMIT 1 [ RunTime:0.065381s ]
+[ sql ] [ SQL ] SELECT `d`.`department_name` FROM `jd_hospital_repart` `hr` INNER JOIN `jd_department` `d` ON `d`.`department_id`=`hr`.`department_id` WHERE  (  hr.hospital_repart_id IN(5,827,835) AND hr.is_show = 1 ) [ RunTime:0.072487s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 232 AND content != '' AND is_checked = 2  ) LIMIT 1 [ RunTime:0.081068s ]
+[ sql ] [ SQL ] SELECT `id`.`pay_num`,`id`.`proud`,`id`.`use_drug` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.`is_checked` = 1 AND id.`inherit_id` = 44 AND id.member_id = 232 ) LIMIT 1 [ RunTime:0.068054s ]
+[ sql ] [ SQL ] SELECT `self_goods_name` FROM `jd_self_goods` WHERE  (  member_id = 232 AND is_checked = 2  ) [ RunTime:0.073848s ]
+[ sql ] [ SQL ] SELECT `member_id`,`inherit`,`member_name`,`face_photo`,`goodat_id`,`recom`,`is_clinic`,`hospital_id`,`hospital_repart_str`,`school_str`,`title_str`,`concealment_number` FROM `jd_doctor` WHERE  (  member_id = 233 ) LIMIT 1 [ RunTime:0.085060s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_goodat` WHERE  `goodat_id` IN (64,54,32)  AND (  is_show = 1 and level = 2 ) ORDER BY `sort`  DESC [ RunTime:0.069643s ]
+[ sql ] [ SQL ] SELECT `hospital_name` FROM `jd_hospital` WHERE  (  hospital_id = 17365 ) LIMIT 1 [ RunTime:0.159919s ]
+[ sql ] [ SQL ] SELECT `d`.`department_name` FROM `jd_hospital_repart` `hr` INNER JOIN `jd_department` `d` ON `d`.`department_id`=`hr`.`department_id` WHERE  (  hr.hospital_repart_id IN(5,827) AND hr.is_show = 1 ) [ RunTime:0.071750s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 233 AND content != '' AND is_checked = 2  ) LIMIT 1 [ RunTime:0.071302s ]
+[ sql ] [ SQL ] SELECT `id`.`pay_num`,`id`.`proud`,`id`.`use_drug` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.`is_checked` = 1 AND id.`inherit_id` = 44 AND id.member_id = 233 ) LIMIT 1 [ RunTime:0.087866s ]
+[ sql ] [ SQL ] SELECT `self_goods_name` FROM `jd_self_goods` WHERE  (  member_id = 233 AND is_checked = 2  ) [ RunTime:0.089565s ]
+[ sql ] [ SQL ] SELECT `member_id`,`inherit`,`member_name`,`face_photo`,`goodat_id`,`recom`,`is_clinic`,`hospital_id`,`hospital_repart_str`,`school_str`,`title_str`,`concealment_number` FROM `jd_doctor` WHERE  (  member_id = 234 ) LIMIT 1 [ RunTime:0.073045s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_goodat` WHERE  `goodat_id` IN (29)  AND (  is_show = 1 and level = 2 ) ORDER BY `sort`  DESC [ RunTime:0.076079s ]
+[ sql ] [ SQL ] SELECT `hospital_name` FROM `jd_hospital` WHERE  (  hospital_id = 17367 ) LIMIT 1 [ RunTime:0.075720s ]
+[ sql ] [ SQL ] SELECT `d`.`department_name` FROM `jd_hospital_repart` `hr` INNER JOIN `jd_department` `d` ON `d`.`department_id`=`hr`.`department_id` WHERE  (  hr.hospital_repart_id IN(5) AND hr.is_show = 1 ) [ RunTime:0.136655s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 234 AND content != '' AND is_checked = 2  ) LIMIT 1 [ RunTime:0.072638s ]
+[ sql ] [ SQL ] SELECT `id`.`pay_num`,`id`.`proud`,`id`.`use_drug` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.`is_checked` = 1 AND id.`inherit_id` = 44 AND id.member_id = 234 ) LIMIT 1 [ RunTime:0.062949s ]
+[ sql ] [ SQL ] SELECT `self_goods_name` FROM `jd_self_goods` WHERE  (  member_id = 234 AND is_checked = 2  ) [ RunTime:0.074127s ]
+[ sql ] [ SQL ] SELECT `member_id`,`inherit`,`member_name`,`face_photo`,`goodat_id`,`recom`,`is_clinic`,`hospital_id`,`hospital_repart_str`,`school_str`,`title_str`,`concealment_number` FROM `jd_doctor` WHERE  (  member_id = 237 ) LIMIT 1 [ RunTime:0.104327s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_goodat` WHERE  `goodat_id` IN (0)  AND (  is_show = 1 and level = 2 ) ORDER BY `sort`  DESC [ RunTime:0.090035s ]
+[ sql ] [ SQL ] SELECT `hospital_name` FROM `jd_hospital` WHERE  (  hospital_id = 17367 ) LIMIT 1 [ RunTime:0.077673s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 237 AND content != '' AND is_checked = 2  ) LIMIT 1 [ RunTime:0.064990s ]
+[ sql ] [ SQL ] SELECT `id`.`pay_num`,`id`.`proud`,`id`.`use_drug` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.`is_checked` = 1 AND id.`inherit_id` = 44 AND id.member_id = 237 ) LIMIT 1 [ RunTime:0.158049s ]
+[ sql ] [ SQL ] SELECT `self_goods_name` FROM `jd_self_goods` WHERE  (  member_id = 237 AND is_checked = 2  ) [ RunTime:0.074222s ]
+[ sql ] [ SQL ] SELECT `id`.`inherit_id`,`id`.`parent_id`,`d`.`member_id`,`d`.`member_name`,`d`.`face_photo` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.`is_checked` = 1 AND id.`inherit_id` = 44 AND id.parent_id = 170 ) [ RunTime:0.074558s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `only_token` = '1529480093q1%SFz'  AND `is_status` = 0 LIMIT 1 [ RunTime:0.085811s ]
+[ error ] [8]未定义数组下标: 0[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php:488]
+[ error ] [8]未定义数组下标: 0[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php:488]
+[ error ] [8]未定义数组下标: 0[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php:488]
+[ error ] [8]未定义数组下标: 0[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php:488]
+[ error ] [8]未定义数组下标: 0[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php:488]
+[ error ] [8]未定义数组下标: 0[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php:488]
+[ error ] [8]未定义数组下标: 0[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php:488]
+[ error ] [8]未定义数组下标: 0[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php:488]
+[ error ] [8]未定义数组下标: 0[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php:488]

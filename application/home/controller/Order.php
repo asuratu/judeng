@@ -339,8 +339,6 @@ class Order extends Common
                     } else {
                         $data['patient_id'] = $patientInfo['member_id'];
                     }
-
-
                 }
                 //生成新订单
                 $newOrder['order_sn'] = createOrderCode();
@@ -506,8 +504,6 @@ class Order extends Common
                 Db::rollback();
                 return false;
             }
-
-
         }
     }
 

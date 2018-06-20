@@ -760,7 +760,6 @@ class Prescription extends Common
             {
                 ajaxReturn($res);
             }
-
             if($data['member_id']=='' || $data['state_id']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -795,7 +794,8 @@ class Prescription extends Common
 //                foreach ($contentArr as $key1=>$val1) {
 //                    $contentArr[$key1][2] = 0;
 //
-                $specialArr[$key]['drug_str'] = base64_encode(json_encode(($val['content'])));
+//                var_dump($val['content']);die;
+                $specialArr[$key]['drug_str'] = base64_encode(json_encode($val['content']));
                 $specialArr[$key]['type'] = 1;
                 $specialArr[$key]['temp_id'] = 0;
                 $specialArr[$key]['special_id'] = $val['special_id'];

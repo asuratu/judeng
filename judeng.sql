@@ -2412,10 +2412,10 @@ INSERT INTO `jd_inherit_doctor` VALUES ('4', '3', '3', '3', '1', '1526284794', '
 INSERT INTO `jd_inherit_doctor` VALUES ('5', '2', '2', '2', '1', '1526284794', '1', '1526284794', '0', '5', '30', '89%', '把制香附丸', '1', 'http://localhost:7034/uploads/code/1527734727code.png', '');
 INSERT INTO `jd_inherit_doctor` VALUES ('6', '3', '2', '3', '1', '1526284794', '1', '1526284794', '20', '5', '30', '89%', '把制香附丸', '2', 'http://localhost:7034/uploads/code/1527734727code.png', '');
 INSERT INTO `jd_inherit_doctor` VALUES ('9', '4', '2', '2', '1', '1527734727', '0', '0', '0', '0', '0', '', '', '1', 'http://localhost:7034/uploads/code/1527734727code.png', '');
-INSERT INTO `jd_inherit_doctor` VALUES ('10', '4', '3', '2', '0', '1527832780', '0', '0', '0', '0', '0', '', '', '1', 'http://39.105.19.169:88/uploads/code/1527832780code.png', '这是我的申请理由');
-INSERT INTO `jd_inherit_doctor` VALUES ('11', '4', '17', '2', '0', '1527839833', '0', '0', '0', '0', '0', '', '', '1', 'http://39.105.19.169:88/uploads/code/1527839833code.png', '');
-INSERT INTO `jd_inherit_doctor` VALUES ('12', '2', '25', '2', '1', '1527876313', '0', '0', '10', '20', '0', '', '', '1', 'http://39.105.19.169:88/uploads/code/1527876313code.png', '车');
-INSERT INTO `jd_inherit_doctor` VALUES ('13', '3', '25', '3', '0', '1527929131', '0', '0', '0', '0', '0', '', '', '1', 'http://39.105.19.169:88/uploads/code/1527929132code.png', '宝宝');
+INSERT INTO `jd_inherit_doctor` VALUES ('10', '4', '3', '2', '0', '1527832780', '0', '0', '0', '0', '0', '', '', '1', 'http://api.judeng.net:88/uploads/code/1527832780code.png', '这是我的申请理由');
+INSERT INTO `jd_inherit_doctor` VALUES ('11', '4', '17', '2', '0', '1527839833', '0', '0', '0', '0', '0', '', '', '1', 'http://api.judeng.net:88/uploads/code/1527839833code.png', '');
+INSERT INTO `jd_inherit_doctor` VALUES ('12', '2', '25', '2', '1', '1527876313', '0', '0', '10', '20', '0', '', '', '1', 'http://api.judeng.net:88/uploads/code/1527876313code.png', '车');
+INSERT INTO `jd_inherit_doctor` VALUES ('13', '3', '25', '3', '0', '1527929131', '0', '0', '0', '0', '0', '', '', '1', 'http://api.judeng.net:88/uploads/code/1527929132code.png', '宝宝');
 
 -- ----------------------------
 -- Table structure for jd_inquisition

@@ -459,7 +459,7 @@ class Inherit extends Common
                     ->find();
 
                 //是否显示流派
-                if ($doctorInfo['inherit']) {
+                if ($doctorInfo['inherit'] && $doctorInfo['school_str']) {
                     $doctorInfo['school_str'] = db('school')
                         ->where("school_id IN({$doctorInfo['school_str']}) AND is_display = 1")
                         ->field('school_name')
@@ -527,7 +527,7 @@ class Inherit extends Common
                         ->find();
 
                     //是否显示流派
-                    if ($doctorInfo['inherit']) {
+                    if ($doctorInfo['inherit'] && $doctorInfo['school_str']) {
                         $doctorInfo['school_str'] = db('school')
                             ->where("school_id IN({$doctorInfo['school_str']}) AND is_display = 1")
                             ->field('school_name')

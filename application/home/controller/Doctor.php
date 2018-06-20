@@ -89,6 +89,120 @@ class Doctor extends Common
 
 
     // 资料预览
+//    public function dataPreview1() {
+//        $data=input('post.');
+//        if($data['doctor_id']=='')
+//        {
+//            ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+//        }
+//        $doctor = db('doctor')->where("member_id = {$data['doctor_id']}")
+//            ->field('member_id, true_name, face_photo, goodat_id, introduction, recom, is_clinic, hospital_id, hospital_repart_str, school_str, inherit, title_str, graphic_speech, love_inquiry, concealment_number, online_inquiry,first_price,consultation_price')
+//            ->find();
+//
+//        $diagnosis_set = db('diagnosis_set')->where("member_id = {$data['doctor_id']}")
+//            ->find();
+//        $doctor['graphic_speech'] = $diagnosis_set['graphic_speech'];
+//        $doctor['online_inquiry'] = $diagnosis_set['all_open'];
+//        $doctor['first_price'] = $diagnosis_set['image_price'];
+//        $doctor['consultation_price'] = $diagnosis_set['reimage_price'];
+//        $doctor['love_inquiry'] = $diagnosis_set['love_num'];
+//
+//        //是否显示流派
+//        if ($doctor['inherit']) {
+//            $doctor['school_str'] = db('school')
+//                ->where("school_id IN({$doctor['school_str']}) AND is_display = 1")
+//                ->field('school_name')
+//                ->select();
+//        } else {
+//            $doctor['school_str'] = array();
+//        }
+//        //第一医疗机构
+//        $hospital = db('hospital')->where("hospital_id = {$doctor['hospital_id']}")
+//            ->field('hospital_name')
+//            ->find();
+//        $doctor['hospital_name'] = $hospital['hospital_name'];
+//
+//        //第一科室
+//        if ($doctor['hospital_repart_str']) {
+//            $keshiArr = db('hospital_repart')->alias('hr')
+//                ->join(['jd_department'=>'d'], 'd.department_id = hr.department_id' , 'inner')
+//                ->where("hr.hospital_repart_id IN({$doctor['hospital_repart_str']}) AND hr.is_show = 1")
+//                ->field("d.department_name")
+//                ->select();
+////            $doctor['department_name'] = $keshiArr[0];
+//            $doctor['department_name'] = $keshiArr[0];
+//        } else {
+//            $doctor['department_name'] = array('department_name'=>'');
+//        }
+//        $doctor['department_name'] = json_encode($doctor['department_name']);
+//
+//        //是否有自建特色方剂
+//        $existGoods = db('self_goods')
+//            ->where("member_id = {$data['doctor_id']} AND content != '' AND is_checked = 2 ")
+//            ->field('self_goods_id')
+//            ->count();
+//        $existGoods > 0 ? $doctor['has_self_goods'] = 1 : $doctor['has_self_goods'] = 0;
+//        //付款人数
+//        $doctor['payNum'] = db('order')
+//            ->where("pay_status = 2 AND doctor_id = {$data['doctor_id']}")
+//            ->field('distinct(patient_id)')
+//            ->count();
+//        //是否开启爱心问诊
+//
+//        //是否开启线上复诊
+//
+//        //是否开启图文咨询
+//
+//         //查询调制服务包列表
+//        $doctor['selfGoodsList'] = db('self_goods')
+//            ->where("member_id = {$data['doctor_id']} AND is_checked = 2 ")
+//            ->field('self_goods_id, inherit_id, content, self_goods_name, advantage, price')
+//            ->select();
+//
+//        foreach ($doctor['selfGoodsList'] as $key => $value) {
+//            $doctor['selfGoodsList'][$key]['content'] = base64_encode($value['content']);
+//        }
+//
+//        $doctor['is_self_drug'] = $doctor['content'] != '' ? 1 : 0;
+//        $doctor['is_inherit'] = $doctor['inherit_id'] != 0 ? 1 : 0;
+//
+//        //查询坐诊信息
+//        $paibanMap['dl.`member_id`'] = $data['doctor_id'];
+//        $paibanList = db('hospital_repart')->alias('hr')
+//            ->join(['jd_department' => 'd'], 'hr.department_id = d.department_id', 'inner')
+//            ->join(['jd_hospital' => 'h'], 'hr.hospital_id = h.hospital_id', 'inner')
+//            ->join(['jd_diagnosis_list' => 'dl'], 'hr.hospital_repart_id = dl.hospital_repart_id', 'inner')
+//            ->where("dl.`member_id` = {$data['doctor_id']} AND hr.is_show = 1 AND dl.start_time > ".time() )
+//            ->field("dl.diagnosis_id, dl.start_time, dl.end_time, h.hospital_name, d.department_name")
+//            ->order('dl.start_time DESC')
+//            ->select();
+//        foreach ($paibanList as $key => $val) {
+//            $paibanList[$key]['content'] = date('Y年m月d日 H:i', $val['start_time']) . '-' . date('Y年m月d日 H:i', $val['end_time']);
+//            if (time() >= $val['start_time']) {
+//                $paibanList[$key]['expired'] = 0;
+//            } else {
+//                $paibanList[$key]['expired'] = 1;
+//            }
+//        }
+//        $doctor['paiban'] = $paibanList;
+//        // 查询擅长
+//        $doctor['goodat_id'] = $this->goodsId($doctor['goodat_id']);
+//
+//        // 查询评价列表
+//        $doctorEvaluation = $this->evaluationList($data['doctor_id']);
+//        // 查询公告管理
+//        $doctorNotice = $this->noticeList($data['doctor_id']);
+//        if ($doctor) {
+//            $doctor['evaluation'] = $doctorEvaluation;
+//            $doctor['notice'] = $doctorNotice;
+//
+////        var_dump($doctor);die;
+//            ajaxReturn(array('code'=>1,'info'=>'修改成功','data'=>$doctor));
+//        } else {
+//            ajaxReturn(array('code'=>0,'info'=>'数据错误'));
+//        }
+//    }
+
     public function dataPreview() {
         $data=input('post.');
         if($data['doctor_id']=='')
@@ -131,7 +245,7 @@ class Doctor extends Common
                 ->select();
             $doctor['department_name'] = $keshiArr[0];
         } else {
-            $doctor['department_name'] = '';
+            $doctor['department_name'] = array('department_name'=>'');
         }
 
         //是否有自建特色方剂
@@ -151,7 +265,7 @@ class Doctor extends Common
 
         //是否开启图文咨询
 
-         //查询调制服务包列表
+        //查询调制服务包列表
         $doctor['selfGoodsList'] = db('self_goods')
             ->where("member_id = {$data['doctor_id']} AND is_checked = 2 ")
             ->field('self_goods_id, inherit_id, content, self_goods_name, advantage, price')
