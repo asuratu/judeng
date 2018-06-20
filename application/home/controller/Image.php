@@ -74,6 +74,7 @@ class Image extends Common
                 $sendHair['first'] = $sendHair['doctor_name'] . '医生:我发布了公告内容,请及时查看';
             } else {
                 $sendHair['url'] = $data['url'];
+                $sendHair['url'] = 'http://wechat.bohetanglao.com/home/advise/chat/memberid/' . $data['doctor_id'] . '/type/0.html';
                 $sendHair['first'] = '来自' . $sendHair['doctor_name'] . '医生分享的链接';
             }
             $data['member_id'] = trim($data['member_id'], ',');
