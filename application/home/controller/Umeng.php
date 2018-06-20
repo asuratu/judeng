@@ -117,48 +117,7 @@ class Umeng extends Common
             ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[]));
         }
     }
-
-    // 退出修改医生登录状态
-    public function signOut()
-    {
-        if ($this->request->isPost()) {
-            $data = input('post.');
-            if ($data['doctor_id'] == '') {
-                ajaxReturn(array('code' => 0, 'info' => '参数不完整', 'data' => []));
-            }
-            $doctor = array(
-                'doctor_id' => $data['doctor_id'],
-                'is_login' => 0,
-                'release_date' => time(),
-            );
-            db('doctor')->insert($doctor);
-            ajaxReturn(array('code' => 1, 'info' => 'ok', 'data' => []));
-        }
-    }
-
-    // type 0 咨询回复提醒
-    // 医生操作发送给患者
-    public function sendMember() {
-        $data=input('post.');
-        if($data['doctor_id']==''||$data['member_id']=='')
-        {
-            ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
-        }
-        $doctor = db('doctor')->where("member_id={$data['doctor_id']}")->find();
-        $member = db('member')->field('member_name, mobile, openid, is_type')->where("member_id={$data['member_id']}")->find();
-        $sendHair['doctor_name'] = $doctor['doctor_member'];
-        $sendHair['hospital'] = '小橘灯中医';
-        $sendHair['content'] = $doctor['doctor_member'] . '医生回复了您的消息，请尽快查看';
-        $sendHair['remark'] = '点击这里进入医生咨询聊天界面';
-        $sendHair['url'] = 'http://wechat.bohetanglao.com/home/advise/chat/memberid/' . $data['doctor_id'] . '/type/0.html';
-        $sendHair['first'] = $sendHair['doctor_name'] . '医生:我回复了您的咨询,请及时查看';
-        $sendHair['openid'] = $member['openid'];
-        if ($member['is_type'] == 0) {
-            Model('Weixin')->messageTemplate(2, $sendHair);
-        }
-        ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[]));
-    }
-
+    
     // type 0 认证通过 1 未认证通过 2 传承通过 3 患者购买服务包
     // 后台事件触发通知医生
     public function sendDoctor() {
@@ -168,6 +127,8 @@ class Umeng extends Common
         if($this->request->isPost()) {
             $data = input('post.');
             $doctor = db('doctor')->where("member_id={$data['doctor_id']}")->find();
+            $extra = array();
+            $extra['type'] = $data['type'];
             if ($data['type'] == 0) {
                 $data['title'] = '认证通知';
                 $data['comment'] = $doctor['true_name'] . '医生您的资质认证已通过，您的医馆已经成功开启了，可以开始设置服务进行接诊了';
@@ -175,6 +136,8 @@ class Umeng extends Common
                 $data['title'] = '认证通知';
                 $data['comment'] = $doctor['true_name'] . '医生您的资质认证未通过，请重新提交资质进行审核';
             } else if ($data['type'] == 2) {
+                $extra['inherit_id'] = $data['inherit_id'];
+
                 $data['title'] = '传承通知';
                 $data['comment'] = $doctor['true_name'] . '医生您的调制服务包审核已通过，在调制包管理栏目可以进行查看';
             } else if ($data['type'] == 3) {
@@ -183,12 +146,12 @@ class Umeng extends Common
                 $data['title'] = '服务包通知';
                 $data['comment'] = $member['true_name'] . '患者已购买了您的调治服务包，请尽快处理';
             }
-
+            $doctor['is_system'] = 0;
             // 下面执行推送
             if ($doctor['is_system'] == 0) {     // is_system == 0 为安卓系统
-                Model('Umeng')->PtoAndroid(array($doctor['device_tokens']), $data['comment'], $data['title'], $data['comment']);
+                Model('Umeng')->PtoAndroid(array($doctor['device_tokens']), $data['comment'], $data['title'], $data['comment'], $extra);
             } else {
-                Model('Umeng')->PtoIos(array($doctor['device_tokens']), $data['comment']);
+                Model('Umeng')->PtoIos(array($doctor['device_tokens']), $data['comment'], $extra);
             }
             ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[]));
         }
