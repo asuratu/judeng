@@ -159,7 +159,7 @@ class Number extends Common
             }
             $data['pageCount'] = ($data['page'] - 1) * $data['pageSize'];
 
-            $comment = Db::field('s.`member_id`, s.`synopsis`, s.`end_date`, m.`member_name`, m.`true_name`, m.`mobile`, m.`portrait`, m.`openid`, m.`sex`, m.`age`')
+            $comment = Db::field('s.`member_id`, s.`synopsis`, s.`end_date`, m.`member_name`, m.`true_name`, m.`mobile`, m.`portrait`, m.`im_user` as openid, m.`sex`, m.`age`')
                 ->table('jd_doctor_member s, jd_member m')
                 ->where("s.doctor_id = {$data['doctor_id']} and s.`is_show` = 1 and s.`member_id` = m.`member_id` and (m.`member_name` like '%{$data['title']}%' or m.`true_name` like '%{$data['title']}%' or m.`mobile` like '%{$data['title']}%' or s.`grouping` like '%{$data['title']}%')")
                 ->order('s.end_date', 'DESC')
@@ -316,7 +316,7 @@ class Number extends Common
             }
             $group_member = explode(',', $group['group_member_id']);
 
-            $comment = Db::field('s.`member_id`, s.`inquisition_name`, s.`inquisition`, m.`member_name`, m.`true_name`, m.`mobile`, m.`portrait`, m.`sex`, m.`age`, m.`openid`, m.`is_type`')
+            $comment = Db::field('s.`member_id`, s.`inquisition_name`, s.`inquisition`, m.`member_name`, m.`true_name`, m.`mobile`, m.`portrait`, m.`sex`, m.`age`, m.`im_user` as openid, m.`is_type`')
                 ->table('jd_doctor_member s, jd_member m')
                 ->where("s.doctor_id = {$data['doctor_id']} and s.`is_show` = 1 and s.`member_id` = m.`member_id` and (m.`member_name` like '%{$data['title']}%' or m.`true_name` like '%{$data['title']}%' or m.`mobile` like '%{$data['title']}%' or s.`grouping` like '%{$data['title']}%')")
                 ->order('s.inquisition', 'DESC')
@@ -491,7 +491,7 @@ class Number extends Common
                 $data['pageSize'] = 10;
             }
             $data['pageCount'] = ($data['page'] - 1) * $data['pageSize'];
-            $comment = Db::field('s.`group_id`, s.`member_id`, m.`member_name`, m.`true_name`, m.`mobile`, m.`portrait`, m.`sex`, m.`age`, m.`openid`, m.`is_type`')
+            $comment = Db::field('s.`group_id`, s.`member_id`, m.`member_name`, m.`true_name`, m.`mobile`, m.`portrait`, m.`sex`, m.`age`, m.`im_user` as openid, m.`is_type`')
                 ->table('jd_group_patient s, jd_member m')
                 ->where("s.doctor_id = {$data['doctor_id']} and s.`is_show` = 1 and s.group_id = {$data['group_id']} and s.`member_id` = m.`member_id`")
                 ->order('s.add_date', 'ASC')
