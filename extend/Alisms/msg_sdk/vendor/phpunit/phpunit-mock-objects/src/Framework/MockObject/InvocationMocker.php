@@ -117,7 +117,7 @@ class PHPUnit_Framework_MockObject_InvocationMocker implements PHPUnit_Framework
                         $hasReturnValue = true;
                     }
                 }
-            } catch (Exception $e) {
+            } catch (\Exception $e) {
                 $exception = $e;
             }
         }

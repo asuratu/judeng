@@ -250,7 +250,7 @@ class Handle
                 'first'  => $first,
                 'source' => array_slice($contents, $first - 1, 19),
             ];
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             $source = [];
         }
         return $source;

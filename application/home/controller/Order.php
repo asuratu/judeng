@@ -500,7 +500,7 @@ class Order extends Common
                     Db::rollback();
                     ajaxReturn(array('code'=>0, 'info'=>'系统繁忙, 稍后再试!','data'=>[]));
                 }
-            } catch (Exception $e) {
+            } catch (\Exception $e) {
                 Db::rollback();
                 return false;
             }
@@ -600,7 +600,7 @@ class Order extends Common
                 Db::commit();
                 ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>[['is_taboo'=>$orderPrescriptionInsert['is_taboo'], 'taboo_content'=>$orderPrescriptionInsert['taboo_content'], 'lessCountArr'=>$lessCountArr, 'alertArr'=>$alertArr, 'price'=>round($drugSumPrice, 2)]]));
 
-            } catch (Exception $e) {
+            } catch (\Exception $e) {
                 Db::rollback();
                 return false;
             }
@@ -692,7 +692,7 @@ class Order extends Common
 
                 Db::commit();
                 ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>[]));
-            } catch (Exception $e) {
+            } catch (\Exception $e) {
                 Db::rollback();
                 return false;
             }
@@ -798,7 +798,7 @@ class Order extends Common
                 }
                 Db::rollback();
                 ajaxReturn(array('code'=>0,'info'=>'本次问诊已结束!','data'=>[]));
-            } catch (Exception $e) {
+            } catch (\Exception $e) {
                 Db::rollback();
                 return false;
             }
@@ -882,7 +882,7 @@ class Order extends Common
                 }
                 Db::rollback();
                 ajaxReturn(array('code'=>0,'info'=>'本次问诊已结束!','data'=>[]));
-            } catch (Exception $e) {
+            } catch (\Exception $e) {
                 Db::rollback();
                 return false;
             }

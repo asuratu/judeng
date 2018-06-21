@@ -580,7 +580,7 @@ class PHPUnit_TextUI_Command
             } catch (Throwable $e) {
                 print $e->getMessage() . "\n";
                 exit(PHPUnit_TextUI_TestRunner::FAILURE_EXIT);
-            } catch (Exception $e) {
+            } catch (\Exception $e) {
                 print $e->getMessage() . "\n";
                 exit(PHPUnit_TextUI_TestRunner::FAILURE_EXIT);
             }

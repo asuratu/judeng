@@ -13,6 +13,10 @@ class Doctor extends Common
     {
         if ($this->request->isPost()) {
             $data = input('post.');
+            $res = checkSign($data);
+            if ($res['code'] == 0) {
+                ajaxReturn($res);
+            }
             if ($data['doctor_id'] == '') {
                 ajaxReturn(array('code' => 0, 'info' => '参数不完整', 'data' => []));
             }
@@ -30,6 +34,10 @@ class Doctor extends Common
     // 医生操作发送给患者
     public function sendMember() {
         $data=input('post.');
+        $res = checkSign($data);
+        if ($res['code'] == 0) {
+            ajaxReturn($res);
+        }
         if($data['doctor_id']==''||$data['member_id']=='')
         {
             ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -57,6 +65,10 @@ class Doctor extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
+            $res = checkSign($data);
+            if ($res['code'] == 0) {
+                ajaxReturn($res);
+            }
             if($data['content']==''||$data['is_type']==''|| $data['doctor_id']=='')
             {
                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -93,6 +105,10 @@ class Doctor extends Common
     // 我的医馆
     public function findData() {
         $data=input('post.');
+        $res = checkSign($data);
+        if ($res['code'] == 0) {
+            ajaxReturn($res);
+        }
         if($data['doctor_id']=='')
         {
             ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -247,6 +263,10 @@ class Doctor extends Common
 
     public function dataPreview() {
         $data=input('post.');
+        $res = checkSign($data);
+        if ($res['code'] == 0) {
+            ajaxReturn($res);
+        }
         if($data['doctor_id']=='')
         {
             ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -406,6 +426,10 @@ class Doctor extends Common
     public function disturb() {
         if($this->request->isPost()) {
             $data=input('post.');
+            $res = checkSign($data);
+            if ($res['code'] == 0) {
+                ajaxReturn($res);
+            }
             if($data['doctor_id']==''||$data['disturb_start']==''|| $data['disturb_end']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -459,7 +483,10 @@ class Doctor extends Common
     public function patientFile() {
         if($this->request->isPost()) {
             $data=input('post.');
-            if($data['doctor_id']==''||$data['member_id']=='')
+            $res = checkSign($data);
+            if ($res['code'] == 0) {
+                ajaxReturn($res);
+            }            if($data['doctor_id']==''||$data['member_id']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
@@ -507,6 +534,10 @@ class Doctor extends Common
     public function praintCase() {
         if($this->request->isPost()) {
             $data=input('post.');
+            $res = checkSign($data);
+            if ($res['code'] == 0) {
+                ajaxReturn($res);
+            }
             if($data['member_id']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -545,6 +576,10 @@ class Doctor extends Common
     public function counselling() {
         if($this->request->isPost()) {
             $data=input('post.');
+            $res = checkSign($data);
+            if ($res['code'] == 0) {
+                ajaxReturn($res);
+            }
             if($data['doctor_id']==''||$data['member_id']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));

@@ -296,7 +296,7 @@ class Util_XMLTest extends PHPUnit_Framework_TestCase
 
         try {
             $dom->loadXML($xml);
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
         }
 
         $this->assertNull($e, sprintf(

@@ -359,3 +359,175 @@
 [ error ] [8]未定义数组下标: 0[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php:488]
 [ error ] [8]未定义数组下标: 0[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php:488]
 [ error ] [8]未定义数组下标: 0[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Inherit.php:488]
+---------------------------------------------------------------
+[ 2018-06-20T19:21:54+08:00 ] 0.0.0.0 POST /doctor/findData?_time=1529492878&sign=38b3f595cd202787091c809300c5e207&only_token=1529492634P{6s(l
+[ info ] localhost:7037/doctor/findData?_time=1529492878&sign=38b3f595cd202787091c809300c5e207&only_token=1529492634P{6s(l [运行时间：0.687480s][吞吐率：1.45req/s] [内存消耗：3,124.95kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'doctor',
+    2 => 'findData',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '13',
+  'x-original-url' => '/doctor/findData?_time=1529492878&sign=38b3f595cd202787091c809300c5e207&only_token=1529492634P{6s(l',
+  'user-agent' => 'okhttp/3.8.0',
+  'host' => 'localhost:7037',
+  'accept-encoding' => 'gzip',
+  'connection' => 'Keep-Alive',
+)
+[ info ] [ PARAM ] array (
+  '_time' => '1529492878',
+  'sign' => '38b3f595cd202787091c809300c5e207',
+  'only_token' => '1529492634P{6s(l',
+  'doctor_id' => '170',
+)
+[ info ] [ RUN ] app\home\controller\Doctor->findData[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Doctor.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.088993s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.062995s ]
+[ sql ] [ SQL ] SELECT `member_id`,`true_name`,`title_str`,`inherit`,`school_str`,`face_photo`,`goodat_id`,`introduction`,`hospital_id` FROM `jd_doctor` WHERE  (  member_id = 170 ) LIMIT 1 [ RunTime:0.059865s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital` [ RunTime:0.060196s ]
+[ sql ] [ SQL ] SELECT `hospital_name` FROM `jd_hospital` WHERE  (  hospital_id = 17367 ) LIMIT 1 [ RunTime:0.059938s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_goodat` [ RunTime:0.058970s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_goodat` WHERE  `goodat_id` IN (85,83,82,73,72,66,27,26,25,87,29,90,88,42,51)  AND (  is_show = 1 and level = 2 ) ORDER BY `sort`  DESC [ RunTime:0.061869s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_notice` [ RunTime:0.059701s ]
+[ sql ] [ SQL ] SELECT `notice_id`,`notice_name`,`add_date` FROM `jd_notice` WHERE  (  doctor_id = 170 ) [ RunTime:0.059085s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:108]
+---------------------------------------------------------------
+[ 2018-06-20T21:34:46+08:00 ] 0.0.0.0 POST /doctor/findData?_time=1529492878&sign=38b3f595cd202787091c809300c5e207&only_token=1529492634P{6s(l
+[ info ] localhost:7037/doctor/findData?_time=1529492878&sign=38b3f595cd202787091c809300c5e207&only_token=1529492634P{6s(l [运行时间：0.903128s][吞吐率：1.11req/s] [内存消耗：3,124.79kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'doctor',
+    2 => 'findData',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '13',
+  'x-original-url' => '/doctor/findData?_time=1529492878&sign=38b3f595cd202787091c809300c5e207&only_token=1529492634P{6s(l',
+  'user-agent' => 'okhttp/3.8.0',
+  'host' => 'localhost:7037',
+  'accept-encoding' => 'gzip',
+  'connection' => 'Keep-Alive',
+)
+[ info ] [ PARAM ] array (
+  '_time' => '1529492878',
+  'sign' => '38b3f595cd202787091c809300c5e207',
+  'only_token' => '1529492634P{6s(l',
+  'doctor_id' => '170',
+)
+[ info ] [ RUN ] app\home\controller\Doctor->findData[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Doctor.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.189292s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.082185s ]
+[ sql ] [ SQL ] SELECT `member_id`,`true_name`,`title_str`,`inherit`,`school_str`,`face_photo`,`goodat_id`,`introduction`,`hospital_id` FROM `jd_doctor` WHERE  (  member_id = 170 ) LIMIT 1 [ RunTime:0.084273s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital` [ RunTime:0.078160s ]
+[ sql ] [ SQL ] SELECT `hospital_name` FROM `jd_hospital` WHERE  (  hospital_id = 17367 ) LIMIT 1 [ RunTime:0.090851s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_goodat` [ RunTime:0.082617s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_goodat` WHERE  `goodat_id` IN (85,83,82,73,72,66,27,26,25,87,29,90,88,42,51)  AND (  is_show = 1 and level = 2 ) ORDER BY `sort`  DESC [ RunTime:0.090343s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_notice` [ RunTime:0.077136s ]
+[ sql ] [ SQL ] SELECT `notice_id`,`notice_name`,`add_date` FROM `jd_notice` WHERE  (  doctor_id = 170 ) [ RunTime:0.074517s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:108]
+---------------------------------------------------------------
+[ 2018-06-20T22:23:13+08:00 ] 0.0.0.0 POST /prescription/getAllTempList
+[ info ] localhost:7037/prescription/getAllTempList [运行时间：10.689909s][吞吐率：0.09req/s] [内存消耗：3,140.14kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getAllTempList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '125',
+  'x-original-url' => '/prescription/getAllTempList',
+  'user-agent' => 'YiSong/1.2.5 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=11gjj1vj7gl8s88k9hm0tbfib7',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'only_token' => '1529504468eA&C(|',
+  'sign' => 'b58a2a9db868e83878cdc058323906d0',
+  'member_id' => 170,
+  '_time' => '1529504480',
+  'state_id' => 8,
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getAllTempList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:10.109747s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_temp` [ RunTime:0.075377s ]
+[ sql ] [ SQL ] SELECT `temp_id`,`temp_name`,`type`,`relation_id`,`drug_str`,`state_id`,`release_date` FROM `jd_temp` WHERE  `member_id` = 170  AND `state_id` = 8  AND `type` = 0 ORDER BY `release_date` DESC [ RunTime:0.074579s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.074311s ]
+[ sql ] [ SQL ] SELECT `s`.`special_id`,`s`.`inherit_id`,`s`.`special_name`,`s`.`content`,`s`.`release_date` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_special` `s` ON `s`.`inherit_id`=`id`.`inherit_id` INNER JOIN `jd_inherit` `i` ON `i`.`inherit_id`=`id`.`inherit_id` WHERE  (  id.`member_id` = 170 AND i.is_display = 1 AND s.is_display = 1 ) ORDER BY s.sort DESC [ RunTime:0.074493s ]
+[ sql ] [ SQL ] SELECT `temp_id`,`temp_name`,`type`,`relation_id`,`drug_str`,`state_id`,`release_date` FROM `jd_temp` WHERE  `state_id` = 8  AND `type` = 1 ORDER BY `release_date` DESC [ RunTime:0.070139s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.081920s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `only_token` = '1529504468eA&C(|'  AND `is_status` = 0 LIMIT 1 [ RunTime:0.070121s ]
+---------------------------------------------------------------
+[ 2018-06-20T22:25:01+08:00 ] 0.0.0.0 POST /prescription/getAllTempList
+[ info ] localhost:7037/prescription/getAllTempList [运行时间：0.884902s][吞吐率：1.13req/s] [内存消耗：3,138.73kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'getAllTempList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '125',
+  'x-original-url' => '/prescription/getAllTempList',
+  'user-agent' => 'YiSong/1.2.5 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=11gjj1vj7gl8s88k9hm0tbfib7',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'only_token' => '1529504468eA&C(|',
+  'sign' => 'b58a2a9db868e83878cdc058323906d0',
+  'member_id' => 170,
+  '_time' => '1529504480',
+  'state_id' => 8,
+)
+[ info ] [ RUN ] app\home\controller\Prescription->getAllTempList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.126686s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_temp` [ RunTime:0.086010s ]
+[ sql ] [ SQL ] SELECT `temp_id`,`temp_name`,`type`,`relation_id`,`drug_str`,`state_id`,`release_date` FROM `jd_temp` WHERE  `member_id` = 170  AND `state_id` = 8  AND `type` = 0 ORDER BY `release_date` DESC [ RunTime:0.089742s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.109182s ]
+[ sql ] [ SQL ] SELECT `s`.`special_id`,`s`.`inherit_id`,`s`.`special_name`,`s`.`content`,`s`.`release_date` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_special` `s` ON `s`.`inherit_id`=`id`.`inherit_id` INNER JOIN `jd_inherit` `i` ON `i`.`inherit_id`=`id`.`inherit_id` WHERE  (  id.`member_id` = 170 AND i.is_display = 1 AND s.is_display = 1 ) ORDER BY s.sort DESC [ RunTime:0.090192s ]
+[ sql ] [ SQL ] SELECT `temp_id`,`temp_name`,`type`,`relation_id`,`drug_str`,`state_id`,`release_date` FROM `jd_temp` WHERE  `state_id` = 8  AND `type` = 1 ORDER BY `release_date` DESC [ RunTime:0.095066s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.125938s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `only_token` = '1529504468eA&C(|'  AND `is_status` = 0 LIMIT 1 [ RunTime:0.090742s ]

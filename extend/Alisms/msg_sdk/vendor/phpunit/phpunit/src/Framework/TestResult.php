@@ -626,7 +626,7 @@ class PHPUnit_Framework_TestResult implements Countable
         } catch (Throwable $e) {
             $e     = new PHPUnit_Framework_ExceptionWrapper($e);
             $error = true;
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             $e     = new PHPUnit_Framework_ExceptionWrapper($e);
             $error = true;
         }

@@ -26,7 +26,7 @@ class Sync extends Connector
         try {
             set_time_limit(0);
             $queueJob->fire();
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             $queueJob->failed();
 
             throw $e;
