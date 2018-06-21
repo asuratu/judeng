@@ -46,7 +46,7 @@ class Image extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
-            if($data['is_hair']==''||$data['doctor_id']==''||$data['doctor_member']==''||$data['member_id']==''||$data['is_type']==''||$data['content']=='')
+            if($data['is_hair']==''||$data['doctor_id']==''||$data['doctor_member']==''||$data['member_id']==''||$data['is_type']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
@@ -67,7 +67,7 @@ class Image extends Common
             $sendHair = array();
             $sendHair['doctor_name'] = $data['doctor_member'];
             $sendHair['hospital'] = '小橘灯中医';
-            $sendHair['content'] = $data['content'];
+            $sendHair['content'] = '我发布了公告';
             $sendHair['remark'] = '点击这里查看公告内容';
             if ($data['is_hair'] == 0) {                  // 0 为图文 1 链接
                 $sendHair['url'] = 'http://wechat.bohetanglao.com/home/advise/chat/memberid/' . $data['doctor_id'] . '/type/0.html';
