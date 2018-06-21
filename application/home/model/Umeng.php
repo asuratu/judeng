@@ -33,7 +33,7 @@ class Umeng extends Model
         $url = $this->_config['url'] . '?sign=' . $sign;
 
         //发送请求
-        $res = $this->_curl($url, $post_data);var_dump(11111111);var_dump($res);die;
+        $res = $this->_curl($url, $post_data);
 
         //判断
         if ($res['ret'] != 'SUCCESS') {
@@ -67,7 +67,7 @@ class Umeng extends Model
         $url = $this->_config['url'] . '?sign=' . $sign;
 
         //发送请求
-        $res = $this->_curl($url, $post_data);var_dump($res);die;
+        $res = $this->_curl($url, $post_data);
         //判断
         if ($res['ret'] != 'SUCCESS') {
             //发送失败，

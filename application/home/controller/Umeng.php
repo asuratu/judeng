@@ -139,7 +139,7 @@ class Umeng extends Common
                 $extra['inherit_id'] = $data['inherit_id'];
 
                 $data['title'] = '传承通知';
-                $data['comment'] = $doctor['true_name'] . '医生您的调制服务包审核已通过，在调制包管理栏目可以进行查看';
+                $data['comment'] = $doctor['true_name'] . '医生您的传承审核已通过，在传承详情页可以进行查看';
             } else if ($data['type'] == 3) {
                 $member = db('member')->where("member_id={$data['member_id']}")->find();
 
@@ -150,18 +150,20 @@ class Umeng extends Common
 
                 $data['title'] = '服务包通知';
                 $data['comment'] = $member['true_name'] . '患者已购买了您的调治服务包，请尽快处理';
-            } else if ($data['type'] == 4) {
-                $member = db('member')->where("member_id={$data['member_id']}")->find();
+            } else if ($data['type'] == 5) {
+                $extra['self_goods_id'] = $data['self_goods_id'];
 
                 $data['title'] = '服务包通知';
-                $data['comment'] = $member['true_name'] . '患者已购买了您的调治服务包，请尽快处理';
+                $data['comment'] = $doctor['true_name'] . '医生您的服务包审核已通过，在服务包详情页可以进行查看';
             }
 //            $doctor['is_system'] = 0;
             // 下面执行推送
-            if ($doctor['is_system'] == 0) {     // is_system == 0 为安卓系统
-                Model('Umeng')->PtoAndroid(array($doctor['device_tokens']), $data['comment'], $data['title'], $data['comment'], $extra);
-            } else {
-                Model('Umeng')->PtoIos(array($doctor['device_tokens']), $data['comment'], $extra);
+            if ($doctor['is_login'] == 1) {
+                if ($doctor['is_system'] == 0) {     // is_system == 0 为安卓系统
+                    Model('Umeng')->PtoAndroid(array('Ah8CrStvP77uiCFoGXWiWWvPzvLQXfGukO0vHl0vwHXP'), $data['comment'], $data['title'], $data['comment'], $extra);
+                } else {
+                    Model('Umeng')->PtoIos(array($doctor['device_tokens']), $data['comment'], $extra);
+                }
             }
             ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[]));
         }
