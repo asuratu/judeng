@@ -136,7 +136,7 @@ class Work extends Command
             $response = $this->worker->pop($queue, $delay, $sleep, $maxTries);
 
             $this->output($response);
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             $this->getExceptionHandler()->report($e);
         } catch (Throwable $e) {
             $this->getExceptionHandler()->report(new ThrowableError($e));

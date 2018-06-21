@@ -78,7 +78,7 @@ class Worker
             $job->fire();
 
             return ['job' => $job, 'failed' => false];
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             if (!$job->isDeleted()) {
                 $job->release($delay);
             }

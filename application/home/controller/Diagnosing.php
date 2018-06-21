@@ -217,7 +217,7 @@ class Diagnosing extends Common
                     Db::rollback();
                     ajaxReturn(array('code' => 0, 'info' => '系统繁忙, 稍后再试!', 'data' => []));
                 }
-            } catch (Exception $e) {
+            } catch (\Exception $e) {
                 Db::rollback();
                 return false;
             }

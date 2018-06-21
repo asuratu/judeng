@@ -166,7 +166,7 @@ class Redis extends Connector
             if (!$this->redis->exec()) {
                 $this->redis->discard();
             }
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             $this->redis->discard();
         }
     }

@@ -142,7 +142,7 @@ class PHPUnit_Framework_MockObject_Invocation_Static implements PHPUnit_Framewor
         if ($cloneable) {
             try {
                 return clone $original;
-            } catch (Exception $e) {
+            } catch (\Exception $e) {
                 return $original;
             }
         } else {

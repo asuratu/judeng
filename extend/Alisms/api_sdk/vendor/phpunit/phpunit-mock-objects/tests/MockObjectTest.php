@@ -142,7 +142,7 @@ class Framework_MockObjectTest extends PHPUnit_Framework_TestCase
 
         try {
             $mock->doSomething();
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             return;
         }
 
@@ -158,7 +158,7 @@ class Framework_MockObjectTest extends PHPUnit_Framework_TestCase
 
         try {
             $mock->doSomething();
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             return;
         }
 

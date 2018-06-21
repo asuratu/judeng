@@ -838,7 +838,7 @@ class Assert
         $actual = 'none';
         try {
             $expression();
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             $actual = get_class($e);
             if ($e instanceof $class) {
                 return;

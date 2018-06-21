@@ -18,7 +18,6 @@ class Prescription extends Common
             {
                 ajaxReturn($res);
             }
-
             //获取药方模板类型数组
             $map['is_display'] = 1;
             $list=db('drug_state')->where($map)->field("`state_id`,`state_name`")->order("`sort` DESC")->select();
@@ -795,7 +794,7 @@ class Prescription extends Common
 //                    $contentArr[$key1][2] = 0;
 //
 //                var_dump($val['content']);die;
-                $specialArr[$key]['drug_str'] = base64_encode(json_encode($val['content']));
+                $specialArr[$key]['drug_str'] = base64_encode(($val['content']));
                 $specialArr[$key]['type'] = 1;
                 $specialArr[$key]['temp_id'] = 0;
                 $specialArr[$key]['special_id'] = $val['special_id'];

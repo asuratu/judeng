@@ -1007,7 +1007,7 @@ abstract class PHPUnit_Framework_TestCase extends PHPUnit_Framework_Assert imple
                 $this->prophet->checkPredictions();
             } catch (Throwable $e) {
                 /* Intentionally left empty */
-            } catch (Exception $e) {
+            } catch (\Exception $e) {
                 /* Intentionally left empty */
             }
 

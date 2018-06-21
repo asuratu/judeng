@@ -147,7 +147,7 @@ class PHPUnit_Extensions_PhptTestCase implements PHPUnit_Framework_Test, PHPUnit
                 $result->addFailure($this, $e, $time);
             } catch (Throwable $t) {
                 $result->addError($this, $t, $time);
-            } catch (Exception $e) {
+            } catch (\Exception $e) {
                 $result->addError($this, $e, $time);
             }
         }
