@@ -146,10 +146,10 @@ class Umeng extends Common
                 $data['title'] = '服务包通知';
                 $data['comment'] = $member['true_name'] . '患者已购买了您的调治服务包，请尽快处理';
             }
-//            $doctor['is_system'] = 0;
+            $doctor['is_system'] = 0;
             // 下面执行推送
             if ($doctor['is_system'] == 0) {     // is_system == 0 为安卓系统
-                Model('Umeng')->PtoAndroid(array($doctor['device_tokens'],'2a9e5d6135190494af9596cc722e3db283cc0aaef5d80749b81b36a8b859d084','a10444596f0103d39b041e6fb91383368bce45b712b0c8677f8be5653cd7cbca'), $data['comment'], $data['title'], $data['comment'], $extra);
+                Model('Umeng')->PtoAndroid(array('Ak7O9ht5_aa0sx0rewpFqDbYYjdsj3D6m8rp5ufxLBuI'), $data['comment'], $data['title'], $data['comment'], $extra);
             } else {
                 Model('Umeng')->PtoIos(array($doctor['device_tokens']), $data['comment'], $extra);
             }
