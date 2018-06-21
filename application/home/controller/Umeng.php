@@ -145,6 +145,16 @@ class Umeng extends Common
 
                 $data['title'] = '服务包通知';
                 $data['comment'] = $member['true_name'] . '患者已购买了您的调治服务包，请尽快处理';
+            } else if ($data['type'] == 4) {
+                $member = db('member')->where("member_id={$data['member_id']}")->find();
+
+                $data['title'] = '服务包通知';
+                $data['comment'] = $member['true_name'] . '患者已购买了您的调治服务包，请尽快处理';
+            } else if ($data['type'] == 4) {
+                $member = db('member')->where("member_id={$data['member_id']}")->find();
+
+                $data['title'] = '服务包通知';
+                $data['comment'] = $member['true_name'] . '患者已购买了您的调治服务包，请尽快处理';
             }
 //            $doctor['is_system'] = 0;
             // 下面执行推送

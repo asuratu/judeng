@@ -251,7 +251,7 @@ class Number extends Common
             $order = array();
             foreach ($comment as $key => $val) {
                 array_push($order, $val);
-                $order[$key]['evaluate_name'] = explode('#@#', $val['evaluate_name']);
+                $order[$key]['evaluate_name'] = explode('#@#', trim($val['evaluate_name'], '#@#'));
                 $order[$key]['member_name'] = !empty($val['true_name']) ? $val['true_name'] : (!empty($val['member_name']) ? $val['member_name'] : $val['mobile']);
 //                $order[$key]['portrait'] = 'http://wechat.bohetanglao.com/uploads/avatar/' . $val['portrait'];
                 $order[$key]['evaluate'] = $this->view->setting['aryServiceEvaluation'][$val['evaluate']];
