@@ -594,6 +594,11 @@ class Doctor extends Common
     public function counsellNumber() {
         if($this->request->isPost()) {
             $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
             if($data['doctor_id']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -613,6 +618,11 @@ class Doctor extends Common
     public function chat() {
         if($this->request->isPost()) {
             $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
             if($data['doctor_id']==''||$data['member_id']==''||$data['is_chat']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));

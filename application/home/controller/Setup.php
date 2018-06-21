@@ -15,6 +15,11 @@ class Setup extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
             if($data['doctor_id']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -55,6 +60,11 @@ class Setup extends Common
     public function findPrescription() {
         if($this->request->isPost()) {
             $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
             if($data['doctor_id']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -72,6 +82,11 @@ class Setup extends Common
     public function updateInquiry() {
         if($this->request->isPost()) {
             $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
 //            if($data['doctor_id']==''||$data['online_inquiry']==''||$data['love_inquiry']==''||$data['graphic_speech']==''||$data['first_price']==''||$data['consultation_price']==''||$data['receipt']=='')
 //            {
 //                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -98,6 +113,11 @@ class Setup extends Common
     public function updatePrescription() {
         if($this->request->isPost()) {
             $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
 //            if($data['doctor_id']==''||$data['open_pharmacy']==''||$data['platform_default']==''||$data['inherit']==''||$data['inherit_feature']==''||$data['concealment_number']==''||$data['questions_number']=='')
 //            {
 //                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));

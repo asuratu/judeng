@@ -15,6 +15,11 @@ class Blacklist extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
             if($data['doctor_id']==''||$data['member_id']==''||$data['is_type']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -84,6 +89,11 @@ class Blacklist extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
 
             if($data['doctor_id']=='')
             {

@@ -15,7 +15,11 @@ class Remind extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
-
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
             if($data['order_id']==''||$data['order_id']== '')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));

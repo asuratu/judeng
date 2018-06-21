@@ -15,6 +15,11 @@ class Member extends Common
             @session_start();
             $ticket=session_id();
             $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
             if($data['mobile']==''||$data['password']==''|| $data['device_tokens']=='' || $data['is_system']=='')
             {
                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -95,6 +100,11 @@ class Member extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
             if(!preg_match("/^1\d{10}$/",$data['mobile']))
             {
                 ajaxReturn(array('code' =>0, 'info' => '手机号码格式不正确！','data'=>[]));
@@ -164,6 +174,11 @@ class Member extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
             if($data['mobile']==''||$data['smscode']==''|| $data['device_tokens']=='' || $data['is_system']=='')
             {
                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -263,6 +278,11 @@ class Member extends Common
         if($this->request->isPost()) {
 
             $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
             if($data['mobile']==''||$data['smscode']==''|| $data['inherit_id']=='')
             {
                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -359,6 +379,11 @@ class Member extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
             if($data['mobile']==''||$data['smscode']==''|| $data['password']=='' || $data['newPassword']=='')
             {
                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -431,6 +456,11 @@ class Member extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
             if($data['mobile']==''||$data['smscode']==''|| $data['newPassword']=='')
             {
                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -499,6 +529,11 @@ class Member extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
             if($data['member_id']==''|| $data['bank_id']=='' || $data['deposit_name']=='' || $data['deposit_number']=='' || $data['opening_bank']=='' || $data['bank_mobile']=='' || $data['deposit_id'] == '')
             {
                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -897,14 +932,14 @@ class Member extends Common
         if($this->request->isPost())
         {
             $data=input('post.');
-            if($data['member_id']=='')
-            {
-                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
-            }
             $res=checkSign($data);
             if($res['code']==0)
             {
                 ajaxReturn($res);
+            }
+            if($data['member_id']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
             $map['member_id'] = $data['member_id'];
             $uinfo = db('doctor')->where($map)->alias('d')
@@ -1022,14 +1057,14 @@ class Member extends Common
         if($this->request->isPost())
         {
             $data=input('post.');
-            if($data['member_id']=='')
-            {
-                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
-            }
             $res=checkSign($data);
             if($res['code']==0)
             {
                 ajaxReturn($res);
+            }
+            if($data['member_id']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
 
             $map['member_id'] = $data['member_id'];

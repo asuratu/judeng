@@ -12,14 +12,14 @@ class Number extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
-            if($data['doctor_id']==''||$data['type']=='')
-            {
-                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
-            }
             $res=checkSign($data);
             if($res['code']==0)
             {
                 ajaxReturn($res);
+            }
+            if($data['doctor_id']==''||$data['type']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
             if (!isset($data['page'])) {
                 $data['page'] = 1;
@@ -59,14 +59,14 @@ class Number extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
-            if($data['doctor_id']==''||$data['type']=='')
-            {
-                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
-            }
             $res=checkSign($data);
             if($res['code']==0)
             {
                 ajaxReturn($res);
+            }
+            if($data['doctor_id']==''||$data['type']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
             if (!isset($data['page'])) {
                 $data['page'] = 1;
@@ -142,6 +142,11 @@ class Number extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
             if($data['doctor_id']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -182,6 +187,11 @@ class Number extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
             if($data['doctor_id']==''||$data['member_id']==''||$data['synopsis']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -231,6 +241,11 @@ class Number extends Common
         if($this->request->isPost())
         {
             $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
             if($data['doctor_id']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -272,6 +287,11 @@ class Number extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
             if($data['doctor_id']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -329,6 +349,11 @@ class Number extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
             if($data['doctor_id']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -354,6 +379,11 @@ class Number extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
             if($data['group_name']==''||$data['doctor_id']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -384,6 +414,11 @@ class Number extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
             if($data['group_name']==''||$data['group_id']==''||$data['doctor_id']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -411,6 +446,11 @@ class Number extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
             if($data['group_id']==''||$data['doctor_id']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -435,7 +475,11 @@ class Number extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
-
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
             if($data['doctor_id']==''||$data['group_id']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -477,6 +521,11 @@ class Number extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
             if($data['doctor_id']==''||$data['member_id']==''||$data['member_name']==''||$data['group_name']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -528,6 +577,11 @@ class Number extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
             if($data['doctor_id']==''||$data['group_id']==''||$data['member_id']==''||$data['member_name']==''||$data['group_name']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
