@@ -160,7 +160,7 @@ class Umeng extends Common
             // 下面执行推送
             if ($doctor['is_login'] == 1) {
                 if ($doctor['is_system'] == 0) {     // is_system == 0 为安卓系统
-                    Model('Umeng')->PtoAndroid(array('Ah8CrStvP77uiCFoGXWiWWvPzvLQXfGukO0vHl0vwHXP'), $data['comment'], $data['title'], $data['comment'], $extra);
+                    Model('Umeng')->PtoAndroid(array($doctor['device_tokens']), $data['comment'], $data['title'], $data['comment'], $extra);
                 } else {
                     Model('Umeng')->PtoIos(array($doctor['device_tokens']), $data['comment'], $extra);
                 }
