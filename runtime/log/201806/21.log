@@ -1,0 +1,362 @@
+---------------------------------------------------------------
+[ 2018-06-21T17:43:59+08:00 ] 0.0.0.0 POST /other/getAndroidVersion
+[ info ] localhost:7037/other/getAndroidVersion [运行时间：0.054617s][吞吐率：18.31req/s] [内存消耗：2,154.21kb] [文件加载：49]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'other',
+    2 => 'getAndroidVersion',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/other/getAndroidVersion',
+  'postman-token' => 'c6172f12-c1e8-2f85-47f7-d53aa87bbdf6',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-21T17:53:26+08:00 ] 0.0.0.0 POST /other/getAndroidVersion
+[ info ] localhost:7037/other/getAndroidVersion [运行时间：0.045657s][吞吐率：21.90req/s] [内存消耗：2,151.40kb] [文件加载：49]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'other',
+    2 => 'getAndroidVersion',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/other/getAndroidVersion',
+  'postman-token' => '2885e6d2-3378-a838-4516-cb7bfe6ab25f',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-21T17:53:37+08:00 ] 0.0.0.0 POST /other/getVersion
+[ info ] localhost:7037/other/getVersion [运行时间：0.279561s][吞吐率：3.58req/s] [内存消耗：3,024.50kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'other',
+    2 => 'getVersion',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/other/getVersion',
+  'postman-token' => '3f148873-8b2e-b778-37eb-e672b14dfb20',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Other->getVersion[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Other.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.095289s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.062885s ]
+[ sql ] [ SQL ] SELECT `synopsis` FROM `jd_sys_setting` WHERE  (  field_name = 'version_number' ) LIMIT 1 [ RunTime:0.061689s ]
+---------------------------------------------------------------
+[ 2018-06-21T17:55:15+08:00 ] 0.0.0.0 POST /other/getVersion
+[ info ] localhost:7037/other/getVersion [运行时间：0.333611s][吞吐率：3.00req/s] [内存消耗：3,029.05kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'other',
+    2 => 'getVersion',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/other/getVersion',
+  'postman-token' => 'c13855eb-8c55-970e-9748-40ed9a4b6135',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Other->getVersion[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Other.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.092530s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.066091s ]
+[ sql ] [ SQL ] SELECT `synopsis` FROM `jd_sys_setting` WHERE  (  field_name = 'version_number' ) LIMIT 1 [ RunTime:0.061190s ]
+[ sql ] [ SQL ] SELECT `synopsis` FROM `jd_sys_setting` WHERE  (  field_name = 'version_number2' ) LIMIT 1 [ RunTime:0.062805s ]
+---------------------------------------------------------------
+[ 2018-06-21T18:14:51+08:00 ] 0.0.0.0 POST /other/getVersion
+[ info ] localhost:7037/other/getVersion [运行时间：0.572663s][吞吐率：1.75req/s] [内存消耗：3,025.86kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'other',
+    2 => 'getVersion',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/other/getVersion',
+  'postman-token' => '90ce1a58-0904-dd8f-b029-1466cb4584cc',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Other->getVersion[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Other.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.085729s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.367852s ]
+[ sql ] [ SQL ] SELECT `synopsis` FROM `jd_sys_setting` WHERE  (  field_name IN('version_number', 'version_title') ) LIMIT 1 [ RunTime:0.056712s ]
+---------------------------------------------------------------
+[ 2018-06-21T18:14:59+08:00 ] 0.0.0.0 POST /other/getVersion
+[ info ] localhost:7037/other/getVersion [运行时间：0.251172s][吞吐率：3.98req/s] [内存消耗：3,026.59kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'other',
+    2 => 'getVersion',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/other/getVersion',
+  'postman-token' => '31a04d3f-f2b5-fef1-5d66-0c52dde95be0',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Other->getVersion[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Other.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086138s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.057801s ]
+[ sql ] [ SQL ] SELECT `synopsis` FROM `jd_sys_setting` WHERE  (  field_name IN('version_number', 'version_title') ) [ RunTime:0.057025s ]
+---------------------------------------------------------------
+[ 2018-06-21T18:16:17+08:00 ] 0.0.0.0 POST /other/getVersion
+[ info ] localhost:7037/other/getVersion [运行时间：0.325461s][吞吐率：3.07req/s] [内存消耗：3,030.24kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'other',
+    2 => 'getVersion',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/other/getVersion',
+  'postman-token' => 'e292532d-78b9-dec5-7de9-c6cc393e609f',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Other->getVersion[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Other.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.090890s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.061836s ]
+[ sql ] [ SQL ] SELECT `synopsis` FROM `jd_sys_setting` WHERE  (  field_name IN('version_number', 'version_title') ) [ RunTime:0.060547s ]
+[ sql ] [ SQL ] SELECT `synopsis` FROM `jd_sys_setting` WHERE  (  field_name IN('version_number2', 'version_title2', 'is_force', 'version_url') ) [ RunTime:0.061164s ]
+---------------------------------------------------------------
+[ 2018-06-21T18:20:48+08:00 ] 0.0.0.0 POST /other/getVersion
+[ info ] localhost:7037/other/getVersion [运行时间：0.265043s][吞吐率：3.77req/s] [内存消耗：3,462.71kb] [文件加载：56]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'other',
+    2 => 'getVersion',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/other/getVersion',
+  'postman-token' => '20693bf4-b1c4-7d44-5e16-3f6328e1f278',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Other->getVersion[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Other.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086238s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.059612s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.058684s ]
+---------------------------------------------------------------
+[ 2018-06-21T18:38:35+08:00 ] 0.0.0.0 POST /other/getVersion
+[ info ] localhost:7037/other/getVersion [运行时间：0.265855s][吞吐率：3.76req/s] [内存消耗：3,465.30kb] [文件加载：56]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'other',
+    2 => 'getVersion',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/other/getVersion',
+  'postman-token' => '87a37470-f69c-82bc-ab16-6bf69bd6b4cb',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Other->getVersion[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Other.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:131]
+[ error ] [8]未定义数组索引: synopsis[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Other.php:191]
+[ error ] [8]未定义数组索引: synopsis[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Other.php:191]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.091012s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.060695s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.060075s ]
+---------------------------------------------------------------
+[ 2018-06-21T18:38:50+08:00 ] 0.0.0.0 POST /other/getVersion
+[ info ] localhost:7037/other/getVersion [运行时间：0.266683s][吞吐率：3.75req/s] [内存消耗：3,464.12kb] [文件加载：56]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'other',
+    2 => 'getVersion',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/other/getVersion',
+  'postman-token' => '11993239-714e-1f4d-824e-51d4e39812b8',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Other->getVersion[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Other.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.088951s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.060025s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.060893s ]

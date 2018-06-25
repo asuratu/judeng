@@ -156,6 +156,8 @@ class Umeng extends Common
                 $data['title'] = '服务包通知';
                 $data['comment'] = $doctor['true_name'] . '医生您的服务包审核已通过，在服务包详情页可以进行查看';
             }
+//            $a = 'ABcdef';
+//            var_dump(strtolower($a));die;
 //            $doctor['is_system'] = 0;
             // 下面执行推送
             if ($doctor['is_login'] == 1) {

@@ -37,26 +37,42 @@ class Remind extends Common
                 ->where("o.order_id = {$data['order_id']}")
                 ->field("m.`member_name`, m.`true_name`, m.`openid`, m.`mobile`, o.`order_type`, o.`order_status`, o.`order_sn`, o.`doctor_id`")
                 ->find();
+
+            $doctor = db('doctor')
+                ->where("member_id = {$data['doctor_id']}")
+                ->find();
+
             $member['member_name'] = !empty($member['true_name']) ? $member['true_name'] : (!empty($member['member_name']) ? $member['member_name'] : $member['mobile']);
 
-            if ($member['order_status'] == 0) {         // 0待购药 其他待复诊
+            $doctor['member_name'] = !empty($doctor['true_name']) ? $doctor['true_name'] : (!empty($doctor['member_name']) ? $doctor['member_name'] : $doctor['mobile']);
+
+            if ($member['pay_status'] == 0) {         // 0待购药 其他待复诊
                 $data['url'] = 'http://wechat.bohetanglao.com/home/center/detail/ordersn/'.$member['order_sn'].'.html';
                 $data['first'] = '您有一张待购药订单，请及时查看。';
                 $data['prescription'] = '门诊订单';
                 $data['remark'] = '点击详情，跳转到该订单单页~';
+
+                // 增加一条发送记录
+                $this->addMedicine($data['doctor_id'], $data['order_id']);
+
+                $data['openid'] = $member['openid'];
+                $data['member_name'] = $member['member_name'];
+                Model('Weixin')->messageTemplate(6, $data);
             }  {                            // 待复诊提醒
                 $data['url'] = 'http://wechat.bohetanglao.com/home/advise/chat/memberid/' . $member['doctor_id'] . '/type/1.html';
                 $data['first'] = '您有一张待处理复诊单，请及时查看。';
                 $data['prescription'] = '门诊复诊';
                 $data['remark'] = '点击详情，跳转到聊天页面~';
+
+                // 增加一条发送记录
+                $this->addMedicine($data['doctor_id'], $data['order_id']);
+
+                $data['openid'] = $member['openid'];
+                $data['member_name'] = $member['member_name'];
+                $data['doctor_name'] = $doctor['member_name'];
+                Model('Weixin')->messageTemplate(7, $data);
             }
 
-            // 增加一条发送记录
-            $this->addMedicine($data['doctor_id'], $data['order_id']);
-
-            $data['openid'] = $member['openid'];
-            $data['member_name'] = $member['member_name'];
-            Model('Weixin')->messageTemplate(6, $data);
             ajaxReturn(array('code' =>1, 'info' => 'ok'));
 
         }

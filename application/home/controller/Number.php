@@ -81,9 +81,9 @@ class Number extends Common
                 $_where .= ' and o.order_status=0';
                 $type_name = '购药时间：';
             } else {
-                $seventime = '604800';          // 7 天
-                $onemoon = '2592000';           // 一个月
-                $_where .= " and (o.order_status=1 or o.order_status=2 or o.order_status=3) and o.pay_date >= {$seventime} and o.pay_date <= {$onemoon}";
+                $seventime = time() + 604800;          // 7 天
+                $onemoon = time() + 2592000;           // 一个月
+                $_where .= " and o.pay_status=1 and o.pay_date >= {$seventime} and o.pay_date <= {$onemoon}";
 //                $_where .= " and (o.order_status=1 or o.order_status=2 or o.order_status=3)";
                 $type_name = '复诊时间：';
             }

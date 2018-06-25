@@ -171,6 +171,28 @@ class Other extends Common
 
 
     /**
+     * @Title: getAndroidVersion
+     * @Description: TODO 查询版本号的接口
+     */
+    public function getVersion() {
+        if($this->request->isPost())
+        {
+            $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
+
+            //获取版本号
+            $config = Model('Setting')->findAdmin();
+            $iosVersion = array('version_number'=>$config['version_number'], 'version_title'=>$config['version_title']);
+            $androidVersion = array('version_number2'=>$config['version_number2'], 'version_title2'=>$config['version_title2'], 'is_force'=>$config['is_force'], 'version_url'=>$config['version_url']);
+            ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>['android'=>$androidVersion, 'ios'=>$iosVersion]));
+        }
+    }
+
+    /**
      * @Title: getGoodAtList
      * @Description: TODO 获取医生擅长列表
      */

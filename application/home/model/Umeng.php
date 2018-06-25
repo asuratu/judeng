@@ -171,7 +171,7 @@ class Umeng extends Model
             ),
             'production_mode' 		=> 'false',//测试，上线为true
             'description' 			=> $text,//描述
-        );var_dump($temp_arr);
+        );
         return json_encode($temp_arr);
     }
 

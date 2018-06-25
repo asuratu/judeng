@@ -1,13 +1,20 @@
 ---------------------------------------------------------------
+<<<<<<< HEAD
 [ 2018-06-24T22:48:31+08:00 ] 0.0.0.0 POST /umeng/sendDoctor
 [ info ] localhost:8020/umeng/sendDoctor [运行时间：0.528525s][吞吐率：1.89req/s] [内存消耗：3,508.73kb] [文件加载：56]
 [ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+=======
+[ 2018-06-24T21:43:53+08:00 ] 0.0.0.0 POST /doctor/dataPreview
+[ info ] localhost:7037/doctor/dataPreview [运行时间：2.275994s][吞吐率：0.44req/s] [内存消耗：3,198.34kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> dc2ecbfc79f9549b666cbd990cd515f8f2a21045
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'home',
+<<<<<<< HEAD
     1 => 'umeng',
     2 => 'sendDoctor',
   ),
@@ -41,12 +48,66 @@
 [ 2018-06-24T22:50:08+08:00 ] 0.0.0.0 POST /umeng/sendDoctor
 [ info ] localhost:8020/umeng/sendDoctor [运行时间：0.337810s][吞吐率：2.96req/s] [内存消耗：3,508.68kb] [文件加载：56]
 [ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+=======
+    1 => 'doctor',
+    2 => 'dataPreview',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '112',
+  'x-original-url' => '/doctor/dataPreview',
+  'user-agent' => 'YiSong/1.2.6 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'sign' => '003c553153e61f67eee6ec2e7fe7a0ea',
+  'doctor_id' => 170,
+  '_time' => '1529847535',
+  'only_token' => '1529653251uRzMB|',
+)
+[ info ] [ RUN ] app\home\controller\Doctor->dataPreview[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Doctor.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.150983s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.098499s ]
+[ sql ] [ SQL ] SELECT `member_id`,`true_name`,`face_photo`,`goodat_id`,`introduction`,`recom`,`is_clinic`,`hospital_id`,`hospital_repart_str`,`school_str`,`inherit`,`title_str`,`graphic_speech`,`love_inquiry`,`concealment_number`,`online_inquiry`,`first_price`,`consultation_price` FROM `jd_doctor` WHERE  (  member_id = 170 ) LIMIT 1 [ RunTime:0.108300s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_diagnosis_set` [ RunTime:0.094798s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_diagnosis_set` WHERE  (  member_id = 170 ) LIMIT 1 [ RunTime:0.106103s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital` [ RunTime:0.106241s ]
+[ sql ] [ SQL ] SELECT `hospital_name` FROM `jd_hospital` WHERE  (  hospital_id = 17367 ) LIMIT 1 [ RunTime:0.101328s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital_repart` [ RunTime:0.098758s ]
+[ sql ] [ SQL ] SELECT `d`.`department_name` FROM `jd_hospital_repart` `hr` INNER JOIN `jd_department` `d` ON `d`.`department_id`=`hr`.`department_id` WHERE  (  hr.hospital_repart_id IN(827) AND hr.is_show = 1 ) [ RunTime:0.097030s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_self_goods` [ RunTime:0.095824s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 170 AND content != '' AND is_checked = 2  ) LIMIT 1 [ RunTime:0.096746s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.115535s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_order` WHERE  (  pay_status = 2 AND doctor_id = 170 ) LIMIT 1 [ RunTime:0.100760s ]
+[ sql ] [ SQL ] SELECT `self_goods_id`,`inherit_id`,`content`,`self_goods_name`,`advantage`,`price` FROM `jd_self_goods` WHERE  (  member_id = 170 AND is_checked = 2  ) [ RunTime:0.104827s ]
+[ sql ] [ SQL ] SELECT `dl`.`diagnosis_id`,`dl`.`start_time`,`dl`.`end_time`,`h`.`hospital_name`,`d`.`department_name` FROM `jd_hospital_repart` `hr` INNER JOIN `jd_department` `d` ON `hr`.`department_id`=`d`.`department_id` INNER JOIN `jd_hospital` `h` ON `hr`.`hospital_id`=`h`.`hospital_id` INNER JOIN `jd_diagnosis_list` `dl` ON `hr`.`hospital_repart_id`=`dl`.`hospital_repart_id` WHERE  (  dl.`member_id` = 170 AND hr.is_show = 1 AND dl.start_time > 1529847833 ) ORDER BY dl.start_time DESC [ RunTime:0.106355s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_goodat` [ RunTime:0.096021s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_goodat` WHERE  `goodat_id` IN (84,85)  AND (  is_show = 1 and level = 2 ) ORDER BY `sort`  DESC [ RunTime:0.097366s ]
+[ sql ] [ SQL ] SELECT `s`.`symptom`,`s`.`evaluate`,`s`.`evaluate_name`,`s`.`synopsis`,`s`.`add_date`,`m`.`member_name`,`m`.`true_name`,`m`.`mobile`,`m`.`portrait` FROM jd_service_evaluation s, jd_member m WHERE  (  s.doctor_id = 170 and s.`is_show` = 1 and s.`member_id` = m.`member_id` ) [ RunTime:0.100543s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_notice` [ RunTime:0.104903s ]
+[ sql ] [ SQL ] SELECT `notice_id`,`notice_name`,`add_date` FROM `jd_notice` WHERE  (  doctor_id = 170 ) [ RunTime:0.098006s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `only_token` = '1529653251uRzMB|'  AND `is_status` = 0 LIMIT 1 [ RunTime:0.096553s ]
+[ error ] [8]未定义数组索引: content[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Doctor.php:342]
+[ error ] [8]未定义数组索引: inherit_id[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Doctor.php:343]
+---------------------------------------------------------------
+[ 2018-06-24T22:50:41+08:00 ] 0.0.0.0 POST /order/sendCount
+[ info ] localhost:7037/order/sendCount [运行时间：0.180252s][吞吐率：5.55req/s] [内存消耗：2,434.87kb] [文件加载：50]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> dc2ecbfc79f9549b666cbd990cd515f8f2a21045
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'home',
+<<<<<<< HEAD
     1 => 'umeng',
     2 => 'sendDoctor',
   ),
@@ -59,11 +120,28 @@
   'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
   'host' => 'localhost:8020',
   'accept-encoding' => 'gzip, deflate',
+=======
+    1 => 'order',
+    2 => 'sendCount',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary32tSGtZYzspVopZj',
+  'content-length' => '336',
+  'x-original-url' => '/order/sendCount',
+  'postman-token' => '42c40632-d277-d8f0-de4d-b1864801f9b1',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+>>>>>>> dc2ecbfc79f9549b666cbd990cd515f8f2a21045
   'accept' => '*/*',
   'connection' => 'keep-alive',
   'cache-control' => 'no-cache',
 )
 [ info ] [ PARAM ] array (
+<<<<<<< HEAD
   'doctor_id' => '70',
   'member_id' => '2',
   'comment' => 'aa',
@@ -80,12 +158,29 @@
 [ 2018-06-24T22:51:12+08:00 ] 0.0.0.0 POST /umeng/sendDoctor
 [ info ] localhost:8020/umeng/sendDoctor [运行时间：0.341979s][吞吐率：2.92req/s] [内存消耗：3,508.68kb] [文件加载：56]
 [ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+=======
+  'order_id' => '176',
+  'doctor_id' => '70',
+  'patient' => '34',
+)
+[ info ] [ RUN ] app\home\controller\Order->sendCount[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.108881s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:131]
+[ error ] [8]未定义数组索引: patient_id[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php:867]
+---------------------------------------------------------------
+[ 2018-06-24T22:50:54+08:00 ] 0.0.0.0 POST /order/sendCount
+[ info ] localhost:7037/order/sendCount [运行时间：0.196720s][吞吐率：5.08req/s] [内存消耗：2,434.87kb] [文件加载：50]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> dc2ecbfc79f9549b666cbd990cd515f8f2a21045
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'home',
+<<<<<<< HEAD
     1 => 'umeng',
     2 => 'sendDoctor',
   ),
@@ -98,11 +193,28 @@
   'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
   'host' => 'localhost:8020',
   'accept-encoding' => 'gzip, deflate',
+=======
+    1 => 'order',
+    2 => 'sendCount',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryxcjAxykdXoNGk3si',
+  'content-length' => '336',
+  'x-original-url' => '/order/sendCount',
+  'postman-token' => 'c51b9b36-d42b-dfc4-e31a-5d80c6ccacbb',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+>>>>>>> dc2ecbfc79f9549b666cbd990cd515f8f2a21045
   'accept' => '*/*',
   'connection' => 'keep-alive',
   'cache-control' => 'no-cache',
 )
 [ info ] [ PARAM ] array (
+<<<<<<< HEAD
   'doctor_id' => '70',
   'member_id' => '2',
   'comment' => 'aa',
@@ -119,12 +231,29 @@
 [ 2018-06-24T22:56:34+08:00 ] 0.0.0.0 POST /umeng/sendDoctor
 [ info ] localhost:8020/umeng/sendDoctor [运行时间：0.341573s][吞吐率：2.93req/s] [内存消耗：3,508.68kb] [文件加载：56]
 [ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+=======
+  'order_id' => '176',
+  'doctor_id' => '70',
+  'patient' => '34',
+)
+[ info ] [ RUN ] app\home\controller\Order->sendCount[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.115065s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:131]
+[ error ] [8]未定义数组索引: patient_id[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php:867]
+---------------------------------------------------------------
+[ 2018-06-24T22:51:00+08:00 ] 0.0.0.0 POST /order/sendCount
+[ info ] localhost:7037/order/sendCount [运行时间：0.921395s][吞吐率：1.09req/s] [内存消耗：3,187.64kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> dc2ecbfc79f9549b666cbd990cd515f8f2a21045
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'home',
+<<<<<<< HEAD
     1 => 'umeng',
     2 => 'sendDoctor',
   ),
@@ -137,11 +266,28 @@
   'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
   'host' => 'localhost:8020',
   'accept-encoding' => 'gzip, deflate',
+=======
+    1 => 'order',
+    2 => 'sendCount',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryrCBUOfXx3potWfSb',
+  'content-length' => '339',
+  'x-original-url' => '/order/sendCount',
+  'postman-token' => '2f62163f-5987-6a4e-f1d0-205119c297d2',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+>>>>>>> dc2ecbfc79f9549b666cbd990cd515f8f2a21045
   'accept' => '*/*',
   'connection' => 'keep-alive',
   'cache-control' => 'no-cache',
 )
 [ info ] [ PARAM ] array (
+<<<<<<< HEAD
   'doctor_id' => '70',
   'member_id' => '2',
   'comment' => 'aa',
@@ -158,12 +304,30 @@
 [ 2018-06-24T22:57:40+08:00 ] 0.0.0.0 POST /umeng/sendDoctor
 [ info ] localhost:8020/umeng/sendDoctor [运行时间：0.323868s][吞吐率：3.09req/s] [内存消耗：3,508.68kb] [文件加载：56]
 [ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+=======
+  'order_id' => '176',
+  'doctor_id' => '70',
+  'patient_id' => '34',
+)
+[ info ] [ RUN ] app\home\controller\Order->sendCount[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.336093s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.199370s ]
+[ sql ] [ SQL ] SELECT `o`.* FROM `jd_order` `o` WHERE  (  o.order_id = 176  AND o.pay_status = 1  AND o.order_type IN(4,1) AND o.order_status IN(1,2,3) ) ORDER BY o.order_id DESC LIMIT 1 [ RunTime:0.201186s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:131]
+---------------------------------------------------------------
+[ 2018-06-24T22:55:55+08:00 ] 0.0.0.0 POST /order/sendCount
+[ info ] localhost:7037/order/sendCount [运行时间：0.342358s][吞吐率：2.92req/s] [内存消耗：3,249.95kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> dc2ecbfc79f9549b666cbd990cd515f8f2a21045
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'home',
+<<<<<<< HEAD
     1 => 'umeng',
     2 => 'sendDoctor',
   ),
@@ -176,11 +340,28 @@
   'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
   'host' => 'localhost:8020',
   'accept-encoding' => 'gzip, deflate',
+=======
+    1 => 'order',
+    2 => 'sendCount',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarywzWBevCW4BBAwxsD',
+  'content-length' => '339',
+  'x-original-url' => '/order/sendCount',
+  'postman-token' => 'df8f2c57-cb3f-9bc3-880f-46808634f966',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+>>>>>>> dc2ecbfc79f9549b666cbd990cd515f8f2a21045
   'accept' => '*/*',
   'connection' => 'keep-alive',
   'cache-control' => 'no-cache',
 )
 [ info ] [ PARAM ] array (
+<<<<<<< HEAD
   'doctor_id' => '70',
   'member_id' => '2',
   'comment' => 'aa',
@@ -197,12 +378,30 @@
 [ 2018-06-24T22:57:56+08:00 ] 0.0.0.0 POST /umeng/sendDoctor
 [ info ] localhost:8020/umeng/sendDoctor [运行时间：0.314500s][吞吐率：3.18req/s] [内存消耗：3,508.68kb] [文件加载：56]
 [ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+=======
+  'order_id' => '176',
+  'doctor_id' => '70',
+  'patient_id' => '34',
+)
+[ info ] [ RUN ] app\home\controller\Order->sendCount[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.111399s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.071308s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.`left_inquisition` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` WHERE  (  o.pay_status = 1  AND o.order_type IN(4,1) AND o.order_status IN(1,2,3) ) ORDER BY o.order_id DESC [ RunTime:0.071484s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:131]
+---------------------------------------------------------------
+[ 2018-06-24T22:56:30+08:00 ] 0.0.0.0 POST /order/sendCount
+[ info ] localhost:7037/order/sendCount [运行时间：0.400282s][吞吐率：2.50req/s] [内存消耗：3,251.77kb] [文件加载：59]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> dc2ecbfc79f9549b666cbd990cd515f8f2a21045
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'home',
+<<<<<<< HEAD
     1 => 'umeng',
     2 => 'sendDoctor',
   ),
@@ -215,11 +414,28 @@
   'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
   'host' => 'localhost:8020',
   'accept-encoding' => 'gzip, deflate',
+=======
+    1 => 'order',
+    2 => 'sendCount',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary68BHmbWFYcF5IAyf',
+  'content-length' => '344',
+  'x-original-url' => '/order/sendCount',
+  'postman-token' => '6888685f-f1a6-924b-7176-c3a6d2ff9c9f',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+>>>>>>> dc2ecbfc79f9549b666cbd990cd515f8f2a21045
   'accept' => '*/*',
   'connection' => 'keep-alive',
   'cache-control' => 'no-cache',
 )
 [ info ] [ PARAM ] array (
+<<<<<<< HEAD
   'doctor_id' => '70',
   'member_id' => '2',
   'comment' => 'aa',
@@ -236,12 +452,30 @@
 [ 2018-06-24T23:00:03+08:00 ] 0.0.0.0 POST /umeng/sendDoctor
 [ info ] localhost:8020/umeng/sendDoctor [运行时间：0.340540s][吞吐率：2.94req/s] [内存消耗：3,430.30kb] [文件加载：53]
 [ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+=======
+  'order_id' => 'order_id',
+  'doctor_id' => '70',
+  'patient_id' => '34',
+)
+[ info ] [ RUN ] app\home\controller\Order->sendCount[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.136753s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.080215s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:131]
+[ error ] [0]variable type error： boolean[D:\workLP\20180502\judeng\wwwroot\thinkphp\library\think\Response.php:318]
+---------------------------------------------------------------
+[ 2018-06-24T22:57:54+08:00 ] 0.0.0.0 POST /order/sendCount
+[ info ] localhost:7037/order/sendCount [运行时间：0.391730s][吞吐率：2.55req/s] [内存消耗：3,251.72kb] [文件加载：59]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> dc2ecbfc79f9549b666cbd990cd515f8f2a21045
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'home',
+<<<<<<< HEAD
     1 => 'umeng',
     2 => 'sendDoctor',
   ),
@@ -254,11 +488,28 @@
   'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
   'host' => 'localhost:8020',
   'accept-encoding' => 'gzip, deflate',
+=======
+    1 => 'order',
+    2 => 'sendCount',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryISBo8MXfQqDMB6AD',
+  'content-length' => '344',
+  'x-original-url' => '/order/sendCount',
+  'postman-token' => '91e89a7f-c919-37f4-3160-304c621a7321',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+>>>>>>> dc2ecbfc79f9549b666cbd990cd515f8f2a21045
   'accept' => '*/*',
   'connection' => 'keep-alive',
   'cache-control' => 'no-cache',
 )
 [ info ] [ PARAM ] array (
+<<<<<<< HEAD
   'doctor_id' => '70',
   'member_id' => '2',
   'comment' => 'aa',
@@ -274,12 +525,30 @@
 [ 2018-06-24T23:00:47+08:00 ] 0.0.0.0 POST /umeng/sendDoctor
 [ info ] localhost:8020/umeng/sendDoctor [运行时间：0.355034s][吞吐率：2.82req/s] [内存消耗：3,508.72kb] [文件加载：56]
 [ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+=======
+  'order_id' => 'order_id',
+  'doctor_id' => '70',
+  'patient_id' => '34',
+)
+[ info ] [ RUN ] app\home\controller\Order->sendCount[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.114108s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.074525s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:131]
+[ error ] [0]variable type error： boolean[D:\workLP\20180502\judeng\wwwroot\thinkphp\library\think\Response.php:318]
+---------------------------------------------------------------
+[ 2018-06-24T22:58:01+08:00 ] 0.0.0.0 POST /order/sendCount
+[ info ] localhost:7037/order/sendCount [运行时间：0.367759s][吞吐率：2.72req/s] [内存消耗：3,251.26kb] [文件加载：59]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> dc2ecbfc79f9549b666cbd990cd515f8f2a21045
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'home',
+<<<<<<< HEAD
     1 => 'umeng',
     2 => 'sendDoctor',
   ),
@@ -292,11 +561,28 @@
   'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
   'host' => 'localhost:8020',
   'accept-encoding' => 'gzip, deflate',
+=======
+    1 => 'order',
+    2 => 'sendCount',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryyJx19Oet37OlTfmo',
+  'content-length' => '344',
+  'x-original-url' => '/order/sendCount',
+  'postman-token' => '04326561-d1fd-5604-da7f-b747c49ed62c',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+>>>>>>> dc2ecbfc79f9549b666cbd990cd515f8f2a21045
   'accept' => '*/*',
   'connection' => 'keep-alive',
   'cache-control' => 'no-cache',
 )
 [ info ] [ PARAM ] array (
+<<<<<<< HEAD
   'doctor_id' => '70',
   'member_id' => '2',
   'comment' => 'aa',
@@ -313,12 +599,30 @@
 [ 2018-06-24T23:06:20+08:00 ] 0.0.0.0 POST /umeng/sendDoctor
 [ info ] localhost:8020/umeng/sendDoctor [运行时间：0.344861s][吞吐率：2.90req/s] [内存消耗：3,508.54kb] [文件加载：56]
 [ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+=======
+  'order_id' => 'order_id',
+  'doctor_id' => '70',
+  'patient_id' => '34',
+)
+[ info ] [ RUN ] app\home\controller\Order->sendCount[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.113095s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.070523s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:131]
+[ error ] [0]variable type error： boolean[D:\workLP\20180502\judeng\wwwroot\thinkphp\library\think\Response.php:318]
+---------------------------------------------------------------
+[ 2018-06-24T22:58:16+08:00 ] 0.0.0.0 POST /order/sendCount
+[ info ] localhost:7037/order/sendCount [运行时间：0.347143s][吞吐率：2.88req/s] [内存消耗：3,189.78kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> dc2ecbfc79f9549b666cbd990cd515f8f2a21045
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'home',
+<<<<<<< HEAD
     1 => 'umeng',
     2 => 'sendDoctor',
   ),
@@ -331,11 +635,28 @@
   'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
   'host' => 'localhost:8020',
   'accept-encoding' => 'gzip, deflate',
+=======
+    1 => 'order',
+    2 => 'sendCount',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryHToAOhbOnKINar34',
+  'content-length' => '344',
+  'x-original-url' => '/order/sendCount',
+  'postman-token' => '13630da2-f188-b250-6a1d-c4a68ba0de1a',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+>>>>>>> dc2ecbfc79f9549b666cbd990cd515f8f2a21045
   'accept' => '*/*',
   'connection' => 'keep-alive',
   'cache-control' => 'no-cache',
 )
 [ info ] [ PARAM ] array (
+<<<<<<< HEAD
   'doctor_id' => '70',
   'member_id' => '2',
   'comment' => 'aa',
@@ -352,12 +673,30 @@
 [ 2018-06-24T23:06:59+08:00 ] 0.0.0.0 POST /umeng/sendDoctor
 [ info ] localhost:8020/umeng/sendDoctor [运行时间：0.306875s][吞吐率：3.26req/s] [内存消耗：3,508.72kb] [文件加载：56]
 [ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+=======
+  'order_id' => 'order_id',
+  'doctor_id' => '70',
+  'patient_id' => '34',
+)
+[ info ] [ RUN ] app\home\controller\Order->sendCount[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.105780s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.072448s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.`product_name` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` WHERE  (  o.pay_status = 1 AND o.order_type IN(4,1) AND o.order_status IN(1,2,3) ) LIMIT 1 [ RunTime:0.071435s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:131]
+---------------------------------------------------------------
+[ 2018-06-24T22:58:48+08:00 ] 0.0.0.0 POST /order/sendCount
+[ info ] localhost:7037/order/sendCount [运行时间：0.193025s][吞吐率：5.18req/s] [内存消耗：2,435.16kb] [文件加载：50]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> dc2ecbfc79f9549b666cbd990cd515f8f2a21045
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'home',
+<<<<<<< HEAD
     1 => 'umeng',
     2 => 'sendDoctor',
   ),
@@ -370,11 +709,28 @@
   'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
   'host' => 'localhost:8020',
   'accept-encoding' => 'gzip, deflate',
+=======
+    1 => 'order',
+    2 => 'sendCount',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarypjq0UpRnMEMnAxBk',
+  'content-length' => '336',
+  'x-original-url' => '/order/sendCount',
+  'postman-token' => 'ac393240-9bfb-c159-27c1-9230dae9c426',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+>>>>>>> dc2ecbfc79f9549b666cbd990cd515f8f2a21045
   'accept' => '*/*',
   'connection' => 'keep-alive',
   'cache-control' => 'no-cache',
 )
 [ info ] [ PARAM ] array (
+<<<<<<< HEAD
   'doctor_id' => '70',
   'member_id' => '2',
   'comment' => 'aa',
@@ -391,12 +747,28 @@
 [ 2018-06-24T23:12:45+08:00 ] 0.0.0.0 POST /umeng/sendDoctor
 [ info ] localhost:8020/umeng/sendDoctor [运行时间：0.347246s][吞吐率：2.88req/s] [内存消耗：3,508.67kb] [文件加载：56]
 [ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+=======
+  'order_id' => '',
+  'doctor_id' => '70',
+  'patient_id' => '34',
+)
+[ info ] [ RUN ] app\home\controller\Order->sendCount[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.107209s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:131]
+---------------------------------------------------------------
+[ 2018-06-24T22:58:55+08:00 ] 0.0.0.0 POST /order/sendCount
+[ info ] localhost:7037/order/sendCount [运行时间：0.387337s][吞吐率：2.58req/s] [内存消耗：3,249.63kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> dc2ecbfc79f9549b666cbd990cd515f8f2a21045
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'home',
+<<<<<<< HEAD
     1 => 'umeng',
     2 => 'sendDoctor',
   ),
@@ -409,11 +781,28 @@
   'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
   'host' => 'localhost:8020',
   'accept-encoding' => 'gzip, deflate',
+=======
+    1 => 'order',
+    2 => 'sendCount',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryCIzlqjDWp3WE6SAx',
+  'content-length' => '337',
+  'x-original-url' => '/order/sendCount',
+  'postman-token' => '5f71f178-8ae4-930c-5811-f3f3ee2c295b',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+>>>>>>> dc2ecbfc79f9549b666cbd990cd515f8f2a21045
   'accept' => '*/*',
   'connection' => 'keep-alive',
   'cache-control' => 'no-cache',
 )
 [ info ] [ PARAM ] array (
+<<<<<<< HEAD
   'doctor_id' => '70',
   'member_id' => '2',
   'comment' => 'aa',
@@ -430,12 +819,30 @@
 [ 2018-06-24T23:15:20+08:00 ] 0.0.0.0 GET /
 [ info ] localhost:8020/ [运行时间：0.030733s][吞吐率：32.54req/s] [内存消耗：1,670.85kb] [文件加载：38]
 [ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+=======
+  'order_id' => '1',
+  'doctor_id' => '70',
+  'patient_id' => '34',
+)
+[ info ] [ RUN ] app\home\controller\Order->sendCount[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.113180s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.075171s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.`product_name` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` WHERE  (  o.pay_status = 1 AND o.order_type IN(4,1) AND o.order_status IN(1,2,3) ) [ RunTime:0.084814s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:131]
+---------------------------------------------------------------
+[ 2018-06-24T22:59:05+08:00 ] 0.0.0.0 POST /order/sendCount
+[ info ] localhost:7037/order/sendCount [运行时间：0.614042s][吞吐率：1.63req/s] [内存消耗：3,250.40kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> dc2ecbfc79f9549b666cbd990cd515f8f2a21045
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'home',
+<<<<<<< HEAD
     1 => NULL,
     2 => NULL,
   ),
@@ -858,11 +1265,28 @@
   'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
   'host' => 'localhost:8020',
   'accept-encoding' => 'gzip, deflate',
+=======
+    1 => 'order',
+    2 => 'sendCount',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarypGtvdeKkcm25acMD',
+  'content-length' => '337',
+  'x-original-url' => '/order/sendCount',
+  'postman-token' => '338cab7c-2337-0714-2486-cd610a9599bc',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+>>>>>>> dc2ecbfc79f9549b666cbd990cd515f8f2a21045
   'accept' => '*/*',
   'connection' => 'keep-alive',
   'cache-control' => 'no-cache',
 )
 [ info ] [ PARAM ] array (
+<<<<<<< HEAD
   'doctor_id' => '170',
   'member_id' => '2',
   'comment' => 'aa',
@@ -1000,12 +1424,30 @@
 [ 2018-06-24T23:37:38+08:00 ] 0.0.0.0 POST /umeng/sendDoctor
 [ info ] localhost:8020/umeng/sendDoctor [运行时间：0.335617s][吞吐率：2.98req/s] [内存消耗：3,509.69kb] [文件加载：56]
 [ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+=======
+  'order_id' => '1',
+  'doctor_id' => '70',
+  'patient_id' => '34',
+)
+[ info ] [ RUN ] app\home\controller\Order->sendCount[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.146459s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.106506s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.`product_name` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` WHERE  (  o.pay_status = 1 AND o.order_type IN(4,1) AND o.order_status IN(1,2,3) ) ORDER BY o.order_id DESC [ RunTime:0.188091s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:131]
+---------------------------------------------------------------
+[ 2018-06-24T22:59:26+08:00 ] 0.0.0.0 POST /order/sendCount
+[ info ] localhost:7037/order/sendCount [运行时间：0.559764s][吞吐率：1.79req/s] [内存消耗：3,190.75kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> dc2ecbfc79f9549b666cbd990cd515f8f2a21045
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'home',
+<<<<<<< HEAD
     1 => 'umeng',
     2 => 'sendDoctor',
   ),
@@ -1018,11 +1460,28 @@
   'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
   'host' => 'localhost:8020',
   'accept-encoding' => 'gzip, deflate',
+=======
+    1 => 'order',
+    2 => 'sendCount',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary2w0AzKNoyY3Pg5Di',
+  'content-length' => '339',
+  'x-original-url' => '/order/sendCount',
+  'postman-token' => '5c9ffd29-f266-31f2-5a6a-44f7befab6dd',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+>>>>>>> dc2ecbfc79f9549b666cbd990cd515f8f2a21045
   'accept' => '*/*',
   'connection' => 'keep-alive',
   'cache-control' => 'no-cache',
 )
 [ info ] [ PARAM ] array (
+<<<<<<< HEAD
   'doctor_id' => '70',
   'member_id' => '2',
   'comment' => 'aa',
@@ -1041,12 +1500,30 @@
 [ 2018-06-24T23:48:45+08:00 ] 0.0.0.0 POST /umeng/sendDoctor
 [ info ] localhost:8020/umeng/sendDoctor [运行时间：0.544544s][吞吐率：1.84req/s] [内存消耗：3,503.19kb] [文件加载：56]
 [ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+=======
+  'order_id' => '355',
+  'doctor_id' => '70',
+  'patient_id' => '34',
+)
+[ info ] [ RUN ] app\home\controller\Order->sendCount[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.117779s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.166412s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.`product_name` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` WHERE  (  o.order_id = 355  AND o.pay_status = 1 AND o.order_type IN(4,1) AND o.order_status IN(1,2,3) ) ORDER BY o.order_id DESC LIMIT 1 [ RunTime:0.144361s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:131]
+---------------------------------------------------------------
+[ 2018-06-24T23:01:43+08:00 ] 0.0.0.0 POST /order/sendCount
+[ info ] localhost:7037/order/sendCount [运行时间：0.511035s][吞吐率：1.96req/s] [内存消耗：3,190.47kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> dc2ecbfc79f9549b666cbd990cd515f8f2a21045
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'home',
+<<<<<<< HEAD
     1 => 'umeng',
     2 => 'sendDoctor',
   ),
@@ -1059,11 +1536,28 @@
   'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
   'host' => 'localhost:8020',
   'accept-encoding' => 'gzip, deflate',
+=======
+    1 => 'order',
+    2 => 'sendCount',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryI8Ph4KqxBNvcI5X6',
+  'content-length' => '339',
+  'x-original-url' => '/order/sendCount',
+  'postman-token' => '5afeca7a-b153-14f7-a713-2892fcfc457f',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+>>>>>>> dc2ecbfc79f9549b666cbd990cd515f8f2a21045
   'accept' => '*/*',
   'connection' => 'keep-alive',
   'cache-control' => 'no-cache',
 )
 [ info ] [ PARAM ] array (
+<<<<<<< HEAD
   'doctor_id' => '70',
   'member_id' => '2',
   'comment' => 'aa',
@@ -1084,12 +1578,32 @@
 [ 2018-06-24T23:48:55+08:00 ] 0.0.0.0 POST /umeng/sendDoctor
 [ info ] localhost:8020/umeng/sendDoctor [运行时间：0.463879s][吞吐率：2.16req/s] [内存消耗：3,502.82kb] [文件加载：56]
 [ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+=======
+  'order_id' => '355',
+  'doctor_id' => '70',
+  'patient_id' => '34',
+)
+[ info ] [ RUN ] app\home\controller\Order->sendCount[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.102559s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.070032s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.`left_inquisition` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` WHERE  (  o.order_id = 355  AND o.pay_status = 1 AND o.order_type IN(4,1) AND o.order_status IN(1,2,3) ) ORDER BY o.order_id DESC LIMIT 1 [ RunTime:0.067818s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_product` [ RunTime:0.066554s ]
+[ sql ] [ SQL ] UPDATE `jd_order_product`  SET `left_inquisition`=5  WHERE  (  order_id = 355 ) [ RunTime:0.068440s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:131]
+---------------------------------------------------------------
+[ 2018-06-24T23:02:16+08:00 ] 0.0.0.0 POST /order/sendCount
+[ info ] localhost:7037/order/sendCount [运行时间：0.346543s][吞吐率：2.89req/s] [内存消耗：3,191.80kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> dc2ecbfc79f9549b666cbd990cd515f8f2a21045
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'home',
+<<<<<<< HEAD
     1 => 'umeng',
     2 => 'sendDoctor',
   ),
@@ -1102,11 +1616,28 @@
   'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
   'host' => 'localhost:8020',
   'accept-encoding' => 'gzip, deflate',
+=======
+    1 => 'order',
+    2 => 'sendCount',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryyBKfiQVumZArJQpi',
+  'content-length' => '339',
+  'x-original-url' => '/order/sendCount',
+  'postman-token' => '0cb15249-eceb-da92-189a-aa6de4b9f285',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+>>>>>>> dc2ecbfc79f9549b666cbd990cd515f8f2a21045
   'accept' => '*/*',
   'connection' => 'keep-alive',
   'cache-control' => 'no-cache',
 )
 [ info ] [ PARAM ] array (
+<<<<<<< HEAD
   'doctor_id' => '70',
   'member_id' => '2',
   'comment' => 'aa',
@@ -1127,12 +1658,30 @@
 [ 2018-06-24T23:49:22+08:00 ] 0.0.0.0 POST /umeng/sendDoctor
 [ info ] localhost:8020/umeng/sendDoctor [运行时间：0.535769s][吞吐率：1.87req/s] [内存消耗：3,502.82kb] [文件加载：56]
 [ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+=======
+  'order_id' => '355',
+  'doctor_id' => '70',
+  'patient_id' => '34',
+)
+[ info ] [ RUN ] app\home\controller\Order->sendCount[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.114419s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.071982s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.`left_inquisition` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` WHERE  (  o.order_id = 355  AND o.pay_status = 1 AND o.order_type IN(4,1) AND o.order_status IN(1,2,3) ) ORDER BY o.order_id DESC LIMIT 1 [ RunTime:0.073262s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:131]
+---------------------------------------------------------------
+[ 2018-06-24T23:02:24+08:00 ] 0.0.0.0 POST /order/sendCount
+[ info ] localhost:7037/order/sendCount [运行时间：0.598351s][吞吐率：1.67req/s] [内存消耗：3,190.47kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> dc2ecbfc79f9549b666cbd990cd515f8f2a21045
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'home',
+<<<<<<< HEAD
     1 => 'umeng',
     2 => 'sendDoctor',
   ),
@@ -1145,11 +1694,28 @@
   'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
   'host' => 'localhost:8020',
   'accept-encoding' => 'gzip, deflate',
+=======
+    1 => 'order',
+    2 => 'sendCount',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryakpr3sqcrdXHVPk9',
+  'content-length' => '339',
+  'x-original-url' => '/order/sendCount',
+  'postman-token' => '5fd43ae7-9354-3bea-a514-1256a2a5d34f',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+>>>>>>> dc2ecbfc79f9549b666cbd990cd515f8f2a21045
   'accept' => '*/*',
   'connection' => 'keep-alive',
   'cache-control' => 'no-cache',
 )
 [ info ] [ PARAM ] array (
+<<<<<<< HEAD
   'doctor_id' => '70',
   'member_id' => '2',
   'comment' => 'aa',
@@ -1170,12 +1736,32 @@
 [ 2018-06-24T23:51:10+08:00 ] 0.0.0.0 POST /umeng/sendDoctor
 [ info ] localhost:8020/umeng/sendDoctor [运行时间：0.463017s][吞吐率：2.16req/s] [内存消耗：3,502.82kb] [文件加载：56]
 [ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+=======
+  'order_id' => '355',
+  'doctor_id' => '70',
+  'patient_id' => '34',
+)
+[ info ] [ RUN ] app\home\controller\Order->sendCount[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.139907s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.077950s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.`left_inquisition` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` WHERE  (  o.order_id = 355  AND o.pay_status = 1 AND o.order_type IN(4,1) AND o.order_status IN(1,2,3) ) ORDER BY o.order_id DESC LIMIT 1 [ RunTime:0.074056s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_product` [ RunTime:0.074357s ]
+[ sql ] [ SQL ] UPDATE `jd_order_product`  SET `left_inquisition`=6  WHERE  (  order_id = 355 ) [ RunTime:0.079378s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:131]
+---------------------------------------------------------------
+[ 2018-06-24T23:02:29+08:00 ] 0.0.0.0 POST /order/sendCount
+[ info ] localhost:7037/order/sendCount [运行时间：0.331714s][吞吐率：3.01req/s] [内存消耗：3,191.80kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+>>>>>>> dc2ecbfc79f9549b666cbd990cd515f8f2a21045
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'home',
+<<<<<<< HEAD
     1 => 'umeng',
     2 => 'sendDoctor',
   ),
@@ -1188,11 +1774,28 @@
   'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
   'host' => 'localhost:8020',
   'accept-encoding' => 'gzip, deflate',
+=======
+    1 => 'order',
+    2 => 'sendCount',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryfyosoUacfGorhpJb',
+  'content-length' => '339',
+  'x-original-url' => '/order/sendCount',
+  'postman-token' => '445677d1-69dc-691e-0a51-5e0df07af8e5',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+>>>>>>> dc2ecbfc79f9549b666cbd990cd515f8f2a21045
   'accept' => '*/*',
   'connection' => 'keep-alive',
   'cache-control' => 'no-cache',
 )
 [ info ] [ PARAM ] array (
+<<<<<<< HEAD
   'doctor_id' => '70',
   'member_id' => '2',
   'comment' => 'aa',
@@ -1209,3 +1812,16 @@
 [ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.069806s ]
 [ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  (  member_id=2 ) LIMIT 1 [ RunTime:0.066944s ]
 [ error ] [8]未定义数组索引: only_token[D:\works\201805\judeng\application\common.php:108]
+=======
+  'order_id' => '355',
+  'doctor_id' => '70',
+  'patient_id' => '34',
+)
+[ info ] [ RUN ] app\home\controller\Order->sendCount[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.105979s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.071124s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.`left_inquisition` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` WHERE  (  o.order_id = 355  AND o.pay_status = 1 AND o.order_type IN(4,1) AND o.order_status IN(1,2,3) ) ORDER BY o.order_id DESC LIMIT 1 [ RunTime:0.072638s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:131]
+>>>>>>> dc2ecbfc79f9549b666cbd990cd515f8f2a21045

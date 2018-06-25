@@ -127,8 +127,20 @@ class Sale extends Common
                 ->where("is_checked = 1 AND member_id = {$data['member_id']} AND inherit_id = {$data['inherit_id']}")
                 ->field('img_url')
                 ->find();
+            //php判断二维码文件能否打开
+            if ($img && file_get_contents($img['img_url'])){
+                $img_url = $img['img_url'];
+            }else{
+                //文件不存在
+                //生成邀请加入传承的二维码
+                $insertData['img_url'] =  config('url') . createPic(config('url').'/member/inviteInherit?memberId='.$data['member_id'].'&inheritId='.$data['inherit_id']);
+                db('inherit_doctor')
+                    ->where("is_checked = 1 AND member_id = {$data['member_id']} AND inherit_id = {$data['inherit_id']}")
+                    ->update($insertData);
+                $img_url = $insertData['img_url'];
+            }
             $url =  config('url') . createPic(config('url').'/member/inviteInherit?memberId='.$data['member_id'].'&inheritId='.$data['inherit_id']);
-            ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[['successDoc'=>$successDoc, 'img'=>$img['img_url'], 'shareUrl'=>$url]]));
+            ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[['successDoc'=>$successDoc, 'img'=>$img_url, 'shareUrl'=>$url]]));
         }
     }
 
