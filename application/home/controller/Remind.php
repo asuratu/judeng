@@ -39,7 +39,7 @@ class Remind extends Common
                 ->find();
             $member['member_name'] = !empty($member['true_name']) ? $member['true_name'] : (!empty($member['member_name']) ? $member['member_name'] : $member['mobile']);
 
-            if ($member['order_status'] == 0) {         // 0待购药 其他待复诊
+            if ($member['pay_status'] == 0) {         // 0待购药 其他待复诊
                 $data['url'] = 'http://wechat.bohetanglao.com/home/center/detail/ordersn/'.$member['order_sn'].'.html';
                 $data['first'] = '您有一张待购药订单，请及时查看。';
                 $data['prescription'] = '门诊订单';
