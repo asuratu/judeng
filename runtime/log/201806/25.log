@@ -1035,3 +1035,181 @@
 [ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.056147s ]
 [ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `i`.`inherit_id`=`id`.`inherit_id` WHERE  (  id.member_id = 170 AND id.is_checked = 1 AND i.is_display = 1 ) LIMIT 1 [ RunTime:0.061037s ]
 [ sql ] [ SQL ] SELECT `img_url` FROM `jd_inherit_doctor` WHERE  (  is_checked = 1 AND member_id = 170 AND inherit_id = 44 ) LIMIT 1 [ RunTime:0.058198s ]
+---------------------------------------------------------------
+[ 2018-06-25T12:03:08+08:00 ] 0.0.0.0 POST /home/find
+[ info ] localhost:8020/home/find [运行时间：0.657037s][吞吐率：1.52req/s] [内存消耗：3,476.07kb] [文件加载：56]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'home',
+    2 => 'find',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------983419269081238356079111',
+  'content-length' => '391',
+  'x-original-url' => '/home/find',
+  'postman-token' => '20481a64-d3f1-4426-8995-f22e6919a6a3',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+  'member_id' => '3',
+  'synopsis' => 'synopsis1',
+)
+[ info ] [ RUN ] app\home\controller\Home->find[ E:\wook\201804\judeng\application\home\controller\Home.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:131]
+[ error ] [8]未定义数组索引: title[E:\wook\201804\judeng\application\home\controller\Home.php:40]
+[ error ] [8]未定义数组索引: title[E:\wook\201804\judeng\application\home\controller\Home.php:40]
+[ error ] [8]未定义数组索引: title[E:\wook\201804\judeng\application\home\controller\Home.php:40]
+[ error ] [8]未定义数组索引: title[E:\wook\201804\judeng\application\home\controller\Home.php:40]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.080005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT `member_name`,`true_name`,`mobile`,face_photo as portrait,`is_certified` FROM `jd_doctor` WHERE  (  member_id = 70 ) LIMIT 1 [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_order` `o`,`jd_order_prescription` `op` WHERE  (  o.`order_id` = op.`order_id` and o.order_type = 3 and op.`prescription_type` = 0 and o.doctor_id = 70 ) LIMIT 1 [ RunTime:0.051003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 70 and s.`member_id` = m.`member_id` and (m.`member_name` like '%%' or m.`true_name` like '%%' or m.`mobile` like '%%' or s.`grouping` like '%%') ) LIMIT 1 [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_service_evaluation` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_service_evaluation` `s`,`jd_member` `m` WHERE  (  s.is_show = 1 and s.doctor_id = 70 and s.`member_id` = m.`member_id` ) LIMIT 1 [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.053003s ]
+---------------------------------------------------------------
+[ 2018-06-25T12:03:15+08:00 ] 0.0.0.0 POST /number/findConsultation
+[ info ] localhost:8020/number/findConsultation [运行时间：0.271016s][吞吐率：3.69req/s] [内存消耗：3,123.14kb] [文件加载：54]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'findConsultation',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------016141550809557363072104',
+  'content-length' => '270',
+  'x-original-url' => '/number/findConsultation',
+  'postman-token' => '85de978f-5bf8-4bb8-bf66-99c12bf91908',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+  'type' => '1',
+)
+[ info ] [ RUN ] app\home\controller\Number->findConsultation[ E:\wook\201804\judeng\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.078004s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.052003s ]
+[ sql ] [ SQL ] SELECT o.`pay_status`,o.`order_id`,o.`order_sn`,o.`order_status`,o.`patient_id`,o.`order_date`,m.`mobile`,m.`portrait`,m.`member_name`,m.`true_name`,m.`sex`,m.`age` FROM `jd_order` `o`,`jd_order_prescription` `op`,`jd_member` `m` WHERE  (  o.`order_id` = op.`order_id` and o.`patient_id` = m.`member_id` and op.`prescription_type` = 0 and o.order_type = 3 and o.doctor_id = 70 and o.pay_status=1 and o.pay_date >= 1530504195 and o.pay_date <= 1532491395 ) ORDER BY `o`.`order_date`  DESC LIMIT 0,10 [ RunTime:0.054004s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_order` `o`,`jd_order_prescription` `op`,`jd_member` `m` WHERE  (  o.`order_id` = op.`order_id` and o.`patient_id` = m.`member_id` and op.`prescription_type` = 0 and o.order_type = 3 and o.doctor_id = 70 and o.pay_status=1 and o.pay_date >= 1530504195 and o.pay_date <= 1532491395 ) LIMIT 1 [ RunTime:0.052003s ]
+---------------------------------------------------------------
+[ 2018-06-25T12:05:04+08:00 ] 0.0.0.0 POST /remind/medicine
+[ info ] localhost:8020/remind/medicine [运行时间：0.022001s][吞吐率：45.45req/s] [内存消耗：2,031.20kb] [文件加载：47]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'remind',
+    2 => 'medicine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------411241756724821492183280',
+  'content-length' => '270',
+  'x-original-url' => '/remind/medicine',
+  'postman-token' => '327d9696-746d-49f2-9cf9-75bdc93fe8e0',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+  'type' => '1',
+)
+[ info ] [ RUN ] app\home\controller\Remind->medicine[ E:\wook\201804\judeng\application\home\controller\Remind.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:131]
+[ error ] [8]未定义数组索引: order_id[E:\wook\201804\judeng\application\home\controller\Remind.php:23]
+---------------------------------------------------------------
+[ 2018-06-25T12:07:35+08:00 ] 0.0.0.0 POST /remind/medicine
+[ info ] localhost:8020/remind/medicine [运行时间：2.516144s][吞吐率：0.40req/s] [内存消耗：3,672.63kb] [文件加载：60]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'remind',
+    2 => 'medicine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------007376868426723951816946',
+  'content-length' => '490',
+  'x-original-url' => '/remind/medicine',
+  'postman-token' => '47fc10df-64ad-417a-8884-988c9cd9c711',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+  'type' => '1',
+  'order_id' => '364',
+  'member_id' => '34',
+)
+[ info ] [ RUN ] app\home\controller\Remind->medicine[ E:\wook\201804\judeng\application\home\controller\Remind.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:131]
+[ error ] [8]未定义数组索引: pay_status[E:\wook\201804\judeng\application\home\controller\Remind.php:49]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.081005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_daycount` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor_daycount` WHERE  (  doctor_id = 70 and order_id = 364 and day_date = 1529856000 ) LIMIT 1 [ RunTime:0.054004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT m.`member_name`,m.`true_name`,m.`openid`,m.`mobile`,o.`order_type`,o.`order_status`,o.`order_sn`,o.`doctor_id` FROM `jd_order` `o` LEFT JOIN `jd_member` `m` ON o.`patient_id`=m.`member_id` WHERE  (  o.order_id = 364 ) LIMIT 1 [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id = 70 ) LIMIT 1 [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_daycount` WHERE  (  doctor_id = 70 and order_id = 364 and day_date = 1529856000 ) LIMIT 1 [ RunTime:0.054004s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_daycount`  SET `day_count`=`day_count`+1  WHERE  (  doctor_id = 70 and order_id = 364 and day_date = 1529856000 ) [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_daycount` WHERE  (  doctor_id = 70 and order_id = 364 and day_date = 1529856000 ) LIMIT 1 [ RunTime:0.053003s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor_daycount`  SET `day_count`=`day_count`+1  WHERE  (  doctor_id = 70 and order_id = 364 and day_date = 1529856000 ) [ RunTime:0.056003s ]

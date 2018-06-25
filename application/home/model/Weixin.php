@@ -80,6 +80,17 @@ class Weixin extends Model
                     'remark'=> array('value' => $post['remark'], 'color' => '#173177'),             // 底部信息
                 );
                 break;
+            case 7: // 复诊提醒
+                $template_id = 'JLuWuDi1Wmc8UUJj7iayRWybg7WTDcJ_4bcAOFtE8WQ';
+                $_url = $post['url'];
+                $_data =  array(
+                    'first' => array('value' => $post['first'], 'color'=>"#173177"),                // 头部信息
+                    'keyword1' => array('value' => $post['doctor_name'], 'color'=>"#173177"),            // 医生姓名
+                    'keyword2' => array('value' => $post['prescription'], 'color'=>'#173177'),        // 处方类型
+                    'keyword3' => array('value' => $post['member_name'], 'color'=>"#173177"),            // 患者姓名
+                    'remark'=> array('value' => $post['remark'], 'color' => '#173177'),             // 底部信息
+                );
+                break;
             default :
                 $template_id = '';
                 $_url = '';
