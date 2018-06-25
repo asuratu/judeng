@@ -134,7 +134,6 @@ class Inherit extends Common
 
             //判断是否加入过该传承
             $exist = db('inherit_doctor')->where("(`member_id` = {$data['member_id']} OR `parent_id` = {$data['member_id']}) AND `is_checked` = 1 AND `inherit_id` = {$data['inherit_id']}")->count();
-//            var_dump(db('inherit_doctor')->getLastSql());die;
             if ($exist > 0) {
                 $used = 1;
             } else {
@@ -264,7 +263,7 @@ class Inherit extends Common
             foreach (json_decode($specialArr['content']) as $key1=>$val1) {
                 array_push($contentArr, $val1[1]);
             }
-            $specialArr['content'] = base64_encode(json_encode($contentArr));
+            $specialArr['content'] = base64_encode(json_encode($contentArr, JSON_UNESCAPED_UNICODE));
             $data['inherit_id'] = $specialArr['inherit_id'];
             //判断是否加入过该传承
             $exist = db('inherit_doctor')->where("(`member_id` = {$data['member_id']} OR `parent_id` = {$data['member_id']}) AND `is_checked` = 1 AND `inherit_id` = {$data['inherit_id']}")->count();
@@ -320,7 +319,7 @@ class Inherit extends Common
             foreach (json_decode($specialArr['content']) as $key1=>$val1) {
                 array_push($contentArr, $val1[1]);
             }
-            $specialArr['content'] = base64_encode(json_encode($contentArr));
+            $specialArr['content'] = base64_encode(json_encode($contentArr, JSON_UNESCAPED_UNICODE));
             $data['inherit_id'] = $specialArr['inherit_id'];
             //判断是否加入过该传承
             $exist = db('inherit_doctor')->where("(`member_id` = {$data['member_id']} OR `parent_id` = {$data['member_id']}) AND `is_checked` = 1 AND `inherit_id` = {$data['inherit_id']}")->count();
@@ -461,9 +460,11 @@ class Inherit extends Common
                 //是否显示流派
                 if ($doctorInfo['inherit'] && $doctorInfo['school_str']) {
                     $doctorInfo['school_str'] = db('school')
-                        ->where("school_id IN({$doctorInfo['school_str']}) AND is_display = 1")
+                        ->where("school_id IN('{$doctorInfo['school_str']}') AND is_display = 1")
                         ->field('school_name')
                         ->select();
+//                    var_dump($doctorInfo['school_str']);die;
+
                 } else {
                     $doctorInfo['school_str'] = array();
                 }
@@ -485,7 +486,7 @@ class Inherit extends Common
                     $keshiArr = array();
                 }
 
-                $doctorInfo['department_name'] = $keshiArr[0];
+                $doctorInfo['department_name'] = $keshiArr[0] ?: ['department_name'=>''];
                 //是否有自建特色方剂
                 $existGoods = db('self_goods')
                     ->where("member_id = {$doctorInfo['member_id']} AND content != '' AND is_checked = 2 ")
@@ -552,7 +553,7 @@ class Inherit extends Common
                         $keshiArr = array();
                     }
 
-                    $doctorInfo['department_name'] = $keshiArr[0];
+                    $doctorInfo['department_name'] = $keshiArr[0] ?: ['department_name'=>''];
                     // 查询擅长
                     $doctorInfo['goodat_id'] = Controller('Doctor')->goodsId($doctorInfo['goodat_id']);
                     //是否有自建特色方剂

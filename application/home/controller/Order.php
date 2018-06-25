@@ -62,7 +62,7 @@ class Order extends Common
             $lastOrder = db('order_prescription')->alias('op')
                 ->join(['jd_order'=>'o'], 'o.order_id = op.order_id' , 'inner')
                 ->where($lastMap)
-                ->field("op.`relation_id`, op.`state_id`")
+                ->field("op.`relation_id`, op.`state_id`, op.`order_id`")
                 ->order("op.`add_date` DESC")
                 ->find();
             //处理药房药态信息
@@ -805,6 +805,91 @@ class Order extends Common
         }
     }
 
+
+    /**
+     * @Title: getBuyedGoods
+     * @Description: TODO 查询订单状态为待发货的调制服务包的id
+     * @return bool
+     * @author TUGE
+     * @date
+     */
+    public function getBuyedGoods() {
+        if($this->request->isPost())
+        {
+            try{
+                Db::startTrans();
+                $data=input('post.');
+                $res=checkSign($data);
+                if($res['code']==0)
+                {
+                    ajaxReturn($res);
+                }
+
+                if($data['doctor_id']=='' || $data['patient_id']=='')
+                {
+                    ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+                }
+//                var_dump("o.pay_status = 1 AND o.order_type = 4  AND o.order_status = 1 AND o.patient_id = {$data['patient_id']} AND o.doctor_id = {$data['doctor_id']}");die;
+                $orderList = db('order')->alias('o')
+                    ->join(['jd_order_product'=>'op'], 'op.order_id = o.order_id' , 'inner')
+                    ->where("o.pay_status = 1 AND o.order_type = 4  AND o.order_status = 1 AND o.patient_id = {$data['patient_id']} AND o.doctor_id = {$data['doctor_id']}")
+                    ->field("o.order_id, op.product_name")
+                    ->order('o.order_id DESC')
+                    ->select();
+                Db::commit();
+                ajaxReturn(array('code'=>0, 'info'=>'本次问诊已结束','data'=>[$orderList]));
+            } catch (\Exception $e) {
+                Db::rollback();
+                return false;
+            }
+        }
+    }
+
+    /**
+     * @Title: sendCount
+     * @Description: TODO 图文咨询赠送提问次数
+     * @return bool
+     * @author TUGE
+     * @date
+     */
+    public function sendCount() {
+        if($this->request->isPost())
+        {
+            try{
+                Db::startTrans();
+                $data=input('post.');
+                $res=checkSign($data);
+                if($res['code']==0)
+                {
+                    ajaxReturn($res);
+                }
+
+                if($data['doctor_id']=='' || $data['patient_id']=='' || $data['order_id']=='')
+                {
+                    ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+                }
+                $orderDetail = db('order')->alias('o')
+                    ->join(['jd_order_product'=>'op'], 'op.order_id = o.order_id' , 'inner')
+                    ->where("o.order_id = {$data['order_id']}  AND o.pay_status = 1 AND o.order_type IN(4,1) AND o.order_status IN(1,2,3)")
+                    ->field("o.*, op.left_inquisition")
+                    ->order('o.order_id DESC')
+                    ->find();
+//                var_dump($orderDetail['left_inquisition']);die;
+                if (empty($orderDetail)) {
+                    ajaxReturn(array('code'=>0,'info'=>'订单不存在','data'=>[]));
+                }
+                //给附表的次数加一
+                $updateInfo['left_inquisition'] = $orderDetail['left_inquisition']+1;
+                db('order_product')->where("order_id = {$data['order_id']}")->update($updateInfo);
+                Db::commit();
+                ajaxReturn(array('code'=>1, 'info'=>'本次问诊已结束','data'=>[]));
+            } catch (\Exception $e) {
+                Db::rollback();
+                return false;
+            }
+        }
+    }
+
     /**
      * @Title: stopTalk
      * @Description: TODO 医生主动结束本次问诊
@@ -882,6 +967,47 @@ class Order extends Common
                 }
                 Db::rollback();
                 ajaxReturn(array('code'=>0,'info'=>'本次问诊已结束!','data'=>[]));
+            } catch (\Exception $e) {
+                Db::rollback();
+                return false;
+            }
+        }
+    }
+
+    /**
+     * @Title: searchOrder
+     * @Description: TODO 查询患者正在使用哪个订单id和医生聊天
+     * @return bool
+     * @author TUGE
+     * @date
+     */
+    public function searchOrder() {
+        if($this->request->isPost())
+        {
+            try{
+                Db::startTrans();
+                $data=input('post.');
+                $res=checkSign($data);
+                if($res['code']==0)
+                {
+                    ajaxReturn($res);
+                }
+                if($data['doctor_id']=='' || $data['patient_id']=='')
+                {
+                    ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+                }
+
+                    //查询该医生和该患者最新的一次问诊记录
+                    $wenzhenDetail = db('wenzhen')
+                        ->where("type IN(0,1,2) AND patient_id = {$data['patient_id']} AND doctor_id = {$data['doctor_id']}")
+                        ->field("*")
+                        ->order('log_id DESC')
+                        ->find();
+                    if (empty($wenzhenDetail)) {
+                        ajaxReturn(array('code'=>0,'info'=>'暂无问诊','data'=>[]));
+                    }
+                    Db::commit();
+                    ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>[$wenzhenDetail]));
             } catch (\Exception $e) {
                 Db::rollback();
                 return false;
