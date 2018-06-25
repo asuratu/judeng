@@ -15,6 +15,11 @@ class Blacklist extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
             if($data['doctor_id']==''||$data['member_id']==''||$data['is_type']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -61,9 +66,9 @@ class Blacklist extends Common
 
             // TODO 未测试
             if ($type == 0) {                        // 0     添加            1 删除
-                Model('Setting')->addUserForBlacklist($doctor['member_sn'], array($member['openid']));
+                Model('Setting')->addUserForBlacklist($doctor['member_sn'], array($member['im_user']));
             } else {
-                Model('Setting')->deleteUserFromBlacklist($doctor['member_sn'], $member['openid']);
+                Model('Setting')->deleteUserFromBlacklist($doctor['member_sn'], $member['im_user']);
             }
             $update = array(
                 'is_show' => $type,
@@ -84,6 +89,11 @@ class Blacklist extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
 
             if($data['doctor_id']=='')
             {

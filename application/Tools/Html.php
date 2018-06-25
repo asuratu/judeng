@@ -28,7 +28,7 @@ class Html {
         if (!isset($str))
             return;
         return stripslashes(str_replace(array('&amp;', '&lt;', '&gt;', '&quot;', '&#039;',
-            '&nbsp;'), array('&', '<', '>', '"', '\'', ' '), trim($str)));
+            '&nbsp;', '&amp;nbsp;'), array('&', '<', '>', '"', '\'', ' ', ' '), trim($str)));
     }
 
     public static function strip($i) {

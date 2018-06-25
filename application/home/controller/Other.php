@@ -357,6 +357,11 @@ class Other extends Common
         if($this->request->isPost())
         {
             $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
             if (!isset($data['page'])) {
                 $data['page'] = 1;
             }

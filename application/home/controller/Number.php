@@ -12,14 +12,14 @@ class Number extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
-            if($data['doctor_id']==''||$data['type']=='')
-            {
-                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
-            }
             $res=checkSign($data);
             if($res['code']==0)
             {
                 ajaxReturn($res);
+            }
+            if($data['doctor_id']==''||$data['type']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
             if (!isset($data['page'])) {
                 $data['page'] = 1;
@@ -59,14 +59,14 @@ class Number extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
-            if($data['doctor_id']==''||$data['type']=='')
-            {
-                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
-            }
             $res=checkSign($data);
             if($res['code']==0)
             {
                 ajaxReturn($res);
+            }
+            if($data['doctor_id']==''||$data['type']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
             if (!isset($data['page'])) {
                 $data['page'] = 1;
@@ -81,9 +81,9 @@ class Number extends Common
                 $_where .= ' and o.order_status=0';
                 $type_name = '购药时间：';
             } else {
-                $seventime = '604800';          // 7 天
-                $onemoon = '2592000';           // 一个月
-                $_where .= " and (o.order_status=1 or o.order_status=2 or o.order_status=3) and o.pay_date >= {$seventime} and o.pay_date <= {$onemoon}";
+                $seventime = time() + 604800;          // 7 天
+                $onemoon = time() + 2592000;           // 一个月
+                $_where .= " and o.pay_status=1 and o.pay_date >= {$seventime} and o.pay_date <= {$onemoon}";
 //                $_where .= " and (o.order_status=1 or o.order_status=2 or o.order_status=3)";
                 $type_name = '复诊时间：';
             }
@@ -142,6 +142,11 @@ class Number extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
             if($data['doctor_id']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -154,7 +159,7 @@ class Number extends Common
             }
             $data['pageCount'] = ($data['page'] - 1) * $data['pageSize'];
 
-            $comment = Db::field('s.`member_id`, s.`synopsis`, s.`end_date`, m.`member_name`, m.`true_name`, m.`mobile`, m.`portrait`, m.`openid`, m.`sex`, m.`age`')
+            $comment = Db::field('s.`member_id`, s.`synopsis`, s.`end_date`, m.`member_name`, m.`true_name`, m.`mobile`, m.`portrait`, m.`im_user` as openid, m.`sex`, m.`age`')
                 ->table('jd_doctor_member s, jd_member m')
                 ->where("s.doctor_id = {$data['doctor_id']} and s.`is_show` = 1 and s.`member_id` = m.`member_id` and (m.`member_name` like '%{$data['title']}%' or m.`true_name` like '%{$data['title']}%' or m.`mobile` like '%{$data['title']}%' or s.`grouping` like '%{$data['title']}%')")
                 ->order('s.end_date', 'DESC')
@@ -182,6 +187,11 @@ class Number extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
             if($data['doctor_id']==''||$data['member_id']==''||$data['synopsis']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -231,6 +241,11 @@ class Number extends Common
         if($this->request->isPost())
         {
             $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
             if($data['doctor_id']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -251,7 +266,7 @@ class Number extends Common
             $order = array();
             foreach ($comment as $key => $val) {
                 array_push($order, $val);
-                $order[$key]['evaluate_name'] = explode('#@#', $val['evaluate_name']);
+                $order[$key]['evaluate_name'] = explode('#@#', trim($val['evaluate_name'], '#@#'));
                 $order[$key]['member_name'] = !empty($val['true_name']) ? $val['true_name'] : (!empty($val['member_name']) ? $val['member_name'] : $val['mobile']);
 //                $order[$key]['portrait'] = 'http://wechat.bohetanglao.com/uploads/avatar/' . $val['portrait'];
                 $order[$key]['evaluate'] = $this->view->setting['aryServiceEvaluation'][$val['evaluate']];
@@ -272,6 +287,11 @@ class Number extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
             if($data['doctor_id']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -296,7 +316,7 @@ class Number extends Common
             }
             $group_member = explode(',', $group['group_member_id']);
 
-            $comment = Db::field('s.`member_id`, s.`inquisition_name`, s.`inquisition`, m.`member_name`, m.`true_name`, m.`mobile`, m.`portrait`, m.`sex`, m.`age`, m.`openid`, m.`is_type`')
+            $comment = Db::field('s.`member_id`, s.`inquisition_name`, s.`inquisition`, m.`member_name`, m.`true_name`, m.`mobile`, m.`portrait`, m.`sex`, m.`age`, m.`im_user` as openid, m.`is_type`')
                 ->table('jd_doctor_member s, jd_member m')
                 ->where("s.doctor_id = {$data['doctor_id']} and s.`is_show` = 1 and s.`member_id` = m.`member_id` and (m.`member_name` like '%{$data['title']}%' or m.`true_name` like '%{$data['title']}%' or m.`mobile` like '%{$data['title']}%' or s.`grouping` like '%{$data['title']}%')")
                 ->order('s.inquisition', 'DESC')
@@ -329,6 +349,11 @@ class Number extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
             if($data['doctor_id']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -354,6 +379,11 @@ class Number extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
             if($data['group_name']==''||$data['doctor_id']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -384,6 +414,11 @@ class Number extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
             if($data['group_name']==''||$data['group_id']==''||$data['doctor_id']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -411,6 +446,11 @@ class Number extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
             if($data['group_id']==''||$data['doctor_id']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -435,7 +475,11 @@ class Number extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
-
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
             if($data['doctor_id']==''||$data['group_id']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -447,7 +491,7 @@ class Number extends Common
                 $data['pageSize'] = 10;
             }
             $data['pageCount'] = ($data['page'] - 1) * $data['pageSize'];
-            $comment = Db::field('s.`group_id`, s.`member_id`, m.`member_name`, m.`true_name`, m.`mobile`, m.`portrait`, m.`sex`, m.`age`, m.`openid`, m.`is_type`')
+            $comment = Db::field('s.`group_id`, s.`member_id`, m.`member_name`, m.`true_name`, m.`mobile`, m.`portrait`, m.`sex`, m.`age`, m.`im_user` as openid, m.`is_type`')
                 ->table('jd_group_patient s, jd_member m')
                 ->where("s.doctor_id = {$data['doctor_id']} and s.`is_show` = 1 and s.group_id = {$data['group_id']} and s.`member_id` = m.`member_id`")
                 ->order('s.add_date', 'ASC')
@@ -477,6 +521,11 @@ class Number extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
             if($data['doctor_id']==''||$data['member_id']==''||$data['member_name']==''||$data['group_name']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -528,6 +577,11 @@ class Number extends Common
     {
         if($this->request->isPost()) {
             $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
             if($data['doctor_id']==''||$data['group_id']==''||$data['member_id']==''||$data['member_name']==''||$data['group_name']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
