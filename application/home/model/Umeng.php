@@ -164,12 +164,12 @@ class Umeng extends Model
             'payload' => array(
                 'aps' => array(
                     'alert' => $text,
-                    'after_open' => 'go_app',
-//                    'custom' => $extra, //点击通知后做的事
+                    'after_open' => 'go_custom',
+                    'custom' => $extra, //点击通知后做的事
                 ),
-//                $extra,
+                $extra,
             ),
-            'production_mode' 		=> 'false',//测试，上线为true
+            'production_mode' 		=> 'true',//测试，上线为true
             'description' 			=> $text,//描述
         );
         return json_encode($temp_arr);
