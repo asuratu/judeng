@@ -129,6 +129,7 @@ class Umeng extends Common
             $doctor = db('doctor')->where("member_id={$data['doctor_id']}")->find();
             $extra = array();
             $extra['type'] = $data['type'];
+            $after_open = 'go_custom';
             if ($data['type'] == 0) {
                 $data['title'] = '认证通知';
                 $data['comment'] = $doctor['true_name'] . '医生您的资质认证已通过，您的医馆已经成功开启了，可以开始设置服务进行接诊了';
@@ -162,9 +163,9 @@ class Umeng extends Common
             // 下面执行推送
             if ($doctor['is_login'] == 1) {
                 if ($doctor['is_system'] == 0) {     // is_system == 0 为安卓系统
-                    Model('Umeng')->PtoAndroid(array($doctor['device_tokens']), $data['comment'], $data['title'], $data['comment'], $extra);
+                    Model('Umeng')->PtoAndroid(array($doctor['device_tokens']), $data['comment'], $data['title'], $data['comment'], $extra, $after_open);
                 } else {
-                    Model('Umeng')->PtoIos(array('17000b98d56d1434173053f2af9be23ad977f1ac1ed2e7097600415ea846fe99'), $data['comment'], $extra);
+                    Model('Umeng')->PtoIos(array('17000b98d56d1434173053f2af9be23ad977f1ac1ed2e7097600415ea846fe99'), $data['comment'], $extra, $after_open);
                 }
             }
             ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[]));
