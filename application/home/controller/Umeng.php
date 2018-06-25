@@ -102,6 +102,18 @@ class Umeng extends Common
         header("Access-Control-Allow-Methods:GET,POST");
         if($this->request->isPost()) {
             $data = input('post.');
+            $doctor = db('doctor')->where("member_id={$data['doctor_id']}")->find();
+            // 下面执行推送
+            $extra['type'] = 6;
+            $data['title'] = '咨询消息';
+            $data['comment'] = '你收到一条患者咨询消息，请及时查看';
+            if ($doctor['is_login'] == 1) {
+                if ($doctor['is_system'] == 0) {     // is_system == 0 为安卓系统
+                    Model('Umeng')->PtoAndroid(array($doctor['device_tokens']), $data['comment'], $data['title'], $data['comment'], $extra, 'go_app');
+                } else {
+                    Model('Umeng')->PtoIos(array($doctor['device_tokens']), $data['comment'], $extra, 'go_app');
+                }
+            }
 
             // 医生患者列表，有则修改，没有择添加
             Model('Number')->doctorCounsell($data['member_id'], $data['doctor_id'], '咨询');
@@ -165,7 +177,7 @@ class Umeng extends Common
                 if ($doctor['is_system'] == 0) {     // is_system == 0 为安卓系统
                     Model('Umeng')->PtoAndroid(array($doctor['device_tokens']), $data['comment'], $data['title'], $data['comment'], $extra, $after_open);
                 } else {
-                    Model('Umeng')->PtoIos(array('17000b98d56d1434173053f2af9be23ad977f1ac1ed2e7097600415ea846fe99'), $data['comment'], $extra, $after_open);
+                    Model('Umeng')->PtoIos(array($doctor['device_tokens']), $data['comment'], $extra, $after_open);
                 }
             }
             ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[]));
