@@ -167,11 +167,13 @@ class Umeng extends Model
                     'after_open' => $after_open,
                     'custom' => $extra, //点击通知后做的事
                 ),
-                'extra' => $extra,
             ),
             'production_mode' 		=> 'false',//测试，上线为true
             'description' 			=> $text,//描述
         );
+        if ($after_open != 'go_app') {
+            $temp_arr['payload']['extra'] = $extra;
+        }
         return json_encode($temp_arr);
     }
 
