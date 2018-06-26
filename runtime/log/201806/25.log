@@ -1035,3 +1035,728 @@
 [ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.056147s ]
 [ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `i`.`inherit_id`=`id`.`inherit_id` WHERE  (  id.member_id = 170 AND id.is_checked = 1 AND i.is_display = 1 ) LIMIT 1 [ RunTime:0.061037s ]
 [ sql ] [ SQL ] SELECT `img_url` FROM `jd_inherit_doctor` WHERE  (  is_checked = 1 AND member_id = 170 AND inherit_id = 44 ) LIMIT 1 [ RunTime:0.058198s ]
+---------------------------------------------------------------
+[ 2018-06-25T11:48:33+08:00 ] 0.0.0.0 POST /order/toOnlineorder
+[ info ] localhost:7037/order/toOnlineorder [运行时间：0.666422s][吞吐率：1.50req/s] [内存消耗：3,174.47kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'toOnlineorder',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '170',
+  'x-original-url' => '/order/toOnlineorder',
+  'user-agent' => 'YiSong/1.2.6 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=h96qjmdls44p59nf74e0t1i1d4',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'only_token' => '1529898277OvUW%l',
+  'mobile' => '0',
+  'order_id' => '0',
+  'area_id' => 2,
+  'doctor_id' => 170,
+  '_time' => '1529898457',
+  'patient_id' => '92',
+  'sign' => '77ced126360e604ebdbee795b24fc91b',
+)
+[ info ] [ RUN ] app\home\controller\Order->toOnlineorder[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.087412s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_prescription` [ RunTime:0.058447s ]
+[ sql ] [ SQL ] SELECT op.`relation_id`,op.`state_id`,op.`order_id` FROM `jd_order_prescription` `op` INNER JOIN `jd_order` `o` ON `o`.`order_id`=`op`.`order_id` WHERE  o.`doctor_id` = 170  AND o.`order_type` = 3 ORDER BY op.`add_date` DESC LIMIT 1 [ RunTime:0.058153s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.057825s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` WHERE  d.`is_display` = 1  AND p.`area_id` = 2  AND p.`is_display` = 1  AND d.`state_id` = 7 LIMIT 1 [ RunTime:0.056416s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`prescription_id`,p.`area_name`,ds.`state_name`,ds.`make`,ds.`taking`,ds.`instructions`,ds.`weight`,ds.`pic` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  d.`is_display` = 1  AND p.`area_id` = 2  AND p.`is_display` = 1  AND d.`state_id` = 7  AND d.`relation_id` = 54 ORDER BY d.`relation_id` DESC LIMIT 1 [ RunTime:0.057557s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.057755s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_member` WHERE  `member_id` = 92 LIMIT 1 [ RunTime:0.057715s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.057290s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `only_token` = '1529898277OvUW%l'  AND `is_status` = 0 LIMIT 1 [ RunTime:0.057565s ]
+---------------------------------------------------------------
+[ 2018-06-25T11:48:51+08:00 ] 0.0.0.0 POST /order/toOnlineorder
+[ info ] localhost:7037/order/toOnlineorder [运行时间：0.245126s][吞吐率：4.08req/s] [内存消耗：3,092.50kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'toOnlineorder',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '170',
+  'x-original-url' => '/order/toOnlineorder',
+  'user-agent' => 'YiSong/1.2.6 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=h96qjmdls44p59nf74e0t1i1d4',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'only_token' => '1529898277OvUW%l',
+  'mobile' => '0',
+  'order_id' => '0',
+  'area_id' => 2,
+  'doctor_id' => 170,
+  '_time' => '1529898457',
+  'patient_id' => '92',
+  'sign' => '77ced126360e604ebdbee795b24fc91b',
+)
+[ info ] [ RUN ] app\home\controller\Order->toOnlineorder[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086000s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_prescription` [ RunTime:0.058519s ]
+[ sql ] [ SQL ] SELECT op.`relation_id`,op.`state_id`,op.`order_id` FROM `jd_order_prescription` `op` INNER JOIN `jd_order` `o` ON `o`.`order_id`=`op`.`order_id` WHERE  o.`doctor_id` = 170  AND o.`order_type` = 3 ORDER BY op.`add_date` DESC LIMIT 1 [ RunTime:0.057711s ]
+---------------------------------------------------------------
+[ 2018-06-25T11:50:17+08:00 ] 0.0.0.0 POST /order/toOnlineorder
+[ info ] localhost:7037/order/toOnlineorder [运行时间：0.266439s][吞吐率：3.75req/s] [内存消耗：3,092.50kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'toOnlineorder',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '170',
+  'x-original-url' => '/order/toOnlineorder',
+  'user-agent' => 'YiSong/1.2.6 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=h96qjmdls44p59nf74e0t1i1d4',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'only_token' => '1529898277OvUW%l',
+  'mobile' => '0',
+  'order_id' => '0',
+  'area_id' => 2,
+  'doctor_id' => 170,
+  '_time' => '1529898457',
+  'patient_id' => '92',
+  'sign' => '77ced126360e604ebdbee795b24fc91b',
+)
+[ info ] [ RUN ] app\home\controller\Order->toOnlineorder[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086451s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_prescription` [ RunTime:0.058634s ]
+[ sql ] [ SQL ] SELECT op.`relation_id`,op.`state_id`,op.`order_id` FROM `jd_order_prescription` `op` INNER JOIN `jd_order` `o` ON `o`.`order_id`=`op`.`order_id` WHERE  o.`doctor_id` = 170  AND o.`order_type` = 3 ORDER BY op.`add_date` DESC LIMIT 1 [ RunTime:0.057060s ]
+---------------------------------------------------------------
+[ 2018-06-25T14:42:00+08:00 ] 0.0.0.0 POST /selfdrug/addSelfDrug
+[ info ] localhost:7037/selfdrug/addSelfDrug [运行时间：0.445159s][吞吐率：2.25req/s] [内存消耗：3,010.66kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'selfdrug',
+    2 => 'addSelfDrug',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '1041',
+  'x-original-url' => '/selfdrug/addSelfDrug',
+  'user-agent' => 'YiSong/1.3.0 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=7mdn2816gp2vl5ejvhkch9sa84',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'inherit_drug' => 'W1s0NzAsIuefpeavjSIsMTUsImciXSxbMTg0LCLpuqblhqwiLDEyLCJnIl0sWzEzMywi5Yi25L2V6aaW5LmMIiwyNCwiZyJdLFs2OTMsIuefs+iPluiSsiIsMTUsImciXSxbNjAwLCLnmoLop5LliLoiLDE1LCJnIl0sWzUxMSwi6YaL6b6f55SyIiwxMiwiZyJdLFs4NDYsIua1t+mprCIsMSwiZyJdLFs2MjMsIuW9k+W9kiIsOSwiZyJdLFs0MjQsIua1mei0neavjSIsMTIsImciXV0=',
+  'inherit_id' => '44',
+  'content' => 'W1s0NzAsIuefpeavjSIsMTUsImciXSxbMTg0LCLpuqblhqwiLDEyLCJnIl0sWzEzMywi5Yi25L2V6aaW5LmMIiwyNCwiZyJdLFs2OTMsIuefs+iPluiSsiIsMTUsImciXSxbNjAwLCLnmoLop5LliLoiLDE1LCJnIl0sWzUxMSwi6YaL6b6f55SyIiwxMiwiZyJdLFs4NDYsIua1t+mprCIsMSwiZyJdLFs2MjMsIuW9k+W9kiIsOSwiZyJdLFs0MjQsIua1mei0neavjSIsMTIsImciXV0=',
+  'on_line' => '0',
+  'self_goods_id' => '42',
+  'member_id' => 78,
+  'special_id' => '28',
+  'referral' => '0',
+  'self_goods_name' => 'Kkjh',
+  'advantage' => 'Vuihh',
+  '_time' => '1529908811',
+  'service_price' => '0.00',
+  'see_price' => '20.00',
+  'taking' => '共#1#剂，每日#1#剂，1剂分#1#次使用',
+  'only_token' => '1529900682nTa$D4',
+  'dose' => '1',
+  'sign' => 'c1934e948591589936779c1e9d0d6c26',
+  'scope' => 'Vjk',
+  'precautions' => 'Cv',
+  'prescription_status' => '0',
+  'description' => 'Fvv7',
+)
+[ info ] [ RUN ] app\home\controller\Selfdrug->addSelfDrug[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Selfdrug.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.108240s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_self_goods` [ RunTime:0.079718s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_self_goods` WHERE  (  self_goods_id = 42 AND is_checked IN(2,3) ) LIMIT 1 [ RunTime:0.069754s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.073690s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `only_token` = '1529900682nTa$D4'  AND `is_status` = 0 LIMIT 1 [ RunTime:0.062611s ]
+---------------------------------------------------------------
+[ 2018-06-25T15:05:26+08:00 ] 0.0.0.0 POST /sale/myInheritTeam
+[ info ] localhost:7037/sale/myInheritTeam [运行时间：0.468497s][吞吐率：2.13req/s] [内存消耗：3,154.42kb] [文件加载：58]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'sale',
+    2 => 'myInheritTeam',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '128',
+  'x-original-url' => '/sale/myInheritTeam',
+  'user-agent' => 'YiSong/1.3.0 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=7mdn2816gp2vl5ejvhkch9sa84',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'inherit_id' => '0',
+  'member_id' => 70,
+  'sign' => '42f05a84823ced476c2150ad7d9980c2',
+  '_time' => '1529910264',
+  'only_token' => '1529910235x6ERH&',
+)
+[ info ] [ RUN ] app\home\controller\Sale->myInheritTeam[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sale.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.088818s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.058559s ]
+[ sql ] [ SQL ] SELECT `id`.`member_id`,`id`.`inherit_id`,`i`.`inherit_name` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `i`.`inherit_id`=`id`.`inherit_id` WHERE  (  id.parent_id = 70 AND id.is_checked = 1 AND i.is_display = 1 AND id.member_id != 70 ) ORDER BY i.sort DESC [ RunTime:0.059980s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.058417s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 145 ) LIMIT 1 [ RunTime:0.057456s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_school` [ RunTime:0.057455s ]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ) ORDER BY sort DESC' at line 1[D:\workLP\20180502\judeng\wwwroot\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2018-06-25T15:20:04+08:00 ] 0.0.0.0 POST /sale/myInheritTeam
+[ info ] localhost:7037/sale/myInheritTeam [运行时间：24.913124s][吞吐率：0.04req/s] [内存消耗：4,008.46kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'sale',
+    2 => 'myInheritTeam',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '128',
+  'x-original-url' => '/sale/myInheritTeam',
+  'user-agent' => 'YiSong/1.3.0 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=7mdn2816gp2vl5ejvhkch9sa84',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'inherit_id' => '0',
+  'member_id' => 70,
+  'sign' => '42f05a84823ced476c2150ad7d9980c2',
+  '_time' => '1529910264',
+  'only_token' => '1529910235x6ERH&',
+)
+[ info ] [ RUN ] app\home\controller\Sale->myInheritTeam[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sale.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.092815s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.065993s ]
+[ sql ] [ SQL ] SELECT `id`.`member_id`,`id`.`inherit_id`,`i`.`inherit_name` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `i`.`inherit_id`=`id`.`inherit_id` WHERE  (  id.parent_id = 70 AND id.is_checked = 1 AND i.is_display = 1 AND id.member_id != 70 ) ORDER BY i.sort DESC [ RunTime:0.063854s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.064368s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 145 ) LIMIT 1 [ RunTime:0.071881s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_self_goods` [ RunTime:0.072753s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 145 AND content != '' AND is_checked = 2 AND end_date > 1529911180 ) LIMIT 1 [ RunTime:0.060924s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.064347s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 145 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.062314s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 177 ) LIMIT 1 [ RunTime:0.062408s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 177 AND content != '' AND is_checked = 2 AND end_date > 1529911180 ) LIMIT 1 [ RunTime:0.061343s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 177 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061929s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 204 ) LIMIT 1 [ RunTime:0.066417s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 204 AND content != '' AND is_checked = 2 AND end_date > 1529911180 ) LIMIT 1 [ RunTime:0.061156s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 204 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.067546s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 112 ) LIMIT 1 [ RunTime:0.061245s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 112 AND content != '' AND is_checked = 2 AND end_date > 1529911180 ) LIMIT 1 [ RunTime:0.059234s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 112 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.062119s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 117 ) LIMIT 1 [ RunTime:0.061745s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 117 AND content != '' AND is_checked = 2 AND end_date > 1529911181 ) LIMIT 1 [ RunTime:0.060235s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 117 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.060673s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 150 ) LIMIT 1 [ RunTime:0.062733s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 150 AND content != '' AND is_checked = 2 AND end_date > 1529911181 ) LIMIT 1 [ RunTime:0.059729s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 150 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061249s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 173 ) LIMIT 1 [ RunTime:0.061035s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 173 AND content != '' AND is_checked = 2 AND end_date > 1529911181 ) LIMIT 1 [ RunTime:0.059978s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 173 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061302s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 209 ) LIMIT 1 [ RunTime:0.060817s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 209 AND content != '' AND is_checked = 2 AND end_date > 1529911181 ) LIMIT 1 [ RunTime:0.060622s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 209 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061967s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 121 ) LIMIT 1 [ RunTime:0.060340s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 121 AND content != '' AND is_checked = 2 AND end_date > 1529911181 ) LIMIT 1 [ RunTime:0.060397s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 121 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061302s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 156 ) LIMIT 1 [ RunTime:0.060297s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 156 AND content != '' AND is_checked = 2 AND end_date > 1529911182 ) LIMIT 1 [ RunTime:0.060010s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 156 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.059630s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 184 ) LIMIT 1 [ RunTime:0.059821s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 184 AND content != '' AND is_checked = 2 AND end_date > 1529911182 ) LIMIT 1 [ RunTime:0.060422s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 184 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.060488s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 214 ) LIMIT 1 [ RunTime:0.059810s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 214 AND content != '' AND is_checked = 2 AND end_date > 1529911182 ) LIMIT 1 [ RunTime:0.060978s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 214 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.059574s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 218 ) LIMIT 1 [ RunTime:0.060280s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 218 AND content != '' AND is_checked = 2 AND end_date > 1529911182 ) LIMIT 1 [ RunTime:0.065537s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 218 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.060304s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 126 ) LIMIT 1 [ RunTime:0.064960s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 126 AND content != '' AND is_checked = 2 AND end_date > 1529911182 ) LIMIT 1 [ RunTime:0.061532s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 126 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.059904s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 161 ) LIMIT 1 [ RunTime:0.060502s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 161 AND content != '' AND is_checked = 2 AND end_date > 1529911183 ) LIMIT 1 [ RunTime:0.060043s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 161 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061048s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 189 ) LIMIT 1 [ RunTime:0.060587s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 189 AND content != '' AND is_checked = 2 AND end_date > 1529911183 ) LIMIT 1 [ RunTime:0.060236s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 189 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061745s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 223 ) LIMIT 1 [ RunTime:0.061341s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 223 AND content != '' AND is_checked = 2 AND end_date > 1529911183 ) LIMIT 1 [ RunTime:0.061221s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 223 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061785s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 131 ) LIMIT 1 [ RunTime:0.061619s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 131 AND content != '' AND is_checked = 2 AND end_date > 1529911183 ) LIMIT 1 [ RunTime:0.059742s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 131 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.060074s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 167 ) LIMIT 1 [ RunTime:0.060042s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 167 AND content != '' AND is_checked = 2 AND end_date > 1529911183 ) LIMIT 1 [ RunTime:0.059783s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 167 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061076s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 194 ) LIMIT 1 [ RunTime:0.060551s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 194 AND content != '' AND is_checked = 2 AND end_date > 1529911183 ) LIMIT 1 [ RunTime:0.060129s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 194 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.059307s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 232 ) LIMIT 1 [ RunTime:0.060297s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 232 AND content != '' AND is_checked = 2 AND end_date > 1529911184 ) LIMIT 1 [ RunTime:0.059441s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 232 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.059818s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 136 ) LIMIT 1 [ RunTime:0.061138s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 136 AND content != '' AND is_checked = 2 AND end_date > 1529911184 ) LIMIT 1 [ RunTime:0.060587s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 136 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.060394s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 175 ) LIMIT 1 [ RunTime:0.060515s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 175 AND content != '' AND is_checked = 2 AND end_date > 1529911184 ) LIMIT 1 [ RunTime:0.059951s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 175 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.060077s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 199 ) LIMIT 1 [ RunTime:0.059788s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 199 AND content != '' AND is_checked = 2 AND end_date > 1529911184 ) LIMIT 1 [ RunTime:0.060878s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 199 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.060952s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 143 ) LIMIT 1 [ RunTime:0.063849s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 143 AND content != '' AND is_checked = 2 AND end_date > 1529911184 ) LIMIT 1 [ RunTime:0.060727s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 143 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061103s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 178 ) LIMIT 1 [ RunTime:0.061704s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 178 AND content != '' AND is_checked = 2 AND end_date > 1529911185 ) LIMIT 1 [ RunTime:0.062830s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 178 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.062892s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 202 ) LIMIT 1 [ RunTime:0.060693s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 202 AND content != '' AND is_checked = 2 AND end_date > 1529911185 ) LIMIT 1 [ RunTime:0.060812s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 202 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061604s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 111 ) LIMIT 1 [ RunTime:0.066427s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 111 AND content != '' AND is_checked = 2 AND end_date > 1529911185 ) LIMIT 1 [ RunTime:0.060773s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 111 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061206s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 115 ) LIMIT 1 [ RunTime:0.060988s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 115 AND content != '' AND is_checked = 2 AND end_date > 1529911185 ) LIMIT 1 [ RunTime:0.060294s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 115 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061405s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 148 ) LIMIT 1 [ RunTime:0.061490s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 148 AND content != '' AND is_checked = 2 AND end_date > 1529911185 ) LIMIT 1 [ RunTime:0.061581s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 148 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061995s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 180 ) LIMIT 1 [ RunTime:0.061991s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 180 AND content != '' AND is_checked = 2 AND end_date > 1529911186 ) LIMIT 1 [ RunTime:0.061531s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 180 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061544s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 207 ) LIMIT 1 [ RunTime:0.088850s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 207 AND content != '' AND is_checked = 2 AND end_date > 1529911186 ) LIMIT 1 [ RunTime:0.060865s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 207 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061569s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 81 ) LIMIT 1 [ RunTime:0.059963s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 81 AND content != '' AND is_checked = 2 AND end_date > 1529911186 ) LIMIT 1 [ RunTime:0.059127s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 81 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.059337s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 153 ) LIMIT 1 [ RunTime:0.060496s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 153 AND content != '' AND is_checked = 2 AND end_date > 1529911186 ) LIMIT 1 [ RunTime:0.058613s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 153 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.060401s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 183 ) LIMIT 1 [ RunTime:0.060871s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 183 AND content != '' AND is_checked = 2 AND end_date > 1529911186 ) LIMIT 1 [ RunTime:0.059809s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 183 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.059831s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 212 ) LIMIT 1 [ RunTime:0.060516s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 212 AND content != '' AND is_checked = 2 AND end_date > 1529911186 ) LIMIT 1 [ RunTime:0.060322s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 212 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061532s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 216 ) LIMIT 1 [ RunTime:0.061767s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 216 AND content != '' AND is_checked = 2 AND end_date > 1529911187 ) LIMIT 1 [ RunTime:0.060462s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 216 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061100s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 124 ) LIMIT 1 [ RunTime:0.060572s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 124 AND content != '' AND is_checked = 2 AND end_date > 1529911187 ) LIMIT 1 [ RunTime:0.059362s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 124 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.060026s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 159 ) LIMIT 1 [ RunTime:0.059551s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 159 AND content != '' AND is_checked = 2 AND end_date > 1529911187 ) LIMIT 1 [ RunTime:0.060393s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 159 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.060993s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 187 ) LIMIT 1 [ RunTime:0.060217s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 187 AND content != '' AND is_checked = 2 AND end_date > 1529911187 ) LIMIT 1 [ RunTime:0.059793s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 187 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.060517s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 221 ) LIMIT 1 [ RunTime:0.060200s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 221 AND content != '' AND is_checked = 2 AND end_date > 1529911187 ) LIMIT 1 [ RunTime:0.059757s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 221 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061912s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 129 ) LIMIT 1 [ RunTime:0.060137s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 129 AND content != '' AND is_checked = 2 AND end_date > 1529911188 ) LIMIT 1 [ RunTime:0.058968s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 129 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.060074s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 165 ) LIMIT 1 [ RunTime:0.059295s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 165 AND content != '' AND is_checked = 2 AND end_date > 1529911188 ) LIMIT 1 [ RunTime:0.059554s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 165 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.059765s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 192 ) LIMIT 1 [ RunTime:0.062071s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 192 AND content != '' AND is_checked = 2 AND end_date > 1529911188 ) LIMIT 1 [ RunTime:0.059631s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 192 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.063865s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 226 ) LIMIT 1 [ RunTime:0.060541s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 226 AND content != '' AND is_checked = 2 AND end_date > 1529911188 ) LIMIT 1 [ RunTime:0.059880s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 226 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.060954s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 134 ) LIMIT 1 [ RunTime:0.060242s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 134 AND content != '' AND is_checked = 2 AND end_date > 1529911188 ) LIMIT 1 [ RunTime:0.060606s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 134 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061912s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 171 ) LIMIT 1 [ RunTime:0.066294s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 171 AND content != '' AND is_checked = 2 AND end_date > 1529911188 ) LIMIT 1 [ RunTime:0.060542s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 171 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.059965s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 197 ) LIMIT 1 [ RunTime:0.060836s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 197 AND content != '' AND is_checked = 2 AND end_date > 1529911189 ) LIMIT 1 [ RunTime:0.060463s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 197 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.063191s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 170 ) LIMIT 1 [ RunTime:0.065927s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_school` [ RunTime:0.060841s ]
+[ sql ] [ SQL ] SELECT `school_name` FROM `jd_school` WHERE  (  school_id IN(1) ) ORDER BY sort DESC [ RunTime:0.060497s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 170 AND content != '' AND is_checked = 2 AND end_date > 1529911189 ) LIMIT 1 [ RunTime:0.060556s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 170 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.060176s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 139 ) LIMIT 1 [ RunTime:0.062912s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 139 AND content != '' AND is_checked = 2 AND end_date > 1529911189 ) LIMIT 1 [ RunTime:0.062020s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 139 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.060335s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 178 ) LIMIT 1 [ RunTime:0.060586s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 178 AND content != '' AND is_checked = 2 AND end_date > 1529911189 ) LIMIT 1 [ RunTime:0.060625s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 178 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.060613s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 200 ) LIMIT 1 [ RunTime:0.059809s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 200 AND content != '' AND is_checked = 2 AND end_date > 1529911190 ) LIMIT 1 [ RunTime:0.061560s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 200 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061573s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 90 ) LIMIT 1 [ RunTime:0.064705s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 90 AND content != '' AND is_checked = 2 AND end_date > 1529911190 ) LIMIT 1 [ RunTime:0.061848s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 90 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061953s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 146 ) LIMIT 1 [ RunTime:0.061840s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 146 AND content != '' AND is_checked = 2 AND end_date > 1529911190 ) LIMIT 1 [ RunTime:0.059771s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 146 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.062800s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 179 ) LIMIT 1 [ RunTime:0.061766s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 179 AND content != '' AND is_checked = 2 AND end_date > 1529911190 ) LIMIT 1 [ RunTime:0.064785s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 179 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.063053s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 205 ) LIMIT 1 [ RunTime:0.060082s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 205 AND content != '' AND is_checked = 2 AND end_date > 1529911190 ) LIMIT 1 [ RunTime:0.060055s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 205 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.060687s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 114 ) LIMIT 1 [ RunTime:0.060226s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 114 AND content != '' AND is_checked = 2 AND end_date > 1529911190 ) LIMIT 1 [ RunTime:0.060209s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 114 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061836s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 118 ) LIMIT 1 [ RunTime:0.060002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 118 AND content != '' AND is_checked = 2 AND end_date > 1529911191 ) LIMIT 1 [ RunTime:0.060954s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 118 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061555s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 151 ) LIMIT 1 [ RunTime:0.060608s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 151 AND content != '' AND is_checked = 2 AND end_date > 1529911191 ) LIMIT 1 [ RunTime:0.060488s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 151 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.060023s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 174 ) LIMIT 1 [ RunTime:0.060839s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 174 AND content != '' AND is_checked = 2 AND end_date > 1529911191 ) LIMIT 1 [ RunTime:0.059753s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 174 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.060560s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 210 ) LIMIT 1 [ RunTime:0.059587s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 210 AND content != '' AND is_checked = 2 AND end_date > 1529911191 ) LIMIT 1 [ RunTime:0.059267s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 210 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.059727s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 122 ) LIMIT 1 [ RunTime:0.060568s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 122 AND content != '' AND is_checked = 2 AND end_date > 1529911191 ) LIMIT 1 [ RunTime:0.059185s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 122 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.059488s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 157 ) LIMIT 1 [ RunTime:0.061093s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 157 AND content != '' AND is_checked = 2 AND end_date > 1529911192 ) LIMIT 1 [ RunTime:0.065304s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 157 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061808s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 185 ) LIMIT 1 [ RunTime:0.061721s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 185 AND content != '' AND is_checked = 2 AND end_date > 1529911192 ) LIMIT 1 [ RunTime:0.061006s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 185 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.062178s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 154 ) LIMIT 1 [ RunTime:0.062552s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 154 AND content != '' AND is_checked = 2 AND end_date > 1529911192 ) LIMIT 1 [ RunTime:0.065240s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 154 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061927s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 219 ) LIMIT 1 [ RunTime:0.061294s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 219 AND content != '' AND is_checked = 2 AND end_date > 1529911192 ) LIMIT 1 [ RunTime:0.061745s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 219 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.060946s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 127 ) LIMIT 1 [ RunTime:0.063539s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 127 AND content != '' AND is_checked = 2 AND end_date > 1529911192 ) LIMIT 1 [ RunTime:0.059813s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 127 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061130s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 163 ) LIMIT 1 [ RunTime:0.071448s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 163 AND content != '' AND is_checked = 2 AND end_date > 1529911193 ) LIMIT 1 [ RunTime:0.060596s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 163 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.060594s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 190 ) LIMIT 1 [ RunTime:0.060619s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 190 AND content != '' AND is_checked = 2 AND end_date > 1529911193 ) LIMIT 1 [ RunTime:0.059494s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 190 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061010s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 224 ) LIMIT 1 [ RunTime:0.059904s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 224 AND content != '' AND is_checked = 2 AND end_date > 1529911193 ) LIMIT 1 [ RunTime:0.059950s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 224 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.059518s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 132 ) LIMIT 1 [ RunTime:0.061540s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 132 AND content != '' AND is_checked = 2 AND end_date > 1529911193 ) LIMIT 1 [ RunTime:0.059665s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 132 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.060655s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 168 ) LIMIT 1 [ RunTime:0.060302s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 168 AND content != '' AND is_checked = 2 AND end_date > 1529911193 ) LIMIT 1 [ RunTime:0.060029s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 168 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061303s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 195 ) LIMIT 1 [ RunTime:0.061223s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 195 AND content != '' AND is_checked = 2 AND end_date > 1529911193 ) LIMIT 1 [ RunTime:0.060869s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 195 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.062188s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 237 ) LIMIT 1 [ RunTime:0.061510s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 237 AND content != '' AND is_checked = 2 AND end_date > 1529911194 ) LIMIT 1 [ RunTime:0.060718s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 237 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061507s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 137 ) LIMIT 1 [ RunTime:0.061474s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 137 AND content != '' AND is_checked = 2 AND end_date > 1529911194 ) LIMIT 1 [ RunTime:0.060626s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 137 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.062117s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 176 ) LIMIT 1 [ RunTime:0.060860s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 176 AND content != '' AND is_checked = 2 AND end_date > 1529911194 ) LIMIT 1 [ RunTime:0.060909s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 176 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.063786s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 199 ) LIMIT 1 [ RunTime:0.061354s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 199 AND content != '' AND is_checked = 2 AND end_date > 1529911194 ) LIMIT 1 [ RunTime:0.061578s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 199 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.060679s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 144 ) LIMIT 1 [ RunTime:0.061667s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 144 AND content != '' AND is_checked = 2 AND end_date > 1529911194 ) LIMIT 1 [ RunTime:0.060447s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 144 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.060653s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 178 ) LIMIT 1 [ RunTime:0.060284s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 178 AND content != '' AND is_checked = 2 AND end_date > 1529911195 ) LIMIT 1 [ RunTime:0.060048s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 178 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.060455s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 203 ) LIMIT 1 [ RunTime:0.059700s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 203 AND content != '' AND is_checked = 2 AND end_date > 1529911195 ) LIMIT 1 [ RunTime:0.060319s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 203 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.060967s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 113 ) LIMIT 1 [ RunTime:0.061154s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 113 AND content != '' AND is_checked = 2 AND end_date > 1529911195 ) LIMIT 1 [ RunTime:0.060089s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 113 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.058896s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 116 ) LIMIT 1 [ RunTime:0.060467s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 116 AND content != '' AND is_checked = 2 AND end_date > 1529911195 ) LIMIT 1 [ RunTime:0.059828s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 116 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.062225s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 149 ) LIMIT 1 [ RunTime:0.060745s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 149 AND content != '' AND is_checked = 2 AND end_date > 1529911195 ) LIMIT 1 [ RunTime:0.060205s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 149 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.060088s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 181 ) LIMIT 1 [ RunTime:0.060166s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 181 AND content != '' AND is_checked = 2 AND end_date > 1529911196 ) LIMIT 1 [ RunTime:0.060064s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 181 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.059894s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 208 ) LIMIT 1 [ RunTime:0.059768s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 208 AND content != '' AND is_checked = 2 AND end_date > 1529911196 ) LIMIT 1 [ RunTime:0.060948s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 208 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.059553s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 120 ) LIMIT 1 [ RunTime:0.059456s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 120 AND content != '' AND is_checked = 2 AND end_date > 1529911196 ) LIMIT 1 [ RunTime:0.059056s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 120 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.060429s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 155 ) LIMIT 1 [ RunTime:0.060163s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 155 AND content != '' AND is_checked = 2 AND end_date > 1529911196 ) LIMIT 1 [ RunTime:0.060277s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 155 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.062880s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 184 ) LIMIT 1 [ RunTime:0.060643s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 184 AND content != '' AND is_checked = 2 AND end_date > 1529911196 ) LIMIT 1 [ RunTime:0.060157s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 184 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061192s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 213 ) LIMIT 1 [ RunTime:0.059971s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 213 AND content != '' AND is_checked = 2 AND end_date > 1529911196 ) LIMIT 1 [ RunTime:0.061020s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 213 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.062068s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 217 ) LIMIT 1 [ RunTime:0.060939s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 217 AND content != '' AND is_checked = 2 AND end_date > 1529911197 ) LIMIT 1 [ RunTime:0.060995s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 217 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.063549s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 125 ) LIMIT 1 [ RunTime:0.064174s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 125 AND content != '' AND is_checked = 2 AND end_date > 1529911197 ) LIMIT 1 [ RunTime:0.060816s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 125 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061053s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 160 ) LIMIT 1 [ RunTime:0.062077s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 160 AND content != '' AND is_checked = 2 AND end_date > 1529911197 ) LIMIT 1 [ RunTime:0.061724s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 160 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061187s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 188 ) LIMIT 1 [ RunTime:0.061008s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 188 AND content != '' AND is_checked = 2 AND end_date > 1529911197 ) LIMIT 1 [ RunTime:0.066849s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 188 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.060625s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 222 ) LIMIT 1 [ RunTime:0.061454s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 222 AND content != '' AND is_checked = 2 AND end_date > 1529911197 ) LIMIT 1 [ RunTime:0.061299s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 222 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.062744s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 130 ) LIMIT 1 [ RunTime:0.061486s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 130 AND content != '' AND is_checked = 2 AND end_date > 1529911198 ) LIMIT 1 [ RunTime:0.064277s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 130 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.062041s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 166 ) LIMIT 1 [ RunTime:0.063967s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 166 AND content != '' AND is_checked = 2 AND end_date > 1529911198 ) LIMIT 1 [ RunTime:0.067465s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 166 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061300s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 193 ) LIMIT 1 [ RunTime:0.060486s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 193 AND content != '' AND is_checked = 2 AND end_date > 1529911198 ) LIMIT 1 [ RunTime:0.060749s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 193 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061866s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 227 ) LIMIT 1 [ RunTime:0.061923s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 227 AND content != '' AND is_checked = 2 AND end_date > 1529911198 ) LIMIT 1 [ RunTime:0.061127s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 227 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.079316s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 135 ) LIMIT 1 [ RunTime:0.062147s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 135 AND content != '' AND is_checked = 2 AND end_date > 1529911198 ) LIMIT 1 [ RunTime:0.073583s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 135 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.064510s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 172 ) LIMIT 1 [ RunTime:0.078926s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 172 AND content != '' AND is_checked = 2 AND end_date > 1529911199 ) LIMIT 1 [ RunTime:0.061383s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 172 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.060852s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 198 ) LIMIT 1 [ RunTime:0.061569s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 198 AND content != '' AND is_checked = 2 AND end_date > 1529911199 ) LIMIT 1 [ RunTime:0.067455s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 198 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.064210s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 141 ) LIMIT 1 [ RunTime:0.061928s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 141 AND content != '' AND is_checked = 2 AND end_date > 1529911199 ) LIMIT 1 [ RunTime:0.062384s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 141 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.062244s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 178 ) LIMIT 1 [ RunTime:0.063718s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 178 AND content != '' AND is_checked = 2 AND end_date > 1529911199 ) LIMIT 1 [ RunTime:0.062261s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 178 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.062868s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 201 ) LIMIT 1 [ RunTime:0.064212s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 201 AND content != '' AND is_checked = 2 AND end_date > 1529911199 ) LIMIT 1 [ RunTime:0.061976s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 201 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061588s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 110 ) LIMIT 1 [ RunTime:0.061613s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 110 AND content != '' AND is_checked = 2 AND end_date > 1529911200 ) LIMIT 1 [ RunTime:0.060296s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 110 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.060206s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 147 ) LIMIT 1 [ RunTime:0.061555s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 147 AND content != '' AND is_checked = 2 AND end_date > 1529911200 ) LIMIT 1 [ RunTime:0.061341s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 147 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061038s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 178 ) LIMIT 1 [ RunTime:0.059523s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 178 AND content != '' AND is_checked = 2 AND end_date > 1529911200 ) LIMIT 1 [ RunTime:0.060228s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 178 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.060330s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 206 ) LIMIT 1 [ RunTime:0.063684s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 206 AND content != '' AND is_checked = 2 AND end_date > 1529911200 ) LIMIT 1 [ RunTime:0.060775s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 206 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.060993s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 112 ) LIMIT 1 [ RunTime:0.061537s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 112 AND content != '' AND is_checked = 2 AND end_date > 1529911200 ) LIMIT 1 [ RunTime:0.062169s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 112 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061573s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 119 ) LIMIT 1 [ RunTime:0.061597s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 119 AND content != '' AND is_checked = 2 AND end_date > 1529911200 ) LIMIT 1 [ RunTime:0.062393s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 119 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061705s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 152 ) LIMIT 1 [ RunTime:0.060939s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 152 AND content != '' AND is_checked = 2 AND end_date > 1529911201 ) LIMIT 1 [ RunTime:0.061501s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 152 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061340s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 182 ) LIMIT 1 [ RunTime:0.061076s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 182 AND content != '' AND is_checked = 2 AND end_date > 1529911201 ) LIMIT 1 [ RunTime:0.060857s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 182 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.060437s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 211 ) LIMIT 1 [ RunTime:0.060428s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 211 AND content != '' AND is_checked = 2 AND end_date > 1529911201 ) LIMIT 1 [ RunTime:0.060441s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 211 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.064208s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 123 ) LIMIT 1 [ RunTime:0.060124s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 123 AND content != '' AND is_checked = 2 AND end_date > 1529911201 ) LIMIT 1 [ RunTime:0.059603s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 123 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061305s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 158 ) LIMIT 1 [ RunTime:0.061986s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 158 AND content != '' AND is_checked = 2 AND end_date > 1529911201 ) LIMIT 1 [ RunTime:0.061667s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 158 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.059972s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 186 ) LIMIT 1 [ RunTime:0.059947s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 186 AND content != '' AND is_checked = 2 AND end_date > 1529911202 ) LIMIT 1 [ RunTime:0.060050s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 186 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.060924s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 215 ) LIMIT 1 [ RunTime:0.060624s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 215 AND content != '' AND is_checked = 2 AND end_date > 1529911202 ) LIMIT 1 [ RunTime:0.061922s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 215 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061617s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 220 ) LIMIT 1 [ RunTime:0.061017s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 220 AND content != '' AND is_checked = 2 AND end_date > 1529911202 ) LIMIT 1 [ RunTime:0.060988s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 220 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.060598s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 128 ) LIMIT 1 [ RunTime:0.061329s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 128 AND content != '' AND is_checked = 2 AND end_date > 1529911202 ) LIMIT 1 [ RunTime:0.062055s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 128 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061329s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 164 ) LIMIT 1 [ RunTime:0.062415s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 164 AND content != '' AND is_checked = 2 AND end_date > 1529911202 ) LIMIT 1 [ RunTime:0.060618s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 164 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061737s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 191 ) LIMIT 1 [ RunTime:0.061362s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 191 AND content != '' AND is_checked = 2 AND end_date > 1529911203 ) LIMIT 1 [ RunTime:0.061031s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 191 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061768s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 225 ) LIMIT 1 [ RunTime:0.060756s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 225 AND content != '' AND is_checked = 2 AND end_date > 1529911203 ) LIMIT 1 [ RunTime:0.059899s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 225 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.060916s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 133 ) LIMIT 1 [ RunTime:0.062045s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 133 AND content != '' AND is_checked = 2 AND end_date > 1529911203 ) LIMIT 1 [ RunTime:0.060282s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 133 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.066312s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 169 ) LIMIT 1 [ RunTime:0.061173s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 169 AND content != '' AND is_checked = 2 AND end_date > 1529911203 ) LIMIT 1 [ RunTime:0.061138s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 169 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.062196s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 196 ) LIMIT 1 [ RunTime:0.061420s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 196 AND content != '' AND is_checked = 2 AND end_date > 1529911203 ) LIMIT 1 [ RunTime:0.060775s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 196 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.060862s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 240 ) LIMIT 1 [ RunTime:0.060368s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 240 AND content != '' AND is_checked = 2 AND end_date > 1529911203 ) LIMIT 1 [ RunTime:0.059746s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 240 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.060246s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 138 ) LIMIT 1 [ RunTime:0.060474s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 138 AND content != '' AND is_checked = 2 AND end_date > 1529911204 ) LIMIT 1 [ RunTime:0.060026s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 138 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.059778s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 176 ) LIMIT 1 [ RunTime:0.059856s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 176 AND content != '' AND is_checked = 2 AND end_date > 1529911204 ) LIMIT 1 [ RunTime:0.059115s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 176 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.061054s ]
+[ sql ] [ SQL ] SELECT `school_str`,`member_id`,`true_name`,`face_photo`,`is_clinic`,`recom` FROM `jd_doctor` WHERE  (  member_id = 199 ) LIMIT 1 [ RunTime:0.060897s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 199 AND content != '' AND is_checked = 2 AND end_date > 1529911204 ) LIMIT 1 [ RunTime:0.061371s ]
+[ sql ] [ SQL ] SELECT `o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 199 AND op.`inherit_id` = 31) AND o.pay_status = 2 AND o.order_type = 4 ) [ RunTime:0.062284s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `only_token` = '1529910235x6ERH&'  AND `is_status` = 0 LIMIT 1 [ RunTime:0.060786s ]
+---------------------------------------------------------------
+[ 2018-06-25T19:02:52+08:00 ] 0.0.0.0 GET /uploads/video/video7.mp
+[ info ] localhost:7037/uploads/video/video7.mp [运行时间：0.058688s][吞吐率：17.04req/s] [内存消耗：1,716.65kb] [文件加载：41]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'uploads',
+    2 => 'video',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/uploads/video/video7.mp',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; PXAPP=da6b34cc8f8d2cc3310926478ad2fdc2; PHPSESSID=0ti4909h701p4l6mvn0jdmgu92; loginTime=1529917652',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-25T19:02:52+08:00 ] 0.0.0.0 GET /favicon.ico
+[ info ] localhost:7037/favicon.ico [运行时间：0.036212s][吞吐率：27.62req/s] [内存消耗：1,716.63kb] [文件加载：41]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'favicon.ico',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/favicon.ico',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://localhost:7037/uploads/video/video7.mp',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; PXAPP=da6b34cc8f8d2cc3310926478ad2fdc2; PHPSESSID=0ti4909h701p4l6mvn0jdmgu92; loginTime=1529917652',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File

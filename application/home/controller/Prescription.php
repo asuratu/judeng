@@ -186,7 +186,7 @@ class Prescription extends Common
             $stateMap['`state_id`'] = $data['state_id'];
             $stateMap['`is_display`'] = 1;
             $tempInfo = db('drug_state')->where($stateMap)->field("`state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic`")->find();
-            $tempInfo['pic'] = config('url').$tempInfo['pic'];
+            $tempInfo['pic'] = $tempInfo['pic'];
 
             //优先判断是不是选特色方剂
             if ($data['type'] == 1) {

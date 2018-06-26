@@ -128,7 +128,7 @@ class Sale extends Common
                 ->field('img_url')
                 ->find();
             //php判断二维码文件能否打开
-            if ($img && file_get_contents($img['img_url'])){
+            if ($img['img_url'] && file_get_contents($img['img_url'])){
                 $img_url = $img['img_url'];
             }else{
                 //文件不存在
@@ -139,7 +139,7 @@ class Sale extends Common
                     ->update($insertData);
                 $img_url = $insertData['img_url'];
             }
-            $url =  config('url') . createPic(config('url').'/member/inviteInherit?memberId='.$data['member_id'].'&inheritId='.$data['inherit_id']);
+            $url = config('url').'/member/inviteInherit?memberId='.$data['member_id'].'&inheritId='.$data['inherit_id'];
             ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[['successDoc'=>$successDoc, 'img'=>$img_url, 'shareUrl'=>$url]]));
         }
     }
@@ -214,11 +214,16 @@ class Sale extends Common
                     ->find();
 
                 //查询流派信息
-                $docInfo['school_arr'] = db('school')
-                    ->where("school_id IN({$docInfo['school_str']})")
-                    ->field("school_name")
-                    ->order('sort DESC')
-                    ->select();
+                if ($docInfo['school_str']) {
+                    $docInfo['school_arr'] = db('school')
+                        ->where("school_id IN({$docInfo['school_str']})")
+                        ->field("school_name")
+                        ->order('sort DESC')
+                        ->select();
+                } else {
+                    $docInfo['school_arr'] = array();
+                }
+
 
                 //是否有自建特色方剂 -- 特色标识
                 $existGoods = db('self_goods')
