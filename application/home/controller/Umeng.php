@@ -102,6 +102,18 @@ class Umeng extends Common
         header("Access-Control-Allow-Methods:GET,POST");
         if($this->request->isPost()) {
             $data = input('post.');
+            $doctor = db('doctor')->where("member_id={$data['doctor_id']}")->find();
+            // 下面执行推送
+            $extra['type'] = 6;
+            $data['title'] = '咨询消息';
+            $data['comment'] = '你收到一条患者咨询消息，请及时查看';
+            if ($doctor['is_login'] == 1) {
+                if ($doctor['is_system'] == 0) {     // is_system == 0 为安卓系统
+                    Model('Umeng')->PtoAndroid(array($doctor['device_tokens']), $data['comment'], $data['title'], $data['comment'], $extra, 'go_app');
+                } else {
+                    Model('Umeng')->PtoIos(array($doctor['device_tokens']), $data['comment'], $extra, 'go_app');
+                }
+            }
 
             // 医生患者列表，有则修改，没有择添加
             Model('Number')->doctorCounsell($data['member_id'], $data['doctor_id'], '咨询');
@@ -129,6 +141,7 @@ class Umeng extends Common
             $doctor = db('doctor')->where("member_id={$data['doctor_id']}")->find();
             $extra = array();
             $extra['type'] = $data['type'];
+            $after_open = 'go_custom';
             if ($data['type'] == 0) {
                 $data['title'] = '认证通知';
                 $data['comment'] = $doctor['true_name'] . '医生您的资质认证已通过，您的医馆已经成功开启了，可以开始设置服务进行接诊了';
@@ -162,9 +175,9 @@ class Umeng extends Common
             // 下面执行推送
             if ($doctor['is_login'] == 1) {
                 if ($doctor['is_system'] == 0) {     // is_system == 0 为安卓系统
-                    Model('Umeng')->PtoAndroid(array($doctor['device_tokens']), $data['comment'], $data['title'], $data['comment'], $extra);
+                    Model('Umeng')->PtoAndroid(array($doctor['device_tokens']), $data['comment'], $data['title'], $data['comment'], $extra, $after_open);
                 } else {
-                    Model('Umeng')->PtoIos(array($doctor['device_tokens']), $data['comment'], $extra);
+                    Model('Umeng')->PtoIos(array($doctor['device_tokens']), $data['comment'], $extra, $after_open);
                 }
             }
             ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[]));

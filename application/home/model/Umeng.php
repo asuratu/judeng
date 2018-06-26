@@ -20,7 +20,7 @@ class Umeng extends Model
     /*
         安卓发送
     */
-    public function PtoAndroid($device_tokens, $ticker, $title, $text, $extra)
+    public function PtoAndroid($device_tokens, $ticker, $title, $text, $extra = array(), $after_open = 'go_custom', $type = 'unicast')
     {
 
         if (count($device_tokens) > 500) {
@@ -28,7 +28,7 @@ class Umeng extends Model
         }
 
         //拼接签名
-        $post_data = $this->_android($device_tokens, $ticker, $title, $text, $extra);
+        $post_data = $this->_android($device_tokens, $ticker, $title, $text, $extra, $after_open, $type);
         $sign = $this->_makeSign($post_data, 1);
         $url = $this->_config['url'] . '?sign=' . $sign;
 
@@ -53,14 +53,14 @@ class Umeng extends Model
     /*
         iOS发送
     */
-    public function PtoIos($device_tokens, $text, $extra)
+    public function PtoIos($device_tokens, $text, $extra = array(), $after_open = 'go_custom', $type = 'unicast')
     {
         if (count($device_tokens) > 500) {
             die('设备超过500个');
         }
 
         //拼接post数据
-        $post_data = $this->_ios($device_tokens, $text, $extra);
+        $post_data = $this->_ios($device_tokens, $text, $extra, $after_open, $type);
 
         //拼接签名
         $sign = $this->_makeSign($post_data, 2);
@@ -120,7 +120,7 @@ class Umeng extends Model
                     device_tokens 	array 设备号
         @return
     */
-    private function _android($device_tokens, $ticker, $title, $text, $extra = array(), $type = 'unicast')
+    private function _android($device_tokens, $ticker, $title, $text, $extra = array(), $after_open = 'go_custom', $type = 'unicast')
     {
         $temp_arr = array(
             'appkey' => $this->_config['and_app_key'],
@@ -133,7 +133,7 @@ class Umeng extends Model
                     'ticker' => $ticker,
                     'title' => $title,
                     'text' => $text,
-                    'after_open' => 'go_custom',
+                    'after_open' => $after_open,
                     'custom' => $extra, //点击通知后做的事
 					),
                 'extra' => $extra,
@@ -154,7 +154,7 @@ class Umeng extends Model
                     device_tokens 	array 设备号
         @return
     */
-    private function _ios($device_tokens, $text, $extra = array(), $type = 'unicast')
+    private function _ios($device_tokens, $text, $extra = array(), $after_open = 'go_custom', $type = 'unicast')
     {
         $temp_arr = array(
             'appkey' => $this->_config['ios_app_key'],
@@ -164,10 +164,10 @@ class Umeng extends Model
             'payload' => array(
                 'aps' => array(
                     'alert' => $text,
-                    'after_open' => 'go_app',
-//                    'custom' => $extra, //点击通知后做的事
+                    'after_open' => $after_open,
+                    'custom' => $extra, //点击通知后做的事
                 ),
-//                $extra,
+                'extra' => $extra,
             ),
             'production_mode' 		=> 'false',//测试，上线为true
             'description' 			=> $text,//描述
