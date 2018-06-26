@@ -1,0 +1,83 @@
+---------------------------------------------------------------
+[ 2018-06-26T11:17:18+08:00 ] 0.0.0.0 POST /order/toOnlineorder
+[ info ] localhost:7037/order/toOnlineorder [运行时间：0.288641s][吞吐率：3.46req/s] [内存消耗：3,092.69kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'toOnlineorder',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '170',
+  'x-original-url' => '/order/toOnlineorder',
+  'user-agent' => 'YiSong/1.3.0 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=3c9a66d4a3662b1f40a7f44039b6ce17',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'only_token' => '152997957974y^Sx',
+  'mobile' => '0',
+  'order_id' => '0',
+  'area_id' => 2,
+  'doctor_id' => 170,
+  '_time' => '1529982928',
+  'patient_id' => '97',
+  'sign' => 'f1c2a9763bc7452531e82a622583f192',
+)
+[ info ] [ RUN ] app\home\controller\Order->toOnlineorder[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.097576s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_prescription` [ RunTime:0.063928s ]
+[ sql ] [ SQL ] SELECT op.`relation_id`,op.`state_id`,op.`order_id` FROM `jd_order_prescription` `op` INNER JOIN `jd_order` `o` ON `o`.`order_id`=`op`.`order_id` WHERE  o.`doctor_id` = 170  AND o.`order_type` = 3 ORDER BY op.`add_date` DESC LIMIT 1 [ RunTime:0.063212s ]
+---------------------------------------------------------------
+[ 2018-06-26T11:45:55+08:00 ] 0.0.0.0 POST /doctor/dataPreview
+[ info ] localhost:7037/doctor/dataPreview [运行时间：0.476730s][吞吐率：2.10req/s] [内存消耗：3,214.99kb] [文件加载：58]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'doctor',
+    2 => 'dataPreview',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/x-www-form-urlencoded;charset=UTF-8',
+  'content-length' => '99',
+  'x-original-url' => '/doctor/dataPreview',
+  'user-agent' => 'okhttp/3.8.0',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh',
+  'accept-encoding' => 'gzip',
+  'accept' => 'application/json',
+  'connection' => 'Keep-Alive',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '78',
+  '_time' => '1529984704',
+  'sign' => '5197fc49aae7fed2a756f12a353ef920',
+  'only_token' => '1529984645E2@]um',
+)
+[ info ] [ RUN ] app\home\controller\Doctor->dataPreview[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Doctor.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.085212s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.061091s ]
+[ sql ] [ SQL ] SELECT `member_id`,`true_name`,`face_photo`,`goodat_id`,`introduction`,`recom`,`is_clinic`,`hospital_id`,`hospital_repart_str`,`school_str`,`inherit`,`title_str`,`graphic_speech`,`love_inquiry`,`concealment_number`,`online_inquiry`,`first_price`,`consultation_price` FROM `jd_doctor` WHERE  (  member_id = 78 ) LIMIT 1 [ RunTime:0.060799s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_diagnosis_set` [ RunTime:0.058768s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_diagnosis_set` WHERE  (  member_id = 78 ) LIMIT 1 [ RunTime:0.058837s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_school` [ RunTime:0.057250s ]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') AND is_display = 1 )' at line 1[D:\workLP\20180502\judeng\wwwroot\thinkphp\library\think\db\Connection.php:388]

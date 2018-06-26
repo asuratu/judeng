@@ -65,7 +65,6 @@ class Order extends Common
                 ->field("op.`relation_id`, op.`state_id`, op.`order_id`")
                 ->order("op.`add_date` DESC")
                 ->find();
-            var_dump($lastOrder);die;
             //处理药房药态信息
             if ($lastOrder) {
                 //存在历史方, 则使用最新历史方的药房药态

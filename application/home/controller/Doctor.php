@@ -396,7 +396,7 @@ class Doctor extends Common
         $doctor['love_inquiry'] = $diagnosis_set['love_num'];
 
         //是否显示流派
-        if ($doctor['inherit']) {
+        if ($doctor['inherit'] && $doctor['school_str']) {
             $doctor['school_str'] = db('school')
                 ->where("school_id IN({$doctor['school_str']}) AND is_display = 1")
                 ->field('school_name')
