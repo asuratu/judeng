@@ -109,9 +109,9 @@ class Umeng extends Common
             $data['comment'] = '你收到一条患者咨询消息，请及时查看';
             if ($doctor['is_login'] == 1) {
                 if ($doctor['is_system'] == 0) {     // is_system == 0 为安卓系统
-                    Model('Umeng')->PtoAndroid(array($doctor['device_tokens']), $data['comment'], $data['title'], $data['comment'], $extra, 'go_app');
+                    Model('Umeng')->PtoAndroid(array($doctor['device_tokens']), $data['comment'], $data['title'], $data['comment'], $extra);
                 } else {
-                    Model('Umeng')->PtoIos(array($doctor['device_tokens']), $data['comment'], $extra, 'go_app');
+                    Model('Umeng')->PtoIos(array($doctor['device_tokens']), $data['comment'], $extra);
                 }
             }
 
@@ -168,16 +168,19 @@ class Umeng extends Common
 
                 $data['title'] = '服务包通知';
                 $data['comment'] = $doctor['true_name'] . '医生您的服务包审核已通过，在服务包详情页可以进行查看';
+            } else if ($data['type'] == 6) {
+                $data['title'] = '咨询消息';
+                $data['comment'] = '你收到一条患者咨询消息，请及时查看';
             }
 //            $a = 'ABcdef';
 //            var_dump(strtolower($a));die;
-//            $doctor['is_system'] = 0;
+            $doctor['is_system'] = 1;
             // 下面执行推送
             if ($doctor['is_login'] == 1) {
                 if ($doctor['is_system'] == 0) {     // is_system == 0 为安卓系统
                     Model('Umeng')->PtoAndroid(array($doctor['device_tokens']), $data['comment'], $data['title'], $data['comment'], $extra, $after_open);
                 } else {
-                    Model('Umeng')->PtoIos(array($doctor['device_tokens']), $data['comment'], $extra, $after_open);
+                    Model('Umeng')->PtoIos(array('17000b98d56d1434173053f2af9be23ad977f1ac1ed2e7097600415ea846fe99'), $data['comment'], $extra, $after_open);
                 }
             }
             ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[]));
