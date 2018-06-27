@@ -104,7 +104,7 @@ class Umeng extends Common
             $data = input('post.');
             $doctor = db('doctor')->where("member_id={$data['doctor_id']}")->find();
             // 下面执行推送
-            $after_open = 'go_app';
+            $after_open = 'go_custom';
             $extra['type'] = 6;
             $data['title'] = '咨询消息';
             $data['comment'] = '你收到一条患者咨询消息，请及时查看';
