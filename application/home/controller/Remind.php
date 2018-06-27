@@ -58,7 +58,7 @@ class Remind extends Common
                 $data['openid'] = $member['openid'];
                 $data['member_name'] = $member['member_name'];
                 Model('Weixin')->messageTemplate(6, $data);
-            }  {                            // 待复诊提醒
+            }  else {                            // 待复诊提醒
                 $data['url'] = 'http://wechat.bohetanglao.com/home/advise/chat/memberid/' . $member['doctor_id'] . '/type/1.html';
                 $data['first'] = '您有一张待处理复诊单，请及时查看。';
                 $data['prescription'] = '门诊复诊';

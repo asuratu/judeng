@@ -104,14 +104,15 @@ class Umeng extends Common
             $data = input('post.');
             $doctor = db('doctor')->where("member_id={$data['doctor_id']}")->find();
             // 下面执行推送
+            $after_open = 'go_custom';
             $extra['type'] = 6;
             $data['title'] = '咨询消息';
             $data['comment'] = '你收到一条患者咨询消息，请及时查看';
             if ($doctor['is_login'] == 1) {
                 if ($doctor['is_system'] == 0) {     // is_system == 0 为安卓系统
-                    Model('Umeng')->PtoAndroid(array($doctor['device_tokens']), $data['comment'], $data['title'], $data['comment'], $extra, 'go_app');
+                    Model('Umeng')->PtoAndroid(array($doctor['device_tokens']), $data['comment'], $data['title'], $data['comment'], $extra, $after_open);
                 } else {
-                    Model('Umeng')->PtoIos(array($doctor['device_tokens']), $data['comment'], $extra, 'go_app');
+                    Model('Umeng')->PtoIos(array($doctor['device_tokens']), $data['comment'], $extra, $after_open);
                 }
             }
 
@@ -168,10 +169,21 @@ class Umeng extends Common
 
                 $data['title'] = '服务包通知';
                 $data['comment'] = $doctor['true_name'] . '医生您的服务包审核已通过，在服务包详情页可以进行查看';
+            } else if ($data['type'] == 6) {
+                $data['title'] = '咨询消息';
+                $data['comment'] = '你收到一条患者咨询消息，请及时查看';
+            } else if ($data['type'] == 7) {
+                $after_open = 'go_app';
+                $data['title'] = '传承认证失败';
+                $data['comment'] = $doctor['true_name'] . '医生您的传承审核已失败，请联系客服处理';
+            } else if ($data['type'] == 8) {
+                $after_open = 'go_app';
+                $data['title'] = '服务包认证失败';
+                $data['comment'] = $doctor['true_name'] . '医生您的服务包审核已失败，请联系客服处理';
             }
 //            $a = 'ABcdef';
 //            var_dump(strtolower($a));die;
-//            $doctor['is_system'] = 0;
+//            $doctor['is_system'] = 1;
             // 下面执行推送
             if ($doctor['is_login'] == 1) {
                 if ($doctor['is_system'] == 0) {     // is_system == 0 为安卓系统
