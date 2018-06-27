@@ -173,7 +173,7 @@ class Umeng extends Model
         );
         if ($after_open != 'go_app') {
             $temp_arr['payload']['extra'] = $extra;
-        }
+        }var_dump($temp_arr);
         return json_encode($temp_arr);
     }
 
