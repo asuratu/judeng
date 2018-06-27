@@ -114,7 +114,6 @@ class Certified extends Common
 
                 $bankId = $data['bank_id'] ?: 0;
                 unset($data['bank_id']);
-
                 $_identity1 = db('doctor')->where($temp)->update($upInfo);
 
 

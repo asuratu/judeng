@@ -86,6 +86,8 @@ class Order extends Common
                     ->field("d.`relation_id`, d.`prescription_id`, d.`state_id`, d.`describe`, p.`prescription_name`, p.`prescription_id`, p.`area_name`, ds.`state_name`, ds.`make`, ds.`taking`, ds.`instructions`, ds.`weight`, ds.`pic`")
                     ->order('d.`relation_id` DESC')
                     ->find();
+//                var_dump($houseAllArr);die;
+
             } else {
                 //没有历史开方
                 $houseMap['d.`is_display`'] = 1;
@@ -157,7 +159,7 @@ class Order extends Common
                     ->field("*")
                     ->find();
                 $mainInfo['patient_id'] = $patientInfo['member_id'];
-                $mainInfo['patient_name'] = $patientInfo['member_name'];
+                $mainInfo['patient_name'] = $patientInfo['true_name'];
                 $mainInfo['mobile'] = $patientInfo['mobile'];
                 $mainInfo['sex'] = $patientInfo['sex'];
                 //计算年龄
@@ -929,10 +931,10 @@ class Order extends Common
                             ->where("log_id = {$orderDetail['log_id']}")
                             ->update($updateInfo);
                         Db::commit();
-                        ajaxReturn(array('code'=>0, 'info'=>'本次爱心问诊已结束','data'=>[]));
+                        ajaxReturn(array('code'=>1, 'info'=>'本次爱心问诊已结束','data'=>[]));
                     } else {
                         Db::commit();
-                        ajaxReturn(array('code'=>0, 'info'=>'本次问诊已结束','data'=>[]));
+                        ajaxReturn(array('code'=>1, 'info'=>'本次问诊已结束','data'=>[]));
                     }
                 } else {
                     //有订单信息(非爱心问诊)
@@ -959,14 +961,14 @@ class Order extends Common
                             ->where("log_id = {$wenzhenDetail['log_id']}")
                             ->update($updateInfo);
                         Db::commit();
-                        ajaxReturn(array('code'=>0, 'info'=>'本次问诊已结束','data'=>[]));
+                        ajaxReturn(array('code'=>1, 'info'=>'本次问诊已结束','data'=>[]));
                     } else {
                         Db::commit();
-                        ajaxReturn(array('code'=>0, 'info'=>'本次问诊已结束','data'=>[]));
+                        ajaxReturn(array('code'=>1, 'info'=>'本次问诊已结束','data'=>[]));
                     }
                 }
                 Db::rollback();
-                ajaxReturn(array('code'=>0,'info'=>'本次问诊已结束!','data'=>[]));
+                ajaxReturn(array('code'=>1,'info'=>'本次问诊已结束!','data'=>[]));
             } catch (\Exception $e) {
                 Db::rollback();
                 return false;
@@ -1004,10 +1006,45 @@ class Order extends Common
                         ->order('log_id DESC')
                         ->find();
                     if (empty($wenzhenDetail)) {
-                        ajaxReturn(array('code'=>0,'info'=>'暂无问诊','data'=>[]));
+                        ajaxReturn(array('code'=>1,'info'=>'暂无问诊','data'=>[]));
                     }
                     Db::commit();
                     ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>[$wenzhenDetail]));
+            } catch (\Exception $e) {
+                Db::rollback();
+                return false;
+            }
+        }
+    }
+
+
+    public function getOrderDetail() {
+        if($this->request->isPost())
+        {
+            try{
+                Db::startTrans();
+                $data=input('post.');
+                $res=checkSign($data);
+                if($res['code']==0)
+                {
+                    ajaxReturn($res);
+                }
+//                if($data['doctor_id']=='' || $data['patient_id']=='')
+//                {
+//                    ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+//                }
+
+//                    //查询该医生和该患者最新的一次问诊记录
+//                    $wenzhenDetail = db('wenzhen')
+//                        ->where("type IN(0,1,2) AND patient_id = {$data['patient_id']} AND doctor_id = {$data['doctor_id']}")
+//                        ->field("*")
+//                        ->order('log_id DESC')
+//                        ->find();
+//                    if (empty($wenzhenDetail)) {
+//                        ajaxReturn(array('code'=>1,'info'=>'暂无问诊','data'=>[]));
+//                    }
+                    Db::commit();
+                    ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>['url'=>'http://wwww.baidu.com']));
             } catch (\Exception $e) {
                 Db::rollback();
                 return false;
