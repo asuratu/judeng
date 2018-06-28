@@ -371,6 +371,8 @@ class Order extends Common
                 $orderPrescriptionInsert['dose'] = $data['dose'] ?: 0;
                 $orderPrescriptionInsert['state_id'] = $data['state_id'] ?: 0;
                 $orderPrescriptionInsert['relation_id'] = $data['relation_id'] ?: 0;
+
+                //处方订单要保存特色方剂id
                 $orderPrescriptionInsert['special_id'] = $data['special_id'] ?: 0;
                 $orderPrescriptionInsert['make'] = $data['make'] ?: '';
                 $orderPrescriptionInsert['weight'] = $data['weight'] ?: '';
@@ -765,7 +767,7 @@ class Order extends Common
                         ->find();
 
                     if (!$orderDetail) {
-                        ajaxReturn(array('code'=>0,'info'=>'订单不正确!','data'=>[]));
+                        ajaxReturn(array('code'=>1,'info'=>'订单不正确!','data'=>[]));
                     }
 
                     //图文咨询或复诊订单信息
@@ -1029,22 +1031,22 @@ class Order extends Common
                 {
                     ajaxReturn($res);
                 }
-//                if($data['doctor_id']=='' || $data['patient_id']=='')
-//                {
-//                    ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
-//                }
+                if($data['doctor_id']=='' || $data['patient_id']=='' || $data['order_id']=='')
+                {
+                    ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+                }
 
-//                    //查询该医生和该患者最新的一次问诊记录
-//                    $wenzhenDetail = db('wenzhen')
-//                        ->where("type IN(0,1,2) AND patient_id = {$data['patient_id']} AND doctor_id = {$data['doctor_id']}")
-//                        ->field("*")
-//                        ->order('log_id DESC')
-//                        ->find();
-//                    if (empty($wenzhenDetail)) {
-//                        ajaxReturn(array('code'=>1,'info'=>'暂无问诊','data'=>[]));
-//                    }
+                    //查询该医生和该患者最新的一次问诊记录
+                    $wenzhenDetail = db('order')
+                        ->where("order_id = {$data['order_id']} AND patient_id = {$data['patient_id']} AND doctor_id = {$data['doctor_id']}")
+                        ->field("*")
+                        ->find();
+
+                    if (empty($wenzhenDetail)) {
+                        ajaxReturn(array('code'=>1,'info'=>'','data'=>[]));
+                    }
                     Db::commit();
-                    ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>['url'=>'http://wwww.baidu.com']));
+                    ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>['url'=>config('url').'/order/detail?id='.$wenzhenDetail['order_id']]));
             } catch (\Exception $e) {
                 Db::rollback();
                 return false;
@@ -1066,6 +1068,16 @@ class Order extends Common
         //处理药材信息
         $drugInfo = json_decode($lastOrder['drug_str']);
 
+        //处理服用方法
+        $taking = explode('#', $lastOrder['taking']);
+
+        //查询是否有特色方剂
+        $specialDetail = db('special')
+            ->where("special_id = {$lastOrder['special_id']}")
+            ->field("*")
+            ->find();
+        $specialDrugInfo = json_decode($specialDetail['content']);
+
         //查询药房药态信息
         $relationDetail = db('drug_relation')->alias('d')
             ->join(['jd_prescription'=>'p'], 'd.prescription_id = p.prescription_id' , 'inner')
@@ -1077,6 +1089,8 @@ class Order extends Common
 
         $this->assign("lastOrder", $lastOrder);
         $this->assign("drugInfo", $drugInfo);
+        $this->assign("taking", $taking);
+        $this->assign("specialDrugInfo", $specialDrugInfo);
         $this->assign("relationDetail", $relationDetail);
         return  $this->fetch('/doctor/detail');
     }
