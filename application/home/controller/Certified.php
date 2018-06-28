@@ -84,6 +84,7 @@ class Certified extends Common
                 }
 
                 $temp['member_id'] = $data['member_id'];
+
                 $detail = db('doctor')->where($temp)->field("*")->find();
 
                 //若认证已通过或审核中, 则不可提交
@@ -116,6 +117,13 @@ class Certified extends Common
                 unset($data['bank_id']);
                 $_identity1 = db('doctor')->where($temp)->update($upInfo);
 
+                //修改图文问诊和复诊的初始价格
+                $con = Model('Setting')->findAdmin();
+                $upSet['image_price'] = $con['diagnosis_price'];
+                $upSet['reimage_price'] = $con['revisit_price'];
+                $upSet['release_date'] = time();
+                $upSetResult = db('diagnosis_set')->where($temp)->update($upSet);
+
 
                 //更新或插入银行信息
                 $temp['bank_id'] = $bankId;
@@ -146,6 +154,7 @@ class Certified extends Common
                     $upPaperInfo['member_id'] = $data['member_id'];
                     $_identity3 = db('doctor_info')->insert($upPaperInfo);
                 }
+
 
                 if ($_identity1 && $_identity2 && $_identity3) {
                     Db::commit();
