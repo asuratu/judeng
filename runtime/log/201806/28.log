@@ -852,3 +852,1093 @@
   'image' => 'bg02.jpg',
 )
 [ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-28T16:21:46+08:00 ] 0.0.0.0 GET /order/detail
+[ info ] localhost:7037/order/detail [运行时间：0.050523s][吞吐率：19.79req/s] [内存消耗：2,423.78kb] [文件加载：49]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/detail',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; _ga=GA1.1.775339406.1529995696; PHPSESSID=5r7v0lrbmf1s77dvveur9beli0; PXAPP=864d391cb53d2852c22cd46e19d41dd4; loginTime=1530172522',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Order->detail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ VIEW ] D:\workLP\20180502\judeng\wwwroot/application/home\view\doctor\detail.html [ array (
+  0 => 'setting',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-28T16:21:46+08:00 ] 0.0.0.0 GET /order/css/base.css
+[ info ] localhost:7037/order/css/base.css [运行时间：0.061408s][吞吐率：16.28req/s] [内存消耗：2,284.62kb] [文件加载：49]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/css/base.css',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://localhost:7037/order/detail',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; _ga=GA1.1.775339406.1529995696; PHPSESSID=5r7v0lrbmf1s77dvveur9beli0; PXAPP=864d391cb53d2852c22cd46e19d41dd4; loginTime=1530172522',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/css,*/*;q=0.1',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-28T16:21:46+08:00 ] 0.0.0.0 GET /order/js/common.js
+[ info ] localhost:7037/order/js/common.js [运行时间：0.087073s][吞吐率：11.48req/s] [内存消耗：2,284.60kb] [文件加载：49]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/js/common.js',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://localhost:7037/order/detail',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; _ga=GA1.1.775339406.1529995696; PHPSESSID=5r7v0lrbmf1s77dvveur9beli0; PXAPP=864d391cb53d2852c22cd46e19d41dd4; loginTime=1530172522',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-28T16:21:46+08:00 ] 0.0.0.0 GET /order/js/jquery.min.js
+[ info ] localhost:7037/order/js/jquery.min.js [运行时间：0.106736s][吞吐率：9.37req/s] [内存消耗：2,284.66kb] [文件加载：49]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/js/jquery.min.js',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://localhost:7037/order/detail',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; _ga=GA1.1.775339406.1529995696; PHPSESSID=5r7v0lrbmf1s77dvveur9beli0; PXAPP=864d391cb53d2852c22cd46e19d41dd4; loginTime=1530172522',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-28T16:21:46+08:00 ] 0.0.0.0 GET /order/images/sex.png
+[ info ] localhost:7037/order/images/sex.png [运行时间：0.079566s][吞吐率：12.57req/s] [内存消耗：2,284.70kb] [文件加载：49]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/images/sex.png',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://localhost:7037/order/detail',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; _ga=GA1.1.775339406.1529995696; PHPSESSID=5r7v0lrbmf1s77dvveur9beli0; PXAPP=864d391cb53d2852c22cd46e19d41dd4; loginTime=1530172522',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-28T16:21:46+08:00 ] 0.0.0.0 GET /order/js/common.js
+[ info ] localhost:7037/order/js/common.js [运行时间：0.087375s][吞吐率：11.44req/s] [内存消耗：2,284.60kb] [文件加载：49]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/js/common.js',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://localhost:7037/order/detail',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; _ga=GA1.1.775339406.1529995696; PHPSESSID=5r7v0lrbmf1s77dvveur9beli0; PXAPP=864d391cb53d2852c22cd46e19d41dd4; loginTime=1530172522',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-28T16:23:17+08:00 ] 0.0.0.0 GET /order/detail
+[ info ] localhost:7037/order/detail [运行时间：0.061034s][吞吐率：16.38req/s] [内存消耗：2,423.78kb] [文件加载：49]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/detail',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; _ga=GA1.1.775339406.1529995696; PHPSESSID=5r7v0lrbmf1s77dvveur9beli0; PXAPP=864d391cb53d2852c22cd46e19d41dd4; loginTime=1530172522',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Order->detail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ VIEW ] D:\workLP\20180502\judeng\wwwroot/application/home\view\doctor\detail.html [ array (
+  0 => 'setting',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-28T16:23:17+08:00 ] 0.0.0.0 GET /order/images/sex.png
+[ info ] localhost:7037/order/images/sex.png [运行时间：0.132681s][吞吐率：7.54req/s] [内存消耗：2,284.70kb] [文件加载：49]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/images/sex.png',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://localhost:7037/order/detail',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; _ga=GA1.1.775339406.1529995696; PHPSESSID=5r7v0lrbmf1s77dvveur9beli0; PXAPP=864d391cb53d2852c22cd46e19d41dd4; loginTime=1530172522',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-28T16:23:33+08:00 ] 0.0.0.0 GET /order/detail
+[ info ] localhost:7037/order/detail [运行时间：0.080058s][吞吐率：12.49req/s] [内存消耗：2,424.74kb] [文件加载：49]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/detail',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; _ga=GA1.1.775339406.1529995696; PHPSESSID=5r7v0lrbmf1s77dvveur9beli0; PXAPP=864d391cb53d2852c22cd46e19d41dd4; loginTime=1530172522',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Order->detail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ VIEW ] D:\workLP\20180502\judeng\wwwroot/application/home\view\doctor\detail.html [ array (
+  0 => 'setting',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-28T16:23:42+08:00 ] 0.0.0.0 GET /order/detail
+[ info ] localhost:7037/order/detail [运行时间：0.059922s][吞吐率：16.69req/s] [内存消耗：2,240.81kb] [文件加载：47]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/detail',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; _ga=GA1.1.775339406.1529995696; PHPSESSID=5r7v0lrbmf1s77dvveur9beli0; PXAPP=864d391cb53d2852c22cd46e19d41dd4; loginTime=1530172522',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Order->detail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ VIEW ] D:\workLP\20180502\judeng\wwwroot/application/home\view\doctor\detail.html [ array (
+  0 => 'setting',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-28T16:24:59+08:00 ] 0.0.0.0 GET /order/detail
+[ info ] localhost:7037/order/detail [运行时间：0.078958s][吞吐率：12.66req/s] [内存消耗：2,424.69kb] [文件加载：49]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/detail',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; _ga=GA1.1.775339406.1529995696; PHPSESSID=5r7v0lrbmf1s77dvveur9beli0; PXAPP=864d391cb53d2852c22cd46e19d41dd4; loginTime=1530172522',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Order->detail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ VIEW ] D:\workLP\20180502\judeng\wwwroot/application/home\view\doctor\detail.html [ array (
+  0 => 'setting',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-28T16:25:09+08:00 ] 0.0.0.0 GET /order/detail
+[ info ] localhost:7037/order/detail [运行时间：0.063275s][吞吐率：15.80req/s] [内存消耗：2,424.63kb] [文件加载：49]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/detail',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; _ga=GA1.1.775339406.1529995696; PHPSESSID=5r7v0lrbmf1s77dvveur9beli0; PXAPP=864d391cb53d2852c22cd46e19d41dd4; loginTime=1530172522',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Order->detail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ VIEW ] D:\workLP\20180502\judeng\wwwroot/application/home\view\doctor\detail.html [ array (
+  0 => 'setting',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-28T16:29:31+08:00 ] 0.0.0.0 GET /order/detail
+[ info ] localhost:7037/order/detail [运行时间：0.066733s][吞吐率：14.99req/s] [内存消耗：2,423.97kb] [文件加载：49]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/detail',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; _ga=GA1.1.775339406.1529995696; PHPSESSID=5r7v0lrbmf1s77dvveur9beli0; PXAPP=864d391cb53d2852c22cd46e19d41dd4; loginTime=1530172522',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Order->detail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ VIEW ] D:\workLP\20180502\judeng\wwwroot/application/home\view\doctor\detail.html [ array (
+  0 => 'setting',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-28T16:29:58+08:00 ] 0.0.0.0 GET /order/detail
+[ info ] localhost:7037/order/detail [运行时间：0.058261s][吞吐率：17.16req/s] [内存消耗：2,240.78kb] [文件加载：47]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/detail',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; _ga=GA1.1.775339406.1529995696; PHPSESSID=5r7v0lrbmf1s77dvveur9beli0; PXAPP=864d391cb53d2852c22cd46e19d41dd4; loginTime=1530172522',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Order->detail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ VIEW ] D:\workLP\20180502\judeng\wwwroot/application/home\view\doctor\detail.html [ array (
+  0 => 'setting',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-28T16:41:22+08:00 ] 0.0.0.0 GET /order/detail?id=438
+[ info ] localhost:7037/order/detail?id=438 [运行时间：0.103060s][吞吐率：9.70req/s] [内存消耗：2,146.00kb] [文件加载：44]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/detail?id=438',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; _ga=GA1.1.775339406.1529995696; PHPSESSID=5r7v0lrbmf1s77dvveur9beli0; PXAPP=864d391cb53d2852c22cd46e19d41dd4; loginTime=1530172522',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'id' => '438',
+)
+[ info ] [ RUN ] app\home\controller\Order->detail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-28T16:43:36+08:00 ] 0.0.0.0 GET /order/detail?id=438
+[ info ] localhost:7037/order/detail?id=438 [运行时间：0.265315s][吞吐率：3.77req/s] [内存消耗：3,263.46kb] [文件加载：59]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/detail?id=438',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; _ga=GA1.1.775339406.1529995696; PHPSESSID=5r7v0lrbmf1s77dvveur9beli0; PXAPP=864d391cb53d2852c22cd46e19d41dd4; loginTime=1530172522',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'id' => '438',
+)
+[ info ] [ RUN ] app\home\controller\Order->detail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]Array to string conversion[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php:1058]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'where clause'[D:\workLP\20180502\judeng\wwwroot\thinkphp\library\think\db\Connection.php:388]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.095397s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_prescription` [ RunTime:0.061061s ]
+---------------------------------------------------------------
+[ 2018-06-28T16:44:34+08:00 ] 0.0.0.0 GET /order/detail?id=438
+[ info ] localhost:7037/order/detail?id=438 [运行时间：0.275866s][吞吐率：3.62req/s] [内存消耗：3,147.73kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/detail?id=438',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; _ga=GA1.1.775339406.1529995696; PHPSESSID=5r7v0lrbmf1s77dvveur9beli0; PXAPP=864d391cb53d2852c22cd46e19d41dd4; loginTime=1530172522',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'id' => '438',
+)
+[ info ] [ RUN ] app\home\controller\Order->detail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.095273s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_prescription` [ RunTime:0.060415s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order_prescription` `op` INNER JOIN `jd_order` `o` ON `o`.`order_id`=`op`.`order_id` WHERE  (  op.order_id = 438 ) ORDER BY op.`add_date` DESC LIMIT 1 [ RunTime:0.061335s ]
+---------------------------------------------------------------
+[ 2018-06-28T16:52:26+08:00 ] 0.0.0.0 GET /order/detail?id=438
+[ info ] localhost:7037/order/detail?id=438 [运行时间：0.280585s][吞吐率：3.56req/s] [内存消耗：3,149.63kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/detail?id=438',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; _ga=GA1.1.775339406.1529995696; PHPSESSID=5r7v0lrbmf1s77dvveur9beli0; PXAPP=864d391cb53d2852c22cd46e19d41dd4; loginTime=1530172522',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'id' => '438',
+)
+[ info ] [ RUN ] app\home\controller\Order->detail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.085528s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_prescription` [ RunTime:0.056955s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order_prescription` `op` INNER JOIN `jd_order` `o` ON `o`.`order_id`=`op`.`order_id` WHERE  (  op.order_id = 438 ) LIMIT 1 [ RunTime:0.057569s ]
+---------------------------------------------------------------
+[ 2018-06-28T16:56:48+08:00 ] 0.0.0.0 GET /order/detail?id=438
+[ info ] localhost:7037/order/detail?id=438 [运行时间：0.367713s][吞吐率：2.72req/s] [内存消耗：3,130.95kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/detail?id=438',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; _ga=GA1.1.775339406.1529995696; PHPSESSID=5r7v0lrbmf1s77dvveur9beli0; PXAPP=864d391cb53d2852c22cd46e19d41dd4; loginTime=1530172522',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'id' => '438',
+)
+[ info ] [ RUN ] app\home\controller\Order->detail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.085363s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_prescription` [ RunTime:0.057628s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order_prescription` `op` INNER JOIN `jd_order` `o` ON `o`.`order_id`=`op`.`order_id` WHERE  (  op.order_id = 438 ) LIMIT 1 [ RunTime:0.057533s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.057085s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`prescription_id`,p.`area_name`,ds.`state_name`,ds.`make`,ds.`taking`,ds.`instructions`,ds.`weight`,ds.`pic` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  (  d.relation_id = 54 ) ORDER BY d.`relation_id` DESC LIMIT 1 [ RunTime:0.056958s ]
+---------------------------------------------------------------
+[ 2018-06-28T16:56:52+08:00 ] 0.0.0.0 GET /order/detail?id=438
+[ info ] localhost:7037/order/detail?id=438 [运行时间：0.392571s][吞吐率：2.55req/s] [内存消耗：3,131.11kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/detail?id=438',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; _ga=GA1.1.775339406.1529995696; PHPSESSID=5r7v0lrbmf1s77dvveur9beli0; PXAPP=864d391cb53d2852c22cd46e19d41dd4; loginTime=1530172522',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'id' => '438',
+)
+[ info ] [ RUN ] app\home\controller\Order->detail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.088397s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_prescription` [ RunTime:0.060397s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order_prescription` `op` INNER JOIN `jd_order` `o` ON `o`.`order_id`=`op`.`order_id` WHERE  (  op.order_id = 438 ) LIMIT 1 [ RunTime:0.061486s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.059185s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`prescription_id`,p.`area_name`,ds.`state_name`,ds.`make`,ds.`taking`,ds.`instructions`,ds.`weight`,ds.`pic` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  (  d.relation_id = 54 ) ORDER BY d.`relation_id` DESC LIMIT 1 [ RunTime:0.058685s ]
+---------------------------------------------------------------
+[ 2018-06-28T16:56:52+08:00 ] 0.0.0.0 GET /favicon.ico
+[ info ] localhost:7037/favicon.ico [运行时间：0.038081s][吞吐率：26.26req/s] [内存消耗：1,717.13kb] [文件加载：41]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'favicon.ico',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/favicon.ico',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://localhost:7037/order/detail?id=438',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; _ga=GA1.1.775339406.1529995696; PHPSESSID=5r7v0lrbmf1s77dvveur9beli0; PXAPP=864d391cb53d2852c22cd46e19d41dd4; loginTime=1530172522',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-28T17:03:44+08:00 ] 0.0.0.0 GET /order/detail?id=438
+[ info ] localhost:7037/order/detail?id=438 [运行时间：0.400478s][吞吐率：2.50req/s] [内存消耗：3,409.98kb] [文件加载：56]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/detail?id=438',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; _ga=GA1.1.775339406.1529995696; PHPSESSID=5r7v0lrbmf1s77dvveur9beli0; PXAPP=864d391cb53d2852c22cd46e19d41dd4; loginTime=1530172522',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'id' => '438',
+)
+[ info ] [ RUN ] app\home\controller\Order->detail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\workLP\20180502\judeng\wwwroot/application/home\view\doctor\detail.html [ array (
+  0 => 'setting',
+  1 => 'lastOrder',
+  2 => 'relationDetail',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.089153s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_prescription` [ RunTime:0.059929s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order_prescription` `op` INNER JOIN `jd_order` `o` ON `o`.`order_id`=`op`.`order_id` WHERE  (  op.order_id = 438 ) LIMIT 1 [ RunTime:0.059939s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.058635s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`prescription_id`,p.`area_name`,ds.`state_name`,ds.`make`,ds.`taking`,ds.`instructions`,ds.`weight`,ds.`pic` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  (  d.relation_id = 54 ) ORDER BY d.`relation_id` DESC LIMIT 1 [ RunTime:0.060998s ]
+---------------------------------------------------------------
+[ 2018-06-28T17:03:57+08:00 ] 0.0.0.0 GET /order/detail?id=438
+[ info ] localhost:7037/order/detail?id=438 [运行时间：0.388366s][吞吐率：2.57req/s] [内存消耗：3,410.35kb] [文件加载：56]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/detail?id=438',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; _ga=GA1.1.775339406.1529995696; PHPSESSID=5r7v0lrbmf1s77dvveur9beli0; PXAPP=864d391cb53d2852c22cd46e19d41dd4; loginTime=1530172522',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'id' => '438',
+)
+[ info ] [ RUN ] app\home\controller\Order->detail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\workLP\20180502\judeng\wwwroot/application/home\view\doctor\detail.html [ array (
+  0 => 'setting',
+  1 => 'lastOrder',
+  2 => 'relationDetail',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.087412s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_prescription` [ RunTime:0.061580s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order_prescription` `op` INNER JOIN `jd_order` `o` ON `o`.`order_id`=`op`.`order_id` WHERE  (  op.order_id = 438 ) LIMIT 1 [ RunTime:0.060496s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.057022s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`prescription_id`,p.`area_name`,ds.`state_name`,ds.`make`,ds.`taking`,ds.`instructions`,ds.`weight`,ds.`pic` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  (  d.relation_id = 54 ) ORDER BY d.`relation_id` DESC LIMIT 1 [ RunTime:0.058400s ]
+---------------------------------------------------------------
+[ 2018-06-28T17:09:09+08:00 ] 0.0.0.0 GET /order/detail?id=438
+[ info ] localhost:7037/order/detail?id=438 [运行时间：0.395558s][吞吐率：2.53req/s] [内存消耗：3,410.34kb] [文件加载：56]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/detail?id=438',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; _ga=GA1.1.775339406.1529995696; PHPSESSID=5r7v0lrbmf1s77dvveur9beli0; PXAPP=864d391cb53d2852c22cd46e19d41dd4; loginTime=1530172522',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'id' => '438',
+)
+[ info ] [ RUN ] app\home\controller\Order->detail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\workLP\20180502\judeng\wwwroot/application/home\view\doctor\detail.html [ array (
+  0 => 'setting',
+  1 => 'lastOrder',
+  2 => 'relationDetail',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.082596s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_prescription` [ RunTime:0.056243s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order_prescription` `op` INNER JOIN `jd_order` `o` ON `o`.`order_id`=`op`.`order_id` WHERE  (  op.order_id = 438 ) LIMIT 1 [ RunTime:0.056513s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.055228s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`prescription_id`,p.`area_name`,ds.`state_name`,ds.`make`,ds.`taking`,ds.`instructions`,ds.`weight`,ds.`pic` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  (  d.relation_id = 54 ) ORDER BY d.`relation_id` DESC LIMIT 1 [ RunTime:0.054487s ]
+---------------------------------------------------------------
+[ 2018-06-28T17:10:25+08:00 ] 0.0.0.0 GET /order/detail?id=438
+[ info ] localhost:7037/order/detail?id=438 [运行时间：0.443463s][吞吐率：2.25req/s] [内存消耗：3,410.34kb] [文件加载：56]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/detail?id=438',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; _ga=GA1.1.775339406.1529995696; PHPSESSID=5r7v0lrbmf1s77dvveur9beli0; PXAPP=864d391cb53d2852c22cd46e19d41dd4; loginTime=1530172522',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'id' => '438',
+)
+[ info ] [ RUN ] app\home\controller\Order->detail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\workLP\20180502\judeng\wwwroot/application/home\view\doctor\detail.html [ array (
+  0 => 'setting',
+  1 => 'lastOrder',
+  2 => 'relationDetail',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.090481s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_prescription` [ RunTime:0.061472s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order_prescription` `op` INNER JOIN `jd_order` `o` ON `o`.`order_id`=`op`.`order_id` WHERE  (  op.order_id = 438 ) LIMIT 1 [ RunTime:0.065402s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.059323s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`prescription_id`,p.`area_name`,ds.`state_name`,ds.`make`,ds.`taking`,ds.`instructions`,ds.`weight`,ds.`pic` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  (  d.relation_id = 54 ) ORDER BY d.`relation_id` DESC LIMIT 1 [ RunTime:0.060822s ]
+---------------------------------------------------------------
+[ 2018-06-28T17:10:48+08:00 ] 0.0.0.0 GET /order/detail?id=438
+[ info ] localhost:7037/order/detail?id=438 [运行时间：0.400677s][吞吐率：2.50req/s] [内存消耗：3,410.39kb] [文件加载：56]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/detail?id=438',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; _ga=GA1.1.775339406.1529995696; PHPSESSID=5r7v0lrbmf1s77dvveur9beli0; PXAPP=864d391cb53d2852c22cd46e19d41dd4; loginTime=1530172522',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'id' => '438',
+)
+[ info ] [ RUN ] app\home\controller\Order->detail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\workLP\20180502\judeng\wwwroot/application/home\view\doctor\detail.html [ array (
+  0 => 'setting',
+  1 => 'lastOrder',
+  2 => 'relationDetail',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086360s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_prescription` [ RunTime:0.059341s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order_prescription` `op` INNER JOIN `jd_order` `o` ON `o`.`order_id`=`op`.`order_id` WHERE  (  op.order_id = 438 ) LIMIT 1 [ RunTime:0.059317s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug_relation` [ RunTime:0.057132s ]
+[ sql ] [ SQL ] SELECT d.`relation_id`,d.`prescription_id`,d.`state_id`,d.`describe`,p.`prescription_name`,p.`prescription_id`,p.`area_name`,ds.`state_name`,ds.`make`,ds.`taking`,ds.`instructions`,ds.`weight`,ds.`pic` FROM `jd_drug_relation` `d` INNER JOIN `jd_prescription` `p` ON `d`.`prescription_id`=`p`.`prescription_id` INNER JOIN `jd_drug_state` `ds` ON `d`.`state_id`=`ds`.`state_id` WHERE  (  d.relation_id = 54 ) ORDER BY d.`relation_id` DESC LIMIT 1 [ RunTime:0.057189s ]
+---------------------------------------------------------------
+[ 2018-06-28T17:14:17+08:00 ] 0.0.0.0 GET /order/detail?id=438
+[ info ] localhost:7037/order/detail?id=438 [运行时间：0.275289s][吞吐率：3.63req/s] [内存消耗：3,146.99kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/detail?id=438',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; _ga=GA1.1.775339406.1529995696; PHPSESSID=5r7v0lrbmf1s77dvveur9beli0; PXAPP=864d391cb53d2852c22cd46e19d41dd4; loginTime=1530172522',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'id' => '438',
+)
+[ info ] [ RUN ] app\home\controller\Order->detail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.091927s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_prescription` [ RunTime:0.061308s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order_prescription` `op` INNER JOIN `jd_order` `o` ON `o`.`order_id`=`op`.`order_id` WHERE  (  op.order_id = 438 ) LIMIT 1 [ RunTime:0.065990s ]
+---------------------------------------------------------------
+[ 2018-06-28T17:14:49+08:00 ] 0.0.0.0 GET /order/detail?id=438
+[ info ] localhost:7037/order/detail?id=438 [运行时间：0.278818s][吞吐率：3.59req/s] [内存消耗：3,148.27kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/detail?id=438',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; _ga=GA1.1.775339406.1529995696; PHPSESSID=5r7v0lrbmf1s77dvveur9beli0; PXAPP=864d391cb53d2852c22cd46e19d41dd4; loginTime=1530172522',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'id' => '438',
+)
+[ info ] [ RUN ] app\home\controller\Order->detail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084647s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_prescription` [ RunTime:0.058079s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order_prescription` `op` INNER JOIN `jd_order` `o` ON `o`.`order_id`=`op`.`order_id` WHERE  (  op.order_id = 438 ) LIMIT 1 [ RunTime:0.058430s ]
+---------------------------------------------------------------
+[ 2018-06-28T17:17:14+08:00 ] 0.0.0.0 GET /order/detail?id=438
+[ info ] localhost:7037/order/detail?id=438 [运行时间：0.280059s][吞吐率：3.57req/s] [内存消耗：3,150.95kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/detail?id=438',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; _ga=GA1.1.775339406.1529995696; PHPSESSID=5r7v0lrbmf1s77dvveur9beli0; PXAPP=864d391cb53d2852c22cd46e19d41dd4; loginTime=1530172522',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'id' => '438',
+)
+[ info ] [ RUN ] app\home\controller\Order->detail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.088311s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_prescription` [ RunTime:0.061440s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order_prescription` `op` INNER JOIN `jd_order` `o` ON `o`.`order_id`=`op`.`order_id` WHERE  (  op.order_id = 438 ) LIMIT 1 [ RunTime:0.063119s ]
+---------------------------------------------------------------
+[ 2018-06-28T17:18:21+08:00 ] 0.0.0.0 GET /order/detail?id=438
+[ info ] localhost:7037/order/detail?id=438 [运行时间：0.266889s][吞吐率：3.75req/s] [内存消耗：3,150.94kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/detail?id=438',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'cookie' => 'UM_distinctid=160b5c52e97c7-0a812a97ee4d36-e323462-1fa400-160b5c52e9a107; CNZZDATA1000308349=1622381418-1516928585-%7C1516934020; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1515553694,1516772121,1516938586,1517206225; REMEMBERME=VG9weGlhXFNlcnZpY2VcVXNlclxDdXJyZW50VXNlcjpOalE1TlRjNE9UWTBRSEZ4TG1OdmJRPT06MTU0ODkyODk1MTozZTE3ZGIxYzRjYzUzYWE4MmU2MjVlYjI3OTQxNTI3ZTIyZjUyYzYwMzFmZjNkNzI3MTdkODI4MzIxZTk0NmVk; CNZZDATA1256922974=1723540018-1514876107-%7C1517463005; bdshare_firstime=1522317821515; Hm_lvt_ebb8ef3f6d57c4b17c15b95865c9c3fb=1522635670; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; _ga=GA1.1.775339406.1529995696; PHPSESSID=5r7v0lrbmf1s77dvveur9beli0; PXAPP=864d391cb53d2852c22cd46e19d41dd4; loginTime=1530172522',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'id' => '438',
+)
+[ info ] [ RUN ] app\home\controller\Order->detail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086211s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_prescription` [ RunTime:0.058832s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order_prescription` `op` INNER JOIN `jd_order` `o` ON `o`.`order_id`=`op`.`order_id` WHERE  (  op.order_id = 438 ) LIMIT 1 [ RunTime:0.058988s ]
