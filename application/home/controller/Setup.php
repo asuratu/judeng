@@ -103,6 +103,7 @@ class Setup extends Common
             $doctor = array();
             $doctor['online_inquiry'] = $data['online_inquiry'];
             $doctor['love_inquiry'] = $data['love_inquiry'];
+            $doctor['is_clinic'] = $doctor['love_inquiry'] > 0 ? 1 : 0;
             $doctor['graphic_speech'] = $data['graphic_speech'];
             $doctor['first_price'] = $data['first_price'];
             $doctor['consultation_price'] = $data['consultation_price'];
