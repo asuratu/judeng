@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:74:"D:\workLP\20180502\judeng\wwwroot/application/home\view\doctor\detail.html";i:1530197605;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:74:"D:\workLP\20180502\judeng\wwwroot/application/home\view\doctor\detail.html";i:1530261140;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,22 +13,18 @@
 </head>
 <body>
 <div class="page-tit">
-    <div class="wrapper clearfix">
-        查看调理方案
-        <a href="" class="fl">关闭</a>
-    </div>
 </div>
 <div class="plan">
     <div class="plan-con01">
         <div class="wrapper">
-            <h2>辩症</h2>
+            <h2>辨症</h2>
             <div class="con">
                 <dl class="clearfix">
                     <dd><?php echo $lastOrder['patient_name']; ?></dd>
                     <dd><?php echo $lastOrder['patient_sex']?'女':'男'; ?></dd>
                     <dd><?php echo $lastOrder['patient_age']; ?></dd>
                     <dd class="wid100"><?php echo $lastOrder['patient_mobile']; ?></dd>
-                    <dd class="wid100">辩证：<?php echo $lastOrder['dialectical']; ?></dd>
+                    <dd class="wid100">辨症：<?php echo $lastOrder['dialectical']; ?></dd>
                 </dl>
             </div>
         </div>
@@ -96,8 +92,8 @@
     </div>
     <div class="plan-con05">
         <p>
-            医生签名：于庆阳<br>
-            开方时间：2018-04-17
+            医生签名：<?php echo $name; ?><br>
+            开方时间：<?php echo date('Y-m-d', $lastOrder['add_date']); ?>
         </p>
     </div>
 

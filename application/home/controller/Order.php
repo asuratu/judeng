@@ -1062,6 +1062,16 @@ class Order extends Common
             ->field("o.*, op.*")
             ->find();
 
+        if ($lastOrder['doctor_id']) {
+            $doctorInfo = db('doctor')
+                ->where("member_id = {$lastOrder['doctor_id']}")
+                ->field("true_name")
+                ->find();
+             $name = $doctorInfo['true_name'];
+        } else {
+             $name = $lastOrder['doctor_name'];
+        }
+
         if (empty($lastOrder)) {
             return 404;
         }
@@ -1076,7 +1086,11 @@ class Order extends Common
             ->where("special_id = {$lastOrder['special_id']}")
             ->field("*")
             ->find();
-        $specialDrugInfo = json_decode($specialDetail['content']);
+        if ($specialDetail) {
+            $specialDrugInfo = json_decode($specialDetail['content']);
+        } else {
+            $specialDrugInfo = array();
+        }
 
         //查询药房药态信息
         $relationDetail = db('drug_relation')->alias('d')
@@ -1090,6 +1104,7 @@ class Order extends Common
         $this->assign("lastOrder", $lastOrder);
         $this->assign("drugInfo", $drugInfo);
         $this->assign("taking", $taking);
+        $this->assign("name", $name);
         $this->assign("specialDrugInfo", $specialDrugInfo);
         $this->assign("relationDetail", $relationDetail);
         return  $this->fetch('/doctor/detail');

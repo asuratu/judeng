@@ -12,22 +12,18 @@
 </head>
 <body>
 <div class="page-tit">
-    <div class="wrapper clearfix">
-        查看调理方案
-        <a href="" class="fl">关闭</a>
-    </div>
 </div>
 <div class="plan">
     <div class="plan-con01">
         <div class="wrapper">
-            <h2>辩症</h2>
+            <h2>辨症</h2>
             <div class="con">
                 <dl class="clearfix">
                     <dd>{$lastOrder['patient_name']}</dd>
                     <dd>{:$lastOrder['patient_sex']?'女':'男'}</dd>
                     <dd>{$lastOrder['patient_age']}</dd>
                     <dd class="wid100">{$lastOrder['patient_mobile']}</dd>
-                    <dd class="wid100">辩证：{$lastOrder['dialectical']}</dd>
+                    <dd class="wid100">辨症：{$lastOrder['dialectical']}</dd>
                 </dl>
             </div>
         </div>
@@ -97,8 +93,8 @@
     </div>
     <div class="plan-con05">
         <p>
-            医生签名：于庆阳<br>
-            开方时间：2018-04-17
+            医生签名：{$name}<br>
+            开方时间：{:date('Y-m-d', $lastOrder['add_date'])}
         </p>
     </div>
 
