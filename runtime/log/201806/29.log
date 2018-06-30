@@ -1,0 +1,60 @@
+---------------------------------------------------------------
+[ 2018-06-29T22:59:47+08:00 ] 0.0.0.0 GET /admin
+[ info ] localhost:8020/admin [运行时间：0.053670s][吞吐率：18.63req/s] [内存消耗：1,717.50kb] [文件加载：41]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'admin',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/admin',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'host' => 'localhost:8020',
+  'cookie' => 'PHPSESSID=po5sm7eufknfgs4vrng8q1jfp0; __qc_wId=548; pgv_pvid=8369831414; bdshare_firstime=1518961848412; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1528334135; _ga=GA1.1.1526570473.1528696528; UM_distinctid=163ed69dbb0137-06244808251ebb-39614807-e1000-163ed69dbb2104; hs_session_adminer=a%3A4%3A%7Bs%3A10%3A%22session_id%22%3Bs%3A32%3A%22cc90ad19f81eb6b2c82b4405fe661cdf%22%3Bs%3A10%3A%22ip_address%22%3Bs%3A3%3A%22%3A%3A1%22%3Bs%3A10%3A%22user_agent%22%3Bs%3A110%3A%22Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F66.0.3359.181+Safari%2F537.36%22%3Bs%3A13%3A%22last_activity%22%3Bi%3A1528708865%3B%7D84601fe939953e81b5fe6eb717eec795ddb9f4e0; CNZZDATA1262804032=649835902-1528696528-%7C1528709297; PXAPP=2ad62aa2bc47d53154fa79494995152a; Hm_lpvt_5dd55c6682e0c7d344e29e785f9de1bb=1530022448; Hm_lvt_502989a263cc8a8eea82cf14982c214d=1530284384; Hm_lpvt_502989a263cc8a8eea82cf14982c214d=1530284384',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-29T22:59:47+08:00 ] 0.0.0.0 GET /favicon.ico
+[ info ] localhost:8020/favicon.ico [运行时间：0.032444s][吞吐率：30.82req/s] [内存消耗：1,717.45kb] [文件加载：41]
+[ info ] [ LANG ] D:\works\201805\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'favicon.ico',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/favicon.ico',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'referer' => 'http://localhost:8020/admin',
+  'host' => 'localhost:8020',
+  'cookie' => 'PHPSESSID=po5sm7eufknfgs4vrng8q1jfp0; __qc_wId=548; pgv_pvid=8369831414; bdshare_firstime=1518961848412; Hm_lvt_5dd55c6682e0c7d344e29e785f9de1bb=1528334135; _ga=GA1.1.1526570473.1528696528; UM_distinctid=163ed69dbb0137-06244808251ebb-39614807-e1000-163ed69dbb2104; hs_session_adminer=a%3A4%3A%7Bs%3A10%3A%22session_id%22%3Bs%3A32%3A%22cc90ad19f81eb6b2c82b4405fe661cdf%22%3Bs%3A10%3A%22ip_address%22%3Bs%3A3%3A%22%3A%3A1%22%3Bs%3A10%3A%22user_agent%22%3Bs%3A110%3A%22Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F66.0.3359.181+Safari%2F537.36%22%3Bs%3A13%3A%22last_activity%22%3Bi%3A1528708865%3B%7D84601fe939953e81b5fe6eb717eec795ddb9f4e0; CNZZDATA1262804032=649835902-1528696528-%7C1528709297; PXAPP=2ad62aa2bc47d53154fa79494995152a; Hm_lpvt_5dd55c6682e0c7d344e29e785f9de1bb=1530022448; Hm_lvt_502989a263cc8a8eea82cf14982c214d=1530284384; Hm_lpvt_502989a263cc8a8eea82cf14982c214d=1530284384',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
