@@ -661,7 +661,7 @@ class Doctor extends Common
                 $data['pageSize'] = 10;
             }
             $data['pageCount'] = ($data['page'] - 1) * $data['pageSize'];
-            $member = Db::field('op.`dialectical`,op.`drug_str`,op.`add_date`,d.`member_name`,d.`true_name`,d.`mobile`,d.`title_str`')
+            $member = Db::field('op.`dialectical`,op.`drug_str`,op.`add_date`,d.`member_name`,d.`true_name`,d.`mobile`,d.`title_str`,op.`order_id`, o.`doctor_id`, o.`patient_id`')
                 ->table('jd_order o, jd_order_prescription op, jd_doctor d')
                 ->where("o.patient_id = {$data['member_id']} and o.`order_id` = op.`order_id` and o.order_type = 3 and o.`doctor_id` = d.`member_id` and op.`prescription_type` != 1")
                 ->order('op.add_date', 'DESC')
@@ -673,6 +673,9 @@ class Doctor extends Common
                 $order[$key]['drug_str'] = base64_encode($val['drug_str']);
                 $order[$key]['member_name'] = !empty($val['true_name']) ? $val['true_name'] : (!empty($val['member_name']) ? $val['member_name'] : $val['mobile']);
                 $order[$key]['add_date'] = date('Y-m-d H:i', $val['add_date']);
+                $order[$key]['order_id'] = $val['order_id'] ?: 0;
+                $order[$key]['patient_id'] = $val['patient_id'] ?: 0;
+                $order[$key]['doctor_id'] = $val['doctor_id'] ?: 0;
             }
             $total = Db::table('jd_order o, jd_order_prescription op, jd_doctor d')
                 ->where("o.patient_id = {$data['member_id']} and o.`order_id` = op.`order_id` and o.order_type = 3 and o.`doctor_id` = d.`member_id` and op.`prescription_type` != 1")

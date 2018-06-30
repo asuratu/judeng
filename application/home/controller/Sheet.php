@@ -100,6 +100,40 @@ class Sheet extends Common
     }
 
     /**
+     * @Title: getSheetDetial
+     * @Description: TODO 查看患者填写的问诊单详情
+     */
+    public function getSheetDetial() {
+        if($this->request->isPost())
+        {
+            $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
+
+            if($data['patient_id']=='' || $data['id']=='' || $data['doctor_id']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+            }
+
+            $orderDetail = db('sheet')->alias('s')
+                ->join('member_inquisition_question miq', 'miq.sheet_id = s.sheet_id' , 'inner')
+                ->join('sheet_type st', 'st.type_id = s.type_id' , 'inner')
+                ->where("miq.`member_id` = {$data['patient_id']} AND miq.`doctor_id` = {$data['doctor_id']} AND miq.`id` = {$data['id']}")
+                ->field("miq.*, s.title as sheet_title, st.type_name")
+                ->find();
+
+            if (empty($orderDetail)) {
+                ajaxReturn(array('code'=>0,'info'=>'该问诊单不存在','data'=>[]));
+            }
+
+            ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[$orderDetail]));
+        }
+    }
+
+    /**
      * @Title: addSheet
      * @Description: TODO 添加/修改问诊单模板   此房方法要用事务
      */

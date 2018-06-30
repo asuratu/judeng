@@ -76,6 +76,7 @@ class His extends Common
             $_info = curlPost2($mobileUrl, array('Content-type:application/x-www-form-urlencoded'), array('tel'=>$val['mobile']));
             $xml=new \SimpleXMLElement($_info);
             $array = json_decode(json_encode($xml),true);
+
             if (isset($array['string']) && count($array['string']) > 0) {
                 $userInfo = $array['string'];
                 //更新患者信息
@@ -169,14 +170,21 @@ class His extends Common
                                 $drugDetail = db('drug')
                                     ->where("goods_code = '{$code}' AND prescription_id = 1")
                                     ->find();
-                                $drugArrEach[0] = $drugDetail['drug_id'];
-                                $drugArrEach[1] = $drugDetail['nick_name'];
-                                $drugArrEach[2] = $val4['6'];
-                                $drugArrEach[3] = $drugDetail['Drug_unit'];
+                                if ($drugDetail) {
+                                    $drugArrEach[0] = $drugDetail['drug_id'];
+                                    $drugArrEach[1] = $drugDetail['nick_name'];
+                                    $drugArrEach[2] = intval($val4['6']);
+                                    $drugArrEach[3] = $drugDetail['Drug_unit'];
+                                } else {
+                                    $drugArrEach[0] = 0;
+                                    $drugArrEach[1] = $val4[1];
+                                    $drugArrEach[2] = intval($val4[6]);
+                                    $drugArrEach[3] = $val4[3];
+                                }
                                 array_push($drugArr, $drugArrEach);
                             }
                             //组装药品json, 添加历史订单
-                            $drug_str = json_encode($drugArr);
+                            $drug_str = json_encode($drugArr, JSON_UNESCAPED_UNICODE);
                             $insertOrder['order_sn'] = createOrderCode();
                             $insertOrder['pay_status'] = 1;
                             $insertOrder['pay_type'] = 0;

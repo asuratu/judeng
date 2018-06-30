@@ -99,8 +99,19 @@ class Setup extends Common
             $prescription['reimage_price'] = $data['consultation_price'];
             $prescription['image_num'] = $data['receipt'];
             $prescription['release_date'] = time();
-            $doctor = db('diagnosis_set')->where("member_id = {$data['doctor_id']}")->update($prescription);
-            if ($doctor) {
+
+            $doctor = array();
+            $doctor['online_inquiry'] = $data['online_inquiry'];
+            $doctor['love_inquiry'] = $data['love_inquiry'];
+            $doctor['is_clinic'] = $doctor['love_inquiry'] > 0 ? 1 : 0;
+            $doctor['graphic_speech'] = $data['graphic_speech'];
+            $doctor['first_price'] = $data['first_price'];
+            $doctor['consultation_price'] = $data['consultation_price'];
+            $doctor['receipt'] = $data['receipt'];
+            $doctor['release_date'] = time();
+            $diagnosis_set = db('diagnosis_set')->where("member_id = {$data['doctor_id']}")->update($prescription);
+            $doctor = db('doctor')->where("member_id = {$data['doctor_id']}")->update($doctor);
+            if ($diagnosis_set && $doctor) {
                 ajaxReturn(array('code'=>1,'info'=>'ok'));
             } else {
                 ajaxReturn(array('code'=>0,'info'=>'修改失败'));

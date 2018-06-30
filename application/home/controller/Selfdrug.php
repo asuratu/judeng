@@ -32,8 +32,6 @@ class Selfdrug extends Common
                 }
             }
 
-
-
             //计算价格
             $drugSumPrice = 0;//价格
             $lessCountArr = array();//超量

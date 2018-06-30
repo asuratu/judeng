@@ -25,8 +25,7 @@ class Oss extends Model
                 //如返回里面有缩略图：
                 $thumb=$rs['thumb'];
             }else{
-                $this->error('图片有误：'.$rs['msg']);
-                return;
+                ajaxReturn(array('code' => 0, 'info' => '图片有误：'.$rs['msg']));
             }
         }
         return json_encode($arr);
