@@ -742,7 +742,7 @@ class Order extends Common
                 if ($member['is_type'] == 0) {
                     Model('Weixin')->messageTemplate(2, $sendHair);
                 }
-                
+
                 if ($data['order_id']=='0') {
                     //爱心问诊
                     //判断是否有在用的爱心问诊
