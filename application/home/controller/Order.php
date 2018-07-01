@@ -174,15 +174,17 @@ class Order extends Common
                        ->field("o.*, op.*, s.content, s.inherit_drug, s.one_price, s.dose as self_dose")
                        ->find();
 
-                   $mainInfo['content'] = $orderInfo['content'] ? base64_encode($orderInfo['content']): '';
-                   $mainInfo['inherit_drug'] = $orderInfo['inherit_drug'] ?: '';
+//                   $mainInfo['content'] = $orderInfo['content'] ? base64_encode($orderInfo['content']): '';
+                   $mainInfo['drug_str'] = $orderInfo['content'] ? base64_encode($orderInfo['content']): '';
+//                   $mainInfo['inherit_drug'] = $orderInfo['inherit_drug'] ?: '';
+                   $mainInfo['special_content'] = $orderInfo['inherit_drug'] ? ($orderInfo['inherit_drug']) : '';
                    $mainInfo['one_price'] = $orderInfo['one_price'] ?: '';
                    $mainInfo['self_dose'] = $orderInfo['self_dose'] ?: 0;
                    $mainInfo['order_id'] = $data['order_id'];
 
                } else {
-                   $mainInfo['content'] = '';
-                   $mainInfo['inherit_drug'] = '';
+                   $mainInfo['drug_str'] = '';
+                   $mainInfo['special_content'] = '';
                    $mainInfo['one_price'] = '';
                    $mainInfo['self_dose'] = 0;
                    $mainInfo['order_id'] = 0;
@@ -1060,7 +1062,7 @@ class Order extends Common
                         ajaxReturn(array('code'=>1,'info'=>'','data'=>[]));
                     }
                     Db::commit();
-                    ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>['url'=>config('url').'/order/detail?id='.$wenzhenDetail['order_id']]));
+                    ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>[['url'=>config('url').'/order/detail?id='.$wenzhenDetail['order_id']]]));
             } catch (\Exception $e) {
                 Db::rollback();
                 return false;

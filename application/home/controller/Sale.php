@@ -247,7 +247,14 @@ class Sale extends Common
                     $docInfo['earn'] += $val1['pay_amount']*($val1['commission']/100);
                 }
 
+                //以下是临时虚拟数据, 要删掉
+                $docInfo['earn'] = 2000;
+                $docInfo['sale_num'] = 178;
+                $docInfo['has_self_goods'] = 1;
+
                 $successDoc[$key]['content'] = $docInfo;
+
+
 
             }
             ajaxReturn(array('code'=>1,'info'=>'ok','data'=>$successDoc));

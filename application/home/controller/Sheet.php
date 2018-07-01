@@ -113,6 +113,7 @@ class Sheet extends Common
                 ajaxReturn($res);
             }
 
+            //这里的id是sheet_id
             if($data['patient_id']=='' || $data['id']=='' || $data['doctor_id']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -121,7 +122,7 @@ class Sheet extends Common
             $orderDetail = db('sheet')->alias('s')
                 ->join('member_inquisition_question miq', 'miq.sheet_id = s.sheet_id' , 'inner')
                 ->join('sheet_type st', 'st.type_id = s.type_id' , 'inner')
-                ->where("miq.`member_id` = {$data['patient_id']} AND miq.`doctor_id` = {$data['doctor_id']} AND miq.`id` = {$data['id']}")
+                ->where("miq.`member_id` = {$data['patient_id']} AND miq.`doctor_id` = {$data['doctor_id']} AND miq.`sheet_id` = {$data['id']}")
                 ->field("miq.*, s.title as sheet_title, st.type_name")
                 ->find();
 
@@ -129,6 +130,9 @@ class Sheet extends Common
                 ajaxReturn(array('code'=>0,'info'=>'该问诊单不存在','data'=>[]));
             }
 
+
+            $orderDetail['answer_json'] = array_values(json_decode($orderDetail['answer_json'], true));
+//            $orderDetail['answer_json'] = $orderDetail['answer_json'][0];
             ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[$orderDetail]));
         }
     }
