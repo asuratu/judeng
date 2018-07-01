@@ -731,7 +731,7 @@ class Order extends Common
 
                 // 微信模板推送
                 $doctor = db('doctor')->where("member_id={$data['doctor_id']}")->find();
-                $member = db('member')->field('member_name, mobile, openid, is_type')->where("member_id={$data['member_id']}")->find();
+                $member = db('member')->field('member_name, mobile, openid, is_type')->where("member_id={$data['patient_id']}")->find();
                 $sendHair['doctor_name'] = $doctor['doctor_member'];
                 $sendHair['hospital'] = '小橘灯中医';
                 $sendHair['content'] = $doctor['doctor_member'] . '医生回复了您的消息，请尽快查看';
