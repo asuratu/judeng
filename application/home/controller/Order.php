@@ -731,6 +731,20 @@ class Order extends Common
                     ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
                 }
 
+                // 微信模板推送
+                $doctor = db('doctor')->where("member_id={$data['doctor_id']}")->find();
+                $member = db('member')->field('member_name, mobile, openid, is_type')->where("member_id={$data['member_id']}")->find();
+                $sendHair['doctor_name'] = $doctor['doctor_member'];
+                $sendHair['hospital'] = '小橘灯中医';
+                $sendHair['content'] = $doctor['doctor_member'] . '医生回复了您的消息，请尽快查看';
+                $sendHair['remark'] = '点击这里进入医生咨询聊天界面';
+                $sendHair['url'] = 'http://wechat.bohetanglao.com/home/advise/chat/memberid/' . $data['doctor_id'] . '/type/0.html';
+                $sendHair['first'] = $sendHair['doctor_name'] . '医生:我回复了您的咨询,请及时查看';
+                $sendHair['openid'] = $member['openid'];
+                if ($member['is_type'] == 0) {
+                    Model('Weixin')->messageTemplate(2, $sendHair);
+                }
+
                 if ($data['order_id']=='0') {
                     //爱心问诊
                     //判断是否有在用的爱心问诊
@@ -792,7 +806,7 @@ class Order extends Common
                         //结束本次问诊
                         $updateInfo['is_use'] = 0;
                         $updateInfo['release_date'] = time();
-                        db('wenzhen')
+                            db('wenzhen')
                             ->where("log_id = {$wenzhenDetail['log_id']}")
                             ->update($updateInfo);
                         Db::commit();
