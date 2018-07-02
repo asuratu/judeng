@@ -44,9 +44,9 @@ class Doctor extends Common
         }
         $doctor = db('doctor')->where("member_id={$data['doctor_id']}")->find();
         $member = db('member')->field('member_name, mobile, openid, is_type')->where("member_id={$data['member_id']}")->find();
-        $sendHair['doctor_name'] = $doctor['doctor_member'];
+        $sendHair['doctor_name'] = $doctor['true_name'];
         $sendHair['hospital'] = '小橘灯中医';
-        $sendHair['content'] = $doctor['doctor_member'] . '医生回复了您的消息，请尽快查看';
+        $sendHair['content'] = $doctor['true_name'] . '医生回复了您的消息，请尽快查看';
         $sendHair['remark'] = '点击这里进入医生咨询聊天界面';
         $sendHair['url'] = 'http://wechat.bohetanglao.com/home/advise/chat/memberid/' . $data['doctor_id'] . '/type/0.html';
         $sendHair['first'] = $sendHair['doctor_name'] . '医生:我回复了您的咨询,请及时查看';

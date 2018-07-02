@@ -168,12 +168,12 @@ class Umeng extends Model
                     'custom' => $extra, //点击通知后做的事
                 ),
             ),
-            'production_mode' 		=> 'false',//测试，上线为true
+            'production_mode' 		=> 'true',//测试，上线为true
             'description' 			=> $text,//描述
         );
         if ($after_open != 'go_app') {
             $temp_arr['payload']['extra'] = $extra;
-        }var_dump($temp_arr);
+        }
         return json_encode($temp_arr);
     }
 

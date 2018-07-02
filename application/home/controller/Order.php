@@ -730,9 +730,9 @@ class Order extends Common
                 // 微信模板推送
                 $doctor = db('doctor')->where("member_id={$data['doctor_id']}")->find();
                 $member = db('member')->field('member_name, mobile, openid, is_type')->where("member_id={$data['patient_id']}")->find();
-                $sendHair['doctor_name'] = $doctor['doctor_member'];
+                $sendHair['doctor_name'] = $doctor['true_name'];
                 $sendHair['hospital'] = '小橘灯中医';
-                $sendHair['content'] = $doctor['doctor_member'] . '医生回复了您的消息，请尽快查看';
+                $sendHair['content'] = $doctor['true_name'] . '医生回复了您的消息，请尽快查看';
                 $sendHair['remark'] = '点击这里进入医生咨询聊天界面';
                 $sendHair['url'] = 'http://wechat.bohetanglao.com/home/advise/chat/memberid/' . $data['doctor_id'] . '/type/0.html';
                 $sendHair['first'] = $sendHair['doctor_name'] . '医生:我回复了您的咨询,请及时查看';
@@ -930,24 +930,24 @@ class Order extends Common
                     ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
                 }
 
-                // 微信模板推送
-                $member = db('member')->field('member_name, mobile, openid, is_type')->where("member_id={$data['patient_id']}")->find();
-                $member['true_name'] = !empty($member['true_name']) ? $member['true_name'] : $member['member_name'];
-
-                $sendHair['first'] = '您好，患者咨询已结束。';
-                $sendHair['keyword1'] = '医生主动结束';
-                $sendHair['keyword2'] = $member['true_name'];
-                $sendHair['keyword3'] = '患者咨询';
-                $sendHair['keyword4'] = date('Y-m-d H:i', time());
-                $sendHair['remark'] = '后期咨询请注意及时回复。';
-                $sendHair['url'] = 'http://wechat.bohetanglao.com/home/advise/chat/memberid/' . $data['doctor_id'] . '/type/0.html';
-                $sendHair['openid'] = $member['openid'];
-
-                if ($member['is_type'] == 0) {
-                    Model('Weixin')->messageTemplate(8, $sendHair);
-                }
-
                 if ($data['order_id']=='0') {
+                    // 微信模板推送
+                    $member = db('member')->field('member_name, mobile, openid, is_type')->where("member_id={$data['patient_id']}")->find();
+                    $member['true_name'] = !empty($member['true_name']) ? $member['true_name'] : $member['member_name'];
+
+                    $sendHair['first'] = '您好，患者咨询已结束。';
+                    $sendHair['keyword1'] = '咨询已结束';
+                    $sendHair['keyword2'] = $member['true_name'];
+                    $sendHair['keyword3'] = '爱心问诊';
+                    $sendHair['keyword4'] = date('Y-m-d H:i', time());
+                    $sendHair['remark'] = '后期咨询请注意及时回复。';
+                    $sendHair['url'] = 'http://wechat.bohetanglao.com/home/advise/chat/memberid/' . $data['doctor_id'] . '/type/0.html';
+                    $sendHair['openid'] = $member['openid'];
+
+                    if ($member['is_type'] == 0) {
+                        Model('Weixin')->messageTemplate(8, $sendHair);
+                    }
+
                     //爱心问诊
                     //判断是否有在用的爱心问诊
                     $orderDetail = db('wenzhen')
@@ -976,6 +976,23 @@ class Order extends Common
 
                     if (!$orderDetail) {
                         ajaxReturn(array('code'=>0,'info'=>'订单不正确!','data'=>[]));
+                    }
+
+                    // 微信模板推送
+                    $member = db('member')->field('member_name, mobile, openid, is_type')->where("member_id={$data['patient_id']}")->find();
+                    $member['true_name'] = !empty($member['true_name']) ? $member['true_name'] : $member['member_name'];
+                    $type = $orderDetail['order_type'] == 0 ? '图文问诊' : '图文复诊';
+                    $sendHair['first'] = '您好，患者咨询已结束。';
+                    $sendHair['keyword1'] = '咨询已结束';
+                    $sendHair['keyword2'] = $member['true_name'];
+                    $sendHair['keyword3'] = $type;
+                    $sendHair['keyword4'] = date('Y-m-d H:i', time());
+                    $sendHair['remark'] = '后期咨询请注意及时回复。';
+                    $sendHair['url'] = 'http://wechat.bohetanglao.com/home/advise/chat/memberid/' . $data['doctor_id'] . '/type/0.html';
+                    $sendHair['openid'] = $member['openid'];
+
+                    if ($member['is_type'] == 0) {
+                        Model('Weixin')->messageTemplate(8, $sendHair);
                     }
 
                     //图文咨询或复诊订单信息
