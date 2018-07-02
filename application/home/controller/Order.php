@@ -685,10 +685,6 @@ class Order extends Common
                         break;
                 }
 
-
-
-                var_dump($orderDetail);die;
-
                 //判断是不是服务包id
                 if (1) {
 
@@ -932,6 +928,23 @@ class Order extends Common
                 if($data['doctor_id']=='' || $data['patient_id']=='' || $data['order_id']=='')
                 {
                     ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+                }
+
+                // 微信模板推送
+                $member = db('member')->field('member_name, mobile, openid, is_type')->where("member_id={$data['patient_id']}")->find();
+                $member['true_name'] = !empty($member['true_name']) ? $member['true_name'] : $member['member_name'];
+
+                $sendHair['first'] = '您好，患者咨询已结束。';
+                $sendHair['keyword1'] = '医生主动结束';
+                $sendHair['keyword2'] = $member['true_name'];
+                $sendHair['keyword3'] = '患者咨询';
+                $sendHair['keyword4'] = date('Y-m-d H:i', time());
+                $sendHair['remark'] = '后期咨询请注意及时回复。';
+                $sendHair['url'] = 'http://wechat.bohetanglao.com/home/advise/chat/memberid/' . $data['doctor_id'] . '/type/0.html';
+                $sendHair['openid'] = $member['openid'];
+
+                if ($member['is_type'] == 0) {
+                    Model('Weixin')->messageTemplate(8, $sendHair);
                 }
 
                 if ($data['order_id']=='0') {
