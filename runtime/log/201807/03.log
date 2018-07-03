@@ -370,3 +370,49 @@
 [ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.064326s ]
 [ error ] [8]未定义数组索引: member_id[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php:739]
 [ error ] [0]variable type error： boolean[D:\workLP\20180502\judeng\wwwroot\thinkphp\library\think\Response.php:318]
+---------------------------------------------------------------
+[ 2018-07-03T15:46:43+08:00 ] 0.0.0.0 POST /order/stopTalk
+[ info ] localhost:8020/order/stopTalk [运行时间：1.924110s][吞吐率：0.52req/s] [内存消耗：3,838.41kb] [文件加载：59]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'stopTalk',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------388289937972322276970178',
+  'content-length' => '602',
+  'x-original-url' => '/order/stopTalk',
+  'postman-token' => '9d2bba28-15df-4ded-8acc-ea59d9ed9d8c',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+  'member_id' => '2',
+  'comment' => 'aa',
+  'patient_id' => '89',
+  'order_id' => '0',
+)
+[ info ] [ RUN ] app\home\controller\Order->stopTalk[ E:\wook\201804\judeng\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.085005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT `member_name`,`mobile`,`openid`,`is_type` FROM `jd_member` WHERE  (  member_id=89 ) LIMIT 1 [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wenzhen` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wenzhen` WHERE  (  type = 2 AND patient_id = 89 AND doctor_id = 70 AND is_use = 1 ) LIMIT 1 [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.056003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:131]
+[ error ] [8]未定义数组索引: true_name[E:\wook\201804\judeng\application\home\controller\Order.php:947]
