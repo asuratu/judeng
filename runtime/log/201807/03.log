@@ -371,151 +371,9 @@
 [ error ] [8]未定义数组索引: member_id[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php:739]
 [ error ] [0]variable type error： boolean[D:\workLP\20180502\judeng\wwwroot\thinkphp\library\think\Response.php:318]
 ---------------------------------------------------------------
-[ 2018-07-03T09:49:18+08:00 ] 0.0.0.0 POST /order/startStatus
-[ info ] localhost:7037/order/startStatus [运行时间：1.569501s][吞吐率：0.64req/s] [内存消耗：3,887.55kb] [文件加载：59]
-[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
-[ info ] [ BIND ] 'home'
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => 'home',
-    1 => 'order',
-    2 => 'startStatus',
-  ),
-)
-[ info ] [ HEADER ] array (
-  'content-type' => 'application/json',
-  'content-length' => '150',
-  'x-original-url' => '/order/startStatus',
-  'user-agent' => 'YiSong/1.24.2 (iPhone; iOS 11.4; Scale/3.00)',
-  'host' => 'localhost:7037',
-  'cookie' => 'PHPSESSID=omm711tk8d7lar2nt1vk9ujt56',
-  'accept-language' => 'zh-Hans-CN;q=1',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => '*/*',
-  'connection' => 'keep-alive, keep-alive',
-)
-[ info ] [ PARAM ] array (
-  'sign' => 'd13bfa36455b359da0a200948343a5ac',
-  'doctor_id' => '247',
-  'order_id' => '1066',
-  'patient_id' => '34',
-  '_time' => '1530581261',
-  'only_token' => '15305811518YC&&v',
-)
-[ info ] [ RUN ] app\home\controller\Order->startStatus[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
-[ info ] [ DB ] INIT mysql
-[ info ] [ CACHE ] INIT File
-[ info ] [ LOG ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.100376s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.067061s ]
-[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=247 ) LIMIT 1 [ RunTime:0.062483s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.062097s ]
-[ sql ] [ SQL ] SELECT `member_name`,`mobile`,`openid`,`is_type` FROM `jd_member` WHERE  (  member_id=34 ) LIMIT 1 [ RunTime:0.059586s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.061446s ]
-[ sql ] [ SQL ] SELECT * FROM `jd_wx_user` LIMIT 1 [ RunTime:0.062903s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.060545s ]
-[ sql ] [ SQL ] SELECT * FROM `jd_order` WHERE  (  order_id = 1066 AND pay_status = 1 AND order_status IN(1,3) AND patient_id = 34 ) LIMIT 1 [ RunTime:0.062535s ]
-[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `only_token` = '15305811518YC&&v'  AND `is_status` = 0 LIMIT 1 [ RunTime:0.059994s ]
-[ error ] [8]未定义数组索引: doctor_member[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php:737]
-[ error ] [8]未定义数组索引: doctor_member[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php:739]
-[ error ] [8]unserialize(): Error at offset 0 of 734 bytes[D:\workLP\20180502\judeng\wwwroot\thinkphp\library\think\cache\driver\File.php:120]
----------------------------------------------------------------
-[ 2018-07-03T10:00:47+08:00 ] 0.0.0.0 POST /prescription/getSimilarDrug
-[ info ] localhost:7037/prescription/getSimilarDrug [运行时间：0.392736s][吞吐率：2.55req/s] [内存消耗：3,223.20kb] [文件加载：51]
-[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
-[ info ] [ BIND ] 'home'
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => 'home',
-    1 => 'prescription',
-    2 => 'getSimilarDrug',
-  ),
-)
-[ info ] [ HEADER ] array (
-  'content-type' => 'application/json',
-  'content-length' => '126',
-  'x-original-url' => '/prescription/getSimilarDrug',
-  'user-agent' => 'YiSong/1.24.2 (iPhone; iOS 11.4; Scale/3.00)',
-  'host' => 'localhost:7037',
-  'cookie' => 'PHPSESSID=1p03c0vjlij1pgkg2v4ppqt241',
-  'accept-language' => 'zh-Hans-CN;q=1',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => '*/*',
-  'connection' => 'keep-alive, keep-alive',
-)
-[ info ] [ PARAM ] array (
-  'prescription_id' => 1,
-  'only_token' => '1530582147H~|(yX',
-  'sign' => 'c73332d838a9d5e5774a74b31b79a935',
-  '_time' => '1530583091',
-  'str' => 'M',
-)
-[ info ] [ RUN ] app\home\controller\Prescription->getSimilarDrug[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
-[ info ] [ DB ] INIT mysql
-[ info ] [ LOG ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.089519s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_drug` [ RunTime:0.062908s ]
-[ sql ] [ SQL ] SELECT `drug_id`,`nick_name`,`Drug_unit`,`price`,`num`,`other_name` FROM `jd_drug` WHERE  `Is_user` = 1  AND `keywords` LIKE '%M%' ORDER BY `add_date` ASC [ RunTime:0.062961s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.063980s ]
-[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `only_token` = '1530582147H~|(yX'  AND `is_status` = 0 LIMIT 1 [ RunTime:0.060187s ]
----------------------------------------------------------------
-[ 2018-07-03T14:31:38+08:00 ] 0.0.0.0 POST /order/startStatus
-[ info ] localhost:7037/order/startStatus [运行时间：1.634233s][吞吐率：0.61req/s] [内存消耗：3,879.17kb] [文件加载：59]
-[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
-[ info ] [ BIND ] 'home'
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => 'home',
-    1 => 'order',
-    2 => 'startStatus',
-  ),
-)
-[ info ] [ HEADER ] array (
-  'content-type' => 'application/json',
-  'content-length' => '147',
-  'x-original-url' => '/order/startStatus',
-  'user-agent' => 'YiSong/1.24.2 (iPhone; iOS 11.4; Scale/3.00)',
-  'host' => 'localhost:7037',
-  'cookie' => 'PHPSESSID=omm711tk8d7lar2nt1vk9ujt56',
-  'accept-language' => 'zh-Hans-CN;q=1',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => '*/*',
-  'connection' => 'keep-alive, keep-alive',
-)
-[ info ] [ PARAM ] array (
-  'sign' => '0a00634a8dc7f6bf1968dc0c27b065c1',
-  'doctor_id' => '170',
-  'order_id' => '0',
-  'patient_id' => '34',
-  '_time' => '1530599415',
-  'only_token' => '1530599170HNSRi@',
-)
-[ info ] [ RUN ] app\home\controller\Order->startStatus[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
-[ info ] [ DB ] INIT mysql
-[ info ] [ CACHE ] INIT File
-[ info ] [ LOG ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.089762s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.061796s ]
-[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=170 ) LIMIT 1 [ RunTime:0.061371s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.059590s ]
-[ sql ] [ SQL ] SELECT `member_name`,`mobile`,`openid`,`is_type` FROM `jd_member` WHERE  (  member_id=34 ) LIMIT 1 [ RunTime:0.058095s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.059564s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wenzhen` [ RunTime:0.058905s ]
-[ sql ] [ SQL ] SELECT * FROM `jd_wenzhen` WHERE  (  type = 2 AND patient_id = 34 AND doctor_id = 170 AND is_use = 1 ) LIMIT 1 [ RunTime:0.058111s ]
-[ sql ] [ SQL ] UPDATE `jd_wenzhen`  SET `start_time`=1530599498,`end_time`=1530685898,`release_date`=1530599498  WHERE  (  log_id = 45 ) [ RunTime:0.057034s ]
-[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `only_token` = '1530599170HNSRi@'  AND `is_status` = 0 LIMIT 1 [ RunTime:0.058978s ]
-[ error ] [8]未定义数组索引: doctor_member[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php:737]
-[ error ] [8]未定义数组索引: doctor_member[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php:739]
----------------------------------------------------------------
-[ 2018-07-03T14:53:04+08:00 ] 0.0.0.0 POST /order/stopTalk
-[ info ] localhost:7037/order/stopTalk [运行时间：0.486153s][吞吐率：2.06req/s] [内存消耗：3,192.79kb] [文件加载：51]
-[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ 2018-07-03T15:46:43+08:00 ] 0.0.0.0 POST /order/stopTalk
+[ info ] localhost:8020/order/stopTalk [运行时间：1.924110s][吞吐率：0.52req/s] [内存消耗：3,838.41kb] [文件加载：59]
+[ info ] [ LANG ] E:\wook\201804\judeng\thinkphp\lang\zh-cn.php
 [ info ] [ BIND ] 'home'
 [ info ] [ ROUTE ] array (
   'type' => 'module',
@@ -527,202 +385,34 @@
   ),
 )
 [ info ] [ HEADER ] array (
-  'content-type' => 'application/json',
-  'content-length' => '150',
+  'content-type' => 'multipart/form-data; boundary=--------------------------388289937972322276970178',
+  'content-length' => '602',
   'x-original-url' => '/order/stopTalk',
-  'user-agent' => 'YiSong/1.24.2 (iPhone; iOS 11.4; Scale/3.00)',
-  'host' => 'localhost:7037',
-  'cookie' => 'PHPSESSID=omm711tk8d7lar2nt1vk9ujt56',
-  'accept-language' => 'zh-Hans-CN;q=1',
+  'postman-token' => '9d2bba28-15df-4ded-8acc-ea59d9ed9d8c',
+  'user-agent' => 'PostmanRuntime/3.0.11-hotfix.2',
+  'host' => 'localhost:8020',
+  'cookie' => 'PXAPP=7dcc70a9d9ea2f56fa610b53284775dc',
   'accept-encoding' => 'gzip, deflate',
-  'accept' => '*/*',
-  'connection' => 'keep-alive, keep-alive',
-)
-[ info ] [ PARAM ] array (
-  'sign' => '216fc698bab60ce38db94594d887d529',
-  'doctor_id' => '170',
-  'order_id' => '1144',
-  'patient_id' => '34',
-  '_time' => '1530600117',
-  'only_token' => '1530599170HNSRi@',
-)
-[ info ] [ RUN ] app\home\controller\Order->stopTalk[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
-[ info ] [ DB ] INIT mysql
-[ info ] [ LOG ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.112984s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.065955s ]
-[ sql ] [ SQL ] SELECT * FROM `jd_order` WHERE  (  order_id = 1144 AND pay_status = 1 AND order_status IN(1,3) AND patient_id = 34 ) LIMIT 1 [ RunTime:0.077855s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wenzhen` [ RunTime:0.077775s ]
-[ sql ] [ SQL ] SELECT * FROM `jd_wenzhen` WHERE  (  type IN(0,1) AND patient_id = 34 AND doctor_id = 170 AND is_use = 1 AND order_id = 1144 ) LIMIT 1 [ RunTime:0.064166s ]
----------------------------------------------------------------
-[ 2018-07-03T14:53:56+08:00 ] 0.0.0.0 POST /order/stopTalk
-[ info ] localhost:7037/order/stopTalk [运行时间：0.488445s][吞吐率：2.05req/s] [内存消耗：3,192.79kb] [文件加载：51]
-[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
-[ info ] [ BIND ] 'home'
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => 'home',
-    1 => 'order',
-    2 => 'stopTalk',
-  ),
-)
-[ info ] [ HEADER ] array (
-  'content-type' => 'application/json',
-  'content-length' => '150',
-  'x-original-url' => '/order/stopTalk',
-  'user-agent' => 'YiSong/1.24.2 (iPhone; iOS 11.4; Scale/3.00)',
-  'host' => 'localhost:7037',
-  'cookie' => 'PHPSESSID=omm711tk8d7lar2nt1vk9ujt56',
-  'accept-language' => 'zh-Hans-CN;q=1',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => '*/*',
-  'connection' => 'keep-alive, keep-alive',
-)
-[ info ] [ PARAM ] array (
-  'sign' => '216fc698bab60ce38db94594d887d529',
-  'doctor_id' => '170',
-  'order_id' => '1144',
-  'patient_id' => '34',
-  '_time' => '1530600117',
-  'only_token' => '1530599170HNSRi@',
-)
-[ info ] [ RUN ] app\home\controller\Order->stopTalk[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
-[ info ] [ DB ] INIT mysql
-[ info ] [ LOG ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.089131s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.066921s ]
-[ sql ] [ SQL ] SELECT * FROM `jd_order` WHERE  (  order_id = 1144 AND pay_status = 1 AND order_status IN(1,3) AND patient_id = 34 ) LIMIT 1 [ RunTime:0.073315s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wenzhen` [ RunTime:0.062580s ]
-[ sql ] [ SQL ] SELECT * FROM `jd_wenzhen` WHERE  (  type IN(0,1) AND patient_id = 34 AND doctor_id = 170 AND is_use = 1 AND order_id = 1144 ) LIMIT 1 [ RunTime:0.082316s ]
----------------------------------------------------------------
-[ 2018-07-03T15:06:15+08:00 ] 0.0.0.0 POST /order/stopTalk
-[ info ] localhost:7037/order/stopTalk [运行时间：0.602804s][吞吐率：1.66req/s] [内存消耗：3,233.23kb] [文件加载：51]
-[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
-[ info ] [ BIND ] 'home'
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => 'home',
-    1 => 'order',
-    2 => 'stopTalk',
-  ),
-)
-[ info ] [ HEADER ] array (
-  'content-type' => 'application/json',
-  'content-length' => '150',
-  'x-original-url' => '/order/stopTalk',
-  'user-agent' => 'YiSong/1.24.2 (iPhone; iOS 11.4; Scale/3.00)',
-  'host' => 'localhost:7037',
-  'cookie' => 'PHPSESSID=omm711tk8d7lar2nt1vk9ujt56',
-  'accept-language' => 'zh-Hans-CN;q=1',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => '*/*',
-  'connection' => 'keep-alive, keep-alive',
-)
-[ info ] [ PARAM ] array (
-  'sign' => '216fc698bab60ce38db94594d887d529',
-  'doctor_id' => '170',
-  'order_id' => '1144',
-  'patient_id' => '34',
-  '_time' => '1530600117',
-  'only_token' => '1530599170HNSRi@',
-)
-[ info ] [ RUN ] app\home\controller\Order->stopTalk[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
-[ info ] [ DB ] INIT mysql
-[ info ] [ LOG ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.086177s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.058579s ]
-[ sql ] [ SQL ] SELECT * FROM `jd_order` WHERE  (  order_id = 1144 AND pay_status = 1 AND order_status IN(1,3) AND patient_id = 34 ) LIMIT 1 [ RunTime:0.058516s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wenzhen` [ RunTime:0.058818s ]
-[ sql ] [ SQL ] SELECT * FROM `jd_wenzhen` WHERE  (  type IN(0,1) AND patient_id = 34 AND doctor_id = 170 AND is_use = 1 AND order_id = 1144 ) LIMIT 1 [ RunTime:0.057170s ]
-[ sql ] [ SQL ] UPDATE `jd_wenzhen`  SET `is_use`=0,`release_date`=1530601575  WHERE  (  log_id = 47 ) [ RunTime:0.057378s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_product` [ RunTime:0.058417s ]
-[ sql ] [ SQL ] SELECT * FROM `jd_order_product` WHERE  (  order_id = 1144 ) LIMIT 1 [ RunTime:0.058685s ]
----------------------------------------------------------------
-[ 2018-07-03T15:12:23+08:00 ] 0.0.0.0 POST /order/stopTalk
-[ info ] localhost:7037/order/stopTalk [运行时间：0.832513s][吞吐率：1.20req/s] [内存消耗：3,261.20kb] [文件加载：51]
-[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
-[ info ] [ BIND ] 'home'
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => 'home',
-    1 => 'order',
-    2 => 'stopTalk',
-  ),
-)
-[ info ] [ HEADER ] array (
-  'content-type' => 'application/json',
-  'content-length' => '150',
-  'x-original-url' => '/order/stopTalk',
-  'user-agent' => 'YiSong/1.24.2 (iPhone; iOS 11.4; Scale/3.00)',
-  'host' => 'localhost:7037',
-  'cookie' => 'PHPSESSID=omm711tk8d7lar2nt1vk9ujt56',
-  'accept-language' => 'zh-Hans-CN;q=1',
-  'accept-encoding' => 'gzip, deflate',
-  'accept' => '*/*',
-  'connection' => 'keep-alive, keep-alive',
-)
-[ info ] [ PARAM ] array (
-  'sign' => '216fc698bab60ce38db94594d887d529',
-  'doctor_id' => '170',
-  'order_id' => '1144',
-  'patient_id' => '34',
-  '_time' => '1530600117',
-  'only_token' => '1530599170HNSRi@',
-)
-[ info ] [ RUN ] app\home\controller\Order->stopTalk[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
-[ info ] [ DB ] INIT mysql
-[ info ] [ LOG ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.088535s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.058888s ]
-[ sql ] [ SQL ] SELECT * FROM `jd_order` WHERE  (  order_id = 1144 AND pay_status = 1 AND order_status IN(1,3) AND patient_id = 34 ) LIMIT 1 [ RunTime:0.058951s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wenzhen` [ RunTime:0.059863s ]
-[ sql ] [ SQL ] SELECT * FROM `jd_wenzhen` WHERE  (  type IN(0,1) AND patient_id = 34 AND doctor_id = 170 AND is_use = 1 AND order_id = 1144 ) LIMIT 1 [ RunTime:0.058222s ]
-[ sql ] [ SQL ] UPDATE `jd_wenzhen`  SET `is_use`=0,`release_date`=1530601942  WHERE  (  log_id = 47 ) [ RunTime:0.057088s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_product` [ RunTime:0.059023s ]
-[ sql ] [ SQL ] SELECT * FROM `jd_order_product` WHERE  (  order_id = 1144 ) LIMIT 1 [ RunTime:0.059362s ]
-[ sql ] [ SQL ] UPDATE `jd_order_product`  SET `left_revisit`=0  WHERE  (  order_id = 1144 ) [ RunTime:0.062816s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.058950s ]
-[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `only_token` = '1530599170HNSRi@'  AND `is_status` = 0 LIMIT 1 [ RunTime:0.057593s ]
----------------------------------------------------------------
-[ 2018-07-03T15:39:38+08:00 ] 0.0.0.0 POST /order/OrderSet
-[ info ] localhost:7037/order/OrderSet [运行时间：0.334470s][吞吐率：2.99req/s] [内存消耗：3,249.85kb] [文件加载：51]
-[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
-[ info ] [ BIND ] 'home'
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => 'home',
-    1 => 'order',
-    2 => 'OrderSet',
-  ),
-)
-[ info ] [ HEADER ] array (
-  'content-type' => '',
-  'content-length' => '0',
-  'x-original-url' => '/order/OrderSet',
-  'postman-token' => '7551373c-8aa4-23a6-800c-881ebd99213e',
-  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
-  'host' => 'localhost:7037',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate, br',
   'accept' => '*/*',
   'connection' => 'keep-alive',
   'cache-control' => 'no-cache',
 )
 [ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+  'member_id' => '2',
+  'comment' => 'aa',
+  'patient_id' => '89',
+  'order_id' => '0',
 )
-[ info ] [ RUN ] app\home\controller\Order->OrderSet[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ RUN ] app\home\controller\Order->stopTalk[ E:\wook\201804\judeng\application\home\controller\Order.php ]
 [ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
 [ info ] [ LOG ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.108752s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.059760s ]
-[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 ) [ RunTime:0.059866s ]
-[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 and o.order_id='1149' ) LIMIT 1 [ RunTime:0.063107s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.085005s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT `member_name`,`mobile`,`openid`,`is_type` FROM `jd_member` WHERE  (  member_id=89 ) LIMIT 1 [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wenzhen` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wenzhen` WHERE  (  type = 2 AND patient_id = 89 AND doctor_id = 70 AND is_use = 1 ) LIMIT 1 [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.056003s ]
+[ error ] [8]未定义数组索引: only_token[E:\wook\201804\judeng\application\common.php:131]
+[ error ] [8]未定义数组索引: true_name[E:\wook\201804\judeng\application\home\controller\Order.php:947]
