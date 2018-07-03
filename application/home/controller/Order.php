@@ -1208,7 +1208,6 @@ class Order extends Common
      */
     public function dealEachOrder($orderid)
     {
-        $orderid = 1149;
         $order = db("Order")->alias('o')
             ->join('order_product a','o.order_id=a.order_id')
             ->field('a.*,o.doctor_id,o.pay_amount,o.order_status,o.order_type')
