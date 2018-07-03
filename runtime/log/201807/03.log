@@ -1,0 +1,372 @@
+---------------------------------------------------------------
+[ 2018-07-03T09:35:29+08:00 ] 0.0.0.0 POST /order/startStatus
+[ info ] localhost:7037/order/startStatus [运行时间：0.469981s][吞吐率：2.13req/s] [内存消耗：3,375.69kb] [文件加载：59]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'startStatus',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '150',
+  'x-original-url' => '/order/startStatus',
+  'user-agent' => 'YiSong/1.24.2 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=omm711tk8d7lar2nt1vk9ujt56',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'sign' => 'd13bfa36455b359da0a200948343a5ac',
+  'doctor_id' => '247',
+  'order_id' => '1066',
+  'patient_id' => '34',
+  '_time' => '1530581261',
+  'only_token' => '15305811518YC&&v',
+)
+[ info ] [ RUN ] app\home\controller\Order->startStatus[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.094228s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.064111s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=247 ) LIMIT 1 [ RunTime:0.068546s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.061264s ]
+[ error ] [8]未定义数组索引: member_id[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php:736]
+[ error ] [0]variable type error： boolean[D:\workLP\20180502\judeng\wwwroot\thinkphp\library\think\Response.php:318]
+---------------------------------------------------------------
+[ 2018-07-03T09:38:20+08:00 ] 0.0.0.0 POST /order/startStatus
+[ info ] localhost:7037/order/startStatus [运行时间：0.039643s][吞吐率：25.23req/s] [内存消耗：2,218.33kb] [文件加载：44]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'startStatus',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '150',
+  'x-original-url' => '/order/startStatus',
+  'user-agent' => 'YiSong/1.24.2 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=omm711tk8d7lar2nt1vk9ujt56',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'sign' => 'd13bfa36455b359da0a200948343a5ac',
+  'doctor_id' => '247',
+  'order_id' => '1066',
+  'patient_id' => '34',
+  '_time' => '1530581261',
+  'only_token' => '15305811518YC&&v',
+)
+[ info ] [ RUN ] app\home\controller\Order->startStatus[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-03T09:38:40+08:00 ] 0.0.0.0 POST /order/startStatus
+[ info ] localhost:7037/order/startStatus [运行时间：0.449339s][吞吐率：2.23req/s] [内存消耗：3,375.70kb] [文件加载：59]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'startStatus',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '150',
+  'x-original-url' => '/order/startStatus',
+  'user-agent' => 'YiSong/1.24.2 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=omm711tk8d7lar2nt1vk9ujt56',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'sign' => 'd13bfa36455b359da0a200948343a5ac',
+  'doctor_id' => '247',
+  'order_id' => '1066',
+  'patient_id' => '34',
+  '_time' => '1530581261',
+  'only_token' => '15305811518YC&&v',
+)
+[ info ] [ RUN ] app\home\controller\Order->startStatus[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.083268s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.058309s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=247 ) LIMIT 1 [ RunTime:0.062055s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.056723s ]
+[ error ] [8]未定义数组索引: member_id[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php:736]
+[ error ] [0]variable type error： boolean[D:\workLP\20180502\judeng\wwwroot\thinkphp\library\think\Response.php:318]
+---------------------------------------------------------------
+[ 2018-07-03T09:39:30+08:00 ] 0.0.0.0 POST /order/startStatus
+[ info ] localhost:7037/order/startStatus [运行时间：0.205852s][吞吐率：4.86req/s] [内存消耗：2,440.10kb] [文件加载：47]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'startStatus',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '150',
+  'x-original-url' => '/order/startStatus',
+  'user-agent' => 'YiSong/1.24.2 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=omm711tk8d7lar2nt1vk9ujt56',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'sign' => 'd13bfa36455b359da0a200948343a5ac',
+  'doctor_id' => '247',
+  'order_id' => '1066',
+  'patient_id' => '34',
+  '_time' => '1530581261',
+  'only_token' => '15305811518YC&&v',
+)
+[ info ] [ RUN ] app\home\controller\Order->startStatus[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.087271s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+---------------------------------------------------------------
+[ 2018-07-03T09:41:39+08:00 ] 0.0.0.0 POST /order/startStatus
+[ info ] localhost:7037/order/startStatus [运行时间：0.464175s][吞吐率：2.15req/s] [内存消耗：3,376.81kb] [文件加载：59]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'startStatus',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '150',
+  'x-original-url' => '/order/startStatus',
+  'user-agent' => 'YiSong/1.24.2 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=omm711tk8d7lar2nt1vk9ujt56',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'sign' => 'd13bfa36455b359da0a200948343a5ac',
+  'doctor_id' => '247',
+  'order_id' => '1066',
+  'patient_id' => '34',
+  '_time' => '1530581261',
+  'only_token' => '15305811518YC&&v',
+)
+[ info ] [ RUN ] app\home\controller\Order->startStatus[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.087837s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.059998s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=247 ) LIMIT 1 [ RunTime:0.062262s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.059533s ]
+[ error ] [8]未定义数组索引: member_id[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php:739]
+[ error ] [0]variable type error： boolean[D:\workLP\20180502\judeng\wwwroot\thinkphp\library\think\Response.php:318]
+---------------------------------------------------------------
+[ 2018-07-03T09:42:10+08:00 ] 0.0.0.0 POST /order/startStatus
+[ info ] localhost:7037/order/startStatus [运行时间：0.452568s][吞吐率：2.21req/s] [内存消耗：3,377.10kb] [文件加载：59]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'startStatus',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '150',
+  'x-original-url' => '/order/startStatus',
+  'user-agent' => 'YiSong/1.24.2 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=omm711tk8d7lar2nt1vk9ujt56',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'sign' => 'd13bfa36455b359da0a200948343a5ac',
+  'doctor_id' => '247',
+  'order_id' => '1066',
+  'patient_id' => '34',
+  '_time' => '1530581261',
+  'only_token' => '15305811518YC&&v',
+)
+[ info ] [ RUN ] app\home\controller\Order->startStatus[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.095318s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.064406s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=247 ) LIMIT 1 [ RunTime:0.064486s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.063187s ]
+[ error ] [8]未定义数组索引: member_id[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php:739]
+[ error ] [0]variable type error： boolean[D:\workLP\20180502\judeng\wwwroot\thinkphp\library\think\Response.php:318]
+---------------------------------------------------------------
+[ 2018-07-03T09:43:45+08:00 ] 0.0.0.0 POST /order/startStatus
+[ info ] localhost:7037/order/startStatus [运行时间：0.426029s][吞吐率：2.35req/s] [内存消耗：3,377.63kb] [文件加载：59]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'startStatus',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '150',
+  'x-original-url' => '/order/startStatus',
+  'user-agent' => 'YiSong/1.24.2 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=omm711tk8d7lar2nt1vk9ujt56',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'sign' => 'd13bfa36455b359da0a200948343a5ac',
+  'doctor_id' => '247',
+  'order_id' => '1066',
+  'patient_id' => '34',
+  '_time' => '1530581261',
+  'only_token' => '15305811518YC&&v',
+)
+[ info ] [ RUN ] app\home\controller\Order->startStatus[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.087058s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.061928s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=247 ) LIMIT 1 [ RunTime:0.063486s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.059863s ]
+[ error ] [8]未定义数组索引: member_id[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php:739]
+[ error ] [0]variable type error： boolean[D:\workLP\20180502\judeng\wwwroot\thinkphp\library\think\Response.php:318]
+---------------------------------------------------------------
+[ 2018-07-03T09:44:24+08:00 ] 0.0.0.0 POST /order/startStatus
+[ info ] localhost:7037/order/startStatus [运行时间：0.319559s][吞吐率：3.13req/s] [内存消耗：3,249.62kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'startStatus',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '150',
+  'x-original-url' => '/order/startStatus',
+  'user-agent' => 'YiSong/1.24.2 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=omm711tk8d7lar2nt1vk9ujt56',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'sign' => 'd13bfa36455b359da0a200948343a5ac',
+  'doctor_id' => '247',
+  'order_id' => '1066',
+  'patient_id' => '34',
+  '_time' => '1530581261',
+  'only_token' => '15305811518YC&&v',
+)
+[ info ] [ RUN ] app\home\controller\Order->startStatus[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.092576s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.063613s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=247 ) LIMIT 1 [ RunTime:0.063590s ]
+---------------------------------------------------------------
+[ 2018-07-03T09:45:14+08:00 ] 0.0.0.0 POST /order/startStatus
+[ info ] localhost:7037/order/startStatus [运行时间：0.442550s][吞吐率：2.26req/s] [内存消耗：3,377.10kb] [文件加载：59]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'startStatus',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '150',
+  'x-original-url' => '/order/startStatus',
+  'user-agent' => 'YiSong/1.24.2 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=omm711tk8d7lar2nt1vk9ujt56',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'sign' => 'd13bfa36455b359da0a200948343a5ac',
+  'doctor_id' => '247',
+  'order_id' => '1066',
+  'patient_id' => '34',
+  '_time' => '1530581261',
+  'only_token' => '15305811518YC&&v',
+)
+[ info ] [ RUN ] app\home\controller\Order->startStatus[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.093421s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.065983s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_doctor` WHERE  (  member_id=247 ) LIMIT 1 [ RunTime:0.066088s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.064326s ]
+[ error ] [8]未定义数组索引: member_id[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php:739]
+[ error ] [0]variable type error： boolean[D:\workLP\20180502\judeng\wwwroot\thinkphp\library\think\Response.php:318]

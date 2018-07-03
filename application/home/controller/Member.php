@@ -855,7 +855,7 @@ class Member extends Common
             ->field("`order_id`, `doctor_id`")
             ->find();
         if (empty($orderDetail)) {
-            return 404;
+            return '该订单已支付!';
         }
 
         //生成二维码
