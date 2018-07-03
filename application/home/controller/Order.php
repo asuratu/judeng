@@ -165,30 +165,30 @@ class Order extends Common
                 //计算年龄
 //                $mainInfo['age'] = getAge($patientInfo['birthday']);
                 $mainInfo['age'] = $patientInfo['age'] ?: 0;
-               if ($data['order_id']) {
-                //由调制服务包进入在线开方
-                   $orderInfo = db('order_product')->alias('op')
-                       ->join(['jd_order'=>'o'], 'op.order_id = o.order_id' , 'inner')
-                       ->join(['jd_self_goods'=>'s'], 's.self_goods_id = op.self_goods_id' , 'left')
-                       ->where("o.order_id = {$data['order_id']} AND o.pay_status = 1 AND o.order_type = 4 AND o.order_status = 1")
-                       ->field("o.*, op.*, s.content, s.inherit_drug, s.one_price, s.dose as self_dose")
-                       ->find();
+                if ($data['order_id']) {
+                    //由调制服务包进入在线开方
+                    $orderInfo = db('order_product')->alias('op')
+                        ->join(['jd_order'=>'o'], 'op.order_id = o.order_id' , 'inner')
+                        ->join(['jd_self_goods'=>'s'], 's.self_goods_id = op.self_goods_id' , 'left')
+                        ->where("o.order_id = {$data['order_id']} AND o.pay_status = 1 AND o.order_type = 4 AND o.order_status = 1")
+                        ->field("o.*, op.*, s.content, s.inherit_drug, s.one_price, s.dose as self_dose")
+                        ->find();
 
 //                   $mainInfo['content'] = $orderInfo['content'] ? base64_encode($orderInfo['content']): '';
-                   $mainInfo['drug_str'] = $orderInfo['content'] ? base64_encode($orderInfo['content']): '';
+                    $mainInfo['drug_str'] = $orderInfo['content'] ? base64_encode($orderInfo['content']): '';
 //                   $mainInfo['inherit_drug'] = $orderInfo['inherit_drug'] ?: '';
-                   $mainInfo['special_content'] = $orderInfo['inherit_drug'] ? ($orderInfo['inherit_drug']) : '';
-                   $mainInfo['one_price'] = $orderInfo['one_price'] ?: '';
-                   $mainInfo['self_dose'] = $orderInfo['self_dose'] ?: 0;
-                   $mainInfo['order_id'] = $data['order_id'];
+                    $mainInfo['special_content'] = $orderInfo['inherit_drug'] ? ($orderInfo['inherit_drug']) : '';
+                    $mainInfo['one_price'] = $orderInfo['one_price'] ?: '';
+                    $mainInfo['self_dose'] = $orderInfo['self_dose'] ?: 0;
+                    $mainInfo['order_id'] = $data['order_id'];
 
-               } else {
-                   $mainInfo['drug_str'] = '';
-                   $mainInfo['special_content'] = '';
-                   $mainInfo['one_price'] = '';
-                   $mainInfo['self_dose'] = 0;
-                   $mainInfo['order_id'] = 0;
-               }
+                } else {
+                    $mainInfo['drug_str'] = '';
+                    $mainInfo['special_content'] = '';
+                    $mainInfo['one_price'] = '';
+                    $mainInfo['self_dose'] = 0;
+                    $mainInfo['order_id'] = 0;
+                }
             }
             ajaxReturn(array('code'=>1,'info'=>'ok~!','data'=>[$mainInfo]));
         }
@@ -413,8 +413,8 @@ class Order extends Common
                     $updateOrderTemp['product_number'] = $orderPrescriptionInsert['dose'];
                     $updateOrderTemp['pay_amount'] = $orderPrescriptionInsert['total_price'];
                     $updateOrderMap['order_id'] = $orderPrescriptionInsert['order_id'];
-                   $updateOrderPrice = db('order')->where($updateOrderMap)->update($updateOrderTemp);
-                   //推送消息模板到服务号,提醒支付
+                    $updateOrderPrice = db('order')->where($updateOrderMap)->update($updateOrderTemp);
+                    //推送消息模板到服务号,提醒支付
 
                     $sendHair = array();
                     $sendHair['doctor_name'] = $doctorInfo['member_name'];
@@ -543,65 +543,65 @@ class Order extends Common
                 }
 
                 //只有在线开方能计算价格
-                    //计算价格
-                    $drugSumPrice = 0;//价格
-                    $lessCountArr = array();//超量
-                    $otherNameArr = array();//别名
-                    $alertArr = array();//是否下架
+                //计算价格
+                $drugSumPrice = 0;//价格
+                $lessCountArr = array();//超量
+                $otherNameArr = array();//别名
+                $alertArr = array();//是否下架
 //                    var_dump(json_decode(base64_decode($data['drug_str'])));die;
-                    foreach (json_decode(base64_decode($data['drug_str'])) as $key => $val) {
-                        $drugDetailMap['Is_user'] = 1;
+                foreach (json_decode(base64_decode($data['drug_str'])) as $key => $val) {
+                    $drugDetailMap['Is_user'] = 1;
 
-                        //TODO 此处不能用drug_id来定位药材, 应该用药房id和药品统一名(别名)
-                        $drugDetailMap['prescription_id'] = $data['prescription_id'];
-                        $drugDetailMap['nick_name'] = $val[1];
+                    //TODO 此处不能用drug_id来定位药材, 应该用药房id和药品统一名(别名)
+                    $drugDetailMap['prescription_id'] = $data['prescription_id'];
+                    $drugDetailMap['nick_name'] = $val[1];
 
-                        $list=db('drug')->where($drugDetailMap)->field("`drug_id`,`nick_name`,`Drug_unit`,`price`,`num`, `other_name`")->find();
-                        array_push($otherNameArr, $list['other_name']);
-                        if (!$list) {
-                            array_push($alertArr, $val[1]);
-                        }
-                        $list['total_price'] = $val[2]*$list['price'];
-                        $drugSumPrice += $list['total_price'];
-                        if ($val[2] > $list['num'] - config('lessCount') ) {
-                            array_push($lessCountArr, $val[1]);
-                        }
+                    $list=db('drug')->where($drugDetailMap)->field("`drug_id`,`nick_name`,`Drug_unit`,`price`,`num`, `other_name`")->find();
+                    array_push($otherNameArr, $list['other_name']);
+                    if (!$list) {
+                        array_push($alertArr, $val[1]);
                     }
+                    $list['total_price'] = $val[2]*$list['price'];
+                    $drugSumPrice += $list['total_price'];
+                    if ($val[2] > $list['num'] - config('lessCount') ) {
+                        array_push($lessCountArr, $val[1]);
+                    }
+                }
 
 //                $otherNameArr = array('芒硝', '三棱', '桂枝');
 //                $otherNameArr = array('川乌', '附子', '半夏');
-                    //查询配药禁忌
-                    $tabooArr = array();
-                    foreach ($otherNameArr as $val) {
-                        $tabooArr2 = array();
-                        $temp['name'] = $val;
-                        $temp['type'] = 1;//可以防止反复添
-                        $target = db('drug_record')->where($temp)->field("*")->find();
+                //查询配药禁忌
+                $tabooArr = array();
+                foreach ($otherNameArr as $val) {
+                    $tabooArr2 = array();
+                    $temp['name'] = $val;
+                    $temp['type'] = 1;//可以防止反复添
+                    $target = db('drug_record')->where($temp)->field("*")->find();
 
-                        if ($target) {
-                            array_push($tabooArr2, $val);
-                            $contrastTemp['key'] = $target['key'];
-                            $contrastTemp['type'] = abs($target['type']-1);
-                            $contrastList = db('drug_record')->where($contrastTemp)->field("*")->select();
-                            foreach ($contrastList as $val2) {
-                                $tempArr = $tabooArr2;
-                                if (in_array($val2['name'], $otherNameArr)) {
-                                    array_push($tempArr, $val2['name']);
-                                    array_push($tabooArr, $tempArr);
-                                }
+                    if ($target) {
+                        array_push($tabooArr2, $val);
+                        $contrastTemp['key'] = $target['key'];
+                        $contrastTemp['type'] = abs($target['type']-1);
+                        $contrastList = db('drug_record')->where($contrastTemp)->field("*")->select();
+                        foreach ($contrastList as $val2) {
+                            $tempArr = $tabooArr2;
+                            if (in_array($val2['name'], $otherNameArr)) {
+                                array_push($tempArr, $val2['name']);
+                                array_push($tabooArr, $tempArr);
                             }
                         }
                     }
+                }
 
 
 
-                    if (count($tabooArr) > 0 && count($tabooArr[0]) > 1) {
-                        $orderPrescriptionInsert['is_taboo'] = 1;
-                        $orderPrescriptionInsert['taboo_content'] = ($tabooArr);
-                    } else {
-                        $orderPrescriptionInsert['is_taboo'] = 0;
-                        $orderPrescriptionInsert['taboo_content'] = '';
-                    }
+                if (count($tabooArr) > 0 && count($tabooArr[0]) > 1) {
+                    $orderPrescriptionInsert['is_taboo'] = 1;
+                    $orderPrescriptionInsert['taboo_content'] = ($tabooArr);
+                } else {
+                    $orderPrescriptionInsert['is_taboo'] = 0;
+                    $orderPrescriptionInsert['taboo_content'] = '';
+                }
 
                 Db::commit();
                 ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>[['is_taboo'=>$orderPrescriptionInsert['is_taboo'], 'taboo_content'=>$orderPrescriptionInsert['taboo_content'], 'lessCountArr'=>$lessCountArr, 'alertArr'=>$alertArr, 'price'=>round($drugSumPrice, 2)]]));
@@ -805,7 +805,7 @@ class Order extends Common
                         //结束本次问诊
                         $updateInfo['is_use'] = 0;
                         $updateInfo['release_date'] = time();
-                            db('wenzhen')
+                        db('wenzhen')
                             ->where("log_id = {$wenzhenDetail['log_id']}")
                             ->update($updateInfo);
                         Db::commit();
@@ -969,13 +969,29 @@ class Order extends Common
                         ->where("type IN(0,1) AND patient_id = {$data['patient_id']} AND doctor_id = {$data['doctor_id']} AND is_use = 1 AND order_id = {$data['order_id']}")
                         ->field("*")
                         ->find();
-                   if (!empty($wenzhenDetail) && $wenzhenDetail['end_time'] > 0) {
+                    if (!empty($wenzhenDetail) && $wenzhenDetail['end_time'] > 0) {
                         //结束本次问诊
                         $updateInfo['is_use'] = 0;
                         $updateInfo['release_date'] = time();
                         db('wenzhen')
                             ->where("log_id = {$wenzhenDetail['log_id']}")
                             ->update($updateInfo);
+                        //问诊订单记录信息
+                        $orderProductInfo = db('order_product')
+                            ->where("order_id = {$data['order_id']}")
+                            ->field("*")
+                            ->find();
+                        if ($wenzhenDetail['type'] == 0 && $orderProductInfo['left_inquisition'] > 0) {//图文问诊
+                            $leftMap['left_inquisition'] = $orderProductInfo['left_inquisition']-1;
+                            db('order_product')
+                                ->where("order_id = {$data['order_id']}")
+                                ->update($leftMap);
+                        } elseif ($wenzhenDetail['type'] == 1 && $orderProductInfo['left_revisit'] > 0) {//在线复诊
+                            $leftMap['left_revisit'] = $orderProductInfo['left_revisit']-1;
+                            db('order_product')
+                                ->where("order_id = {$data['order_id']}")
+                                ->update($leftMap);
+                        }
                         Db::commit();
                         ajaxReturn(array('code'=>1, 'info'=>'本次问诊已结束','data'=>[]));
                     } else {
@@ -1015,17 +1031,17 @@ class Order extends Common
                     ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
                 }
 
-                    //查询该医生和该患者最新的一次问诊记录
-                    $wenzhenDetail = db('wenzhen')
-                        ->where("type IN(0,1,2) AND patient_id = {$data['patient_id']} AND doctor_id = {$data['doctor_id']}")
-                        ->field("*")
-                        ->order('log_id DESC')
-                        ->find();
-                    if (empty($wenzhenDetail)) {
-                        ajaxReturn(array('code'=>1,'info'=>'暂无问诊','data'=>[]));
-                    }
-                    Db::commit();
-                    ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>[$wenzhenDetail]));
+                //查询该医生和该患者最新的一次问诊记录
+                $wenzhenDetail = db('wenzhen')
+                    ->where("type IN(0,1,2) AND patient_id = {$data['patient_id']} AND doctor_id = {$data['doctor_id']}")
+                    ->field("*")
+                    ->order('log_id DESC')
+                    ->find();
+                if (empty($wenzhenDetail)) {
+                    ajaxReturn(array('code'=>1,'info'=>'暂无问诊','data'=>[]));
+                }
+                Db::commit();
+                ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>[$wenzhenDetail]));
             } catch (\Exception $e) {
                 Db::rollback();
                 return false;
@@ -1050,17 +1066,17 @@ class Order extends Common
                     ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
                 }
 
-                    //查询该医生和该患者最新的一次问诊记录
-                    $wenzhenDetail = db('order')
-                        ->where("order_id = {$data['order_id']} AND patient_id = {$data['patient_id']} AND doctor_id = {$data['doctor_id']}")
-                        ->field("*")
-                        ->find();
+                //查询该医生和该患者最新的一次问诊记录
+                $wenzhenDetail = db('order')
+                    ->where("order_id = {$data['order_id']} AND patient_id = {$data['patient_id']} AND doctor_id = {$data['doctor_id']}")
+                    ->field("*")
+                    ->find();
 
-                    if (empty($wenzhenDetail)) {
-                        ajaxReturn(array('code'=>1,'info'=>'','data'=>[]));
-                    }
-                    Db::commit();
-                    ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>[['url'=>config('url').'/order/detail?id='.$wenzhenDetail['order_id']]]));
+                if (empty($wenzhenDetail)) {
+                    ajaxReturn(array('code'=>1,'info'=>'','data'=>[]));
+                }
+                Db::commit();
+                ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>[['url'=>config('url').'/order/detail?id='.$wenzhenDetail['order_id']]]));
             } catch (\Exception $e) {
                 Db::rollback();
                 return false;
@@ -1081,9 +1097,9 @@ class Order extends Common
                 ->where("member_id = {$lastOrder['doctor_id']}")
                 ->field("true_name")
                 ->find();
-             $name = $doctorInfo['true_name'];
+            $name = $doctorInfo['true_name'];
         } else {
-             $name = $lastOrder['doctor_name'];
+            $name = $lastOrder['doctor_name'];
         }
 
         if (empty($lastOrder)) {
@@ -1147,9 +1163,9 @@ class Order extends Common
         $flag = 1;
         foreach ($order as $val) {
             $result = $this->dealEachOrder($val['order_id']);
-           if ($result === false) {
-               $flag = 0;
-           }
+            if ($result === false) {
+                $flag = 0;
+            }
         }
     }
 
@@ -1163,7 +1179,7 @@ class Order extends Common
      */
     public function dealEachOrder($orderid)
     {
-        $orderid = 1109;
+        $orderid = 1149;
         $order = db("Order")->alias('o')
             ->join('order_product a','o.order_id=a.order_id')
             ->field('a.*,o.doctor_id,o.pay_amount,o.order_status,o.order_type')
@@ -1254,22 +1270,27 @@ class Order extends Common
             }
         }else//服务包
         {
-            $base_count=$order['pay_amount']*($order['base_commission']/100);
-            $parent_count=$order['pay_amount']*($order['commission']/100);
-            $temp['account']=$order['pay_amount']-$base_count-$parent_count;
-            $temp['total_account']=$order['pay_amount']-$base_count-$parent_count;
-            $msg="服务包订单";
-            if($order['special_id']!=0 && $order['inherit_id'] != 0)
-            {
-                //上级抽成金额
-                $res=db("doctor")->where("member_id='$order[parent_id]'")->update(["account"=>["exp","account+$parent_count"],"total_account"=>["exp","total_account+$parent_count"]]);
-                //上级抽成日志
-                $log1['add_date']=time();
-                $log1['member_id']=$order['parent_id'];
-                $log1['amount']=$parent_count;
-                $log1['type']=0;
-                $log1['reason']='下级销售传承服务包提成';
-                $res_log1=db('wallet_log')->insert($log1);
+            //服务包的完成条件
+            if ($order['left_love'] = 0 && $order['left_inquisition'] = 0 && $order['left_revisit'] = 0) {
+                $base_count=$order['pay_amount']*($order['base_commission']/100);
+                $parent_count=$order['pay_amount']*($order['commission']/100);
+                $temp['account']=$order['pay_amount']-$base_count-$parent_count;
+                $temp['total_account']=$order['pay_amount']-$base_count-$parent_count;
+                $msg="服务包订单";
+                if($order['special_id']!=0 && $order['inherit_id'] != 0)
+                {
+                    //上级抽成金额
+                    $res=db("doctor")->where("member_id='$order[parent_id]'")->update(["account"=>["exp","account+$parent_count"],"total_account"=>["exp","total_account+$parent_count"]]);
+                    //上级抽成日志
+                    $log1['add_date']=time();
+                    $log1['member_id']=$order['parent_id'];
+                    $log1['amount']=$parent_count;
+                    $log1['type']=0;
+                    $log1['reason']='下级销售传承服务包提成';
+                    $res_log1=db('wallet_log')->insert($log1);
+                }
+            } else {
+                return true;
             }
         }
         Db::startTrans();

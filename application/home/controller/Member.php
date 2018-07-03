@@ -687,7 +687,6 @@ class Member extends Common
                 $h->createUser($data['member_sn'],"123456");
 
                 //注册即可登录
-
                 $map['mobile']=$data['mobile'];
                 $temp['login_ip']=Request::instance()->ip();
                 $temp['login_time']=time();

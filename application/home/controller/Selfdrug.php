@@ -23,7 +23,6 @@ class Selfdrug extends Common
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
 
-            //查询当前医生信息
             if ($data['self_goods_id'] > 0) {
                 $goodsMap['self_goods_id'] = $data['self_goods_id'];
                 $goodsInfo = db('self_goods')->where("self_goods_id = {$data['self_goods_id']} AND is_checked IN(2,3)")->field("*")->find();
@@ -31,6 +30,9 @@ class Selfdrug extends Common
                     ajaxReturn(array('code'=>0,'info'=>'该调制包不存在或不可修改!','data'=>[]));
                 }
             }
+
+            //查询当前医生信息
+
 
             //计算价格
             $drugSumPrice = 0;//价格
