@@ -32,7 +32,11 @@ class Selfdrug extends Common
             }
 
             //查询当前医生信息
+            $doctorMap['member_id'] = $data['member_id'];
+            $doctorInfo = db('doctor')->where($doctorMap)->field("*")->find();
 
+            //计算初诊和复诊的总价格
+            $wenzhenPrice = $doctorInfo['first_price']*($data['on_line']/5)+$doctorInfo['consultation_price']*$data['referral'];
 
             //计算价格
             $drugSumPrice = 0;//价格
@@ -119,8 +123,15 @@ class Selfdrug extends Common
             $orderPrescriptionInsert['end_date'] = time()+31536000;
 
             $data['service_price'] = 0;
+//            var_dump($data['service_price']);die;
+//            var_dump($data['service_price']);
+//            var_dump($data['see_price']);
+//            var_dump($wenzhenPrice);
+//            var_dump($orderPrescriptionInsert['one_price']*$data['dose']);
             //计算总价
-            $orderPrescriptionInsert['price'] = $orderPrescriptionInsert['one_price']*$data['dose'] + $data['service_price']+$data['see_price'];
+            $orderPrescriptionInsert['price'] = $orderPrescriptionInsert['one_price']*$data['dose'] + $data['service_price']+$data['see_price']+$wenzhenPrice;
+//            var_dump($orderPrescriptionInsert['price']);die;
+
             $orderPrescriptionInsert['scope'] = $data['scope'];
             $orderPrescriptionInsert['advantage'] = $data['advantage'];
             $orderPrescriptionInsert['description'] = $data['description'];

@@ -604,8 +604,7 @@ class Order extends Common
                 }
 
                 Db::commit();
-                ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>[['is_taboo'=>$orderPrescriptionInsert['is_taboo'], 'taboo_content'=>$orderPrescriptionInsert['taboo_content'], 'lessCountArr'=>$lessCountArr, 'alertArr'=>$alertArr, 'price'=>round($drugSumPrice, 2)]]));
-
+                ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>[['is_taboo'=>$orderPrescriptionInsert['is_taboo'], 'taboo_content'=>$orderPrescriptionInsert['taboo_content'], 'lessCountArr'=>$lessCountArr, 'alertArr'=>$alertArr, 'price'=>round($drugSumPrice, 2).'']]));
             } catch (\Exception $e) {
                 Db::rollback();
                 return false;
@@ -776,9 +775,15 @@ class Order extends Common
                     }
                 } else {
                     //有订单信息(非爱心问诊)
-                    $orderDetail = db('order')
-                        ->where("order_id = {$data['order_id']} AND pay_status = 1 AND order_status IN(1,3) AND patient_id = {$data['patient_id']}")
-                        ->field("*")
+//                    $orderDetail = db('order')
+//                        ->where("order_id = {$data['order_id']} AND pay_status = 1 AND order_status IN(1,3) AND patient_id = {$data['patient_id']}")
+//                        ->field("*")
+//                        ->find();
+
+                    $orderDetail = db("Order")->alias('o')
+                        ->join('order_product a','o.order_id=a.order_id')
+                        ->field('a.*,o.*')
+                        ->where("o.order_id={$data['order_id']} AND o.pay_status = 1 AND o.order_status IN(1,3) AND o.patient_id = {$data['patient_id']}")
                         ->find();
 
                     if (!$orderDetail) {
@@ -791,6 +796,7 @@ class Order extends Common
                         ->where("type IN(0,1) AND patient_id = {$data['patient_id']} AND doctor_id = {$data['doctor_id']} AND is_use = 1 AND order_id = {$data['order_id']}")
                         ->field("*")
                         ->find();
+
                     if (!empty($wenzhenDetail) && $wenzhenDetail['end_time'] == 0) {
                         //开始记录问诊时间
                         $updateInfo['start_time'] = time();
@@ -799,6 +805,22 @@ class Order extends Common
                         db('wenzhen')
                             ->where("log_id = {$wenzhenDetail['log_id']}")
                             ->update($updateInfo);
+
+                        //相应的订单次数减一
+//                        if ($wenzhenDetail['type'] == 0 && $orderDetail['left_inquisition'] > 0) {//图文问诊
+//                            $leftMap['left_inquisition'] = $orderDetail['left_inquisition']-1;
+//                            db('order_product')
+//                                ->where("order_id = {$data['order_id']}")
+//                                ->update($leftMap);
+//                        } else
+
+                        if ($wenzhenDetail['type'] == 1 && $orderDetail['left_revisit'] > 0) {//在线复诊
+                            $leftMap['left_revisit'] = $orderDetail['left_revisit']-1;
+                            db('order_product')
+                                ->where("order_id = {$data['order_id']}")
+                                ->update($leftMap);
+                        }
+
                         Db::commit();
                         ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>[]));
                     } elseif (!empty($wenzhenDetail) && $wenzhenDetail['end_time'] > 0 && $wenzhenDetail['end_time'] < time()) {
@@ -968,11 +990,13 @@ class Order extends Common
                         ajaxReturn(array('code'=>1, 'info'=>'本次问诊已结束','data'=>[]));
                     }
                 } else {
+
                     //有订单信息(非爱心问诊)
                     $orderDetail = db('order')
                         ->where("order_id = {$data['order_id']} AND pay_status = 1 AND order_status IN(1,3) AND patient_id = {$data['patient_id']}")
                         ->field("*")
                         ->find();
+
                     if (!$orderDetail) {
                         ajaxReturn(array('code'=>1,'info'=>'订单不正确!','data'=>[]));
                     }
@@ -1004,20 +1028,54 @@ class Order extends Common
                             ->where("log_id = {$wenzhenDetail['log_id']}")
                             ->update($updateInfo);
                         //问诊订单记录信息
+//                        $orderProductInfo = db('order_product')
+//                            ->where("order_id = {$data['order_id']}")
+//                            ->field("*")
+//                            ->find();
+//                        if ($wenzhenDetail['type'] == 0 && $orderProductInfo['left_inquisition'] > 0) {//图文问诊
+//                            $leftMap['left_inquisition'] = $orderProductInfo['left_inquisition']-1;
+//                            db('order_product')
+//                                ->where("order_id = {$data['order_id']}")
+//                                ->update($leftMap);
+//                        } elseif ($wenzhenDetail['type'] == 1 && $orderProductInfo['left_revisit'] > 0) {//在线复诊
+//                            $leftMap['left_revisit'] = $orderProductInfo['left_revisit']-1;
+//                            db('order_product')
+//                                ->where("order_id = {$data['order_id']}")
+//                                ->update($leftMap);
+//                        }
+                        Db::commit();
+                        ajaxReturn(array('code'=>1, 'info'=>'本次问诊已结束','data'=>[]));
+                    } elseif (!empty($wenzhenDetail) && $wenzhenDetail['end_time'] == 0) {
+                        //如果是问诊和复诊订单直接退款
+                        //结束本次问诊
+                        $updateInfo['is_use'] = 0;
+                        $updateInfo['release_date'] = time();
+                        db('wenzhen')
+                            ->where("log_id = {$wenzhenDetail['log_id']}")
+                            ->update($updateInfo);
+                        //问诊订单记录信息
                         $orderProductInfo = db('order_product')
                             ->where("order_id = {$data['order_id']}")
                             ->field("*")
                             ->find();
-                        if ($wenzhenDetail['type'] == 0 && $orderProductInfo['left_inquisition'] > 0) {//图文问诊
-                            $leftMap['left_inquisition'] = $orderProductInfo['left_inquisition']-1;
-                            db('order_product')
+                        //判断是不是服务包的问诊
+                        if (in_array($orderDetail['order_type'], array(0,1))){
+                            //问诊和复诊的订单, 直接退款
+                            $refund = $this->wxrefund($orderDetail['order_sn'], $orderDetail['pay_amount']*100, $orderDetail['pay_amount']*100);
+                        } elseif ($orderDetail['order_type'] == 4) {
+                            //服务包的订单相应的次数加一
+                            if ($wenzhenDetail['type'] == 0) {//图文问诊
+                                $leftMap['left_inquisition'] = $orderProductInfo['left_inquisition']+1;
+                                db('order_product')
                                 ->where("order_id = {$data['order_id']}")
                                 ->update($leftMap);
-                        } elseif ($wenzhenDetail['type'] == 1 && $orderProductInfo['left_revisit'] > 0) {//在线复诊
-                            $leftMap['left_revisit'] = $orderProductInfo['left_revisit']-1;
-                            db('order_product')
-                                ->where("order_id = {$data['order_id']}")
-                                ->update($leftMap);
+                            }
+//                            elseif ($wenzhenDetail['type'] == 1) {//在线复诊
+//                                $leftMap['left_revisit'] = $orderProductInfo['left_revisit']+1;
+//                                db('order_product')
+//                                ->where("order_id = {$data['order_id']}")
+//                                ->update($leftMap);
+//                            }
                         }
                         Db::commit();
                         ajaxReturn(array('code'=>1, 'info'=>'本次问诊已结束','data'=>[]));
@@ -1026,8 +1084,6 @@ class Order extends Common
                         ajaxReturn(array('code'=>1, 'info'=>'本次问诊已结束','data'=>[]));
                     }
                 }
-
-
                 Db::rollback();
                 ajaxReturn(array('code'=>1,'info'=>'本次问诊已结束!','data'=>[]));
             } catch (\Exception $e) {
@@ -1432,6 +1488,61 @@ class Order extends Common
         }else
         {
             Db::rollback();
+            return false;
+        }
+
+    }
+
+    public function wxrefund($trade_no, $total, $refund)
+    {
+        header("Content-Type:text/html; charset=utf-8");
+        import('wxpay.lib.WxPayApi', EXTEND_PATH);
+        import('wxpay.lib.WxPayException', EXTEND_PATH);
+        import('wxpay.lib.WxPayConfig', EXTEND_PATH);
+        import('wxpay.lib.WxPayData', EXTEND_PATH);
+        import('wxpay.lib.WxPayJsApiPay', EXTEND_PATH);
+        $Notify_url="http://wechat.bohetanglao.com/home/refund/wxnotify.html";
+        $out_trade_no = $trade_no;
+        $total_fee = $total;
+        $refund_fee = $refund;
+        $input = new \WxPayRefund();
+        $input->SetNotify_url($Notify_url);
+        $input->SetOut_trade_no($out_trade_no);
+        $input->SetTotal_fee($total_fee);
+        $input->SetRefund_fee($refund_fee);
+        $input->SetOut_refund_no(\WxPayConfig::MCHID.date("YmdHis"));
+        $input->SetOp_user_id(\WxPayConfig::MCHID);
+        $order = \WxPayApi::refund($input);
+        if ($order['result_code']=='SUCCESS'&&$order['return_code']=='SUCCESS') {
+            $this->changeStatus($trade_no);
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    //更新订单
+    public function changeStatus($ordersn)
+    {
+        // 如果这笔订单已经处理过了
+        $count = db('order')->where("order_sn = '$ordersn' and pay_status != 3")->count();     //不重复处理操作
+        if($count == 0){return false;}
+        // 找出对应的订单
+        $order = db('order')->where("order_sn = '$ordersn'")->find();
+        if($order){
+            // 修改支付状态
+            $update = array(
+                'pay_status' => 3,
+                'order_status' => 9,
+                'release_date' => time(),
+            );
+            $query=db('order')->where("order_sn = '$ordersn'")->update($update);
+            if($query)
+            {
+                return true;
+            }
+        }else
+        {
             return false;
         }
 
