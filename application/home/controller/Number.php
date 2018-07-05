@@ -83,7 +83,7 @@ class Number extends Common
             } else {
                 $seventime = time() - 604800;          // 7 天
                 $onemoon = time() - 2592000;           // 一个月
-                $_where .= " and o.pay_status=1 ";
+                $_where .= " and o.pay_status=1 and o.pay_date <= {$seventime} and o.pay_date >= {$onemoon}";
 //                $_where .= " and (o.order_status=1 or o.order_status=2 or o.order_status=3)";
                 $type_name = '复诊时间：';
             }
