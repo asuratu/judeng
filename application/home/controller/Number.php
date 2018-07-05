@@ -458,6 +458,13 @@ class Number extends Common
             $patient = array();
             $patient['group_id'] = intval($data['group_id']);
             $patient['doctor_id'] = intval($data['doctor_id']);
+            $group = db('group_patient')->where($patient)->select();
+            $patient_group = db('patient_group')->where("group_id = {$patient['group_id']}")->find();
+            foreach ($group as $val) {
+                $this->uploadMember($data['doctor_id'], $data['group_id'], $val['member_id'], '', $patient_group['group_name'], 1);
+                db('group_patient')->where($patient)->delete();
+            }
+
             $_identity = db('patient_group')->where($patient)->delete();
             if ($_identity) {
                 ajaxReturn(array('code'=>1,'info'=>'分组删除成功'));
