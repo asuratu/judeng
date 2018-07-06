@@ -20,7 +20,7 @@ class Image extends Common
             $doctor['member_name'] = !empty($doctor['true_name']) ? $doctor['true_name'] : (!empty($doctor['member_name']) ? $doctor['member_name'] : $doctor['mobile']);
             if (!$doctor['to_user_img']) {
                 $postArr['doctor_id'] = $hair['doctor_id'];
-                $to_user_img = postJson('http://api.judeng.net:88/wx/getQrcode', $postArr);
+                $to_user_img = postJson('http://api.judeng.net/wx/getQrcode', $postArr);
                 if (!$to_user_img) {
                     $to_user_img = json_decode($to_user_img, true);
                     if ($to_user_img['code'] == 1) {
@@ -126,7 +126,7 @@ class Image extends Common
                     $url = $data['url'];
                 }
 
-//                $comment = "来自" . $data['doctor_member'] . "医生的消息，内容为：" . Html::getTextToHtml($data['content'], 10) . "，http://api.judeng.net:88/" . $url . "，请点击查看！如有疑问可联系客服400-700-5120";
+//                $comment = "来自" . $data['doctor_member'] . "医生的消息，内容为：" . Html::getTextToHtml($data['content'], 10) . "，http://api.judeng.net/" . $url . "，请点击查看！如有疑问可联系客服400-700-5120";
                 // 后期再次测试 TODO 测试返回true但是短信没有收到
                 $title = array();
                 foreach ($mobile_number as $key=>$val) {
