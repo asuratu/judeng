@@ -219,8 +219,6 @@ class Order extends Common
                     ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
                 }
 
-
-
                 //查询当前医生信息
                 $doctorMap['member_id'] = $data['doctor_id'];
                 $doctorInfo = db('doctor')->where($doctorMap)->field("`member_name`")->find();
@@ -404,7 +402,13 @@ class Order extends Common
                             $updateProductInfo['is_kaifang'] = 1;
                             $updateProductInfo['release_date'] = time();
                             $updateProduct = db('order_product')->where("order_id = {$data['order_id']}")->update($updateProductInfo);
+
+                            //在新订单中记录调制服务宝的订单的id
+                            $updateNewOrderInfo['self_drug_order_id'] = $data['order_id'];
+                            $updateNewOrderInfo['release_date'] = time();
+                            $updateProduct = db('order')->where("order_id = {$orderPrescriptionInsert['order_id']}")->update($updateNewOrderInfo);
                         }
+
 
                     }
 

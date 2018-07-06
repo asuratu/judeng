@@ -360,6 +360,7 @@ class Member extends Common
                 $insertData['img_url'] =  config('url') . createPic(config('url').'/member/inviteInherit?memberId='.$info['member_id'].'&inheritId='.$data['inherit_id']);
 
                 $identify = db('inherit_doctor')->insertGetId($insertData);
+                $_identify = db('inherit_sdoctor')->insertGetId($insertData);
 
                 ajaxReturn(array('code' =>1, 'info' => '提交成功','data'=>[$identify]));
 

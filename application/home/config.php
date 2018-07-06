@@ -19,7 +19,7 @@ return [
     'app_name'=>'xiaojudeng',
 
     //接口域名
-    'url'=>'http://api.judeng.net:88',
+    'url'=>'http://api.judeng.net',
 //    'url'=>'http://39.105.19.169:88',
 //    'url'=>'http://118.25.179.178:81',
 //    'url'=>'http://localhost:7037',
@@ -38,7 +38,7 @@ return [
     "OSS_WEB_SITE" =>'http://xiaojd1.oss-cn-shanghai.aliyuncs.com',    //上面4个就不用介绍了，这个OSS_WEB_SITE是oss的bucket创建后的外网访问地址，如需二级域名，可以指向二级域名，具体可以参考阿里云控制台里面的oss
 
     //oss文件上传配置
-    'oss_maxSize'=>1048576,    //1M
+    'oss_maxSize'=>10485760,    //1M
     'oss_exts'   =>array(// 设置附件上传类型
         'jpg',
         'image/jpg',
