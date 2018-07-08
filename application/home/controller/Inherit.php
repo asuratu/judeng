@@ -430,7 +430,7 @@ class Inherit extends Common
             }
 
             //判断是否加入过该传承
-            $exist = db('inherit_doctor')->where("(`member_id` = {$data['member_id']} OR `parent_id` = {$data['member_id']}) AND `is_checked` = 1 AND `inherit_id` = {$data['inherit_id']}")->count();
+            $exist = db('inherit_sdoctor')->where("(`member_id` = {$data['member_id']} OR `parent_id` = {$data['member_id']}) AND `is_checked` = 1 AND `inherit_id` = {$data['inherit_id']}")->count();
             if ($exist <= 0) {
                 ajaxReturn(array('code'=>0, 'info'=>'请先加入该传承!','data'=>[]));
             }
@@ -445,7 +445,7 @@ class Inherit extends Common
                 ->find();
 
             //查询工作室列表
-            $studioList = db('inherit_doctor')->alias('id')
+            $studioList = db('inherit_sdoctor')->alias('id')
                 ->join(['jd_doctor'=>'d'], 'id.member_id = d.member_id' , 'inner')
                 ->where("id.`is_checked` = 1 AND id.`inherit_id` = {$data['inherit_id']} AND id.parent_id = {$inheritDetail['member_id']}")
                 ->field("id.inherit_id, id.parent_id, d.member_id, d.member_name, d.face_photo")
@@ -494,7 +494,7 @@ class Inherit extends Common
                     ->count();
                 $existGoods > 0 ? $doctorInfo['has_self_goods'] = 1 : $doctorInfo['has_self_goods'] = 0;
                 //好评数和付款数
-                $inheritDocInfo = db('inherit_doctor')->alias('id')
+                $inheritDocInfo = db('inherit_sdoctor')->alias('id')
                     ->join(['jd_doctor'=>'d'], 'id.member_id = d.member_id' , 'inner')
                     ->where("id.`is_checked` = 1 AND id.`inherit_id` = {$data['inherit_id']} AND id.member_id = {$doctorInfo['member_id']}")
                     ->field("id.pay_num, id.proud, id.use_drug")
@@ -516,7 +516,7 @@ class Inherit extends Common
             
             if ($data['member_id'] != $doctorInfo['member_id']) {
                 //工作站信息
-                $studioList = db('inherit_doctor')->alias('id')
+                $studioList = db('inherit_sdoctor')->alias('id')
                     ->join(['jd_doctor'=>'d'], 'id.member_id = d.member_id' , 'inner')
                     ->where("id.`is_checked` = 1 AND id.`inherit_id` = {$data['inherit_id']} AND id.parent_id = {$data['member_id']}")
                     ->field("id.inherit_id, id.parent_id, d.member_id, d.member_name, d.face_photo")
@@ -563,7 +563,7 @@ class Inherit extends Common
                         ->count();
                     $existGoods > 0 ? $doctorInfo['has_self_goods'] = 1 : $doctorInfo['has_self_goods'] = 0;
                     //好评数和付款数
-                    $inheritDocInfo = db('inherit_doctor')->alias('id')
+                    $inheritDocInfo = db('inherit_sdoctor')->alias('id')
                         ->join(['jd_doctor'=>'d'], 'id.member_id = d.member_id' , 'inner')
                         ->where("id.`is_checked` = 1 AND id.`inherit_id` = {$data['inherit_id']} AND id.member_id = {$doctorInfo['member_id']}")
                         ->field("id.pay_num, id.proud, id.use_drug")
@@ -727,6 +727,7 @@ class Inherit extends Common
             $insertData['img_url'] =  config('url') . createPic(config('url').'/member/inviteInherit?memberId='.$data['member_id'].'&inheritId='.$data['inherit_id']);
 
             $identify = db('inherit_doctor')->insertGetId($insertData);
+            $identify2 = db('inherit_sdoctor')->insertGetId($insertData);
 
             ajaxReturn(array('code'=>1, 'info'=>'ok!','data'=>[]));
         }

@@ -173,6 +173,7 @@ class Umeng extends Common
                 $data['title'] = '咨询消息';
                 $data['comment'] = '你收到一条患者咨询消息，请及时查看';
             } else if ($data['type'] == 7) {
+                $extra['type'] = 8;
                 $after_open = 'go_app';
                 $data['title'] = '传承认证失败';
                 $data['comment'] = $doctor['true_name'] . '医生您的传承审核已失败，请联系客服处理';

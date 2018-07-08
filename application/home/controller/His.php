@@ -183,42 +183,46 @@ class His extends Common
                                 }
                                 array_push($drugArr, $drugArrEach);
                             }
-                            //组装药品json, 添加历史订单
-                            $drug_str = json_encode($drugArr, JSON_UNESCAPED_UNICODE);
-                            $insertOrder['order_sn'] = createOrderCode();
-                            $insertOrder['pay_status'] = 1;
-                            $insertOrder['pay_type'] = 0;
-                            $insertOrder['order_type'] = 5;
-                            $insertOrder['order_status'] = 4;
-                            $insertOrder['doctor_id'] = 0;
-                            $insertOrder['patient_id'] = $val['member_id'];
-                            $insertOrder['product_amount'] = 0;
-                            $insertOrder['product_number'] = 0;
-                            $insertOrder['pay_amount'] = 0;
-                            $insertOrder['see_date'] = strtotime($val1[8]);
-                            $insertOrder['order_date'] = strtotime($val1[8]);
-                            $insertOrder['pay_date'] = strtotime($val1[8]);
-                            $insertOrder['complete_date'] = strtotime($val1[8]);
-                            $_result = db('order')->insertGetId($insertOrder);
+                            //查询该订单是否已经同步过
+                            $existOrder = db('order')->where("`advid` = {$val1[0]}")->count();
+                            if ($existOrder == 0) {
+                                //组装药品json, 添加历史订单
+                                $drug_str = json_encode($drugArr, JSON_UNESCAPED_UNICODE);
+                                $insertOrder['order_sn'] = createOrderCode();
+                                $insertOrder['pay_status'] = 1;
+                                $insertOrder['pay_type'] = 0;
+                                $insertOrder['order_type'] = 5;
+                                $insertOrder['order_status'] = 4;
+                                $insertOrder['doctor_id'] = 0;
+                                $insertOrder['patient_id'] = $val['member_id'];
+                                $insertOrder['product_amount'] = 0;
+                                $insertOrder['product_number'] = 0;
+                                $insertOrder['pay_amount'] = 0;
+                                $insertOrder['advid'] = $val1[0];
+                                $insertOrder['see_date'] = strtotime($val1[8]);
+                                $insertOrder['order_date'] = strtotime($val1[8]);
+                                $insertOrder['pay_date'] = strtotime($val1[8]);
+                                $insertOrder['complete_date'] = strtotime($val1[8]);
+                                $_result = db('order')->insertGetId($insertOrder);
 
-                            //添加历史处方单详情
-                            if ($_result) {
-                                $historyData['order_id'] = $_result;
-                                $historyData['prescription_type'] = 2;
-                                $historyData['doctor_name'] = $val1[6];
-                                $historyData['patient_mobile'] = $val['mobile'];
-                                $historyData['patient_name'] = $val1[2];
-                                $historyData['patient_sex'] = $val['sex'];
-                                $historyData['patient_age'] = 0;
-                                $historyData['drug_str'] = $drug_str;
-                                $historyData['dose'] = 1;
-                                $historyData['is_checked'] = 2;
-                                $historyData['add_date'] = strtotime($val1[8]);
-                                $historyData['taking'] = ($val1[7]);
-                                $historyData['dialectical'] = $listArr9[$_key][5] ?: '';
-                                $_orderResult = db('order_prescription')->insertGetId($historyData);
+                                //添加历史处方单详情
+                                if ($_result) {
+                                    $historyData['order_id'] = $_result;
+                                    $historyData['prescription_type'] = 2;
+                                    $historyData['doctor_name'] = $val1[6];
+                                    $historyData['patient_mobile'] = $val['mobile'];
+                                    $historyData['patient_name'] = $val1[2];
+                                    $historyData['patient_sex'] = $val['sex'];
+                                    $historyData['patient_age'] = 0;
+                                    $historyData['drug_str'] = $drug_str;
+                                    $historyData['dose'] = 1;
+                                    $historyData['is_checked'] = 2;
+                                    $historyData['add_date'] = strtotime($val1[8]);
+                                    $historyData['taking'] = ($val1[7]);
+                                    $historyData['dialectical'] = $listArr9[$_key][5] ?: '';
+                                    $_orderResult = db('order_prescription')->insertGetId($historyData);
+                                }
                             }
-
                         }
 
                     }

@@ -906,7 +906,7 @@
 [ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.067502s ]
 [ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `i`.`inherit_id`=`id`.`inherit_id` WHERE  (  id.member_id = 170 AND id.is_checked = 1 AND i.is_display = 1 ) LIMIT 1 [ RunTime:0.065197s ]
 [ sql ] [ SQL ] SELECT `img_url` FROM `jd_inherit_doctor` WHERE  (  is_checked = 1 AND member_id = 170 AND inherit_id = 31 ) LIMIT 1 [ RunTime:0.064424s ]
-[ sql ] [ SQL ] UPDATE `jd_inherit_doctor`  SET `img_url`='http://api.judeng.net:88/uploads/code/1529894230code.png'  WHERE  (  is_checked = 1 AND member_id = 170 AND inherit_id = 31 ) [ RunTime:0.061454s ]
+[ sql ] [ SQL ] UPDATE `jd_inherit_doctor`  SET `img_url`='http://api.judeng.net/uploads/code/1529894230code.png'  WHERE  (  is_checked = 1 AND member_id = 170 AND inherit_id = 31 ) [ RunTime:0.061454s ]
 [ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.063585s ]
 [ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `only_token` = '1529889665(eV)hj'  AND `is_status` = 0 LIMIT 1 [ RunTime:0.060171s ]
 ---------------------------------------------------------------
@@ -949,7 +949,7 @@
 [ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.057136s ]
 [ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `i`.`inherit_id`=`id`.`inherit_id` WHERE  (  id.member_id = 170 AND id.is_checked = 1 AND i.is_display = 1 ) LIMIT 1 [ RunTime:0.055658s ]
 [ sql ] [ SQL ] SELECT `img_url` FROM `jd_inherit_doctor` WHERE  (  is_checked = 1 AND member_id = 170 AND inherit_id = 44 ) LIMIT 1 [ RunTime:0.055416s ]
-[ sql ] [ SQL ] UPDATE `jd_inherit_doctor`  SET `img_url`='http://api.judeng.net:88/uploads/code/1529894770code.png'  WHERE  (  is_checked = 1 AND member_id = 170 AND inherit_id = 44 ) [ RunTime:0.060751s ]
+[ sql ] [ SQL ] UPDATE `jd_inherit_doctor`  SET `img_url`='http://api.judeng.net/uploads/code/1529894770code.png'  WHERE  (  is_checked = 1 AND member_id = 170 AND inherit_id = 44 ) [ RunTime:0.060751s ]
 [ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.055802s ]
 [ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `only_token` = '1529889665(eV)hj'  AND `is_status` = 0 LIMIT 1 [ RunTime:0.055266s ]
 ---------------------------------------------------------------
@@ -992,7 +992,7 @@
 [ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.057442s ]
 [ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `i`.`inherit_id`=`id`.`inherit_id` WHERE  (  id.member_id = 170 AND id.is_checked = 1 AND i.is_display = 1 ) LIMIT 1 [ RunTime:0.057609s ]
 [ sql ] [ SQL ] SELECT `img_url` FROM `jd_inherit_doctor` WHERE  (  is_checked = 1 AND member_id = 170 AND inherit_id = 44 ) LIMIT 1 [ RunTime:0.057672s ]
-[ sql ] [ SQL ] UPDATE `jd_inherit_doctor`  SET `img_url`='http://api.judeng.net:88/uploads/code/1529894782code.png'  WHERE  (  is_checked = 1 AND member_id = 170 AND inherit_id = 44 ) [ RunTime:0.059382s ]
+[ sql ] [ SQL ] UPDATE `jd_inherit_doctor`  SET `img_url`='http://api.judeng.net/uploads/code/1529894782code.png'  WHERE  (  is_checked = 1 AND member_id = 170 AND inherit_id = 44 ) [ RunTime:0.059382s ]
 [ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.057059s ]
 [ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `only_token` = '1529889665(eV)hj'  AND `is_status` = 0 LIMIT 1 [ RunTime:0.054505s ]
 ---------------------------------------------------------------

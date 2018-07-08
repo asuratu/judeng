@@ -360,6 +360,7 @@ class Member extends Common
                 $insertData['img_url'] =  config('url') . createPic(config('url').'/member/inviteInherit?memberId='.$info['member_id'].'&inheritId='.$data['inherit_id']);
 
                 $identify = db('inherit_doctor')->insertGetId($insertData);
+                $_identify = db('inherit_sdoctor')->insertGetId($insertData);
 
                 ajaxReturn(array('code' =>1, 'info' => '提交成功','data'=>[$identify]));
 
@@ -687,7 +688,6 @@ class Member extends Common
                 $h->createUser($data['member_sn'],"123456");
 
                 //注册即可登录
-
                 $map['mobile']=$data['mobile'];
                 $temp['login_ip']=Request::instance()->ip();
                 $temp['login_time']=time();
@@ -851,31 +851,52 @@ class Member extends Common
        $orderId = intval($_GET['id']);
        //订单信息,判断是否是待支付
         $orderDetail = db('order')
-            ->where("order_id = {$orderId} AND pay_status = 0 AND order_status = 0")
-            ->field("`order_id`, `doctor_id`")
+            ->where("order_id = {$orderId}")
+            ->field("*")
             ->find();
-        if (empty($orderDetail)) {
-            return 404;
+        if (!$orderDetail) {
+            header("Location: http://api.judeng.net/member/paid?type=0");die;
         }
+        if ($orderDetail['order_status'] != 0) {
+            if ($orderDetail['order_status'] == -1) {
+                //订单取消
+                header("Location: http://api.judeng.net/member/paid?type=1");die;
+            } else {
+                //订单已支付
+                header("Location: http://api.judeng.net/member/paid?type=2");die;
+            }
+        } else {
+            //生成二维码
+            $urlData['order_id'] = $orderDetail['order_id'];
+            $url = curlPost(config('url').'/wx/getDrugQrcode', $urlData);
+            if (json_decode($url, true)['code'] != 1) {
+                return  $this->fetch('/doctor/paid1');die;
+            }
+            $result = json_decode($url, true)['data'][0];
 
-        //生成二维码
-        $urlData['order_id'] = $orderDetail['order_id'];
-        $url = curlPost(config('url').'/wx/getDrugQrcode', $urlData);
+            //医生信息
+            $doctorInfo = db('doctor')
+                ->where("member_id = {$orderDetail['doctor_id']}")
+                ->field("`member_name`")
+                ->find();
 
-        if (json_decode($url, true)['code'] != 1) {
-            return 404;
+            $this->assign("imgUrl", $result);
+            $this->assign("doctorName", $doctorInfo['member_name']);
+            return  $this->fetch('/doctor/plan');
         }
-        $result = json_decode($url, true)['data'][0];
+    }
 
-        //医生信息
-        $doctorInfo = db('doctor')
-            ->where("member_id = {$orderDetail['doctor_id']}")
-            ->field("`member_name`")
-            ->find();
-
-        $this->assign("imgUrl", $result);
-        $this->assign("doctorName", $doctorInfo['member_name']);
-        return  $this->fetch('/doctor/plan');
+    public function paid()
+    {
+        if ($_GET['type'] == 1) {
+            $content = '该订单已取消!';
+        } elseif ($_GET['type'] == 0) {
+            $content = '该订单不存在!';
+        } else {
+            $content = '该订单已付款,请勿重复购买!';
+        }
+        $this->assign("content", $content);
+        return  $this->fetch('/doctor/paid');
     }
 
     public function inviteInherit()

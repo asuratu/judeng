@@ -62,7 +62,7 @@ class Notice extends Common
             try {
                 Db::startTrans();
                 $data = input('post.');
-                if ($data['notice_id'] == ''||$data['doctor_id'] == ''||$data['notice_name'] == ''||$data['content'] == '') {
+                if ($data['notice_id'] == ''||$data['doctor_id'] == ''||$data['notice_name'] == '') {
                     ajaxReturn(array('code' => 0, 'info' => '参数不完整', 'data' => []));
                 }
                 $notice = array();

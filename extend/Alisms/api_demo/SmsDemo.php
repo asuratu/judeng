@@ -87,7 +87,11 @@ class SmsDemo
                 $tempCode = "SMS_135807928";
                 break;
             case 1: //手机号开方短信通知
+<<<<<<< HEAD
                 //来自${name}医生的消息，内容为：${content}，http://api.judeng.net:88/${orderId}，请点击查看！如有疑问可联系客服021-51877120
+=======
+                //来自${name}医生的消息，内容为：${content}，http://api.judeng.net/${orderId}，请点击查看！如有疑问可联系客服400-700-512
+>>>>>>> 909291ddf710d64c584b187b0f626eeee9322960
                 $tempCode = "SMS_136860216";
                 break;
             default:
