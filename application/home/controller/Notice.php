@@ -82,7 +82,7 @@ class Notice extends Common
                     $oldFile = '';
                 }
 
-                $oldFile = explode('#@#', $oldFile);
+                $oldFile = explode('##*##', $oldFile);
                 if (!empty($oldFile)) {
                     foreach ($oldFile as $key1=>$val1) {
                         $notice_attach = array(
