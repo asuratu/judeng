@@ -75,6 +75,25 @@ class Notice extends Common
                 // 删除已有的图片路径
                 db('notice_attach')->where("notice_id = {$data['notice_id']}")->delete();
 
+                // 保存原有的数据
+                if ($data['oldFiles']) {
+                    $oldFile = $data['oldFiles'];
+                } else {
+                    $oldFile = '';
+                }
+
+                $oldFile = explode('#@#', $oldFile);
+                if (!empty($oldFile)) {
+                    foreach ($oldFile as $key1=>$val1) {
+                        $notice_attach = array(
+                            'notice_id' => $data['notice_id'],
+                            'src' => $val1,
+                            'src_size' => 0,
+                        );
+                        db('notice_attach')->insert($notice_attach);
+                    }
+                }
+
                 //保存图片数据流
                 foreach ($_FILES as $key => $val) {
                     $upPaperSize[$key]= array('src_size' => $_FILES[$key]['size']);
