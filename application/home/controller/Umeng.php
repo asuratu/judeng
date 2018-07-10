@@ -108,7 +108,7 @@ class Umeng extends Common
 
             $doctor = db('doctor')->where("member_id={$data['doctor_id']}")->find();
 
-            
+
             // 判断是否推送友盟消息  判断方法(医生是否把这个患者设成黑名单，是否在这个时间段设置成免打扰)
             $time = time();
             $disturb_start = strtotime(date('Y-m-d', $time)) + $doctor['disturb_start'];

@@ -567,7 +567,8 @@ class Doctor extends Common
             $start = strtotime($startdate) - $strdate;
             $end = strtotime($enddate) - $strdate;
             if ($start > $end) {
-                $end = $end + 86400;
+                $start = $start - 86400;
+//                $end = $end + 86400;
             }
 
             if ($data['is_type'] == 1) {
