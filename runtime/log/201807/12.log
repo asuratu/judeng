@@ -1,0 +1,533 @@
+---------------------------------------------------------------
+[ 2018-07-12T09:43:58+08:00 ] 0.0.0.0 POST /member/dologin
+[ info ] localhost:7037/member/dologin [运行时间：0.902843s][吞吐率：1.11req/s] [内存消耗：3,331.27kb] [文件加载：52]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'dologin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '239',
+  'x-original-url' => '/member/dologin',
+  'user-agent' => 'YiSong/1.25.0 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=lakgbrjrl4jsgijqkjmj1unfp7',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '13262215137',
+  'password' => '1234567',
+  'only_token' => '1531359801ScdHVs',
+  'is_system' => '1',
+  '_time' => '1531359805',
+  'device_tokens' => '65d21c3d44336aba8a2d4a0c74f249d73db1062ba45411b4eb3c7c7a34f61986',
+  'sign' => '5ab8824a8d41ccf4f30ea49972195e4e',
+)
+[ info ] [ RUN ] app\home\controller\Member->dologin[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.115058s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.059004s ]
+[ sql ] [ SQL ] SELECT `member_id`,`member_sn`,`member_name`,`mobile`,`password`,`guid`,`true_name`,`is_clinic`,`is_certified`,`login_state`,`device_tokens`,`is_status` FROM `jd_doctor` WHERE  `mobile` = '13262215137' LIMIT 1 [ RunTime:0.058089s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `login_ip`='0.0.0.0',`login_time`=1531359837,`is_system`=1,`device_tokens`='65d21c3d44336aba8a2d4a0c74f249d73db1062ba45411b4eb3c7c7a34f61986',`login_state`=1,`is_login`=1,`only_token`='1531359837&)0f@h'  WHERE  `mobile` = '13262215137' [ RunTime:0.060024s ]
+---------------------------------------------------------------
+[ 2018-07-12T09:43:59+08:00 ] 0.0.0.0 POST /member/dologin
+[ info ] localhost:7037/member/dologin [运行时间：0.481962s][吞吐率：2.07req/s] [内存消耗：3,331.16kb] [文件加载：52]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'dologin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '239',
+  'x-original-url' => '/member/dologin',
+  'user-agent' => 'YiSong/1.25.0 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=lakgbrjrl4jsgijqkjmj1unfp7',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '13262215137',
+  'password' => '1234567',
+  'only_token' => '1531359801ScdHVs',
+  'is_system' => '1',
+  '_time' => '1531359805',
+  'device_tokens' => '65d21c3d44336aba8a2d4a0c74f249d73db1062ba45411b4eb3c7c7a34f61986',
+  'sign' => '5ab8824a8d41ccf4f30ea49972195e4e',
+)
+[ info ] [ RUN ] app\home\controller\Member->dologin[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.094721s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.064622s ]
+[ sql ] [ SQL ] SELECT `member_id`,`member_sn`,`member_name`,`mobile`,`password`,`guid`,`true_name`,`is_clinic`,`is_certified`,`login_state`,`device_tokens`,`is_status` FROM `jd_doctor` WHERE  `mobile` = '13262215137' LIMIT 1 [ RunTime:0.064349s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `login_ip`='0.0.0.0',`login_time`=1531359839,`is_system`=1,`device_tokens`='65d21c3d44336aba8a2d4a0c74f249d73db1062ba45411b4eb3c7c7a34f61986',`login_state`=1,`is_login`=1,`only_token`='1531359839bM*gMD'  WHERE  `mobile` = '13262215137' [ RunTime:0.065721s ]
+---------------------------------------------------------------
+[ 2018-07-12T09:44:39+08:00 ] 0.0.0.0 POST /member/dologin
+[ info ] localhost:7037/member/dologin [运行时间：1.165851s][吞吐率：0.86req/s] [内存消耗：3,332.81kb] [文件加载：52]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'dologin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '239',
+  'x-original-url' => '/member/dologin',
+  'user-agent' => 'YiSong/1.25.0 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=lakgbrjrl4jsgijqkjmj1unfp7',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '13262215137',
+  'password' => '1234567',
+  'only_token' => '1531359801ScdHVs',
+  'is_system' => '1',
+  '_time' => '1531359805',
+  'device_tokens' => '65d21c3d44336aba8a2d4a0c74f249d73db1062ba45411b4eb3c7c7a34f61986',
+  'sign' => '5ab8824a8d41ccf4f30ea49972195e4e',
+)
+[ info ] [ RUN ] app\home\controller\Member->dologin[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.092462s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.063810s ]
+[ sql ] [ SQL ] SELECT `member_id`,`member_sn`,`member_name`,`mobile`,`password`,`guid`,`true_name`,`is_clinic`,`is_certified`,`login_state`,`device_tokens`,`is_status` FROM `jd_doctor` WHERE  `mobile` = '13262215137' LIMIT 1 [ RunTime:0.377258s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `login_ip`='0.0.0.0',`login_time`=1531359878,`is_system`=1,`device_tokens`='65d21c3d44336aba8a2d4a0c74f249d73db1062ba45411b4eb3c7c7a34f61986',`login_state`=1,`is_login`=1,`only_token`='153135987895@EXS'  WHERE  `mobile` = '13262215137' [ RunTime:0.069003s ]
+---------------------------------------------------------------
+[ 2018-07-12T09:45:06+08:00 ] 0.0.0.0 POST /member/dologin
+[ info ] localhost:7037/member/dologin [运行时间：0.915527s][吞吐率：1.09req/s] [内存消耗：3,332.81kb] [文件加载：52]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'dologin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '239',
+  'x-original-url' => '/member/dologin',
+  'user-agent' => 'YiSong/1.25.0 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=lakgbrjrl4jsgijqkjmj1unfp7',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '13262215137',
+  'password' => '1234567',
+  'only_token' => '1531359801ScdHVs',
+  'is_system' => '1',
+  '_time' => '1531359805',
+  'device_tokens' => '65d21c3d44336aba8a2d4a0c74f249d73db1062ba45411b4eb3c7c7a34f61986',
+  'sign' => '5ab8824a8d41ccf4f30ea49972195e4e',
+)
+[ info ] [ RUN ] app\home\controller\Member->dologin[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.114045s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.072253s ]
+[ sql ] [ SQL ] SELECT `member_id`,`member_sn`,`member_name`,`mobile`,`password`,`guid`,`true_name`,`is_clinic`,`is_certified`,`login_state`,`device_tokens`,`is_status` FROM `jd_doctor` WHERE  `mobile` = '13262215137' LIMIT 1 [ RunTime:0.067345s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `login_ip`='0.0.0.0',`login_time`=1531359906,`is_system`=1,`device_tokens`='65d21c3d44336aba8a2d4a0c74f249d73db1062ba45411b4eb3c7c7a34f61986',`login_state`=1,`is_login`=1,`only_token`='1531359906t2mK@('  WHERE  `mobile` = '13262215137' [ RunTime:0.073267s ]
+---------------------------------------------------------------
+[ 2018-07-12T09:46:46+08:00 ] 0.0.0.0 POST /member/dologin
+[ info ] localhost:7037/member/dologin [运行时间：1.312720s][吞吐率：0.76req/s] [内存消耗：3,333.65kb] [文件加载：52]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'dologin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '239',
+  'x-original-url' => '/member/dologin',
+  'user-agent' => 'YiSong/1.25.0 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=lakgbrjrl4jsgijqkjmj1unfp7',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '13262215137',
+  'password' => '1234567',
+  'only_token' => '1531359801ScdHVs',
+  'is_system' => '1',
+  '_time' => '1531359805',
+  'device_tokens' => '65d21c3d44336aba8a2d4a0c74f249d73db1062ba45411b4eb3c7c7a34f61986',
+  'sign' => '5ab8824a8d41ccf4f30ea49972195e4e',
+)
+[ info ] [ RUN ] app\home\controller\Member->dologin[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.093693s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.443748s ]
+[ sql ] [ SQL ] SELECT `member_id`,`member_sn`,`member_name`,`mobile`,`password`,`guid`,`true_name`,`is_clinic`,`is_certified`,`login_state`,`device_tokens`,`is_status` FROM `jd_doctor` WHERE  `mobile` = '13262215137' LIMIT 1 [ RunTime:0.061947s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `login_ip`='0.0.0.0',`login_time`=1531360006,`is_system`=1,`device_tokens`='65d21c3d44336aba8a2d4a0c74f249d73db1062ba45411b4eb3c7c7a34f61986',`login_state`=1,`is_login`=1,`only_token`='1531360006|raM|P'  WHERE  `mobile` = '13262215137' [ RunTime:0.064441s ]
+---------------------------------------------------------------
+[ 2018-07-12T10:12:57+08:00 ] 0.0.0.0 POST /member/dologin
+[ info ] localhost:7037/member/dologin [运行时间：1.374407s][吞吐率：0.73req/s] [内存消耗：3,333.94kb] [文件加载：52]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'dologin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '239',
+  'x-original-url' => '/member/dologin',
+  'user-agent' => 'YiSong/1.25.0 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=lakgbrjrl4jsgijqkjmj1unfp7',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '13262215137',
+  'password' => '1234567',
+  'only_token' => '1531359801ScdHVs',
+  'is_system' => '1',
+  '_time' => '1531359805',
+  'device_tokens' => '65d21c3d44336aba8a2d4a0c74f249d73db1062ba45411b4eb3c7c7a34f61986',
+  'sign' => '5ab8824a8d41ccf4f30ea49972195e4e',
+)
+[ info ] [ RUN ] app\home\controller\Member->dologin[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.092374s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.061613s ]
+[ sql ] [ SQL ] SELECT `member_id`,`member_sn`,`member_name`,`mobile`,`password`,`guid`,`true_name`,`is_clinic`,`is_certified`,`login_state`,`device_tokens`,`is_status` FROM `jd_doctor` WHERE  `mobile` = '13262215137' LIMIT 1 [ RunTime:0.061196s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `login_ip`='0.0.0.0',`login_time`=1531361576,`is_system`=1,`device_tokens`='65d21c3d44336aba8a2d4a0c74f249d73db1062ba45411b4eb3c7c7a34f61986',`login_state`=1,`is_login`=1,`only_token`='1531361576p)MRSi'  WHERE  `mobile` = '13262215137' [ RunTime:0.065104s ]
+---------------------------------------------------------------
+[ 2018-07-12T10:13:08+08:00 ] 0.0.0.0 POST /member/dologin
+[ info ] localhost:7037/member/dologin [运行时间：2.073398s][吞吐率：0.48req/s] [内存消耗：3,333.94kb] [文件加载：52]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'dologin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '239',
+  'x-original-url' => '/member/dologin',
+  'user-agent' => 'YiSong/1.25.0 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=lakgbrjrl4jsgijqkjmj1unfp7',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '13262215137',
+  'password' => '1234567',
+  'only_token' => '1531359801ScdHVs',
+  'is_system' => '1',
+  '_time' => '1531359805',
+  'device_tokens' => '65d21c3d44336aba8a2d4a0c74f249d73db1062ba45411b4eb3c7c7a34f61986',
+  'sign' => '5ab8824a8d41ccf4f30ea49972195e4e',
+)
+[ info ] [ RUN ] app\home\controller\Member->dologin[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.090192s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.063939s ]
+[ sql ] [ SQL ] SELECT `member_id`,`member_sn`,`member_name`,`mobile`,`password`,`guid`,`true_name`,`is_clinic`,`is_certified`,`login_state`,`device_tokens`,`is_status` FROM `jd_doctor` WHERE  `mobile` = '13262215137' LIMIT 1 [ RunTime:0.062996s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `login_ip`='0.0.0.0',`login_time`=1531361587,`is_system`=1,`device_tokens`='65d21c3d44336aba8a2d4a0c74f249d73db1062ba45411b4eb3c7c7a34f61986',`login_state`=1,`is_login`=1,`only_token`='1531361587V[nn$4'  WHERE  `mobile` = '13262215137' [ RunTime:0.064580s ]
+---------------------------------------------------------------
+[ 2018-07-12T10:42:12+08:00 ] 0.0.0.0 POST /order/OrderSet
+[ info ] localhost:7037/order/OrderSet [运行时间：10.629096s][吞吐率：0.09req/s] [内存消耗：3,383.99kb] [文件加载：53]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'OrderSet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/OrderSet',
+  'postman-token' => '146fef94-f0bb-fe6c-d34f-d0df17f2a70d',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Order->OrderSet[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.793959s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.554727s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 ) [ RunTime:0.693134s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 and o.order_id='1176' ) LIMIT 1 [ RunTime:0.653327s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.635956s ]
+[ sql ] [ SQL ] SELECT `online_inquiry_per`,`online_review_per`,`online_fang_per`,`online_self_per` FROM `jd_doctor` WHERE  `member_id` = 234 LIMIT 1 [ RunTime:0.671582s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wenzhen` [ RunTime:0.650163s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wenzhen` WHERE  (  order_id = 1176 ) LIMIT 1 [ RunTime:0.868508s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_product` [ RunTime:0.243702s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_order_product` WHERE  (  order_id = 1176 ) LIMIT 1 [ RunTime:0.182444s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 and o.order_id='1180' ) LIMIT 1 [ RunTime:0.194703s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 and o.order_id='1185' ) LIMIT 1 [ RunTime:0.158830s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 and o.order_id='1194' ) LIMIT 1 [ RunTime:0.182554s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 and o.order_id='1198' ) LIMIT 1 [ RunTime:0.384269s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 and o.order_id='1211' ) LIMIT 1 [ RunTime:0.508109s ]
+[ sql ] [ SQL ] SELECT `online_inquiry_per`,`online_review_per`,`online_fang_per`,`online_self_per` FROM `jd_doctor` WHERE  `member_id` = 70 LIMIT 1 [ RunTime:0.623918s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wenzhen` WHERE  (  order_id = 1211 ) LIMIT 1 [ RunTime:0.534110s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `account`=account+0.7,`total_account`=total_account+0.7  WHERE  (  member_id='70' ) [ RunTime:0.482873s ]
+[ sql ] [ SQL ] UPDATE `jd_order`  SET `order_status`=4  WHERE  (  order_id='1211' ) [ RunTime:0.440216s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wallet_log` [ RunTime:0.291454s ]
+[ sql ] [ SQL ] INSERT INTO `jd_wallet_log` (`add_date` , `member_id` , `amount` , `type` , `reason`) VALUES (1531363331 , 70 , 0.7 , 0 , '复诊问诊订单') [ RunTime:0.320126s ]
+---------------------------------------------------------------
+[ 2018-07-12T11:30:48+08:00 ] 0.0.0.0 POST /order/OrderSet
+[ info ] localhost:7037/order/OrderSet [运行时间：0.947073s][吞吐率：1.06req/s] [内存消耗：3,387.43kb] [文件加载：53]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'OrderSet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/OrderSet',
+  'postman-token' => '24e6f44d-c147-c995-cb7c-ccb8e7af83a4',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Order->OrderSet[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.090500s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.061509s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 ) [ RunTime:0.061164s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 and o.order_id='1176' ) LIMIT 1 [ RunTime:0.061062s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.059360s ]
+[ sql ] [ SQL ] SELECT `online_inquiry_per`,`online_review_per`,`online_fang_per`,`online_self_per` FROM `jd_doctor` WHERE  `member_id` = 234 LIMIT 1 [ RunTime:0.059484s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wenzhen` [ RunTime:0.059947s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wenzhen` WHERE  (  order_id = 1176 ) LIMIT 1 [ RunTime:0.059435s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_product` [ RunTime:0.060874s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_order_product` WHERE  (  order_id = 1176 ) LIMIT 1 [ RunTime:0.060813s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 and o.order_id='1180' ) LIMIT 1 [ RunTime:0.063772s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 and o.order_id='1185' ) LIMIT 1 [ RunTime:0.059943s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 and o.order_id='1194' ) LIMIT 1 [ RunTime:0.061004s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 and o.order_id='1198' ) LIMIT 1 [ RunTime:0.061425s ]
+---------------------------------------------------------------
+[ 2018-07-12T11:52:02+08:00 ] 0.0.0.0 POST /order/OrderSet
+[ info ] localhost:7037/order/OrderSet [运行时间：1.332817s][吞吐率：0.75req/s] [内存消耗：3,385.66kb] [文件加载：53]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'OrderSet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/OrderSet',
+  'postman-token' => '6bc512f3-5047-f307-4b40-50166ecca634',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Order->OrderSet[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.097084s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.065461s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 ) [ RunTime:0.452691s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 and o.order_id='1176' ) LIMIT 1 [ RunTime:0.065357s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.066002s ]
+[ sql ] [ SQL ] SELECT `online_inquiry_per`,`online_review_per`,`online_fang_per`,`online_self_per` FROM `jd_doctor` WHERE  `member_id` = 234 LIMIT 1 [ RunTime:0.063702s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wenzhen` [ RunTime:0.063092s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wenzhen` WHERE  (  order_id = 1176 ) LIMIT 1 [ RunTime:0.063110s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_product` [ RunTime:0.063387s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_order_product` WHERE  (  order_id = 1176 ) LIMIT 1 [ RunTime:0.065357s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 and o.order_id='1180' ) LIMIT 1 [ RunTime:0.064309s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 and o.order_id='1198' ) LIMIT 1 [ RunTime:0.063221s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 and o.order_id='1251' ) LIMIT 1 [ RunTime:0.065044s ]
+---------------------------------------------------------------
+[ 2018-07-12T11:58:46+08:00 ] 0.0.0.0 POST /order/OrderSet
+[ info ] localhost:7037/order/OrderSet [运行时间：0.866747s][吞吐率：1.15req/s] [内存消耗：3,385.66kb] [文件加载：53]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'OrderSet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/OrderSet',
+  'postman-token' => '66625820-5061-eec5-8339-39e63649e4f8',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Order->OrderSet[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.085519s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.059075s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 ) [ RunTime:0.059655s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 and o.order_id='1176' ) LIMIT 1 [ RunTime:0.059884s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.062737s ]
+[ sql ] [ SQL ] SELECT `online_inquiry_per`,`online_review_per`,`online_fang_per`,`online_self_per` FROM `jd_doctor` WHERE  `member_id` = 234 LIMIT 1 [ RunTime:0.064808s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wenzhen` [ RunTime:0.056739s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wenzhen` WHERE  (  order_id = 1176 ) LIMIT 1 [ RunTime:0.057224s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_product` [ RunTime:0.056643s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_order_product` WHERE  (  order_id = 1176 ) LIMIT 1 [ RunTime:0.057295s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 and o.order_id='1180' ) LIMIT 1 [ RunTime:0.059846s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 and o.order_id='1198' ) LIMIT 1 [ RunTime:0.057764s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 and o.order_id='1251' ) LIMIT 1 [ RunTime:0.057721s ]
+---------------------------------------------------------------
+[ 2018-07-12T11:59:11+08:00 ] 0.0.0.0 POST /order/OrderSet
+[ info ] localhost:7037/order/OrderSet [运行时间：0.901192s][吞吐率：1.11req/s] [内存消耗：3,385.66kb] [文件加载：53]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'OrderSet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/OrderSet',
+  'postman-token' => '1ff020fe-32cf-2e40-1e4c-d7c97481dabe',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Order->OrderSet[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.090040s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.062935s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 ) [ RunTime:0.061717s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 and o.order_id='1176' ) LIMIT 1 [ RunTime:0.061433s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.060713s ]
+[ sql ] [ SQL ] SELECT `online_inquiry_per`,`online_review_per`,`online_fang_per`,`online_self_per` FROM `jd_doctor` WHERE  `member_id` = 234 LIMIT 1 [ RunTime:0.058758s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wenzhen` [ RunTime:0.060211s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wenzhen` WHERE  (  order_id = 1176 ) LIMIT 1 [ RunTime:0.059862s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order_product` [ RunTime:0.064546s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_order_product` WHERE  (  order_id = 1176 ) LIMIT 1 [ RunTime:0.061468s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 and o.order_id='1180' ) LIMIT 1 [ RunTime:0.063842s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 and o.order_id='1198' ) LIMIT 1 [ RunTime:0.061439s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 and o.order_id='1251' ) LIMIT 1 [ RunTime:0.061345s ]

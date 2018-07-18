@@ -1,0 +1,1771 @@
+---------------------------------------------------------------
+[ 2018-07-13T10:36:36+08:00 ] 0.0.0.0 POST /order/stopTalk
+[ info ] localhost:7037/order/stopTalk [运行时间：1.922104s][吞吐率：0.52req/s] [内存消耗：3,893.05kb] [文件加载：59]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'stopTalk',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/x-www-form-urlencoded;charset=UTF-8',
+  'content-length' => '123',
+  'x-original-url' => '/order/stopTalk',
+  'user-agent' => 'okhttp/3.8.0',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh',
+  'accept-encoding' => 'gzip',
+  'accept' => 'application/json',
+  'connection' => 'Keep-Alive',
+)
+[ info ] [ PARAM ] array (
+  'order_id' => '0',
+  'patient_id' => '52',
+  'doctor_id' => '247',
+  '_time' => '1531449189',
+  'sign' => '2eff4156d837338cfc16178ce6965dc6',
+  'only_token' => '1531446738Rrll)4',
+)
+[ info ] [ RUN ] app\home\controller\Order->stopTalk[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.098500s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.062035s ]
+[ sql ] [ SQL ] SELECT `member_name`,`mobile`,`openid`,`is_type` FROM `jd_member` WHERE  (  member_id=52 ) LIMIT 1 [ RunTime:0.060247s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wenzhen` [ RunTime:0.061731s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wenzhen` WHERE  (  type = 2 AND patient_id = 52 AND doctor_id = 247 AND is_use = 1 ) LIMIT 1 [ RunTime:0.061225s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wx_user` [ RunTime:0.060094s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_wx_user` LIMIT 1 [ RunTime:0.063744s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.061148s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `only_token` = '1531446738Rrll)4'  AND `is_status` = 0 LIMIT 1 [ RunTime:0.059638s ]
+[ error ] [8]未定义数组索引: true_name[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php:973]
+[ error ] [8]unserialize(): Error at offset 0 of 734 bytes[D:\workLP\20180502\judeng\wwwroot\thinkphp\library\think\cache\driver\File.php:120]
+---------------------------------------------------------------
+[ 2018-07-13T11:28:09+08:00 ] 0.0.0.0 POST /order/stopTalk
+[ info ] localhost:7037/order/stopTalk [运行时间：0.529414s][吞吐率：1.89req/s] [内存消耗：3,269.20kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'stopTalk',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '150',
+  'x-original-url' => '/order/stopTalk',
+  'user-agent' => 'YiSong/1.25.0 (iPhone; iOS 11.1.2; Scale/2.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=7d24d7svittuvc9elf0e66c0c3',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'sign' => '8307e51b989c6bcf5c6b00d986ba9178',
+  'doctor_id' => '247',
+  'order_id' => '1269',
+  'patient_id' => '52',
+  '_time' => '1531452401',
+  'only_token' => '1531452194P]Sckn',
+)
+[ info ] [ RUN ] app\home\controller\Order->stopTalk[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.092771s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.060146s ]
+[ sql ] [ SQL ] SELECT `member_name`,`mobile`,`openid`,`is_type` FROM `jd_member` WHERE  (  member_id=52 ) LIMIT 1 [ RunTime:0.057271s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.059499s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_order` WHERE  (  order_id = 1269 AND pay_status = 1 AND order_status IN(1,3) AND patient_id = 52 ) LIMIT 1 [ RunTime:0.059042s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.059928s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `only_token` = '1531452194P]Sckn'  AND `is_status` = 0 LIMIT 1 [ RunTime:0.056491s ]
+---------------------------------------------------------------
+[ 2018-07-13T11:28:40+08:00 ] 0.0.0.0 POST /order/stopTalk
+[ info ] localhost:7037/order/stopTalk [运行时间：0.391295s][吞吐率：2.56req/s] [内存消耗：3,244.44kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'stopTalk',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '150',
+  'x-original-url' => '/order/stopTalk',
+  'user-agent' => 'YiSong/1.25.0 (iPhone; iOS 11.1.2; Scale/2.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=7d24d7svittuvc9elf0e66c0c3',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'sign' => '8307e51b989c6bcf5c6b00d986ba9178',
+  'doctor_id' => '247',
+  'order_id' => '1269',
+  'patient_id' => '52',
+  '_time' => '1531452401',
+  'only_token' => '1531452194P]Sckn',
+)
+[ info ] [ RUN ] app\home\controller\Order->stopTalk[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.089945s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_member` [ RunTime:0.058398s ]
+[ sql ] [ SQL ] SELECT `member_name`,`mobile`,`openid`,`is_type` FROM `jd_member` WHERE  (  member_id=52 ) LIMIT 1 [ RunTime:0.057638s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.059079s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_order` WHERE  (  order_id = 1269 AND pay_status = 1 AND order_status IN(1,3) AND patient_id = 52 ) LIMIT 1 [ RunTime:0.058671s ]
+---------------------------------------------------------------
+[ 2018-07-13T14:19:46+08:00 ] 0.0.0.0 POST /order/OrderSet
+[ info ] localhost:7037/order/OrderSet [运行时间：0.398997s][吞吐率：2.51req/s] [内存消耗：3,316.96kb] [文件加载：53]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'OrderSet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/OrderSet',
+  'postman-token' => '943ff389-5fad-3a39-c769-6b7b2809d0c9',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Order->OrderSet[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.095185s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.063130s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 ) [ RunTime:0.063959s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 and o.order_id='1270' ) LIMIT 1 [ RunTime:0.104563s ]
+---------------------------------------------------------------
+[ 2018-07-13T14:22:53+08:00 ] 0.0.0.0 POST /order/OrderSet
+[ info ] localhost:7037/order/OrderSet [运行时间：0.354310s][吞吐率：2.82req/s] [内存消耗：3,234.07kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'OrderSet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/OrderSet',
+  'postman-token' => '4ba6447a-c081-fe3d-e31e-c195d0b62257',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Order->OrderSet[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.097874s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.063967s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 ) [ RunTime:0.064182s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 and o.order_id='1270' ) LIMIT 1 [ RunTime:0.065349s ]
+---------------------------------------------------------------
+[ 2018-07-13T14:23:00+08:00 ] 0.0.0.0 POST /order/OrderSet
+[ info ] localhost:7037/order/OrderSet [运行时间：0.347733s][吞吐率：2.88req/s] [内存消耗：3,317.30kb] [文件加载：53]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'OrderSet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/OrderSet',
+  'postman-token' => '9e1459cb-817e-5e68-b829-b5290d055d09',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Order->OrderSet[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.092795s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.062029s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 ) [ RunTime:0.069699s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 and o.order_id='1270' ) LIMIT 1 [ RunTime:0.063642s ]
+---------------------------------------------------------------
+[ 2018-07-13T14:23:26+08:00 ] 0.0.0.0 POST /order/OrderSet
+[ info ] localhost:7037/order/OrderSet [运行时间：0.332684s][吞吐率：3.01req/s] [内存消耗：3,234.07kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'OrderSet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/OrderSet',
+  'postman-token' => '6eb01824-c712-f148-16bb-316f06813608',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Order->OrderSet[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.090049s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.060552s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 ) [ RunTime:0.061993s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 and o.order_id='1270' ) LIMIT 1 [ RunTime:0.068088s ]
+---------------------------------------------------------------
+[ 2018-07-13T14:23:59+08:00 ] 0.0.0.0 POST /order/OrderSet
+[ info ] localhost:7037/order/OrderSet [运行时间：0.349219s][吞吐率：2.86req/s] [内存消耗：3,317.39kb] [文件加载：53]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'OrderSet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/OrderSet',
+  'postman-token' => '16768a9e-a117-7515-6da2-9e8d8471fa94',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Order->OrderSet[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.096532s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.062529s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 ) [ RunTime:0.062573s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 and o.order_id='1270' ) LIMIT 1 [ RunTime:0.062160s ]
+---------------------------------------------------------------
+[ 2018-07-13T14:24:25+08:00 ] 0.0.0.0 POST /order/OrderSet
+[ info ] localhost:7037/order/OrderSet [运行时间：0.360700s][吞吐率：2.77req/s] [内存消耗：3,317.30kb] [文件加载：53]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'OrderSet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/OrderSet',
+  'postman-token' => '27d4975d-4f4d-302a-b557-f3ae20ac182b',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Order->OrderSet[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.098719s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.064174s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 ) [ RunTime:0.066338s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 and o.order_id='1270' ) LIMIT 1 [ RunTime:0.065001s ]
+---------------------------------------------------------------
+[ 2018-07-13T14:24:35+08:00 ] 0.0.0.0 POST /order/OrderSet
+[ info ] localhost:7037/order/OrderSet [运行时间：0.330346s][吞吐率：3.03req/s] [内存消耗：3,234.07kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'OrderSet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/OrderSet',
+  'postman-token' => 'aef48527-e278-b9ca-0578-1b79e0f61dc9',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Order->OrderSet[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.092002s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.061347s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 ) [ RunTime:0.062493s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 and o.order_id='1270' ) LIMIT 1 [ RunTime:0.061399s ]
+---------------------------------------------------------------
+[ 2018-07-13T14:25:39+08:00 ] 0.0.0.0 POST /order/OrderSet
+[ info ] localhost:7037/order/OrderSet [运行时间：0.964699s][吞吐率：1.04req/s] [内存消耗：3,350.05kb] [文件加载：53]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'OrderSet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/OrderSet',
+  'postman-token' => 'b01a0dc4-b3d1-466c-72eb-bc67826e765e',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Order->OrderSet[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.091128s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.060358s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 ) [ RunTime:0.061863s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 and o.order_id='1270' ) LIMIT 1 [ RunTime:0.062324s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.060883s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `account`=account+0,`total_account`=total_account+0  WHERE  (  member_id='70' ) [ RunTime:0.057795s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wallet_log` [ RunTime:0.060649s ]
+[ sql ] [ SQL ] INSERT INTO `jd_wallet_log` (`add_date` , `member_id` , `amount` , `type` , `reason`) VALUES (1531463139 , 70 , 0 , 0 , '下级销售传承服务包提成') [ RunTime:0.192481s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `account`=account+5.44,`total_account`=total_account+5.44  WHERE  (  member_id='247' ) [ RunTime:0.057882s ]
+[ sql ] [ SQL ] UPDATE `jd_order`  SET `order_status`=4  WHERE  (  order_id='1270' ) [ RunTime:0.063271s ]
+[ sql ] [ SQL ] INSERT INTO `jd_wallet_log` (`add_date` , `member_id` , `amount` , `type` , `reason`) VALUES (1531463139 , 247 , 5.44 , 0 , '服务包订单') [ RunTime:0.058676s ]
+---------------------------------------------------------------
+[ 2018-07-13T15:59:51+08:00 ] 0.0.0.0 POST /sale/selfGoodsList
+[ info ] localhost:7037/sale/selfGoodsList [运行时间：0.391632s][吞吐率：2.55req/s] [内存消耗：3,010.67kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'sale',
+    2 => 'selfGoodsList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '112',
+  'x-original-url' => '/sale/selfGoodsList',
+  'user-agent' => 'YiSong/1.25.0 (iPhone; iOS 11.1.2; Scale/2.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=q421qphfeg182fo6830idaak03',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'sign' => '605fe45d0f040801401d6aef67d3018f',
+  'member_id' => 247,
+  '_time' => '1531468645',
+  'only_token' => '1531463774MI2Z[(',
+)
+[ info ] [ RUN ] app\home\controller\Sale->selfGoodsList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sale.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.094280s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.058891s ]
+[ sql ] [ SQL ] SELECT `o`.`order_date`,`o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission`,`op`.`product_name`,`d`.`true_name`,`d`.`face_photo` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  o.`doctor_id` = 247 AND o.pay_status = 2 AND o.order_type = 4 ) ORDER BY o.order_date DESC [ RunTime:0.059705s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.060887s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `only_token` = '1531463774MI2Z[('  AND `is_status` = 0 LIMIT 1 [ RunTime:0.058494s ]
+---------------------------------------------------------------
+[ 2018-07-13T16:03:15+08:00 ] 0.0.0.0 POST /sale/selfGoodsList
+[ info ] localhost:7037/sale/selfGoodsList [运行时间：0.286803s][吞吐率：3.49req/s] [内存消耗：2,974.13kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'sale',
+    2 => 'selfGoodsList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '112',
+  'x-original-url' => '/sale/selfGoodsList',
+  'user-agent' => 'YiSong/1.25.0 (iPhone; iOS 11.1.2; Scale/2.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=q421qphfeg182fo6830idaak03',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'sign' => '605fe45d0f040801401d6aef67d3018f',
+  'member_id' => 247,
+  '_time' => '1531468645',
+  'only_token' => '1531463774MI2Z[(',
+)
+[ info ] [ RUN ] app\home\controller\Sale->selfGoodsList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sale.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.098428s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.064704s ]
+[ sql ] [ SQL ] SELECT `o`.`order_date`,`o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission`,`op`.`product_name`,`d`.`true_name`,`d`.`face_photo` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  o.`doctor_id` = 247 AND o.pay_status = 2 AND o.order_type = 4 ) ORDER BY o.order_date DESC [ RunTime:0.076269s ]
+---------------------------------------------------------------
+[ 2018-07-13T16:18:21+08:00 ] 0.0.0.0 POST /order/OrderSet
+[ info ] localhost:7037/order/OrderSet [运行时间：0.852424s][吞吐率：1.17req/s] [内存消耗：3,350.05kb] [文件加载：53]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'OrderSet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/OrderSet',
+  'postman-token' => '386bd218-08e8-2ce8-f19b-0068ef745b21',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Order->OrderSet[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.094470s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.062210s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 ) [ RunTime:0.063129s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 and o.order_id='1274' ) LIMIT 1 [ RunTime:0.062155s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.062056s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `account`=account+0,`total_account`=total_account+0  WHERE  (  member_id='70' ) [ RunTime:0.062094s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_wallet_log` [ RunTime:0.063593s ]
+[ sql ] [ SQL ] INSERT INTO `jd_wallet_log` (`add_date` , `member_id` , `amount` , `type` , `reason`) VALUES (1531469900 , 70 , 0 , 0 , '下级销售传承服务包提成') [ RunTime:0.063833s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `account`=account+5.44,`total_account`=total_account+5.44  WHERE  (  member_id='247' ) [ RunTime:0.061675s ]
+[ sql ] [ SQL ] UPDATE `jd_order`  SET `order_status`=4  WHERE  (  order_id='1274' ) [ RunTime:0.060792s ]
+[ sql ] [ SQL ] INSERT INTO `jd_wallet_log` (`add_date` , `member_id` , `amount` , `type` , `reason`) VALUES (1531469901 , 247 , 5.44 , 0 , '服务包订单') [ RunTime:0.065047s ]
+---------------------------------------------------------------
+[ 2018-07-13T16:27:53+08:00 ] 0.0.0.0 POST /sale/selfGoodsList
+[ info ] localhost:7037/sale/selfGoodsList [运行时间：0.540107s][吞吐率：1.85req/s] [内存消耗：3,015.37kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'sale',
+    2 => 'selfGoodsList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '112',
+  'x-original-url' => '/sale/selfGoodsList',
+  'user-agent' => 'YiSong/1.25.0 (iPhone; iOS 11.1.2; Scale/2.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=q421qphfeg182fo6830idaak03',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'sign' => '605fe45d0f040801401d6aef67d3018f',
+  'member_id' => 247,
+  '_time' => '1531468645',
+  'only_token' => '1531463774MI2Z[(',
+)
+[ info ] [ RUN ] app\home\controller\Sale->selfGoodsList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sale.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.121577s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.081102s ]
+[ sql ] [ SQL ] SELECT `o`.`order_date`,`o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission`,`op`.`product_name`,`d`.`true_name`,`d`.`face_photo` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  o.`doctor_id` = 247 AND o.pay_status = 2 AND o.order_type = 4 ) ORDER BY o.order_date DESC [ RunTime:0.074735s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.074012s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `only_token` = '1531463774MI2Z[('  AND `is_status` = 0 LIMIT 1 [ RunTime:0.076731s ]
+---------------------------------------------------------------
+[ 2018-07-13T16:32:25+08:00 ] 0.0.0.0 POST /sale/selfGoodsList
+[ info ] localhost:7037/sale/selfGoodsList [运行时间：0.301688s][吞吐率：3.31req/s] [内存消耗：2,974.13kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'sale',
+    2 => 'selfGoodsList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '112',
+  'x-original-url' => '/sale/selfGoodsList',
+  'user-agent' => 'YiSong/1.25.0 (iPhone; iOS 11.1.2; Scale/2.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=q421qphfeg182fo6830idaak03',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'sign' => '605fe45d0f040801401d6aef67d3018f',
+  'member_id' => 247,
+  '_time' => '1531468645',
+  'only_token' => '1531463774MI2Z[(',
+)
+[ info ] [ RUN ] app\home\controller\Sale->selfGoodsList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sale.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.096468s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.061886s ]
+[ sql ] [ SQL ] SELECT `o`.`order_date`,`o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission`,`op`.`product_name`,`d`.`true_name`,`d`.`face_photo` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  o.`doctor_id` = 247 AND o.pay_status = 1 AND o.order_type = 4 ) ORDER BY o.order_date DESC [ RunTime:0.063097s ]
+---------------------------------------------------------------
+[ 2018-07-13T16:33:28+08:00 ] 0.0.0.0 POST /sale/selfGoodsList
+[ info ] localhost:7037/sale/selfGoodsList [运行时间：0.313216s][吞吐率：3.19req/s] [内存消耗：2,974.13kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'sale',
+    2 => 'selfGoodsList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '112',
+  'x-original-url' => '/sale/selfGoodsList',
+  'user-agent' => 'YiSong/1.25.0 (iPhone; iOS 11.1.2; Scale/2.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=q421qphfeg182fo6830idaak03',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'sign' => '605fe45d0f040801401d6aef67d3018f',
+  'member_id' => 247,
+  '_time' => '1531468645',
+  'only_token' => '1531463774MI2Z[(',
+)
+[ info ] [ RUN ] app\home\controller\Sale->selfGoodsList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sale.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.093727s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.062153s ]
+[ sql ] [ SQL ] SELECT `o`.`order_date`,`o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission`,`op`.`product_name`,`d`.`true_name`,`d`.`face_photo` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  o.`doctor_id` = 247 AND o.pay_status = 1 AND o.order_type = 4 ) ORDER BY o.order_date DESC [ RunTime:0.061789s ]
+---------------------------------------------------------------
+[ 2018-07-13T16:35:29+08:00 ] 0.0.0.0 POST /sale/selfGoodsList
+[ info ] localhost:7037/sale/selfGoodsList [运行时间：0.284326s][吞吐率：3.52req/s] [内存消耗：2,976.38kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'sale',
+    2 => 'selfGoodsList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '112',
+  'x-original-url' => '/sale/selfGoodsList',
+  'user-agent' => 'YiSong/1.25.0 (iPhone; iOS 11.1.2; Scale/2.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=q421qphfeg182fo6830idaak03',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'sign' => '605fe45d0f040801401d6aef67d3018f',
+  'member_id' => 247,
+  '_time' => '1531468645',
+  'only_token' => '1531463774MI2Z[(',
+)
+[ info ] [ RUN ] app\home\controller\Sale->selfGoodsList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sale.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.094001s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.061002s ]
+[ sql ] [ SQL ] SELECT `o`.`order_date`,`o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission`,`op`.`product_name`,`d`.`true_name`,`d`.`face_photo` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  o.`doctor_id` = 247 AND o.pay_status = 1 AND o.order_type = 4 ) ORDER BY o.order_date DESC [ RunTime:0.061202s ]
+---------------------------------------------------------------
+[ 2018-07-13T16:41:27+08:00 ] 0.0.0.0 POST /order/OrderSet
+[ info ] localhost:7037/order/OrderSet [运行时间：0.290331s][吞吐率：3.44req/s] [内存消耗：3,354.14kb] [文件加载：55]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'OrderSet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/OrderSet',
+  'postman-token' => '6a82f90b-0673-83a3-a91c-fc8b0e1a79e5',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Order->OrderSet[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.089519s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.060266s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 ) [ RunTime:0.059494s ]
+[ error ] [0]variable type error： boolean[D:\workLP\20180502\judeng\wwwroot\thinkphp\library\think\Response.php:318]
+---------------------------------------------------------------
+[ 2018-07-13T16:41:30+08:00 ] 0.0.0.0 POST /order/OrderSet
+[ info ] localhost:7037/order/OrderSet [运行时间：0.290573s][吞吐率：3.44req/s] [内存消耗：3,354.14kb] [文件加载：55]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'OrderSet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/OrderSet',
+  'postman-token' => '6fb7e834-fc3b-7297-dcf6-f77dae4b39f6',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Order->OrderSet[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.094914s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.062312s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 ) [ RunTime:0.067056s ]
+[ error ] [0]variable type error： boolean[D:\workLP\20180502\judeng\wwwroot\thinkphp\library\think\Response.php:318]
+---------------------------------------------------------------
+[ 2018-07-13T16:41:39+08:00 ] 0.0.0.0 POST /order/OrderSet
+[ info ] localhost:7037/order/OrderSet [运行时间：0.266599s][吞吐率：3.75req/s] [内存消耗：3,354.14kb] [文件加载：55]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'OrderSet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/OrderSet',
+  'postman-token' => 'e818a639-3d50-352d-1802-1c2be738b6c4',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Order->OrderSet[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.089293s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.061145s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 ) [ RunTime:0.060432s ]
+[ error ] [0]variable type error： boolean[D:\workLP\20180502\judeng\wwwroot\thinkphp\library\think\Response.php:318]
+---------------------------------------------------------------
+[ 2018-07-13T16:43:04+08:00 ] 0.0.0.0 POST /order/OrderSet
+[ info ] localhost:7037/order/OrderSet [运行时间：0.258241s][吞吐率：3.87req/s] [内存消耗：3,218.19kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'OrderSet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/OrderSet',
+  'postman-token' => 'c3df2533-1320-26a9-669a-5cff7728a980',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Order->OrderSet[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.089847s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.059060s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 ) [ RunTime:0.061438s ]
+---------------------------------------------------------------
+[ 2018-07-13T16:43:13+08:00 ] 0.0.0.0 POST /order/OrderSet
+[ info ] localhost:7037/order/OrderSet [运行时间：0.280380s][吞吐率：3.57req/s] [内存消耗：3,354.14kb] [文件加载：55]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'OrderSet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/OrderSet',
+  'postman-token' => '31cf12a2-103e-338d-cf94-91104c24fc4c',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Order->OrderSet[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.091436s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.060917s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 ) [ RunTime:0.062966s ]
+[ error ] [0]variable type error： boolean[D:\workLP\20180502\judeng\wwwroot\thinkphp\library\think\Response.php:318]
+---------------------------------------------------------------
+[ 2018-07-13T16:43:30+08:00 ] 0.0.0.0 POST /order/OrderSet
+[ info ] localhost:7037/order/OrderSet [运行时间：0.274264s][吞吐率：3.65req/s] [内存消耗：3,354.60kb] [文件加载：55]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'OrderSet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/OrderSet',
+  'postman-token' => '5458ea8f-da39-5bec-b8b2-8f6fc2473b9e',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Order->OrderSet[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.088952s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.060038s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 ) [ RunTime:0.060187s ]
+[ error ] [0]variable type error： boolean[D:\workLP\20180502\judeng\wwwroot\thinkphp\library\think\Response.php:318]
+---------------------------------------------------------------
+[ 2018-07-13T16:43:45+08:00 ] 0.0.0.0 POST /order/OrderSet
+[ info ] localhost:7037/order/OrderSet [运行时间：0.275115s][吞吐率：3.63req/s] [内存消耗：3,218.52kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'OrderSet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/OrderSet',
+  'postman-token' => '8bde02ae-39a2-4400-71b7-af626596a50b',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Order->OrderSet[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.092630s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.061532s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 ) [ RunTime:0.061034s ]
+---------------------------------------------------------------
+[ 2018-07-13T16:43:57+08:00 ] 0.0.0.0 POST /order/OrderSet
+[ info ] localhost:7037/order/OrderSet [运行时间：0.286040s][吞吐率：3.50req/s] [内存消耗：3,218.61kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'OrderSet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/OrderSet',
+  'postman-token' => '9001ad37-5570-a1c3-e82a-bf2244867719',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Order->OrderSet[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.094240s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.064775s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 ) [ RunTime:0.064875s ]
+---------------------------------------------------------------
+[ 2018-07-13T16:44:07+08:00 ] 0.0.0.0 POST /order/OrderSet
+[ info ] localhost:7037/order/OrderSet [运行时间：0.286469s][吞吐率：3.49req/s] [内存消耗：3,354.81kb] [文件加载：55]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'OrderSet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/OrderSet',
+  'postman-token' => '55ea074b-6da5-588b-41f3-b058b62c23bd',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Order->OrderSet[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.094362s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.060905s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 ) [ RunTime:0.062614s ]
+[ error ] [0]variable type error： boolean[D:\workLP\20180502\judeng\wwwroot\thinkphp\library\think\Response.php:318]
+---------------------------------------------------------------
+[ 2018-07-13T16:45:48+08:00 ] 0.0.0.0 POST /order/OrderSet
+[ info ] localhost:7037/order/OrderSet [运行时间：0.282433s][吞吐率：3.54req/s] [内存消耗：3,218.98kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'OrderSet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/OrderSet',
+  'postman-token' => 'eee96318-57b9-c7d1-bfe5-307e647ad6e9',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Order->OrderSet[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.094876s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.064406s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 ) [ RunTime:0.062686s ]
+---------------------------------------------------------------
+[ 2018-07-13T16:45:53+08:00 ] 0.0.0.0 POST /order/OrderSet
+[ info ] localhost:7037/order/OrderSet [运行时间：0.284894s][吞吐率：3.51req/s] [内存消耗：3,354.81kb] [文件加载：55]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'OrderSet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/OrderSet',
+  'postman-token' => 'ed753043-03ff-b03b-1731-9c4c51ac1985',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Order->OrderSet[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.094783s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.062799s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 ) [ RunTime:0.072714s ]
+[ error ] [0]variable type error： boolean[D:\workLP\20180502\judeng\wwwroot\thinkphp\library\think\Response.php:318]
+---------------------------------------------------------------
+[ 2018-07-13T16:47:38+08:00 ] 0.0.0.0 POST /order/OrderSet
+[ info ] localhost:7037/order/OrderSet [运行时间：0.266214s][吞吐率：3.76req/s] [内存消耗：3,300.09kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'OrderSet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/OrderSet',
+  'postman-token' => '49a4557a-d97f-75eb-ca27-06e82f6e5e95',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Order->OrderSet[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.087983s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.061183s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 ) [ RunTime:0.059186s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:108]
+---------------------------------------------------------------
+[ 2018-07-13T16:47:40+08:00 ] 0.0.0.0 POST /order/OrderSet
+[ info ] localhost:7037/order/OrderSet [运行时间：0.287238s][吞吐率：3.48req/s] [内存消耗：3,300.09kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'OrderSet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/OrderSet',
+  'postman-token' => 'dcf0cbe9-c51a-e013-675e-70618e96f9b5',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Order->OrderSet[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.098293s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.064000s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 ) [ RunTime:0.065891s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:108]
+---------------------------------------------------------------
+[ 2018-07-13T16:47:41+08:00 ] 0.0.0.0 POST /order/OrderSet
+[ info ] localhost:7037/order/OrderSet [运行时间：0.270187s][吞吐率：3.70req/s] [内存消耗：3,300.09kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'order',
+    2 => 'OrderSet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/order/OrderSet',
+  'postman-token' => 'c9001aa0-fcb8-7fa7-d77c-75996fbf6e3e',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Order->OrderSet[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.091629s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.061138s ]
+[ sql ] [ SQL ] SELECT `a`.*,`o`.`doctor_id`,`o`.`pay_amount`,`o`.`order_status`,`o`.`order_type` FROM `jd_order` `o` INNER JOIN `jd_order_product` `a` ON `o`.`order_id`=`a`.`order_id` WHERE  (  o.pay_status=1 and o.order_status!=4 ) [ RunTime:0.061651s ]
+[ error ] [8]未定义数组索引: only_token[D:\workLP\20180502\judeng\wwwroot\application\common.php:108]
+---------------------------------------------------------------
+[ 2018-07-13T16:55:12+08:00 ] 0.0.0.0 POST /sale/mySaleDetail
+[ info ] localhost:7037/sale/mySaleDetail [运行时间：0.266355s][吞吐率：3.75req/s] [内存消耗：3,028.41kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'sale',
+    2 => 'mySaleDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '112',
+  'x-original-url' => '/sale/mySaleDetail',
+  'user-agent' => 'YiSong/1.25.0 (iPhone; iOS 11.1.2; Scale/2.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=q421qphfeg182fo6830idaak03',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'sign' => '8c4af567345e0c72b9fc41306939222a',
+  'member_id' => 247,
+  '_time' => '1531471864',
+  'only_token' => '1531470955YOrg{K',
+)
+[ info ] [ RUN ] app\home\controller\Sale->mySaleDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sale.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.091426s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.060743s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` WHERE  (  o.`doctor_id` = 247 AND o.pay_status = 1 AND o.order_type = 4 ) ORDER BY o.order_date DESC [ RunTime:0.061247s ]
+---------------------------------------------------------------
+[ 2018-07-13T16:55:26+08:00 ] 0.0.0.0 POST /sale/mySaleDetail
+[ info ] localhost:7037/sale/mySaleDetail [运行时间：0.494593s][吞吐率：2.02req/s] [内存消耗：3,031.44kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'sale',
+    2 => 'mySaleDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '112',
+  'x-original-url' => '/sale/mySaleDetail',
+  'user-agent' => 'YiSong/1.25.0 (iPhone; iOS 11.1.2; Scale/2.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=q421qphfeg182fo6830idaak03',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'sign' => '8c4af567345e0c72b9fc41306939222a',
+  'member_id' => 247,
+  '_time' => '1531471864',
+  'only_token' => '1531470955YOrg{K',
+)
+[ info ] [ RUN ] app\home\controller\Sale->mySaleDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sale.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.096472s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.063244s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` WHERE  (  o.`doctor_id` = 247 AND o.pay_status = 1 AND o.order_type = 4 ) ORDER BY o.order_date DESC [ RunTime:0.068303s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` WHERE  (  op.`parent_id` = 247 AND o.pay_status = 1 AND o.order_type = 4 ) ORDER BY o.order_date DESC [ RunTime:0.073418s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.062367s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `only_token` = '1531470955YOrg{K'  AND `is_status` = 0 LIMIT 1 [ RunTime:0.060724s ]
+---------------------------------------------------------------
+[ 2018-07-13T16:57:45+08:00 ] 0.0.0.0 POST /sale/selfTeamList
+[ info ] localhost:7037/sale/selfTeamList [运行时间：0.378615s][吞吐率：2.64req/s] [内存消耗：3,011.65kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'sale',
+    2 => 'selfTeamList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '123',
+  'x-original-url' => '/sale/selfTeamList',
+  'user-agent' => 'YiSong/1.25.0 (iPhone; iOS 11.1.2; Scale/2.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=q421qphfeg182fo6830idaak03',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'sign' => 'b45c735c71078053d9840f71ca617fdf',
+  'member_id' => 247,
+  'type' => '0',
+  '_time' => '1531472226',
+  'only_token' => '1531470955YOrg{K',
+)
+[ info ] [ RUN ] app\home\controller\Sale->selfTeamList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sale.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.091028s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.060302s ]
+[ sql ] [ SQL ] SELECT `o`.`order_date`,`o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission`,`op`.`product_name`,`op`.`parent_id`,`d`.`true_name`,`d`.`face_photo` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 247 OR op.`parent_id` = 247) AND o.pay_status = 2 AND o.order_type = 4 ) ORDER BY o.order_date DESC [ RunTime:0.060280s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.060188s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `only_token` = '1531470955YOrg{K'  AND `is_status` = 0 LIMIT 1 [ RunTime:0.058184s ]
+---------------------------------------------------------------
+[ 2018-07-13T17:01:03+08:00 ] 0.0.0.0 POST /sale/selfTeamList
+[ info ] localhost:7037/sale/selfTeamList [运行时间：0.433665s][吞吐率：2.31req/s] [内存消耗：3,011.65kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'sale',
+    2 => 'selfTeamList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '123',
+  'x-original-url' => '/sale/selfTeamList',
+  'user-agent' => 'YiSong/1.25.0 (iPhone; iOS 11.1.2; Scale/2.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=q421qphfeg182fo6830idaak03',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'sign' => 'b45c735c71078053d9840f71ca617fdf',
+  'member_id' => 247,
+  'type' => '0',
+  '_time' => '1531472226',
+  'only_token' => '1531470955YOrg{K',
+)
+[ info ] [ RUN ] app\home\controller\Sale->selfTeamList[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sale.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.095380s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.062612s ]
+[ sql ] [ SQL ] SELECT `o`.`order_date`,`o`.`order_id`,`o`.`pay_amount`,`op`.`commission`,`op`.`base_commission`,`op`.`product_name`,`op`.`parent_id`,`d`.`true_name`,`d`.`face_photo` FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` INNER JOIN `jd_doctor` `d` ON `o`.`doctor_id`=`d`.`member_id` WHERE  (  (o.`doctor_id` = 247 OR op.`parent_id` = 247) AND o.pay_status = 2 AND o.order_type = 4 ) ORDER BY o.order_date DESC [ RunTime:0.064017s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.075521s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `only_token` = '1531470955YOrg{K'  AND `is_status` = 0 LIMIT 1 [ RunTime:0.063014s ]
+---------------------------------------------------------------
+[ 2018-07-13T17:03:52+08:00 ] 0.0.0.0 POST /sale/mySaleDetail
+[ info ] localhost:7037/sale/mySaleDetail [运行时间：0.449220s][吞吐率：2.23req/s] [内存消耗：3,031.44kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'sale',
+    2 => 'mySaleDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '112',
+  'x-original-url' => '/sale/mySaleDetail',
+  'user-agent' => 'YiSong/1.25.0 (iPhone; iOS 11.1.2; Scale/2.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=q421qphfeg182fo6830idaak03',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'sign' => '8c4af567345e0c72b9fc41306939222a',
+  'member_id' => 247,
+  '_time' => '1531471864',
+  'only_token' => '1531470955YOrg{K',
+)
+[ info ] [ RUN ] app\home\controller\Sale->mySaleDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sale.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.091823s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.060554s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` WHERE  (  o.`doctor_id` = 247 AND o.pay_status = 1 AND o.order_type = 4 ) ORDER BY o.order_date DESC [ RunTime:0.061122s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` WHERE  (  op.`parent_id` = 247 AND o.pay_status = 1 AND o.order_type = 4 ) ORDER BY o.order_date DESC [ RunTime:0.063362s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.060029s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `only_token` = '1531470955YOrg{K'  AND `is_status` = 0 LIMIT 1 [ RunTime:0.058360s ]
+---------------------------------------------------------------
+[ 2018-07-13T17:15:04+08:00 ] 0.0.0.0 POST /sale/mySaleDetail
+[ info ] localhost:7037/sale/mySaleDetail [运行时间：0.388661s][吞吐率：2.57req/s] [内存消耗：3,053.55kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'sale',
+    2 => 'mySaleDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '112',
+  'x-original-url' => '/sale/mySaleDetail',
+  'user-agent' => 'YiSong/1.25.0 (iPhone; iOS 11.1.2; Scale/2.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=q421qphfeg182fo6830idaak03',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'sign' => '8c4af567345e0c72b9fc41306939222a',
+  'member_id' => 247,
+  '_time' => '1531471864',
+  'only_token' => '1531470955YOrg{K',
+)
+[ info ] [ RUN ] app\home\controller\Sale->mySaleDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sale.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.097509s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.060293s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` WHERE  (  o.`doctor_id` = 247 AND o.pay_status = 1 AND o.order_type = 4 ) ORDER BY o.order_date DESC [ RunTime:0.061699s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` WHERE  (  op.`parent_id` = 247 AND o.pay_status = 1 AND o.order_type = 4 ) ORDER BY o.order_date DESC [ RunTime:0.060565s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` WHERE  (  o.`doctor_id` = 247 AND o.pay_status = 1 AND o.order_type = 4 AND op.`special_id` != 0 AND op.`inherit_id` != 0 ) ORDER BY o.order_date DESC [ RunTime:0.060863s ]
+---------------------------------------------------------------
+[ 2018-07-13T17:16:20+08:00 ] 0.0.0.0 POST /sale/mySaleDetail
+[ info ] localhost:7037/sale/mySaleDetail [运行时间：0.531031s][吞吐率：1.88req/s] [内存消耗：3,055.36kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'sale',
+    2 => 'mySaleDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '112',
+  'x-original-url' => '/sale/mySaleDetail',
+  'user-agent' => 'YiSong/1.25.0 (iPhone; iOS 11.1.2; Scale/2.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=q421qphfeg182fo6830idaak03',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'sign' => '8c4af567345e0c72b9fc41306939222a',
+  'member_id' => 247,
+  '_time' => '1531471864',
+  'only_token' => '1531470955YOrg{K',
+)
+[ info ] [ RUN ] app\home\controller\Sale->mySaleDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sale.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.091427s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.061717s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` WHERE  (  o.`doctor_id` = 247 AND o.pay_status = 1 AND o.order_type = 4 ) ORDER BY o.order_date DESC [ RunTime:0.060746s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` WHERE  (  op.`parent_id` = 247 AND o.pay_status = 1 AND o.order_type = 4 ) ORDER BY o.order_date DESC [ RunTime:0.061164s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` WHERE  (  o.`doctor_id` = 247 AND o.pay_status = 1 AND o.order_type = 4 AND op.`special_id` != 0 AND op.`inherit_id` != 0 ) ORDER BY o.order_date DESC [ RunTime:0.063913s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.059581s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `only_token` = '1531470955YOrg{K'  AND `is_status` = 0 LIMIT 1 [ RunTime:0.058078s ]
+---------------------------------------------------------------
+[ 2018-07-13T17:16:50+08:00 ] 0.0.0.0 POST /sale/mySaleDetail
+[ info ] localhost:7037/sale/mySaleDetail [运行时间：0.397975s][吞吐率：2.51req/s] [内存消耗：3,054.10kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'sale',
+    2 => 'mySaleDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '112',
+  'x-original-url' => '/sale/mySaleDetail',
+  'user-agent' => 'YiSong/1.25.0 (iPhone; iOS 11.1.2; Scale/2.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=q421qphfeg182fo6830idaak03',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'sign' => '8c4af567345e0c72b9fc41306939222a',
+  'member_id' => 247,
+  '_time' => '1531471864',
+  'only_token' => '1531470955YOrg{K',
+)
+[ info ] [ RUN ] app\home\controller\Sale->mySaleDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sale.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.089598s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.057597s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` WHERE  (  o.`doctor_id` = 247 AND o.pay_status = 1 AND o.order_type = 4 ) ORDER BY o.order_date DESC [ RunTime:0.062636s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` WHERE  (  op.`parent_id` = 247 AND o.pay_status = 1 AND o.order_type = 4 ) ORDER BY o.order_date DESC [ RunTime:0.059511s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` WHERE  (  o.`doctor_id` = 247 AND o.pay_status = 1 AND o.order_type = 4 AND op.`special_id` != 0 AND op.`inherit_id` != 0 ) ORDER BY o.order_date DESC [ RunTime:0.058680s ]
+---------------------------------------------------------------
+[ 2018-07-13T17:17:18+08:00 ] 0.0.0.0 POST /sale/mySaleDetail
+[ info ] localhost:7037/sale/mySaleDetail [运行时间：0.370114s][吞吐率：2.70req/s] [内存消耗：3,054.45kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'sale',
+    2 => 'mySaleDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '112',
+  'x-original-url' => '/sale/mySaleDetail',
+  'user-agent' => 'YiSong/1.25.0 (iPhone; iOS 11.1.2; Scale/2.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=q421qphfeg182fo6830idaak03',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'sign' => '8c4af567345e0c72b9fc41306939222a',
+  'member_id' => 247,
+  '_time' => '1531471864',
+  'only_token' => '1531470955YOrg{K',
+)
+[ info ] [ RUN ] app\home\controller\Sale->mySaleDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sale.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.088784s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.059733s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` WHERE  (  o.`doctor_id` = 247 AND o.pay_status = 1 AND o.order_type = 4 ) ORDER BY o.order_date DESC [ RunTime:0.058331s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` WHERE  (  op.`parent_id` = 247 AND o.pay_status = 1 AND o.order_type = 4 ) ORDER BY o.order_date DESC [ RunTime:0.058546s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` WHERE  (  o.`doctor_id` = 247 AND o.pay_status = 1 AND o.order_type = 4 AND op.`special_id` != 0 AND op.`inherit_id` != 0 ) ORDER BY o.order_date DESC [ RunTime:0.058153s ]
+---------------------------------------------------------------
+[ 2018-07-13T17:17:29+08:00 ] 0.0.0.0 POST /sale/mySaleDetail
+[ info ] localhost:7037/sale/mySaleDetail [运行时间：0.605354s][吞吐率：1.65req/s] [内存消耗：3,055.36kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'sale',
+    2 => 'mySaleDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '112',
+  'x-original-url' => '/sale/mySaleDetail',
+  'user-agent' => 'YiSong/1.25.0 (iPhone; iOS 11.1.2; Scale/2.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=q421qphfeg182fo6830idaak03',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'sign' => '8c4af567345e0c72b9fc41306939222a',
+  'member_id' => 247,
+  '_time' => '1531471864',
+  'only_token' => '1531470955YOrg{K',
+)
+[ info ] [ RUN ] app\home\controller\Sale->mySaleDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sale.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.101382s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.059994s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` WHERE  (  o.`doctor_id` = 247 AND o.pay_status = 1 AND o.order_type = 4 ) ORDER BY o.order_date DESC [ RunTime:0.085260s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` WHERE  (  op.`parent_id` = 247 AND o.pay_status = 1 AND o.order_type = 4 ) ORDER BY o.order_date DESC [ RunTime:0.088453s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` WHERE  (  o.`doctor_id` = 247 AND o.pay_status = 1 AND o.order_type = 4 AND op.`special_id` != 0 AND op.`inherit_id` != 0 ) ORDER BY o.order_date DESC [ RunTime:0.089497s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.064365s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `only_token` = '1531470955YOrg{K'  AND `is_status` = 0 LIMIT 1 [ RunTime:0.061373s ]
+---------------------------------------------------------------
+[ 2018-07-13T17:19:32+08:00 ] 0.0.0.0 POST /sale/mySaleDetail
+[ info ] localhost:7037/sale/mySaleDetail [运行时间：0.524740s][吞吐率：1.91req/s] [内存消耗：3,136.69kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'sale',
+    2 => 'mySaleDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '112',
+  'x-original-url' => '/sale/mySaleDetail',
+  'user-agent' => 'YiSong/1.25.0 (iPhone; iOS 11.1.2; Scale/2.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=q421qphfeg182fo6830idaak03',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'sign' => '8c4af567345e0c72b9fc41306939222a',
+  'member_id' => 247,
+  '_time' => '1531471864',
+  'only_token' => '1531470955YOrg{K',
+)
+[ info ] [ RUN ] app\home\controller\Sale->mySaleDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sale.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.089165s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.058691s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` WHERE  (  o.`doctor_id` = 247 AND o.pay_status = 1 AND o.order_type = 4 ) ORDER BY o.order_date DESC [ RunTime:0.058966s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` WHERE  (  op.`parent_id` = 247 AND o.pay_status = 1 AND o.order_type = 4 ) ORDER BY o.order_date DESC [ RunTime:0.059443s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` WHERE  (  o.`doctor_id` = 247 AND o.pay_status = 1 AND o.order_type = 4 AND op.`special_id` != 0 AND op.`inherit_id` != 0 ) ORDER BY o.order_date DESC [ RunTime:0.057572s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.059998s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `only_token` = '1531470955YOrg{K'  AND `is_status` = 0 LIMIT 1 [ RunTime:0.059147s ]
+[ error ] [8]未定义变量: val1[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sale.php:57]
+[ error ] [8]未定义变量: val1[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sale.php:57]
+[ error ] [8]未定义变量: val1[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sale.php:57]
+[ error ] [8]未定义变量: val1[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sale.php:57]
+[ error ] [8]未定义变量: val1[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sale.php:57]
+[ error ] [8]未定义变量: val1[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sale.php:57]
+---------------------------------------------------------------
+[ 2018-07-13T17:20:18+08:00 ] 0.0.0.0 POST /sale/mySaleDetail
+[ info ] localhost:7037/sale/mySaleDetail [运行时间：0.375650s][吞吐率：2.66req/s] [内存消耗：3,136.83kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'sale',
+    2 => 'mySaleDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '112',
+  'x-original-url' => '/sale/mySaleDetail',
+  'user-agent' => 'YiSong/1.25.0 (iPhone; iOS 11.1.2; Scale/2.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=q421qphfeg182fo6830idaak03',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'sign' => '8c4af567345e0c72b9fc41306939222a',
+  'member_id' => 247,
+  '_time' => '1531471864',
+  'only_token' => '1531470955YOrg{K',
+)
+[ info ] [ RUN ] app\home\controller\Sale->mySaleDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sale.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.090793s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.059909s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` WHERE  (  o.`doctor_id` = 247 AND o.pay_status = 1 AND o.order_type = 4 ) ORDER BY o.order_date DESC [ RunTime:0.060867s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` WHERE  (  op.`parent_id` = 247 AND o.pay_status = 1 AND o.order_type = 4 ) ORDER BY o.order_date DESC [ RunTime:0.061011s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` WHERE  (  o.`doctor_id` = 247 AND o.pay_status = 1 AND o.order_type = 4 AND op.`special_id` != 0 AND op.`inherit_id` != 0 ) ORDER BY o.order_date DESC [ RunTime:0.059925s ]
+[ error ] [8]未定义变量: val1[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sale.php:57]
+[ error ] [8]未定义变量: val1[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sale.php:57]
+[ error ] [8]未定义变量: val1[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sale.php:57]
+[ error ] [8]未定义变量: val1[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sale.php:57]
+[ error ] [8]未定义变量: val1[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sale.php:57]
+[ error ] [8]未定义变量: val1[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sale.php:57]
+[ error ] [8]未定义变量: val1[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sale.php:59]
+[ error ] [8]未定义变量: val1[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sale.php:59]
+---------------------------------------------------------------
+[ 2018-07-13T17:20:35+08:00 ] 0.0.0.0 POST /sale/mySaleDetail
+[ info ] localhost:7037/sale/mySaleDetail [运行时间：0.504945s][吞吐率：1.98req/s] [内存消耗：3,055.76kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'sale',
+    2 => 'mySaleDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '112',
+  'x-original-url' => '/sale/mySaleDetail',
+  'user-agent' => 'YiSong/1.25.0 (iPhone; iOS 11.1.2; Scale/2.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=q421qphfeg182fo6830idaak03',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'sign' => '8c4af567345e0c72b9fc41306939222a',
+  'member_id' => 247,
+  '_time' => '1531471864',
+  'only_token' => '1531470955YOrg{K',
+)
+[ info ] [ RUN ] app\home\controller\Sale->mySaleDetail[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sale.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.103877s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.065023s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` WHERE  (  o.`doctor_id` = 247 AND o.pay_status = 1 AND o.order_type = 4 ) ORDER BY o.order_date DESC [ RunTime:0.059856s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` WHERE  (  op.`parent_id` = 247 AND o.pay_status = 1 AND o.order_type = 4 ) ORDER BY o.order_date DESC [ RunTime:0.059490s ]
+[ sql ] [ SQL ] SELECT `o`.*,`op`.* FROM `jd_order` `o` INNER JOIN `jd_order_product` `op` ON `op`.`order_id`=`o`.`order_id` WHERE  (  o.`doctor_id` = 247 AND o.pay_status = 1 AND o.order_type = 4 AND op.`special_id` != 0 AND op.`inherit_id` != 0 ) ORDER BY o.order_date DESC [ RunTime:0.058155s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.057565s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `only_token` = '1531470955YOrg{K'  AND `is_status` = 0 LIMIT 1 [ RunTime:0.056233s ]

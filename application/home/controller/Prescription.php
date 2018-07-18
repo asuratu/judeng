@@ -190,7 +190,7 @@ class Prescription extends Common
 
             //优先判断是不是选特色方剂
             if ($data['type'] == 1) {
-                $tempInfo['head_title'] = '查看特色方剂-'.$tempInfo['state_name'].'模板';
+//                $tempInfo['head_title'] = '查看特色方剂-'.$tempInfo['state_name'].'模板';
                 $tempInfo['temp_name'] = '';
                 //查询该药态该地区下的第一个药房
                 $houseMap['d.`is_display`'] = 1;
@@ -222,8 +222,9 @@ class Prescription extends Common
                     $tempInfo['drug_str'] = base64_encode($specialInfo['content']);
                     $tempInfo['special_content'] = base64_encode($specialInfo['content']);
                     $tempInfo['special_id'] = $specialInfo['special_id'] ?: 0;
+                    $tempInfo['head_title'] = $specialInfo['special_name'];
 
-                    //计算价格
+                        //计算价格
                     $drugSumPrice = 0;//价格
                     $lessCountArr = array();//超量
                     $otherNameArr = array();//别名
@@ -329,7 +330,8 @@ class Prescription extends Common
                     //敏感数据处理
                     $drugtempInfo['drug_str'] = base64_encode($drugtempInfo['drug_str']);
                     $drugtempInfo['taboo_content'] = $drugtempInfo['taboo_content'] ? base64_encode($drugtempInfo['taboo_content']) : '';
-                    $drugtempInfo['head_title'] = '修改'.$tempInfo['state_name'].'模板';
+//                    $drugtempInfo['head_title'] = '修改'.$tempInfo['state_name'].'模板';
+                    $drugtempInfo['head_title'] = $drugtempInfo['temp_name'];
                     $drugtempInfo['pic'] = $tempInfo['pic'];
                     $drugtempInfo['state_name'] = $tempInfo['state_name'];
                     $drugtempInfo['state_id'] = $tempInfo['state_id'] ?: 0;
@@ -562,12 +564,14 @@ class Prescription extends Common
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
 
-            //对于当前医生模板名不能重复
-            $tempMap['member_id'] = $data['member_id'];
-            $tempMap['temp_name'] = str_replace(__ROOT__,'',$data['temp_name']);
-            $tempCount = db('temp')->where($tempMap)->count();
-            if ($tempCount > 1) {
-                ajaxReturn(array('code'=>0,'info'=>'该名称的模板已存在!','data'=>[]));
+            //添加时, 对于当前医生模板名不能重复
+            if ($data['temp_id'] == 0) {
+                $tempMap['member_id'] = $data['member_id'];
+                $tempMap['temp_name'] = str_replace(__ROOT__, '', $data['temp_name']);
+                $tempCount = db('temp')->where($tempMap)->count();
+                if ($tempCount > 1) {
+                    ajaxReturn(array('code' => 0, 'info' => '该名称的模板已存在!', 'data' => []));
+                }
             }
 
             $updateMap['temp_id'] = $data['temp_id'];
@@ -691,9 +695,12 @@ class Prescription extends Common
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
 
+            if ($data['temp_id']==0) {
+                ajaxReturn(array('code'=>0,'info'=>'特色方剂模板不可删除!','data'=>[]));
+            }
             //查询该模板
             $map['temp_id'] = $data['temp_id'];
-            $map['member_id'] = $data['member_id'];
+//            $map['member_id'] = $data['member_id'];
             $tempInfo = db('temp')->where($map)
                 ->field("*")
                 ->find();
@@ -701,7 +708,7 @@ class Prescription extends Common
                 ajaxReturn(array('code'=>0,'info'=>'该模板不存在!','data'=>[]));
             }
             if ($tempInfo['type'] == 1) {
-                ajaxReturn(array('code'=>0,'info'=>'该模板已被设为经典模板, 不可删除!','data'=>[]));
+                ajaxReturn(array('code'=>0,'info'=>'经典方模板, 不可删除!','data'=>[]));
             }
             //删除模板
             $_result = db('temp')->where($map)->delete();

@@ -1,0 +1,317 @@
+---------------------------------------------------------------
+[ 2018-07-11T00:40:07+08:00 ] 0.0.0.0 POST /member/dologin
+[ info ] localhost:7037/member/dologin [运行时间：1.863411s][吞吐率：0.54req/s] [内存消耗：3,777.58kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'dologin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '223',
+  'x-original-url' => '/member/dologin',
+  'user-agent' => 'YiSong/1.25.0 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=15b6fv9vl9h922qicfsg8c6so6',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '13262215137',
+  'password' => '1234567',
+  'only_token' => '',
+  'is_system' => '1',
+  '_time' => '1531240451',
+  'device_tokens' => '3bd1453a25125984692b2f1164f470cab3afb2c801103bdabf905b99179beebb',
+  'sign' => 'fd610756370b206cd5da66144423e8c6',
+)
+[ info ] [ RUN ] app\home\controller\Member->dologin[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.171775s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.126862s ]
+[ sql ] [ SQL ] SELECT `member_id`,`member_sn`,`member_name`,`mobile`,`password`,`guid`,`true_name`,`is_clinic`,`is_certified`,`login_state`,`device_tokens`,`is_status` FROM `jd_doctor` WHERE  `mobile` = '13262215137' LIMIT 1 [ RunTime:0.104858s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `login_ip`='0.0.0.0',`login_time`=1531240805,`is_system`=1,`device_tokens`='3bd1453a25125984692b2f1164f470cab3afb2c801103bdabf905b99179beebb',`login_state`=1,`is_login`=1,`only_token`='1531240805oV#qtP'  WHERE  `mobile` = '13262215137' [ RunTime:0.111175s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.154635s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.122267s ]
+---------------------------------------------------------------
+[ 2018-07-11T00:40:18+08:00 ] 0.0.0.0 POST /member/dologin
+[ info ] localhost:7037/member/dologin [运行时间：1.146428s][吞吐率：0.87req/s] [内存消耗：3,777.59kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'dologin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '223',
+  'x-original-url' => '/member/dologin',
+  'user-agent' => 'YiSong/1.25.0 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=15b6fv9vl9h922qicfsg8c6so6',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '13262215137',
+  'password' => '1234567',
+  'only_token' => '',
+  'is_system' => '1',
+  '_time' => '1531240451',
+  'device_tokens' => '3bd1453a25125984692b2f1164f470cab3afb2c801103bdabf905b99179beebb',
+  'sign' => 'fd610756370b206cd5da66144423e8c6',
+)
+[ info ] [ RUN ] app\home\controller\Member->dologin[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.165930s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.140235s ]
+[ sql ] [ SQL ] SELECT `member_id`,`member_sn`,`member_name`,`mobile`,`password`,`guid`,`true_name`,`is_clinic`,`is_certified`,`login_state`,`device_tokens`,`is_status` FROM `jd_doctor` WHERE  `mobile` = '13262215137' LIMIT 1 [ RunTime:0.110321s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `login_ip`='0.0.0.0',`login_time`=1531240818,`is_system`=1,`device_tokens`='3bd1453a25125984692b2f1164f470cab3afb2c801103bdabf905b99179beebb',`login_state`=1,`is_login`=1,`only_token`='1531240818^JdyCt'  WHERE  `mobile` = '13262215137' [ RunTime:0.126016s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.115881s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.118785s ]
+---------------------------------------------------------------
+[ 2018-07-11T00:42:42+08:00 ] 0.0.0.0 POST /member/dologin
+[ info ] localhost:7037/member/dologin [运行时间：1.048800s][吞吐率：0.95req/s] [内存消耗：3,776.48kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'dologin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '223',
+  'x-original-url' => '/member/dologin',
+  'user-agent' => 'YiSong/1.25.0 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=15b6fv9vl9h922qicfsg8c6so6',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '13262215137',
+  'password' => '1234567',
+  'only_token' => '',
+  'is_system' => '1',
+  '_time' => '1531240451',
+  'device_tokens' => '3bd1453a25125984692b2f1164f470cab3afb2c801103bdabf905b99179beebb',
+  'sign' => 'fd610756370b206cd5da66144423e8c6',
+)
+[ info ] [ RUN ] app\home\controller\Member->dologin[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.163082s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.113492s ]
+[ sql ] [ SQL ] SELECT `member_id`,`member_sn`,`member_name`,`mobile`,`password`,`guid`,`true_name`,`is_clinic`,`is_certified`,`login_state`,`device_tokens`,`is_status` FROM `jd_doctor` WHERE  `mobile` = '13262215137' LIMIT 1 [ RunTime:0.118301s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `login_ip`='0.0.0.0',`login_time`=1531240961,`is_system`=1,`device_tokens`='3bd1453a25125984692b2f1164f470cab3afb2c801103bdabf905b99179beebb',`login_state`=1,`is_login`=1,`only_token`='1531240961bo(~uu'  WHERE  `mobile` = '13262215137' [ RunTime:0.102333s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.096990s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.102915s ]
+---------------------------------------------------------------
+[ 2018-07-11T00:43:38+08:00 ] 0.0.0.0 POST /member/dologin
+[ info ] localhost:7037/member/dologin [运行时间：1.134730s][吞吐率：0.88req/s] [内存消耗：3,775.86kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'member',
+    2 => 'dologin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '223',
+  'x-original-url' => '/member/dologin',
+  'user-agent' => 'YiSong/1.25.0 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=15b6fv9vl9h922qicfsg8c6so6',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'mobile' => '13262215137',
+  'password' => '1234567',
+  'only_token' => '',
+  'is_system' => '1',
+  '_time' => '1531240451',
+  'device_tokens' => '3bd1453a25125984692b2f1164f470cab3afb2c801103bdabf905b99179beebb',
+  'sign' => 'fd610756370b206cd5da66144423e8c6',
+)
+[ info ] [ RUN ] app\home\controller\Member->dologin[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Member.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.170508s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.143889s ]
+[ sql ] [ SQL ] SELECT `member_id`,`member_sn`,`member_name`,`mobile`,`password`,`guid`,`true_name`,`is_clinic`,`is_certified`,`login_state`,`device_tokens`,`is_status` FROM `jd_doctor` WHERE  `mobile` = '13262215137' LIMIT 1 [ RunTime:0.105682s ]
+[ sql ] [ SQL ] UPDATE `jd_doctor`  SET `login_ip`='0.0.0.0',`login_time`=1531241017,`is_system`=1,`device_tokens`='3bd1453a25125984692b2f1164f470cab3afb2c801103bdabf905b99179beebb',`login_state`=1,`is_login`=1,`only_token`='153124101725|)8S'  WHERE  `mobile` = '13262215137' [ RunTime:0.107264s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sys_setting` [ RunTime:0.099649s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sys_setting` [ RunTime:0.109824s ]
+---------------------------------------------------------------
+[ 2018-07-11T01:01:53+08:00 ] 0.0.0.0 POST /sheet/addSheet
+[ info ] localhost:7037/sheet/addSheet [运行时间：1.143675s][吞吐率：0.87req/s] [内存消耗：3,168.68kb] [文件加载：57]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'sheet',
+    2 => 'addSheet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '296',
+  'x-original-url' => '/sheet/addSheet',
+  'user-agent' => 'YiSong/1.25.0 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=15b6fv9vl9h922qicfsg8c6so6',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'only_token' => '1531241828Md2QCz',
+  'sheet_id' => '43',
+  'type_id' => 1,
+  'title' => '睡觉了',
+  'member_id' => 170,
+  '_time' => '1531242066',
+  'list' => '[{"answer":"","answerStr":"","selectStr":"","srcs":"","tip":"哦哦","title":"感冒","type":"0"}]',
+  'sign' => '685a975c36fd22ef7d9ccef23f2e319e',
+)
+[ info ] [ RUN ] app\home\controller\Sheet->addSheet[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sheet.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.172684s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sheet` [ RunTime:0.125685s ]
+[ sql ] [ SQL ] SELECT `list`,`is_classic` FROM `jd_sheet` WHERE  (  sheet_id = 43 AND is_display = 1 ) LIMIT 1 [ RunTime:0.135825s ]
+[ sql ] [ SQL ] INSERT INTO `jd_sheet` (`type_id` , `title` , `list` , `release_date` , `member_id` , `add_date`) VALUES (1 , '睡觉了' , '[{\"answer\":\"\",\"answerStr\":\"\",\"selectStr\":\"\",\"srcs\":\"\",\"tip\":\"哦哦\",\"title\":\"感冒\",\"type\":\"0\"}]' , 1531242112 , 170 , 1531242112) [ RunTime:0.093783s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sheet_question` [ RunTime:0.102027s ]
+[ sql ] [ SQL ] INSERT INTO `jd_sheet_question` (`question_json` , `sheet_id` , `add_date` , `release_date`) VALUES ('{\"answer\":\"\",\"answerStr\":\"\",\"selectStr\":\"\",\"srcs\":\"\",\"tip\":\"\\u54e6\\u54e6\",\"title\":\"\\u611f\\u5192\",\"type\":\"0\"}' , 53 , 1531242112 , 1531242112) [ RunTime:0.093663s ]
+[ sql ] [ SQL ] UPDATE `jd_sheet`  SET `type_id`=1,`title`='睡觉了',`list`='[{\"answer\":\"\",\"answerStr\":\"\",\"selectStr\":\"\",\"srcs\":\"\",\"tip\":\"哦哦\",\"title\":\"感冒\",\"type\":\"0\"}]',`release_date`=1531242112,`member_id`=170,`add_date`=1531242112  WHERE  `sheet_id` = 43 [ RunTime:0.112248s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.101244s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `only_token` = '1531241828Md2QCz'  AND `is_status` = 0 LIMIT 1 [ RunTime:0.111719s ]
+[ error ] [8]未定义数组索引: title[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sheet.php:170]
+[ error ] [8]未定义数组索引: title[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sheet.php:170]
+[ error ] [8]未定义数组索引: title[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sheet.php:175]
+---------------------------------------------------------------
+[ 2018-07-11T01:03:50+08:00 ] 0.0.0.0 POST /sheet/addSheet
+[ info ] localhost:7037/sheet/addSheet [运行时间：0.577289s][吞吐率：1.73req/s] [内存消耗：3,006.78kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'sheet',
+    2 => 'addSheet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '296',
+  'x-original-url' => '/sheet/addSheet',
+  'user-agent' => 'YiSong/1.25.0 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=15b6fv9vl9h922qicfsg8c6so6',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'only_token' => '1531241828Md2QCz',
+  'sheet_id' => '43',
+  'type_id' => 1,
+  'title' => '睡觉了',
+  'member_id' => 170,
+  '_time' => '1531242066',
+  'list' => '[{"answer":"","answerStr":"","selectStr":"","srcs":"","tip":"哦哦","title":"感冒","type":"0"}]',
+  'sign' => '685a975c36fd22ef7d9ccef23f2e319e',
+)
+[ info ] [ RUN ] app\home\controller\Sheet->addSheet[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sheet.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.203326s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sheet` [ RunTime:0.150149s ]
+[ sql ] [ SQL ] SELECT `list`,`is_classic` FROM `jd_sheet` WHERE  (  sheet_id = 43 AND is_display = 1 ) LIMIT 1 [ RunTime:0.109755s ]
+[ error ] [8]未定义数组索引: title[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sheet.php:170]
+[ error ] [8]未定义数组索引: title[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sheet.php:170]
+[ error ] [8]未定义数组索引: title[D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sheet.php:174]
+---------------------------------------------------------------
+[ 2018-07-11T01:04:48+08:00 ] 0.0.0.0 POST /sheet/addSheet
+[ info ] localhost:7037/sheet/addSheet [运行时间：0.780521s][吞吐率：1.28req/s] [内存消耗：2,971.02kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'sheet',
+    2 => 'addSheet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '296',
+  'x-original-url' => '/sheet/addSheet',
+  'user-agent' => 'YiSong/1.25.0 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=15b6fv9vl9h922qicfsg8c6so6',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'only_token' => '1531241828Md2QCz',
+  'sheet_id' => '43',
+  'type_id' => 1,
+  'title' => '睡觉了',
+  'member_id' => 170,
+  '_time' => '1531242066',
+  'list' => '[{"answer":"","answerStr":"","selectStr":"","srcs":"","tip":"哦哦","title":"感冒","type":"0"}]',
+  'sign' => '685a975c36fd22ef7d9ccef23f2e319e',
+)
+[ info ] [ RUN ] app\home\controller\Sheet->addSheet[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sheet.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.171738s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sheet` [ RunTime:0.103891s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_sheet` WHERE  (  sheet_id = 43 AND is_display = 1 ) LIMIT 1 [ RunTime:0.108190s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.115018s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `only_token` = '1531241828Md2QCz'  AND `is_status` = 0 LIMIT 1 [ RunTime:0.108205s ]

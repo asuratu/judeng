@@ -139,7 +139,7 @@ class Sheet extends Common
 
     /**
      * @Title: addSheet
-     * @Description: TODO 添加/修改问诊单模板   此房方法要用事务
+     * @Description: TODO 添加/修改问诊单模板   此方法要用事务
      */
     public function addSheet() {
         if($this->request->isPost())
@@ -156,7 +156,6 @@ class Sheet extends Common
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
 
-            $insertData['member_id'] = $data['member_id'];
             $insertData['type_id'] = $data['type_id'];
             $insertData['title'] = $data['title'];
             $insertData['list'] = $data['list'];
@@ -166,25 +165,54 @@ class Sheet extends Common
                 //查询旧数据
                 $oldInfo = db('sheet')
                     ->where("sheet_id = {$data['sheet_id']} AND is_display = 1")
-                    ->field("list")
+                    ->field("*")
                     ->find();
-                //修改
-                $_where['sheet_id'] = $data['sheet_id'];
-                $result = db('sheet')->where($_where)->update($insertData);
 
-                //若修改了题目,则删除sheet_question表旧题目,增加新题目
-                if ($oldInfo['list'] !== $data['list']) {
-                    db('sheet_question')->where("sheet_id = {$data['sheet_id']}")->delete();
+                if ($oldInfo['title'] == $data['title'] && $oldInfo['is_classic'] == 1) {
+                    ajaxReturn(array('code'=>0,'info'=>'经典问诊单，不可修改!','data'=>[]));
+                }
+
+                //如果是经典问诊单, 新增一条普通问诊单
+                if ($oldInfo['title'] !== $data['title'] && $oldInfo['is_classic'] == 1) {
+                    $insertData['member_id'] = $data['member_id'];
+                    //添加
+                    $insertData['add_date'] = time();
+                    $result = db('sheet')->insertGetId($insertData);
+
                     //往问诊单题目表插数据
                     foreach (json_decode($insertData['list'], true) as $val) {
                         $quesData['question_json'] = json_encode($val);
-                        $quesData['sheet_id'] = $data['sheet_id'];
+                        $quesData['sheet_id'] = $result;
                         $quesData['add_date'] = time();
                         $quesData['release_date'] = time();
                         db('sheet_question')->insert($quesData);
                     }
                 }
+//                elseif ($oldInfo['title'] == $data['title']) {
+//                    ajaxReturn(array('code'=>0,'info'=>'标题已存在, 不可重复添加!','data'=>[]));
+//                }
+                //修改
+                if ($oldInfo['is_classic'] == 0) {
+                    $_where['sheet_id'] = $data['sheet_id'];
+                    $result = db('sheet')->where($_where)->update($insertData);
+                    //若修改了题目,则删除sheet_question表旧题目,增加新题目
+                    if ($oldInfo['list'] !== $data['list']) {
+                        db('sheet_question')->where("sheet_id = {$data['sheet_id']}")->delete();
+                        //往问诊单题目表插数据
+                        foreach (json_decode($insertData['list'], true) as $val) {
+                            $quesData['question_json'] = json_encode($val);
+                            $quesData['sheet_id'] = $data['sheet_id'];
+                            $quesData['add_date'] = time();
+                            $quesData['release_date'] = time();
+                            db('sheet_question')->insert($quesData);
+                        }
+                    }
+                }
+
+
+
             } else {
+                $insertData['member_id'] = $data['member_id'];
                 //添加
                 $insertData['add_date'] = time();
                 $result = db('sheet')->insertGetId($insertData);
@@ -224,6 +252,15 @@ class Sheet extends Common
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
+            //找到该问诊单
+            $oldInfo = db('sheet')
+                ->where("sheet_id = {$data['sheet_id']} AND is_display = 1")
+                ->field("*")
+                ->find();
+            if ($oldInfo['is_classic'] == 1) {
+                ajaxReturn(array('code'=>0,'info'=>'经典问诊单, 不可删除!','data'=>[]));
+            }
+
             $del['sheet_id'] = $data['sheet_id'];
             $del['member_id'] = $data['member_id'];
             db('sheet')->where($del)->delete();

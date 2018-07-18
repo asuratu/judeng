@@ -604,7 +604,7 @@ class Order extends Common
                     $orderPrescriptionInsert['taboo_content'] = ($tabooArr);
                 } else {
                     $orderPrescriptionInsert['is_taboo'] = 0;
-                    $orderPrescriptionInsert['taboo_content'] = '';
+                    $orderPrescriptionInsert['taboo_content'] = array();
                 }
 
                 Db::commit();
@@ -994,13 +994,11 @@ class Order extends Common
                         ajaxReturn(array('code'=>1, 'info'=>'本次问诊已结束','data'=>[]));
                     }
                 } else {
-
                     //有订单信息(非爱心问诊)
                     $orderDetail = db('order')
                         ->where("order_id = {$data['order_id']} AND pay_status = 1 AND order_status IN(1,3) AND patient_id = {$data['patient_id']}")
                         ->field("*")
                         ->find();
-
                     if (!$orderDetail) {
                         ajaxReturn(array('code'=>1,'info'=>'订单不正确!','data'=>[]));
                     }
@@ -1247,15 +1245,17 @@ class Order extends Common
             ->select();//获取已经付款的订单 不包含退款订单
         if(count($order) == 0)
         {
-            return false;
+            ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>[]));
         }
         $flag = 1;
         foreach ($order as $val) {
             $result = $this->dealEachOrder($val['order_id']);
             if ($result === false) {
                 $flag = 0;
+                ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>[]));
             }
         }
+        ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>[]));
     }
 
     /**
@@ -1348,6 +1348,8 @@ class Order extends Common
                     $temp['total_account']=$order['pay_amount']-$count;
                     $msg="处方订单";
                 }
+                //还有一个患者确认收货, 宝哥算钱 (由待收货改为已收货时)
+
             } else if($order['order_type']==5)
             {
                 return true;
@@ -1359,7 +1361,7 @@ class Order extends Common
         }else//服务包
         {
             //服务包的完成条件
-            if ($order['left_love'] = 0 && $order['left_inquisition'] = 0 && $order['left_revisit'] = 0) {
+            if ($order['left_love'] == 0 && $order['left_inquisition'] == 0 && $order['left_revisit'] == 0) {
                 $base_count=$order['pay_amount']*($order['base_commission']/100);
                 $parent_count=$order['pay_amount']*($order['commission']/100);
                 $temp['account']=$order['pay_amount']-$base_count-$parent_count;

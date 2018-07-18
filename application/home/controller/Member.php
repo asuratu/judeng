@@ -20,6 +20,8 @@ class Member extends Common
             {
                 ajaxReturn($res);
             }
+            //登录接口不判断only_token
+            $_POST['only_token'] = '';
             if($data['mobile']==''||$data['password']==''|| $data['device_tokens']=='' || $data['is_system']=='')
             {
                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -28,13 +30,7 @@ class Member extends Common
             {
                 ajaxReturn(array('code' =>0, 'info' => '手机号码格式不正确！','data'=>[]));
             }
-            $res=checkSign($data);
-            if($res['code']==0)
-            {
-                ajaxReturn($res);
-            }
             $map['mobile']=$data['mobile'];
-
             $info=db('doctor')->where($map)->field("member_id,member_sn,member_name,mobile,password,guid, true_name, is_clinic, is_certified, login_state, device_tokens, is_status")->find();
 
             if(!empty($info))
@@ -74,6 +70,13 @@ class Member extends Common
                     $h=new \Easemob($options);
                     $info['token'] = $h->getToken();
                     $_SESSION['uinfo']=$info;
+
+                    //查看当前用户是否在线
+                    $isOnline = $h->isOnline($info['member_sn']);
+                    if ($isOnline['data'][$info['member_sn']] && $isOnline['data'][$info['member_sn']] == 'online') {
+                        //让当前账号环信强制下线
+                        $h->disconnectUser($info['member_sn']);
+                    }
 
                     $con = Model('Setting')->findAdmin();
                     $info['version_number'] = $con['version_number'];
@@ -254,6 +257,13 @@ class Member extends Common
                     $h=new \Easemob($options);
                     $info['token'] = $h->getToken();
                     $_SESSION['uinfo']=$info;
+
+                    //查看当前用户是否在线
+                    $isOnline = $h->isOnline($info['member_sn']);
+                    if ($isOnline && $isOnline['data'][$info['member_sn']] == 'online') {
+                        //让当前账号环信强制下线
+                        $h->disconnectUser($info['member_sn']);
+                    }
 
                 $con = Model('Setting')->findAdmin();
                 $info['version_number'] = $con['version_number'];
@@ -1102,7 +1112,7 @@ class Member extends Common
 
     /**
      * @Title: getsms
-     * @Description: TODO 获取短信验证码 60秒内只能获取一次验证码 有效时间是300秒
+     * @Description: TODO 获取短信验证码 60秒内只能获取一次验证码 有效时间是360秒
      */
     public function getsms()
     {
@@ -1117,7 +1127,7 @@ class Member extends Common
             $mobile=$data['mobile'];
             $map['mobile']=$mobile;
             $timer = 60; //发送验证码间隔时间
-            $expiredTimer = 300; //验证码的有效期
+            $expiredTimer = 100; //验证码的有效期
             if($data['type']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -1130,12 +1140,11 @@ class Member extends Common
             session_start();
             $token = $_SESSION['tokencode'];
 
-            if (!empty($token)&&$token['expired_at']>time() )
+            if (!empty($token)&&$token['resend_at']>time() )
             {
                 ajaxReturn(array('code'=>0, 'info'=>$timer.'秒内仅能获取一次验证码,请稍后重试','data'=>[]));
             }
             $randcode = randCode(6, 1);
-
 
             switch ($data['type']) {
                 //注册发送验证码
@@ -1159,7 +1168,7 @@ class Member extends Common
 
             $status = sendAliSMS($mobile, array('code'=>$randcode.''), 0);
             if ($status) {
-                $_SESSION['tokencode']= ['code' => $randcode, 'expired_at' => time() + $expiredTimer,'mobile'=>$mobile];
+                $_SESSION['tokencode']= ['code' => $randcode, 'expired_at' => time() + $expiredTimer, 'resend_at' => time() + $timer, 'mobile'=>$mobile];
                 ajaxReturn(array('code' => 1, 'info' => '短信发送成功','data'=>array($randcode)));
             } else {
                 ajaxReturn(array('code' => 0, 'info' => '短信发送失败','data'=>[]));

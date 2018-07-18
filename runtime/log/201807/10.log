@@ -1,0 +1,162 @@
+---------------------------------------------------------------
+[ 2018-07-10T16:17:24+08:00 ] 0.0.0.0 POST /prescription/delTemp
+[ info ] localhost:7037/prescription/delTemp [运行时间：0.420645s][吞吐率：2.38req/s] [内存消耗：3,101.46kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'delTemp',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '126',
+  'x-original-url' => '/prescription/delTemp',
+  'user-agent' => 'YiSong/1.25.0 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'sign' => '1b175d422c46e1475c7d778b49aaaeba',
+  'member_id' => 170,
+  '_time' => '1531210581',
+  'temp_id' => '0',
+  'only_token' => '15312094812*Lze%',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->delTemp[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.088906s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_temp` [ RunTime:0.061370s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_temp` WHERE  `temp_id` = 0  AND `member_id` = 170 LIMIT 1 [ RunTime:0.061139s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.061902s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `only_token` = '15312094812*Lze%'  AND `is_status` = 0 LIMIT 1 [ RunTime:0.060117s ]
+---------------------------------------------------------------
+[ 2018-07-10T16:19:46+08:00 ] 0.0.0.0 POST /prescription/delTemp
+[ info ] localhost:7037/prescription/delTemp [运行时间：0.270696s][吞吐率：3.69req/s] [内存消耗：3,087.52kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'prescription',
+    2 => 'delTemp',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '126',
+  'x-original-url' => '/prescription/delTemp',
+  'user-agent' => 'YiSong/1.25.0 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'sign' => '1b175d422c46e1475c7d778b49aaaeba',
+  'member_id' => 170,
+  '_time' => '1531210581',
+  'temp_id' => '0',
+  'only_token' => '15312094812*Lze%',
+)
+[ info ] [ RUN ] app\home\controller\Prescription->delTemp[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Prescription.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.091347s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.063929s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor` WHERE  `only_token` = '15312094812*Lze%'  AND `is_status` = 0 LIMIT 1 [ RunTime:0.065491s ]
+---------------------------------------------------------------
+[ 2018-07-10T17:13:21+08:00 ] 0.0.0.0 POST /sheet/addSheet
+[ info ] localhost:7037/sheet/addSheet [运行时间：0.274076s][吞吐率：3.65req/s] [内存消耗：2,923.88kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'sheet',
+    2 => 'addSheet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '883',
+  'x-original-url' => '/sheet/addSheet',
+  'user-agent' => 'YiSong/1.25.0 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=2684d81f10c220e853c1fab82590d35d',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'only_token' => '1531213102OrK367',
+  'sheet_id' => '37',
+  'type_id' => 1,
+  'title' => '妇科问诊单',
+  'member_id' => 70,
+  '_time' => '1531213227',
+  'list' => '[{"answer":"","answerStr":"一周##*##一月##*##半年##*##大于半年","selectStr":"","srcs":"","tip":"","title":"患病时长","type":"1"},{"answer":"","answerStr":"一周内##*##两周内##*##一个月##*##三个月##*##半年##*##大于半年","selectStr":"","srcs":"","tip":"","title":"如去过，上次就诊时间","type":"1"},{"answer":"","answerStr":"未婚##*##已婚##*##离异##*##丧偶","selectStr":"","srcs":"","tip":"","title":"婚姻状况","type":"1"},{"answer":"","answerStr":"没去过##*##去过","selectStr":"","srcs":"","tip":"","title":"是否去过医院","type":"1"}]',
+  'sign' => 'b25bee59eb8508ad2a22352d1b8bfd34',
+)
+[ info ] [ RUN ] app\home\controller\Sheet->addSheet[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sheet.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.100134s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sheet` [ RunTime:0.060027s ]
+[ sql ] [ SQL ] SELECT `list`,`is_classic` FROM `jd_sheet` WHERE  (  sheet_id = 37 AND is_display = 1 ) LIMIT 1 [ RunTime:0.059636s ]
+---------------------------------------------------------------
+[ 2018-07-10T17:13:25+08:00 ] 0.0.0.0 POST /sheet/addSheet
+[ info ] localhost:7037/sheet/addSheet [运行时间：0.251480s][吞吐率：3.98req/s] [内存消耗：2,923.88kb] [文件加载：51]
+[ info ] [ LANG ] D:\workLP\20180502\judeng\wwwroot\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'sheet',
+    2 => 'addSheet',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/json',
+  'content-length' => '883',
+  'x-original-url' => '/sheet/addSheet',
+  'user-agent' => 'YiSong/1.25.0 (iPhone; iOS 11.4; Scale/3.00)',
+  'host' => 'localhost:7037',
+  'cookie' => 'PHPSESSID=2684d81f10c220e853c1fab82590d35d',
+  'accept-language' => 'zh-Hans-CN;q=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive, keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'only_token' => '1531213102OrK367',
+  'sheet_id' => '37',
+  'type_id' => 1,
+  'title' => '妇科问诊单',
+  'member_id' => 70,
+  '_time' => '1531213227',
+  'list' => '[{"answer":"","answerStr":"一周##*##一月##*##半年##*##大于半年","selectStr":"","srcs":"","tip":"","title":"患病时长","type":"1"},{"answer":"","answerStr":"一周内##*##两周内##*##一个月##*##三个月##*##半年##*##大于半年","selectStr":"","srcs":"","tip":"","title":"如去过，上次就诊时间","type":"1"},{"answer":"","answerStr":"未婚##*##已婚##*##离异##*##丧偶","selectStr":"","srcs":"","tip":"","title":"婚姻状况","type":"1"},{"answer":"","answerStr":"没去过##*##去过","selectStr":"","srcs":"","tip":"","title":"是否去过医院","type":"1"}]',
+  'sign' => 'b25bee59eb8508ad2a22352d1b8bfd34',
+)
+[ info ] [ RUN ] app\home\controller\Sheet->addSheet[ D:\workLP\20180502\judeng\wwwroot\application\home\controller\Sheet.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086633s ] mysql:host=39.105.19.169;port=3306;dbname=judeng;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_sheet` [ RunTime:0.058119s ]
+[ sql ] [ SQL ] SELECT `list`,`is_classic` FROM `jd_sheet` WHERE  (  sheet_id = 37 AND is_display = 1 ) LIMIT 1 [ RunTime:0.058296s ]

@@ -26,7 +26,7 @@ class Sale extends Common
             //自己出售调制服务包的情况
             $orderDetail = db('order')->alias('o')
                 ->join(['jd_order_product'=>'op'], 'op.order_id = o.order_id' , 'inner')
-                ->where("o.`doctor_id` = {$data['member_id']} AND o.pay_status = 2 AND o.order_type = 4")
+                ->where("o.`doctor_id` = {$data['member_id']} AND o.pay_status = 1 AND o.order_type = 4")
                 ->field("o.*, op.*")
                 ->order('o.order_date DESC')
                 ->select();
@@ -38,7 +38,14 @@ class Sale extends Common
             //从下级获得的传承佣金
             $parentDetail = db('order')->alias('o')
                 ->join(['jd_order_product'=>'op'], 'op.order_id = o.order_id' , 'inner')
-                ->where("op.`parent_id` = {$data['member_id']} AND o.pay_status = 2 AND o.order_type = 4")
+                ->where("op.`parent_id` = {$data['member_id']} AND o.pay_status = 1 AND o.order_type = 4")
+                ->field("o.*, op.*")
+                ->order('o.order_date DESC')
+                ->select();
+            //自己销售传承的佣金
+            $myselfDetail = db('order')->alias('o')
+                ->join(['jd_order_product'=>'op'], 'op.order_id = o.order_id' , 'inner')
+                ->where("o.`doctor_id` = {$data['member_id']} AND o.pay_status = 1 AND o.order_type = 4 AND op.`special_id` != 0 AND op.`inherit_id` != 0")
                 ->field("o.*, op.*")
                 ->order('o.order_date DESC')
                 ->select();
@@ -46,7 +53,9 @@ class Sale extends Common
             foreach ($parentDetail as $val1) {
                 $commission += $val1['pay_amount']*($val1['commission']/100);
             }
-
+            foreach ($myselfDetail as $val2) {
+                $commission += $val2['pay_amount']*(1-($val2['commission']/100)-($val2['base_commission']/100));;
+            }
             ajaxReturn(array('code'=>1,'info'=>'ok','data'=>[['commission'=>$commission, 'totalAmount'=>$totalAmount]]));
         }
     }
@@ -73,7 +82,7 @@ class Sale extends Common
             $orderDetail = db('order')->alias('o')
                 ->join(['jd_order_product'=>'op'], 'op.order_id = o.order_id' , 'inner')
                 ->join(['jd_doctor'=>'d'], 'o.doctor_id = d.member_id' , 'inner')
-                ->where("o.`doctor_id` = {$data['member_id']} AND o.pay_status = 2 AND o.order_type = 4")
+                ->where("o.`doctor_id` = {$data['member_id']} AND o.pay_status = 1 AND o.order_type = 4")
                 ->field("o.order_date, o.order_id, o.pay_amount, op.commission, op.base_commission, op.product_name, d.true_name, d.face_photo")
                 ->order('o.order_date DESC')
                 ->select();
@@ -283,7 +292,7 @@ class Sale extends Common
                    $orderDetail = db('order')->alias('o')
                        ->join(['jd_order_product'=>'op'], 'op.order_id = o.order_id' , 'inner')
                        ->join(['jd_doctor'=>'d'], 'o.doctor_id = d.member_id' , 'inner')
-                       ->where("(o.`doctor_id` = {$data['member_id']} OR op.`parent_id` = {$data['member_id']}) AND o.pay_status = 2 AND o.order_type = 4")
+                       ->where("(o.`doctor_id` = {$data['member_id']} OR op.`parent_id` = {$data['member_id']}) AND o.pay_status = 1 AND o.order_type = 4")
                        ->field("o.order_date, o.order_id, o.pay_amount, op.commission, op.base_commission, op.product_name, op.parent_id, d.true_name, d.face_photo")
                        ->order('o.order_date DESC')
                        ->select();
@@ -315,7 +324,7 @@ class Sale extends Common
                    $orderDetail = db('order')->alias('o')
                        ->join(['jd_order_product'=>'op'], 'op.order_id = o.order_id' , 'inner')
                        ->join(['jd_doctor'=>'d'], 'o.doctor_id = d.member_id' , 'inner')
-                       ->where("(o.`doctor_id` = {$data['member_id']}) AND o.pay_status = 2 AND o.order_type = 4")
+                       ->where("(o.`doctor_id` = {$data['member_id']}) AND o.pay_status = 1 AND o.order_type = 4")
                        ->field("o.order_date, o.order_id, o.pay_amount, op.commission, op.base_commission, op.product_name, op.parent_id, d.true_name, d.face_photo")
                        ->order('o.order_date DESC')
                        ->select();
@@ -342,7 +351,7 @@ class Sale extends Common
                    $orderDetail = db('order')->alias('o')
                        ->join(['jd_order_product'=>'op'], 'op.order_id = o.order_id' , 'inner')
                        ->join(['jd_doctor'=>'d'], 'o.doctor_id = d.member_id' , 'inner')
-                       ->where("(op.`parent_id` = {$data['member_id']} AND o.`doctor_id` != {$data['member_id']}) AND o.pay_status = 2 AND o.order_type = 4")
+                       ->where("(op.`parent_id` = {$data['member_id']} AND o.`doctor_id` != {$data['member_id']}) AND o.pay_status = 1 AND o.order_type = 4")
                        ->field("o.order_date, o.order_id, o.pay_amount, op.commission, op.base_commission, op.product_name, op.parent_id, d.true_name, d.face_photo")
                        ->order('o.order_date DESC')
                        ->select();
