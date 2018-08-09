@@ -80,6 +80,7 @@ class Spell{
             $chinese = $isOne ? substr($chinese,0,1) : $chinese;
             $result[] = $three ? ucwords($chinese) : ($upper ? strtoupper($chinese) : $chinese);
         }
+
         return implode(' ',$result);
     }
     /**

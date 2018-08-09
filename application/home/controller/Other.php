@@ -405,6 +405,7 @@ class Other extends Common
     }
 
     public function otherName() {
+        $xing = Spell::getChineseChar('参', true, true);
         $drug_record = db('drug_record')->select();
         foreach ($drug_record as $val) {
             db('drug')->where("drug_name like '%{$val['name']}%'")->update(array('other_name' => $val['name']));
