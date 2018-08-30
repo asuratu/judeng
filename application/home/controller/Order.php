@@ -18,7 +18,7 @@ class Order extends Common
             {
                 ajaxReturn($res);
             }
-            if($data['doctor_id']=='' || $data['patient_id']=='')
+            if((string)$data['doctor_id']=='' || (string)$data['patient_id']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
@@ -51,7 +51,7 @@ class Order extends Common
             {
                 ajaxReturn($res);
             }
-            if($data['doctor_id']=='' || $data['patient_id']=='' || $data['area_id']=='' || $data['mobile']=='')
+            if((string)$data['doctor_id']=='' || (string)$data['patient_id']=='' || (string)$data['area_id']=='' || (string)$data['mobile']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
@@ -213,7 +213,7 @@ class Order extends Common
                     ajaxReturn($res);
                 }
 
-                if($data['doctor_id']=='' || $data['patient_id']=='' || $data['type']=='' || $data['prescription_id']=='')
+                if((string)$data['doctor_id']=='' || (string)$data['patient_id']=='' || (string)$data['type']=='' || (string)$data['prescription_id']=='')
                 {
                     Db::rollback();
                     ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
@@ -228,7 +228,8 @@ class Order extends Common
 
                 //只有在线开方能计算价格
                 if ($data['type'] == 0) {
-                    if (json_decode(base64_decode($data['drug_str'])) == null) {
+                    $decodeDrug = json_decode(base64_decode($data['drug_str']));
+                    if ($decodeDrug == null) {
                         Db::rollback();
                         ajaxReturn(array('code'=>0,'info'=>'药品参数不符合规范!','data'=>[]));
                     }
@@ -237,7 +238,7 @@ class Order extends Common
                     $lessCountArr = array();//超量
                     $otherNameArr = array();//别名
                     $alertArr = array();//是否下架
-                    foreach (json_decode(base64_decode($data['drug_str'])) as $key => $val) {
+                    foreach ($decodeDrug as $key => $val) {
                         $drugDetailMap['Is_user'] = 1;
 
                         //TODO 此处不能用drug_id来定位药材, 应该用药房id和药品统一名(别名)
@@ -380,6 +381,9 @@ class Order extends Common
                 $orderPrescriptionInsert['instructions'] = $data['instructions'] ?: '';
                 $orderPrescriptionInsert['service_price'] = 0;
                 $orderPrescriptionInsert['see_price'] = $data['see_price'] ?: 0;
+                $orderPrescriptionInsert['revisit_date'] = $data['revisit_date'] ? strtotime($data['revisit_date']) : 0;
+                $orderPrescriptionInsert['abroad_cream_id'] = $data['abroad_cream_id'] ?: 0;
+                $orderPrescriptionInsert['within_cream_id'] = $data['within_cream_id'] ?: 0;
                 if ($data['type'] == 0) {
                     $orderPrescriptionInsert['total_price'] = $orderPrescriptionInsert['see_price']+$orderPrescriptionInsert['service_price']+$orderPrescriptionInsert['price']*$orderPrescriptionInsert['dose'];
 
@@ -540,7 +544,7 @@ class Order extends Common
                     ajaxReturn($res);
                 }
 
-                if($data['drug_str']=='' || $data['prescription_id']=='')
+                if((string)$data['drug_str']=='' || (string)$data['prescription_id']=='')
                 {
                     ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
                 }
@@ -635,7 +639,7 @@ class Order extends Common
                     ajaxReturn($res);
                 }
 
-                if($data['type']=='' || $data['order_id']=='' || $data['patient_id']=='' || $data['doctor_id']=='')
+                if((string)$data['type']=='' || (string)$data['order_id']=='' || (string)$data['patient_id']=='' || (string)$data['doctor_id']=='')
                 {
                     ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
                 }
@@ -727,7 +731,7 @@ class Order extends Common
                 {
                     ajaxReturn($res);
                 }
-                if($data['doctor_id']=='' || $data['patient_id']=='' || $data['order_id']=='')
+                if((string)$data['doctor_id']=='' || (string)$data['patient_id']=='' || (string)$data['order_id']=='')
                 {
                     ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
                 }
@@ -869,7 +873,7 @@ class Order extends Common
                     ajaxReturn($res);
                 }
 
-                if($data['doctor_id']=='' || $data['patient_id']=='')
+                if((string)$data['doctor_id']=='' || (string)$data['patient_id']=='')
                 {
                     ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
                 }
@@ -908,7 +912,7 @@ class Order extends Common
                     ajaxReturn($res);
                 }
 
-                if($data['doctor_id']=='' || $data['patient_id']=='' || $data['order_id']=='')
+                if((string)$data['doctor_id']=='' || (string)$data['patient_id']=='' || (string)$data['order_id']=='')
                 {
                     ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
                 }
@@ -953,7 +957,7 @@ class Order extends Common
                     ajaxReturn($res);
                 }
 
-                if($data['doctor_id']=='' || $data['patient_id']=='' || $data['order_id']=='')
+                if((string)$data['doctor_id']=='' || (string)$data['patient_id']=='' || (string)$data['order_id']=='')
                 {
                     ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
                 }
@@ -1112,7 +1116,7 @@ class Order extends Common
                 {
                     ajaxReturn($res);
                 }
-                if($data['doctor_id']=='' || $data['patient_id']=='')
+                if((string)$data['doctor_id']=='' || (string)$data['patient_id']=='')
                 {
                     ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
                 }
@@ -1147,7 +1151,7 @@ class Order extends Common
                 {
                     ajaxReturn($res);
                 }
-                if($data['doctor_id']=='' || $data['patient_id']=='' || $data['order_id']=='')
+                if((string)$data['doctor_id']=='' || (string)$data['patient_id']=='' || (string)$data['order_id']=='')
                 {
                     ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
                 }

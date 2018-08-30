@@ -40,7 +40,7 @@ class Prescription extends Common
                 ajaxReturn($res);
             }
 
-            if($data['str']=='' || $data['prescription_id']=='')
+            if($data['str']=='' || (string)$data['prescription_id']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
@@ -127,7 +127,7 @@ class Prescription extends Common
 
             //获取药态数组
             $map['`is_display`'] = 1;
-            $stateArr = db('drug_state')->where($map)->field("`state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`, `pic`")->order("`sort` DESC")->select();
+            $stateArr = db('drug_state')->where($map)->field("`state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`, `pic`,`common`,`everyday`,`everytime`")->order("`sort` DESC")->select();
 
             foreach ($stateArr as $key => $val) {
                 //查询该药态下的药方
@@ -185,7 +185,7 @@ class Prescription extends Common
             //查询药态信息
             $stateMap['`state_id`'] = $data['state_id'];
             $stateMap['`is_display`'] = 1;
-            $tempInfo = db('drug_state')->where($stateMap)->field("`state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic`")->find();
+            $tempInfo = db('drug_state')->where($stateMap)->field("`state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic`,`common`,`everyday`,`everytime`")->find();
             $tempInfo['pic'] = $tempInfo['pic'];
 
             //优先判断是不是选特色方剂
@@ -514,7 +514,7 @@ class Prescription extends Common
 //
 //            $str = 'W1sxNywiXHU1MjM2XHU1ZGRkXHU0ZTRjIiw0XSxbMzE1LCJcdTcxOWZcdTk2NDRcdTcyNDciLDMwXSxbNDg1LCJcdTZjZDVcdTUzNGFcdTU5MGYiLDk0XV0=';
 
-            if($data['drug_str'] == '' || $data['prescription_id'] == '')
+            if($data['drug_str'] == '' || (string)$data['prescription_id'] == '')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
@@ -559,7 +559,7 @@ class Prescription extends Common
                 ajaxReturn($res);
             }
 
-            if($data['temp_id']=='' || $data['member_id']=='' || $data['temp_name'] == '' || $data['drug_str'] == '' || $data['instructions'] == '' || $data['prescription_id'] == '')
+            if($data['temp_id']=='' || $data['member_id']=='' || $data['temp_name'] == '' || $data['drug_str'] == '' || $data['instructions'] == '' || (string)$data['prescription_id'] == '')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
@@ -821,6 +821,63 @@ class Prescription extends Common
                 $classicArr[$key]['special_id'] = 0;
             }
             ajaxReturn(array('code'=>1, 'info'=>'ok!','data'=>array_merge($stateArr, $specialArr, $classicArr)));
+        }
+    }
+
+    public function cream() {
+        if($this->request->isPost())
+        {
+            $data=input('post.');
+//            $res=checkSign($data);
+//            if($res['code']==0)
+//            {
+//                ajaxReturn($res);
+//            }
+            $aryCream = $this->view->setting['aryCream'];
+            $cream = array();
+            foreach ($aryCream as $key => $val) {
+                $cream[$key]['cream'] = $val;
+                $cream[$key]['list'] = db('cream_square')->field('id,title,price,cover')->where("type_id={$key} and is_show=1")->order("`sort` ASC")->select();
+            }
+            ajaxReturn(array('code'=>1, 'info'=>'ok!','data'=>$cream));
+        }
+    }
+
+    public function revisitMember() {
+        if($this->request->isPost())
+        {
+            $data=input('post.');
+//            $res=checkSign($data);
+//            if($res['code']==0)
+//            {
+//                ajaxReturn($res);
+//            }
+            if($data['member_id']=='' || $data['doctor_id']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+            }
+            // 第一个参数用户ID， 第二个参数医生ID
+            $revisit = Model('Prescription')->revisitMember($data['member_id'], $data['doctor_id']);
+            ajaxReturn(array('code'=>1, 'info'=>'ok!','data'=>$revisit));
+        }
+    }
+
+    public function revisitMemberCount() {
+        if($this->request->isPost())
+        {
+            $data=input('post.');
+//            $res=checkSign($data);
+//            if($res['code']==0)
+//            {
+//                ajaxReturn($res);
+//            }
+            if($data['member_id']=='' || $data['doctor_id']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+            }
+            // 第一个参数用户ID， 第二个参数医生ID
+            $count = Model('Prescription')->revisitMemberCount($data['member_id'], $data['doctor_id']);
+            ajaxReturn(array('code'=>1, 'info'=>'ok!','data'=>$count));
         }
     }
 

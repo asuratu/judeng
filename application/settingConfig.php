@@ -25,4 +25,8 @@ return array(
     'aryMemberType' => array('公众号患者', '手机号患者'),
     'aryMemberType1' => array('已关注公众号', '未关注公众号'),
     'aryCertified' => array('未认证', '审核中', '认证通过', '认证失败'),
+    'aryCream' => array(
+        '膏方内包装',
+        '膏方外包装',
+    ),
 );
