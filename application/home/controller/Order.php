@@ -213,10 +213,17 @@ class Order extends Common
                     ajaxReturn($res);
                 }
 
+//                var_dump(json_decode(base64_decode('W1sxNywiXHU1MjM2XHU1ZGRkXHU0ZTRjIiw0LCJnIl0sWzMxNSwiXHU3MTlmXHU5NjQ0XHU3MjQ3IiwzMCwiZyJdLFs0ODUsIlx1NmNkNVx1NTM0YVx1NTkwZiIsOTQsImciXV0=')));die;
                 if((string)$data['doctor_id']=='' || (string)$data['patient_id']=='' || (string)$data['type']=='' || (string)$data['prescription_id']=='')
                 {
                     Db::rollback();
                     ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+                }
+
+                $take_explain = count(explode(',', $data['take_explain']));
+                if ($take_explain > 12) {
+                    Db::rollback();
+                    ajaxReturn(array('code'=>0,'info'=>'服药说明最多十二个!','data'=>[]));
                 }
 
                 //查询当前医生信息
@@ -384,6 +391,11 @@ class Order extends Common
                 $orderPrescriptionInsert['revisit_date'] = $data['revisit_date'] ? strtotime($data['revisit_date']) : 0;
                 $orderPrescriptionInsert['abroad_cream_id'] = $data['abroad_cream_id'] ?: 0;
                 $orderPrescriptionInsert['within_cream_id'] = $data['within_cream_id'] ?: 0;
+                $orderPrescriptionInsert['take_explain'] = $data['take_explain'] ?: '';
+                $orderPrescriptionInsert['remarks'] = $data['remarks'] ?: '';
+                $orderPrescriptionInsert['take_date'] = $data['take_date'] ?: '';
+                $orderPrescriptionInsert['taboo'] = $data['taboo'] ?: '';
+
                 if ($data['type'] == 0) {
                     $orderPrescriptionInsert['total_price'] = $orderPrescriptionInsert['see_price']+$orderPrescriptionInsert['service_price']+$orderPrescriptionInsert['price']*$orderPrescriptionInsert['dose'];
 

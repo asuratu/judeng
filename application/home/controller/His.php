@@ -41,16 +41,15 @@ class His extends Common
                 $temp['price'] = floatval($val2[9]) ?: 0;
                 $temp['num'] = floatval($val2[10]) ?: 0;
                 $temp['money'] = floatval($val2[11]) ?: 0;
-                $temp['date'] = $val2[12] ?: time();
+                $temp['date'] = $val2[12] ?: date('Y/m/d h:i:s', time());
                 $temp['release_date'] = time();
+                $temp['prescription_id'] = 1;
 
                 if (db('drug')->where($temp1)->count() > 0) {
                     //更新
-                    $temp1['prescription_id'] = 1;
                     db('drug')->where($temp1)->update($temp);
                 } else {
                     //插入
-                    $temp['prescription_id'] = 1;
                     $temp['add_date'] = time();
                     db('drug')->insert($temp);
                 }

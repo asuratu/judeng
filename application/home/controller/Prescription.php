@@ -186,7 +186,6 @@ class Prescription extends Common
             $stateMap['`state_id`'] = $data['state_id'];
             $stateMap['`is_display`'] = 1;
             $tempInfo = db('drug_state')->where($stateMap)->field("`state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic`,`common`,`everyday`,`everytime`")->find();
-            $tempInfo['pic'] = $tempInfo['pic'];
 
             //优先判断是不是选特色方剂
             if ($data['type'] == 1) {
@@ -878,6 +877,57 @@ class Prescription extends Common
             // 第一个参数用户ID， 第二个参数医生ID
             $count = Model('Prescription')->revisitMemberCount($data['member_id'], $data['doctor_id']);
             ajaxReturn(array('code'=>1, 'info'=>'ok!','data'=>$count));
+        }
+    }
+
+    // 服药说明
+    public function medicine() {
+        if($this->request->isPost())
+        {
+            $data=input('post.');
+//            $res=checkSign($data);
+//            if($res['code']==0)
+//            {
+//                ajaxReturn($res);
+//            }
+            if (empty($data['state_id']) || $data['state_id'] == 0) {
+                $state = db('drug_state')->field('state_id')->where('is_display = 1')->order('sort', 'DESC')->find();
+                $data['state_id'] = $state['state_id'];
+            }
+
+            $medicine = db('medicine')->field('id,title')->where("is_show=1 and type_id = {$data['state_id']}")->order('sort', 'ASC')->select();
+            ajaxReturn(array('code'=>1, 'info'=>'ok!','data'=>$medicine));
+        }
+    }
+
+    // 煎煮方法
+    public function decoction() {
+        if($this->request->isPost())
+        {
+            $data=input('post.');
+//            $res=checkSign($data);
+//            if($res['code']==0)
+//            {
+//                ajaxReturn($res);
+//            }
+
+            $decoction = db('decoction')->field('id,title')->where("is_show=1")->order('sort', 'ASC')->select();
+            ajaxReturn(array('code'=>1, 'info'=>'ok!','data'=>$decoction));
+        }
+    }
+
+    // 辩证库
+    public function dialectical() {
+        if($this->request->isPost())
+        {
+            $data=input('post.');
+//            $res=checkSign($data);
+//            if($res['code']==0)
+//            {
+//                ajaxReturn($res);
+//            }
+            $dialectical = db('dialectical')->field('id,title')->where("is_show=1 and title like '%{$data['title']}%'")->order('sort', 'ASC')->select();
+            ajaxReturn(array('code'=>1, 'info'=>'ok!','data'=>$dialectical));
         }
     }
 
