@@ -931,4 +931,19 @@ class Prescription extends Common
         }
     }
 
+    // 中成药次数查询
+    public function drugconfig() {
+        if($this->request->isPost())
+        {
+            $data=input('post.');
+//            $res=checkSign($data);
+//            if($res['code']==0)
+//            {
+//                ajaxReturn($res);
+//            }
+            $config = db('drug_config')->field('frequency,slice,method')->where("drug_id={$data['drug_id']}")->order('sort', 'ASC')->select();
+            ajaxReturn(array('code'=>1, 'info'=>'ok!','data'=>$config));
+        }
+    }
+
 }
