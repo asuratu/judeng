@@ -24,6 +24,7 @@ class His extends Common
         }
 
 //        $data=db('drug')->group('his_drug_id')->Distinct(true)->field('his_drug_id')->select();
+        $aryHisState = $this->view->setting['aryHisState'];
 
         foreach ($listArr as $key2 => $val2) {
                 //若该药房的药品id已存在就更新, 否则插入
@@ -44,6 +45,10 @@ class His extends Common
                 $temp['date'] = $val2[12] ?: date('Y/m/d h:i:s', time());
                 $temp['release_date'] = time();
                 $temp['prescription_id'] = 1;
+                $temp['state_id'] = $aryHisState[$temp['pos_code']];
+                if (empty($temp['state_id'])) {
+                    $temp['state_id'] = '0,1,4';
+                }
 
                 if (db('drug')->where($temp1)->count() > 0) {
                     //更新

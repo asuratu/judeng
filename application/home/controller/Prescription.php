@@ -2,6 +2,7 @@
 namespace app\home\controller;
 use think\Request;
 use think\Db;
+
 class Prescription extends Common
 {
 
@@ -45,12 +46,12 @@ class Prescription extends Common
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
 
+            $date['str'] = strtoupper($data['str']);
             //根据字符串模糊查找药材信息
-            $map['Is_user'] = 1;
-            $map['keywords']=array('like','%'.strtoupper($data['str']).'%');
-            $list=db('drug')->where($map)->field("`drug_id`,`nick_name`,`Drug_unit`,`price`,`num`, `other_name`")->order("`add_date` ASC")->select();
+            $where = "Is_user = 1 and FIND_IN_SET({$data['type_id']}, state_id) and keywords like '%{$date['str']}%'";
+            $list=db('drug')->where($where)->field("`drug_id`,`nick_name`,`Drug_unit`,`price`,`num`, `other_name`")->order("`add_date` ASC")->select();
             if (count($list) > 0) {
-                ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>[base64_encode(json_encode($list))]));
+                ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>$list));
             } else {
                 ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>[]));
             }
@@ -127,20 +128,17 @@ class Prescription extends Common
 
             //获取药态数组
             $map['`is_display`'] = 1;
-            $stateArr = db('drug_state')->where($map)->field("`state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`, `pic`,`common`,`everyday`,`everytime`")->order("`sort` DESC")->select();
-
+            $stateArr = db('drug_state')->where($map)->field("`state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`, `pic`,`common`,`everyday`,`everytime`,`subtitle`,`type_id`")->order("`sort` DESC")->select();
             foreach ($stateArr as $key => $val) {
                 //查询该药态下的药方
-                $temp['d.`is_display`'] = 1;
                 $temp['p.`area_id`'] = $data['area_id'];
                 $temp['p.`is_display`'] = 1;
-                $temp['d.`state_id`'] = $val['state_id'];
-                $houseArr = db('drug_relation')->alias('d')
-                    ->join(['jd_prescription'=>'p'], 'd.prescription_id = p.prescription_id' , 'inner')
-                    ->join(['jd_drug_state'=>'ds'], 'd.state_id = ds.state_id' , 'inner')
+                $temp['p.`state_id`'] = $val['state_id'];
+                $houseArr = db('drug_state')->alias('ds')
+                    ->join(['jd_prescription'=>'p'], 'ds.state_id = p.state_id' , 'inner')
                     ->where($temp)
-                    ->field("d.`relation_id`, d.`prescription_id`, d.`state_id`, d.`describe`, p.`prescription_name`, p.`area_name`")
-                    ->order("d.`sort` DESC")
+                    ->field("p.`state_id`, p.`describe`, p.`prescription_name`, p.`area_name`")
+                    ->order("p.`sort` DESC")
                     ->select();
 
                 $stateArr[$key]['content'] = $houseArr;
@@ -185,28 +183,25 @@ class Prescription extends Common
             //查询药态信息
             $stateMap['`state_id`'] = $data['state_id'];
             $stateMap['`is_display`'] = 1;
-            $tempInfo = db('drug_state')->where($stateMap)->field("`state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic`,`common`,`everyday`,`everytime`")->find();
+            $tempInfo = db('drug_state')->where($stateMap)->field("`state_id`,`state_name`,`make`,`weight`,`taking`,`instructions`,`pic`,`common`,`everyday`,`everytime`,`subtitle`,`type_id`")->find();
 
             //优先判断是不是选特色方剂
             if ($data['type'] == 1) {
 //                $tempInfo['head_title'] = '查看特色方剂-'.$tempInfo['state_name'].'模板';
                 $tempInfo['temp_name'] = '';
                 //查询该药态该地区下的第一个药房
-                $houseMap['d.`is_display`'] = 1;
-                $houseMap['p.`area_id`'] = $data['area_id'];
-                $houseMap['p.`is_display`'] = 1;
-                $houseMap['d.`state_id`'] = $data['state_id'];
-                $houseArr = db('drug_relation')->alias('d')
-                    ->join(['jd_prescription'=>'p'], 'd.prescription_id = p.prescription_id' , 'inner')
-                    ->join(['jd_drug_state'=>'ds'], 'd.state_id = ds.state_id' , 'inner')
-                    ->where($houseMap)
-                    ->field("d.`relation_id`, d.`prescription_id`, d.`state_id`, d.`describe`, p.`prescription_name`, p.`prescription_id`, p.`area_name`")
-                    ->order("d.`sort` DESC")
+                $temp['p.`area_id`'] = $data['area_id'];
+                $temp['p.`is_display`'] = 1;
+                $temp['p.`state_id`'] = $data['state_id'];
+                $houseArr = db('drug_state')->alias('ds')
+                    ->join(['jd_prescription'=>'p'], 'ds.state_id = p.state_id' , 'inner')
+                    ->where($temp)
+                    ->field("p.`state_id`, p.`describe`, p.`prescription_id`, p.`prescription_name`, p.`area_name`")
+                    ->order("p.`sort` DESC")
                     ->select();
 
                 if (count($houseArr) > 0) {
                     $tempInfo['state_house_name'] = $tempInfo['state_name'].'.'.$houseArr[0]['area_name'].'-'.$houseArr[0]['prescription_name'];
-                    $tempInfo['relation_id'] = $houseArr[0]['relation_id'];
                     $tempInfo['prescription_id'] = $houseArr[0]['prescription_id'];
 //                    $tempInfo['left_num'] = count($houseArr)-1;
                     $tempInfo['left_num'] = 4;
@@ -289,21 +284,18 @@ class Prescription extends Common
                     $tempInfo['head_title'] = '新建'.$tempInfo['state_name'].'模板';
                     $tempInfo['temp_name'] = '';
                     //查询该药态该地区下的第一个药房
-                    $houseMap['d.`is_display`'] = 1;
-                    $houseMap['p.`area_id`'] = $data['area_id'];
-                    $houseMap['p.`is_display`'] = 1;
-                    $houseMap['d.`state_id`'] = $data['state_id'];
-                    $houseArr = db('drug_relation')->alias('d')
-                        ->join(['jd_prescription'=>'p'], 'd.prescription_id = p.prescription_id' , 'inner')
-                        ->join(['jd_drug_state'=>'ds'], 'd.state_id = ds.state_id' , 'inner')
-                        ->where($houseMap)
-                        ->field("d.`relation_id`, d.`prescription_id`, d.`state_id`, d.`describe`, p.`prescription_name`, p.`prescription_id`, p.`area_name`")
-                        ->order("d.`sort` DESC")
+                    $temp['p.`area_id`'] = $data['area_id'];
+                    $temp['p.`is_display`'] = 1;
+                    $temp['p.`state_id`'] = $data['state_id'];
+                    $houseArr = db('drug_state')->alias('ds')
+                        ->join(['jd_prescription'=>'p'], 'ds.state_id = p.state_id' , 'inner')
+                        ->where($temp)
+                        ->field("p.`state_id`, p.`describe`, p.`prescription_id`, p.`prescription_name`, p.`area_name`")
+                        ->order("p.`sort` DESC")
                         ->select();
 
                     if (count($houseArr) > 0) {
                         $tempInfo['state_house_name'] = $tempInfo['state_name'].'.'.$houseArr[0]['area_name'].'-'.$houseArr[0]['prescription_name'];
-                        $tempInfo['relation_id'] = $houseArr[0]['relation_id'];
                         $tempInfo['prescription_id'] = $houseArr[0]['prescription_id'];
 //                        $tempInfo['left_num'] = count($houseArr)-1;
                         $tempInfo['left_num'] = 4;
@@ -324,7 +316,7 @@ class Prescription extends Common
                     //修改模板
                     //查询模板信息
                     $tempMap['temp_id'] = $data['temp_id'];
-                    $drugtempInfo = db('temp')->where($tempMap)->field("make,weight,taking,instructions,temp_name,relation_id,type,price,drug_str,is_taboo,taboo_content,dose,special_id,special_content")->find();
+                    $drugtempInfo = db('temp')->where($tempMap)->field("make,weight,taking,instructions,temp_name,type,price,drug_str,is_taboo,taboo_content,dose,special_id,special_content")->find();
 
                     //敏感数据处理
                     $drugtempInfo['drug_str'] = base64_encode($drugtempInfo['drug_str']);
@@ -336,24 +328,14 @@ class Prescription extends Common
                     $drugtempInfo['state_id'] = $tempInfo['state_id'] ?: 0;
 
                     //药房信息
-                    $houseMap['d.`is_display`'] = 1;
                     $houseMap['p.`area_id`'] = $data['area_id'];
                     $houseMap['p.`is_display`'] = 1;
-                    $houseMap['d.`state_id`'] = $data['state_id'];
-                    $houseAllArr = db('drug_relation')->alias('d')
-                        ->join(['jd_prescription'=>'p'], 'd.prescription_id = p.prescription_id' , 'inner')
-                        ->join(['jd_drug_state'=>'ds'], 'd.state_id = ds.state_id' , 'inner')
+                    $houseMap['p.`state_id`'] = $data['state_id'];
+                    $houseArr = db('drug_state')->alias('ds')
+                        ->join(['jd_prescription'=>'p'], 'ds.state_id = p.state_id' , 'inner')
                         ->where($houseMap)
-                        ->field("d.`relation_id`, d.`prescription_id`, d.`state_id`, d.`describe`, p.`prescription_name`, p.`prescription_id`, p.`area_name`")
-                        ->count();
-
-                    $houseMap['d.`relation_id`'] = $drugtempInfo['relation_id'];
-                    $houseArr = db('drug_relation')->alias('d')
-                        ->join(['jd_prescription'=>'p'], 'd.prescription_id = p.prescription_id' , 'inner')
-                        ->join(['jd_drug_state'=>'ds'], 'd.state_id = ds.state_id' , 'inner')
-                        ->where($houseMap)
-                        ->field("d.`relation_id`, d.`prescription_id`, d.`state_id`, d.`describe`, p.`prescription_name`, p.`prescription_id`, p.`area_name`")
-                        ->order("d.`sort` DESC")
+                        ->field("p.`state_id`, p.`describe`, p.`prescription_name`, p.`prescription_id`, p.`area_name`")
+                        ->order("ds.`sort` DESC")
                         ->find();
 
                     if (!$houseArr) {
@@ -399,8 +381,8 @@ class Prescription extends Common
                 ajaxReturn(array('code'=>0,'info'=>'该名称的模板已存在!','data'=>[]));
             }
 
-            $tempMap['relation_id'] = $data['relation_id'];
             $tempMap['state_id'] = $data['state_id'];
+            $tempMap['prescription_id'] = $data['prescription_id'];
             $tempMap['dose'] = intval($data['dose']);
             $tempMap['type'] = 0;//0个人模板
             $tempMap['drug_str'] = base64_decode($data['drug_str']);
@@ -580,8 +562,8 @@ class Prescription extends Common
                 ajaxReturn(array('code'=>0,'info'=>'该模板已被删除!','data'=>[]));
             }
 
-            $tempMap['relation_id'] = $data['relation_id'];
             $tempMap['state_id'] = $data['state_id'];
+            $tempMap['prescription_id'] = $data['prescription_id'];
             $tempMap['dose'] = intval($data['dose']);
             $tempMap['type'] = 0;//0个人模板 1经典模板(管理员创建)
             $tempMap['drug_str'] = base64_decode($data['drug_str']);
@@ -743,7 +725,7 @@ class Prescription extends Common
             if ($data['state_id'] > 0) {
                 $map['state_id'] = $data['state_id'];
             }
-            $stateArr = db('temp')->where($map)->field("`temp_id`,`temp_name`,`type`,`relation_id`,`drug_str`, `state_id`, `release_date`")->order("`release_date` DESC")->select();
+            $stateArr = db('temp')->where($map)->field("`temp_id`,`temp_name`,`type`,`drug_str`, `state_id`, `release_date`")->order("`release_date` DESC")->select();
             foreach ($stateArr as $key=>$val) {
                 $stateArr[$key]['drug_str'] = base64_encode($val['drug_str']);
             }
@@ -765,22 +747,9 @@ class Prescription extends Common
             {
                 ajaxReturn($res);
             }
-            if($data['member_id']=='' || $data['state_id']=='')
+            if($data['member_id']=='')
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
-            }
-
-            //获取自建的非经典模板数组
-            $map['member_id'] = $data['member_id'];
-            if ($data['state_id'] > 0) {
-                $map['state_id'] = $data['state_id'];
-            }
-            $map['type'] = 0;
-            $stateArr = db('temp')->where($map)->field("`temp_id`,`temp_name`,`type`,`relation_id`,`drug_str`, `state_id`, `release_date`")->order("`release_date` DESC")->select();
-
-            foreach ($stateArr as $key=>$val) {
-                $stateArr[$key]['drug_str'] = base64_encode($val['drug_str']);
-                $stateArr[$key]['special_id'] = 0;
             }
 
 
@@ -788,38 +757,102 @@ class Prescription extends Common
             $specialList = db('inherit_doctor')->alias('id')
                 ->join(['jd_special'=>'s'], 's.inherit_id = id.inherit_id' , 'inner')
                 ->join(['jd_inherit'=>'i'], 'i.inherit_id = id.inherit_id' , 'inner')
-                ->where("id.`member_id` = {$data['member_id']} AND i.is_display = 1 AND s.is_display = 1")
-                ->field("s.special_id, s.inherit_id, s.special_name, s.content, s.release_date")
+                ->join(['jd_drug_state'=>'ds'], 's.status = ds.state_id' , 'left')
+                ->where("id.`member_id` = {$data['member_id']} AND s.type = 1 AND i.is_display = 1 AND s.is_display = 1")
+                ->field("s.special_id, s.inherit_id, s.special_name, s.apply, s.content, s.status, s.alert, s.prescription, s.release_date, ds.subtitle")
                 ->order('s.sort DESC')
                 ->select();
             $specialArr = array();
+            $prescription = array();
             foreach ($specialList as $key=>$val) {
+                if (!empty($val['prescription'])) {
+//                    var_dump($val['prescription']);die;
+                    $prescription = db('prescription')->where("FIND_IN_SET(prescription_id, '{$val['prescription']}')")->field("prescription_id, prescription_name")->select();
+                }
                 //将特色方剂的克数转为0
-//                $contentArr = json_decode($val['content']);
-//                foreach ($contentArr as $key1=>$val1) {
-//                    $contentArr[$key1][2] = 0;
-//
-//                var_dump($val['content']);die;
                 $specialArr[$key]['drug_str'] = base64_encode(($val['content']));
-                $specialArr[$key]['type'] = 1;
+                $specialArr[$key]['type'] = 0;
                 $specialArr[$key]['temp_id'] = 0;
+                $specialArr[$key]['apply'] = $val['apply'];
+                $specialArr[$key]['alert'] = $val['alert'];
+                $specialArr[$key]['prescription'] = $prescription;
                 $specialArr[$key]['special_id'] = $val['special_id'];
                 $specialArr[$key]['temp_name'] = $val['special_name'];
                 $specialArr[$key]['release_date'] = $val['release_date'];
-                $specialArr[$key]['state_id'] = $data['state_id'];
-                $specialArr[$key]['relation_id'] = 0;
+                $specialArr[$key]['state_id'] = $val['status'];
+                $specialArr[$key]['subtitle'] = $val['subtitle'] ? $val['subtitle'] : '';
+            }
+
+            //加入传承的特色良方
+            $specialList1 = db('inherit_doctor')->alias('id')
+                ->join(['jd_special'=>'s'], 's.inherit_id = id.inherit_id' , 'inner')
+                ->join(['jd_inherit'=>'i'], 'i.inherit_id = id.inherit_id' , 'inner')
+                ->join(['jd_drug_state'=>'ds'], 's.status = ds.state_id' , 'left')
+                ->where("id.`member_id` = {$data['member_id']}  AND s.type = 2 AND i.is_display = 1 AND s.is_display = 1")
+                ->field("s.special_id, s.inherit_id, s.special_name, s.content, s.status, s.release_date, ds.subtitle")
+                ->order('s.sort DESC')
+                ->select();
+            $specialArr1 = array();
+            foreach ($specialList1 as $key=>$val) {
+                //将特色良方的克数转为0
+                $specialArr1[$key]['drug_str'] = base64_encode(($val['content']));
+                $specialArr1[$key]['type'] = 1;
+                $specialArr1[$key]['temp_id'] = 0;
+                $specialArr1[$key]['special_id'] = $val['special_id'];
+                $specialArr1[$key]['temp_name'] = $val['special_name'];
+                $specialArr1[$key]['release_date'] = $val['release_date'];
+                $specialArr1[$key]['state_id'] = $val['status'];
+                $specialArr1[$key]['subtitle'] = $val['subtitle'] ? $val['subtitle'] : '';
+            }
+
+            //获取自建的非经典模板数组
+            $map['member_id'] = $data['member_id'];
+            $map['type'] = 0;
+            $stateArr = db('temp')->alias('t') ->join(['jd_drug_state'=>'ds'], 't.state_id = ds.state_id' , 'left')->where($map)->field("t.`temp_id`,t.`temp_name`,t.`type`,t.`drug_str`, t.`state_id`, t.`release_date`, t.`release_date`, ds.`subtitle`")->order("`release_date` DESC")->select();
+
+            foreach ($stateArr as $key=>$val) {
+                $stateArr[$key]['drug_str'] = base64_encode($val['drug_str']);
+                $stateArr[$key]['special_id'] = 0;
+                $stateArr[$key]['type'] = 2;
+                $stateArr[$key]['subtitle'] = $val['subtitle'] ? $val['subtitle'] : '';
             }
 
             //获取经典模板数组
-            $map1['state_id'] = $data['state_id'];
             $map1['type'] = 1;
-            $classicArr = db('temp')->where($map1)->field("`temp_id`,`temp_name`,`type`,`relation_id`,`drug_str`, `state_id`, `release_date`")->order("`release_date` DESC")->select();
+            $classicArr = db('temp')->alias('t') ->join(['jd_drug_state'=>'ds'], 't.state_id = ds.state_id' , 'left')->where($map1)->field("t.`temp_id`,t.`temp_name`,t.`type`,t.`drug_str`, t.`state_id`, t.`release_date`, ds.`subtitle`")->order("`release_date` DESC")->select();
             foreach ($classicArr as $key=>$val) {
                 $classicArr[$key]['drug_str'] = base64_encode($val['drug_str']);
-                $classicArr[$key]['type'] = 2;
+                $classicArr[$key]['type'] = 3;
                 $classicArr[$key]['special_id'] = 0;
+                $stateArr[$key]['subtitle'] = $val['subtitle'] ? $val['subtitle'] : '';
             }
-            ajaxReturn(array('code'=>1, 'info'=>'ok!','data'=>array_merge($stateArr, $specialArr, $classicArr)));
+            ajaxReturn(array('code'=>1, 'info'=>'ok!','data'=>array_merge($specialArr, $specialArr1, $stateArr, $classicArr)));
+        }
+    }
+
+    public function history() {
+        if($this->request->isPost()) {
+            $data = input('post.');
+            $res = checkSign($data);
+            if ($res['code'] == 0) {
+                ajaxReturn($res);
+            }
+            if ($data['member_id'] == '') {
+                ajaxReturn(array('code' => 0, 'info' => '参数不完整', 'data' => []));
+            }
+            $history = db('order_prescription')->alias('op')
+                ->join(['jd_order'=>'o'], 'op.order_id = o.order_id' , 'left')
+                ->join(['jd_drug_state'=>'ds'], 'op.state_id = ds.state_id' , 'left')
+                ->where("op.prescription_type=0 AND o.doctor_id = {$data['member_id']}")
+                ->field("op.order_id,op.add_date,op.drug_str,ds.subtitle")
+                ->order("add_date DESC")
+                ->select();
+            $history1 = array();
+            foreach ($history as $key => $val) {
+                $history1[$key] = $val;
+                $history1[$key]['add_date'] = date("Y-m-d", $val['add_date']);
+            }
+            ajaxReturn(array('code'=>1, 'info'=>'ok!','data'=>$history1));
         }
     }
 
@@ -890,12 +923,8 @@ class Prescription extends Common
 //            {
 //                ajaxReturn($res);
 //            }
-            if (empty($data['state_id']) || $data['state_id'] == 0) {
-                $state = db('drug_state')->field('state_id')->where('is_display = 1')->order('sort', 'DESC')->find();
-                $data['state_id'] = $state['state_id'];
-            }
 
-            $medicine = db('medicine')->field('id,title')->where("is_show=1 and type_id = {$data['state_id']}")->order('sort', 'ASC')->select();
+            $medicine = db('medicine')->field('id,title')->where("is_show=1 and type_id = {$data['type_id']}")->order('sort', 'ASC')->select();
             ajaxReturn(array('code'=>1, 'info'=>'ok!','data'=>$medicine));
         }
     }

@@ -59,67 +59,66 @@ class Order extends Common
             //查询医生的上次开方的药房药态
             $lastMap['o.`doctor_id`'] = $data['doctor_id'];
             $lastMap['o.`order_type`'] = 3;
+            $lastMap['op.`prescription_type`'] = 0;
             $lastOrder = db('order_prescription')->alias('op')
                 ->join(['jd_order'=>'o'], 'o.order_id = op.order_id' , 'inner')
                 ->where($lastMap)
-                ->field("op.`relation_id`, op.`state_id`, op.`order_id`")
+                ->field("op.`state_id`, op.`prescription_id`, op.`order_id`")
                 ->order("op.`add_date` DESC")
                 ->find();
             //处理药房药态信息
             if ($lastOrder) {
+//                var_dump($lastOrder);die;
                 //存在历史方, 则使用最新历史方的药房药态
-                $houseMap['d.`is_display`'] = 1;
-                $houseMap['p.`area_id`'] = $data['area_id'];
                 $houseMap['p.`is_display`'] = 1;
+                $houseMap['p.`area_id`'] = $data['area_id'];
                 //该药态该地区药房数量
-                $houseMap['d.`state_id`'] = $lastOrder['state_id'];
-                $leftNum = db('drug_relation')->alias('d')
-                    ->join(['jd_prescription'=>'p'], 'd.prescription_id = p.prescription_id' , 'inner')
+                $houseMap['p.`state_id`'] = $lastOrder['state_id'];
+                $houseMap['p.`prescription_id`'] = $lastOrder['prescription_id'];
+//                $leftNum = db('prescription')->alias('d')
+//                    ->where($houseMap)
+//                    ->count();
+                $houseAllArr = db('prescription')->alias('p')
+                    ->join(['jd_drug_state'=>'ds'], 'p.state_id = ds.state_id' , 'inner')
                     ->where($houseMap)
-                    ->field("d.`relation_id`")
-                    ->count();
-                $houseMap['d.`relation_id`'] = $lastOrder['relation_id'];
-                $houseAllArr = db('drug_relation')->alias('d')
-                    ->join(['jd_prescription'=>'p'], 'd.prescription_id = p.prescription_id' , 'inner')
-                    ->join(['jd_drug_state'=>'ds'], 'd.state_id = ds.state_id' , 'inner')
-                    ->where($houseMap)
-                    ->field("d.`relation_id`, d.`prescription_id`, d.`state_id`, d.`describe`, p.`prescription_name`, p.`prescription_id`, p.`area_name`, ds.`state_name`, ds.`make`, ds.`taking`, ds.`instructions`, ds.`weight`, ds.`pic`")
-                    ->order('d.`relation_id` DESC')
+                    ->field("p.`state_id`, p.`describe`, p.`prescription_name`, p.`prescription_id`, p.`area_name`, ds.`state_name`, ds.`make`, ds.`taking`, ds.`instructions`, ds.`weight`, ds.`pic`, ds.`common`, ds.`everyday`, ds.`everytime`, ds.`subtitle`, ds.`type_id`")
+                    ->order('p.`sort` DESC')
                     ->find();
-//                var_dump($houseAllArr);die;
 
             } else {
                 //没有历史开方
-                $houseMap['d.`is_display`'] = 1;
-                $houseMap['p.`area_id`'] = $data['area_id'];
                 $houseMap['p.`is_display`'] = 1;
+                $houseMap['p.`area_id`'] = $data['area_id'];
+
                 //默认第一个药房药态
-                $houseAllArr = db('drug_relation')->alias('d')
-                    ->join(['jd_prescription'=>'p'], 'd.prescription_id = p.prescription_id' , 'inner')
-                    ->join(['jd_drug_state'=>'ds'], 'd.state_id = ds.state_id' , 'inner')
+                $houseAllArr = db('drug_state')->alias('ds')
+                    ->join(['jd_prescription'=>'p'], 'ds.state_id = p.state_id' , 'inner')
                     ->where($houseMap)
-                    ->field("d.`relation_id`, d.`prescription_id`, d.`state_id`, d.`describe`, p.`prescription_name`, p.`prescription_id`, p.`area_name`, ds.`state_name`, ds.`make`, ds.`taking`, ds.`instructions`, ds.`weight`, ds.`pic`")
-                    ->order('d.`relation_id` DESC')
+                    ->field("p.`state_id`, p.`describe`, p.`prescription_name`, p.`prescription_id`, p.`area_name`, ds.`state_name`, ds.`make`, ds.`taking`, ds.`instructions`, ds.`weight`, ds.`pic`, ds.`common`, ds.`everyday`, ds.`everytime`, ds.`subtitle`, ds.`type_id`")
+                    ->order('ds.`sort` DESC')
                     ->find();
-                $houseMap['d.`state_id`'] = $houseAllArr['state_id'];
+//                var_dump(333);var_dump($houseAllArr);die;
+//                $houseMap['d.`state_id`'] = $houseAllArr['state_id'];
                 //该药态该地区药房数量
-                $leftNum = db('drug_relation')->alias('d')
-                    ->join(['jd_prescription'=>'p'], 'd.prescription_id = p.prescription_id' , 'inner')
-                    ->where($houseMap)
-                    ->field("d.`relation_id`")
-                    ->count();
+//                $leftNum = db('prescription')->alias('d')
+//                    ->where($houseMap)
+//                    ->count();
             }
 //            $houseAllArr['pic'] = config('url') . $houseAllArr['pic'];
 
             $mainInfo['state_id'] = $houseAllArr['state_id'] ?: 8;
             $mainInfo['prescription_id'] = $houseAllArr['prescription_id'] ?: 1;
             $mainInfo['area_id'] = $data['area_id'] ?: 2;
-            $mainInfo['relation_id'] = $houseAllArr['relation_id'] ?: 54;
             $mainInfo['make'] = $houseAllArr['make'] ?: '*水丸需整体制作，请按照总量选#克数#，#1000g#起做';
             $mainInfo['taking'] = $houseAllArr['taking'] ?: '共#7#剂，每日#1#剂，1剂分#1#次使用';
             $mainInfo['weight'] = $houseAllArr['weight'] ?: '#0-0ｇ#，(制丸会减少药材总重10%-30%)';
             $mainInfo['instructions'] = $houseAllArr['instructions'] ?: '';
             $mainInfo['pic'] = $houseAllArr['pic'];
+            $mainInfo['common'] = $houseAllArr['common'];
+            $mainInfo['everyday'] = $houseAllArr['everyday'];
+            $mainInfo['everytime'] = $houseAllArr['everytime'];
+            $mainInfo['subtitle'] = $houseAllArr['subtitle'];
+            $mainInfo['type_id'] = $houseAllArr['type_id'];
             $mainInfo['state_house_name'] = $houseAllArr['state_name'].'.'.$houseAllArr['area_name'].'-'.$houseAllArr['prescription_name'];
 //            $mainInfo['left_num'] = $leftNum-1;
             //因为只有一家药房, 其余四家都是虚拟的
@@ -267,7 +266,6 @@ class Order extends Common
                         if ($val[2] > $list['num'] - config('lessCount') ) {
                             array_push($lessCountArr, $val[1]);
                         }
-
                     }
 
                     if (count($alertArr) > 0) {
@@ -378,7 +376,6 @@ class Order extends Common
                 $orderPrescriptionInsert['drug_str'] = $data['drug_str'] ? base64_decode($data['drug_str']) : '';
                 $orderPrescriptionInsert['dose'] = $data['dose'] ?: 0;
                 $orderPrescriptionInsert['state_id'] = $data['state_id'] ?: 0;
-                $orderPrescriptionInsert['relation_id'] = $data['relation_id'] ?: 0;
 
                 //处方订单要保存特色方剂id
                 $orderPrescriptionInsert['special_id'] = $data['special_id'] ?: 0;
@@ -484,7 +481,6 @@ class Order extends Common
                             $tempMap['special_content'] = '';
                         }
 
-                        $tempMap['relation_id'] = $data['relation_id'];
                         $tempMap['state_id'] = $data['state_id'];
                         $tempMap['dose'] = intval($data['dose']);
                         $tempMap['type'] = 0;//0个人模板 1经典模板(管理员创建)
@@ -703,17 +699,6 @@ class Order extends Common
                         break;
                 }
 
-
-
-                var_dump($orderDetail);die;
-
-                //判断是不是服务包id
-                if (1) {
-
-                } elseif ("不是调制服务包") {
-
-                }
-
                 Db::commit();
                 ajaxReturn(array('code'=>1, 'info'=>'ok','data'=>[]));
             } catch (\Exception $e) {
@@ -824,14 +809,6 @@ class Order extends Common
                         db('wenzhen')
                             ->where("log_id = {$wenzhenDetail['log_id']}")
                             ->update($updateInfo);
-
-                        //相应的订单次数减一
-//                        if ($wenzhenDetail['type'] == 0 && $orderDetail['left_inquisition'] > 0) {//图文问诊
-//                            $leftMap['left_inquisition'] = $orderDetail['left_inquisition']-1;
-//                            db('order_product')
-//                                ->where("order_id = {$data['order_id']}")
-//                                ->update($leftMap);
-//                        } else
 
                         if ($wenzhenDetail['type'] == 1 && $orderDetail['left_revisit'] > 0) {//在线复诊
                             $leftMap['left_revisit'] = $orderDetail['left_revisit']-1;
@@ -1045,21 +1022,6 @@ class Order extends Common
                             ->where("log_id = {$wenzhenDetail['log_id']}")
                             ->update($updateInfo);
                         //问诊订单记录信息
-//                        $orderProductInfo = db('order_product')
-//                            ->where("order_id = {$data['order_id']}")
-//                            ->field("*")
-//                            ->find();
-//                        if ($wenzhenDetail['type'] == 0 && $orderProductInfo['left_inquisition'] > 0) {//图文问诊
-//                            $leftMap['left_inquisition'] = $orderProductInfo['left_inquisition']-1;
-//                            db('order_product')
-//                                ->where("order_id = {$data['order_id']}")
-//                                ->update($leftMap);
-//                        } elseif ($wenzhenDetail['type'] == 1 && $orderProductInfo['left_revisit'] > 0) {//在线复诊
-//                            $leftMap['left_revisit'] = $orderProductInfo['left_revisit']-1;
-//                            db('order_product')
-//                                ->where("order_id = {$data['order_id']}")
-//                                ->update($leftMap);
-//                        }
                         Db::commit();
                         ajaxReturn(array('code'=>1, 'info'=>'本次问诊已结束','data'=>[]));
                     } elseif (!empty($wenzhenDetail) && $wenzhenDetail['end_time'] == 0) {
@@ -1087,12 +1049,6 @@ class Order extends Common
                                 ->where("order_id = {$data['order_id']}")
                                 ->update($leftMap);
                             }
-//                            elseif ($wenzhenDetail['type'] == 1) {//在线复诊
-//                                $leftMap['left_revisit'] = $orderProductInfo['left_revisit']+1;
-//                                db('order_product')
-//                                ->where("order_id = {$data['order_id']}")
-//                                ->update($leftMap);
-//                            }
                         }
                         Db::commit();
                         ajaxReturn(array('code'=>1, 'info'=>'本次问诊已结束','data'=>[]));
@@ -1225,12 +1181,11 @@ class Order extends Common
         }
 
         //查询药房药态信息
-        $relationDetail = db('drug_relation')->alias('d')
-            ->join(['jd_prescription'=>'p'], 'd.prescription_id = p.prescription_id' , 'inner')
-            ->join(['jd_drug_state'=>'ds'], 'd.state_id = ds.state_id' , 'inner')
-            ->where("d.relation_id = {$lastOrder['relation_id']}")
-            ->field("d.`relation_id`, d.`prescription_id`, d.`state_id`, d.`describe`, p.`prescription_name`, p.`prescription_id`, p.`area_name`, ds.`state_name`, ds.`make`, ds.`taking`, ds.`instructions`, ds.`weight`, ds.`pic`")
-            ->order('d.`relation_id` DESC')
+        $relationDetail = db('prescription')->alias('p')
+            ->join(['jd_drug_state'=>'ds'], 'p.state_id = ds.state_id' , 'inner')
+            ->where("p.state_id = {$lastOrder['state_id']}")
+            ->field("p.`state_id`, p.`describe`, p.`prescription_name`, p.`prescription_id`, p.`area_name`, ds.`state_name`, ds.`make`, ds.`taking`, ds.`instructions`, ds.`weight`, ds.`pic`, ds.`common`, ds.`everyday`, ds.`everytime`, ds.`subtitle`, ds.`type_id`")
+            ->order('p.`sort` DESC')
             ->find();
 
         $this->assign("lastOrder", $lastOrder);
