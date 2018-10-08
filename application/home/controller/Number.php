@@ -358,17 +358,42 @@ class Number extends Common
             {
                 ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
             }
-            $comment = Db::field('p.`group_id`, p.`group_name`, p.`group_name_eng`, p.`group_member_name`')
+            $comment = Db::field('p.`group_id`, p.`group_name`, p.`group_name_eng`, p.`group_member_name`, p.`group_member_id`')
                 ->table('jd_patient_group p')
                 ->where("p.doctor_id = {$data['doctor_id']}")
                 ->order('p.add_date', 'DESC')
                 ->select();
-            $order = array();
+            $allMemberArr = array();
             foreach ($comment as $key => $val) {
-                array_push($order, $val);
+                $memberArr = explode(',', $val['group_member_name']);
+                $comment[$key]['num'] = count($memberArr);
+                //拼接已分组的患者id
+                $allMemberArr = array_merge($allMemberArr, explode(',', $val['group_member_id']));
             }
-            ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>$comment));
+            //查询全部患者
+            $commentAll = Db::field('s.`member_id`, m.`true_name`, m.`member_name`, m.`mobile`')
+                ->table('jd_doctor_member s, jd_member m')
+                ->where("s.doctor_id = {$data['doctor_id']} and s.`is_show` = 1 and s.`member_id` = m.`member_id`")
+                ->order('s.inquisition', 'DESC')
+                ->select();
+            $elseArr = array();
+            $nameArr = array();
+            foreach ($commentAll as $value) {
+                if (!in_array($value['member_id'], $allMemberArr)) {
+                    array_push($elseArr, $value['member_id']);
+                    array_push($nameArr, $value['member_name'] ?: ($value['true_name'] ?: ($value['mobile'] ?: '未命名')) );
+                }
+            }
 
+            $target['group_id'] = 0;
+            $target['group_name'] = '未分组患者';
+            $target['group_name_eng'] = 'Non group patients';
+            $target['group_member_name'] = implode(',', $nameArr);
+            $target['group_member_id'] = implode(',', $elseArr);
+            $target['num'] = count($elseArr);
+            array_push($comment, $target);
+
+            ajaxReturn(array('code' =>1, 'info' => 'ok','data'=>$comment));
         }
     }
 

@@ -1,0 +1,60 @@
+---------------------------------------------------------------
+[ 2018-10-07T17:12:19+08:00 ] 0.0.0.0 GET /
+[ info ] localhost:7062/ [运行时间：0.059638s][吞吐率：16.77req/s] [内存消耗：1,670.23kb] [文件加载：38]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'cookie' => '_ga=GA1.1.343413352.1534471926; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; uid=1; token=5587c46e-e906-4124-8f96-a2a7d424a8bf; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1535982506,1536243001,1536718237,1537094188; Hm_lvt_8e0ba7b3bf67553b7cfea23343903bbb=1537173201; Hm_lvt_b78256882d556d73a61a8c4262d27332=1536893323,1537083276,1537154633,1537414902',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Index->index[ D:\workLP\xiaojudeng\api\application\home\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-07T17:12:20+08:00 ] 0.0.0.0 GET /favicon.ico
+[ info ] localhost:7062/favicon.ico [运行时间：0.049073s][吞吐率：20.38req/s] [内存消耗：1,715.73kb] [文件加载：41]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'favicon.ico',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/favicon.ico',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'referer' => 'http://localhost:7062/',
+  'host' => 'localhost:7062',
+  'cookie' => '_ga=GA1.1.343413352.1534471926; Phpstorm-7d8938db=0dec72a5-7ab0-46de-a14b-0c25eddfbbac; uid=1; token=5587c46e-e906-4124-8f96-a2a7d424a8bf; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1535982506,1536243001,1536718237,1537094188; Hm_lvt_8e0ba7b3bf67553b7cfea23343903bbb=1537173201; Hm_lvt_b78256882d556d73a61a8c4262d27332=1536893323,1537083276,1537154633,1537414902',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File

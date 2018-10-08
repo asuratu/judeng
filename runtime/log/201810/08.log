@@ -1,0 +1,1605 @@
+---------------------------------------------------------------
+[ 2018-10-08T10:57:31+08:00 ] 0.0.0.0 POST /
+[ info ] localhost:7062/ [运行时间：0.046160s][吞吐率：21.66req/s] [内存消耗：1,668.87kb] [文件加载：38]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'postman-token' => 'cbf0c73c-7732-6197-e772-f110636bde5c',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Index->index[ D:\workLP\xiaojudeng\api\application\home\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-08T10:58:12+08:00 ] 0.0.0.0 POST /number/addPatientGroup
+[ info ] localhost:7062/number/addPatientGroup [运行时间：0.128870s][吞吐率：7.76req/s] [内存消耗：3,219.77kb] [文件加载：58]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'addPatientGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryIrz7N9ESNq7ISGnt',
+  'content-length' => '250',
+  'x-original-url' => '/number/addPatientGroup',
+  'postman-token' => '3f1fd0a2-4ec5-c369-1fe1-62357ecdaa13',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'group_name' => '测试分组',
+  'doctor_id' => '1',
+)
+[ info ] [ RUN ] app\home\controller\Number->addPatientGroup[ D:\workLP\xiaojudeng\api\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ error ] [1049]SQLSTATE[HY000] [1049] Unknown database 'judeng'[D:\workLP\xiaojudeng\api\thinkphp\library\think\db\Connection.php:293]
+---------------------------------------------------------------
+[ 2018-10-08T11:02:52+08:00 ] 0.0.0.0 POST /number/addPatientGroup
+[ info ] localhost:7062/number/addPatientGroup [运行时间：0.260374s][吞吐率：3.84req/s] [内存消耗：3,207.20kb] [文件加载：56]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'addPatientGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryJiJLyel5UrHbhfC4',
+  'content-length' => '250',
+  'x-original-url' => '/number/addPatientGroup',
+  'postman-token' => '6ba0451b-d961-5fd2-22a2-3b20b6951b28',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'group_name' => '测试分组',
+  'doctor_id' => '1',
+)
+[ info ] [ RUN ] app\home\controller\Number->addPatientGroup[ D:\workLP\xiaojudeng\api\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.062737s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_patient_group` [ RunTime:0.045009s ]
+[ sql ] [ SQL ] INSERT INTO `jd_patient_group` (`doctor_id` , `group_name` , `group_name_eng` , `group_member_id` , `group_member_name` , `add_date`) VALUES (1 , '测试分组' , 'ceshifenzu' , '' , '' , 1538967772) [ RunTime:0.059032s ]
+---------------------------------------------------------------
+[ 2018-10-08T11:05:00+08:00 ] 0.0.0.0 POST /number/updatePatientGroup
+[ info ] localhost:7062/number/updatePatientGroup [运行时间：0.303912s][吞吐率：3.29req/s] [内存消耗：3,313.67kb] [文件加载：59]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'updatePatientGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryTZo4wIo5iTQAvdla',
+  'content-length' => '350',
+  'x-original-url' => '/number/updatePatientGroup',
+  'postman-token' => '9ffbf127-5f59-cfd0-5db4-c3e0a178fd58',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'group_name' => '新测试分组',
+  'doctor_id' => '1',
+  'group_id' => '36',
+)
+[ info ] [ RUN ] app\home\controller\Number->updatePatientGroup[ D:\workLP\xiaojudeng\api\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.079035s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_patient_group` [ RunTime:0.054673s ]
+[ sql ] [ SQL ] UPDATE `jd_patient_group`  SET `doctor_id`=1,`group_name`='新测试分组',`group_name_eng`='xinceshifenzu'  WHERE  `group_id` = 36 [ RunTime:0.056071s ]
+---------------------------------------------------------------
+[ 2018-10-08T11:17:15+08:00 ] 0.0.0.0 POST /number/deletePatientGroup
+[ info ] localhost:7062/number/deletePatientGroup [运行时间：0.450785s][吞吐率：2.22req/s] [内存消耗：3,225.36kb] [文件加载：57]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'deletePatientGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryBkI34wVIXXFbllyk',
+  'content-length' => '350',
+  'x-original-url' => '/number/deletePatientGroup',
+  'postman-token' => 'a53cca21-ae36-5285-bedf-b70fc29c4a63',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'group_name' => '新测试分组',
+  'doctor_id' => '1',
+  'group_id' => '36',
+)
+[ info ] [ RUN ] app\home\controller\Number->deletePatientGroup[ D:\workLP\xiaojudeng\api\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.083618s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_group_patient` [ RunTime:0.053712s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_group_patient` WHERE  `group_id` = 36  AND `doctor_id` = 1 [ RunTime:0.081000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_patient_group` [ RunTime:0.053130s ]
+[ sql ] [ SQL ] SELECT * FROM `jd_patient_group` WHERE  (  group_id = 36 ) LIMIT 1 [ RunTime:0.053946s ]
+[ sql ] [ SQL ] DELETE FROM `jd_patient_group`    WHERE  `group_id` = 36  AND `doctor_id` = 1 [ RunTime:0.057314s ]
+---------------------------------------------------------------
+[ 2018-10-08T11:31:58+08:00 ] 0.0.0.0 POST /number/allPatientGroup
+[ info ] localhost:7062/number/allPatientGroup [运行时间：0.305203s][吞吐率：3.28req/s] [内存消耗：3,110.02kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allPatientGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryHHzUfAOQzMGtm0Ct',
+  'content-length' => '141',
+  'x-original-url' => '/number/allPatientGroup',
+  'postman-token' => '8144367b-d8c5-9474-b72e-2f8d9ccabcb1',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '1',
+)
+[ info ] [ RUN ] app\home\controller\Number->allPatientGroup[ D:\workLP\xiaojudeng\api\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.101577s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_patient_group` [ RunTime:0.059914s ]
+[ sql ] [ SQL ] SELECT p.`group_id`,p.`group_name`,p.`group_name_eng`,p.`group_member_name` FROM `jd_patient_group` `p` WHERE  (  p.doctor_id = 1 ) ORDER BY `p`.`add_date`  DESC [ RunTime:0.061045s ]
+---------------------------------------------------------------
+[ 2018-10-08T11:32:29+08:00 ] 0.0.0.0 POST /number/allPatientGroup
+[ info ] localhost:7062/number/allPatientGroup [运行时间：0.224947s][吞吐率：4.45req/s] [内存消耗：3,113.45kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allPatientGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryDrIxxsZ38mV6hWYd',
+  'content-length' => '142',
+  'x-original-url' => '/number/allPatientGroup',
+  'postman-token' => '97d19cf4-ca4e-8eef-03f0-3dec2a648213',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+)
+[ info ] [ RUN ] app\home\controller\Number->allPatientGroup[ D:\workLP\xiaojudeng\api\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.068147s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_patient_group` [ RunTime:0.044801s ]
+[ sql ] [ SQL ] SELECT p.`group_id`,p.`group_name`,p.`group_name_eng`,p.`group_member_name` FROM `jd_patient_group` `p` WHERE  (  p.doctor_id = 70 ) ORDER BY `p`.`add_date`  DESC [ RunTime:0.042506s ]
+---------------------------------------------------------------
+[ 2018-10-08T11:33:33+08:00 ] 0.0.0.0 POST /number/allGroupPatientList
+[ info ] localhost:7062/number/allGroupPatientList [运行时间：0.352872s][吞吐率：2.83req/s] [内存消耗：3,118.09kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allGroupPatientList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryJhQhNlAX226Z51e1',
+  'content-length' => '239',
+  'x-original-url' => '/number/allGroupPatientList',
+  'postman-token' => '16f7fa75-449e-c33a-06fb-853ccb6fcbbb',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+  'group_id' => '31',
+)
+[ info ] [ RUN ] app\home\controller\Number->allGroupPatientList[ D:\workLP\xiaojudeng\api\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.078794s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_group_patient` [ RunTime:0.052181s ]
+[ sql ] [ SQL ] SELECT s.`group_id`,s.`member_id`,m.`member_name`,m.`true_name`,m.`mobile`,m.`portrait`,m.`sex`,m.`age`,m.`im_user` as openid,m.`is_type` FROM `jd_group_patient` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 70 and s.`is_show` = 1 and s.group_id = 31 and s.`member_id` = m.`member_id` ) ORDER BY `s`.`add_date`  ASC LIMIT 0,10 [ RunTime:0.077152s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_group_patient` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 70 and s.`is_show` = 1 and s.group_id = 31 and s.`member_id` = m.`member_id` ) LIMIT 1 [ RunTime:0.051056s ]
+---------------------------------------------------------------
+[ 2018-10-08T11:36:48+08:00 ] 0.0.0.0 POST /number/allPatientGroup
+[ info ] localhost:7062/number/allPatientGroup [运行时间：0.212016s][吞吐率：4.72req/s] [内存消耗：3,113.45kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allPatientGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryx29erbM8qToVYVGX',
+  'content-length' => '142',
+  'x-original-url' => '/number/allPatientGroup',
+  'postman-token' => '81cc0fff-5d3b-6714-a8c5-40d89ba182cb',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+)
+[ info ] [ RUN ] app\home\controller\Number->allPatientGroup[ D:\workLP\xiaojudeng\api\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.066014s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_patient_group` [ RunTime:0.045433s ]
+[ sql ] [ SQL ] SELECT p.`group_id`,p.`group_name`,p.`group_name_eng`,p.`group_member_name` FROM `jd_patient_group` `p` WHERE  (  p.doctor_id = 70 ) ORDER BY `p`.`add_date`  DESC [ RunTime:0.045304s ]
+---------------------------------------------------------------
+[ 2018-10-08T11:39:06+08:00 ] 0.0.0.0 POST /number/allPatientGroup
+[ info ] localhost:7062/number/allPatientGroup [运行时间：0.235538s][吞吐率：4.25req/s] [内存消耗：3,113.45kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allPatientGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarygziQABYs7PkjwiF6',
+  'content-length' => '142',
+  'x-original-url' => '/number/allPatientGroup',
+  'postman-token' => '5340e64a-6473-cb15-7a24-4d09a36875c7',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+)
+[ info ] [ RUN ] app\home\controller\Number->allPatientGroup[ D:\workLP\xiaojudeng\api\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.053019s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_patient_group` [ RunTime:0.038056s ]
+[ sql ] [ SQL ] SELECT p.`group_id`,p.`group_name`,p.`group_name_eng`,p.`group_member_name` FROM `jd_patient_group` `p` WHERE  (  p.doctor_id = 70 ) ORDER BY `p`.`add_date`  DESC [ RunTime:0.038488s ]
+---------------------------------------------------------------
+[ 2018-10-08T11:39:30+08:00 ] 0.0.0.0 POST /number/allPatientGroup
+[ info ] localhost:7062/number/allPatientGroup [运行时间：0.054683s][吞吐率：18.29req/s] [内存消耗：2,086.92kb] [文件加载：44]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allPatientGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryCyZNGpRMrUd8BRHA',
+  'content-length' => '142',
+  'x-original-url' => '/number/allPatientGroup',
+  'postman-token' => '5aaa8485-b441-f757-6b83-72b59faaaa30',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+)
+[ info ] [ RUN ] app\home\controller\Number->allPatientGroup[ D:\workLP\xiaojudeng\api\application\home\controller\Number.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-08T11:41:27+08:00 ] 0.0.0.0 POST /number/allPatientGroup
+[ info ] localhost:7062/number/allPatientGroup [运行时间：0.274918s][吞吐率：3.64req/s] [内存消耗：3,115.92kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allPatientGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarylsQbqRKGUeJKGCwr',
+  'content-length' => '142',
+  'x-original-url' => '/number/allPatientGroup',
+  'postman-token' => '58b763f4-08b0-48fd-37fb-d504efd27bdd',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+)
+[ info ] [ RUN ] app\home\controller\Number->allPatientGroup[ D:\workLP\xiaojudeng\api\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ error ] [8]未定义数组索引: [D:\workLP\xiaojudeng\api\application\home\controller\Number.php:369]
+[ error ] [8]未定义数组索引: [D:\workLP\xiaojudeng\api\application\home\controller\Number.php:369]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086891s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_patient_group` [ RunTime:0.052944s ]
+[ sql ] [ SQL ] SELECT p.`group_id`,p.`group_name`,p.`group_name_eng`,p.`group_member_name` FROM `jd_patient_group` `p` WHERE  (  p.doctor_id = 70 ) ORDER BY `p`.`add_date`  DESC [ RunTime:0.052312s ]
+---------------------------------------------------------------
+[ 2018-10-08T11:41:45+08:00 ] 0.0.0.0 POST /number/allPatientGroup
+[ info ] localhost:7062/number/allPatientGroup [运行时间：0.284269s][吞吐率：3.52req/s] [内存消耗：3,118.10kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allPatientGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryy7kTiOaH8idu1aql',
+  'content-length' => '142',
+  'x-original-url' => '/number/allPatientGroup',
+  'postman-token' => '33e9660b-da73-0470-ed2f-47b0190e926e',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+)
+[ info ] [ RUN ] app\home\controller\Number->allPatientGroup[ D:\workLP\xiaojudeng\api\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.087720s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_patient_group` [ RunTime:0.059591s ]
+[ sql ] [ SQL ] SELECT p.`group_id`,p.`group_name`,p.`group_name_eng`,p.`group_member_name` FROM `jd_patient_group` `p` WHERE  (  p.doctor_id = 70 ) ORDER BY `p`.`add_date`  DESC [ RunTime:0.056301s ]
+---------------------------------------------------------------
+[ 2018-10-08T11:45:41+08:00 ] 0.0.0.0 POST /number/allPatientGroup
+[ info ] localhost:7062/number/allPatientGroup [运行时间：0.214175s][吞吐率：4.67req/s] [内存消耗：3,118.34kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allPatientGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarylqaWITEoBOreijNa',
+  'content-length' => '142',
+  'x-original-url' => '/number/allPatientGroup',
+  'postman-token' => '42485d68-13ac-0055-2eb2-82361794642b',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+)
+[ info ] [ RUN ] app\home\controller\Number->allPatientGroup[ D:\workLP\xiaojudeng\api\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.061383s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_patient_group` [ RunTime:0.051445s ]
+[ sql ] [ SQL ] SELECT p.`group_id`,p.`group_name`,p.`group_name_eng`,p.`group_member_name`,p.`group_member_id` FROM `jd_patient_group` `p` WHERE  (  p.doctor_id = 70 ) ORDER BY `p`.`add_date`  DESC [ RunTime:0.042591s ]
+---------------------------------------------------------------
+[ 2018-10-08T11:46:16+08:00 ] 0.0.0.0 POST /number/allPatientGroup
+[ info ] localhost:7062/number/allPatientGroup [运行时间：0.249291s][吞吐率：4.01req/s] [内存消耗：3,118.46kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allPatientGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarynbUCKJxKw42aWvB4',
+  'content-length' => '142',
+  'x-original-url' => '/number/allPatientGroup',
+  'postman-token' => '910a3af7-9d10-7f77-5e7c-ee0516eabf32',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+)
+[ info ] [ RUN ] app\home\controller\Number->allPatientGroup[ D:\workLP\xiaojudeng\api\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.079118s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_patient_group` [ RunTime:0.053844s ]
+[ sql ] [ SQL ] SELECT p.`group_id`,p.`group_name`,p.`group_name_eng`,p.`group_member_name`,p.`group_member_id` FROM `jd_patient_group` `p` WHERE  (  p.doctor_id = 70 ) ORDER BY `p`.`add_date`  DESC [ RunTime:0.054340s ]
+---------------------------------------------------------------
+[ 2018-10-08T11:46:55+08:00 ] 0.0.0.0 POST /number/allPatientGroup
+[ info ] localhost:7062/number/allPatientGroup [运行时间：0.194641s][吞吐率：5.14req/s] [内存消耗：3,118.85kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allPatientGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryKGbsV5rNlAMCNvzA',
+  'content-length' => '142',
+  'x-original-url' => '/number/allPatientGroup',
+  'postman-token' => '31e9ab77-0dc1-c309-db25-096b46f5556a',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+)
+[ info ] [ RUN ] app\home\controller\Number->allPatientGroup[ D:\workLP\xiaojudeng\api\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.052257s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_patient_group` [ RunTime:0.034952s ]
+[ sql ] [ SQL ] SELECT p.`group_id`,p.`group_name`,p.`group_name_eng`,p.`group_member_name`,p.`group_member_id` FROM `jd_patient_group` `p` WHERE  (  p.doctor_id = 70 ) ORDER BY `p`.`add_date`  DESC [ RunTime:0.034767s ]
+---------------------------------------------------------------
+[ 2018-10-08T11:47:39+08:00 ] 0.0.0.0 POST /number/allPatientGroup
+[ info ] localhost:7062/number/allPatientGroup [运行时间：0.234682s][吞吐率：4.26req/s] [内存消耗：3,118.93kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allPatientGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryRNRF1Az1GDBtG1pN',
+  'content-length' => '142',
+  'x-original-url' => '/number/allPatientGroup',
+  'postman-token' => '4cf8ebe9-3bf5-da81-c240-8baea4dca333',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+)
+[ info ] [ RUN ] app\home\controller\Number->allPatientGroup[ D:\workLP\xiaojudeng\api\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.068294s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_patient_group` [ RunTime:0.047568s ]
+[ sql ] [ SQL ] SELECT p.`group_id`,p.`group_name`,p.`group_name_eng`,p.`group_member_name`,p.`group_member_id` FROM `jd_patient_group` `p` WHERE  (  p.doctor_id = 70 ) ORDER BY `p`.`add_date`  DESC [ RunTime:0.043955s ]
+---------------------------------------------------------------
+[ 2018-10-08T11:50:09+08:00 ] 0.0.0.0 POST /number/allPatient
+[ info ] localhost:7062/number/allPatient [运行时间：0.331714s][吞吐率：3.01req/s] [内存消耗：3,160.63kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allPatient',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryGA2AWEMcymf6y2Zn',
+  'content-length' => '142',
+  'x-original-url' => '/number/allPatient',
+  'postman-token' => '9c768e93-aab7-9453-0311-2494dd777ea4',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+)
+[ info ] [ RUN ] app\home\controller\Number->allPatient[ D:\workLP\xiaojudeng\api\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ error ] [8]未定义数组索引: group_id[D:\workLP\xiaojudeng\api\application\home\controller\Number.php:309]
+[ error ] [8]未定义数组索引: title[D:\workLP\xiaojudeng\api\application\home\controller\Number.php:321]
+[ error ] [8]未定义数组索引: title[D:\workLP\xiaojudeng\api\application\home\controller\Number.php:321]
+[ error ] [8]未定义数组索引: title[D:\workLP\xiaojudeng\api\application\home\controller\Number.php:321]
+[ error ] [8]未定义数组索引: title[D:\workLP\xiaojudeng\api\application\home\controller\Number.php:321]
+[ error ] [8]未定义数组索引: title[D:\workLP\xiaojudeng\api\application\home\controller\Number.php:337]
+[ error ] [8]未定义数组索引: title[D:\workLP\xiaojudeng\api\application\home\controller\Number.php:337]
+[ error ] [8]未定义数组索引: title[D:\workLP\xiaojudeng\api\application\home\controller\Number.php:337]
+[ error ] [8]未定义数组索引: title[D:\workLP\xiaojudeng\api\application\home\controller\Number.php:337]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.083507s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.056263s ]
+[ sql ] [ SQL ] SELECT s.`member_id`,s.`inquisition_name`,s.`inquisition`,m.`member_name`,m.`true_name`,m.`mobile`,m.`portrait`,m.`sex`,m.`age`,m.`im_user` as openid,m.`is_type` FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 70 and s.`is_show` = 1 and s.`member_id` = m.`member_id` and (m.`member_name` like '%%' or m.`true_name` like '%%' or m.`mobile` like '%%' or s.`grouping` like '%%') ) ORDER BY `s`.`inquisition`  DESC LIMIT 0,10 [ RunTime:0.082957s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 70 and s.`is_show` = 1 and s.`member_id` = m.`member_id` and (m.`member_name` like '%%' or m.`true_name` like '%%' or m.`mobile` like '%%' or s.`grouping` like '%%') ) LIMIT 1 [ RunTime:0.053094s ]
+---------------------------------------------------------------
+[ 2018-10-08T11:58:22+08:00 ] 0.0.0.0 POST /number/allPatient
+[ info ] localhost:7062/number/allPatient [运行时间：0.310318s][吞吐率：3.22req/s] [内存消耗：3,162.38kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allPatient',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary9l65q1y9n4Xa5vSt',
+  'content-length' => '142',
+  'x-original-url' => '/number/allPatient',
+  'postman-token' => '59f6a007-c2c7-17bc-5a26-735c97b2d857',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+)
+[ info ] [ RUN ] app\home\controller\Number->allPatient[ D:\workLP\xiaojudeng\api\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ error ] [8]未定义数组索引: group_id[D:\workLP\xiaojudeng\api\application\home\controller\Number.php:309]
+[ error ] [8]未定义数组索引: title[D:\workLP\xiaojudeng\api\application\home\controller\Number.php:321]
+[ error ] [8]未定义数组索引: title[D:\workLP\xiaojudeng\api\application\home\controller\Number.php:321]
+[ error ] [8]未定义数组索引: title[D:\workLP\xiaojudeng\api\application\home\controller\Number.php:321]
+[ error ] [8]未定义数组索引: title[D:\workLP\xiaojudeng\api\application\home\controller\Number.php:321]
+[ error ] [8]未定义数组索引: title[D:\workLP\xiaojudeng\api\application\home\controller\Number.php:337]
+[ error ] [8]未定义数组索引: title[D:\workLP\xiaojudeng\api\application\home\controller\Number.php:337]
+[ error ] [8]未定义数组索引: title[D:\workLP\xiaojudeng\api\application\home\controller\Number.php:337]
+[ error ] [8]未定义数组索引: title[D:\workLP\xiaojudeng\api\application\home\controller\Number.php:337]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.079368s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.056016s ]
+[ sql ] [ SQL ] SELECT s.`member_id`,s.`inquisition_name`,s.`inquisition`,m.`member_name`,m.`true_name`,m.`mobile`,m.`portrait`,m.`sex`,m.`age`,m.`im_user` as openid,m.`is_type` FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 70 and s.`is_show` = 1 and s.`member_id` = m.`member_id` and (m.`member_name` like '%%' or m.`true_name` like '%%' or m.`mobile` like '%%' or s.`grouping` like '%%') ) ORDER BY `s`.`inquisition`  DESC LIMIT 0,10 [ RunTime:0.056348s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 70 and s.`is_show` = 1 and s.`member_id` = m.`member_id` and (m.`member_name` like '%%' or m.`true_name` like '%%' or m.`mobile` like '%%' or s.`grouping` like '%%') ) LIMIT 1 [ RunTime:0.053159s ]
+---------------------------------------------------------------
+[ 2018-10-08T11:58:32+08:00 ] 0.0.0.0 POST /number/allPatientGroup
+[ info ] localhost:7062/number/allPatientGroup [运行时间：0.359335s][吞吐率：2.78req/s] [内存消耗：3,135.74kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allPatientGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryCG2Phne3kyeVoRKJ',
+  'content-length' => '229',
+  'x-original-url' => '/number/allPatientGroup',
+  'postman-token' => '74427e5f-3424-1fb2-58b5-e3d8b24effd3',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+)
+[ info ] [ RUN ] app\home\controller\Number->allPatientGroup[ D:\workLP\xiaojudeng\api\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.081350s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_patient_group` [ RunTime:0.053821s ]
+[ sql ] [ SQL ] SELECT p.`group_id`,p.`group_name`,p.`group_name_eng`,p.`group_member_name`,p.`group_member_id` FROM `jd_patient_group` `p` WHERE  (  p.doctor_id = 70 ) ORDER BY `p`.`add_date`  DESC [ RunTime:0.053101s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.053457s ]
+[ sql ] [ SQL ] SELECT s.`member_id` FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 70 and s.`is_show` = 1 and s.`member_id` = m.`member_id` ) ORDER BY `s`.`inquisition`  DESC [ RunTime:0.055273s ]
+---------------------------------------------------------------
+[ 2018-10-08T12:02:29+08:00 ] 0.0.0.0 POST /number/allPatientGroup
+[ info ] localhost:7062/number/allPatientGroup [运行时间：0.423801s][吞吐率：2.36req/s] [内存消耗：3,145.48kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allPatientGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryJ6ZA5YTcfGB4Iu9q',
+  'content-length' => '229',
+  'x-original-url' => '/number/allPatientGroup',
+  'postman-token' => '40ff125f-8071-7ff2-03fc-16b63d7cf941',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+)
+[ info ] [ RUN ] app\home\controller\Number->allPatientGroup[ D:\workLP\xiaojudeng\api\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ error ] [8]Array to string conversion[D:\workLP\xiaojudeng\api\application\home\controller\Number.php:384]
+[ error ] [8]Array to string conversion[D:\workLP\xiaojudeng\api\application\home\controller\Number.php:384]
+[ error ] [8]Array to string conversion[D:\workLP\xiaojudeng\api\application\home\controller\Number.php:384]
+[ error ] [8]Array to string conversion[D:\workLP\xiaojudeng\api\application\home\controller\Number.php:384]
+[ error ] [8]Array to string conversion[D:\workLP\xiaojudeng\api\application\home\controller\Number.php:384]
+[ error ] [8]Array to string conversion[D:\workLP\xiaojudeng\api\application\home\controller\Number.php:384]
+[ error ] [8]Array to string conversion[D:\workLP\xiaojudeng\api\application\home\controller\Number.php:384]
+[ error ] [8]Array to string conversion[D:\workLP\xiaojudeng\api\application\home\controller\Number.php:384]
+[ error ] [8]Array to string conversion[D:\workLP\xiaojudeng\api\application\home\controller\Number.php:384]
+[ error ] [8]Array to string conversion[D:\workLP\xiaojudeng\api\application\home\controller\Number.php:384]
+[ error ] [8]Array to string conversion[D:\workLP\xiaojudeng\api\application\home\controller\Number.php:384]
+[ error ] [8]Array to string conversion[D:\workLP\xiaojudeng\api\application\home\controller\Number.php:384]
+[ error ] [8]Array to string conversion[D:\workLP\xiaojudeng\api\application\home\controller\Number.php:384]
+[ error ] [8]Array to string conversion[D:\workLP\xiaojudeng\api\application\home\controller\Number.php:384]
+[ error ] [8]Array to string conversion[D:\workLP\xiaojudeng\api\application\home\controller\Number.php:384]
+[ error ] [8]Array to string conversion[D:\workLP\xiaojudeng\api\application\home\controller\Number.php:384]
+[ error ] [8]Array to string conversion[D:\workLP\xiaojudeng\api\application\home\controller\Number.php:384]
+[ error ] [8]Array to string conversion[D:\workLP\xiaojudeng\api\application\home\controller\Number.php:384]
+[ error ] [8]Array to string conversion[D:\workLP\xiaojudeng\api\application\home\controller\Number.php:384]
+[ error ] [8]Array to string conversion[D:\workLP\xiaojudeng\api\application\home\controller\Number.php:384]
+[ error ] [8]Array to string conversion[D:\workLP\xiaojudeng\api\application\home\controller\Number.php:384]
+[ error ] [8]Array to string conversion[D:\workLP\xiaojudeng\api\application\home\controller\Number.php:384]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.081746s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_patient_group` [ RunTime:0.065791s ]
+[ sql ] [ SQL ] SELECT p.`group_id`,p.`group_name`,p.`group_name_eng`,p.`group_member_name`,p.`group_member_id` FROM `jd_patient_group` `p` WHERE  (  p.doctor_id = 70 ) ORDER BY `p`.`add_date`  DESC [ RunTime:0.053548s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.056698s ]
+[ sql ] [ SQL ] SELECT s.`member_id` FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 70 and s.`is_show` = 1 and s.`member_id` = m.`member_id` ) ORDER BY `s`.`inquisition`  DESC [ RunTime:0.053748s ]
+---------------------------------------------------------------
+[ 2018-10-08T12:02:40+08:00 ] 0.0.0.0 POST /number/allPatientGroup
+[ info ] localhost:7062/number/allPatientGroup [运行时间：0.398416s][吞吐率：2.51req/s] [内存消耗：3,136.84kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allPatientGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary8fpgfZBjMOFRtIHi',
+  'content-length' => '229',
+  'x-original-url' => '/number/allPatientGroup',
+  'postman-token' => '8d1ca767-8f8f-9ea1-5d56-e173a98b3781',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+)
+[ info ] [ RUN ] app\home\controller\Number->allPatientGroup[ D:\workLP\xiaojudeng\api\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084160s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_patient_group` [ RunTime:0.052837s ]
+[ sql ] [ SQL ] SELECT p.`group_id`,p.`group_name`,p.`group_name_eng`,p.`group_member_name`,p.`group_member_id` FROM `jd_patient_group` `p` WHERE  (  p.doctor_id = 70 ) ORDER BY `p`.`add_date`  DESC [ RunTime:0.054382s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.054750s ]
+[ sql ] [ SQL ] SELECT s.`member_id` FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 70 and s.`is_show` = 1 and s.`member_id` = m.`member_id` ) ORDER BY `s`.`inquisition`  DESC [ RunTime:0.053417s ]
+---------------------------------------------------------------
+[ 2018-10-08T12:02:57+08:00 ] 0.0.0.0 POST /number/allPatientGroup
+[ info ] localhost:7062/number/allPatientGroup [运行时间：0.313849s][吞吐率：3.19req/s] [内存消耗：3,137.16kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allPatientGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryWE1y35P4cJnaAEY4',
+  'content-length' => '229',
+  'x-original-url' => '/number/allPatientGroup',
+  'postman-token' => '2b7dabac-463d-a347-c722-5c19a8ebacf6',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+)
+[ info ] [ RUN ] app\home\controller\Number->allPatientGroup[ D:\workLP\xiaojudeng\api\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.063690s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_patient_group` [ RunTime:0.049226s ]
+[ sql ] [ SQL ] SELECT p.`group_id`,p.`group_name`,p.`group_name_eng`,p.`group_member_name`,p.`group_member_id` FROM `jd_patient_group` `p` WHERE  (  p.doctor_id = 70 ) ORDER BY `p`.`add_date`  DESC [ RunTime:0.044457s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.048993s ]
+[ sql ] [ SQL ] SELECT s.`member_id` FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 70 and s.`is_show` = 1 and s.`member_id` = m.`member_id` ) ORDER BY `s`.`inquisition`  DESC [ RunTime:0.042873s ]
+---------------------------------------------------------------
+[ 2018-10-08T12:05:41+08:00 ] 0.0.0.0 POST /number/allPatientGroup
+[ info ] localhost:7062/number/allPatientGroup [运行时间：0.417110s][吞吐率：2.40req/s] [内存消耗：3,137.60kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allPatientGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryJPmml4YQtmKczkHo',
+  'content-length' => '229',
+  'x-original-url' => '/number/allPatientGroup',
+  'postman-token' => 'd110ab29-df6d-8436-09ed-1239988b2e33',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+)
+[ info ] [ RUN ] app\home\controller\Number->allPatientGroup[ D:\workLP\xiaojudeng\api\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.103844s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_patient_group` [ RunTime:0.057580s ]
+[ sql ] [ SQL ] SELECT p.`group_id`,p.`group_name`,p.`group_name_eng`,p.`group_member_name`,p.`group_member_id` FROM `jd_patient_group` `p` WHERE  (  p.doctor_id = 70 ) ORDER BY `p`.`add_date`  DESC [ RunTime:0.061871s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.057684s ]
+[ sql ] [ SQL ] SELECT s.`member_id` FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 70 and s.`is_show` = 1 and s.`member_id` = m.`member_id` ) ORDER BY `s`.`inquisition`  DESC [ RunTime:0.060233s ]
+---------------------------------------------------------------
+[ 2018-10-08T13:32:14+08:00 ] 0.0.0.0 POST /number/allPatientGroup
+[ info ] localhost:7062/number/allPatientGroup [运行时间：0.302066s][吞吐率：3.31req/s] [内存消耗：3,136.88kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allPatientGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryCNJ8anjIW1RHShxC',
+  'content-length' => '229',
+  'x-original-url' => '/number/allPatientGroup',
+  'postman-token' => 'c95307fe-3cec-cd5d-5d6c-b9ffe83deca2',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+)
+[ info ] [ RUN ] app\home\controller\Number->allPatientGroup[ D:\workLP\xiaojudeng\api\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.068434s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_patient_group` [ RunTime:0.046636s ]
+[ sql ] [ SQL ] SELECT p.`group_id`,p.`group_name`,p.`group_name_eng`,p.`group_member_name`,p.`group_member_id` FROM `jd_patient_group` `p` WHERE  (  p.doctor_id = 70 ) ORDER BY `p`.`add_date`  DESC [ RunTime:0.044121s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.046124s ]
+[ sql ] [ SQL ] SELECT s.`member_id` FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 70 and s.`is_show` = 1 and s.`member_id` = m.`member_id` ) ORDER BY `s`.`inquisition`  DESC [ RunTime:0.044981s ]
+---------------------------------------------------------------
+[ 2018-10-08T13:32:26+08:00 ] 0.0.0.0 POST /number/allPatientGroup
+[ info ] localhost:7062/number/allPatientGroup [运行时间：0.355204s][吞吐率：2.82req/s] [内存消耗：3,139.10kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allPatientGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary0Nu8kCjPUJB0KaMX',
+  'content-length' => '229',
+  'x-original-url' => '/number/allPatientGroup',
+  'postman-token' => '21082f7e-05f1-71db-d2de-aee5ba2694c7',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+)
+[ info ] [ RUN ] app\home\controller\Number->allPatientGroup[ D:\workLP\xiaojudeng\api\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.065637s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_patient_group` [ RunTime:0.044519s ]
+[ sql ] [ SQL ] SELECT p.`group_id`,p.`group_name`,p.`group_name_eng`,p.`group_member_name`,p.`group_member_id` FROM `jd_patient_group` `p` WHERE  (  p.doctor_id = 70 ) ORDER BY `p`.`add_date`  DESC [ RunTime:0.043037s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.043552s ]
+[ sql ] [ SQL ] SELECT s.`member_id` FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 70 and s.`is_show` = 1 and s.`member_id` = m.`member_id` ) ORDER BY `s`.`inquisition`  DESC [ RunTime:0.043295s ]
+---------------------------------------------------------------
+[ 2018-10-08T13:32:55+08:00 ] 0.0.0.0 POST /number/allPatientGroup
+[ info ] localhost:7062/number/allPatientGroup [运行时间：1.355120s][吞吐率：0.74req/s] [内存消耗：3,141.09kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allPatientGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary4gROFMm5zHrCB2qY',
+  'content-length' => '229',
+  'x-original-url' => '/number/allPatientGroup',
+  'postman-token' => '77be1650-dbae-7565-8444-aabae367ee51',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+)
+[ info ] [ RUN ] app\home\controller\Number->allPatientGroup[ D:\workLP\xiaojudeng\api\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:1.063468s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_patient_group` [ RunTime:0.042159s ]
+[ sql ] [ SQL ] SELECT p.`group_id`,p.`group_name`,p.`group_name_eng`,p.`group_member_name`,p.`group_member_id` FROM `jd_patient_group` `p` WHERE  (  p.doctor_id = 70 ) ORDER BY `p`.`add_date`  DESC [ RunTime:0.040118s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.040763s ]
+[ sql ] [ SQL ] SELECT s.`member_id` FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 70 and s.`is_show` = 1 and s.`member_id` = m.`member_id` ) ORDER BY `s`.`inquisition`  DESC [ RunTime:0.044382s ]
+---------------------------------------------------------------
+[ 2018-10-08T13:33:01+08:00 ] 0.0.0.0 POST /number/allPatientGroup
+[ info ] localhost:7062/number/allPatientGroup [运行时间：0.348875s][吞吐率：2.87req/s] [内存消耗：3,141.07kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allPatientGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryFyd8YlAHHCYoy8M7',
+  'content-length' => '229',
+  'x-original-url' => '/number/allPatientGroup',
+  'postman-token' => '778125e1-125f-53d2-c367-89500b01eceb',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+)
+[ info ] [ RUN ] app\home\controller\Number->allPatientGroup[ D:\workLP\xiaojudeng\api\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.079627s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_patient_group` [ RunTime:0.052592s ]
+[ sql ] [ SQL ] SELECT p.`group_id`,p.`group_name`,p.`group_name_eng`,p.`group_member_name`,p.`group_member_id` FROM `jd_patient_group` `p` WHERE  (  p.doctor_id = 70 ) ORDER BY `p`.`add_date`  DESC [ RunTime:0.052988s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.054044s ]
+[ sql ] [ SQL ] SELECT s.`member_id` FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 70 and s.`is_show` = 1 and s.`member_id` = m.`member_id` ) ORDER BY `s`.`inquisition`  DESC [ RunTime:0.052951s ]
+---------------------------------------------------------------
+[ 2018-10-08T13:34:30+08:00 ] 0.0.0.0 POST /number/allPatientGroup
+[ info ] localhost:7062/number/allPatientGroup [运行时间：0.364924s][吞吐率：2.74req/s] [内存消耗：3,142.85kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allPatientGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryJJFcNVRcE24Dt3hl',
+  'content-length' => '229',
+  'x-original-url' => '/number/allPatientGroup',
+  'postman-token' => '5cd96a11-bf18-679b-3771-3c19631291d7',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+)
+[ info ] [ RUN ] app\home\controller\Number->allPatientGroup[ D:\workLP\xiaojudeng\api\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.079722s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_patient_group` [ RunTime:0.054563s ]
+[ sql ] [ SQL ] SELECT p.`group_id`,p.`group_name`,p.`group_name_eng`,p.`group_member_name`,p.`group_member_id` FROM `jd_patient_group` `p` WHERE  (  p.doctor_id = 70 ) ORDER BY `p`.`add_date`  DESC [ RunTime:0.054132s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.053758s ]
+[ sql ] [ SQL ] SELECT s.`member_id` FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 70 and s.`is_show` = 1 and s.`member_id` = m.`member_id` ) ORDER BY `s`.`inquisition`  DESC [ RunTime:0.052574s ]
+---------------------------------------------------------------
+[ 2018-10-08T13:40:21+08:00 ] 0.0.0.0 POST /number/allPatientGroup
+[ info ] localhost:7062/number/allPatientGroup [运行时间：0.288754s][吞吐率：3.46req/s] [内存消耗：3,143.92kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allPatientGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryovk6FI55nRkZyOFI',
+  'content-length' => '229',
+  'x-original-url' => '/number/allPatientGroup',
+  'postman-token' => 'a441fad4-7fe7-1723-f4af-046741ca3eb0',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+)
+[ info ] [ RUN ] app\home\controller\Number->allPatientGroup[ D:\workLP\xiaojudeng\api\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.066313s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_patient_group` [ RunTime:0.041620s ]
+[ sql ] [ SQL ] SELECT p.`group_id`,p.`group_name`,p.`group_name_eng`,p.`group_member_name`,p.`group_member_id` FROM `jd_patient_group` `p` WHERE  (  p.doctor_id = 70 ) ORDER BY `p`.`add_date`  DESC [ RunTime:0.041491s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.040704s ]
+[ sql ] [ SQL ] SELECT s.`member_id` FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 70 and s.`is_show` = 1 and s.`member_id` = m.`member_id` ) ORDER BY `s`.`inquisition`  DESC [ RunTime:0.042434s ]
+---------------------------------------------------------------
+[ 2018-10-08T13:41:17+08:00 ] 0.0.0.0 POST /number/allPatientGroup
+[ info ] localhost:7062/number/allPatientGroup [运行时间：0.381053s][吞吐率：2.62req/s] [内存消耗：3,143.63kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allPatientGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryV89ttM9YnnFARceA',
+  'content-length' => '229',
+  'x-original-url' => '/number/allPatientGroup',
+  'postman-token' => 'b9467faf-f53d-22cd-4433-aedeebaa7a7a',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+)
+[ info ] [ RUN ] app\home\controller\Number->allPatientGroup[ D:\workLP\xiaojudeng\api\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.088067s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_patient_group` [ RunTime:0.053918s ]
+[ sql ] [ SQL ] SELECT p.`group_id`,p.`group_name`,p.`group_name_eng`,p.`group_member_name`,p.`group_member_id` FROM `jd_patient_group` `p` WHERE  (  p.doctor_id = 70 ) ORDER BY `p`.`add_date`  DESC [ RunTime:0.053520s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.053969s ]
+[ sql ] [ SQL ] SELECT s.`member_id` FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 70 and s.`is_show` = 1 and s.`member_id` = m.`member_id` ) ORDER BY `s`.`inquisition`  DESC [ RunTime:0.052997s ]
+---------------------------------------------------------------
+[ 2018-10-08T13:44:23+08:00 ] 0.0.0.0 POST /number/allPatientGroup
+[ info ] localhost:7062/number/allPatientGroup [运行时间：0.359398s][吞吐率：2.78req/s] [内存消耗：3,146.34kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allPatientGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryNIFkMjoAvDGOxObm',
+  'content-length' => '229',
+  'x-original-url' => '/number/allPatientGroup',
+  'postman-token' => '3d8a4963-767f-af4e-8863-f2c49358b5f2',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+)
+[ info ] [ RUN ] app\home\controller\Number->allPatientGroup[ D:\workLP\xiaojudeng\api\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.081070s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_patient_group` [ RunTime:0.052842s ]
+[ sql ] [ SQL ] SELECT p.`group_id`,p.`group_name`,p.`group_name_eng`,p.`group_member_name`,p.`group_member_id` FROM `jd_patient_group` `p` WHERE  (  p.doctor_id = 70 ) ORDER BY `p`.`add_date`  DESC [ RunTime:0.053904s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.055692s ]
+[ sql ] [ SQL ] SELECT s.`member_id` FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 70 and s.`is_show` = 1 and s.`member_id` = m.`member_id` ) ORDER BY `s`.`inquisition`  DESC [ RunTime:0.053801s ]
+---------------------------------------------------------------
+[ 2018-10-08T13:45:00+08:00 ] 0.0.0.0 POST /number/allPatientGroup
+[ info ] localhost:7062/number/allPatientGroup [运行时间：0.324027s][吞吐率：3.09req/s] [内存消耗：3,148.08kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allPatientGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryy4NuC1TRIP09rOGm',
+  'content-length' => '229',
+  'x-original-url' => '/number/allPatientGroup',
+  'postman-token' => 'a1571208-f03b-1e7f-b727-713505f72296',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+)
+[ info ] [ RUN ] app\home\controller\Number->allPatientGroup[ D:\workLP\xiaojudeng\api\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.069645s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_patient_group` [ RunTime:0.042056s ]
+[ sql ] [ SQL ] SELECT p.`group_id`,p.`group_name`,p.`group_name_eng`,p.`group_member_name`,p.`group_member_id` FROM `jd_patient_group` `p` WHERE  (  p.doctor_id = 70 ) ORDER BY `p`.`add_date`  DESC [ RunTime:0.042903s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.043626s ]
+[ sql ] [ SQL ] SELECT s.`member_id` FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 70 and s.`is_show` = 1 and s.`member_id` = m.`member_id` ) ORDER BY `s`.`inquisition`  DESC [ RunTime:0.041587s ]
+---------------------------------------------------------------
+[ 2018-10-08T13:48:23+08:00 ] 0.0.0.0 POST /number/allPatientGroup
+[ info ] localhost:7062/number/allPatientGroup [运行时间：0.259060s][吞吐率：3.86req/s] [内存消耗：3,151.45kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allPatientGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryN8EdBioVSeceUBlV',
+  'content-length' => '229',
+  'x-original-url' => '/number/allPatientGroup',
+  'postman-token' => 'e40657f1-93d7-409b-0c9e-a84001247487',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+)
+[ info ] [ RUN ] app\home\controller\Number->allPatientGroup[ D:\workLP\xiaojudeng\api\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.051246s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_patient_group` [ RunTime:0.035458s ]
+[ sql ] [ SQL ] SELECT p.`group_id`,p.`group_name`,p.`group_name_eng`,p.`group_member_name`,p.`group_member_id` FROM `jd_patient_group` `p` WHERE  (  p.doctor_id = 70 ) ORDER BY `p`.`add_date`  DESC [ RunTime:0.032834s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.031975s ]
+[ sql ] [ SQL ] SELECT s.`member_id`,m.`member_name` FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 70 and s.`is_show` = 1 and s.`member_id` = m.`member_id` ) ORDER BY `s`.`inquisition`  DESC [ RunTime:0.035996s ]
+---------------------------------------------------------------
+[ 2018-10-08T13:50:00+08:00 ] 0.0.0.0 POST /number/allPatientGroup
+[ info ] localhost:7062/number/allPatientGroup [运行时间：0.364992s][吞吐率：2.74req/s] [内存消耗：3,151.45kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allPatientGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryLlBIhGAObZg9cqTN',
+  'content-length' => '229',
+  'x-original-url' => '/number/allPatientGroup',
+  'postman-token' => '814949bd-76d2-65ef-89a9-3a319d15d571',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+)
+[ info ] [ RUN ] app\home\controller\Number->allPatientGroup[ D:\workLP\xiaojudeng\api\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.081079s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_patient_group` [ RunTime:0.053933s ]
+[ sql ] [ SQL ] SELECT p.`group_id`,p.`group_name`,p.`group_name_eng`,p.`group_member_name`,p.`group_member_id` FROM `jd_patient_group` `p` WHERE  (  p.doctor_id = 70 ) ORDER BY `p`.`add_date`  DESC [ RunTime:0.053748s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.053437s ]
+[ sql ] [ SQL ] SELECT s.`member_id`,m.`true_name` FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 70 and s.`is_show` = 1 and s.`member_id` = m.`member_id` ) ORDER BY `s`.`inquisition`  DESC [ RunTime:0.054478s ]
+---------------------------------------------------------------
+[ 2018-10-08T13:51:48+08:00 ] 0.0.0.0 POST /number/allPatientGroup
+[ info ] localhost:7062/number/allPatientGroup [运行时间：0.381919s][吞吐率：2.62req/s] [内存消耗：3,157.75kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allPatientGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarywytAYqykJpAROtt5',
+  'content-length' => '229',
+  'x-original-url' => '/number/allPatientGroup',
+  'postman-token' => '0528ad41-a281-3c74-875b-42c7dc793ca9',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+)
+[ info ] [ RUN ] app\home\controller\Number->allPatientGroup[ D:\workLP\xiaojudeng\api\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.078671s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_patient_group` [ RunTime:0.053534s ]
+[ sql ] [ SQL ] SELECT p.`group_id`,p.`group_name`,p.`group_name_eng`,p.`group_member_name`,p.`group_member_id` FROM `jd_patient_group` `p` WHERE  (  p.doctor_id = 70 ) ORDER BY `p`.`add_date`  DESC [ RunTime:0.052006s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.054039s ]
+[ sql ] [ SQL ] SELECT s.`member_id`,m.`true_name`,m.`member_name` FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 70 and s.`is_show` = 1 and s.`member_id` = m.`member_id` ) ORDER BY `s`.`inquisition`  DESC [ RunTime:0.053636s ]
+---------------------------------------------------------------
+[ 2018-10-08T13:52:14+08:00 ] 0.0.0.0 POST /number/allPatientGroup
+[ info ] localhost:7062/number/allPatientGroup [运行时间：0.261452s][吞吐率：3.82req/s] [内存消耗：3,163.88kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allPatientGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarywQASZbHX801naESk',
+  'content-length' => '229',
+  'x-original-url' => '/number/allPatientGroup',
+  'postman-token' => 'b5dd49ee-c9d1-8293-5da0-7a67b25bcf41',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+)
+[ info ] [ RUN ] app\home\controller\Number->allPatientGroup[ D:\workLP\xiaojudeng\api\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.051555s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_patient_group` [ RunTime:0.035266s ]
+[ sql ] [ SQL ] SELECT p.`group_id`,p.`group_name`,p.`group_name_eng`,p.`group_member_name`,p.`group_member_id` FROM `jd_patient_group` `p` WHERE  (  p.doctor_id = 70 ) ORDER BY `p`.`add_date`  DESC [ RunTime:0.035758s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.033648s ]
+[ sql ] [ SQL ] SELECT s.`member_id`,m.`true_name`,m.`member_name`,m.`mobile` FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 70 and s.`is_show` = 1 and s.`member_id` = m.`member_id` ) ORDER BY `s`.`inquisition`  DESC [ RunTime:0.033720s ]
+---------------------------------------------------------------
+[ 2018-10-08T13:54:15+08:00 ] 0.0.0.0 POST /number/allPatientGroup
+[ info ] localhost:7062/number/allPatientGroup [运行时间：0.384617s][吞吐率：2.60req/s] [内存消耗：3,165.72kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allPatientGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryOJqAV0PoH13pAnYO',
+  'content-length' => '229',
+  'x-original-url' => '/number/allPatientGroup',
+  'postman-token' => '9868acae-8316-7a13-207a-2842a48fb142',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+)
+[ info ] [ RUN ] app\home\controller\Number->allPatientGroup[ D:\workLP\xiaojudeng\api\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.081443s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_patient_group` [ RunTime:0.053038s ]
+[ sql ] [ SQL ] SELECT p.`group_id`,p.`group_name`,p.`group_name_eng`,p.`group_member_name`,p.`group_member_id` FROM `jd_patient_group` `p` WHERE  (  p.doctor_id = 70 ) ORDER BY `p`.`add_date`  DESC [ RunTime:0.057264s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.056215s ]
+[ sql ] [ SQL ] SELECT s.`member_id`,m.`true_name`,m.`member_name`,m.`mobile` FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 70 and s.`is_show` = 1 and s.`member_id` = m.`member_id` ) ORDER BY `s`.`inquisition`  DESC [ RunTime:0.053413s ]
+---------------------------------------------------------------
+[ 2018-10-08T13:54:46+08:00 ] 0.0.0.0 POST /number/allPatientGroup
+[ info ] localhost:7062/number/allPatientGroup [运行时间：0.256728s][吞吐率：3.90req/s] [内存消耗：3,168.62kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allPatientGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryTLe9PxPqOsakXASg',
+  'content-length' => '229',
+  'x-original-url' => '/number/allPatientGroup',
+  'postman-token' => 'a00633e7-404f-de3e-1e2c-30e488f15224',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+)
+[ info ] [ RUN ] app\home\controller\Number->allPatientGroup[ D:\workLP\xiaojudeng\api\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.054661s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_patient_group` [ RunTime:0.034099s ]
+[ sql ] [ SQL ] SELECT p.`group_id`,p.`group_name`,p.`group_name_eng`,p.`group_member_name`,p.`group_member_id` FROM `jd_patient_group` `p` WHERE  (  p.doctor_id = 70 ) ORDER BY `p`.`add_date`  DESC [ RunTime:0.033173s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.033330s ]
+[ sql ] [ SQL ] SELECT s.`member_id`,m.`true_name`,m.`member_name`,m.`mobile` FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 70 and s.`is_show` = 1 and s.`member_id` = m.`member_id` ) ORDER BY `s`.`inquisition`  DESC [ RunTime:0.036733s ]
+---------------------------------------------------------------
+[ 2018-10-08T13:55:37+08:00 ] 0.0.0.0 POST /number/allPatientGroup
+[ info ] localhost:7062/number/allPatientGroup [运行时间：0.378480s][吞吐率：2.64req/s] [内存消耗：3,168.62kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'number',
+    2 => 'allPatientGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryyB7XrvdpSyF5doQo',
+  'content-length' => '229',
+  'x-original-url' => '/number/allPatientGroup',
+  'postman-token' => '4589f84e-5ee2-7738-3843-35cc32e3b188',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+)
+[ info ] [ RUN ] app\home\controller\Number->allPatientGroup[ D:\workLP\xiaojudeng\api\application\home\controller\Number.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.080694s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_patient_group` [ RunTime:0.053906s ]
+[ sql ] [ SQL ] SELECT p.`group_id`,p.`group_name`,p.`group_name_eng`,p.`group_member_name`,p.`group_member_id` FROM `jd_patient_group` `p` WHERE  (  p.doctor_id = 70 ) ORDER BY `p`.`add_date`  DESC [ RunTime:0.053017s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.055840s ]
+[ sql ] [ SQL ] SELECT s.`member_id`,m.`true_name`,m.`member_name`,m.`mobile` FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 70 and s.`is_show` = 1 and s.`member_id` = m.`member_id` ) ORDER BY `s`.`inquisition`  DESC [ RunTime:0.054394s ]
