@@ -733,6 +733,212 @@ class Inherit extends Common
         }
     }
 
+    public function examine() {
+        if($this->request->isPost())
+        {
+            $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
+
+            if($data['doctor_id']=='' || $data['inherit_id']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+            }
+
+            //检查是否是传承人
+            $existDetail = db('inherit')
+                ->where("member_id = {$data['doctor_id']} AND inherit_id = {$data['inherit_id']} AND is_display = 1")
+                ->field('inherit_id')
+                ->count();
+
+            if (!$existDetail) {
+                ajaxReturn(array('code'=>0, 'info'=>'只有传承人才能进行该操作!','data'=>[]));
+            }
+
+            //查询待审核列表
+            $unExamineList = db('inherit_doctor')->alias('id')
+                ->join(['jd_inherit'=>'i'], 'id.inherit_id = i.inherit_id' , 'inner')
+                ->join(['jd_doctor'=>'d'], 'id.member_id = d.member_id' , 'inner')
+                ->where("id.parent_id = {$data['doctor_id']} AND id.is_checked = 0 AND id.inherit_id = {$data['inherit_id']}")
+                ->field("id.`inherit_doctor_id`, d.`portrait`, d.`member_id`, d.`member_name`, d.`true_name`, d.`is_clinic`, d.`hospital_id`, d.`title_id`, id.`reason`, d.`is_fans`, d.`is_service`, d.`is_comment`")
+                ->order('id.add_date DESC')
+                ->select();
+
+            //查询已通过审核列表
+            $examineList = db('inherit_doctor')->alias('id')
+                ->join(['jd_inherit'=>'i'], 'id.inherit_id = i.inherit_id' , 'inner')
+                ->join(['jd_doctor'=>'d'], 'id.member_id = d.member_id' , 'inner')
+                ->where("id.parent_id = {$data['doctor_id']} AND id.is_checked = 1 AND id.inherit_id = {$data['inherit_id']}")
+                ->field("id.`inherit_doctor_id`, d.`portrait`, d.`member_id`, d.`member_name`, d.`true_name`, d.`is_clinic`, d.`hospital_id`, d.`title_id`, id.`reason`, d.`is_fans`, d.`is_service`, d.`is_comment`")
+                ->order('id.add_date DESC')
+                ->select();
+
+            foreach ($unExamineList as $key=>$value) {
+                //查询医院和职称
+                $hospitalResult = db('hospital')
+                    ->where("hospital_id = {$value['hospital_id']}")
+                    ->field("hospital_name")
+                    ->find();
+                $unExamineList[$key]['hospital_name'] = $hospitalResult['hospital_name'];
+
+                $hospitalResult = db('title')
+                    ->where("title_id = {$value['title_id']}")
+                    ->field("title_name")
+                    ->find();
+                $unExamineList[$key]['title_name'] = $hospitalResult['title_name'];
+
+                //是否有服务包标识
+                $existGoods = db('self_goods')
+                    ->where("member_id = {$value['member_id']} AND content != '' AND is_checked = 2 AND end_date > ".time())
+                    ->field('self_goods_id')
+                    ->count();
+                $existGoods > 0 ? $unExamineList[$key]['has_self_goods'] = 1 : $unExamineList[$key]['has_self_goods'] = 0;
+
+                //粉丝数
+                $unExamineList[$key]['patient'] = Db::table('jd_doctor_member s, jd_member m')
+                    ->where("s.doctor_id = {$value['member_id']} and s.`member_id` = m.`member_id`")
+                    ->count();
+
+                //服务人次
+                $unExamineList[$key]['prescriptions'] = Db::table('jd_order o, jd_order_prescription op')
+                    ->where("o.`order_id` = op.`order_id` and op.`prescription_type` = 0 and o.order_type = 3 and o.doctor_id = {$value['member_id']}")
+                    ->count();
+
+                //评论数
+                $unExamineList[$key]['comment'] = Db::table('jd_service_evaluation s, jd_member m')
+                    ->where("s.is_show = 1 and s.doctor_id = {$value['member_id']} and s.`member_id` = m.`member_id`")
+                    ->count();
+            }
+
+            foreach ($examineList as $key=>$value) {
+                //查询医院和职称
+                $hospitalResult = db('hospital')
+                    ->where("hospital_id = {$value['hospital_id']}")
+                    ->field("hospital_name")
+                    ->find();
+                $examineList[$key]['hospital_name'] = $hospitalResult['hospital_name'];
+
+                $hospitalResult = db('title')
+                    ->where("title_id = {$value['title_id']}")
+                    ->field("title_name")
+                    ->find();
+                $examineList[$key]['title_name'] = $hospitalResult['title_name'];
+
+                //是否有服务包标识
+                $existGoods = db('self_goods')
+                    ->where("member_id = {$value['member_id']} AND content != '' AND is_checked = 2 AND end_date > ".time())
+                    ->field('self_goods_id')
+                    ->count();
+                $existGoods > 0 ? $examineList[$key]['has_self_goods'] = 1 : $examineList[$key]['has_self_goods'] = 0;
+
+                //粉丝数
+                $examineList[$key]['patient'] = Db::table('jd_doctor_member s, jd_member m')
+                    ->where("s.doctor_id = {$value['member_id']} and s.`member_id` = m.`member_id`")
+                    ->count();
+
+                //服务人次
+                $examineList[$key]['prescriptions'] = Db::table('jd_order o, jd_order_prescription op')
+                    ->where("o.`order_id` = op.`order_id` and op.`prescription_type` = 0 and o.order_type = 3 and o.doctor_id = {$value['member_id']}")
+                    ->count();
+
+                //评论数
+                $examineList[$key]['comment'] = Db::table('jd_service_evaluation s, jd_member m')
+                    ->where("s.is_show = 1 and s.doctor_id = {$value['member_id']} and s.`member_id` = m.`member_id`")
+                    ->count();
+            }
+
+            ajaxReturn(array('code'=>1, 'info'=>'ok!','data'=>['unExamineList'=>$unExamineList, 'examineList'=>$examineList]));
+        }
+    }
+
+    //传承审核通过
+    public function adopt() {
+        if($this->request->isPost())
+        {
+            $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
+
+            if($data['doctor_id']=='' || $data['inherit_doctor_id']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+            }
+
+            //检查是否有该申请
+            $existDetail = db('inherit_doctor')
+                ->where("member_id = {$data['doctor_id']} AND inherit_doctor_id = {$data['inherit_doctor_id']} AND is_checked = 0")
+                ->field('inherit_doctor_id')
+                ->count();
+
+            if (!$existDetail) {
+                ajaxReturn(array('code'=>0, 'info'=>'您还未申请加入该传承!','data'=>[]));
+            }
+
+            $map['member_id'] = $data['doctor_id'];
+            $map['inherit_doctor_id'] = $data['inherit_doctor_id'];
+            $temp['operate_date'] = time();
+            $temp['is_checked'] = 1;
+
+            $result = db('inherit_doctor')->where($map)->update($temp);
+
+            if ($result) {
+                //短信和微信通知, 未完成
+
+                ajaxReturn(array('code'=>1, 'info'=>'ok!','data'=>[]));
+            } else {
+                ajaxReturn(array('code'=>0, 'info'=>'服务器繁忙, 请稍后再试!','data'=>[]));
+            }
+        }
+    }
+
+    //将医生移出传承
+    public function remove() {
+        if($this->request->isPost())
+        {
+            $data=input('post.');
+            $res=checkSign($data);
+            if($res['code']==0)
+            {
+                ajaxReturn($res);
+            }
+
+            if($data['doctor_id']=='' || $data['inherit_doctor_id']=='')
+            {
+                ajaxReturn(array('code'=>0,'info'=>'参数不完整','data'=>[]));
+            }
+
+            //检查是否有该申请
+            $existDetail = db('inherit_doctor')
+                ->where("member_id = {$data['doctor_id']} AND inherit_doctor_id = {$data['inherit_doctor_id']} AND is_checked = 1")
+                ->field('inherit_doctor_id')
+                ->count();
+
+            if (!$existDetail) {
+                ajaxReturn(array('code'=>0, 'info'=>'您还未申请加入该传承!','data'=>[]));
+            }
+
+            $map['member_id'] = $data['doctor_id'];
+            $map['inherit_doctor_id'] = $data['inherit_doctor_id'];
+            $temp['operate_date'] = time();
+            $temp['is_checked'] = 1;
+
+            $result = db('inherit_doctor')->where($map)->update($temp);
+
+            if ($result) {
+                //短信和微信通知, 未完成
+
+                ajaxReturn(array('code'=>1, 'info'=>'ok!','data'=>[]));
+            } else {
+                ajaxReturn(array('code'=>0, 'info'=>'服务器繁忙, 请稍后再试!','data'=>[]));
+            }
+        }
+    }
 
 
     /**

@@ -1603,3 +1603,2254 @@
 [ sql ] [ SQL ] SELECT p.`group_id`,p.`group_name`,p.`group_name_eng`,p.`group_member_name`,p.`group_member_id` FROM `jd_patient_group` `p` WHERE  (  p.doctor_id = 70 ) ORDER BY `p`.`add_date`  DESC [ RunTime:0.053017s ]
 [ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.055840s ]
 [ sql ] [ SQL ] SELECT s.`member_id`,m.`true_name`,m.`member_name`,m.`mobile` FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 70 and s.`is_show` = 1 and s.`member_id` = m.`member_id` ) ORDER BY `s`.`inquisition`  DESC [ RunTime:0.054394s ]
+---------------------------------------------------------------
+[ 2018-10-08T15:25:08+08:00 ] 0.0.0.0 POST /inherit/examine
+[ info ] localhost:7062/inherit/examine [运行时间：0.040702s][吞吐率：24.57req/s] [内存消耗：2,120.79kb] [文件加载：44]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'examine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryUO5HIFiK6KEPUYM0',
+  'content-length' => '229',
+  'x-original-url' => '/inherit/examine',
+  'postman-token' => '9c8b4dd2-cef4-8c82-1041-1fb13b37aedc',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->examine[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-08T15:30:23+08:00 ] 0.0.0.0 POST /inherit/examine
+[ info ] localhost:7062/inherit/examine [运行时间：0.218303s][吞吐率：4.58req/s] [内存消耗：3,151.53kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'examine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryfQL4rSH61xBllSnA',
+  'content-length' => '241',
+  'x-original-url' => '/inherit/examine',
+  'postman-token' => 'c79ea61d-f177-dfce-ac75-48f94791c1e2',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+  'inherit_id' => '31',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->examine[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.065727s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.045712s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit` WHERE  (  member_id = 70 AND inherit_id = 31 AND is_display = 1 ) LIMIT 1 [ RunTime:0.049132s ]
+---------------------------------------------------------------
+[ 2018-10-08T15:32:42+08:00 ] 0.0.0.0 POST /inherit/examine
+[ info ] localhost:7062/inherit/examine [运行时间：0.248960s][吞吐率：4.02req/s] [内存消耗：3,151.53kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'examine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryTytAeEsOC9oq7ikR',
+  'content-length' => '241',
+  'x-original-url' => '/inherit/examine',
+  'postman-token' => 'a2364242-1447-c75c-6651-303343599c85',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+  'inherit_id' => '31',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->examine[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.079225s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.056106s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit` WHERE  (  member_id = 70 AND inherit_id = 31 AND is_display = 1 ) LIMIT 1 [ RunTime:0.051768s ]
+---------------------------------------------------------------
+[ 2018-10-08T15:32:44+08:00 ] 0.0.0.0 POST /inherit/examine
+[ info ] localhost:7062/inherit/examine [运行时间：0.219718s][吞吐率：4.55req/s] [内存消耗：3,151.53kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'examine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryEDdiaKrqoZVkF0qL',
+  'content-length' => '241',
+  'x-original-url' => '/inherit/examine',
+  'postman-token' => 'cae77f52-8f77-0c90-0845-f31b909610c8',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+  'inherit_id' => '31',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->examine[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.068186s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.043483s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit` WHERE  (  member_id = 70 AND inherit_id = 31 AND is_display = 1 ) LIMIT 1 [ RunTime:0.044280s ]
+---------------------------------------------------------------
+[ 2018-10-08T15:32:57+08:00 ] 0.0.0.0 POST /inherit/examine
+[ info ] localhost:7062/inherit/examine [运行时间：0.177037s][吞吐率：5.65req/s] [内存消耗：3,152.55kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'examine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryBCc50ZiHt6WEZPBC',
+  'content-length' => '241',
+  'x-original-url' => '/inherit/examine',
+  'postman-token' => 'dce1daaa-66a6-889d-e4f5-b2eeedfbc4fe',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+  'inherit_id' => '31',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->examine[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.051000s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.038222s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit` WHERE  (  member_id = 70 AND inherit_id = 31 AND is_display = 1 ) LIMIT 1 [ RunTime:0.032357s ]
+---------------------------------------------------------------
+[ 2018-10-08T15:33:56+08:00 ] 0.0.0.0 POST /inherit/examine
+[ info ] localhost:7062/inherit/examine [运行时间：0.243032s][吞吐率：4.11req/s] [内存消耗：3,151.54kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'examine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary7Budpl2ccmvLZpIX',
+  'content-length' => '242',
+  'x-original-url' => '/inherit/examine',
+  'postman-token' => 'e9165ea2-4248-cc1f-e916-5149bbfa5b60',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '70',
+  'inherit_id' => '247',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->examine[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.076937s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.052538s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit` WHERE  (  member_id = 70 AND inherit_id = 247 AND is_display = 1 ) LIMIT 1 [ RunTime:0.052268s ]
+---------------------------------------------------------------
+[ 2018-10-08T15:34:06+08:00 ] 0.0.0.0 POST /inherit/examine
+[ info ] localhost:7062/inherit/examine [运行时间：0.252544s][吞吐率：3.96req/s] [内存消耗：3,151.54kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'examine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary9ApISKBJxi0xeXTw',
+  'content-length' => '242',
+  'x-original-url' => '/inherit/examine',
+  'postman-token' => '407759e7-2769-6667-9d4c-2eadabc05eb9',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '247',
+  'inherit_id' => '31',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->examine[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.080460s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.059389s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit` WHERE  (  member_id = 247 AND inherit_id = 31 AND is_display = 1 ) LIMIT 1 [ RunTime:0.053556s ]
+---------------------------------------------------------------
+[ 2018-10-08T16:03:25+08:00 ] 0.0.0.0 POST /inherit/examine
+[ info ] localhost:7062/inherit/examine [运行时间：0.222812s][吞吐率：4.49req/s] [内存消耗：3,156.48kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'examine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryGL1qWKTs4b6UvX9K',
+  'content-length' => '242',
+  'x-original-url' => '/inherit/examine',
+  'postman-token' => '31d2df9c-486b-e12f-0e67-2d0cadc0d69c',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '247',
+  'inherit_id' => '31',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->examine[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.070533s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.045971s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit` WHERE  (  member_id = 247 AND inherit_id = 31 AND is_display = 1 ) LIMIT 1 [ RunTime:0.045559s ]
+---------------------------------------------------------------
+[ 2018-10-08T16:04:13+08:00 ] 0.0.0.0 POST /inherit/examine
+[ info ] localhost:7062/inherit/examine [运行时间：0.271440s][吞吐率：3.68req/s] [内存消耗：3,253.55kb] [文件加载：59]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'examine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryJV8CUpIEpQEiJLrv',
+  'content-length' => '242',
+  'x-original-url' => '/inherit/examine',
+  'postman-token' => 'adf3b9df-d963-eaf4-a973-a2eee858a378',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '247',
+  'inherit_id' => '31',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->examine[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ error ] [8]未定义数组索引: member_id[D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php:765]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') AND id.is_checked = 0 AND id.inherit_id = 31) ) ORDER BY id.add_date DESC' at line 1[D:\workLP\xiaojudeng\api\thinkphp\library\think\db\Connection.php:388]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.060891s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.042641s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit` WHERE  (  member_id = 247 AND inherit_id = 31 AND is_display = 1 ) LIMIT 1 [ RunTime:0.042136s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.041285s ]
+---------------------------------------------------------------
+[ 2018-10-08T16:04:26+08:00 ] 0.0.0.0 POST /inherit/examine
+[ info ] localhost:7062/inherit/examine [运行时间：0.335326s][吞吐率：2.98req/s] [内存消耗：3,253.55kb] [文件加载：59]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'examine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryyzNdd3yERvGuuDW2',
+  'content-length' => '242',
+  'x-original-url' => '/inherit/examine',
+  'postman-token' => '63096fa5-a9f7-24eb-2ca5-55e7885f0480',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '247',
+  'inherit_id' => '31',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->examine[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ error ] [8]未定义数组索引: member_id[D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php:765]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') AND id.is_checked = 0 AND id.inherit_id = 31) ) ORDER BY id.add_date DESC' at line 1[D:\workLP\xiaojudeng\api\thinkphp\library\think\db\Connection.php:388]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.082020s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.054555s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit` WHERE  (  member_id = 247 AND inherit_id = 31 AND is_display = 1 ) LIMIT 1 [ RunTime:0.050998s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.051589s ]
+---------------------------------------------------------------
+[ 2018-10-08T16:06:37+08:00 ] 0.0.0.0 POST /inherit/examine
+[ info ] localhost:7062/inherit/examine [运行时间：0.349769s][吞吐率：2.86req/s] [内存消耗：3,252.98kb] [文件加载：59]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'examine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryk44rOY5J2G8sqB8Z',
+  'content-length' => '242',
+  'x-original-url' => '/inherit/examine',
+  'postman-token' => '1418a583-1583-210e-8bc3-ae8d47a7e178',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '247',
+  'inherit_id' => '31',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->examine[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ORDER BY id.add_date DESC' at line 1[D:\workLP\xiaojudeng\api\thinkphp\library\think\db\Connection.php:388]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.082627s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.058202s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit` WHERE  (  member_id = 247 AND inherit_id = 31 AND is_display = 1 ) LIMIT 1 [ RunTime:0.053269s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.053869s ]
+---------------------------------------------------------------
+[ 2018-10-08T16:07:38+08:00 ] 0.0.0.0 POST /inherit/examine
+[ info ] localhost:7062/inherit/examine [运行时间：0.351946s][吞吐率：2.84req/s] [内存消耗：3,253.55kb] [文件加载：59]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'examine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryctEpL8bRZN5JbAR6',
+  'content-length' => '242',
+  'x-original-url' => '/inherit/examine',
+  'postman-token' => '980ff6f9-c1a5-ec61-ad8a-7944334b4db3',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '247',
+  'inherit_id' => '31',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->examine[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ORDER BY id.add_date DESC' at line 1[D:\workLP\xiaojudeng\api\thinkphp\library\think\db\Connection.php:388]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.081250s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.059294s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit` WHERE  (  member_id = 247 AND inherit_id = 31 AND is_display = 1 ) LIMIT 1 [ RunTime:0.052806s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.055535s ]
+---------------------------------------------------------------
+[ 2018-10-08T16:08:02+08:00 ] 0.0.0.0 POST /inherit/examine
+[ info ] localhost:7062/inherit/examine [运行时间：0.352204s][吞吐率：2.84req/s] [内存消耗：3,253.43kb] [文件加载：59]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'examine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarybUHubEQVEwoiKbn8',
+  'content-length' => '242',
+  'x-original-url' => '/inherit/examine',
+  'postman-token' => '054a67af-8e53-4c9c-c905-a11ff3e32a2e',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '247',
+  'inherit_id' => '31',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->examine[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ORDER BY id.add_date DESC' at line 1[D:\workLP\xiaojudeng\api\thinkphp\library\think\db\Connection.php:388]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.097027s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.053940s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit` WHERE  (  member_id = 247 AND inherit_id = 31 AND is_display = 1 ) LIMIT 1 [ RunTime:0.053298s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.055035s ]
+---------------------------------------------------------------
+[ 2018-10-08T16:08:43+08:00 ] 0.0.0.0 POST /inherit/examine
+[ info ] localhost:7062/inherit/examine [运行时间：0.344577s][吞吐率：2.90req/s] [内存消耗：3,253.55kb] [文件加载：59]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'examine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarykLFPSkYwoG8BYcS0',
+  'content-length' => '242',
+  'x-original-url' => '/inherit/examine',
+  'postman-token' => 'f0f5e8a5-d3da-2eeb-b944-4f49f12a2e45',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '247',
+  'inherit_id' => '31',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->examine[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ORDER BY id.add_date DESC' at line 1[D:\workLP\xiaojudeng\api\thinkphp\library\think\db\Connection.php:388]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.079852s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.054378s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit` WHERE  (  member_id = 247 AND inherit_id = 31 AND is_display = 1 ) LIMIT 1 [ RunTime:0.055917s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.055576s ]
+---------------------------------------------------------------
+[ 2018-10-08T16:10:21+08:00 ] 0.0.0.0 POST /inherit/examine
+[ info ] localhost:7062/inherit/examine [运行时间：0.338698s][吞吐率：2.95req/s] [内存消耗：3,253.55kb] [文件加载：59]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'examine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarySWFlydKm0abBBqUZ',
+  'content-length' => '242',
+  'x-original-url' => '/inherit/examine',
+  'postman-token' => 'ea22bb95-bb0d-74d2-8191-a4c1d4499dc2',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '247',
+  'inherit_id' => '31',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->examine[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ORDER BY id.add_date DESC' at line 1[D:\workLP\xiaojudeng\api\thinkphp\library\think\db\Connection.php:388]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.080843s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.052473s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit` WHERE  (  member_id = 247 AND inherit_id = 31 AND is_display = 1 ) LIMIT 1 [ RunTime:0.051678s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.055278s ]
+---------------------------------------------------------------
+[ 2018-10-08T16:11:01+08:00 ] 0.0.0.0 POST /inherit/examine
+[ info ] localhost:7062/inherit/examine [运行时间：0.248432s][吞吐率：4.03req/s] [内存消耗：3,152.32kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'examine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryxTKnMumEmuLzSWJn',
+  'content-length' => '242',
+  'x-original-url' => '/inherit/examine',
+  'postman-token' => '73a478d6-c8f5-dad8-b65b-e7f017cef197',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '247',
+  'inherit_id' => '31',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->examine[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.082147s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.053249s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit` WHERE  (  member_id = 247 AND inherit_id = 31 AND is_display = 1 ) LIMIT 1 [ RunTime:0.052136s ]
+---------------------------------------------------------------
+[ 2018-10-08T16:13:06+08:00 ] 0.0.0.0 POST /inherit/examine
+[ info ] localhost:7062/inherit/examine [运行时间：0.355970s][吞吐率：2.81req/s] [内存消耗：3,172.72kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'examine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryzlYJnyQXr5Hb4DiA',
+  'content-length' => '242',
+  'x-original-url' => '/inherit/examine',
+  'postman-token' => 'c6971f0b-cf43-5c83-dadc-5a42f83f9f81',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '247',
+  'inherit_id' => '31',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->examine[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.081123s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.056067s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit` WHERE  (  member_id = 247 AND inherit_id = 31 AND is_display = 1 ) LIMIT 1 [ RunTime:0.051907s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.051363s ]
+[ sql ] [ SQL ] SELECT d.`portrait`,d.`member_name`,d.`true_name`,d.`is_clinic`,d.`hospital_id`,d.`title_id`,id.`reason` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.parent_id = 247 AND id.is_checked = 0 AND id.inherit_id = 31 ) ORDER BY id.add_date DESC [ RunTime:0.053173s ]
+---------------------------------------------------------------
+[ 2018-10-08T16:13:24+08:00 ] 0.0.0.0 POST /inherit/examine
+[ info ] localhost:7062/inherit/examine [运行时间：0.303452s][吞吐率：3.30req/s] [内存消耗：3,172.72kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'examine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryL0l9j8vutRyaKX8i',
+  'content-length' => '242',
+  'x-original-url' => '/inherit/examine',
+  'postman-token' => 'cdb4d752-1485-8485-86fe-1f337f66e1bd',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '247',
+  'inherit_id' => '31',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->examine[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.067671s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.043574s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit` WHERE  (  member_id = 247 AND inherit_id = 31 AND is_display = 1 ) LIMIT 1 [ RunTime:0.041953s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.041363s ]
+[ sql ] [ SQL ] SELECT d.`portrait`,d.`member_name`,d.`true_name`,d.`is_clinic`,d.`hospital_id`,d.`title_id`,id.`reason` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.parent_id = 247 AND id.is_checked = 0 AND id.inherit_id = 31 ) ORDER BY id.add_date DESC [ RunTime:0.046357s ]
+---------------------------------------------------------------
+[ 2018-10-08T16:13:26+08:00 ] 0.0.0.0 POST /inherit/examine
+[ info ] localhost:7062/inherit/examine [运行时间：0.302111s][吞吐率：3.31req/s] [内存消耗：3,172.53kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'examine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryOni4CfkKXB5GA4hS',
+  'content-length' => '242',
+  'x-original-url' => '/inherit/examine',
+  'postman-token' => '8dc25d89-cd81-d62b-cc4f-65298afddc44',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '247',
+  'inherit_id' => '31',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->examine[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.062500s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.043613s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit` WHERE  (  member_id = 247 AND inherit_id = 31 AND is_display = 1 ) LIMIT 1 [ RunTime:0.046110s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.044445s ]
+[ sql ] [ SQL ] SELECT d.`portrait`,d.`member_name`,d.`true_name`,d.`is_clinic`,d.`hospital_id`,d.`title_id`,id.`reason` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.parent_id = 247 AND id.is_checked = 0 AND id.inherit_id = 31 ) ORDER BY id.add_date DESC [ RunTime:0.044330s ]
+---------------------------------------------------------------
+[ 2018-10-08T16:13:27+08:00 ] 0.0.0.0 POST /inherit/examine
+[ info ] localhost:7062/inherit/examine [运行时间：0.367685s][吞吐率：2.72req/s] [内存消耗：3,172.53kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'examine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary4H4l8iJkBGBsAQL7',
+  'content-length' => '242',
+  'x-original-url' => '/inherit/examine',
+  'postman-token' => 'd49a8e24-49d0-0f6a-9840-11a7f1c6cbc0',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '247',
+  'inherit_id' => '31',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->examine[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.080074s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.055999s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit` WHERE  (  member_id = 247 AND inherit_id = 31 AND is_display = 1 ) LIMIT 1 [ RunTime:0.052796s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.053837s ]
+[ sql ] [ SQL ] SELECT d.`portrait`,d.`member_name`,d.`true_name`,d.`is_clinic`,d.`hospital_id`,d.`title_id`,id.`reason` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.parent_id = 247 AND id.is_checked = 0 AND id.inherit_id = 31 ) ORDER BY id.add_date DESC [ RunTime:0.057202s ]
+---------------------------------------------------------------
+[ 2018-10-08T16:17:22+08:00 ] 0.0.0.0 POST /inherit/applyInherit
+[ info ] localhost:7062/inherit/applyInherit [运行时间：0.247270s][吞吐率：4.04req/s] [内存消耗：3,150.53kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'applyInherit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary7QRcAamGPzV3ZBKX',
+  'content-length' => '347',
+  'x-original-url' => '/inherit/applyInherit',
+  'postman-token' => '17767363-b572-8fe6-783b-ba1e9b69cd32',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '237',
+  'inherit_id' => '31',
+  'reason' => '这是理由',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->applyInherit[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.078673s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.054020s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit_doctor` WHERE  (  member_id = 237 AND inherit_id = 31 AND is_checked IN(0, 1) ) LIMIT 1 [ RunTime:0.052944s ]
+---------------------------------------------------------------
+[ 2018-10-08T16:17:47+08:00 ] 0.0.0.0 POST /inherit/applyInherit
+[ info ] localhost:7062/inherit/applyInherit [运行时间：0.621808s][吞吐率：1.61req/s] [内存消耗：3,960.02kb] [文件加载：66]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'applyInherit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryX5UpfydMycXaUuKb',
+  'content-length' => '347',
+  'x-original-url' => '/inherit/applyInherit',
+  'postman-token' => 'aa7b50b1-5b4c-a8ba-91b2-a98b365a44ec',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'member_id' => '239',
+  'inherit_id' => '31',
+  'reason' => '这是理由',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->applyInherit[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.080470s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.052992s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit_doctor` WHERE  (  member_id = 239 AND inherit_id = 31 AND is_checked IN(0, 1) ) LIMIT 1 [ RunTime:0.051941s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.053773s ]
+[ sql ] [ SQL ] SELECT `member_id` FROM `jd_inherit` WHERE  (  inherit_id = 31 AND is_display = 1 ) LIMIT 1 [ RunTime:0.054708s ]
+[ sql ] [ SQL ] INSERT INTO `jd_inherit_doctor` (`parent_id` , `inherit_id` , `member_id` , `reason` , `add_date` , `img_url`) VALUES (247 , 31 , 239 , '这是理由' , 1538986667 , 'http://api.judeng.net/uploads/code/1538986667code.png') [ RunTime:0.062079s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_sdoctor` [ RunTime:0.053522s ]
+[ sql ] [ SQL ] INSERT INTO `jd_inherit_sdoctor` (`parent_id` , `inherit_id` , `member_id` , `reason` , `add_date` , `img_url`) VALUES (247 , 31 , 239 , '这是理由' , 1538986667 , 'http://api.judeng.net/uploads/code/1538986667code.png') [ RunTime:0.072488s ]
+---------------------------------------------------------------
+[ 2018-10-08T16:18:02+08:00 ] 0.0.0.0 POST /inherit/examine
+[ info ] localhost:7062/inherit/examine [运行时间：0.265552s][吞吐率：3.77req/s] [内存消耗：3,156.52kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'examine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryLzGnAso50A4NVnb8',
+  'content-length' => '242',
+  'x-original-url' => '/inherit/examine',
+  'postman-token' => '4a162fe5-c3f9-b79b-11ef-d1509363b5dc',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '239',
+  'inherit_id' => '31',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->examine[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.099633s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.052309s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit` WHERE  (  member_id = 239 AND inherit_id = 31 AND is_display = 1 ) LIMIT 1 [ RunTime:0.051233s ]
+---------------------------------------------------------------
+[ 2018-10-08T16:18:17+08:00 ] 0.0.0.0 POST /inherit/examine
+[ info ] localhost:7062/inherit/examine [运行时间：0.371340s][吞吐率：2.69req/s] [内存消耗：3,174.05kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'examine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryfMIyeAW04e6UU24t',
+  'content-length' => '242',
+  'x-original-url' => '/inherit/examine',
+  'postman-token' => 'f9fe72a0-e725-ffe7-5f96-95e85a43806e',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '247',
+  'inherit_id' => '31',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->examine[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.082062s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.054642s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit` WHERE  (  member_id = 247 AND inherit_id = 31 AND is_display = 1 ) LIMIT 1 [ RunTime:0.053092s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.054773s ]
+[ sql ] [ SQL ] SELECT d.`portrait`,d.`member_name`,d.`true_name`,d.`is_clinic`,d.`hospital_id`,d.`title_id`,id.`reason` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.parent_id = 247 AND id.is_checked = 0 AND id.inherit_id = 31 ) ORDER BY id.add_date DESC [ RunTime:0.060034s ]
+---------------------------------------------------------------
+[ 2018-10-08T16:22:47+08:00 ] 0.0.0.0 POST /inherit/examine
+[ info ] localhost:7062/inherit/examine [运行时间：0.480988s][吞吐率：2.08req/s] [内存消耗：3,181.93kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'examine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryKnE0AlolgxbbUfT4',
+  'content-length' => '242',
+  'x-original-url' => '/inherit/examine',
+  'postman-token' => '86870041-27e7-3f99-ae2e-193812f0be39',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '247',
+  'inherit_id' => '31',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->examine[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.081174s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.055281s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit` WHERE  (  member_id = 247 AND inherit_id = 31 AND is_display = 1 ) LIMIT 1 [ RunTime:0.051204s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.053318s ]
+[ sql ] [ SQL ] SELECT d.`portrait`,d.`member_name`,d.`true_name`,d.`is_clinic`,d.`hospital_id`,d.`title_id`,id.`reason` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.parent_id = 247 AND id.is_checked = 0 AND id.inherit_id = 31 ) ORDER BY id.add_date DESC [ RunTime:0.063071s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital` [ RunTime:0.055174s ]
+[ sql ] [ SQL ] SELECT `hospital_name` FROM `jd_hospital` WHERE  (  hospital_id = 17367 ) LIMIT 1 [ RunTime:0.054748s ]
+---------------------------------------------------------------
+[ 2018-10-08T16:23:17+08:00 ] 0.0.0.0 POST /inherit/examine
+[ info ] localhost:7062/inherit/examine [运行时间：0.460931s][吞吐率：2.17req/s] [内存消耗：3,182.05kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'examine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryC5Epv25AYCQSrFMV',
+  'content-length' => '242',
+  'x-original-url' => '/inherit/examine',
+  'postman-token' => '0098014f-01cf-8e41-09dd-8ebe90a8eeb4',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '247',
+  'inherit_id' => '31',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->examine[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.078760s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.055288s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit` WHERE  (  member_id = 247 AND inherit_id = 31 AND is_display = 1 ) LIMIT 1 [ RunTime:0.053796s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.054027s ]
+[ sql ] [ SQL ] SELECT d.`portrait`,d.`member_name`,d.`true_name`,d.`is_clinic`,d.`hospital_id`,d.`title_id`,id.`reason` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.parent_id = 247 AND id.is_checked = 0 AND id.inherit_id = 31 ) ORDER BY id.add_date DESC [ RunTime:0.052162s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital` [ RunTime:0.054456s ]
+[ sql ] [ SQL ] SELECT `hospital_name` FROM `jd_hospital` WHERE  (  hospital_id = 17367 ) LIMIT 1 [ RunTime:0.051811s ]
+---------------------------------------------------------------
+[ 2018-10-08T16:25:45+08:00 ] 0.0.0.0 POST /inherit/examine
+[ info ] localhost:7062/inherit/examine [运行时间：0.368961s][吞吐率：2.71req/s] [内存消耗：3,176.46kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'examine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryarBNy83zgjtzniHt',
+  'content-length' => '242',
+  'x-original-url' => '/inherit/examine',
+  'postman-token' => 'dc6cb22d-bd1a-9571-6c45-f6ff9192eff7',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '247',
+  'inherit_id' => '31',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->examine[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.081923s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.055797s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit` WHERE  (  member_id = 247 AND inherit_id = 31 AND is_display = 1 ) LIMIT 1 [ RunTime:0.055750s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.052600s ]
+[ sql ] [ SQL ] SELECT d.`portrait`,d.`member_name`,d.`true_name`,d.`is_clinic`,d.`hospital_id`,d.`title_id`,id.`reason` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.parent_id = 247 AND id.is_checked = 0 AND id.inherit_id = 31 ) ORDER BY id.add_date DESC [ RunTime:0.054951s ]
+---------------------------------------------------------------
+[ 2018-10-08T16:27:30+08:00 ] 0.0.0.0 POST /inherit/examine
+[ info ] localhost:7062/inherit/examine [运行时间：0.463326s][吞吐率：2.16req/s] [内存消耗：3,182.52kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'examine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryE8fwerikyQ5yE7Zx',
+  'content-length' => '242',
+  'x-original-url' => '/inherit/examine',
+  'postman-token' => '2069a7c4-792b-aa02-bc1e-69ea3e696f47',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '247',
+  'inherit_id' => '31',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->examine[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.079417s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.053329s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit` WHERE  (  member_id = 247 AND inherit_id = 31 AND is_display = 1 ) LIMIT 1 [ RunTime:0.053750s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.053451s ]
+[ sql ] [ SQL ] SELECT d.`portrait`,d.`member_name`,d.`true_name`,d.`is_clinic`,d.`hospital_id`,d.`title_id`,id.`reason` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.parent_id = 247 AND id.is_checked = 0 AND id.inherit_id = 31 ) ORDER BY id.add_date DESC [ RunTime:0.055522s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital` [ RunTime:0.053648s ]
+[ sql ] [ SQL ] SELECT `hospital_name` FROM `jd_hospital` WHERE  (  hospital_id = 7 ) LIMIT 1 [ RunTime:0.053721s ]
+---------------------------------------------------------------
+[ 2018-10-08T16:27:41+08:00 ] 0.0.0.0 POST /inherit/examine
+[ info ] localhost:7062/inherit/examine [运行时间：0.470871s][吞吐率：2.12req/s] [内存消耗：3,182.52kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'examine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary2HH3aHVEOtlQGFYU',
+  'content-length' => '242',
+  'x-original-url' => '/inherit/examine',
+  'postman-token' => '8c82e1e1-1e1f-1395-7beb-816ce7f81e96',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '247',
+  'inherit_id' => '31',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->examine[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.080649s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.053848s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit` WHERE  (  member_id = 247 AND inherit_id = 31 AND is_display = 1 ) LIMIT 1 [ RunTime:0.051348s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.053398s ]
+[ sql ] [ SQL ] SELECT d.`portrait`,d.`member_name`,d.`true_name`,d.`is_clinic`,d.`hospital_id`,d.`title_id`,id.`reason` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.parent_id = 247 AND id.is_checked = 0 AND id.inherit_id = 31 ) ORDER BY id.add_date DESC [ RunTime:0.055091s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital` [ RunTime:0.055388s ]
+[ sql ] [ SQL ] SELECT `hospital_name` FROM `jd_hospital` WHERE  (  hospital_id = 7 ) LIMIT 1 [ RunTime:0.055100s ]
+---------------------------------------------------------------
+[ 2018-10-08T16:28:38+08:00 ] 0.0.0.0 POST /inherit/examine
+[ info ] localhost:7062/inherit/examine [运行时间：0.466101s][吞吐率：2.15req/s] [内存消耗：3,182.40kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'examine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarynv6L7bvduAdRHsXq',
+  'content-length' => '242',
+  'x-original-url' => '/inherit/examine',
+  'postman-token' => '11cae822-26bc-c080-e4ad-12cb4c081b47',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '247',
+  'inherit_id' => '31',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->examine[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.079936s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.053443s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit` WHERE  (  member_id = 247 AND inherit_id = 31 AND is_display = 1 ) LIMIT 1 [ RunTime:0.056374s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.052820s ]
+[ sql ] [ SQL ] SELECT d.`portrait`,d.`member_name`,d.`true_name`,d.`is_clinic`,d.`hospital_id`,d.`title_id`,id.`reason` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.parent_id = 247 AND id.is_checked = 0 AND id.inherit_id = 31 ) ORDER BY id.add_date DESC [ RunTime:0.055604s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital` [ RunTime:0.054694s ]
+[ sql ] [ SQL ] SELECT `hospital_name` FROM `jd_hospital` WHERE  (  hospital_id = 7 ) LIMIT 1 [ RunTime:0.052417s ]
+---------------------------------------------------------------
+[ 2018-10-08T16:29:31+08:00 ] 0.0.0.0 POST /inherit/examine
+[ info ] localhost:7062/inherit/examine [运行时间：0.477758s][吞吐率：2.09req/s] [内存消耗：3,183.13kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'examine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryF3EjxaR1ABRvTKbh',
+  'content-length' => '242',
+  'x-original-url' => '/inherit/examine',
+  'postman-token' => 'f2cf326d-d525-dcd5-bb02-df7b1e39dc91',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '247',
+  'inherit_id' => '31',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->examine[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.090212s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.055759s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit` WHERE  (  member_id = 247 AND inherit_id = 31 AND is_display = 1 ) LIMIT 1 [ RunTime:0.051941s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.054690s ]
+[ sql ] [ SQL ] SELECT d.`portrait`,d.`member_name`,d.`true_name`,d.`is_clinic`,d.`hospital_id`,d.`title_id`,id.`reason` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.parent_id = 247 AND id.is_checked = 0 AND id.inherit_id = 31 ) ORDER BY id.add_date DESC [ RunTime:0.054852s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital` [ RunTime:0.054965s ]
+[ sql ] [ SQL ] SELECT `hospital_name` FROM `jd_hospital` WHERE  (  hospital_id = 7 ) LIMIT 1 [ RunTime:0.052993s ]
+---------------------------------------------------------------
+[ 2018-10-08T16:31:01+08:00 ] 0.0.0.0 POST /inherit/examine
+[ info ] localhost:7062/inherit/examine [运行时间：0.468169s][吞吐率：2.14req/s] [内存消耗：3,192.85kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'examine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryZxxoqIbo6lCce9HN',
+  'content-length' => '242',
+  'x-original-url' => '/inherit/examine',
+  'postman-token' => 'f022fa17-6ad4-3188-e356-6ddc03b77d11',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '247',
+  'inherit_id' => '31',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->examine[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.065176s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.042181s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit` WHERE  (  member_id = 247 AND inherit_id = 31 AND is_display = 1 ) LIMIT 1 [ RunTime:0.041800s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.041259s ]
+[ sql ] [ SQL ] SELECT d.`portrait`,d.`member_name`,d.`true_name`,d.`is_clinic`,d.`hospital_id`,d.`title_id`,id.`reason` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.parent_id = 247 AND id.is_checked = 0 AND id.inherit_id = 31 ) ORDER BY id.add_date DESC [ RunTime:0.043464s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital` [ RunTime:0.043472s ]
+[ sql ] [ SQL ] SELECT `hospital_name` FROM `jd_hospital` WHERE  (  hospital_id = 7 ) LIMIT 1 [ RunTime:0.041833s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_title` [ RunTime:0.042725s ]
+[ sql ] [ SQL ] SELECT `title_name` FROM `jd_title` WHERE  (  title_id = 19 ) LIMIT 1 [ RunTime:0.042423s ]
+---------------------------------------------------------------
+[ 2018-10-08T16:38:10+08:00 ] 0.0.0.0 POST /inherit/examine
+[ info ] localhost:7062/inherit/examine [运行时间：0.518826s][吞吐率：1.93req/s] [内存消耗：3,296.84kb] [文件加载：59]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'examine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryvs9SVLbSZHPD3k7V',
+  'content-length' => '242',
+  'x-original-url' => '/inherit/examine',
+  'postman-token' => '135dbe37-80ea-cd2a-51b5-649331907669',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '247',
+  'inherit_id' => '31',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->examine[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ error ] [8]未定义数组索引: member_id[D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php:786]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND content != '' AND is_checked = 2 AND end_date > 1538987890 ) LIMIT 1' at line 1[D:\workLP\xiaojudeng\api\thinkphp\library\think\db\Connection.php:388]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.060397s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.041271s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit` WHERE  (  member_id = 247 AND inherit_id = 31 AND is_display = 1 ) LIMIT 1 [ RunTime:0.042280s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.042672s ]
+[ sql ] [ SQL ] SELECT d.`portrait`,d.`member_name`,d.`true_name`,d.`is_clinic`,d.`hospital_id`,d.`title_id`,id.`reason` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.parent_id = 247 AND id.is_checked = 0 AND id.inherit_id = 31 ) ORDER BY id.add_date DESC [ RunTime:0.040778s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital` [ RunTime:0.040804s ]
+[ sql ] [ SQL ] SELECT `hospital_name` FROM `jd_hospital` WHERE  (  hospital_id = 7 ) LIMIT 1 [ RunTime:0.040603s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_title` [ RunTime:0.040367s ]
+[ sql ] [ SQL ] SELECT `title_name` FROM `jd_title` WHERE  (  title_id = 19 ) LIMIT 1 [ RunTime:0.039792s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_self_goods` [ RunTime:0.040606s ]
+---------------------------------------------------------------
+[ 2018-10-08T16:40:03+08:00 ] 0.0.0.0 POST /inherit/examine
+[ info ] localhost:7062/inherit/examine [运行时间：0.579213s][吞吐率：1.73req/s] [内存消耗：3,214.27kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'examine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryzInBCBa0nRQ21bMt',
+  'content-length' => '242',
+  'x-original-url' => '/inherit/examine',
+  'postman-token' => '8505068a-4d2e-9814-a92e-378528d6c51d',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '247',
+  'inherit_id' => '31',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->examine[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.065094s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.044570s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit` WHERE  (  member_id = 247 AND inherit_id = 31 AND is_display = 1 ) LIMIT 1 [ RunTime:0.044479s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.047040s ]
+[ sql ] [ SQL ] SELECT d.`portrait`,d.`member_id`,d.`member_name`,d.`true_name`,d.`is_clinic`,d.`hospital_id`,d.`title_id`,id.`reason` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.parent_id = 247 AND id.is_checked = 0 AND id.inherit_id = 31 ) ORDER BY id.add_date DESC [ RunTime:0.045984s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital` [ RunTime:0.045064s ]
+[ sql ] [ SQL ] SELECT `hospital_name` FROM `jd_hospital` WHERE  (  hospital_id = 7 ) LIMIT 1 [ RunTime:0.047343s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_title` [ RunTime:0.042751s ]
+[ sql ] [ SQL ] SELECT `title_name` FROM `jd_title` WHERE  (  title_id = 19 ) LIMIT 1 [ RunTime:0.042733s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_self_goods` [ RunTime:0.045111s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 239 AND content != '' AND is_checked = 2 AND end_date > 1538988003 ) LIMIT 1 [ RunTime:0.050190s ]
+---------------------------------------------------------------
+[ 2018-10-08T16:42:35+08:00 ] 0.0.0.0 POST /inherit/examine
+[ info ] localhost:7062/inherit/examine [运行时间：0.898891s][吞吐率：1.11req/s] [内存消耗：3,259.08kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'examine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryMfqaTiuagEyfbTHU',
+  'content-length' => '242',
+  'x-original-url' => '/inherit/examine',
+  'postman-token' => 'a91f9fb1-1c29-8fa5-97ca-1e85451648ba',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '247',
+  'inherit_id' => '31',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->examine[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.065905s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.053635s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit` WHERE  (  member_id = 247 AND inherit_id = 31 AND is_display = 1 ) LIMIT 1 [ RunTime:0.045353s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.044312s ]
+[ sql ] [ SQL ] SELECT d.`portrait`,d.`member_id`,d.`member_name`,d.`true_name`,d.`is_clinic`,d.`hospital_id`,d.`title_id`,id.`reason` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.parent_id = 247 AND id.is_checked = 0 AND id.inherit_id = 31 ) ORDER BY id.add_date DESC [ RunTime:0.045794s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital` [ RunTime:0.047306s ]
+[ sql ] [ SQL ] SELECT `hospital_name` FROM `jd_hospital` WHERE  (  hospital_id = 7 ) LIMIT 1 [ RunTime:0.044044s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_title` [ RunTime:0.044670s ]
+[ sql ] [ SQL ] SELECT `title_name` FROM `jd_title` WHERE  (  title_id = 19 ) LIMIT 1 [ RunTime:0.043475s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_self_goods` [ RunTime:0.045396s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 239 AND content != '' AND is_checked = 2 AND end_date > 1538988155 ) LIMIT 1 [ RunTime:0.043908s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.044988s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 239 and s.`member_id` = m.`member_id` ) LIMIT 1 [ RunTime:0.043822s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.044225s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_order` `o`,`jd_order_prescription` `op` WHERE  (  o.`order_id` = op.`order_id` and op.`prescription_type` = 0 and o.order_type = 3 and o.doctor_id = 239 ) LIMIT 1 [ RunTime:0.084397s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_service_evaluation` [ RunTime:0.045191s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_service_evaluation` `s`,`jd_member` `m` WHERE  (  s.is_show = 1 and s.doctor_id = 239 and s.`member_id` = m.`member_id` ) LIMIT 1 [ RunTime:0.045886s ]
+---------------------------------------------------------------
+[ 2018-10-08T17:20:56+08:00 ] 0.0.0.0 POST /inherit/examine
+[ info ] localhost:7062/inherit/examine [运行时间：0.422497s][吞吐率：2.37req/s] [内存消耗：3,188.89kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'examine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarySulXA9k0wBrSHbwe',
+  'content-length' => '242',
+  'x-original-url' => '/inherit/examine',
+  'postman-token' => '2695b5bd-063e-148c-c6a3-e8ed2b1ea1cb',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '247',
+  'inherit_id' => '31',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->examine[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.082238s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.055397s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit` WHERE  (  member_id = 247 AND inherit_id = 31 AND is_display = 1 ) LIMIT 1 [ RunTime:0.062969s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.054078s ]
+[ sql ] [ SQL ] SELECT d.`portrait`,d.`member_id`,d.`member_name`,d.`true_name`,d.`is_clinic`,d.`hospital_id`,d.`title_id`,id.`reason` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.parent_id = 247 AND id.is_checked = 0 AND id.inherit_id = 31 ) ORDER BY id.add_date DESC [ RunTime:0.055671s ]
+[ sql ] [ SQL ] SELECT d.`portrait`,d.`member_id`,d.`member_name`,d.`true_name`,d.`is_clinic`,d.`hospital_id`,d.`title_id`,id.`reason` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.parent_id = 247 AND id.is_checked = 1 AND id.inherit_id = 31 ) ORDER BY id.add_date DESC [ RunTime:0.053510s ]
+---------------------------------------------------------------
+[ 2018-10-08T17:21:29+08:00 ] 0.0.0.0 POST /inherit/examine
+[ info ] localhost:7062/inherit/examine [运行时间：0.407768s][吞吐率：2.45req/s] [内存消耗：3,189.45kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'examine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryFWqFojdAXHw1WHGF',
+  'content-length' => '242',
+  'x-original-url' => '/inherit/examine',
+  'postman-token' => '02db4c58-1469-1924-10fe-dc15ddaeec81',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '247',
+  'inherit_id' => '31',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->examine[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.078813s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.053747s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit` WHERE  (  member_id = 247 AND inherit_id = 31 AND is_display = 1 ) LIMIT 1 [ RunTime:0.051403s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.053846s ]
+[ sql ] [ SQL ] SELECT d.`portrait`,d.`member_id`,d.`member_name`,d.`true_name`,d.`is_clinic`,d.`hospital_id`,d.`title_id`,id.`reason` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.parent_id = 247 AND id.is_checked = 0 AND id.inherit_id = 31 ) ORDER BY id.add_date DESC [ RunTime:0.054113s ]
+[ sql ] [ SQL ] SELECT d.`portrait`,d.`member_id`,d.`member_name`,d.`true_name`,d.`is_clinic`,d.`hospital_id`,d.`title_id`,id.`reason` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.parent_id = 247 AND id.is_checked = 1 AND id.inherit_id = 31 ) ORDER BY id.add_date DESC [ RunTime:0.054242s ]
+---------------------------------------------------------------
+[ 2018-10-08T17:21:31+08:00 ] 0.0.0.0 POST /inherit/examine
+[ info ] localhost:7062/inherit/examine [运行时间：0.349747s][吞吐率：2.86req/s] [内存消耗：3,189.45kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'examine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryr0P5pLgnwLRDFBYg',
+  'content-length' => '242',
+  'x-original-url' => '/inherit/examine',
+  'postman-token' => '7d1b87ca-8cf0-b0a1-9b0c-1af6e9662680',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '247',
+  'inherit_id' => '31',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->examine[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.076911s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.040753s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit` WHERE  (  member_id = 247 AND inherit_id = 31 AND is_display = 1 ) LIMIT 1 [ RunTime:0.040371s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.041837s ]
+[ sql ] [ SQL ] SELECT d.`portrait`,d.`member_id`,d.`member_name`,d.`true_name`,d.`is_clinic`,d.`hospital_id`,d.`title_id`,id.`reason` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.parent_id = 247 AND id.is_checked = 0 AND id.inherit_id = 31 ) ORDER BY id.add_date DESC [ RunTime:0.041165s ]
+[ sql ] [ SQL ] SELECT d.`portrait`,d.`member_id`,d.`member_name`,d.`true_name`,d.`is_clinic`,d.`hospital_id`,d.`title_id`,id.`reason` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.parent_id = 247 AND id.is_checked = 1 AND id.inherit_id = 31 ) ORDER BY id.add_date DESC [ RunTime:0.042120s ]
+---------------------------------------------------------------
+[ 2018-10-08T17:21:45+08:00 ] 0.0.0.0 POST /inherit/examine
+[ info ] localhost:7062/inherit/examine [运行时间：0.358206s][吞吐率：2.79req/s] [内存消耗：3,189.75kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'examine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarye5acNBr9jGW8J81f',
+  'content-length' => '242',
+  'x-original-url' => '/inherit/examine',
+  'postman-token' => '00141770-1d99-115e-1503-9c2b7db13231',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '247',
+  'inherit_id' => '31',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->examine[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.065882s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.043614s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit` WHERE  (  member_id = 247 AND inherit_id = 31 AND is_display = 1 ) LIMIT 1 [ RunTime:0.042935s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.043158s ]
+[ sql ] [ SQL ] SELECT d.`portrait`,d.`member_id`,d.`member_name`,d.`true_name`,d.`is_clinic`,d.`hospital_id`,d.`title_id`,id.`reason` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.parent_id = 247 AND id.is_checked = 0 AND id.inherit_id = 31 ) ORDER BY id.add_date DESC [ RunTime:0.050109s ]
+[ sql ] [ SQL ] SELECT d.`portrait`,d.`member_id`,d.`member_name`,d.`true_name`,d.`is_clinic`,d.`hospital_id`,d.`title_id`,id.`reason` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.parent_id = 247 AND id.is_checked = 1 AND id.inherit_id = 31 ) ORDER BY id.add_date DESC [ RunTime:0.045593s ]
+---------------------------------------------------------------
+[ 2018-10-08T17:22:39+08:00 ] 0.0.0.0 POST /inherit/examine
+[ info ] localhost:7062/inherit/examine [运行时间：1.089322s][吞吐率：0.92req/s] [内存消耗：3,273.43kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'examine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryCuTBdbdMCIBdIk99',
+  'content-length' => '242',
+  'x-original-url' => '/inherit/examine',
+  'postman-token' => '37f4c5da-f345-38bf-2268-01b3a06d0ade',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '247',
+  'inherit_id' => '31',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->examine[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.083588s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.056217s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit` WHERE  (  member_id = 247 AND inherit_id = 31 AND is_display = 1 ) LIMIT 1 [ RunTime:0.053882s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.056858s ]
+[ sql ] [ SQL ] SELECT d.`portrait`,d.`member_id`,d.`member_name`,d.`true_name`,d.`is_clinic`,d.`hospital_id`,d.`title_id`,id.`reason` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.parent_id = 247 AND id.is_checked = 0 AND id.inherit_id = 31 ) ORDER BY id.add_date DESC [ RunTime:0.054064s ]
+[ sql ] [ SQL ] SELECT d.`portrait`,d.`member_id`,d.`member_name`,d.`true_name`,d.`is_clinic`,d.`hospital_id`,d.`title_id`,id.`reason` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.parent_id = 247 AND id.is_checked = 1 AND id.inherit_id = 31 ) ORDER BY id.add_date DESC [ RunTime:0.053430s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital` [ RunTime:0.054109s ]
+[ sql ] [ SQL ] SELECT `hospital_name` FROM `jd_hospital` WHERE  (  hospital_id = 7 ) LIMIT 1 [ RunTime:0.053546s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_title` [ RunTime:0.054520s ]
+[ sql ] [ SQL ] SELECT `title_name` FROM `jd_title` WHERE  (  title_id = 19 ) LIMIT 1 [ RunTime:0.053055s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_self_goods` [ RunTime:0.054072s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 239 AND content != '' AND is_checked = 2 AND end_date > 1538990559 ) LIMIT 1 [ RunTime:0.054759s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.054689s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 239 and s.`member_id` = m.`member_id` ) LIMIT 1 [ RunTime:0.053632s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.052883s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_order` `o`,`jd_order_prescription` `op` WHERE  (  o.`order_id` = op.`order_id` and op.`prescription_type` = 0 and o.order_type = 3 and o.doctor_id = 239 ) LIMIT 1 [ RunTime:0.053454s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_service_evaluation` [ RunTime:0.054321s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_service_evaluation` `s`,`jd_member` `m` WHERE  (  s.is_show = 1 and s.doctor_id = 239 and s.`member_id` = m.`member_id` ) LIMIT 1 [ RunTime:0.053115s ]
+---------------------------------------------------------------
+[ 2018-10-08T17:24:33+08:00 ] 0.0.0.0 POST /inherit/examine
+[ info ] localhost:7062/inherit/examine [运行时间：0.915554s][吞吐率：1.09req/s] [内存消耗：3,269.27kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'examine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary8RuxXovSt2eRkPcL',
+  'content-length' => '242',
+  'x-original-url' => '/inherit/examine',
+  'postman-token' => '1122a9f2-fca3-6f44-5602-fe0ebaba1585',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '247',
+  'inherit_id' => '31',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->examine[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.067447s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.045431s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit` WHERE  (  member_id = 247 AND inherit_id = 31 AND is_display = 1 ) LIMIT 1 [ RunTime:0.045780s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.045086s ]
+[ sql ] [ SQL ] SELECT d.`portrait`,d.`member_id`,d.`member_name`,d.`true_name`,d.`is_clinic`,d.`hospital_id`,d.`title_id`,id.`reason` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.parent_id = 247 AND id.is_checked = 0 AND id.inherit_id = 31 ) ORDER BY id.add_date DESC [ RunTime:0.047516s ]
+[ sql ] [ SQL ] SELECT d.`portrait`,d.`member_id`,d.`member_name`,d.`true_name`,d.`is_clinic`,d.`hospital_id`,d.`title_id`,id.`reason` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.parent_id = 247 AND id.is_checked = 1 AND id.inherit_id = 31 ) ORDER BY id.add_date DESC [ RunTime:0.044779s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital` [ RunTime:0.043876s ]
+[ sql ] [ SQL ] SELECT `hospital_name` FROM `jd_hospital` WHERE  (  hospital_id = 7 ) LIMIT 1 [ RunTime:0.044588s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_title` [ RunTime:0.044715s ]
+[ sql ] [ SQL ] SELECT `title_name` FROM `jd_title` WHERE  (  title_id = 19 ) LIMIT 1 [ RunTime:0.043740s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_self_goods` [ RunTime:0.044423s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 239 AND content != '' AND is_checked = 2 AND end_date > 1538990672 ) LIMIT 1 [ RunTime:0.044569s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.044868s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 239 and s.`member_id` = m.`member_id` ) LIMIT 1 [ RunTime:0.044657s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.045874s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_order` `o`,`jd_order_prescription` `op` WHERE  (  o.`order_id` = op.`order_id` and op.`prescription_type` = 0 and o.order_type = 3 and o.doctor_id = 239 ) LIMIT 1 [ RunTime:0.045590s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_service_evaluation` [ RunTime:0.045489s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_service_evaluation` `s`,`jd_member` `m` WHERE  (  s.is_show = 1 and s.doctor_id = 239 and s.`member_id` = m.`member_id` ) LIMIT 1 [ RunTime:0.045597s ]
+---------------------------------------------------------------
+[ 2018-10-08T17:31:54+08:00 ] 0.0.0.0 POST /inherit/examine
+[ info ] localhost:7062/inherit/examine [运行时间：1.086406s][吞吐率：0.92req/s] [内存消耗：3,270.59kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'examine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary1BrM66niitsjKorx',
+  'content-length' => '242',
+  'x-original-url' => '/inherit/examine',
+  'postman-token' => 'ea8a3d56-7f39-6c17-9f61-8edb3f662c78',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '247',
+  'inherit_id' => '31',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->examine[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.083600s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.054275s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit` WHERE  (  member_id = 247 AND inherit_id = 31 AND is_display = 1 ) LIMIT 1 [ RunTime:0.053645s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.054163s ]
+[ sql ] [ SQL ] SELECT d.`portrait`,d.`member_id`,d.`member_name`,d.`true_name`,d.`is_clinic`,d.`hospital_id`,d.`title_id`,id.`reason`,d.`is_fans`,d.`is_service`,d.`is_comment` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.parent_id = 247 AND id.is_checked = 0 AND id.inherit_id = 31 ) ORDER BY id.add_date DESC [ RunTime:0.054430s ]
+[ sql ] [ SQL ] SELECT d.`portrait`,d.`member_id`,d.`member_name`,d.`true_name`,d.`is_clinic`,d.`hospital_id`,d.`title_id`,id.`reason`,d.`is_fans`,d.`is_service`,d.`is_comment` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.parent_id = 247 AND id.is_checked = 1 AND id.inherit_id = 31 ) ORDER BY id.add_date DESC [ RunTime:0.054311s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital` [ RunTime:0.053356s ]
+[ sql ] [ SQL ] SELECT `hospital_name` FROM `jd_hospital` WHERE  (  hospital_id = 7 ) LIMIT 1 [ RunTime:0.052922s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_title` [ RunTime:0.054474s ]
+[ sql ] [ SQL ] SELECT `title_name` FROM `jd_title` WHERE  (  title_id = 19 ) LIMIT 1 [ RunTime:0.055783s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_self_goods` [ RunTime:0.053183s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 239 AND content != '' AND is_checked = 2 AND end_date > 1538991113 ) LIMIT 1 [ RunTime:0.053427s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.053164s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 239 and s.`member_id` = m.`member_id` ) LIMIT 1 [ RunTime:0.054526s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.056340s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_order` `o`,`jd_order_prescription` `op` WHERE  (  o.`order_id` = op.`order_id` and op.`prescription_type` = 0 and o.order_type = 3 and o.doctor_id = 239 ) LIMIT 1 [ RunTime:0.052843s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_service_evaluation` [ RunTime:0.053571s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_service_evaluation` `s`,`jd_member` `m` WHERE  (  s.is_show = 1 and s.doctor_id = 239 and s.`member_id` = m.`member_id` ) LIMIT 1 [ RunTime:0.053373s ]
+---------------------------------------------------------------
+[ 2018-10-08T17:58:12+08:00 ] 0.0.0.0 POST /inherit/examine
+[ info ] localhost:7062/inherit/examine [运行时间：1.052109s][吞吐率：0.95req/s] [内存消耗：3,300.75kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'examine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary60UAOdoQTXyBkWMI',
+  'content-length' => '242',
+  'x-original-url' => '/inherit/examine',
+  'postman-token' => 'a2b26f5f-836a-ebca-36a8-929cd1fd1584',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '247',
+  'inherit_id' => '31',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->examine[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.083671s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.053953s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit` WHERE  (  member_id = 247 AND inherit_id = 31 AND is_display = 1 ) LIMIT 1 [ RunTime:0.053972s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.053147s ]
+[ sql ] [ SQL ] SELECT id.`inherit_doctor_id`,d.`portrait`,d.`member_id`,d.`member_name`,d.`true_name`,d.`is_clinic`,d.`hospital_id`,d.`title_id`,id.`reason`,d.`is_fans`,d.`is_service`,d.`is_comment` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.parent_id = 247 AND id.is_checked = 0 AND id.inherit_id = 31 ) ORDER BY id.add_date DESC [ RunTime:0.053610s ]
+[ sql ] [ SQL ] SELECT id.`inherit_doctor_id`,d.`portrait`,d.`member_id`,d.`member_name`,d.`true_name`,d.`is_clinic`,d.`hospital_id`,d.`title_id`,id.`reason`,d.`is_fans`,d.`is_service`,d.`is_comment` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.parent_id = 247 AND id.is_checked = 1 AND id.inherit_id = 31 ) ORDER BY id.add_date DESC [ RunTime:0.053503s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital` [ RunTime:0.052131s ]
+[ sql ] [ SQL ] SELECT `hospital_name` FROM `jd_hospital` WHERE  (  hospital_id = 7 ) LIMIT 1 [ RunTime:0.052463s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_title` [ RunTime:0.054475s ]
+[ sql ] [ SQL ] SELECT `title_name` FROM `jd_title` WHERE  (  title_id = 19 ) LIMIT 1 [ RunTime:0.053304s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_self_goods` [ RunTime:0.053077s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 239 AND content != '' AND is_checked = 2 AND end_date > 1538992692 ) LIMIT 1 [ RunTime:0.053194s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.054060s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 239 and s.`member_id` = m.`member_id` ) LIMIT 1 [ RunTime:0.053010s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.054794s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_order` `o`,`jd_order_prescription` `op` WHERE  (  o.`order_id` = op.`order_id` and op.`prescription_type` = 0 and o.order_type = 3 and o.doctor_id = 239 ) LIMIT 1 [ RunTime:0.055373s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_service_evaluation` [ RunTime:0.052117s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_service_evaluation` `s`,`jd_member` `m` WHERE  (  s.is_show = 1 and s.doctor_id = 239 and s.`member_id` = m.`member_id` ) LIMIT 1 [ RunTime:0.052401s ]
+---------------------------------------------------------------
+[ 2018-10-08T18:00:25+08:00 ] 0.0.0.0 POST /inherit/examine
+[ info ] localhost:7062/inherit/examine [运行时间：0.209553s][吞吐率：4.77req/s] [内存消耗：3,285.37kb] [文件加载：59]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'examine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary5WJ6I6HeiBGlOgXV',
+  'content-length' => '242',
+  'x-original-url' => '/inherit/examine',
+  'postman-token' => '64d70c1b-7dbd-b11f-d087-cead75912b01',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '247',
+  'inherit_id' => '31',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->examine[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'parent_id' in 'where clause'[D:\workLP\xiaojudeng\api\thinkphp\library\think\db\Connection.php:388]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.065422s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.044822s ]
+---------------------------------------------------------------
+[ 2018-10-08T18:00:38+08:00 ] 0.0.0.0 POST /inherit/examine
+[ info ] localhost:7062/inherit/examine [运行时间：1.048776s][吞吐率：0.95req/s] [内存消耗：3,300.55kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'examine',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarydiDum9qSGpvxw232',
+  'content-length' => '242',
+  'x-original-url' => '/inherit/examine',
+  'postman-token' => 'e50b2977-09b2-d847-1065-b1195d7ad1ee',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '247',
+  'inherit_id' => '31',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->examine[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.077987s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit` [ RunTime:0.052236s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit` WHERE  (  member_id = 247 AND inherit_id = 31 AND is_display = 1 ) LIMIT 1 [ RunTime:0.055340s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.053996s ]
+[ sql ] [ SQL ] SELECT id.`inherit_doctor_id`,d.`portrait`,d.`member_id`,d.`member_name`,d.`true_name`,d.`is_clinic`,d.`hospital_id`,d.`title_id`,id.`reason`,d.`is_fans`,d.`is_service`,d.`is_comment` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.parent_id = 247 AND id.is_checked = 0 AND id.inherit_id = 31 ) ORDER BY id.add_date DESC [ RunTime:0.052987s ]
+[ sql ] [ SQL ] SELECT id.`inherit_doctor_id`,d.`portrait`,d.`member_id`,d.`member_name`,d.`true_name`,d.`is_clinic`,d.`hospital_id`,d.`title_id`,id.`reason`,d.`is_fans`,d.`is_service`,d.`is_comment` FROM `jd_inherit_doctor` `id` INNER JOIN `jd_inherit` `i` ON `id`.`inherit_id`=`i`.`inherit_id` INNER JOIN `jd_doctor` `d` ON `id`.`member_id`=`d`.`member_id` WHERE  (  id.parent_id = 247 AND id.is_checked = 1 AND id.inherit_id = 31 ) ORDER BY id.add_date DESC [ RunTime:0.053542s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_hospital` [ RunTime:0.053253s ]
+[ sql ] [ SQL ] SELECT `hospital_name` FROM `jd_hospital` WHERE  (  hospital_id = 7 ) LIMIT 1 [ RunTime:0.051945s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_title` [ RunTime:0.052586s ]
+[ sql ] [ SQL ] SELECT `title_name` FROM `jd_title` WHERE  (  title_id = 19 ) LIMIT 1 [ RunTime:0.052460s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_self_goods` [ RunTime:0.053013s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_self_goods` WHERE  (  member_id = 239 AND content != '' AND is_checked = 2 AND end_date > 1538992837 ) LIMIT 1 [ RunTime:0.055371s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor_member` [ RunTime:0.053411s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_doctor_member` `s`,`jd_member` `m` WHERE  (  s.doctor_id = 239 and s.`member_id` = m.`member_id` ) LIMIT 1 [ RunTime:0.054226s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_order` [ RunTime:0.052888s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_order` `o`,`jd_order_prescription` `op` WHERE  (  o.`order_id` = op.`order_id` and op.`prescription_type` = 0 and o.order_type = 3 and o.doctor_id = 239 ) LIMIT 1 [ RunTime:0.052258s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_service_evaluation` [ RunTime:0.053600s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_service_evaluation` `s`,`jd_member` `m` WHERE  (  s.is_show = 1 and s.doctor_id = 239 and s.`member_id` = m.`member_id` ) LIMIT 1 [ RunTime:0.053734s ]
+---------------------------------------------------------------
+[ 2018-10-08T18:04:40+08:00 ] 0.0.0.0 POST /inherit/adopt
+[ info ] localhost:7062/inherit/adopt [运行时间：0.244825s][吞吐率：4.08req/s] [内存消耗：3,193.95kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'adopt',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarywqQ9h2rcGF27uc16',
+  'content-length' => '336',
+  'x-original-url' => '/inherit/adopt',
+  'postman-token' => 'd84dcce7-b73f-4498-9074-2c4259b477fb',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '247',
+  'inherit_doctor_id' => '31',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->adopt[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.077123s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.052376s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit_doctor` WHERE  (  member_id = 247 AND inherit_doctor_id = 31 AND is_checked = 0 ) LIMIT 1 [ RunTime:0.051855s ]
+---------------------------------------------------------------
+[ 2018-10-08T18:05:05+08:00 ] 0.0.0.0 POST /inherit/adopt
+[ info ] localhost:7062/inherit/adopt [运行时间：0.244036s][吞吐率：4.10req/s] [内存消耗：3,193.95kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'adopt',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarym3pEpAxkQBdGoscc',
+  'content-length' => '336',
+  'x-original-url' => '/inherit/adopt',
+  'postman-token' => '13fa897b-676c-1ae8-af74-5fb5485c4374',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '247',
+  'inherit_doctor_id' => '31',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->adopt[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.067397s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.045341s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit_doctor` WHERE  (  member_id = 247 AND inherit_doctor_id = 31 AND is_checked = 0 ) LIMIT 1 [ RunTime:0.044499s ]
+---------------------------------------------------------------
+[ 2018-10-08T18:05:07+08:00 ] 0.0.0.0 POST /inherit/adopt
+[ info ] localhost:7062/inherit/adopt [运行时间：0.251039s][吞吐率：3.98req/s] [内存消耗：3,193.95kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'adopt',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary9litXT661JB3kzf1',
+  'content-length' => '336',
+  'x-original-url' => '/inherit/adopt',
+  'postman-token' => 'd343de1c-45ca-d34f-294b-b5119453b45a',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '247',
+  'inherit_doctor_id' => '31',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->adopt[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.079232s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.053067s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit_doctor` WHERE  (  member_id = 247 AND inherit_doctor_id = 31 AND is_checked = 0 ) LIMIT 1 [ RunTime:0.052245s ]
+---------------------------------------------------------------
+[ 2018-10-08T18:05:22+08:00 ] 0.0.0.0 POST /inherit/adopt
+[ info ] localhost:7062/inherit/adopt [运行时间：0.248801s][吞吐率：4.02req/s] [内存消耗：3,193.97kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'adopt',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryjZBfY4ROALgxFYS7',
+  'content-length' => '337',
+  'x-original-url' => '/inherit/adopt',
+  'postman-token' => '73f017ff-6b05-8456-3c3f-447f2ee20edf',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '247',
+  'inherit_doctor_id' => '327',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->adopt[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.077684s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.052943s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit_doctor` WHERE  (  member_id = 247 AND inherit_doctor_id = 327 AND is_checked = 0 ) LIMIT 1 [ RunTime:0.051459s ]
+---------------------------------------------------------------
+[ 2018-10-08T18:05:40+08:00 ] 0.0.0.0 POST /inherit/adopt
+[ info ] localhost:7062/inherit/adopt [运行时间：0.244641s][吞吐率：4.09req/s] [内存消耗：3,193.97kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'adopt',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary9ef6aNedHl2YJYVW',
+  'content-length' => '337',
+  'x-original-url' => '/inherit/adopt',
+  'postman-token' => 'a6b7e57c-65f5-f7a8-c83a-7ee1fc450ffa',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '239',
+  'inherit_doctor_id' => '327',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->adopt[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.078919s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.054311s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit_doctor` WHERE  (  member_id = 239 AND inherit_doctor_id = 327 AND is_checked = 0 ) LIMIT 1 [ RunTime:0.054516s ]
+---------------------------------------------------------------
+[ 2018-10-08T18:13:21+08:00 ] 0.0.0.0 POST /inherit/adopt
+[ info ] localhost:7062/inherit/adopt [运行时间：0.306701s][吞吐率：3.26req/s] [内存消耗：3,241.76kb] [文件加载：54]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'adopt',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarydGNvAi1XIiBecUFM',
+  'content-length' => '337',
+  'x-original-url' => '/inherit/adopt',
+  'postman-token' => '53b307ae-808f-0101-9dee-da856597c395',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '239',
+  'inherit_doctor_id' => '327',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->adopt[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.064829s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.045368s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit_doctor` WHERE  (  member_id = 239 AND inherit_doctor_id = 327 AND is_checked = 0 ) LIMIT 1 [ RunTime:0.042920s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.045452s ]
+[ sql ] [ SQL ] SELECT `member_id`,`online_inquiry_per`,`online_review_per`,`online_fang_per`,`online_self_per` FROM `jd_doctor` WHERE  (  member_id = 239 ) LIMIT 1 [ RunTime:0.044613s ]
+---------------------------------------------------------------
+[ 2018-10-08T18:17:41+08:00 ] 0.0.0.0 POST /inherit/adopt
+[ info ] localhost:7062/inherit/adopt [运行时间：0.408070s][吞吐率：2.45req/s] [内存消耗：3,294.75kb] [文件加载：57]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'adopt',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryh6zwYC09vVPDPfni',
+  'content-length' => '337',
+  'x-original-url' => '/inherit/adopt',
+  'postman-token' => '12b5c98a-712a-1e8a-8012-8f658d4db8f6',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '239',
+  'inherit_doctor_id' => '327',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->adopt[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ error ] [0]数据表字段不存在:[online_inquiry_per][D:\workLP\xiaojudeng\api\thinkphp\library\think\db\Builder.php:109]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.084415s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.055121s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit_doctor` WHERE  (  member_id = 239 AND inherit_doctor_id = 327 AND is_checked = 0 ) LIMIT 1 [ RunTime:0.053471s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_doctor` [ RunTime:0.054926s ]
+[ sql ] [ SQL ] SELECT `member_id`,`online_inquiry_per`,`online_review_per`,`online_fang_per`,`online_self_per` FROM `jd_doctor` WHERE  (  member_id = 239 ) LIMIT 1 [ RunTime:0.054794s ]
+---------------------------------------------------------------
+[ 2018-10-08T18:23:33+08:00 ] 0.0.0.0 POST /inherit/adopt
+[ info ] localhost:7062/inherit/adopt [运行时间：0.276671s][吞吐率：3.61req/s] [内存消耗：3,285.29kb] [文件加载：57]
+[ info ] [ LANG ] D:\workLP\xiaojudeng\api\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'home'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'inherit',
+    2 => 'adopt',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarytIHqUhg58psBId6x',
+  'content-length' => '337',
+  'x-original-url' => '/inherit/adopt',
+  'postman-token' => '8655b675-8533-2fe6-b898-6d21eee37ffe',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'host' => 'localhost:7062',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'doctor_id' => '239',
+  'inherit_doctor_id' => '327',
+)
+[ info ] [ RUN ] app\home\controller\Inherit->adopt[ D:\workLP\xiaojudeng\api\application\home\controller\Inherit.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: only_token[D:\workLP\xiaojudeng\api\application\common.php:131]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.063439s ] mysql:host=47.105.79.233;port=3306;dbname=api_php666_club;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `jd_inherit_doctor` [ RunTime:0.042502s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `jd_inherit_doctor` WHERE  (  member_id = 239 AND inherit_doctor_id = 327 AND is_checked = 0 ) LIMIT 1 [ RunTime:0.045291s ]
+[ sql ] [ SQL ] UPDATE `jd_inherit_doctor`  SET `operate_date`=1538994213,`is_checked`=1  WHERE  `member_id` = 239  AND `inherit_doctor_id` = 327 [ RunTime:0.044458s ]
